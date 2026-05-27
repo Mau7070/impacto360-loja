@@ -1,0 +1,82 @@
+[
+  {
+    "id": "livraria",
+    "nome": "Livraria",
+    "slug": "livraria",
+    "descricao": "Livros, guias, planners e materiais para aprendizado e desenvolvimento pessoal.",
+    "icone": "BookOpen",
+    "banner": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 1,
+    "ativa": true
+  },
+  {
+    "id": "informatica",
+    "nome": "Informática",
+    "slug": "informatica",
+    "descricao": "Notebooks, periféricos, acessórios e itens para produtividade digital.",
+    "icone": "Laptop",
+    "banner": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 2,
+    "ativa": true
+  },
+  {
+    "id": "eletronicos-e-casa",
+    "nome": "Eletrônicos e Casa",
+    "slug": "eletronicos-e-casa",
+    "descricao": "Itens úteis para casa conectada, áudio, rotina e tecnologia doméstica.",
+    "icone": "Home",
+    "banner": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 3,
+    "ativa": true
+  },
+  {
+    "id": "ferramentas",
+    "nome": "Ferramentas",
+    "slug": "ferramentas",
+    "descricao": "Ferramentas para reparos, organização, montagem e projetos de casa.",
+    "icone": "Wrench",
+    "banner": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 4,
+    "ativa": true
+  },
+  {
+    "id": "brinquedos",
+    "nome": "Brinquedos",
+    "slug": "brinquedos",
+    "descricao": "Produtos para diversão, criatividade, presente e desenvolvimento infantil.",
+    "icone": "Gamepad2",
+    "banner": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 5,
+    "ativa": true
+  },
+  {
+    "id": "calcados",
+    "nome": "Calçados",
+    "slug": "calcados",
+    "descricao": "Tênis, sandálias e opções para conforto, estilo e rotina.",
+    "icone": "Footprints",
+    "banner": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 6,
+    "ativa": true
+  },
+  {
+    "id": "moda",
+    "nome": "Moda",
+    "slug": "moda",
+    "descricao": "Peças, acessórios e achados para compor looks com praticidade.",
+    "icone": "Shirt",
+    "banner": "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 7,
+    "ativa": true
+  },
+  {
+    "id": "geral",
+    "nome": "Geral",
+    "slug": "geral",
+    "descricao": "Achados úteis e produtos variados para resolver pequenas necessidades do dia a dia.",
+    "icone": "Package",
+    "banner": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 8,
+    "ativa": true
+  }
+]

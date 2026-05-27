@@ -1,0 +1,17 @@
+{
+  "mercadoLivre": {
+    "status": "preparado",
+    "sandbox": true,
+    "autoPublish": false,
+    "observacao": "Use variáveis de ambiente. Nunca coloque tokens reais no front-end."
+  },
+  "redesSociais": {
+    "instagram": "manual_agora_api_futura",
+    "facebook": "manual_agora_api_futura",
+    "tiktok": "manual_agora_api_futura",
+    "linkedin": "manual_agora_api_futura",
+    "youtubeShorts": "manual_agora_api_futura",
+    "whatsapp": "compartilhamento_direto",
+    "telegram": "compartilhamento_direto"
+  }
+}

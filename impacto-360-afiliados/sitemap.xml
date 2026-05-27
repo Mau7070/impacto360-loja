@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://seudominio.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://seudominio.com/catalogo</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://seudominio.com/categorias</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://seudominio.com/ofertas</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://seudominio.com/sobre</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://seudominio.com/contato</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>

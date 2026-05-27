@@ -1,0 +1,17 @@
+[
+  {
+    "id": "campanha-loja-semanal",
+    "tipo": "loja",
+    "titulo": "Achados da semana Impacto 360",
+    "objetivo": "Compartilhar a loja inteira",
+    "status": "rascunho"
+  },
+  {
+    "id": "campanha-informatica",
+    "tipo": "categoria",
+    "categoria": "Informática",
+    "titulo": "Seleção de informática para produtividade",
+    "objetivo": "Divulgar departamento",
+    "status": "rascunho"
+  }
+]
