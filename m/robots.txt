@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://impacto360afiliado.com.br/sitemap.xml
