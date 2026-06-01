@@ -59,6 +59,7 @@
     body.store-open .shopping-page { display: none; }
     body.store-open .store-page { display: block; }
     .facade-page > section:not(.facade-hero) { display: none; }
+    body.locked .topbar,
     body.locked .footer,
     body.locked .floating-actions { display: none; }
 
@@ -238,14 +239,15 @@
     .facade-hero {
       min-height: 100svh;
       position: relative;
-      padding: 98px 0 34px;
+      padding: 0;
       display: grid;
       align-items: end;
       background:
-        linear-gradient(90deg, rgba(245,251,255,.22) 0%, rgba(245,251,255,.03) 34%, rgba(245,251,255,.02) 66%, rgba(245,251,255,.16) 100%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(244,251,255,.03) 72%, rgba(248,253,255,.34) 100%),
-        url("public/fachada-shopping-impacto360-limpa.png") center bottom / auto min(84vh, 780px) no-repeat;
-      background-color: #eaf7ff;
+        linear-gradient(90deg, rgba(2,16,33,.08), rgba(2,16,33,.01) 36%, rgba(2,16,33,.01) 65%, rgba(2,16,33,.12)),
+        linear-gradient(180deg, rgba(0,18,45,.10), rgba(0,0,0,.02) 48%, rgba(0,0,0,.26) 100%),
+        url("public/fachada-shopping-premium-referencia.png") center center / cover no-repeat;
+      background-color: #071a35;
+      overflow: hidden;
     }
 
     .facade-hero::before {
@@ -253,28 +255,32 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 50% 42%, rgba(86,204,242,.08), transparent 18%),
-        linear-gradient(180deg, transparent 80%, rgba(248,253,255,.52));
+        radial-gradient(circle at 50% 58%, rgba(87, 164, 255, .10), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,.02), transparent 72%, rgba(0,0,0,.26));
       pointer-events: none;
+      animation: facadeBreath 7s ease-in-out infinite;
     }
 
     .facade-grid {
       position: relative;
       display: flex;
       align-items: flex-end;
-      justify-content: center;
-      min-height: calc(100svh - 150px);
+      justify-content: flex-start;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 100svh;
+      padding-bottom: clamp(44px, 7vw, 86px);
     }
 
     .hero-copy {
-      width: min(390px, 100%);
-      padding: 14px;
+      width: auto;
+      padding: 0;
       border-radius: var(--radius);
       text-align: center;
-      background: linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.12));
-      border: 1px solid rgba(255,255,255,.48);
-      backdrop-filter: blur(5px);
-      box-shadow: 0 14px 36px rgba(7, 34, 66, .10);
+      background: transparent;
+      border: 0;
+      backdrop-filter: none;
+      box-shadow: none;
     }
 
     .eyebrow {
@@ -301,21 +307,11 @@
     }
 
     .hero-copy h1 {
-      margin: 10px 0 8px;
-      font-size: clamp(24px, 3vw, 38px);
-      line-height: 1;
-      color: #ffffff;
-      text-shadow: 0 2px 16px rgba(8,35,63,.48);
+      display: none;
     }
 
     .hero-copy p {
-      max-width: 330px;
-      margin-left: auto;
-      margin-right: auto;
-      color: rgba(255,255,255,.94);
-      font-size: 14px;
-      line-height: 1.35;
-      text-shadow: 0 2px 12px rgba(8,35,63,.42);
+      display: none;
     }
 
     .hero-actions {
@@ -323,7 +319,58 @@
       gap: 14px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 14px;
+      margin-top: 0;
+    }
+
+    .entry-button {
+      position: relative;
+      min-width: 350px;
+      min-height: 58px;
+      border-radius: 999px;
+      border: 1px solid rgba(252, 216, 126, .82);
+      color: #fff;
+      background: linear-gradient(135deg, rgba(10, 16, 30, .46), rgba(18, 34, 58, .20));
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.08) inset,
+        0 0 24px rgba(252, 216, 126, .30),
+        0 18px 45px rgba(0,0,0,.24);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+      animation: buttonPulse 3.8s ease-in-out infinite;
+    }
+
+    .entry-button::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.35) 42%, transparent 62%);
+      transform: translateX(-120%);
+      transition: transform .75s ease;
+    }
+
+    .entry-button:hover::before { transform: translateX(120%); }
+    .entry-button span { position: relative; z-index: 1; }
+    .entry-arrow {
+      position: relative;
+      z-index: 1;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: #071a35;
+      background: linear-gradient(135deg, #f8d27a, #fff1bd);
+    }
+
+    .hero-bottom-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 8px;
+      background: linear-gradient(90deg, rgba(248,210,122,.18), rgba(248,210,122,.92), rgba(86,204,242,.66), rgba(248,210,122,.18));
+      box-shadow: 0 -10px 30px rgba(248,210,122,.22);
+      opacity: .88;
     }
 
     .benefit-rail {
@@ -884,6 +931,16 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes buttonPulse {
+      0%, 100% { transform: translateY(0); box-shadow: 0 0 24px rgba(252, 216, 126, .28), 0 18px 45px rgba(0,0,0,.24); }
+      50% { transform: translateY(-2px); box-shadow: 0 0 34px rgba(252, 216, 126, .42), 0 22px 55px rgba(0,0,0,.28); }
+    }
+
+    @keyframes facadeBreath {
+      0%, 100% { opacity: .76; }
+      50% { opacity: 1; }
+    }
+
     @media (max-width: 1040px) {
       .decor-search { display: none; }
       .facade-grid { grid-template-columns: 1fr; }
@@ -912,12 +969,22 @@
       .nav.open { display: flex; }
 
       .facade-hero {
-        padding-top: 102px;
         align-items: end;
-        background-position: center top;
+        background-position: center center;
       }
 
-      .hero-copy { padding: 18px; }
+      .facade-grid {
+        width: calc(100% - 24px);
+        padding-bottom: 32px;
+        justify-content: center;
+      }
+
+      .entry-button {
+        min-width: min(330px, calc(100vw - 34px));
+        min-height: 54px;
+      }
+
+      .hero-copy { padding: 0; }
       h1 { font-size: 40px; }
       .hero-actions .btn { width: 100%; }
       .benefit-row { grid-template-columns: 1fr; }
@@ -960,11 +1027,8 @@
           <div class="facade-grid">
             <div>
               <div class="hero-copy">
-                <span class="eyebrow">Porta de entrada</span>
-                <h1>ENTRADA DO SHOPPING</h1>
-                <p>O futuro das compras é aqui.</p>
                 <div class="hero-actions">
-                  <button class="btn btn-primary" type="button" onclick="enterShopping()">ENTRAR NO SHOPPING</button>
+                  <button class="btn entry-button" type="button" onclick="enterShopping()"><span>ENTRAR NO SHOPPING</span><span class="entry-arrow">›</span></button>
                 </div>
               </div>
               <div class="facade-sign" aria-label="Letreiro da fachada">
@@ -980,6 +1044,7 @@
             <div class="stat"><strong>100%</strong><span>navegação segura</span></div>
           </div>
         </div>
+        <div class="hero-bottom-line" aria-hidden="true"></div>
       </section>
 
       <section class="benefits-below" id="beneficios">
@@ -3323,25 +3388,87 @@
     const stores = [
   {
     "id": "tecnologia",
-    "name": "Tecnologia",
+    "name": "Loja de Tecnologia",
     "shortName": "Tecnologia",
-    "description": "Celulares, notebooks, acessórios, eletrônicos e dispositivos inteligentes.",
+    "description": "Eletrônicos em geral, acessórios inteligentes, gadgets e dispositivos conectados.",
     "icon": "TEC",
     "color": "#2f80ed",
     "tags": [
-      "informatica",
+      "tecnologia",
       "eletronicos",
-      "notebook",
-      "celular",
-      "fone",
-      "mouse"
+      "gadgets",
+      "dispositivos",
+      "acessorios"
     ],
     "subcategories": [
-      "Celulares",
-      "Notebooks",
+      "Eletrônicos em geral",
       "Acessórios",
-      "Eletrônicos",
-      "Dispositivos inteligentes"
+      "Gadgets",
+      "Dispositivos inteligentes",
+      "Produtos conectados"
+    ]
+  },
+  {
+    "id": "computadores",
+    "name": "Loja Exclusiva de Computadores",
+    "shortName": "Computadores",
+    "description": "Loja dedicada apenas a computadores, notebooks, desktops, monitores, periféricos, peças e acessórios de informática.",
+    "icon": "PC",
+    "color": "#1d4ed8",
+    "tags": [
+      "informatica",
+      "computador",
+      "notebook",
+      "desktop",
+      "monitor",
+      "teclado",
+      "mouse",
+      "headset",
+      "impressora",
+      "armazenamento"
+    ],
+    "subcategories": [
+      "Notebooks",
+      "PCs Gamer",
+      "Computadores para Escritório",
+      "Monitores",
+      "Teclados",
+      "Mouses",
+      "Headsets",
+      "Impressoras",
+      "Componentes",
+      "Armazenamento"
+    ]
+  },
+  {
+    "id": "celulares",
+    "name": "Loja Exclusiva de Celulares",
+    "shortName": "Celulares",
+    "description": "Loja dedicada apenas a smartphones, acessórios, wearables e itens relacionados à telefonia móvel.",
+    "icon": "CEL",
+    "color": "#06b6d4",
+    "tags": [
+      "celular",
+      "smartphone",
+      "telefonia",
+      "capa",
+      "pelicula",
+      "carregador",
+      "fone bluetooth",
+      "smartwatch",
+      "power bank"
+    ],
+    "subcategories": [
+      "Smartphones",
+      "Capas",
+      "Películas",
+      "Carregadores",
+      "Fones Bluetooth",
+      "Smartwatches",
+      "Cabos",
+      "Suportes",
+      "Power Banks",
+      "Acessórios Premium"
     ]
   },
   {
@@ -3641,6 +3768,8 @@
 
     const productFallbacks = {
       tecnologia: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      computadores: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=900&q=80",
+      celulares: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
       "casa-cozinha": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
       moda: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
       calcados: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
@@ -3656,6 +3785,18 @@
     };
 
     const serviceProducts = {
+      tecnologia: [
+        ["Gadget inteligente selecionado", "Espaço para eletrônicos em geral, automação e dispositivos conectados.", "COLOCAR_LINK_AQUI", "Destaque"],
+        ["Acessório tech premium", "Produto tecnológico para inserir seu link de afiliado oficial.", "COLOCAR_LINK_AQUI", "Novo"]
+      ],
+      computadores: [
+        ["Notebook para produtividade", "Opções para estudo, trabalho e rotina profissional.", "COLOCAR_LINK_AQUI", "Destaque"],
+        ["Kit teclado e mouse", "Periféricos para escritório, estudo e setup gamer.", "COLOCAR_LINK_AQUI", "Oferta"]
+      ],
+      celulares: [
+        ["Smartphone em destaque", "Espaço para celulares, smartphones e telefonia móvel.", "COLOCAR_LINK_AQUI", "Mais vendido"],
+        ["Acessórios para celular", "Capas, películas, carregadores, fones e power banks.", "COLOCAR_LINK_AQUI", "Novo"]
+      ],
       calcados: [
         ["Tênis casual selecionado", "Opções confortáveis para rotina, caminhada e uso diário.", "Sob consulta", "Destaque"],
         ["Calçados para ofertas parceiras", "Espaço pronto para inserir links de afiliado de tênis, sapatos e sandálias.", "COLOCAR_LINK_AQUI", "Novo"]
@@ -3726,7 +3867,9 @@
 
     function mapProductCategory(product) {
       const raw = normalizeText([product.category, product.categoria, product.name, product.nome, product.desc, product.descricao_curta].join(" "));
-      if (raw.includes("informatica") || raw.includes("eletronico") || raw.includes("notebook") || raw.includes("celular") || raw.includes("mouse") || raw.includes("teclado")) return "tecnologia";
+      if (raw.includes("celular") || raw.includes("smartphone") || raw.includes("telefone") || raw.includes("smartwatch") || raw.includes("power bank") || raw.includes("fone bluetooth") || raw.includes("pelicula") || raw.includes("capa ")) return "celulares";
+      if (raw.includes("informatica") || raw.includes("notebook") || raw.includes("computador") || raw.includes("desktop") || raw.includes("pc gamer") || raw.includes("monitor") || raw.includes("teclado") || raw.includes("mouse") || raw.includes("headset") || raw.includes("impressora") || raw.includes("armazenamento")) return "computadores";
+      if (raw.includes("eletronico") || raw.includes("gadget") || raw.includes("dispositivo")) return "tecnologia";
       if (raw.includes("casa") || raw.includes("cozinha") || raw.includes("move") || raw.includes("decor")) return "casa-cozinha";
       if (raw.includes("moda") || raw.includes("roupa") || raw.includes("camisa") || raw.includes("bolsa")) return "moda";
       if (raw.includes("esporte") || raw.includes("fitness") || raw.includes("lazer")) return "esporte-lazer";
@@ -3902,7 +4045,7 @@
       if (activeTab === "ofertas") list = list.filter(store => store.id === "ofertas-relampago" || productsByStore(store).some(product => product.deal));
       if (activeTab === "servicos") list = list.filter(store => store.service || store.id === "cursos-educacao");
       if (activeTab === "novidades") list = list.slice().reverse();
-      if (activeTab === "favoritos") list = list.filter(store => ["tecnologia", "ofertas-relampago", "casa-cozinha", "composicoes-musicais"].includes(store.id));
+      if (activeTab === "favoritos") list = list.filter(store => ["tecnologia", "computadores", "celulares", "ofertas-relampago", "casa-cozinha", "composicoes-musicais"].includes(store.id));
       if (activeTab === "acessadas") list = list.sort((a, b) => productCount(b) - productCount(a));
       if (selectedCategory) list = list.filter(store => store.id === selectedCategory);
       if (query) {
