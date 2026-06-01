@@ -58,6 +58,9 @@
     body.inside .shopping-page { display: block; }
     body.store-open .shopping-page { display: none; }
     body.store-open .store-page { display: block; }
+    .facade-page > section:not(.facade-hero) { display: none; }
+    body.locked .footer,
+    body.locked .floating-actions { display: none; }
 
     a { color: inherit; text-decoration: none; }
     button, input, select { font: inherit; }
@@ -235,12 +238,12 @@
     .facade-hero {
       min-height: 100svh;
       position: relative;
-      padding: 112px 0 26px;
+      padding: 98px 0 34px;
       display: grid;
       align-items: end;
       background:
-        linear-gradient(90deg, rgba(245,251,255,.52) 0%, rgba(245,251,255,.12) 36%, rgba(245,251,255,.05) 66%, rgba(245,251,255,.28) 100%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(244,251,255,.08) 68%, rgba(248,253,255,.72) 100%),
+        linear-gradient(90deg, rgba(245,251,255,.22) 0%, rgba(245,251,255,.03) 34%, rgba(245,251,255,.02) 66%, rgba(245,251,255,.16) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(244,251,255,.03) 72%, rgba(248,253,255,.34) 100%),
         url("public/fachada-shopping-impacto360.png") center / cover no-repeat;
     }
 
@@ -249,28 +252,28 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 50% 37%, rgba(86,204,242,.10), transparent 20%),
-        linear-gradient(180deg, transparent 72%, rgba(248,253,255,.82));
+        radial-gradient(circle at 50% 42%, rgba(86,204,242,.08), transparent 18%),
+        linear-gradient(180deg, transparent 80%, rgba(248,253,255,.52));
       pointer-events: none;
     }
 
     .facade-grid {
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      align-items: end;
-      min-height: calc(100svh - 260px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: calc(100svh - 150px);
     }
 
     .hero-copy {
-      max-width: 490px;
-      padding: 16px;
+      width: min(390px, 100%);
+      padding: 14px;
       border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(255,255,255,.62), rgba(255,255,255,.34));
-      border: 1px solid rgba(255,255,255,.66);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 18px 46px rgba(7, 34, 66, .11);
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.12));
+      border: 1px solid rgba(255,255,255,.48);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 14px 36px rgba(7, 34, 66, .10);
     }
 
     .eyebrow {
@@ -297,23 +300,29 @@
     }
 
     .hero-copy h1 {
-      margin: 12px 0 10px;
-      font-size: clamp(30px, 3.6vw, 52px);
-      line-height: 1.02;
+      margin: 10px 0 8px;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1;
+      color: #ffffff;
+      text-shadow: 0 2px 16px rgba(8,35,63,.48);
     }
 
     .hero-copy p {
-      max-width: 430px;
-      color: #29445f;
-      font-size: clamp(15px, 1.25vw, 18px);
-      line-height: 1.45;
+      max-width: 330px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(255,255,255,.94);
+      font-size: 14px;
+      line-height: 1.35;
+      text-shadow: 0 2px 12px rgba(8,35,63,.42);
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      justify-content: center;
+      margin-top: 14px;
     }
 
     .benefit-rail {
@@ -356,16 +365,7 @@
     .benefit-card span { display: block; color: #3d5369; font-size: 13px; line-height: 1.45; margin-top: 3px; }
 
     .facade-sign {
-      position: relative;
-      margin: 12px 0 0;
-      width: min(540px, 100%);
-      text-align: center;
-      padding: 12px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(8,35,63,.78), rgba(47,128,237,.54));
-      color: #fff;
-      box-shadow: 0 16px 42px rgba(12,36,64,.18);
-      border: 1px solid rgba(255,255,255,.35);
+      display: none;
     }
 
     .facade-sign strong {
@@ -385,9 +385,9 @@
     }
 
     .stats-strip {
+      display: none;
       position: relative;
       margin-top: 12px;
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       padding: 8px;
@@ -942,9 +942,8 @@
       <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Abrir menu">=</button>
       <nav class="nav" id="topNav">
         <a href="#" onclick="goHome(); return false;">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#como-funciona">Como Funciona</a>
+        <button type="button" onclick="enterShopping()">Entrar</button>
+        <button type="button" onclick="enterShopping()">Lojas</button>
         <a href="#contato">Contato</a>
         <button type="button" onclick="shareShopping()">Compartilhar Shopping</button>
       </nav>
@@ -960,12 +959,11 @@
           <div class="facade-grid">
             <div>
               <div class="hero-copy">
-                <span class="eyebrow">Entrada principal do shopping virtual</span>
-                <h1>O Shopping Virtual das Melhores Ofertas</h1>
-                <p>Um universo de lojas, categorias e oportunidades em um só lugar. Tecnologia, confiança e praticidade para você encontrar as melhores ofertas.</p>
+                <span class="eyebrow">Porta de entrada</span>
+                <h1>ENTRADA DO SHOPPING</h1>
+                <p>O futuro das compras é aqui.</p>
                 <div class="hero-actions">
                   <button class="btn btn-primary" type="button" onclick="enterShopping()">ENTRAR NO SHOPPING</button>
-                  <a class="btn btn-secondary" href="#como-funciona">CONHECER OFERTAS</a>
                 </div>
               </div>
               <div class="facade-sign" aria-label="Letreiro da fachada">
