@@ -59,6 +59,14 @@
     body.store-open .shopping-page { display: none; }
     body.store-open .store-page { display: block; }
     .facade-page > section:not(.facade-hero) { display: none; }
+    body.locked { overflow: hidden; }
+    body.inside,
+    body.store-open { overflow: auto; }
+    body.locked .facade-page {
+      min-height: 100svh;
+      height: 100svh;
+      overflow: hidden;
+    }
     body.locked .topbar,
     body.locked .footer,
     body.locked .floating-actions { display: none; }
@@ -238,13 +246,14 @@
 
     .facade-hero {
       min-height: 100svh;
+      height: 100svh;
+      width: 100%;
       position: relative;
       padding: 0;
       display: grid;
       align-items: end;
       background:
-        linear-gradient(90deg, rgba(2,16,33,.08), rgba(2,16,33,.01) 36%, rgba(2,16,33,.01) 65%, rgba(2,16,33,.12)),
-        linear-gradient(180deg, rgba(0,18,45,.10), rgba(0,0,0,.02) 48%, rgba(0,0,0,.26) 100%),
+        linear-gradient(180deg, rgba(0,18,45,.02), rgba(0,0,0,0) 70%, rgba(0,0,0,.10) 100%),
         url("public/fachada-shopping-premium-referencia.png") center center / cover no-repeat;
       background-color: #071a35;
       overflow: hidden;
@@ -255,8 +264,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 50% 58%, rgba(87, 164, 255, .10), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,.02), transparent 72%, rgba(0,0,0,.26));
+        linear-gradient(180deg, rgba(255,255,255,.01), transparent 82%, rgba(0,0,0,.08));
       pointer-events: none;
       animation: facadeBreath 7s ease-in-out infinite;
     }
@@ -269,7 +277,7 @@
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
       min-height: 100svh;
-      padding-bottom: clamp(44px, 7vw, 86px);
+      padding-bottom: clamp(48px, 5.2vw, 72px);
     }
 
     .hero-copy {
@@ -324,19 +332,21 @@
 
     .entry-button {
       position: relative;
-      min-width: 350px;
-      min-height: 58px;
+      min-width: clamp(300px, 21vw, 352px);
+      min-height: clamp(52px, 3.5vw, 60px);
       border-radius: 999px;
-      border: 1px solid rgba(252, 216, 126, .82);
+      border: 1px solid rgba(252, 216, 126, .88);
       color: #fff;
-      background: linear-gradient(135deg, rgba(10, 16, 30, .46), rgba(18, 34, 58, .20));
+      background: linear-gradient(135deg, rgba(9, 14, 26, .58), rgba(20, 26, 38, .28));
       box-shadow:
         0 0 0 1px rgba(255,255,255,.08) inset,
-        0 0 24px rgba(252, 216, 126, .30),
+        0 0 20px rgba(252, 216, 126, .34),
         0 18px 45px rgba(0,0,0,.24);
       backdrop-filter: blur(8px);
       overflow: hidden;
       animation: buttonPulse 3.8s ease-in-out infinite;
+      text-transform: uppercase;
+      letter-spacing: .03em;
     }
 
     .entry-button::before {
@@ -367,10 +377,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 8px;
-      background: linear-gradient(90deg, rgba(248,210,122,.18), rgba(248,210,122,.92), rgba(86,204,242,.66), rgba(248,210,122,.18));
-      box-shadow: 0 -10px 30px rgba(248,210,122,.22);
-      opacity: .88;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(248,210,122,.06), rgba(248,210,122,.52), rgba(86,204,242,.32), rgba(248,210,122,.06));
+      opacity: .72;
     }
 
     .benefit-rail {
@@ -937,8 +946,8 @@
     }
 
     @keyframes facadeBreath {
-      0%, 100% { opacity: .76; }
-      50% { opacity: 1; }
+      0%, 100% { opacity: .55; }
+      50% { opacity: .82; }
     }
 
     @media (max-width: 1040px) {
@@ -975,12 +984,12 @@
 
       .facade-grid {
         width: calc(100% - 24px);
-        padding-bottom: 32px;
+        padding-bottom: 34px;
         justify-content: center;
       }
 
       .entry-button {
-        min-width: min(330px, calc(100vw - 34px));
+        min-width: min(310px, calc(100vw - 34px));
         min-height: 54px;
       }
 
@@ -3978,7 +3987,6 @@
     }
 
     function enterShopping() {
-      sessionStorage.setItem("impacto360Entered", "true");
       document.body.classList.remove("locked", "store-open");
       document.body.classList.add("inside");
       closeEntryModal();
@@ -4070,7 +4078,6 @@
       const store = stores.find(item => item.id === storeId);
       if (!store) return;
       currentStore = store;
-      sessionStorage.setItem("impacto360Entered", "true");
       document.body.classList.remove("locked", "inside");
       document.body.classList.add("store-open");
       renderStore(store);
@@ -4163,13 +4170,11 @@
 
     function boot() {
       renderLockedStores();
-      if (sessionStorage.getItem("impacto360Entered") === "true") {
-        enterShopping();
-      }
-      const hashStore = location.hash.replace("#loja-", "");
-      if (hashStore && stores.some(store => store.id === hashStore)) {
-        openStore(hashStore);
-      }
+      try { sessionStorage.removeItem("impacto360Entered"); } catch (error) {}
+      if (location.hash) history.replaceState(null, "", location.pathname);
+      document.body.classList.remove("inside", "store-open");
+      document.body.classList.add("locked");
+      window.scrollTo({ top: 0, behavior: "auto" });
     }
 
     document.addEventListener("keydown", (event) => {
