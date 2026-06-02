@@ -172,6 +172,26 @@
     "timer": "Oferta termina em: 02h 15min"
   },
   {
+    "id": "lojas-parceiras",
+    "name": "LOJAS PARCEIRAS MERCADO LIVRE",
+    "commercialName": "Lojas Parceiras",
+    "floor": "terreo",
+    "category": "Ofertas",
+    "type": "products",
+    "theme": "partners",
+    "icon": "ML",
+    "color": "#2274e8",
+    "gradient": "linear-gradient(135deg,#fff7c2,#ffffff 48%,#e4f4ff)",
+    "description": "Cards especiais para lojas, listas e vitrines parceiras do Mercado Livre com links de comissao preservados.",
+    "subcategories": [
+      "Lojas oficiais",
+      "Listas parceiras",
+      "Mercado Livre",
+      "Ofertas comissionadas"
+    ],
+    "section": "Parceiros oficiais e listas selecionadas"
+  },
+  {
     "id": "impacto-eletronicos",
     "name": "IMPACTO ELETRÔNICOS",
     "commercialName": "Tecnologia Geral",
