@@ -303,4 +303,50 @@ Saidas geradas:
 - `output/imagens`
 
 O script nao usa login, cookies, senha, scraping agressivo ou tokens. Ele preserva o link de afiliado original no campo `link_afiliado`.
+
+## Atualizar loja IMPACTO TECH COMPUTADORES com dados oficiais
+
+Foi criado tambem um atualizador da propria loja:
+
+```bash
+node scripts/atualizar_loja_tech_mercado_livre.mjs
+```
+
+Esse comando usa os `affiliateLink` ja anexados aos produtos da loja `IMPACTO TECH COMPUTADORES`, segue o redirecionamento normal do link de afiliado, extrai o ID `MLB`, consulta a API publica do Mercado Livre e atualiza:
+
+- titulo oficial;
+- preco;
+- descricao oficial resumida e detalhada;
+- fotos reais do anuncio;
+- galeria de imagens;
+- video, quando a API informar `video_id`;
+- especificacoes tecnicas;
+- condicao;
+- garantia, quando informada;
+- estoque informado pela API;
+- SEO do produto.
+
+As imagens baixadas ficam em:
+
+```text
+public/produtos/mercado-livre
+pacote-github-pages-pronto/public/produtos/mercado-livre
+```
+
+Arquivos atualizados pelo comando:
+
+- `dados/products.json`
+- `dados/importedMercadoLivreProducts.json`
+- `dados/enrichedMercadoLivreProducts.json`
+- `pacote-github-pages-pronto/dados/products.json`
+- `pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json`
+- `pacote-github-pages-pronto/dados/enrichedMercadoLivreProducts.json`
+
+Se algum link nao abrir, ele fica registrado em:
+
+```text
+dados/mercado-livre-update-errors.json
+```
+
+Importante: o comando nao usa login, senha, cookies, scraping agressivo ou token. Ele preserva o link original de comissao em `affiliateLink`.
 - Criar testes automatizados para filtros, favoritos e comparação.
