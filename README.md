@@ -279,4 +279,28 @@ git push -u origin main
 - `docs/estrutura-do-projeto.md`
 - `docs/como-adicionar-produtos.md`
 - `CHANGELOG.md`
+
+## Gerar Word com produtos do Mercado Livre
+
+Foi criado um script Python para ler links de afiliado, seguir o redirecionamento normal, consultar a API publica do Mercado Livre, baixar a imagem real do anuncio e gerar um arquivo Word.
+
+Instalar dependencias:
+
+```bash
+pip install -r requirements-mercado-livre.txt
+```
+
+Rodar usando os links ja extraidos:
+
+```bash
+python scripts/gerar_word_produtos_mercado_livre.py --links-file dados/mercado-livre-links.json --output-dir output
+```
+
+Saidas geradas:
+
+- `output/produtos-mercado-livre.docx`
+- `output/produtos-mercado-livre.json`
+- `output/imagens`
+
+O script nao usa login, cookies, senha, scraping agressivo ou tokens. Ele preserva o link de afiliado original no campo `link_afiliado`.
 - Criar testes automatizados para filtros, favoritos e comparação.
