@@ -121,6 +121,17 @@
       }
       .servers-card h3, .editor-card h3 { margin: 0 0 8px; }
       .servers-card p, .editor-card p { margin: 0 0 12px; color: #607083; line-height: 1.45; }
+      .servers-alert {
+        margin: 0 0 14px;
+        padding: 13px 14px;
+        border: 1px solid rgba(29, 92, 255, .18);
+        border-radius: 10px;
+        color: #173657;
+        background: linear-gradient(135deg, #eef7ff, #ffffff);
+        box-shadow: 0 12px 28px rgba(6, 21, 45, .06);
+        line-height: 1.45;
+      }
+      .servers-alert strong { color: #06152d; }
       .servers-status {
         display: inline-flex;
         align-items: center;
@@ -284,10 +295,10 @@
         name: "AFILIADO-ORBIT",
         status: "Painel local em http://localhost:5174",
         text: "Curadoria de produtos, validação de links afiliados, Mercado Livre, Amazon, Shopee, scores e exportações.",
-        command: "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build",
+        command: "Dê duplo clique em INICIAR-SERVIDOR-AFILIADO-ORBIT.bat ou rode: cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build",
         actions: [
-          { label: "Abrir painel", type: "url", value: "http://localhost:5174", primary: true },
-          { label: "Abrir API", type: "url", value: "http://localhost:8000/docs" },
+          { label: "Abrir se ligado", type: "url", value: "http://localhost:5174", primary: true },
+          { label: "API se ligada", type: "url", value: "http://localhost:8000/docs" },
           { label: "Copiar comando", type: "copy-command" },
         ],
       },
@@ -295,10 +306,10 @@
         name: "Mercado Livre Afiliado",
         status: "Dentro do AFILIADO-ORBIT",
         text: "Área para buscar produtos, inserir seu link do Portal do Afiliado, validar e aprovar publicação.",
-        command: "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build",
+        command: "Dê duplo clique em INICIAR-SERVIDOR-AFILIADO-ORBIT.bat. Depois abra http://localhost:5174/#mercado-livre-afiliado",
         actions: [
-          { label: "Abrir painel ML", type: "url", value: "http://localhost:5174/#mercado-livre-afiliado", primary: true },
-          { label: "Abrir API ML", type: "url", value: "http://localhost:8000/docs" },
+          { label: "Abrir ML se ligado", type: "url", value: "http://localhost:5174/#mercado-livre-afiliado", primary: true },
+          { label: "API ML se ligada", type: "url", value: "http://localhost:8000/docs" },
           { label: "Copiar comando", type: "copy-command" },
         ],
       },
@@ -316,9 +327,10 @@
         name: "Automação Pessoal 360",
         status: "Servidor OAuth pessoal",
         text: "Postagens pessoais autorizadas por OAuth, modo teste, histórico, agenda e aprovação manual.",
-        command: "cd automacao-afiliado-pessoal-360 && copy .env.example .env && npm install && npm run dev",
+        command: "Dê duplo clique em INICIAR-SERVIDOR-AUTOMACAO-PESSOAL-360.bat ou rode: cd automacao-afiliado-pessoal-360 && copy .env.example .env && npm install && npm run dev",
         actions: [
-          { label: "Abrir painel local", type: "url", value: "../automacao-afiliado-pessoal-360/PAINEL-PESSOAL-360.html", primary: true },
+          { label: "Abrir painel estático", type: "url", value: "../automacao-afiliado-pessoal-360/PAINEL-PESSOAL-360.html", primary: true },
+          { label: "Abrir se ligado", type: "url", value: "http://localhost:5173" },
           { label: "Copiar comando", type: "copy-command" },
         ],
       },
@@ -326,9 +338,9 @@
         name: "Automação Social 360",
         status: "Servidor social completo",
         text: "Painel de automação social estruturada para redes, com tokens protegidos e modo seguro.",
-        command: "cd automacao-afiliado-social-360 && copy .env.example .env && npm install && npm run dev",
+        command: "Dê duplo clique em INICIAR-SERVIDOR-AUTOMACAO-SOCIAL-360.bat ou rode: cd automacao-afiliado-social-360 && copy .env.example .env && npm install && npm run dev",
         actions: [
-          { label: "Abrir se rodando", type: "url", value: "http://localhost:5173", primary: true },
+          { label: "Abrir se ligado", type: "url", value: "http://localhost:5173", primary: true },
           { label: "Copiar comando", type: "copy-command" },
         ],
       },
@@ -343,7 +355,12 @@
         ],
       },
     ];
-    body.innerHTML = `<div class="servers-grid">${cards.map((card, index) => `
+    body.innerHTML = `
+      <div class="servers-alert">
+        <strong>Atenção:</strong> endereços <strong>localhost</strong> só abrem quando o servidor correspondente está ligado no seu computador.
+        Se aparecer "conexão recusada", volte na pasta do projeto e dê duplo clique no arquivo <strong>INICIAR-SERVIDOR...</strong> do módulo desejado.
+      </div>
+      <div class="servers-grid">${cards.map((card, index) => `
       <article class="servers-card">
         <h3>${escapeHtml(card.name)}</h3>
         <span class="servers-status">${escapeHtml(card.status)}</span>
@@ -478,14 +495,14 @@
   function renderCommands(body) {
     const commands = [
       ["Adicionar sala Servidores e editor", "powershell -ExecutionPolicy Bypass -File .\\CORRIGIR-LOJA-SERVIDORES-PRODUTOS.ps1"],
-      ["Rodar AFILIADO-ORBIT", "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build"],
+      ["Iniciar AFILIADO-ORBIT", "INICIAR-SERVIDOR-AFILIADO-ORBIT.bat"],
       ["Painel AFILIADO-ORBIT", "http://localhost:5174"],
       ["API AFILIADO-ORBIT", "http://localhost:8000/docs"],
       ["Mercado Livre Afiliado", "Abra o AFILIADO-ORBIT e acesse http://localhost:5174/#mercado-livre-afiliado"],
       ["Robô da Loja", "Clique no botão 360 no canto inferior direito da própria loja."],
-      ["Automação Pessoal 360", "cd automacao-afiliado-pessoal-360 && copy .env.example .env && npm install && npm run dev"],
+      ["Iniciar Automação Pessoal 360", "INICIAR-SERVIDOR-AUTOMACAO-PESSOAL-360.bat"],
       ["Painel Pessoal local", "automacao-afiliado-pessoal-360\\PAINEL-PESSOAL-360.html"],
-      ["Automação Social 360", "cd automacao-afiliado-social-360 && copy .env.example .env && npm install && npm run dev"],
+      ["Iniciar Automação Social 360", "INICIAR-SERVIDOR-AUTOMACAO-SOCIAL-360.bat"],
       ["Produtos editáveis", "Servidores > Produtos editáveis > Salvar edição > Exportar JSON para publicar permanente."],
     ];
     body.innerHTML = `<div class="servers-grid">${commands.map(([title, command], index) => `
