@@ -1,6 +1,6 @@
 @echo off
 title AFILIADO-ORBIT - IMPACTO 360
-cd /d "%~dp0..\AFILIADO-ORBIT"
+cd /d "%~dp0AFILIADO-ORBIT"
 if not exist ".env" copy ".env.example" ".env"
 echo.
 echo Iniciando AFILIADO-ORBIT...

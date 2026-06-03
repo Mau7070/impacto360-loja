@@ -1,0 +1,55 @@
+COMANDOS PARA RODAR O AFILIADO-ORBIT COM SALA DOS SERVIDORES
+
+1) Backend
+
+cd AFILIADO-ORBIT\backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e ".[dev]"
+uvicorn app.main:app --reload --port 8000
+
+Abra no navegador:
+http://localhost:8000/docs
+
+2) Frontend
+
+Abra outro PowerShell:
+
+cd AFILIADO-ORBIT\frontend
+npm install
+npm run dev
+
+Abra no navegador:
+http://localhost:5174
+
+Opcao rapida sem Docker:
+
+Clique duas vezes no arquivo:
+INICIAR-AFILIADO-ORBIT-SEM-DOCKER.bat
+
+Opcao rapida com Docker:
+
+Clique duas vezes no arquivo:
+INICIAR-SERVIDOR-AFILIADO-ORBIT.bat
+
+3) Testes
+
+cd AFILIADO-ORBIT\backend
+.venv\Scripts\activate
+python -m pytest
+
+4) Comando direto dos robos pela API
+
+Rodar em um produto:
+POST http://localhost:8000/agents/products/ID_DO_PRODUTO/run?safe_mode=true
+
+Rodar em todos os produtos carregados:
+POST http://localhost:8000/agents/products/run-all?safe_mode=true
+
+Ver logs:
+GET http://localhost:8000/agents/logs
+
+5) Observacao importante
+
+Se aparecer "localhost recusou conexao", o servidor nao esta ligado.
+Primeiro ligue o backend em http://localhost:8000 e o frontend em http://localhost:5174.
