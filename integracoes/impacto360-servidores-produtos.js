@@ -121,6 +121,33 @@
       }
       .servers-card h3, .editor-card h3 { margin: 0 0 8px; }
       .servers-card p, .editor-card p { margin: 0 0 12px; color: #607083; line-height: 1.45; }
+      .servers-status {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        padding: 0 9px;
+        margin: 0 0 10px;
+        border-radius: 999px;
+        color: #0b4a64;
+        background: #e9f9fd;
+        font-size: .78rem;
+        font-weight: 900;
+      }
+      .servers-card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .servers-command-box {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px dashed rgba(29, 92, 255, .24);
+        border-radius: 8px;
+        color: #40536b;
+        background: #f8fbff;
+        font-size: .82rem;
+        line-height: 1.4;
+      }
       .servers-btn {
         display: inline-flex;
         align-items: center;
@@ -253,26 +280,121 @@
 
   function renderRobots(body) {
     const cards = [
-      ["AFILIADO-ORBIT", "Servidor de curadoria, validação de links afiliados, Mercado Livre, Amazon, Shopee, scores e exportações.", "http://localhost:5174"],
-      ["Robô da Loja", "Atendimento dentro da vitrine, recomendação de produtos, captura de interesse e WhatsApp.", null],
-      ["Automação Pessoal 360", "Servidor para postagens pessoais autorizadas por OAuth, com modo teste e aprovação manual.", null],
-      ["Automação Social 360", "Servidor de automação social estruturada para múltiplas redes, sem senha no código.", null],
-      ["Central VIP", "Servidor de campanhas, UTM, textos, anúncios preparados e compartilhamento seguro.", null],
-      ["Mercado Livre Afiliado", "Servidor dedicado para inserir e validar links gerados no Portal do Afiliado.", "http://localhost:8000/docs"],
+      {
+        name: "AFILIADO-ORBIT",
+        status: "Painel local em http://localhost:5174",
+        text: "Curadoria de produtos, validação de links afiliados, Mercado Livre, Amazon, Shopee, scores e exportações.",
+        command: "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build",
+        actions: [
+          { label: "Abrir painel", type: "url", value: "http://localhost:5174", primary: true },
+          { label: "Abrir API", type: "url", value: "http://localhost:8000/docs" },
+          { label: "Copiar comando", type: "copy-command" },
+        ],
+      },
+      {
+        name: "Mercado Livre Afiliado",
+        status: "Dentro do AFILIADO-ORBIT",
+        text: "Área para buscar produtos, inserir seu link do Portal do Afiliado, validar e aprovar publicação.",
+        command: "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build",
+        actions: [
+          { label: "Abrir painel ML", type: "url", value: "http://localhost:5174/#mercado-livre-afiliado", primary: true },
+          { label: "Abrir API ML", type: "url", value: "http://localhost:8000/docs" },
+          { label: "Copiar comando", type: "copy-command" },
+        ],
+      },
+      {
+        name: "Robô da Loja",
+        status: "Embutido nesta vitrine",
+        text: "Atendimento dentro da loja, recomendação de produtos, captura de interesse e WhatsApp.",
+        command: "Abra a loja e clique no botão 360 no canto inferior direito.",
+        actions: [
+          { label: "Abrir chat 360", type: "chat", primary: true },
+          { label: "Editar produtos", type: "products" },
+        ],
+      },
+      {
+        name: "Automação Pessoal 360",
+        status: "Servidor OAuth pessoal",
+        text: "Postagens pessoais autorizadas por OAuth, modo teste, histórico, agenda e aprovação manual.",
+        command: "cd automacao-afiliado-pessoal-360 && copy .env.example .env && npm install && npm run dev",
+        actions: [
+          { label: "Abrir painel local", type: "url", value: "../automacao-afiliado-pessoal-360/PAINEL-PESSOAL-360.html", primary: true },
+          { label: "Copiar comando", type: "copy-command" },
+        ],
+      },
+      {
+        name: "Automação Social 360",
+        status: "Servidor social completo",
+        text: "Painel de automação social estruturada para redes, com tokens protegidos e modo seguro.",
+        command: "cd automacao-afiliado-social-360 && copy .env.example .env && npm install && npm run dev",
+        actions: [
+          { label: "Abrir se rodando", type: "url", value: "http://localhost:5173", primary: true },
+          { label: "Copiar comando", type: "copy-command" },
+        ],
+      },
+      {
+        name: "Central VIP",
+        status: "Campanhas e divulgação",
+        text: "Campanhas, UTM, textos de anúncios, WhatsApp, e-mail e modelos de divulgação segura.",
+        command: "Use a aba Comandos e a Central de Divulgação publicada na loja quando disponível.",
+        actions: [
+          { label: "Ver comandos", type: "commands", primary: true },
+          { label: "Copiar orientação", type: "copy-command" },
+        ],
+      },
     ];
-    body.innerHTML = `<div class="servers-grid">${cards.map(([name, text, url]) => `
+    body.innerHTML = `<div class="servers-grid">${cards.map((card, index) => `
       <article class="servers-card">
-        <h3>${escapeHtml(name)}</h3>
-        <p>${escapeHtml(text)}</p>
-        ${url ? `<button class="servers-btn primary" data-open-url="${escapeHtml(url)}">Abrir servidor</button>` : `<button class="servers-btn" data-tab-products>Configurar</button>`}
+        <h3>${escapeHtml(card.name)}</h3>
+        <span class="servers-status">${escapeHtml(card.status)}</span>
+        <p>${escapeHtml(card.text)}</p>
+        <div class="servers-card-actions">
+          ${card.actions.map((action) => `
+            <button
+              class="servers-btn${action.primary ? " primary" : ""}"
+              type="button"
+              data-server-action="${escapeAttr(action.type)}"
+              data-server-index="${index}"
+              ${action.value ? `data-action-value="${escapeAttr(action.value)}"` : ""}
+            >${escapeHtml(action.label)}</button>
+          `).join("")}
+        </div>
+        <div class="servers-command-box">${escapeHtml(card.command)}</div>
       </article>
     `).join("")}</div>`;
-    body.querySelectorAll("[data-open-url]").forEach((button) => {
-      button.addEventListener("click", () => window.open(button.dataset.openUrl, "_blank", "noopener,noreferrer"));
+    body.querySelectorAll("[data-server-action]").forEach((button) => {
+      button.addEventListener("click", () => runServerAction(button, cards[Number(button.dataset.serverIndex)]));
     });
-    body.querySelectorAll("[data-tab-products]").forEach((button) => {
-      button.addEventListener("click", () => render("products"));
-    });
+  }
+
+  function runServerAction(button, card) {
+    const type = button.dataset.serverAction;
+    const value = button.dataset.actionValue;
+    if (type === "url") {
+      window.open(value, "_blank", "noopener,noreferrer");
+      return;
+    }
+    if (type === "copy-command") {
+      copyText(card.command);
+      return;
+    }
+    if (type === "products") {
+      render("products");
+      return;
+    }
+    if (type === "commands") {
+      render("commands");
+      return;
+    }
+    if (type === "chat") {
+      const chatButton = document.querySelector("#impacto360-robo-orbit .orbit-fab");
+      if (chatButton) {
+        closePanel();
+        chatButton.click();
+      } else {
+        alert("O Robô da Loja não foi encontrado nesta página. Confirme se impacto360-robo-orbit.js está carregado.");
+      }
+    }
   }
 
   function renderProducts(body) {
@@ -359,8 +481,12 @@
       ["Rodar AFILIADO-ORBIT", "cd AFILIADO-ORBIT && copy .env.example .env && docker compose -f infra/docker-compose.yml --env-file .env up --build"],
       ["Painel AFILIADO-ORBIT", "http://localhost:5174"],
       ["API AFILIADO-ORBIT", "http://localhost:8000/docs"],
+      ["Mercado Livre Afiliado", "Abra o AFILIADO-ORBIT e acesse http://localhost:5174/#mercado-livre-afiliado"],
+      ["Robô da Loja", "Clique no botão 360 no canto inferior direito da própria loja."],
       ["Automação Pessoal 360", "cd automacao-afiliado-pessoal-360 && copy .env.example .env && npm install && npm run dev"],
+      ["Painel Pessoal local", "automacao-afiliado-pessoal-360\\PAINEL-PESSOAL-360.html"],
       ["Automação Social 360", "cd automacao-afiliado-social-360 && copy .env.example .env && npm install && npm run dev"],
+      ["Produtos editáveis", "Servidores > Produtos editáveis > Salvar edição > Exportar JSON para publicar permanente."],
     ];
     body.innerHTML = `<div class="servers-grid">${commands.map(([title, command], index) => `
       <article class="servers-card">
@@ -424,4 +550,3 @@
     build();
   }
 })();
-
