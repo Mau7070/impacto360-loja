@@ -442,4 +442,92 @@
     build();
   }
 })();
+(function () {
+  "use strict";
 
+  function entrarNoShopping(event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    document.body.classList.remove("locked");
+    document.body.classList.remove("store-open");
+    document.body.classList.add("inside");
+
+    try {
+      if (typeof renderMall === "function") {
+        renderMall();
+      }
+    } catch (erro) {
+      console.warn("Aviso ao renderizar shopping:", erro);
+    }
+
+    try {
+      history.replaceState(null, "", "#shopping");
+    } catch (erro) {}
+
+    setTimeout(function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 30);
+
+    return false;
+  }
+
+  function corrigirBotaoInicial() {
+    let botao = document.querySelector(".enter-hotspot");
+    const entrada = document.querySelector(".entrance-view");
+
+    if (!botao && entrada) {
+      botao = document.createElement("button");
+      botao.type = "button";
+      botao.className = "enter-hotspot";
+      entrada.appendChild(botao);
+    }
+
+    if (!botao) return;
+
+    botao.textContent = "ENTRAR NO SHOPPING IMPACTO 360";
+    botao.type = "button";
+    botao.onclick = entrarNoShopping;
+
+    botao.style.position = "absolute";
+    botao.style.left = "50%";
+    botao.style.bottom = "32px";
+    botao.style.transform = "translateX(-50%)";
+    botao.style.width = "min(92vw, 430px)";
+    botao.style.minHeight = "64px";
+    botao.style.padding = "16px 24px";
+    botao.style.border = "2px solid #fff1bd";
+    botao.style.borderRadius = "999px";
+    botao.style.color = "#06152d";
+    botao.style.background = "linear-gradient(135deg, #f3ce7b, #fff1bd)";
+    botao.style.boxShadow = "0 18px 48px rgba(6, 21, 45, .38)";
+    botao.style.fontWeight = "950";
+    botao.style.fontSize = "18px";
+    botao.style.textAlign = "center";
+    botao.style.textTransform = "uppercase";
+    botao.style.zIndex = "9999";
+    botao.style.opacity = "1";
+    botao.style.visibility = "visible";
+    botao.style.pointerEvents = "auto";
+    botao.style.cursor = "pointer";
+
+    botao.addEventListener("click", entrarNoShopping, true);
+    botao.addEventListener("touchend", entrarNoShopping, {
+      capture: true,
+      passive: false
+    });
+  }
+
+  window.enterShopping = entrarNoShopping;
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", corrigirBotaoInicial);
+  } else {
+    corrigirBotaoInicial();
+  }
+
+  setTimeout(corrigirBotaoInicial, 500);
+  setTimeout(corrigirBotaoInicial, 1500);
+})();
