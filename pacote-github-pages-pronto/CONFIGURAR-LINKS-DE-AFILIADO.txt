@@ -1,0 +1,62 @@
+CONFIGURAR LINKS DE AFILIADO - IMPACTO 360
+
+Para voce receber comissao, os links precisam usar seus codigos oficiais de afiliado.
+UTM nao gera comissao. UTM serve apenas para rastrear campanha.
+
+MODO FACIL, DENTRO DA LOJA:
+1. Abra a loja.
+2. Clique em Links ou Central VIP.
+3. Va em "Configurar meus links de comissao".
+4. Cole seus codigos oficiais.
+5. Clique em "Salvar meus links".
+6. Clique em "Gerar links comissionaveis".
+
+Observacao importante:
+Essa configuracao fica salva no navegador usado. Para deixar fixo para todos os visitantes do site publicado, os codigos tambem precisam ser gravados direto no index.html.
+
+Arquivo principal:
+index.html
+
+Procure no arquivo por:
+AFFILIATE_CONFIG
+
+Troque os valores abaixo pelos seus dados oficiais:
+
+1. Amazon
+amazonTag:'COLE_SEU_TAG_AMAZON_AQUI-20'
+
+Exemplo:
+amazonTag:'impacto360-20'
+
+2. Mercado Livre
+mercadoLivreTemplate:'COLE_AQUI_SEU_LINK_OFICIAL_MERCADO_LIVRE_COM_{query}'
+
+Use o link oficial gerado no painel de afiliados/parceiros do Mercado Livre.
+Se a plataforma permitir deeplink de busca, coloque {query} no lugar do termo pesquisado.
+
+3. Shopee
+shopeeTemplate:'COLE_AQUI_SEU_LINK_OFICIAL_SHOPEE_COM_{query}'
+
+Use o link oficial gerado no Shopee Afiliados.
+
+4. Magalu
+magaluTemplate:'COLE_AQUI_SEU_LINK_OFICIAL_MAGALU_COM_{query}'
+
+Use o link oficial do seu painel Parceiro Magalu/Magazine Voce.
+
+5. AliExpress
+aliexpressTemplate:'COLE_AQUI_SEU_LINK_OFICIAL_ALIEXPRESS_COM_{query}'
+
+Use o deeplink oficial do portal de afiliados AliExpress.
+
+IMPORTANTE:
+- Nao invente parametro de afiliado.
+- Nao use link encurtado que esconda o destino sem aviso.
+- Sempre informe que o site pode conter links de afiliado.
+- Se o robo mostrar "Configuracao pendente", aquele link ainda nao esta pronto para comissao.
+
+Depois de editar:
+1. Salve o index.html.
+2. Suba novamente index.html e 404.html no GitHub.
+3. Aguarde o GitHub Pages publicar.
+4. Teste no dominio oficial.

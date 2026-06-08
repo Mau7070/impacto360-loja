@@ -859,11 +859,11 @@
     "icon": "OFERTA",
     "color": "#e65536",
     "gradient": "linear-gradient(135deg,#fff4e8,#fff 42%,#ffe2d6)",
-    "description": "Corredor das promoÃ§Ãµes com cupons, descontUltimas unidades e ofertas do dia.",
+    "description": "Corredor das promocoes com cupons, descontos, ultimas unidades e ofertas do dia.",
     "subcategories": [
       "Ofertas do dia",
       "Cupons",
-     Ultimas unidades",
+      "Ultimas unidades",
       "Mais baratos",
       "Frete grÃ¡tis",
       "Mais vendidos",
@@ -6670,6 +6670,11 @@
     }
 
     function enterShopping() {
+      try {
+        localStorage.setItem("ai360:storeOpen:v2", "true");
+        localStorage.removeItem("ai360:storeOpen");
+        sessionStorage.setItem("impacto360Entered", "true");
+      } catch (error) {}
       document.body.className = "inside";
       renderMall();
       setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 20);
@@ -6981,6 +6986,9 @@
 <!-- IMPACTO360_ADMIN_ROBOS_END -->
 </body>
 </html>
+
+
+
 
 
 

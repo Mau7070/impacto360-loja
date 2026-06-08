@@ -25,8 +25,12 @@ Como publicar:
 8. Folder: /root.
 9. Salve.
 
-Link de teste esperado:
+Link de teste com GitHub Pages antes do domínio:
 
 https://mau7070.github.io/impacto360-loja/
 
-Se você usa domínio próprio, mantenha o arquivo CNAME existente no repositório e configure DNS no provedor do domínio.
+Domínio próprio configurado no CNAME:
+
+impacto360afiliado.com.br
+
+Configure o DNS no provedor do domínio com os registros A do GitHub Pages e o CNAME para www.

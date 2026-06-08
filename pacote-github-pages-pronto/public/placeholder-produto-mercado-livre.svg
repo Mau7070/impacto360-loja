@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7cf"/>
+      <stop offset="0.52" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9f3ff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe04f"/>
+      <stop offset="1" stop-color="#2f7df6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="54" fill="url(#bg)"/>
+  <rect x="145" y="145" width="910" height="610" rx="44" fill="#fff" stroke="#d8e4f6" stroke-width="4"/>
+  <circle cx="355" cy="350" r="115" fill="url(#card)" opacity=".95"/>
+  <path d="M306 346h36l18 95h174l30-121H380" fill="none" stroke="#0b1f44" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="402" cy="497" r="24" fill="#0b1f44"/>
+  <circle cx="520" cy="497" r="24" fill="#0b1f44"/>
+  <text x="620" y="334" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" fill="#0b1f44">Mercado Livre</text>
+  <text x="620" y="410" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#2274e8">Link de afiliado preservado</text>
+  <text x="620" y="472" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#5f718c">Produto importado e pronto para revisao.</text>
+  <rect x="620" y="545" width="330" height="74" rx="37" fill="#0b1f44"/>
+  <text x="670" y="592" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#fff">Comprar no Mercado Livre</text>
+</svg>
