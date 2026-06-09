@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -72,16 +72,25 @@
     }
     .enter-hotspot {
       position: absolute;
-      left: clamp(34px, 3.2vw, 58px);
-      bottom: clamp(34px, 5.15vw, 56px);
-      width: clamp(300px, 21vw, 352px);
-      height: clamp(54px, 3.65vw, 62px);
-      border: 1px solid transparent;
+      left: 50%;
+      bottom: clamp(70px, 8vw, 104px);
+      width: min(380px, calc(100% - 40px));
+      min-height: 60px;
+      padding: 0 22px;
+      border: 1px solid rgba(243,206,123,.82);
       border-radius: 999px;
-      color: transparent;
-      background: transparent;
+      color: #10213a;
+      background: linear-gradient(135deg, #f3ce7b, #fff1bd);
+      box-shadow: 0 22px 54px rgba(8,25,47,.34);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 950;
+      letter-spacing: .02em;
+      text-align: center;
       overflow: hidden;
-      z-index: 3;
+      transform: translateX(-50%);
+      z-index: 60;
     }
     .enter-hotspot::before {
       content: "";
@@ -92,9 +101,14 @@
       transition: transform .75s ease;
     }
     .enter-hotspot:hover {
-      border-color: rgba(243,206,123,.65);
-      background: rgba(255, 219, 133, .06);
+      border-color: rgba(255,255,255,.88);
+      background: linear-gradient(135deg, #ffe09b, #fff7d6);
       box-shadow: 0 0 30px rgba(243,206,123,.35);
+      transform: translateX(-50%) translateY(-2px);
+    }
+    .enter-hotspot:focus-visible, .btn:focus-visible, .nav-btn:focus-visible, .chip:focus-visible {
+      outline: 3px solid rgba(39,215,232,.82);
+      outline-offset: 3px;
     }
     .enter-hotspot:hover::before { transform: translateX(130%); }
     .entrance-bar {
@@ -325,7 +339,7 @@
     .floor-head p { margin: 5px 0 0; color: var(--muted); }
     .store-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
       gap: 14px;
     }
     .store-grid.corridor {
@@ -458,18 +472,44 @@
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
       gap: 14px;
     }
     .product-card { background: #fff; display: flex; flex-direction: column; }
     .product-media {
       position: relative;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1 / 1;
       background: #f4f8fb;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .product-media img { width: 100%; height: 100%; object-fit: contain; padding: 10px; background: #fff; transition: transform .25s ease; }
+    .product-media img { width: 100%; height: 100%; object-fit: contain; object-position: center; padding: 10px; background: #fff; transition: transform .25s ease; }
     .product-card:hover img { transform: scale(1.04); }
+    .media-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      background: #eef8f3;
+      color: #0d6b51;
+      padding: 6px 9px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .media-status.review { background: #fff3cd; color: #7a5300; }
+    .video-chip {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      border-radius: 999px;
+      background: rgba(8,25,47,.82);
+      color: #fff;
+      padding: 7px 10px;
+      font-size: 11px;
+      font-weight: 950;
+    }
     .badge {
       position: absolute;
       top: 10px;
@@ -503,6 +543,7 @@
     .price-line { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .price { color: #0f7d69; font-size: 18px; font-weight: 950; }
     .product-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .product-actions .btn { flex: 1 1 150px; justify-content: center; min-height: 48px; }
 
     .footer {
       margin-top: 48px;
@@ -550,13 +591,20 @@
     }
     @media (max-width: 760px) {
       .entrance-view { background-position: center center; }
-      .enter-hotspot { left: 24px; bottom: 30px; width: min(310px, calc(100vw - 48px)); height: 56px; }
+      .enter-hotspot { bottom: 78px; width: min(330px, calc(100vw - 40px)); min-height: 58px; }
       .entrance-bar { font-size: 10px; overflow: hidden; justify-content: start; }
       .entrance-bar span { margin: 0 8px; }
+      .assistant-fab { top: 14px; right: 14px; bottom: auto; min-height: 44px; }
+      .assistant-panel { top: 70px; right: 14px; bottom: auto; max-height: calc(100svh - 92px); overflow: auto; }
       .header-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
       .brand { min-width: 0; }
       .internal-nav { margin-left: 0; }
       .store-grid, .product-grid { grid-template-columns: 1fr; }
+      .mall-hero { padding-top: 22px; }
+      .mall-panel { padding: 18px; }
+      .product-card { border-radius: 8px; }
+      .product-info h3 { font-size: 18px; }
+      .product-info p { font-size: 14px; }
       .floor-head, .section-title { display: block; }
       .footer-grid { grid-template-columns: 1fr; }
     }
@@ -12494,6 +12542,77 @@
     let activeFilter = "all";
     let viewMode = "grid";
     let currentStore = null;
+    const REVIEW_MESSAGE = "Revisar antes de publicar.";
+    const placeholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="560" font-size="56" font-weight="700">Imagem em revisão</text><text x="600" y="632" font-size="34">Adicione foto real do produto</text></g></svg>');
+
+    function getProductLink(item) {
+      return String(
+        item?.linkPlataforma ||
+        item?.affiliateLink ||
+        item?.link_original_afiliado ||
+        item?.linkAfiliado ||
+        item?.urlProduto ||
+        item?.url ||
+        ""
+      ).trim();
+    }
+
+    function getProductMedia(item) {
+      const principal = String(item?.fotoPrincipal || item?.image || item?.imagem || item?.thumbnail || "").trim();
+      const fotosExtras = Array.isArray(item?.fotosExtras) ? item.fotosExtras.filter(Boolean) : [];
+      const hasPhoto = Boolean(principal);
+      const alt = String(item?.altImagem || item?.alt || item?.name || item?.nome || "Produto do Shopping Impacto 360").trim();
+      return {
+        principal: hasPhoto ? principal : placeholderImage,
+        fotosExtras,
+        alt,
+        status: hasPhoto ? "foto_validada" : "revisar_foto",
+        label: hasPhoto ? "Foto preservada" : "Revisar foto"
+      };
+    }
+
+    function getProductVideo(item) {
+      const videoPrincipal = String(item?.videoPrincipal || item?.video || "").trim();
+      const videosExtras = Array.isArray(item?.videosExtras) ? item.videosExtras.filter(Boolean) : [];
+      const thumbnailVideo = String(item?.thumbnailVideo || "").trim();
+      const origemVideo = String(item?.origemVideo || "").trim();
+      const statusVideo = String(item?.statusVideo || (videoPrincipal || videosExtras.length ? "video_adicionado" : "sem_video")).trim();
+      return { videoPrincipal, videosExtras, thumbnailVideo, origemVideo, statusVideo };
+    }
+
+    function buildManualProduct(fields) {
+      const name = String(fields.nome || fields.name || "").trim();
+      const linkPlataforma = String(fields.linkPlataforma || fields.link_original_afiliado || fields.affiliateLink || "").trim();
+      const fotoPrincipal = String(fields.fotoPrincipal || fields.imagem || fields.image || "").trim();
+      const videoPrincipal = String(fields.videoPrincipal || "").trim();
+      const status = name && linkPlataforma && fotoPrincipal ? "pronto" : "rascunho";
+      return {
+        id: fields.id || "manual-" + Date.now(),
+        name,
+        category: String(fields.categoria || fields.category || "geral").trim(),
+        subcategoria: String(fields.subcategoria || "").trim(),
+        price: fields.preco || fields.price || "Sob consulta",
+        description: String(fields.descricaoCurta || fields.descricao || fields.description || "").trim(),
+        fullDescription: String(fields.descricaoCompleta || fields.fullDescription || fields.descricao || "").trim(),
+        linkPlataforma,
+        affiliateLink: linkPlataforma,
+        link_original_afiliado: linkPlataforma,
+        fotoPrincipal,
+        image: fotoPrincipal,
+        fotosExtras: String(fields.fotosExtras || "").split(/\n|,/).map(item => item.trim()).filter(Boolean),
+        videoPrincipal,
+        videosExtras: String(fields.videosExtras || "").split(/\n|,/).map(item => item.trim()).filter(Boolean),
+        thumbnailVideo: String(fields.thumbnailVideo || "").trim(),
+        origemVideo: String(fields.origemVideo || "").trim(),
+        statusVideo: videoPrincipal ? "video_adicionado" : "sem_video",
+        hashtags: String(fields.hashtags || "").trim(),
+        seo: String(fields.seo || "").trim(),
+        observacoes: String(fields.observacoes || (status === "rascunho" ? REVIEW_MESSAGE : "")).trim(),
+        badge: status === "pronto" ? "Manual pronto" : "Revisar",
+        specs: [],
+        status
+      };
+    }
 
     async function loadEditableData() {
       if (location.protocol === "file:") return;
@@ -12521,10 +12640,16 @@
     }
 
     async function boot() {
+      if (isAdminRoute()) return;
       await loadEditableData();
       forceEntrance();
       renderFloorTabs();
       renderMall();
+    }
+
+    function isAdminRoute() {
+      const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
+      return routedPath.startsWith("/admin/");
     }
 
     function forceEntrance() {
@@ -12721,20 +12846,26 @@
       const isQuote = item.actionType === "quote";
       const isExternalStore = item.actionType === "external-store" || item.type === "external-store";
       const isMercadoLivre = item.source === "Mercado Livre";
+      const media = getProductMedia(item);
+      const video = getProductVideo(item);
+      const linkPlataforma = getProductLink(item);
+      const precisaRevisao = !linkPlataforma || media.status === "revisar_foto" || item.status === "rascunho";
       const actionLabel = isQuote ? "Solicitar orÃ§amento" : (isExternalStore ? "Entrar na loja parceira" : (isMercadoLivre ? "Comprar no Mercado Livre" : "Comprar agora"));
-      return '<article class="product-card">' +
+      return '<article class="product-card" data-status="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '">' +
         '<div class="product-media">' +
-          '<img src="' + escapeAttr(item.image) + '" alt="' + escapeAttr(item.name) + '" loading="lazy">' +
+          '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async">' +
           '<span class="badge">' + escapeHtml(item.badge) + '</span>' +
+          (video.statusVideo !== "sem_video" ? '<span class="video-chip">VÃ­deo</span>' : '') +
           '<button class="favorite ' + (isFavorite(item.id) ? "active" : "") + '" onclick="toggleFavorite(\'' + item.id + '\')" aria-label="Favoritar produto">&hearts;</button>' +
         '</div>' +
         '<div class="product-info">' +
           '<h3>' + escapeHtml(item.name) + '</h3>' +
           '<p>' + escapeHtml(item.description) + '</p>' +
           '<div class="specs">' + (item.specs || []).map(spec => '<span>' + escapeHtml(spec) + '</span>').join("") + '</div>' +
-          '<div class="price-line"><strong class="price">' + escapeHtml(item.price) + '</strong><span class="chip">' + escapeHtml(store.commercialName) + '</span></div>' +
+          '<span class="media-status ' + (precisaRevisao ? "review" : "") + '">' + escapeHtml(precisaRevisao ? "Revisar antes de publicar" : media.label) + '</span>' +
+          '<div class="price-line"><strong class="price">' + escapeHtml(item.price) + '</strong><span class="chip">' + escapeHtml(store?.commercialName || "Impacto 360") + '</span></div>' +
           '<div class="product-actions">' +
-            '<button class="btn btn-primary" onclick="' + (isQuote ? 'requestQuote(\'' + item.id + '\')' : 'buyProduct(\'' + item.id + '\')') + '">' + actionLabel + '</button>' +
+            '<button class="btn btn-primary" data-link-plataforma="' + escapeAttr(linkPlataforma) + '" onclick="' + (isQuote ? 'requestQuote(\'' + item.id + '\')' : 'buyProduct(\'' + item.id + '\')') + '">' + actionLabel + '</button>' +
             '<button class="btn" onclick="shareProduct(\'' + item.id + '\')">Compartilhar produto</button>' +
           '</div>' +
         '</div>' +
@@ -12744,17 +12875,19 @@
     function buyProduct(itemId) {
       const item = products.find(product => product.id === itemId);
       if (!item) return;
-      if (!item.affiliateLink || item.affiliateLink === "COLOCAR_LINK_AQUI" || item.affiliateLink.startsWith("COLOCAR_")) {
-        showToast("Adicione seu link de afiliado neste produto");
+      const linkPlataforma = getProductLink(item);
+      if (!linkPlataforma || linkPlataforma === "COLOCAR_LINK_AQUI" || linkPlataforma.startsWith("COLOCAR_")) {
+        showToast("Adicione o link da plataforma antes de publicar este produto");
         return;
       }
-      window.open(item.affiliateLink, "_blank", "noopener,noreferrer");
+      window.open(linkPlataforma, "_blank", "noopener,noreferrer");
     }
 
     function requestQuote(itemId) {
       const item = products.find(product => product.id === itemId);
       const store = stores.find(s => s.id === item?.storeId);
-      const text = "OlÃ¡, quero solicitar orÃ§amento no IMPACTO 360 AFILIADO. Loja: " + (store?.name || "") + ". ServiÃ§o: " + (item?.name || "") + ".";
+      const linkPlataforma = item ? getProductLink(item) : "";
+      const text = "OlÃ¡, quero solicitar orÃ§amento no IMPACTO 360 AFILIADO. Loja: " + (store?.name || "") + ". ServiÃ§o: " + (item?.name || "") + (linkPlataforma ? ". Link: " + linkPlataforma : "") + ".";
       window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
     }
 
@@ -12801,7 +12934,8 @@
     function shareCurrentStore() { if (currentStore) shareStore(currentStore.id); }
     function shareProduct(itemId) {
       const item = products.find(product => product.id === itemId);
-      shareText("Veja este item no IMPACTO 360 AFILIADO: " + (item?.name || ""), item?.name || settings.siteName);
+      const linkPlataforma = item ? getProductLink(item) : "";
+      shareText("Veja este item no IMPACTO 360 AFILIADO: " + (item?.name || "") + (linkPlataforma ? " " + linkPlataforma : ""), item?.name || settings.siteName);
     }
 
     function copyText(text) {
@@ -12836,6 +12970,37 @@
     }
     function escapeAttr(value) { return escapeHtml(value); }
     function escapeJs(value) { return String(value ?? "").replace(/\\/g, "\\\\").replace(/'/g, "\\'"); }
+
+    Object.assign(window, {
+      enterShopping,
+      goEntrance,
+      backToMall,
+      setFloor,
+      setCategory,
+      setSpecialFilter,
+      setFilter,
+      setViewMode,
+      openStore,
+      quickSearch,
+      toggleAssistant,
+      shareShopping,
+      shareStore,
+      shareCurrentStore,
+      shareProduct,
+      toggleFavorite,
+      buyProduct,
+      requestQuote,
+      showToast,
+      buildManualProduct,
+      getProductLink,
+      getProductMedia,
+      getProductVideo
+    });
+
+    document.querySelector(".enter-hotspot")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      enterShopping();
+    });
 
     window.__impacto360GetProducts = () => products;
     window.__impacto360AddManualProduct = (product) => {
