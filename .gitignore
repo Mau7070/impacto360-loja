@@ -1,0 +1,36 @@
+# Dependências
+node_modules/
+
+# Variáveis e segredos
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds e caches locais
+dist/*.map
+.cache/
+.vite/
+.next/
+out/
+coverage/
+
+# Arquivos compactados e temporários
+*.zip
+*.rar
+*.7z
+*.tmp
+*.temp
+
+# Sistema operacional / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
