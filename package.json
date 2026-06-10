@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:seguranca": "node scripts/validar-impacto360.mjs",
+    "test:mobile": "node scripts/validar-impacto360.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",
