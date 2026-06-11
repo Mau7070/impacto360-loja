@@ -20,6 +20,7 @@
   const BASE_PATH = getBasePath();
 
   injectMobileProductStyle();
+  setTimeout(loadChatGptCeo, 0);
 
   if (new URLSearchParams(location.search).get("abrir") === "loja") {
     localStorage.setItem(STORE_OPEN_KEY, "true");
@@ -392,6 +393,14 @@
       @media(max-width:760px){.product-grid,.store-grid{grid-template-columns:1fr!important}.product-media{aspect-ratio:1/1}.btn,.nav-btn,.chip{min-height:44px}.assistant-fab{top:14px;bottom:auto}}
     `;
     document.head.appendChild(style);
+  }
+
+  function loadChatGptCeo() {
+    if (document.querySelector('script[src*="impacto360-chatgpt-ceo.js"]')) return;
+    const script = document.createElement("script");
+    script.src = `${BASE_PATH}integracoes/impacto360-chatgpt-ceo.js`;
+    script.defer = true;
+    document.body.appendChild(script);
   }
 
   function injectAdminStyle() {
