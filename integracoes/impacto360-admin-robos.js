@@ -18,16 +18,21 @@
   const LOG_KEY = "ai360:qualityLogs";
   const EFFECTIVE_PATH = new URLSearchParams(location.search).get("route") || location.pathname;
   const BASE_PATH = getBasePath();
+  const IS_ADMIN_ROUTE = ADMIN_ROUTES.includes(EFFECTIVE_PATH);
+  let activePostId = "";
 
   injectMobileProductStyle();
-  setTimeout(loadChatGptCeo, 0);
-  setTimeout(loadImageReviewCeo, 0);
+  if (!IS_ADMIN_ROUTE) {
+    removePublicCeoWidgets();
+    setTimeout(removePublicCeoWidgets, 500);
+    setTimeout(renderInternalPostEditButton, 0);
+  }
 
   if (new URLSearchParams(location.search).get("abrir") === "loja") {
     localStorage.setItem(STORE_OPEN_KEY, "true");
   }
 
-  if (ADMIN_ROUTES.includes(EFFECTIVE_PATH)) {
+  if (IS_ADMIN_ROUTE) {
     renderAdminShell();
     return;
   }
@@ -122,7 +127,7 @@
     document.body.className = "";
     document.body.innerHTML = '<main class="ai360-admin"><section class="admin-shell" data-admin-root></section></main>';
     injectAdminStyle();
-    if (localStorage.getItem(AUTH_KEY) === "ok") renderAdminPanel();
+    if (isAdminAuthenticated()) renderAdminPanel();
     else renderLogin();
   }
 
@@ -155,6 +160,7 @@
     const root = document.querySelector("[data-admin-root]");
     const route = EFFECTIVE_PATH;
     const result = validateAll();
+    setTimeout(loadImageReviewCeo, 0);
     root.innerHTML = `
       <header class="admin-head">
         <div>
@@ -177,6 +183,7 @@
           </div>
           <div class="admin-actions">
             <button data-review>Rodar revisao</button>
+            <a class="admin-action-link" href="${adminHref("/admin/postagens")}">Editar postagens</a>
             <button data-open-store>Abrir loja</button>
             <button data-close-store>Marcar loja em revisao</button>
           </div>
@@ -291,6 +298,7 @@
       <section class="admin-card">
         <h2>Edicao manual de postagem</h2>
         <form class="admin-product-form" data-post-form>
+          <input type="hidden" name="id" data-post-id />
           <input name="titulo" required placeholder="Titulo da postagem" />
           <input name="redeSocial" placeholder="Rede social: Instagram, TikTok, Reels..." />
           <input name="linkPlataforma" required placeholder="linkPlataforma" />
@@ -301,7 +309,10 @@
           <input name="hashtags" placeholder="Hashtags" />
           <textarea name="legenda" required placeholder="Legenda"></textarea>
           <textarea name="observacoes" placeholder="Observacoes"></textarea>
-          <button type="submit">Salvar postagem para revisao</button>
+          <div class="admin-actions full">
+            <button type="submit">Salvar ou atualizar postagem</button>
+            <button type="button" data-new-post>Nova postagem</button>
+          </div>
         </form>
       </section>
       ${renderPostList()}
@@ -311,7 +322,7 @@
   function renderPostList() {
     const posts = readJson(POSTS_KEY, []).map(validatePost);
     return `<section class="admin-card"><h2>Postagens salvas</h2><div class="admin-table">${
-      posts.length ? posts.map(post => `<p><b>${escapeHtml(post.titulo)}</b><br>${escapeHtml(post.redeSocial || "sem rede")} - ${escapeHtml(post.alerts.join(" | ") || "pronto")}</p>`).join("") : "Nenhuma postagem cadastrada."
+      posts.length ? posts.map(post => `<p><b>${escapeHtml(post.titulo)}</b><br>${escapeHtml(post.redeSocial || "sem rede")} - ${escapeHtml(post.alerts.join(" | ") || "pronto")}<br><button type="button" data-edit-post="${escapeAttr(post.id)}">Editar postagem</button></p>`).join("") : "Nenhuma postagem cadastrada."
     }</div></section>`;
   }
 
@@ -350,6 +361,10 @@
     });
     root.querySelector("[data-product-form]")?.addEventListener("submit", saveManualProduct);
     root.querySelector("[data-post-form]")?.addEventListener("submit", savePost);
+    root.querySelector("[data-new-post]")?.addEventListener("click", resetPostForm);
+    root.querySelectorAll("[data-edit-post]").forEach((button) => {
+      button.addEventListener("click", () => loadPostIntoForm(button.dataset.editPost));
+    });
     root.querySelector("[data-mark-ready]")?.addEventListener("click", () => renderAdminPanel("Produtos completos marcados como prontos no criterio da revisao."));
     root.querySelectorAll("[data-admin-action]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -372,10 +387,38 @@
 
   function savePost(event) {
     event.preventDefault();
-    const post = { id: "post-" + Date.now(), ...Object.fromEntries(new FormData(event.currentTarget).entries()), status: "rascunho" };
+    const fields = Object.fromEntries(new FormData(event.currentTarget).entries());
+    const id = text(fields.id || activePostId || "post-" + Date.now());
+    const post = { ...fields, id, status: "rascunho", atualizadoEm: new Date().toISOString() };
     const current = readJson(POSTS_KEY, []);
-    localStorage.setItem(POSTS_KEY, JSON.stringify([...current, post]));
-    renderAdminPanel("Postagem salva para revisao.");
+    localStorage.setItem(POSTS_KEY, JSON.stringify([...current.filter(item => item.id !== id), post]));
+    activePostId = "";
+    renderAdminPanel("Postagem salva ou atualizada para revisao.");
+  }
+
+  function loadPostIntoForm(id) {
+    const post = readJson(POSTS_KEY, []).find(item => item.id === id);
+    const form = document.querySelector("[data-post-form]");
+    if (!post || !form) {
+      renderAdminPanel("Postagem nao encontrada para edicao.");
+      return;
+    }
+    activePostId = id;
+    Array.from(form.elements).forEach((field) => {
+      if (field.name && Object.prototype.hasOwnProperty.call(post, field.name)) field.value = post[field.name] || "";
+    });
+    const idField = form.querySelector("[data-post-id]");
+    if (idField) idField.value = id;
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function resetPostForm() {
+    activePostId = "";
+    const form = document.querySelector("[data-post-form]");
+    if (!form) return;
+    form.reset();
+    const idField = form.querySelector("[data-post-id]");
+    if (idField) idField.value = "";
   }
 
   function fallbackManualProduct(fields) {
@@ -420,13 +463,35 @@
     document.body.appendChild(banner);
   }
 
+  function isAdminAuthenticated() {
+    return localStorage.getItem(AUTH_KEY) === "ok";
+  }
+
+  function removePublicCeoWidgets() {
+    document.querySelectorAll(".ceo360-fab,#impacto360-chatgpt-ceo-panel").forEach(element => element.remove());
+  }
+
+  function renderInternalPostEditButton() {
+    removePublicCeoWidgets();
+    if (!isAdminAuthenticated() || document.getElementById("impacto360PostEditLauncher")) return;
+    const link = document.createElement("a");
+    link.id = "impacto360PostEditLauncher";
+    link.className = "post-edit-launcher";
+    link.href = adminHref("/admin/postagens");
+    link.setAttribute("aria-label", "Editar postagens no painel administrativo");
+    link.innerHTML = "<strong>Editar</strong><span>Postagens</span>";
+    document.body.appendChild(link);
+  }
+
   function injectMobileProductStyle() {
     const style = document.createElement("style");
     style.textContent = `
       .product-media img{object-fit:contain!important;object-position:center!important}
       .product-actions .btn{min-height:48px}
       .ai360-review-banner{position:fixed;left:12px;right:12px;bottom:12px;z-index:80;border-radius:8px;background:#fff8db;color:#68470d;border:1px solid #f3ce7b;padding:10px 14px;font:800 13px system-ui,sans-serif;box-shadow:0 12px 36px rgba(8,25,47,.16)}
-      @media(max-width:760px){.product-grid,.store-grid{grid-template-columns:1fr!important}.product-media{aspect-ratio:1/1}.btn,.nav-btn,.chip{min-height:44px}.assistant-fab{top:14px;bottom:auto}}
+      .post-edit-launcher{position:fixed;right:14px;bottom:84px;z-index:90;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:106px;min-height:56px;border-radius:8px;background:#1d5cff;color:#fff;text-decoration:none;box-shadow:0 18px 40px rgba(8,25,47,.22);font-family:Inter,system-ui,sans-serif}
+      .post-edit-launcher strong{font-size:15px;line-height:1}.post-edit-launcher span{font-size:11px;font-weight:900;opacity:.94}
+      @media(max-width:760px){.product-grid,.store-grid{grid-template-columns:1fr!important}.product-media{aspect-ratio:1/1}.btn,.nav-btn,.chip{min-height:44px}.assistant-fab{top:14px;bottom:auto}.post-edit-launcher{right:12px;bottom:78px}}
     `;
     document.head.appendChild(style);
   }
@@ -435,14 +500,6 @@
     if (document.querySelector('script[src*="impacto360-revisao-fotos-ceo.js"]')) return;
     const script = document.createElement("script");
     script.src = `${BASE_PATH}integracoes/impacto360-revisao-fotos-ceo.js`;
-    script.defer = true;
-    document.body.appendChild(script);
-  }
-
-  function loadChatGptCeo() {
-    if (document.querySelector('script[src*="impacto360-chatgpt-ceo.js"]')) return;
-    const script = document.createElement("script");
-    script.src = `${BASE_PATH}integracoes/impacto360-chatgpt-ceo.js`;
     script.defer = true;
     document.body.appendChild(script);
   }
@@ -457,7 +514,7 @@
       .admin-login{max-width:560px;margin:8vh auto}.admin-icon{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:8px;background:#1d5cff;color:#fff;font-weight:950}
       .admin-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.admin-nav a{min-height:40px;display:inline-flex;align-items:center;border-radius:999px;border:1px solid rgba(56,91,130,.16);padding:0 12px;color:#17314f;text-decoration:none;font-weight:900;background:#fff}.admin-nav a.active{background:#1d5cff;color:#fff}
       .admin-card input,.admin-card textarea{width:100%;min-height:44px;border:1px solid rgba(56,91,130,.2);border-radius:8px;padding:10px 12px;margin:6px 0 10px;font:inherit}.admin-card textarea{min-height:92px}
-      .admin-card button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:8px;background:#1d5cff;color:#fff;font-weight:900;padding:0 14px;margin:4px;cursor:pointer}
+      .admin-card button,.admin-action-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:8px;background:#1d5cff;color:#fff;font-weight:900;padding:0 14px;margin:4px;cursor:pointer;text-decoration:none}
       .admin-product-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.admin-product-form textarea,.admin-product-form .full,.admin-product-form button[type=submit]{grid-column:1/-1}
       .admin-actions{display:flex;flex-wrap:wrap;gap:6px}.admin-status{border-radius:999px;padding:8px 12px;font-weight:950}.admin-status.ok{background:#dff8ed;color:#0c6b46}.admin-status.wait{background:#fff1cc;color:#7c5300}
       .quality-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.quality-grid span{background:#eef5ff;border-radius:8px;padding:10px}.admin-table{max-height:440px;overflow:auto}.admin-table p{border-top:1px solid rgba(56,91,130,.14);padding:10px 0;margin:0}.ok-text{color:#0c6b46;font-weight:900}.warn-text{color:#8a5600;font-weight:900}
