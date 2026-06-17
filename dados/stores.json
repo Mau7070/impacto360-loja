@@ -24,7 +24,12 @@
       "Acessórios premium",
       "Celulares custo-benefício",
       "Celulares com melhor câmera",
-      "Celulares com melhor bateria"
+      "Celulares com melhor bateria",
+      "Samsung",
+      "Motorola",
+      "Apple iPhone",
+      "Xiaomi",
+      "acessorios para celular"
     ],
     "section": "Celulares para cada rotina"
   },
@@ -81,9 +86,13 @@
       "Iluminação",
       "Jardim",
       "Ferramentas domésticas",
-      "Pequenos eletros"
+      "Pequenos eletros",
+      "Utensilios de cozinha",
+      "Cozinha recarregavel USB",
+      "Facas e corte",
+      "Organizacao"
     ],
-    "section": "Casa dos sonhos"
+    "section": "Casa, cozinha e utilidades"
   },
   {
     "id": "impacto-moda",
@@ -107,9 +116,14 @@
       "Relógios",
       "Óculos",
       "Roupas sociais",
-      "Roupas casuais"
+      "Roupas casuais",
+      "Vestidos",
+      "Calcas femininas",
+      "Blusas e camisas",
+      "Saias e shorts",
+      "Plus size"
     ],
-    "section": "Looks completos"
+    "section": "Moda feminina e achados"
   },
   {
     "id": "impacto-calcados",
@@ -212,7 +226,10 @@
       "Assistentes virtuais",
       "Segurança eletrônica",
       "Games acessórios",
-      "Dispositivos inteligentes"
+      "Dispositivos inteligentes",
+      "Smart TV",
+      "Fones",
+      "Acessorios de audio"
     ],
     "section": "Tecnologia invisível no dia a dia"
   },
@@ -238,7 +255,13 @@
       "Mouses gamer",
       "Monitores gamer",
       "Acessórios",
-      "Gift cards"
+      "Gift cards",
+      "Kit gamer",
+      "Teclado gamer",
+      "Mouse gamer",
+      "Mousepad",
+      "Headset gamer",
+      "Iluminacao RGB"
     ],
     "section": "Setup gamer completo"
   },
@@ -530,7 +553,12 @@
       "Portfólios",
       "Apresentações",
       "Catálogos",
-      "Logotipos simples"
+      "Logotipos simples",
+      "Arte digital",
+      "Catalogo",
+      "Posts",
+      "Curriculo visual",
+      "Apresentacoes"
     ],
     "services": [
       "Convite digital",

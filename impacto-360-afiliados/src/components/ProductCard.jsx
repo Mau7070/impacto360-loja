@@ -1,16 +1,19 @@
 import { ExternalLink, Eye, Star } from 'lucide-react'
-import { formatCurrency, getDiscountPercent } from '../utils/catalogAutomation'
+import { formatCurrency, getDiscountPercent, getProductLink, resolveProductImage } from '../utils/catalogAutomation'
 
 export function ProductCard({ product }) {
   const discount = getDiscountPercent(product)
   const isFeatured = product.destaque || product.status === 'destaque'
+  const image = resolveProductImage(product)
+  const linkCompra = getProductLink(product)
+  const needsReview = product.aprovadoParaPublicacao === false || image.status !== 'imagem_ok' || !linkCompra
 
   return (
-    <article className="fade-up overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-impact">
-      <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-        <img loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-105" src={product.imagem} alt={product.nome} />
+    <article className="fade-up overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-impact">
+      <div className="relative aspect-square overflow-hidden bg-slate-100">
+        <img loading="lazy" className="h-full w-full object-contain bg-white p-3 transition duration-500 hover:scale-105" src={image.src} alt={product.nome} />
         <span className="absolute left-3 top-3 rounded-lg bg-orange-600 px-3 py-1 text-xs font-black uppercase text-white shadow-lg">
-          {isFeatured ? 'Destaque' : discount ? `${discount}% off` : 'Selecionado'}
+          {needsReview ? 'Revisar' : isFeatured ? 'Destaque' : discount ? `${discount}% off` : 'Selecionado'}
         </span>
         {discount > 0 && (
           <span className="absolute right-3 top-3 rounded-lg bg-slate-950 px-3 py-1 text-xs font-black uppercase text-white shadow-lg">
@@ -29,7 +32,7 @@ export function ProductCard({ product }) {
             {product.nota}
           </span>
         </div>
-        <p className="min-h-[48px] text-sm leading-6 text-slate-600">{product.descricaoCurta}</p>
+        <p className="line-clamp-3 min-h-[48px] text-sm leading-6 text-slate-600">{product.descricaoCurta}</p>
         <ul className="grid gap-2 text-sm text-slate-600">
           {(product.tags || []).slice(0, 3).map((benefit) => (
             <li key={benefit} className="flex gap-2">
@@ -54,12 +57,12 @@ export function ProductCard({ product }) {
               <Eye size={16} />
             </a>
           <a
-            href={product.linkCompra}
+            href={linkCompra || '#admin-produtos'}
             target="_blank"
             rel="noreferrer sponsored"
-            className="focus-ring inline-flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-3 py-3 text-sm font-black text-white shadow-impact transition hover:bg-orange-700"
+            className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-orange-600 px-3 py-3 text-sm font-black text-white shadow-impact transition hover:bg-orange-700"
           >
-            Comprar
+            {needsReview ? 'Revisar' : 'Comprar'}
             <ExternalLink size={16} />
           </a>
           </div>

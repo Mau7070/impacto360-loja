@@ -475,7 +475,7 @@
       grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
       gap: 14px;
     }
-    .product-card { background: #fff; display: flex; flex-direction: column; }
+    .product-card { background: #fff; display: flex; flex-direction: column; min-width: 0; }
     .product-media {
       position: relative;
       aspect-ratio: 1 / 1;
@@ -535,15 +535,16 @@
       font-size: 20px;
     }
     .favorite.active { background: #ffe5ec; }
-    .product-info { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .product-info h3 { margin: 0; font-size: 17px; line-height: 1.25; }
-    .product-info p { margin: 0; color: var(--muted); line-height: 1.45; font-size: 14px; }
+    .product-info { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+    .product-info h3 { margin: 0; font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; }
+    .product-info p { margin: 0; color: var(--muted); line-height: 1.45; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     .specs { display: flex; gap: 6px; flex-wrap: wrap; }
     .specs span { border-radius: 999px; background: #f0f5fb; color: #40546d; padding: 6px 8px; font-size: 11px; font-weight: 800; }
     .price-line { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .price { color: #0f7d69; font-size: 18px; font-weight: 950; }
     .product-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .product-actions .btn { flex: 1 1 150px; justify-content: center; min-height: 48px; }
+    .product-card[data-publicacao="revisar"] .product-actions .btn-primary { background: #7c5300; }
 
     .footer {
       margin-top: 48px;
@@ -605,6 +606,7 @@
       .product-card { border-radius: 8px; }
       .product-info h3 { font-size: 18px; }
       .product-info p { font-size: 14px; }
+      .product-actions .btn { flex-basis: 100%; }
       .floor-head, .section-title { display: block; }
       .footer-grid { grid-template-columns: 1fr; }
     }
@@ -12544,30 +12546,69 @@
     let currentStore = null;
     const REVIEW_MESSAGE = "Revisar antes de publicar.";
     const placeholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="560" font-size="56" font-weight="700">Imagem em revisão</text><text x="600" y="632" font-size="34">Adicione foto real do produto</text></g></svg>');
+    window.ai360PlaceholderImage = placeholderImage;
+    window.handleProductImageError = function handleProductImageError(img) {
+      if (!img || img.dataset.fallbackApplied === "true") return;
+      img.dataset.fallbackApplied = "true";
+      img.src = window.ai360PlaceholderImage;
+    };
 
     function getProductLink(item) {
-      return String(
-        item?.linkPlataforma ||
-        item?.affiliateLink ||
-        item?.link_original_afiliado ||
-        item?.linkAfiliado ||
-        item?.urlProduto ||
-        item?.url ||
-        ""
-      ).trim();
+      const candidates = [
+        item?.linkCompra,
+        item?.linkAfiliado,
+        item?.affiliateLink,
+        item?.linkComissionado,
+        item?.linkPlataforma,
+        item?.link_original_afiliado,
+        item?.urlProduto,
+        item?.url
+      ];
+      return String(candidates.find(isUsableLink) || "").trim();
+    }
+
+    function isUsableLink(value) {
+      const link = String(value || "").trim();
+      return Boolean(link && link !== "COLOCAR_LINK_AQUI" && !link.startsWith("COLOCAR_"));
+    }
+
+    function isValidImageSource(value) {
+      const source = String(value || "").trim();
+      if (!source || source.startsWith("COLOCAR_")) return false;
+      return !source.includes("/assets/placeholder-produto.svg");
+    }
+
+    function resolveProductImage(produto) {
+      const gallery = Array.isArray(produto?.galeria) ? produto.galeria : [];
+      const extraPhotos = Array.isArray(produto?.fotosExtras) ? produto.fotosExtras : [];
+      const candidates = [
+        produto?.fotoPrincipal,
+        produto?.imagemPrincipal,
+        produto?.image,
+        produto?.imagem,
+        gallery[0],
+        extraPhotos[0],
+        produto?.thumbnail
+      ].filter(isValidImageSource);
+      const src = String(candidates[0] || "").trim();
+      return {
+        src: src || placeholderImage,
+        hasPhoto: Boolean(src),
+        status: src ? (produto?.statusImagem || "imagem_ok") : "imagem_manual_necessaria",
+        label: src ? "Foto preservada" : "Revisar foto"
+      };
     }
 
     function getProductMedia(item) {
-      const principal = String(item?.fotoPrincipal || item?.image || item?.imagem || item?.thumbnail || "").trim();
-      const fotosExtras = Array.isArray(item?.fotosExtras) ? item.fotosExtras.filter(Boolean) : [];
-      const hasPhoto = Boolean(principal);
+      const resolved = resolveProductImage(item);
+      const fotosExtras = Array.isArray(item?.fotosExtras) ? item.fotosExtras.filter(isValidImageSource) : [];
       const alt = String(item?.altImagem || item?.alt || item?.name || item?.nome || "Produto do Shopping Impacto 360").trim();
       return {
-        principal: hasPhoto ? principal : placeholderImage,
+        principal: resolved.src,
         fotosExtras,
         alt,
-        status: hasPhoto ? "foto_validada" : "revisar_foto",
-        label: hasPhoto ? "Foto preservada" : "Revisar foto"
+        status: resolved.hasPhoto ? resolved.status : "revisar_foto",
+        label: resolved.hasPhoto ? resolved.label : "Revisar foto"
       };
     }
 
@@ -12582,10 +12623,12 @@
 
     function buildManualProduct(fields) {
       const name = String(fields.nome || fields.name || "").trim();
-      const linkPlataforma = String(fields.linkPlataforma || fields.link_original_afiliado || fields.affiliateLink || "").trim();
+      const linkAfiliado = String(fields.linkAfiliado || fields.affiliateLink || fields.linkComissionado || fields.linkPlataforma || fields.link_original_afiliado || "").trim();
+      const linkPrincipalFonte = String(fields.linkPrincipalFonte || fields.linkFonte || fields.urlProduto || "").trim();
+      const linkCompra = linkAfiliado || linkPrincipalFonte;
       const fotoPrincipal = String(fields.fotoPrincipal || fields.imagem || fields.image || "").trim();
       const videoPrincipal = String(fields.videoPrincipal || "").trim();
-      const status = name && linkPlataforma && fotoPrincipal ? "pronto" : "rascunho";
+      const status = name && linkCompra && fotoPrincipal ? "pronto" : "rascunho";
       return {
         id: fields.id || "manual-" + Date.now(),
         name,
@@ -12594,11 +12637,21 @@
         price: fields.preco || fields.price || "Sob consulta",
         description: String(fields.descricaoCurta || fields.descricao || fields.description || "").trim(),
         fullDescription: String(fields.descricaoCompleta || fields.fullDescription || fields.descricao || "").trim(),
-        linkPlataforma,
-        affiliateLink: linkPlataforma,
-        link_original_afiliado: linkPlataforma,
+        linkCompra,
+        linkAfiliado,
+        linkComissionado: linkAfiliado,
+        affiliateLink: linkAfiliado,
+        linkPlataforma: linkCompra,
+        linkOriginal: linkAfiliado || linkPrincipalFonte,
+        linkPrincipalFonte,
+        tipoLink: linkAfiliado ? "comissionado" : (linkPrincipalFonte ? "comum_fonte" : "sem_link"),
+        statusLink: linkAfiliado ? "link_comissionado_adicionado" : (linkPrincipalFonte ? "aguardando_link_comissionado" : "sem_link"),
+        geraComissao: Boolean(linkAfiliado),
         fotoPrincipal,
         image: fotoPrincipal,
+        imagemPrincipal: fotoPrincipal || placeholderImage,
+        statusImagem: fotoPrincipal ? "imagem_ok" : "imagem_manual_necessaria",
+        aprovadoParaPublicacao: Boolean(name && linkCompra && fotoPrincipal),
         fotosExtras: String(fields.fotosExtras || "").split(/\n|,/).map(item => item.trim()).filter(Boolean),
         videoPrincipal,
         videosExtras: String(fields.videosExtras || "").split(/\n|,/).map(item => item.trim()).filter(Boolean),
@@ -12764,16 +12817,16 @@
     function renderMercadoLivreShowcase() {
       const holder = document.getElementById("mercadoLivreShowcase");
       if (!holder) return;
-      const importedItems = products.filter(item => item.source === "Mercado Livre").slice(0, 8);
+      const importedItems = products.filter(item => item.source === "Mercado Livre" && item.aprovadoParaPublicacao !== false).slice(0, 8);
       if (!importedItems.length) {
         holder.innerHTML = "";
         return;
       }
       holder.innerHTML =
         '<section class="floor-block mercado-showcase">' +
-          '<div class="floor-head"><div><h3>Produtos Mercado Livre importados</h3><p>Links de comissao importados do arquivo enviado e organizados na loja IMPACTO TECH COMPUTADORES. Os cards pendentes podem ser editados em dados/products.json.</p></div><span class="chip">' + importedMercadoLivreProducts.length + ' links preservados</span></div>' +
+          '<div class="floor-head"><div><h3>Produtos Mercado Livre importados</h3><p>Links de comissao preservados e organizados nas lojas corretas. Produtos sem foto segura ficam em revisao antes de virar destaque.</p></div><span class="chip">' + importedMercadoLivreProducts.length + ' links preservados</span></div>' +
           '<div class="product-grid">' + importedItems.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId) || stores.find(store => store.id === "impacto-ofertas"))).join("") + '</div>' +
-          '<div class="store-card-actions"><button class="btn btn-primary" onclick="openStore(\'impacto-tech-computadores\')">Ver todos na loja de computadores</button><button class="btn" onclick="openStore(\'lojas-parceiras\')">Ver lojas parceiras</button></div>' +
+          '<div class="store-card-actions"><button class="btn btn-primary" onclick="openStore(\'impacto-mobile\')">Celulares</button><button class="btn" onclick="openStore(\'impacto-casa\')">Casa e cozinha</button><button class="btn" onclick="openStore(\'impacto-moda\')">Moda</button></div>' +
         '</section>';
     }
 
@@ -12817,7 +12870,9 @@
 
     function renderStorePage(store) {
       const items = storeProducts(store.id);
-      const featured = items.slice(0, 3);
+      const readyItems = items.filter(item => item.aprovadoParaPublicacao !== false);
+      const reviewItems = items.filter(item => item.aprovadoParaPublicacao === false || item.status === "rascunho" || item.statusImagem === "imagem_manual_necessaria");
+      const featured = readyItems.slice(0, 3);
       const chips = store.subcategories.map(item => '<button class="chip" onclick="quickSearch(\'' + escapeJs(item) + '\')">' + escapeHtml(item) + '</button>').join("");
       document.getElementById("storePage").innerHTML =
         '<section class="store-hero ' + (isLightStore(store) ? "light" : "") + '" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
@@ -12834,8 +12889,9 @@
           '</div>' +
         '</section>' +
         '<section><div class="section-title"><div><h2>' + escapeHtml(store.section || "Destaques") + '</h2><p>Produtos e serviÃ§os desta loja com campos editÃ¡veis para links de afiliado ou orÃ§amento.</p></div></div><div class="store-grid">' + featured.map(item => renderHighlight(item)).join("") + '</div></section>' +
-        '<section><div class="section-title"><div><h2>Mais procurados</h2><p>Itens prontos para vocÃª substituir por ofertas reais e links oficiais.</p></div></div><div class="product-grid">' + items.map(item => renderProductCard(item, store)).join("") + '</div></section>' +
-        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Ãrea preparada para novos produtos, serviÃ§os e campanhas.</p></div></div><div class="product-grid">' + items.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>';
+        '<section><div class="section-title"><div><h2>Mais procurados</h2><p>Itens prontos para compra com link de venda preservado.</p></div></div><div class="product-grid">' + (readyItems.length ? readyItems.map(item => renderProductCard(item, store)).join("") : '<div class="empty-state">Nenhum produto pronto para destaque nesta loja.</div>') + '</div></section>' +
+        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Ãrea preparada para novos produtos, serviÃ§os e campanhas.</p></div></div><div class="product-grid">' + readyItems.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>' +
+        (reviewItems.length ? '<section><div class="section-title"><div><h2>Produtos pendentes de revisÃ£o</h2><p>Itens preservados com link, foto ou descriÃ§Ã£o aguardando aprovaÃ§Ã£o manual.</p></div></div><div class="product-grid">' + reviewItems.map(item => renderProductCard(item, store)).join("") + '</div></section>' : '');
     }
 
     function renderHighlight(item) {
@@ -12849,11 +12905,12 @@
       const media = getProductMedia(item);
       const video = getProductVideo(item);
       const linkPlataforma = getProductLink(item);
-      const precisaRevisao = !linkPlataforma || media.status === "revisar_foto" || item.status === "rascunho";
+      const semImagemValida = !media.principal || media.principal === placeholderImage;
+      const precisaRevisao = !linkPlataforma || semImagemValida || item.statusImagem === "imagem_manual_necessaria" || item.aprovadoParaPublicacao === false;
       const actionLabel = isQuote ? "Solicitar orÃ§amento" : (isExternalStore ? "Entrar na loja parceira" : (isMercadoLivre ? "Comprar no Mercado Livre" : "Comprar agora"));
-      return '<article class="product-card" data-status="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '">' +
+      return '<article class="product-card" data-status="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '" data-publicacao="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '">' +
         '<div class="product-media">' +
-          '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async">' +
+          '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async" onerror="handleProductImageError(this)">' +
           '<span class="badge">' + escapeHtml(item.badge) + '</span>' +
           (video.statusVideo !== "sem_video" ? '<span class="video-chip">VÃ­deo</span>' : '') +
           '<button class="favorite ' + (isFavorite(item.id) ? "active" : "") + '" onclick="toggleFavorite(\'' + item.id + '\')" aria-label="Favoritar produto">&hearts;</button>' +

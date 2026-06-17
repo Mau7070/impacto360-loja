@@ -1,4 +1,4 @@
-export function slugify(value = '') {
+﻿export function slugify(value = '') {
   return value
     .toString()
     .toLowerCase()
@@ -21,8 +21,38 @@ export function getDiscountPercent(product) {
   return Math.round(((product.precoAnterior - product.preco) / product.precoAnterior) * 100)
 }
 
+export function getProductLink(product) {
+  return [
+    product.linkCompra,
+    product.linkAfiliado,
+    product.affiliateLink,
+    product.linkComissionado,
+    product.linkPlataforma,
+    product.link_original_afiliado,
+  ].find((link) => link && !String(link).startsWith('COLOCAR_')) || ''
+}
+
+export function resolveProductImage(product) {
+  const candidates = [
+    product.fotoPrincipal,
+    product.imagemPrincipal,
+    product.imagem,
+    product.image,
+    ...(Array.isArray(product.galeria) ? product.galeria : []),
+    ...(Array.isArray(product.fotosExtras) ? product.fotosExtras : []),
+    ...(Array.isArray(product.imagens) ? product.imagens : []),
+  ].filter(Boolean)
+
+  const src = candidates.find((image) => !String(image).includes('/assets/placeholder-produto.svg'))
+
+  return {
+    src: src || '/placeholder-produto-mercado-livre.svg',
+    status: src ? product.statusImagem || 'imagem_ok' : 'imagem_manual_necessaria',
+  }
+}
+
 export function isActiveProduct(product) {
-  return product.status === 'ativo' || product.status === 'destaque'
+  return product.status === 'ativo' || product.status === 'destaque' || product.status === 'pronto'
 }
 
 export function suggestCategory(product, categories) {
@@ -37,13 +67,18 @@ export function suggestCategory(product, categories) {
     .toLowerCase()
 
   const rules = [
+    ['Celulares', ['smartphone', 'celular', 'iphone', 'galaxy', 'motorola', 'xiaomi', 'redmi']],
     ['Livraria', ['livro', 'leitura', 'planner', 'ebook', 'guia']],
-    ['Informática', ['notebook', 'mouse', 'teclado', 'webcam', 'computador', 'ssd', 'monitor']],
-    ['Eletrônicos e Casa', ['eletrônico', 'smart', 'casa', 'bluetooth', 'carregador', 'caixa', 'led']],
+    ['InformÃ¡tica', ['notebook', 'mouse', 'teclado', 'webcam', 'computador', 'ssd', 'monitor']],
+    ['Games e setup gamer', ['gamer', 'console', 'rgb', 'mousepad', 'headset gamer', 'controle']],
+    ['TV e Ã¡udio', ['smart tv', 'tv ', 'caixa de som', 'fone', 'audio', 'audio']],
+    ['Casa e utilidades', ['cozinha', 'utensilio', 'utensilio', 'panela', 'faca', 'organizador', 'casa']],
+    ['EletrÃ´nicos e Casa', ['eletrÃ´nico', 'smart', 'casa', 'bluetooth', 'carregador', 'caixa', 'led']],
     ['Ferramentas', ['ferramenta', 'parafusadeira', 'furadeira', 'chave', 'broca']],
-    ['Brinquedos', ['brinquedo', 'criança', 'bloco', 'boneca', 'jogo']],
-    ['Calçados', ['tênis', 'sapato', 'sandália', 'calçado', 'bota']],
-    ['Moda', ['camiseta', 'moda', 'roupa', 'bolsa', 'calça', 'vestido']],
+    ['Brinquedos', ['brinquedo', 'crianÃ§a', 'bloco', 'boneca', 'jogo']],
+    ['CalÃ§ados', ['tÃªnis', 'sapato', 'sandÃ¡lia', 'calÃ§ado', 'bota']],
+    ['Moda', ['camiseta', 'moda', 'roupa', 'bolsa', 'calÃ§a', 'vestido']],
+    ['ServiÃ§os Impacto360', ['arte digital', 'catalogo', 'catalogo', 'post', 'banner', 'curriculo', 'curriculo', 'apresentacao', 'apresentacao']],
   ]
 
   const found = rules.find(([, keywords]) => keywords.some((keyword) => text.includes(keyword)))
@@ -70,7 +105,13 @@ export function normalizeProduct(input, categories) {
     descricaoCompleta: input.descricaoCompleta || input.descricaoCurta || '',
     imagem: input.imagem || '',
     imagens: Array.isArray(input.imagens) ? input.imagens : [],
-    linkCompra: input.linkCompra || '',
+    linkCompra: input.linkCompra || input.linkAfiliado || input.affiliateLink || input.linkComissionado || input.linkPlataforma || '',
+    linkAfiliado: input.linkAfiliado || input.affiliateLink || input.linkComissionado || '',
+    linkComissionado: input.linkComissionado || input.linkAfiliado || input.affiliateLink || '',
+    linkPrincipalFonte: input.linkPrincipalFonte || '',
+    tipoLink: input.linkAfiliado || input.affiliateLink || input.linkComissionado ? 'comissionado' : 'revisar',
+    statusLink: input.linkAfiliado || input.affiliateLink || input.linkComissionado ? 'link_comissionado_adicionado' : 'verificar_link',
+    geraComissao: Boolean(input.linkAfiliado || input.affiliateLink || input.linkComissionado),
     origem: input.origem || 'Manual',
     codigoInterno: input.codigoInterno || slug.toUpperCase().slice(0, 16),
     tags: Array.isArray(input.tags)
@@ -94,10 +135,10 @@ export function validateProduct(product) {
 
   if (!product.nome) errors.push('Informe o nome do produto.')
   if (!product.categoria) errors.push('Informe ou aceite a categoria sugerida.')
-  if (!product.preco || product.preco <= 0) errors.push('Informe um preço válido.')
+  if (!product.preco || product.preco <= 0) errors.push('Informe um preÃ§o vÃ¡lido.')
   if (!product.imagem) errors.push('Informe uma imagem.')
   if (!product.linkCompra) errors.push('Informe o link de compra.')
-  if (!product.descricaoCurta) errors.push('Informe uma descrição curta.')
+  if (!product.descricaoCurta) errors.push('Informe uma descriÃ§Ã£o curta.')
 
   return {
     valid: errors.length === 0,
@@ -121,3 +162,4 @@ export function groupProductsByCategory(products, categories) {
     products: products.filter((product) => product.categoria === category.nome),
   }))
 }
+

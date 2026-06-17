@@ -109,6 +109,16 @@
       if (next === PLACEHOLDER) {
         image.dataset.ceoPlaceholder = "true";
         card.dataset.status = "revisar";
+        card.dataset.publicacao = "revisar";
+      } else if (product && productLink(product) && product.aprovadoParaPublicacao !== false && product.statusImagem !== "imagem_manual_necessaria") {
+        image.dataset.ceoPlaceholder = "false";
+        card.dataset.status = "pronto";
+        card.dataset.publicacao = "pronto";
+        const status = card.querySelector(".media-status");
+        if (status) {
+          status.classList.remove("review");
+          status.textContent = "Foto preservada";
+        }
       }
     });
   }

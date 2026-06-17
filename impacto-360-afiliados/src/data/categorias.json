@@ -70,13 +70,63 @@
     "ativa": true
   },
   {
+    "id": "celulares",
+    "nome": "Celulares",
+    "slug": "celulares",
+    "descricao": "Samsung, Motorola, Apple iPhone, Xiaomi e acessorios para celular.",
+    "icone": "Smartphone",
+    "banner": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 8,
+    "ativa": true
+  },
+  {
+    "id": "casa-e-utilidades",
+    "nome": "Casa e utilidades",
+    "slug": "casa-e-utilidades",
+    "descricao": "Utensilios de cozinha, organizacao e produtos domesticos.",
+    "icone": "CookingPot",
+    "banner": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 9,
+    "ativa": true
+  },
+  {
+    "id": "games-e-setup-gamer",
+    "nome": "Games e setup gamer",
+    "slug": "games-e-setup-gamer",
+    "descricao": "Kits gamer, teclados, mouses, headsets, suportes e RGB.",
+    "icone": "Gamepad2",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 10,
+    "ativa": true
+  },
+  {
+    "id": "tv-e-audio",
+    "nome": "TV e Ã¡udio",
+    "slug": "tv-e-audio",
+    "descricao": "Smart TVs, caixas de som, fones e acessorios de audio.",
+    "icone": "Tv",
+    "banner": "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 11,
+    "ativa": true
+  },
+  {
+    "id": "servicos-impacto360",
+    "nome": "ServiÃ§os Impacto360",
+    "slug": "servicos-impacto360",
+    "descricao": "Arte digital, catalogos, posts, banners, curriculos e apresentacoes.",
+    "icone": "Sparkles",
+    "banner": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
+    "ordem": 12,
+    "ativa": true
+  },
+  {
     "id": "geral",
     "nome": "Geral",
     "slug": "geral",
     "descricao": "Achados úteis e produtos variados para resolver pequenas necessidades do dia a dia.",
     "icone": "Package",
     "banner": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80",
-    "ordem": 8,
+    "ordem": 13,
     "ativa": true
   }
 ]

@@ -1,0 +1,290 @@
+{
+  "geradoEm": "2026-06-16",
+  "totalProdutos": 174,
+  "lojas": {
+    "impacto-academico": {
+      "total": 8,
+      "categorias": {
+        "Mercado Livre": 8
+      },
+      "produtos": [
+        "servico-impacto-academico-01",
+        "servico-impacto-academico-02",
+        "servico-impacto-academico-03",
+        "servico-impacto-academico-04",
+        "servico-impacto-academico-05",
+        "servico-impacto-academico-06",
+        "servico-impacto-academico-07",
+        "servico-impacto-academico-08"
+      ]
+    },
+    "impacto-casa": {
+      "total": 29,
+      "categorias": {
+        "utensilios de cozinha": 14,
+        "facas e corte": 2,
+        "tapetes e protecao": 1,
+        "organizacao e preparo": 1,
+        "preparo de alimentos": 1,
+        "cozinha recarregavel USB": 10
+      },
+      "produtos": [
+        "cozinha-ml-docx-01",
+        "cozinha-ml-docx-03",
+        "cozinha-ml-docx-04",
+        "cozinha-ml-docx-05",
+        "cozinha-ml-docx-06",
+        "cozinha-ml-docx-07",
+        "cozinha-ml-docx-08",
+        "cozinha-ml-docx-09",
+        "cozinha-ml-docx-10",
+        "cozinha-ml-docx-11",
+        "cozinha-ml-docx-12",
+        "cozinha-ml-docx-13",
+        "cozinha-ml-docx-14",
+        "cozinha-ml-docx-15",
+        "cozinha-ml-docx-16",
+        "cozinha-ml-docx-17",
+        "cozinha-ml-docx-18",
+        "cozinha-ml-docx-19",
+        "cozinha-ml-docx-20",
+        "cozinha-ml-docx-21",
+        "cozinha-ml-docx-22",
+        "cozinha-ml-docx-23",
+        "cozinha-ml-docx-24",
+        "cozinha-ml-docx-25",
+        "cozinha-ml-docx-26",
+        "cozinha-ml-docx-27",
+        "cozinha-ml-docx-28",
+        "cozinha-ml-docx-29",
+        "cozinha-ml-docx-30"
+      ]
+    },
+    "impacto-criadores": {
+      "total": 6,
+      "categorias": {
+        "Mercado Livre": 6
+      },
+      "produtos": [
+        "servico-impacto-criadores-01",
+        "servico-impacto-criadores-02",
+        "servico-impacto-criadores-03",
+        "servico-impacto-criadores-04",
+        "servico-impacto-criadores-05",
+        "servico-impacto-criadores-06"
+      ]
+    },
+    "impacto-kids": {
+      "total": 1,
+      "categorias": {
+        "Infantil": 1
+      },
+      "produtos": [
+        "servico-impacto-music-studio-06"
+      ]
+    },
+    "impacto-mobile": {
+      "total": 57,
+      "categorias": {
+        "Samsung": 19,
+        "Smartphones": 22,
+        "Motorola": 11,
+        "Apple iPhone": 5
+      },
+      "produtos": [
+        "telefone-mercado-livre-001",
+        "telefone-mercado-livre-002",
+        "telefone-mercado-livre-003",
+        "telefone-mercado-livre-004",
+        "telefone-mercado-livre-005",
+        "telefone-mercado-livre-006",
+        "telefone-mercado-livre-007",
+        "telefone-mercado-livre-008",
+        "telefone-mercado-livre-009",
+        "telefone-mercado-livre-010",
+        "mercado-livre-produto-015",
+        "mercado-livre-produto-022",
+        "celular-ml-docx-001",
+        "celular-ml-docx-002",
+        "celular-ml-docx-003",
+        "celular-ml-docx-005",
+        "celular-ml-docx-006",
+        "celular-ml-docx-008",
+        "celular-ml-docx-009",
+        "celular-ml-docx-010",
+        "celular-ml-docx-012",
+        "celular-ml-docx-013",
+        "celular-ml-docx-014",
+        "celular-ml-docx-015",
+        "celular-ml-docx-016",
+        "celular-ml-docx-017",
+        "celular-ml-docx-018",
+        "celular-ml-docx-021",
+        "celular-ml-docx-022",
+        "celular-ml-docx-025",
+        "celular-ml-docx-026",
+        "celular-ml-docx-027",
+        "celular-ml-docx-028",
+        "celular-ml-docx-029",
+        "celular-ml-docx-030",
+        "celular-ml-docx-031",
+        "celular-ml-docx-034",
+        "celular-ml-docx-035",
+        "celular-ml-docx-039",
+        "celular-ml-docx-071",
+        "celular-ml-docx-072",
+        "celular-ml-docx-073",
+        "celular-ml-docx-074",
+        "celular-ml-docx-075",
+        "celular-ml-docx-076",
+        "celular-ml-docx-077",
+        "celular-ml-docx-079",
+        "celular-ml-docx-080",
+        "celular-ml-docx-081",
+        "celular-ml-docx-082",
+        "celular-ml-docx-083",
+        "celular-ml-docx-085",
+        "celular-ml-docx-087",
+        "celular-ml-docx-088",
+        "celular-ml-docx-089",
+        "celular-ml-docx-090",
+        "celular-ml-docx-084"
+      ]
+    },
+    "impacto-moda": {
+      "total": 23,
+      "categorias": {
+        "calcas femininas": 5,
+        "vestidos": 5,
+        "blusas e camisas": 6,
+        "saias e shorts": 6,
+        "conjuntos": 1
+      },
+      "produtos": [
+        "moda-feminina-docx-01",
+        "moda-feminina-docx-02",
+        "moda-feminina-docx-03",
+        "moda-feminina-docx-04",
+        "moda-feminina-docx-05",
+        "moda-feminina-docx-07",
+        "moda-feminina-docx-08",
+        "moda-feminina-docx-09",
+        "moda-feminina-docx-10",
+        "moda-feminina-docx-11",
+        "moda-feminina-docx-12",
+        "moda-feminina-docx-13",
+        "moda-feminina-docx-14",
+        "moda-feminina-docx-15",
+        "moda-feminina-docx-16",
+        "moda-feminina-docx-17",
+        "moda-feminina-docx-18",
+        "moda-feminina-docx-19",
+        "moda-feminina-docx-21",
+        "moda-feminina-docx-22",
+        "moda-feminina-docx-23",
+        "moda-feminina-docx-25",
+        "moda-feminina-docx-26"
+      ]
+    },
+    "impacto-music-studio": {
+      "total": 6,
+      "categorias": {
+        "Mercado Livre": 6
+      },
+      "produtos": [
+        "servico-impacto-music-studio-01",
+        "servico-impacto-music-studio-02",
+        "servico-impacto-music-studio-03",
+        "servico-impacto-music-studio-04",
+        "servico-impacto-music-studio-05",
+        "servico-impacto-music-studio-07"
+      ]
+    },
+    "impacto-personalizados": {
+      "total": 6,
+      "categorias": {
+        "Mercado Livre": 6
+      },
+      "produtos": [
+        "servico-impacto-personalizados-01",
+        "servico-impacto-personalizados-02",
+        "servico-impacto-personalizados-03",
+        "servico-impacto-personalizados-04",
+        "servico-impacto-personalizados-05",
+        "servico-impacto-personalizados-06"
+      ]
+    },
+    "impacto-pet": {
+      "total": 1,
+      "categorias": {
+        "Pet": 1
+      },
+      "produtos": [
+        "servico-impacto-music-studio-08"
+      ]
+    },
+    "impacto-tech-computadores": {
+      "total": 36,
+      "categorias": {
+        "Computadores e periféricos": 32,
+        "Mercado Livre": 4
+      },
+      "produtos": [
+        "mercado-livre-produto-001",
+        "mercado-livre-produto-002",
+        "mercado-livre-produto-003",
+        "mercado-livre-produto-004",
+        "mercado-livre-produto-005",
+        "mercado-livre-produto-006",
+        "mercado-livre-produto-007",
+        "mercado-livre-produto-008",
+        "mercado-livre-produto-009",
+        "mercado-livre-produto-010",
+        "mercado-livre-produto-011",
+        "mercado-livre-produto-012",
+        "mercado-livre-produto-013",
+        "mercado-livre-produto-014",
+        "mercado-livre-produto-016",
+        "mercado-livre-produto-017",
+        "mercado-livre-produto-018",
+        "mercado-livre-produto-019",
+        "mercado-livre-produto-020",
+        "mercado-livre-produto-021",
+        "mercado-livre-produto-023",
+        "mercado-livre-produto-024",
+        "mercado-livre-produto-025",
+        "mercado-livre-produto-026",
+        "mercado-livre-produto-027",
+        "mercado-livre-produto-028",
+        "mercado-livre-produto-029",
+        "mercado-livre-produto-030",
+        "mercado-livre-produto-031",
+        "mercado-livre-produto-032",
+        "mercado-livre-produto-033",
+        "mercado-livre-produto-034",
+        "loja-parceira-002",
+        "mercado-livre-produto-035",
+        "mercado-livre-produto-036",
+        "mercado-livre-produto-037"
+      ]
+    },
+    "lojas-parceiras": {
+      "total": 1,
+      "categorias": {
+        "Mercado Livre": 1
+      },
+      "produtos": [
+        "loja-parceira-001"
+      ]
+    }
+  },
+  "categorias": {
+    "Casa e utilidades": 29,
+    "Celulares": 57,
+    "Infantil": 1,
+    "Informática": 32,
+    "Moda": 23,
+    "Ofertas gerais": 31,
+    "Pet": 1
+  }
+}
