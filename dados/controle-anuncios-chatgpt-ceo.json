@@ -1,6 +1,6 @@
 {
   "geradoEm": "2026-06-15",
-  "branch": "corrigir-fotos-remover-monica-editar-anuncios",
+  "branch": "corrigir-fotos-editar-anuncios",
   "responsavel": "ChatGPT CEO",
   "observacao": "Controle inicial para edicao completa de anuncios no Shopping Impacto360. O painel administrativo exporta a lista completa atualizada em JSON a partir dos produtos carregados no navegador administrativo.",
   "resumoInicial": {

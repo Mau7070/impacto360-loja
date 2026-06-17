@@ -1,8 +1,8 @@
-# Relatório - Revisão de Fotos e ChatGPT CEO
+# Relatorio - Revisao de Fotos e ChatGPT CEO
 
 ## Resumo
 
-A revisão foi executada sem apagar produtos, sem trocar links de compra e sem substituir imagens por fotos não confirmadas. O catálogo foi classificado para edição manual e apoio do ChatGPT CEO.
+A revisao foi executada sem apagar produtos, sem trocar links de compra e sem substituir imagens por fotos nao confirmadas. O catalogo foi classificado para edicao manual e apoio do ChatGPT CEO.
 
 ## Arquivos alterados
 
@@ -15,32 +15,32 @@ A revisão foi executada sem apagar produtos, sem trocar links de compra e sem s
 
 - Total de produtos analisados: 121
 - Imagens mantidas: 77
-- Imagens substituídas automaticamente: 0
-- Imagens pendentes ou para revisão: 44
+- Imagens substituidas automaticamente: 0
+- Imagens pendentes ou para revisao: 44
 - Imagens com necessidade manual: 44
-- Produtos com possível duplicidade de imagem: 43
+- Produtos com possivel duplicidade de imagem: 43
 - Produtos com galeria cadastrada: 2
 - Arquivos locais de imagem quebrados encontrados: 0
 
-## Critério usado
+## Criterio usado
 
-Produtos com imagem real/local foram preservados. Produtos com placeholder, imagem ausente ou campo de link pendente foram marcados para revisão. Nenhuma imagem foi inventada, encurtada, alterada ou trocada por foto de produto semelhante.
+Produtos com imagem real/local foram preservados. Produtos com placeholder, imagem ausente ou campo de link pendente foram marcados para revisao. Nenhuma imagem foi inventada, encurtada, alterada ou trocada por foto de produto semelhante.
 
-## Onde a Mônica foi substituída
+## Limpeza de assistente legado
 
-A busca local não encontrou ocorrência ativa de "Mônica" ou "Monica" nos arquivos principais verificados. Mesmo assim, o novo módulo remove referências residuais em textos administrativos e atributos visuais carregados no navegador, substituindo por ChatGPT CEO quando aparecerem em chaves administrativas da loja.
+A busca local nao encontrou ocorrencia ativa do assistente legado nos arquivos principais verificados. Mesmo assim, o novo modulo remove referencias residuais em textos administrativos e atributos visuais carregados no navegador, substituindo por ChatGPT CEO quando aparecerem em chaves administrativas da loja.
 
 ## Onde o ChatGPT CEO foi ativado
 
-O arquivo `integracoes/impacto360-admin-robos.js` agora carrega o módulo `integracoes/impacto360-revisao-fotos-ceo.js` junto com o ChatGPT CEO.
+O arquivo `integracoes/impacto360-admin-robos.js` agora carrega o modulo `integracoes/impacto360-revisao-fotos-ceo.js` apenas dentro do painel administrativo autenticado.
 
-O novo módulo expõe funções em `window.__impacto360ImageReview` e cria o botão visual **CEO Fotos** para revisão de imagens, pendências e sugestões seguras.
+O novo modulo expoe funcoes em `window.__impacto360ImageReview` e cria o botao visual **CEO Fotos** para revisao de imagens, pendencias e sugestoes seguras.
 
 ## Como editar fotos manualmente
 
-Use o painel **CEO Fotos** para revisar produtos pendentes. As alterações locais são salvas no navegador por `localStorage` até existir backend seguro para gravar em banco protegido.
+Use o painel **CEO Fotos** para revisar produtos pendentes. As alteracoes locais sao salvas no navegador por `localStorage` ate existir backend seguro para gravar em banco protegido.
 
-Campos disponíveis para controle:
+Campos disponiveis para controle:
 
 - fotoPrincipal
 - imagemPrincipal
@@ -53,34 +53,34 @@ Campos disponíveis para controle:
 - imagemEditavel
 - imagemAtualizadaPor
 
-## Como editar descrições manualmente
+## Como editar descricoes manualmente
 
-O painel administrativo mantém campos editáveis para título, categoria, subcategoria, descrição curta, descrição completa, hashtags, chamada de compra, observações internas e dados de postagem.
+O painel administrativo mantem campos editaveis para titulo, categoria, subcategoria, descricao curta, descricao completa, hashtags, chamada de compra, observacoes internas e dados de postagem.
 
-Quando faltar informação técnica, usar:
+Quando faltar informacao tecnica, usar:
 
-`Informação pendente de cadastro. Verifique os dados na plataforma antes da compra.`
+`Informacao pendente de cadastro. Verifique os dados na plataforma antes da compra.`
 
 ## Como usar o ChatGPT CEO para auxiliar
 
-No botão **CEO Fotos**, o ChatGPT CEO pode copiar sugestão segura para catálogo e postagem sem inventar preço, estoque, garantia, frete, desconto, marca ou modelo.
+No botao **CEO Fotos**, o ChatGPT CEO pode copiar sugestao segura para catalogo e postagem sem inventar preco, estoque, garantia, frete, desconto, marca ou modelo.
 
-## Limitações documentadas
+## Limitacoes documentadas
 
-- Sem backend ativo, a edição direta de fotos fica em `localStorage` no navegador administrativo.
-- Produtos com placeholder precisam de revisão manual antes de postagem pronta.
-- Possíveis duplicidades não foram apagadas; ficaram marcadas como `revisar_manual`.
+- Sem backend ativo, a edicao direta de fotos fica em `localStorage` no navegador administrativo.
+- Produtos com placeholder precisam de revisao manual antes de postagem pronta.
+- Possiveis duplicidades nao foram apagadas; ficaram marcadas como `revisar_manual`.
 
 ## Testes realizados
 
-- Geração do controle de imagens em JSON.
-- Verificação de produtos com placeholder e galeria.
-- Verificação de arquivos locais de imagem cadastrados.
+- Geracao do controle de imagens em JSON.
+- Verificacao de produtos com placeholder e galeria.
+- Verificacao de arquivos locais de imagem cadastrados.
 - Checagem de sintaxe dos scripts.
 - `npm.cmd run build` executado com sucesso localmente.
-- Prévia local respondeu com status 200 em `http://127.0.0.1:5173/`.
-- Arquivos `integracoes/impacto360-chatgpt-ceo.js` e `integracoes/impacto360-revisao-fotos-ceo.js` carregaram com status 200 localmente.
+- Previa local respondeu com status 200 em `http://127.0.0.1:5173/`.
+- Arquivo `integracoes/impacto360-revisao-fotos-ceo.js` carregou com status 200 localmente dentro do painel administrativo.
 
-## Confirmação
+## Confirmacao
 
-A página inicial, catálogo, links de compra, dados já cadastrados e estrutura do `index.html` foram preservados.
+A pagina inicial, catalogo, links de compra, dados ja cadastrados e estrutura do `index.html` foram preservados.
