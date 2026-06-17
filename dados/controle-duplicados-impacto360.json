@@ -1,0 +1,120 @@
+{
+  "geradoEm": "2026-06-16",
+  "totalDuplicidades": 7,
+  "regra": "Duplicados nao foram apagados automaticamente; links e ofertas foram preservados para revisao manual.",
+  "duplicidades": [
+    {
+      "criterio": "mesmo_link",
+      "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop",
+      "produtoPrincipal": "telefone-mercado-livre-010",
+      "produtosRelacionados": [
+        "telefone-mercado-livre-010",
+        "celular-ml-docx-071",
+        "celular-ml-docx-072",
+        "celular-ml-docx-073",
+        "celular-ml-docx-074",
+        "celular-ml-docx-075",
+        "celular-ml-docx-076",
+        "celular-ml-docx-077",
+        "celular-ml-docx-079",
+        "celular-ml-docx-080",
+        "celular-ml-docx-081",
+        "celular-ml-docx-082",
+        "celular-ml-docx-083",
+        "celular-ml-docx-087"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_link",
+      "link": "https://meli.la/2f5pDk6",
+      "produtoPrincipal": "celular-ml-docx-008",
+      "produtosRelacionados": [
+        "celular-ml-docx-008",
+        "celular-ml-docx-012"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://meli.la/2f5pDk6"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_link",
+      "link": "https://meli.la/1LyR9KK",
+      "produtoPrincipal": "celular-ml-docx-026",
+      "produtosRelacionados": [
+        "celular-ml-docx-026",
+        "celular-ml-docx-027"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://meli.la/1LyR9KK"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_link",
+      "link": "https://meli.la/2ehPQMY",
+      "produtoPrincipal": "celular-ml-docx-088",
+      "produtosRelacionados": [
+        "celular-ml-docx-088",
+        "celular-ml-docx-089"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://meli.la/2ehPQMY"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_titulo_normalizado",
+      "produtoPrincipal": "loja-parceira-001",
+      "produtosRelacionados": [
+        "loja-parceira-001",
+        "mercado-livre-produto-019",
+        "mercado-livre-produto-020",
+        "mercado-livre-produto-023",
+        "mercado-livre-produto-029"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://mercadolivre.com/sec/14EbgVy",
+        "https://meli.la/1K6Jhmd",
+        "https://meli.la/1Dinaeg",
+        "https://meli.la/34dtQGa",
+        "https://meli.la/11MQYNu"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_titulo_normalizado",
+      "produtoPrincipal": "mercado-livre-produto-028",
+      "produtosRelacionados": [
+        "mercado-livre-produto-028",
+        "mercado-livre-produto-032"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [
+        "https://meli.la/2SsB4e3",
+        "https://meli.la/2oXbgLx"
+      ],
+      "ofertasMescladas": false
+    },
+    {
+      "criterio": "mesmo_titulo_normalizado",
+      "produtoPrincipal": "servico-impacto-personalizados-06",
+      "produtosRelacionados": [
+        "servico-impacto-personalizados-06",
+        "servico-impacto-criadores-06"
+      ],
+      "acaoDuplicidade": "revisar_duplicidade",
+      "linksPreservados": [],
+      "ofertasMescladas": false
+    }
+  ]
+}

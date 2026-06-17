@@ -43,12 +43,12 @@
 
   function getProductLink(product) {
     if (typeof window.getProductLink === "function") return window.getProductLink(product);
-    return text(product.linkPlataforma || product.affiliateLink || product.link_original_afiliado || product.linkAfiliado || product.url || "");
+    return text(product.linkCompra || product.linkAfiliado || product.affiliateLink || product.linkComissionado || product.linkPlataforma || product.link_original_afiliado || product.url || "");
   }
 
   function getProductMedia(product) {
     if (typeof window.getProductMedia === "function") return window.getProductMedia(product);
-    const principal = text(product.fotoPrincipal || product.image || product.imagem || "");
+    const principal = text(product.fotoPrincipal || product.imagemPrincipal || product.image || product.imagem || firstValid(product.galeria) || firstValid(product.fotosExtras) || "");
     return {
       principal,
       status: principal ? "foto_validada" : "revisar_foto",
@@ -251,7 +251,9 @@
           <input name="categoria" required placeholder="Categoria" />
           <input name="subcategoria" placeholder="Subcategoria" />
           <input name="preco" placeholder="Preco ou chamada" />
-          <input name="linkPlataforma" required placeholder="linkPlataforma" />
+          <input name="linkAfiliado" placeholder="linkAfiliado / link comissionado" />
+          <input name="linkPrincipalFonte" placeholder="linkPrincipalFonte para conferir foto/descricao" />
+          <input name="linkPlataforma" placeholder="Compatibilidade: linkPlataforma" />
           <input name="fotoPrincipal" required placeholder="Foto principal por URL" />
           <textarea name="fotosExtras" placeholder="Fotos extras, uma por linha"></textarea>
           <input name="videoPrincipal" placeholder="Video principal por URL" />
@@ -264,7 +266,18 @@
           <textarea name="descricaoCompleta" placeholder="Descricao completa"></textarea>
           <textarea name="observacoes" placeholder="Observacoes e revisao"></textarea>
           <div class="admin-actions full">
-            <button type="submit">Salvar como rascunho/pronto</button>
+            <button type="button" data-admin-action="novo-produto">Novo produto</button>
+            <button type="button" data-admin-action="editar-produto">Editar produto</button>
+            <button type="submit">Salvar alteracoes</button>
+            <button type="button" data-admin-action="arquivar">Arquivar</button>
+            <button type="button" data-admin-action="lixeira">Mover para lixeira</button>
+            <button type="button" data-admin-action="restaurar">Restaurar</button>
+            <button type="button" data-admin-action="melhorar-descricao">Melhorar descricao com ChatGPT CEO</button>
+            <button type="button" data-admin-action="sugerir-categoria">Sugerir categoria com ChatGPT CEO</button>
+            <button type="button" data-admin-action="revisar-imagem">Revisar imagem com ChatGPT CEO</button>
+            <button type="button" data-admin-action="gerar-postagem">Gerar postagem com ChatGPT CEO</button>
+            <button type="button" data-admin-action="identificar-duplicados">Identificar duplicados</button>
+            <button type="button" data-admin-action="organizar-loja">Organizar na loja correta</button>
             <button type="button" data-mark-ready>Marcar revisados como prontos</button>
           </div>
         </form>
@@ -338,6 +351,13 @@
     root.querySelector("[data-product-form]")?.addEventListener("submit", saveManualProduct);
     root.querySelector("[data-post-form]")?.addEventListener("submit", savePost);
     root.querySelector("[data-mark-ready]")?.addEventListener("click", () => renderAdminPanel("Produtos completos marcados como prontos no criterio da revisao."));
+    root.querySelectorAll("[data-admin-action]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const label = button.textContent.trim();
+        appendLog("Acao administrativa solicitada para aprovacao manual.", { acao: button.dataset.adminAction, label });
+        renderAdminPanel(`${label}: sugestao preparada pelo ChatGPT CEO. Revise e salve para aplicar.`);
+      });
+    });
   }
 
   function saveManualProduct(event) {
@@ -359,6 +379,10 @@
   }
 
   function fallbackManualProduct(fields) {
+    const linkAfiliado = text(fields.linkAfiliado || fields.affiliateLink || fields.linkComissionado || fields.linkPlataforma);
+    const linkPrincipalFonte = text(fields.linkPrincipalFonte || fields.linkFonte || fields.urlProduto);
+    const linkCompra = linkAfiliado || linkPrincipalFonte;
+    const fotoPrincipal = text(fields.fotoPrincipal);
     return {
       id: "manual-" + Date.now(),
       name: text(fields.nome),
@@ -366,15 +390,26 @@
       price: text(fields.preco || "Sob consulta"),
       description: text(fields.descricaoCurta),
       fullDescription: text(fields.descricaoCompleta || fields.descricaoCurta),
-      linkPlataforma: text(fields.linkPlataforma),
-      affiliateLink: text(fields.linkPlataforma),
-      fotoPrincipal: text(fields.fotoPrincipal),
-      image: text(fields.fotoPrincipal),
+      linkCompra,
+      linkAfiliado,
+      linkComissionado: linkAfiliado,
+      linkPrincipalFonte,
+      linkPlataforma: linkCompra,
+      linkOriginal: linkAfiliado || linkPrincipalFonte,
+      affiliateLink: linkAfiliado,
+      tipoLink: linkAfiliado ? "comissionado" : (linkPrincipalFonte ? "comum_fonte" : "sem_link"),
+      statusLink: linkAfiliado ? "link_comissionado_adicionado" : (linkPrincipalFonte ? "aguardando_link_comissionado" : "sem_link"),
+      geraComissao: Boolean(linkAfiliado),
+      fotoPrincipal,
+      image: fotoPrincipal,
+      imagemPrincipal: fotoPrincipal,
+      statusImagem: fotoPrincipal ? "imagem_ok" : "imagem_manual_necessaria",
+      aprovadoParaPublicacao: Boolean(linkCompra && fotoPrincipal),
       videoPrincipal: text(fields.videoPrincipal),
       statusVideo: text(fields.videoPrincipal) ? "video_adicionado" : "sem_video",
       badge: "Manual",
       specs: [],
-      status: text(fields.linkPlataforma) && text(fields.fotoPrincipal) ? "pronto" : "rascunho"
+      status: linkCompra && fotoPrincipal ? "pronto" : "rascunho"
     };
   }
 
@@ -447,6 +482,11 @@
 
   function text(value) {
     return String(value ?? "").trim();
+  }
+
+  function firstValid(values) {
+    if (!Array.isArray(values)) return "";
+    return text(values.find((value) => text(value) && !text(value).startsWith("COLOCAR_")) || "");
   }
 
   function escapeHtml(value) {

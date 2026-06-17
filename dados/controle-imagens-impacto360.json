@@ -1,0 +1,1749 @@
+{
+  "geradoEm": "2026-06-16",
+  "resumo": {
+    "imagem_manual_necessaria": 91,
+    "imagem_ok": 83
+  },
+  "produtos": [
+    {
+      "produtoId": "telefone-mercado-livre-001",
+      "titulo": "Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-001/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-002",
+      "titulo": "iPhone 16e (256 Gb) - Branco - Distribuidor Autorizado",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-002/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-003",
+      "titulo": "Samsung Galaxy S25 FE 5G 128GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-003/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-004",
+      "titulo": "Motorola Moto G15 256GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-004/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-005",
+      "titulo": "Samsung Galaxy A07 256GB 8GB RAM",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-005/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-006",
+      "titulo": "Samsung Galaxy A16 5G 256GB 8GB RAM",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-006/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-007",
+      "titulo": "Samsung Galaxy A26 5G 256GB 8GB RAM",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-007/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-008",
+      "titulo": "Motorola Moto G35 5G 256GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-008/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-009",
+      "titulo": "Xiaomi Redmi 14C 256GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "telefone-mercado-livre-010",
+      "titulo": "Apple iPhone 14 128GB Estelar",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/telefone-mercado-livre-010/imagem-01.webp",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-001",
+      "titulo": "Notebook Asus Tuf Gaming F16 Fx608jhr Nvidia Rtx 5050 Intel Core I7 14650hx 16gb Ram 512gb Ssd Windows 11 Home Tela 16 165hz Nível Ips Cinza - Rv016w",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-001/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-002",
+      "titulo": "Notebook Gamer Acer Nitro V15 Anv15-52-737p Intel® Core I7-13620h 13ªg 16gb Ram 512gb Ssd Rtx4050 Fhd 15.6",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-002/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-003",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 256gb Ssd Windows 11 15.3 - 83ns0003br Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-003/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-004",
+      "titulo": "Pc Completo Bluepc Task I5 6ª 8gb Ddr4 Ssd 240gb Monitor 15 8 Gb 240 Gb Integrada",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-004/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-005",
+      "titulo": "Acer Predator Helios Neo Phn16-72-99my Intel Ci9 14ªgeração 32gb 1tb Ssd Rtx4070 Windows11 Cor Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-005/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-006",
+      "titulo": "Notebook Hp 256r G9 Intel Core I5-1334u 15.6 Hd Intel Uhd 256gb Ssd 16gb Ram Windows 11 Home 64 Pls Sl - Bq9l2at#ak4 Cinza-escuro",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-006/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-007",
+      "titulo": "Pc Computador Slim Intel I7 16gb Ssd 480gb Monitor 19 Branco",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-007/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "loja-parceira-001",
+      "titulo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+      "loja": "lojas-parceiras",
+      "fotoPrincipal": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-008",
+      "titulo": "Notebook Asus Vivobook 15, Intel Core I5 1334u 1,3 Ghz, 8gb Ram, 256gb Ssd, Keepos Linux, Tela 15,6 Fhd, Cool Silver - X1504va-nj1739 Prateado",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-008/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-009",
+      "titulo": "Notebook Asus Tuf Gaming F16, Nvidia Rtx 3050, Intel Core 5 210h 2,2 Ghz, 8gb Ram, 512gb Ssd, Keepos Linux, Tela 16 Fhd+ Nível Ips 144hz, Mecha Gray - Fx607vj-rl002 Cinza",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-009/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-010",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I7-13620h 16gb 512gb Ssd Linux 15.3 - 83nss00100 Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-010/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-011",
+      "titulo": "Notebook Asus V16 V3607vu Nvidia Rtx 4050 Intel Core 5 210h 16gb Ram 512gb Ssd Linux Keepos Tela 16 Led Nível Ips 144hz Preto - Rp354 Matte Black",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-011/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-012",
+      "titulo": "Notebook Asus Vivobook 15 M1502, Amd Ryzen 7, 8 Gb Ram, 512 Gb Ssd, Keepos Linux, Cool Silver - M1502ya-nj611",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-012/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-013",
+      "titulo": "Pc Gamer Completo I7 3.4ghz 16gb Ssd 480gb 500w Monitor 19 480 Gb 16 Gb Placa De Video Integrada",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-013/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-014",
+      "titulo": "Mini Desktop Intel Core I7 16gb Ram Ssd 1tb+monitor 19 Win11 960 Gb 16 Gb Integrada",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-014/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-015",
+      "titulo": "Computador All-in-one 19 I5 8gb Ssd 256gb Va Wi-fi 5ghz Branco Bivolt",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-015/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-016",
+      "titulo": "Notebook Asus Vivobook Go 15, Intel Core I3 N305, 8gb Ram, 512gb Ssd, Windows 11 Home, Tela Nanoedge 15,6 Fhd, Cool Silver - E1504ga-nj435w",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-016/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-017",
+      "titulo": "Notebook Asus Vivobook Go 15, Intel Celeron Dual Core N4500, 4gb Ram, 128gb Emmc, Windows 11 Home, Tela 15,60&#x27; Led, Rosa - E510ka-br833ws",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-017/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-018",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 16gb 512gb Ssd Windows 11 15.3 - 83ns0001br Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-018/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-019",
+      "titulo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-019/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-020",
+      "titulo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-020/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-021",
+      "titulo": "Notebook Acer Nitro V15 Anv15-52-96aq Intel® Core I9-13900h De 13° G 16gb 512gb Ssd Rtx4060 Windows 11 Home 15.6 Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-021/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-022",
+      "titulo": "Notebook Samsung Galaxy Book4 Intel® Core I5-1335u (1.3 Ghz, Até 4.6ghz, 12 Mb L3 Cache), Windows 11 Home, 8gb, 512gb Ssd, Iris Xe, 15.6&#x27;&#x27; Full Hd Led, 1.55kg",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-022/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-023",
+      "titulo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-023/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-024",
+      "titulo": "Notebook Asus Vivobook Go 15 E1504 Amd Ryzen 5 7520u 8gb Ram 256gb Ssd Linux Keepos 15,6 Fhd Black E1504fa-nj731 Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-024/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-025",
+      "titulo": "Notebook Asus V16 V3607vu Nvidia Rtx 4050 Intel Core 5 210h 16gb Ram 512gb Ssd Windows 11 Home Tela 16 Led Fhd 144hz Nível Ips Black - Rp306w Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-025/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-026",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Linux 15.3 - 83nss00000 Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-026/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-027",
+      "titulo": "Notebook Gamer Lenovo Loq 15irx9 Intel Core I5-13450hx 16gb 512gb Ssd Rtx 3050 Windows 11 - 83kh0006br Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-027/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-028",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Windows 11 15.3 - 83ns0002br Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-028/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-029",
+      "titulo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-029/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-030",
+      "titulo": "Computador Dell 24 All-in-one Ec24250 23.8 Ips Full Hd 13ª Gen Intel Core I7 16gb 1tb Ssd Win 11 Aio-i1303-m41 Branco",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-030/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-031",
+      "titulo": "Notebook Asus Tuf Gaming F16, Intel Core 5, Nvidia Rtx 3050, 16gb Ram, 512gb Ssd, Windows 11 Home, Tela 16 Ips 144hz, Mecha Gray - Fx607vj-rl007w",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-031/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-032",
+      "titulo": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Windows 11 15.3 - 83ns0002br Luna Grey",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-032/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-033",
+      "titulo": "Notebook Elitebook 640 G10, 14 , Intel Core I5, Windows 11 Pro, 16gb Ram, 512gb Ssd Hp Prateado",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-033/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-034",
+      "titulo": "Computador Completo I7 16gb Ssd 480gb Monitor Mouse Teclado 480 Gb 16 Gb Intel Hd Graphics 4000",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-034/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "loja-parceira-002",
+      "titulo": "Teclado E Mouse Sem Fio Dell Km3322w Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/loja-parceira-002/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-035",
+      "titulo": "Notebook Gamer Acer Nitro V16 Anv16-72-7327 Intel Core 7 240h 32gb Ram 1tb Ssd Rtx5060 Windows 11 Home 16 Wuxga 180 Hz Preto",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-035/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-036",
+      "titulo": "Cpu Hp Intel Core I7 16gb Ram Ssd 512gb Win 11 Original Wifi 16 Gb",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-036/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "mercado-livre-produto-037",
+      "titulo": "Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb Ssd Linux Keepos Intel Iris Xe Tela 15,6 Led Fhd Silver - Nj1741",
+      "loja": "impacto-tech-computadores",
+      "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-037/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-01",
+      "titulo": "Letra personalizada simples",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-01/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-02",
+      "titulo": "Letra com cifra",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-02/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-03",
+      "titulo": "Jingle comercial",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-03/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-04",
+      "titulo": "Música para homenagem",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-04/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-05",
+      "titulo": "Música gospel autoral",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-05/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-06",
+      "titulo": "Música infantil personalizada",
+      "loja": "impacto-kids",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-06/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-07",
+      "titulo": "Música para campanha",
+      "loja": "impacto-music-studio",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-07/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-music-studio-08",
+      "titulo": "Narração musical para vídeo",
+      "loja": "impacto-pet",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-music-studio-08/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-01",
+      "titulo": "Revisão acadêmica",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-01/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-02",
+      "titulo": "Formatação ABNT",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-02/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-03",
+      "titulo": "Organização de trabalho",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-03/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-04",
+      "titulo": "Criação de mapa mental",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-04/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-05",
+      "titulo": "Resumo comentado",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-05/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-06",
+      "titulo": "Questões com gabarito",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-06/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-07",
+      "titulo": "Slides para apresentação",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-07/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-academico-08",
+      "titulo": "Orientação estrutural de TCC",
+      "loja": "impacto-academico",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-academico-08/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-01",
+      "titulo": "Convite digital",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-01/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-02",
+      "titulo": "Banner personalizado",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-02/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-03",
+      "titulo": "Currículo visual",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-03/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-04",
+      "titulo": "Apresentação profissional",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-04/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-05",
+      "titulo": "Catálogo simples",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-05/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-personalizados-06",
+      "titulo": "Arte para redes sociais",
+      "loja": "impacto-personalizados",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-personalizados-06/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-01",
+      "titulo": "Kit de posts",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-01/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-02",
+      "titulo": "Capa para vídeo",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-02/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-03",
+      "titulo": "Roteiro curto",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-03/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-04",
+      "titulo": "Calendário editorial",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-04/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-05",
+      "titulo": "Ideias de conteúdo",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-05/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "servico-impacto-criadores-06",
+      "titulo": "Arte para redes sociais",
+      "loja": "impacto-criadores",
+      "fotoPrincipal": "public/produtos-impacto360/servico-impacto-criadores-06/imagem-01.webp",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem existente preservada.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-001",
+      "titulo": "Samsung Galaxy A15 5G 128 GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-002",
+      "titulo": "Samsung Galaxy A06 128 GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-003",
+      "titulo": "Samsung Galaxy A06 5G 128 GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-005",
+      "titulo": "Samsung Galaxy A17",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-006",
+      "titulo": "Samsung Galaxy A36 5G 256 GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-008",
+      "titulo": "Samsung Galaxy A55 5G 256 GB",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-009",
+      "titulo": "Samsung Galaxy A35",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-010",
+      "titulo": "Samsung Galaxy A25 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-012",
+      "titulo": "Samsung Galaxy A16 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-013",
+      "titulo": "Samsung Galaxy A05s",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-014",
+      "titulo": "Samsung Galaxy A05",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-015",
+      "titulo": "Samsung Galaxy A03",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-016",
+      "titulo": "Samsung Galaxy S21 FE 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-017",
+      "titulo": "Samsung Galaxy S23 FE",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-018",
+      "titulo": "Samsung Galaxy S24 FE",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-021",
+      "titulo": "Samsung Galaxy S25+",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-022",
+      "titulo": "Samsung Galaxy S25 Ultra",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-025",
+      "titulo": "Motorola Moto G06",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-026",
+      "titulo": "Motorola Moto G05",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-027",
+      "titulo": "Motorola Moto G05 SE",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-028",
+      "titulo": "Motorola Moto G34 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-029",
+      "titulo": "Motorola Moto G54 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-030",
+      "titulo": "Motorola Moto G24",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-031",
+      "titulo": "Motorola Moto G24 Power",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-034",
+      "titulo": "Motorola Moto G85 5G",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-035",
+      "titulo": "Motorola Edge 40 Neo",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-039",
+      "titulo": "Motorola Edge 50 Ultra",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-071",
+      "titulo": "Apple iPhone 11",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-072",
+      "titulo": "Apple iPhone XR",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-073",
+      "titulo": "Apple iPhone XS",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-074",
+      "titulo": "Apple iPhone 12",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-075",
+      "titulo": "Apple iPhone 12 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-076",
+      "titulo": "Apple iPhone 13",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-077",
+      "titulo": "Apple iPhone 13 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-079",
+      "titulo": "Apple iPhone 14 Plus",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-080",
+      "titulo": "Apple iPhone 14 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-081",
+      "titulo": "Apple iPhone 15",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-082",
+      "titulo": "Apple iPhone 15 Plus",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-083",
+      "titulo": "Apple iPhone 15 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-085",
+      "titulo": "Apple iPhone 16",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-087",
+      "titulo": "Apple iPhone 16 Plus",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-088",
+      "titulo": "Apple iPhone 16 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-089",
+      "titulo": "Apple iPhone 16 Pro Max",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Revisar foto real antes de campanha.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-090",
+      "titulo": "Apple iPhone 17 Pro",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "/assets/placeholder-produto.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "celular-ml-docx-084",
+      "titulo": "Apple iPhone 15 Pro Max",
+      "loja": "impacto-mobile",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-01",
+      "titulo": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-02",
+      "titulo": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-03",
+      "titulo": "Camisa Xadrez Plus Size Blusa Feminina Moda Casual G1 G2 G3",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-04",
+      "titulo": "Blusa Feminina Básica Manga Curta Moda Casual Trabalho",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-05",
+      "titulo": "Regata Feminina Poliamida Premium Forrada Alça Larga Moda",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-07",
+      "titulo": "Jaqueta Feminina Couro Casaco Blusa Moda Outono Inverno",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-08",
+      "titulo": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-09",
+      "titulo": "Short Feminino Couro Fake Cintura Alta C Bolsos Casual Moda",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-10",
+      "titulo": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-11",
+      "titulo": "Blusa Feminina Manga Bufante Lateral Estampado Moda Estilosa",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-12",
+      "titulo": "Macacão Virginia Manga Longa Zíper Moda Gringa Canelado Luxo",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-13",
+      "titulo": "Kit 2 Short Alfaiataria Feminino Cintura Alta Envio Imediato",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-14",
+      "titulo": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-15",
+      "titulo": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-16",
+      "titulo": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-17",
+      "titulo": "Camisa Polo Todas As Cores / Malha Piquet / Feminina",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-18",
+      "titulo": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-19",
+      "titulo": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-21",
+      "titulo": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-22",
+      "titulo": "Saia Midi De Couro Fenda Evangélica Social Luxo",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-23",
+      "titulo": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-25",
+      "titulo": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "moda-feminina-docx-26",
+      "titulo": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
+      "loja": "impacto-moda",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-01",
+      "titulo": "Kit C/12 Utensílios de Cozinha Silicone Cabo Madeira",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/01_kit-c-12-utensilios-de-cozinha-silicone-cabo-madeira.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-03",
+      "titulo": "Kit Utensílios para Cozinha 5 Peças Aço Inox",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/03_kit-utensilios-para-cozinha-5-pecas-aco-inox.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-04",
+      "titulo": "Kit Conjunto 19 Peças Utensílios, Facas, Silicone e Plástico Preto",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/04_kit-conjunto-19-pecas-utensilios-facas-silicone-e-plastico-preto.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-05",
+      "titulo": "Kit 12 Utensílios de Cozinha em Silicone com Escumadeira",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-06",
+      "titulo": "Jogo de Utensílios 19 Peças em Silicone Preto com Cabos de Madeira",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-07",
+      "titulo": "4 Tapetes de Silicone Protetor para Fogão de Indução/Cooktop",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/07_4-tapetes-de-silicone-protetor-para-fogao-de-inducao-cooktop.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-08",
+      "titulo": "Kit Completo 12 Utensílios de Cozinha Silicone Cabo Madeira",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/08_kit-completo-12-utensilios-de-cozinha-silicone-cabo-madeira.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-09",
+      "titulo": "Kit 12 Utensílios de Cozinha em Silicone Premium Cabo Madeira Preto",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/09_kit-12-utensilios-de-cozinha-em-silicone-premium-cabo-madeira-preto.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-10",
+      "titulo": "Jogo de Facas Tramontina Plenus em Aço Inox 7 Peças Preto",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/10_jogo-de-facas-tramontina-plenus-em-aco-inox-7-pecas-preto.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-11",
+      "titulo": "Kit 12 Utensílios Silicone Cabo Madeira Ponte Lar",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-12",
+      "titulo": "Spray Pulverizador de Vidro 100 ml para Azeite, Óleo e Vinagre",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-13",
+      "titulo": "Kit 19 Utensílios de Cozinha Silicone com Escumadeira Preto",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-14",
+      "titulo": "Kit 5 Utensílios Silicone Lacerda",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/14_kit-5-utensilios-silicone-lacerda.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-15",
+      "titulo": "Kit 12 Utensílios Silicone Cabo Madeira Gourmet",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-16",
+      "titulo": "Kit 12 Utensílios Cozinha Tragaluz Cinza",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/16_kit-12-utensilios-cozinha-tragaluz-cinza.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-17",
+      "titulo": "Conjunto 19 Peças Utensílios Cozinha Silicone Preto Helplo",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/17_conjunto-19-pecas-utensilios-cozinha-silicone-preto-helplo.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-18",
+      "titulo": "Jogo 12 Utensílios de Cozinha Silicone Preto Cabo Madeira",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-19",
+      "titulo": "Amassador de Batatas, Legumes e Feijão em Aço Inox",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/19_amassador-de-batatas-legumes-e-feijao-em-aco-inox.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-20",
+      "titulo": "Kit 19 Utensílios de Cozinha Silicone Cabo Madeira Cinza",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "imagens/20_kit-19-utensilios-de-cozinha-silicone-cabo-madeira-cinza.png",
+      "statusImagem": "imagem_ok",
+      "qualidadeImagem": "boa_para_mobile",
+      "observacaoImagem": "Imagem local existente associada por numero/titulo.",
+      "aprovadoParaPublicacao": true
+    },
+    {
+      "produtoId": "cozinha-ml-docx-21",
+      "titulo": "Mini Processador de Alimentos 250 ml Recarregável com Cabo USB Verde",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-22",
+      "titulo": "Processador Elétrico Mini Triturador de Alimentos Alho USB",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-23",
+      "titulo": "Mini Processador de Alimentos Elétrico Recarregável Onistek ON-UD119",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-24",
+      "titulo": "Mini Processador Elétrico Alimentos Recarregável Triturador",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-25",
+      "titulo": "Processador Elétrico Portátil com Aço Inoxidável Recarregável",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-26",
+      "titulo": "Mini Processador de Alimentos Elétrico Sem Fio 3 Lâminas",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-27",
+      "titulo": "Mini Processador de Alimentos Manual Elétrico Recarregável USB",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-28",
+      "titulo": "Mini Processador de Alimentos 250 ml Recarregável com Cabo USB",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-29",
+      "titulo": "Moedor Elétrico Recarregável USB para Sal e Pimenta Prata",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    },
+    {
+      "produtoId": "cozinha-ml-docx-30",
+      "titulo": "Balança de Cozinha Digital Recarregável USB de 5 kg",
+      "loja": "impacto-casa",
+      "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+      "statusImagem": "imagem_manual_necessaria",
+      "qualidadeImagem": "indefinida",
+      "observacaoImagem": "Inserir foto real do anuncio ou fabricante antes de publicar.",
+      "aprovadoParaPublicacao": false
+    }
+  ]
+}
