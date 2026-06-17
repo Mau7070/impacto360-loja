@@ -26,6 +26,16 @@ jobs:
           set -euo pipefail
           pkg_dir=".codex-transport/impacto360"
           cat "$pkg_dir"/package.b64.part* > "$pkg_dir/package.tar.xz.b64"
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('.codex-transport/impacto360/package.tar.xz.b64')
+          s = p.read_text()
+          needle = 'XXJppvCilZU0+Xj1Ru8aYqGB06HaA0bA5HoH3cAU'
+          fixed = 'XXJppvCilZU0+Xj1Ru8a3/aYqGB06HaA0bA5HoH3cAU'
+          if needle in s and fixed not in s:
+              s = s.replace(needle, fixed, 1)
+          p.write_text(s)
+          PY
           base64 -d "$pkg_dir/package.tar.xz.b64" > "$pkg_dir/package.tar.xz"
           actual="$(sha256sum "$pkg_dir/package.tar.xz" | awk '{print toupper($1)}')"
           expected="4CB18CCA4BA17C2BCC978241418EA6AAA3068326284CEE30B977AEAEE97EA2A9"
