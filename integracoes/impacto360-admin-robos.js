@@ -3,8 +3,8 @@
 
   const route = new URLSearchParams(location.search).get("route") || location.pathname;
   const isAdmin = route.startsWith("/admin/");
-  const password = "impacto360-admin";
-  const authKey = "impacto360:sala-agentes:auth";
+  const password = "Impacto360!Sala#J7K9-2026";
+  const authKey = "impacto360:sala-agentes:auth:v2";
 
   if (isAdmin) {
     renderPrivateRoom();
