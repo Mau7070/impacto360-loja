@@ -1,0 +1,85 @@
+{
+  "settings": {
+    "bannerRotationMs": 6500,
+    "adRotationMs": 5200
+  },
+  "banners": [
+    {
+      "id": "banner-smartphones",
+      "image": "produtos-impacto360/telefone-mercado-livre-001/imagem-01.webp",
+      "title": "Smartphones para todos os momentos",
+      "description": "Confira aparelhos selecionados e compre diretamente na loja parceira.",
+      "link": "https://meli.la/2vjQGTa",
+      "active": true,
+      "order": 1
+    },
+    {
+      "id": "banner-notebooks",
+      "image": "produtos-impacto360/mercado-livre-produto-001/imagem-01.webp",
+      "title": "Tecnologia para trabalhar e jogar",
+      "description": "Notebooks e computadores em destaque com acesso rápido à oferta.",
+      "link": "https://meli.la/1yUPmtC",
+      "active": true,
+      "order": 2
+    },
+    {
+      "id": "banner-casa",
+      "image": "imagens/01_kit-c-12-utensilios-de-cozinha-silicone-cabo-madeira.png",
+      "title": "Achados para casa e cozinha",
+      "description": "Produtos úteis para renovar sua rotina com praticidade.",
+      "link": "https://meli.la/1PPnKbt",
+      "active": true,
+      "order": 3
+    }
+  ],
+  "ads": [
+    {
+      "id": "ad-oferta-celular",
+      "image": "produtos-impacto360/telefone-mercado-livre-002/imagem-01.webp",
+      "title": "Oferta em smartphone",
+      "description": "Acesse a condição disponível na loja parceira e confira detalhes, entrega e garantia.",
+      "buttonLabel": "Ver oferta",
+      "link": "https://meli.la/1zuEk6q",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "active": true,
+      "priority": 1
+    },
+    {
+      "id": "ad-notebook-gamer",
+      "image": "produtos-impacto360/mercado-livre-produto-002/imagem-01.webp",
+      "title": "Notebook gamer em destaque",
+      "description": "Desempenho para jogos, criação e produtividade em uma oferta selecionada.",
+      "buttonLabel": "Comprar na loja",
+      "link": "https://meli.la/2kPvwBZ",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "active": true,
+      "priority": 2
+    },
+    {
+      "id": "ad-forno-eletrico",
+      "image": "produtos-impacto360/loja-parceira-001/imagem-01.webp",
+      "title": "Destaque para sua cozinha",
+      "description": "Uma seleção especial de utilidades e eletrodomésticos para facilitar o dia a dia.",
+      "buttonLabel": "Conferir promoção",
+      "link": "https://mercadolivre.com/sec/14EbgVy",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "active": true,
+      "priority": 3
+    },
+    {
+      "id": "ad-kit-cozinha",
+      "image": "imagens/01_kit-c-12-utensilios-de-cozinha-silicone-cabo-madeira.png",
+      "title": "Cupom e achados para casa",
+      "description": "Veja utensílios selecionados e consulte as condições atuais no site de compras.",
+      "buttonLabel": "Aproveitar agora",
+      "link": "https://meli.la/1PPnKbt",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "active": true,
+      "priority": 4
+    }
+  ]
+}
