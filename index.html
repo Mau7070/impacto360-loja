@@ -12569,13 +12569,16 @@
 
     function isUsableLink(value) {
       const link = String(value || "").trim();
-      return Boolean(link && link !== "COLOCAR_LINK_AQUI" && !link.startsWith("COLOCAR_"));
+      if (!link || link === "COLOCAR_LINK_AQUI" || link.startsWith("COLOCAR_")) return false;
+      if (/placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(link)) return false;
+      if (/mercadolivre\.com\.br\/loja\//i.test(link) || /lista\.mercadolivre\.com\.br/i.test(link)) return false;
+      return /^https?:\/\//i.test(link) || link.startsWith("#");
     }
 
     function isValidImageSource(value) {
       const source = String(value || "").trim();
       if (!source || source.startsWith("COLOCAR_")) return false;
-      return !source.includes("/assets/placeholder-produto.svg");
+      return !/placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(source);
     }
 
     function resolveProductImage(produto) {
@@ -12738,7 +12741,13 @@
     }
 
     function storeProducts(storeId) {
-      return products.filter(item => item.storeId === storeId);
+      return products.filter(item => {
+        if (item.storeId !== storeId) return false;
+        if (String(item.status || "").toLowerCase() !== "ativo") return false;
+        if (item.aprovadoParaPublicacao === false) return false;
+        if (!getProductLink(item)) return false;
+        return resolveProductImage(item).hasPhoto;
+      });
     }
 
     function storeSearchText(store) {

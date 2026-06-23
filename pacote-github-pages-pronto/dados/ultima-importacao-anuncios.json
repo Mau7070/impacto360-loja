@@ -1,0 +1,299 @@
+{
+  "executedAt": "2026-06-23",
+  "sourceFiles": {
+    "top30_brinquedos_mercado_livre_com_fotos_links.docx": 28,
+    "10_melhores_lanternas_uv_escorpioes_mercado_livre.docx": 10,
+    "30_tvs_mercado_livre_com_fotos_links_refeito.docx": 30,
+    "50_brinquedos_a_bateria_mercado_livre.docx": 50,
+    "produtos_mercado_livre_filtrados_com_fotos.docx": 29
+  },
+  "rawExtracted": 147,
+  "uniqueAfterDeduplication": 119,
+  "productsAdded": 119,
+  "productsUpdated": 0,
+  "activeImported": 91,
+  "manualReviewImported": 28,
+  "toyStoreCreated": true,
+  "imageErrors": [],
+  "manualReview": [
+    {
+      "id": "importado-ml-presente-menino-ferrorama-trem-trenzinho-brinquedo-som-e-ad5f5975",
+      "title": "Presente Menino Ferrorama Trem Trenzinho Brinquedo Som E Luz",
+      "link": "https://meli.la/2N49nWm",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-novo-lanterna-uv-alonefire-sv87-365nm-recarregavel-474cfe35",
+      "title": "Novo Lanterna UV Alonefire SV87 365nm Recarregável",
+      "link": "https://www.mercadolivre.com.br/novo-lanterna-uv-alonefire-sv87-365nm-recarregavel/up/MLBU4068549460",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-qled-4k-q60d-2024-aae6c6ed",
+      "title": "Smart TV 50” QLED 4K Q60D (2024)",
+      "link": "https://meli.la/2KEPTiz",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-70-crystal-uhd-4k-70du7700-2024-72087ce1",
+      "title": "Smart TV 70” Crystal UHD 4K 70DU7700 (2024)",
+      "link": "https://www.mercadolivre.com.br/samsung-smart-tv-70-uhd-4k-70du7700-2024/p/MLB35715303",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-uhd-ai-ua75-fc00c7a0",
+      "title": "Smart TV 43” UHD AI UA75",
+      "link": "https://meli.la/334VKB6",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-uhd-ai-ua75-06a19d6e",
+      "title": "Smart TV 50” UHD AI UA75",
+      "link": "https://meli.la/1KKHZvg",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-55-uhd-ai-ua75-d231a077",
+      "title": "Smart TV 55” UHD AI UA75",
+      "link": "https://meli.la/2AADGDL",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-4k-google-tv-43p755-3ec62fb0",
+      "title": "Smart TV 43” 4K Google TV 43P755",
+      "link": "https://meli.la/1S9FETn",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-ambilight-4k-43pug7908-78-63431817",
+      "title": "Smart TV 43” Ambilight 4K 43PUG7908/78",
+      "link": "https://www.mercadolivre.com.br/smart-tv-philips-ambilight-43--43pug790878-4k-bluetooth-uhd/up/MLBU2784204227",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-fhd-roku-tv-43r6610-471a42d3",
+      "title": "Smart TV 43” FHD Roku TV 43R6610",
+      "link": "https://meli.la/1TFuDmd",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-4k-google-tv-50s62-49e6f31e",
+      "title": "Smart TV 50” 4K Google TV 50S62",
+      "link": "https://www.mercadolivre.com.br/smart-tv-semp-50-led-hva-4k-android-wifi-bluetooth-3-hdmi-google-tv-60hz-hdr10-50s62/p/MLB54086329",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-55-4k-google-tv-55s61-1416f0dc",
+      "title": "Smart TV 55” 4K Google TV 55S61",
+      "link": "https://www.mercadolivre.com.br/smart-tv-google-tv-led-55-ultra-hd-4k-semp-55s61-bluetooth/p/MLB50525501",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-roku-tv-ptv43va4regb-271bdb80",
+      "title": "Smart TV 43” Roku TV PTV43VA4REGB",
+      "link": "https://lista.mercadolivre.com.br/philco-ptv43va4regb",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-roku-tv-ptv50va4regb-494c1f63",
+      "title": "Smart TV 50” Roku TV PTV50VA4REGB",
+      "link": "https://meli.la/2BemDEY",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-espada-drone-voadora-de-controle-remoto-com-luzes-e-bate-24b06951",
+      "title": "Espada Drone Voadora de Controle Remoto com Luzes e Bateria Recarregável",
+      "link": "https://meli.la/1PJE6oG",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-drone-recarregavel-robusto-0705-52c8bf3c",
+      "title": "Drone Recarregável Robusto 0705",
+      "link": "https://produto.mercadolivre.com.br/MLB-6773257996-drone-recarregavel-robusto-0705-_JM",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-infantil-helicoptero-controle-remoto-e-sensor-4266ff2b",
+      "title": "Brinquedo Infantil Helicóptero Controle Remoto e Sensor",
+      "link": "https://www.mercadolivre.com.br/brinquedo-infantil-helicoptero-controle-remoto-e-sensor/up/MLBU3553124345",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-helicoptero-controle-remoto-e-sensor-infraverm-f1dabd5b",
+      "title": "Brinquedo Helicóptero Controle Remoto e Sensor Infravermelho",
+      "link": "https://www.mercadolivre.com.br/brinquedo-helicoptero-controle-remoto-e-sensor-infravermelho/up/MLBU3388262616",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-helicoptero-fenix-drone-controle-remoto-infant-991fb61d",
+      "title": "Brinquedo Helicóptero Fênix Drone Controle Remoto Infantil",
+      "link": "https://www.mercadolivre.com.br/brinquedo-helicoptero-fenix-drone-controle-remoto-infantil/up/MLBU4064785603",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-recarregavel-brinquedo-formula--5da2f66d",
+      "title": "Carrinho Controle Remoto Recarregável Brinquedo Fórmula 1",
+      "link": "https://www.mercadolivre.com.br/carrinho-controle-remoto-recarregavel-brinquedo-formula-1/up/MLBU3594530852",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-vira-robo-com-bateria-recarrega-4ac01c93",
+      "title": "Carrinho Controle Remoto Vira Robô com Bateria Recarregável Vermelho",
+      "link": "https://www.mercadolivre.com.br/carrinho-controle-remoto-vira-robo-com-bateria-recarregavel-cor-vermelho-escuro-personagem-rob/p/MLB27579013",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-de-controle-remoto-vira-robo-bateria-recarregav-7c03f66a",
+      "title": "Carrinho de Controle Remoto Vira Robô Bateria Recarregável Laranja/Vermelho",
+      "link": "https://www.mercadolivre.com.br/carrinho-de-controle-remoto-vira-robo-bateria-recarregavel-cor-laranja-vermelho/up/MLBU2258943785",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-trator-controle-remoto-recarregavel-basculante-com-luzes-11abade0",
+      "title": "Trator Controle Remoto Recarregável Basculante com Luzes",
+      "link": "https://www.mercadolivre.com.br/trator-controle-remoto-recarregavel-basculante-com-luzes/up/MLBU1969912635",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-trator-rc-de-2-4ghz-com-controle-remoto-recarregavel-far-21eafc37",
+      "title": "Trator RC de 2.4GHz com Controle Remoto Recarregável Farm",
+      "link": "https://meli.la/1idaaLF",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-trator-brinquedo-infantil-recarregavel-carregadeira-esca-879e2475",
+      "title": "Trator Brinquedo Infantil Recarregável Carregadeira Escavadeira Leader",
+      "link": "https://meli.la/1JM6AxV",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-dinossauro-controle-remoto-recarregavel-luz-led-solta-fu-bc97f289",
+      "title": "Dinossauro Controle Remoto Recarregável Luz LED Solta Fumaça",
+      "link": "https://www.mercadolivre.com.br/dinossauro-controle-remoto-recarregavel-luz-led-solta-fumaca/up/MLBU1469043422",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-moto-de-corrida-recarregavel-speed-grande-controle-remot-88e23ed5",
+      "title": "Moto de Corrida Recarregável Speed Grande Controle Remoto",
+      "link": "https://www.mercadolivre.com.br/moto-de-corrida-recarregavel-speed-grande-controle-remoto-brinquedo-motomodelismo-hk9-r1-no-brasil/p/MLB45766262",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-infantil-menina-casinha-feliz-trigemeos-coelhi-0e5d1b28",
+      "title": "Brinquedo Infantil Menina Casinha Feliz Trigêmeos Coelhinho",
+      "link": "https://www.mercadolivre.com.br/brinquedo-infantil-menina-casinha-feliz-trigemeos-coelhinho/up/MLBU4111692016",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    }
+  ]
+}

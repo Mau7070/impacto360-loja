@@ -682,5 +682,34 @@
       "Acessórios esportivos"
     ],
     "section": "Movimente sua rotina"
+  },
+  {
+    "id": "impacto-brinquedos",
+    "slug": "brinquedos",
+    "route": "/loja/brinquedos",
+    "name": "IMPACTO BRINQUEDOS",
+    "commercialName": "Brinquedos",
+    "floor": "segundo-andar",
+    "category": "Brinquedos",
+    "type": "products",
+    "theme": "toys",
+    "icon": "TOY",
+    "color": "#ee7b2d",
+    "gradient": "linear-gradient(135deg,#fff5df,#ffffff 46%,#e7f7ff)",
+    "description": "Brinquedos selecionados, ofertas infantis, brinquedos educativos, carrinhos, bonecas, drones, helicópteros e brinquedos a bateria.",
+    "subcategories": [
+      "Brinquedos educativos",
+      "Bonecas",
+      "Carrinhos",
+      "Drones infantis",
+      "Helicópteros",
+      "Jogos",
+      "Blocos de montar",
+      "Brinquedos a bateria",
+      "Faz de conta",
+      "Robôs e dinossauros"
+    ],
+    "section": "Brincar, aprender e imaginar",
+    "active": true
   }
 ]

@@ -81,6 +81,51 @@ for (const dataFile of ["dados/products.json", "dados/stores.json", "dados/impor
   }
 }
 
+const products = JSON.parse(read("dados/products.json"));
+const stores = JSON.parse(read("dados/stores.json"));
+const storeIds = new Set(stores.map(store => store.id));
+const activeProducts = products.filter(product => String(product.status || "").toLowerCase() === "ativo");
+const productLink = product => String(
+  product.affiliateLink
+  || product.linkCompra
+  || product.linkAfiliado
+  || product.linkComissionado
+  || product.linkOriginal
+  || ""
+).trim();
+const productImage = product => String(
+  product.image || product.imagemPrincipal || product.imagem || ""
+).trim();
+const invalidLink = link => (
+  !/^https?:\/\//i.test(link)
+  || /COLOCAR_|placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(link)
+  || /mercadolivre\.com\.br\/loja\//i.test(link)
+  || /lista\.mercadolivre\.com\.br/i.test(link)
+);
+const invalidImage = image => (
+  !image || /placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(image)
+);
+const activeWithoutLink = activeProducts.filter(product => invalidLink(productLink(product)));
+const activeWithoutImage = activeProducts.filter(product => invalidImage(productImage(product)));
+const activeInMissingStore = activeProducts.filter(product => !storeIds.has(product.storeId));
+const activeKeys = new Map();
+const activeDuplicates = [];
+for (const product of activeProducts) {
+  const key = productLink(product).toLowerCase().replace(/#.*$/, "");
+  if (!key) continue;
+  if (activeKeys.has(key)) activeDuplicates.push([activeKeys.get(key), product.id]);
+  else activeKeys.set(key, product.id);
+}
+const toyStore = stores.find(store => store.id === "impacto-brinquedos");
+const activeToys = activeProducts.filter(product => product.storeId === "impacto-brinquedos");
+ok("nenhum ativo sem link direto", activeWithoutLink.length === 0, `${activeWithoutLink.length} encontrado(s)`);
+ok("nenhum ativo sem foto valida", activeWithoutImage.length === 0, `${activeWithoutImage.length} encontrado(s)`);
+ok("nenhum ativo em loja inexistente", activeInMissingStore.length === 0, `${activeInMissingStore.length} encontrado(s)`);
+ok("nenhum link ativo duplicado", activeDuplicates.length === 0, `${activeDuplicates.length} encontrado(s)`);
+ok("loja de brinquedos criada", Boolean(toyStore));
+ok("loja de brinquedos com anuncios ativos", activeToys.length > 0, `${activeToys.length} ativo(s)`);
+ok("vitrine filtra somente ativos", html.includes('String(item.status || "").toLowerCase() !== "ativo"'));
+
 const failed = checks.filter(check => !check.pass);
 for (const check of checks) {
   console.log(`${check.pass ? "OK" : "FALHA"} - ${check.name}${check.detail ? `: ${check.detail}` : ""}`);
