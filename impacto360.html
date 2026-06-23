@@ -12560,7 +12560,15 @@
     }
 
     function storeProducts(storeId) {
-      return products.filter(item => item.storeId === storeId);
+      return products.filter(item => {
+        if (item.storeId !== storeId) return false;
+        if (String(item.status || "").toLowerCase() !== "ativo") return false;
+        if (item.aprovadoParaPublicacao === false) return false;
+        const link = String(item.linkCompra || item.linkAfiliado || item.affiliateLink || item.linkComissionado || "").trim();
+        const image = String(item.fotoPrincipal || item.imagemPrincipal || item.image || item.imagem || "").trim();
+        if (!/^https?:\/\//i.test(link) || /placeholder|COLOCAR_|URL_|LINK_/i.test(link)) return false;
+        return Boolean(image && !/placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(image));
+      });
     }
 
     function storeSearchText(store) {

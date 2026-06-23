@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "auditar:anuncios": "python scripts/auditar-anuncios.py --root .",
+    "corrigir:imagens": "python scripts/corrigir-imagens-anuncios.py --root . --apply",
+    "importar:anuncios": "python scripts/importar-anuncios.py --root .",
     "test:seguranca": "node scripts/validar-impacto360.mjs",
     "test:mobile": "node scripts/validar-impacto360.mjs"
   },

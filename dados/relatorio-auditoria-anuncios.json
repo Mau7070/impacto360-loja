@@ -1,0 +1,971 @@
+{
+  "executedAt": "2026-06-23",
+  "appliedSafeFixes": false,
+  "totals": {
+    "products": 293,
+    "stores": 24,
+    "active": 181,
+    "inactiveOrReview": 112,
+    "issues": 138,
+    "duplicateGroups": 5,
+    "imageConflicts": 0,
+    "storesCorrected": 0,
+    "inactivatedForMissingData": 0,
+    "duplicatesInactivated": 0
+  },
+  "issueCounts": {
+    "foto_arquivo_inexistente": 37,
+    "link_nao_direto_ou_placeholder": 22,
+    "sem_botao_compra": 1,
+    "sem_foto": 49,
+    "sem_link": 29
+  },
+  "issues": {
+    "link_nao_direto_ou_placeholder": [
+      {
+        "id": "telefone-mercado-livre-003",
+        "title": "Samsung Galaxy S25 FE 5G 128GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+      },
+      {
+        "id": "telefone-mercado-livre-007",
+        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+      },
+      {
+        "id": "telefone-mercado-livre-009",
+        "title": "Xiaomi Redmi 14C 256GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+      },
+      {
+        "id": "telefone-mercado-livre-010",
+        "title": "Apple iPhone 14 128GB Estelar",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "loja-parceira-001",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "lojas-parceiras",
+        "status": "revisao_manual",
+        "link": "https://mercadolivre.com/sec/14EbgVy"
+      },
+      {
+        "id": "loja-parceira-002",
+        "title": "Teclado E Mouse Sem Fio Dell Km3322w Preto",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/dell#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-039",
+        "title": "Motorola Edge 50 Ultra",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/motorola#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-071",
+        "title": "Apple iPhone 11",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-072",
+        "title": "Apple iPhone XR",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-073",
+        "title": "Apple iPhone XS",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-074",
+        "title": "Apple iPhone 12",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-075",
+        "title": "Apple iPhone 12 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-076",
+        "title": "Apple iPhone 13",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-077",
+        "title": "Apple iPhone 13 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-079",
+        "title": "Apple iPhone 14 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-080",
+        "title": "Apple iPhone 14 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-081",
+        "title": "Apple iPhone 15",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-082",
+        "title": "Apple iPhone 15 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-083",
+        "title": "Apple iPhone 15 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "celular-ml-docx-087",
+        "title": "Apple iPhone 16 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+      },
+      {
+        "id": "cozinha-ml-docx-18",
+        "title": "Jogo 12 Utensílios de Cozinha Silicone Preto Cabo Madeira",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-12-utensilios-cozinha-silicone-preto-cabo-madeira-mercado-livre"
+      },
+      {
+        "id": "importado-ml-smart-tv-43-roku-tv-ptv43va4regb-271bdb80",
+        "title": "Smart TV 43” Roku TV PTV43VA4REGB",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/philco-ptv43va4regb"
+      }
+    ],
+    "foto_arquivo_inexistente": [
+      {
+        "id": "telefone-mercado-livre-003",
+        "title": "Samsung Galaxy S25 FE 5G 128GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-003/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-006",
+        "title": "Samsung Galaxy A16 5G 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-006/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-007",
+        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-007/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-009",
+        "title": "Xiaomi Redmi 14C 256GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png"
+      },
+      {
+        "id": "loja-parceira-001",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "lojas-parceiras",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-019",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/mercado-livre-produto-019/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-020",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "impacto-tech-computadores",
+        "status": "duplicado",
+        "image": "public/produtos-impacto360/mercado-livre-produto-020/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-023",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "impacto-tech-computadores",
+        "status": "duplicado",
+        "image": "public/produtos-impacto360/mercado-livre-produto-023/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-029",
+        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
+        "storeId": "impacto-tech-computadores",
+        "status": "duplicado",
+        "image": "public/produtos-impacto360/mercado-livre-produto-029/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-01",
+        "title": "Letra personalizada simples",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-02",
+        "title": "Letra com cifra",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-03",
+        "title": "Jingle comercial",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-04",
+        "title": "Música para homenagem",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-06",
+        "title": "Música infantil personalizada",
+        "storeId": "impacto-kids",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-07",
+        "title": "Música para campanha",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-07/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-08",
+        "title": "Narração musical para vídeo",
+        "storeId": "impacto-pet",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-08/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-01",
+        "title": "Revisão acadêmica",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-02",
+        "title": "Formatação ABNT",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-03",
+        "title": "Organização de trabalho",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-04",
+        "title": "Criação de mapa mental",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-05",
+        "title": "Resumo comentado",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-06",
+        "title": "Questões com gabarito",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-07",
+        "title": "Slides para apresentação",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-07/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-08",
+        "title": "Orientação estrutural de TCC",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-08/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-01",
+        "title": "Convite digital",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-02",
+        "title": "Banner personalizado",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-03",
+        "title": "Currículo visual",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-04",
+        "title": "Apresentação profissional",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-05",
+        "title": "Catálogo simples",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-01",
+        "title": "Kit de posts",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-02",
+        "title": "Capa para vídeo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-03",
+        "title": "Roteiro curto",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-04",
+        "title": "Calendário editorial",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-05",
+        "title": "Ideias de conteúdo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-06/imagem-01.webp"
+      }
+    ],
+    "sem_link": [
+      {
+        "id": "servico-impacto-music-studio-01",
+        "title": "Letra personalizada simples",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-02",
+        "title": "Letra com cifra",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-03",
+        "title": "Jingle comercial",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-04",
+        "title": "Música para homenagem",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-06",
+        "title": "Música infantil personalizada",
+        "storeId": "impacto-kids",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-07",
+        "title": "Música para campanha",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-08",
+        "title": "Narração musical para vídeo",
+        "storeId": "impacto-pet",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-01",
+        "title": "Revisão acadêmica",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-02",
+        "title": "Formatação ABNT",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-03",
+        "title": "Organização de trabalho",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-04",
+        "title": "Criação de mapa mental",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-05",
+        "title": "Resumo comentado",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-06",
+        "title": "Questões com gabarito",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-07",
+        "title": "Slides para apresentação",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-08",
+        "title": "Orientação estrutural de TCC",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-01",
+        "title": "Convite digital",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-02",
+        "title": "Banner personalizado",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-03",
+        "title": "Currículo visual",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-04",
+        "title": "Apresentação profissional",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-05",
+        "title": "Catálogo simples",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-01",
+        "title": "Kit de posts",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-02",
+        "title": "Capa para vídeo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-03",
+        "title": "Roteiro curto",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-04",
+        "title": "Calendário editorial",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-05",
+        "title": "Ideias de conteúdo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "impacto-moda",
+        "status": "rascunho"
+      }
+    ],
+    "sem_foto": [
+      {
+        "id": "celular-ml-docx-002",
+        "title": "Samsung Galaxy A06 128 GB",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-008",
+        "title": "Samsung Galaxy A55 5G 256 GB",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-010",
+        "title": "Samsung Galaxy A25 5G",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-012",
+        "title": "Samsung Galaxy A16 5G",
+        "storeId": "impacto-mobile",
+        "status": "duplicado"
+      },
+      {
+        "id": "celular-ml-docx-015",
+        "title": "Samsung Galaxy A03",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-016",
+        "title": "Samsung Galaxy S21 FE 5G",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-017",
+        "title": "Samsung Galaxy S23 FE",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-018",
+        "title": "Samsung Galaxy S24 FE",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-027",
+        "title": "Motorola Moto G05 SE",
+        "storeId": "impacto-mobile",
+        "status": "duplicado"
+      },
+      {
+        "id": "celular-ml-docx-031",
+        "title": "Motorola Moto G24 Power",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-039",
+        "title": "Motorola Edge 50 Ultra",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "celular-ml-docx-085",
+        "title": "Apple iPhone 16",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "moda-feminina-docx-13",
+        "title": "Kit 2 Short Alfaiataria Feminino Cintura Alta Envio Imediato",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "moda-feminina-docx-14",
+        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "impacto-moda",
+        "status": "rascunho"
+      },
+      {
+        "id": "moda-feminina-docx-23",
+        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-05",
+        "title": "Kit 12 Utensílios de Cozinha em Silicone com Escumadeira",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-06",
+        "title": "Jogo de Utensílios 19 Peças em Silicone Preto com Cabos de Madeira",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-11",
+        "title": "Kit 12 Utensílios Silicone Cabo Madeira Ponte Lar",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-18",
+        "title": "Jogo 12 Utensílios de Cozinha Silicone Preto Cabo Madeira",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-24",
+        "title": "Mini Processador Elétrico Alimentos Recarregável Triturador",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-25",
+        "title": "Processador Elétrico Portátil com Aço Inoxidável Recarregável",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-29",
+        "title": "Moedor Elétrico Recarregável USB para Sal e Pimenta Prata",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "cozinha-ml-docx-30",
+        "title": "Balança de Cozinha Digital Recarregável USB de 5 kg",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-presente-menino-ferrorama-trem-trenzinho-brinquedo-som-e-ad5f5975",
+        "title": "Presente Menino Ferrorama Trem Trenzinho Brinquedo Som E Luz",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-novo-lanterna-uv-alonefire-sv87-365nm-recarregavel-474cfe35",
+        "title": "Novo Lanterna UV Alonefire SV87 365nm Recarregável",
+        "storeId": "impacto-ferramentas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-70-crystal-uhd-4k-70du7700-2024-72087ce1",
+        "title": "Smart TV 70” Crystal UHD 4K 70DU7700 (2024)",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-43-uhd-ai-ua75-fc00c7a0",
+        "title": "Smart TV 43” UHD AI UA75",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-50-uhd-ai-ua75-06a19d6e",
+        "title": "Smart TV 50” UHD AI UA75",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-55-uhd-ai-ua75-d231a077",
+        "title": "Smart TV 55” UHD AI UA75",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-43-4k-google-tv-43p755-3ec62fb0",
+        "title": "Smart TV 43” 4K Google TV 43P755",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-43-ambilight-4k-43pug7908-78-63431817",
+        "title": "Smart TV 43” Ambilight 4K 43PUG7908/78",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-50-4k-google-tv-50s62-49e6f31e",
+        "title": "Smart TV 50” 4K Google TV 50S62",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-55-4k-google-tv-55s61-1416f0dc",
+        "title": "Smart TV 55” 4K Google TV 55S61",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-43-roku-tv-ptv43va4regb-271bdb80",
+        "title": "Smart TV 43” Roku TV PTV43VA4REGB",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-smart-tv-50-roku-tv-ptv50va4regb-494c1f63",
+        "title": "Smart TV 50” Roku TV PTV50VA4REGB",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-drone-recarregavel-robusto-0705-52c8bf3c",
+        "title": "Drone Recarregável Robusto 0705",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-brinquedo-infantil-helicoptero-controle-remoto-e-sensor-4266ff2b",
+        "title": "Brinquedo Infantil Helicóptero Controle Remoto e Sensor",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-brinquedo-helicoptero-controle-remoto-e-sensor-infraverm-f1dabd5b",
+        "title": "Brinquedo Helicóptero Controle Remoto e Sensor Infravermelho",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-brinquedo-helicoptero-fenix-drone-controle-remoto-infant-991fb61d",
+        "title": "Brinquedo Helicóptero Fênix Drone Controle Remoto Infantil",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-carrinho-controle-remoto-recarregavel-brinquedo-formula--5da2f66d",
+        "title": "Carrinho Controle Remoto Recarregável Brinquedo Fórmula 1",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-carrinho-controle-remoto-vira-robo-com-bateria-recarrega-4ac01c93",
+        "title": "Carrinho Controle Remoto Vira Robô com Bateria Recarregável Vermelho",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-carrinho-de-controle-remoto-vira-robo-bateria-recarregav-7c03f66a",
+        "title": "Carrinho de Controle Remoto Vira Robô Bateria Recarregável Laranja/Vermelho",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-trator-controle-remoto-recarregavel-basculante-com-luzes-11abade0",
+        "title": "Trator Controle Remoto Recarregável Basculante com Luzes",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-trator-rc-de-2-4ghz-com-controle-remoto-recarregavel-far-21eafc37",
+        "title": "Trator RC de 2.4GHz com Controle Remoto Recarregável Farm",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-trator-brinquedo-infantil-recarregavel-carregadeira-esca-879e2475",
+        "title": "Trator Brinquedo Infantil Recarregável Carregadeira Escavadeira Leader",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-dinossauro-controle-remoto-recarregavel-luz-led-solta-fu-bc97f289",
+        "title": "Dinossauro Controle Remoto Recarregável Luz LED Solta Fumaça",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-moto-de-corrida-recarregavel-speed-grande-controle-remot-88e23ed5",
+        "title": "Moto de Corrida Recarregável Speed Grande Controle Remoto",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-brinquedo-infantil-menina-casinha-feliz-trigemeos-coelhi-0e5d1b28",
+        "title": "Brinquedo Infantil Menina Casinha Feliz Trigêmeos Coelhinho",
+        "storeId": "impacto-brinquedos",
+        "status": "revisao_manual"
+      }
+    ],
+    "sem_botao_compra": [
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "impacto-moda",
+        "status": "rascunho"
+      }
+    ]
+  },
+  "duplicates": [
+    {
+      "reason": "link",
+      "key": "https://meli.la/2f5pdk6",
+      "keep": "celular-ml-docx-008",
+      "duplicates": [
+        "celular-ml-docx-012"
+      ]
+    },
+    {
+      "reason": "link",
+      "key": "https://meli.la/1lyr9kk",
+      "keep": "celular-ml-docx-026",
+      "duplicates": [
+        "celular-ml-docx-027"
+      ]
+    },
+    {
+      "reason": "link",
+      "key": "https://meli.la/2ehpqmy",
+      "keep": "celular-ml-docx-088",
+      "duplicates": [
+        "celular-ml-docx-089"
+      ]
+    },
+    {
+      "reason": "titulo",
+      "key": "forno eletrico philco 65l dupla resistencia pfe65 127v",
+      "keep": "mercado-livre-produto-019",
+      "duplicates": [
+        "mercado-livre-produto-020",
+        "mercado-livre-produto-023",
+        "mercado-livre-produto-029"
+      ]
+    },
+    {
+      "reason": "titulo",
+      "key": "notebook lenovo ideapad slim 3 15irh10 intel core i5 13420h 8gb 512gb ssd windows 11 15 3 83ns0002br luna grey",
+      "keep": "mercado-livre-produto-028",
+      "duplicates": [
+        "mercado-livre-produto-032"
+      ]
+    }
+  ],
+  "imageConflicts": [],
+  "acceptance": {
+    "activeWithoutPhoto": 0,
+    "activeWithoutLink": 0
+  }
+}
