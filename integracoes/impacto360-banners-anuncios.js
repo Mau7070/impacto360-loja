@@ -9,4 +9,10 @@
     : "integracoes/impacto360-banners-public.js";
   script.defer = true;
   document.head.appendChild(script);
+  if (route !== "/admin/banners-anuncios") {
+    const covers = document.createElement("script");
+    covers.src = "integracoes/impacto360-capas-auto.js";
+    covers.defer = true;
+    document.head.appendChild(covers);
+  }
 })();
