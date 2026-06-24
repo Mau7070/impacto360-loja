@@ -14,5 +14,9 @@
     covers.src = "integracoes/impacto360-capas-auto.js";
     covers.defer = true;
     document.head.appendChild(covers);
+    const storeCovers = document.createElement("script");
+    storeCovers.src = "integracoes/impacto360-capas-fix.js";
+    storeCovers.defer = true;
+    document.head.appendChild(storeCovers);
   }
 })();
