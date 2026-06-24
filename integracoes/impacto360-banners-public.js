@@ -15,6 +15,7 @@
     style();
     hero();
     ads();
+    loadStoreCovers();
     try { window.renderMercadoLivreShowcase = ads; } catch {}
     const holder = document.getElementById("mercadoLivreShowcase");
     if (holder) new MutationObserver(function () {
@@ -148,6 +149,15 @@
     const css = document.createElement("style");
     css.textContent = '.promo360-panel{padding:0!important}.promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:32px;margin-right:32px}.promo360-panel>.filters{margin-bottom:28px}#promo360Hero,.promo360-adbox{position:relative;overflow:hidden}.promo360-track{position:relative;min-height:390px}.promo360-slide,.promo360-ad{position:absolute;inset:0;opacity:0;visibility:hidden;transition:.4s}.promo360-slide.active,.promo360-ad.active{opacity:1;visibility:visible}.promo360-slide>a{min-height:390px;display:grid;grid-template-columns:1.15fr .85fr;color:#fff;background:linear-gradient(135deg,#06152d,#12677d)}.promo360-copy,.promo360-adcopy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:38px}.promo360-copy h1{font-size:clamp(34px,5vw,64px);line-height:1;margin:12px 0}.promo360-copy b,.promo360-adcopy b{padding:13px 18px;border-radius:999px;background:#f3ce7b;color:#10213a}.promo360-media,.promo360-admedia{display:grid;place-items:center;padding:22px}.promo360-media img{width:100%;height:330px;object-fit:contain;background:#fff;border-radius:8px}.promo360-ads{padding:0!important;overflow:hidden}.promo360-ads>.floor-head{padding:20px 20px 0}.promo360-adtrack{position:relative;min-height:320px}.promo360-ad>a{min-height:320px;display:grid;grid-template-columns:.8fr 1.2fr;color:#fff;background:linear-gradient(135deg,#0b2850,#12677d)}.promo360-admedia img{width:100%;height:250px;object-fit:contain;background:#fff;border-radius:8px}.promo360-controls{position:absolute;z-index:4;right:16px;bottom:14px;display:flex;gap:7px}.promo360-controls button{width:42px;height:42px;border:0;border-radius:50%;background:#06152d;color:#fff;font-size:22px}.promo360-empty{padding:45px;text-align:center;background:#eef7ff;color:#607083}@media(max-width:760px){.promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:14px;margin-right:14px}.promo360-track{min-height:570px}.promo360-slide>a{min-height:570px;grid-template-columns:1fr;grid-template-rows:auto 230px}.promo360-copy{padding:25px 20px 10px}.promo360-media{padding:5px 20px 55px}.promo360-media img{height:210px}.promo360-adtrack,.promo360-ad>a{min-height:540px}.promo360-ad>a{grid-template-columns:1fr;grid-template-rows:250px auto}.promo360-admedia img{height:220px}.promo360-adcopy{padding:20px 20px 60px}}';
     document.head.appendChild(css);
+  }
+
+  function loadStoreCovers() {
+    if (window.__ai360StoreCoverFixLoader) return;
+    window.__ai360StoreCoverFixLoader = true;
+    const script = document.createElement("script");
+    script.src = "integracoes/impacto360-capas-fix.js?v=20260624-2";
+    script.defer = true;
+    document.head.appendChild(script);
   }
 
   function text(value) { return esc(value || ""); }
