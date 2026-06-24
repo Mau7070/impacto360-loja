@@ -15,7 +15,7 @@
     covers.defer = true;
     document.head.appendChild(covers);
     const storeCovers = document.createElement("script");
-    storeCovers.src = "integracoes/impacto360-capas-fix.js?v=20260624-3";
+    storeCovers.src = "integracoes/impacto360-capas-fix.js?v=20260624-4";
     storeCovers.defer = true;
     document.head.appendChild(storeCovers);
   }
