@@ -155,7 +155,7 @@
     if (window.__ai360StoreCoverFixLoader) return;
     window.__ai360StoreCoverFixLoader = true;
     const script = document.createElement("script");
-    script.src = "integracoes/impacto360-capas-fix.js?v=20260624-4";
+    script.src = "integracoes/impacto360-capas-fix.js?v=20260625-1";
     script.defer = true;
     document.head.appendChild(script);
   }
