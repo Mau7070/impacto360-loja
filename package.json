@@ -10,6 +10,7 @@
     "auditar:anuncios": "python scripts/auditar-anuncios.py --root .",
     "corrigir:imagens": "python scripts/corrigir-imagens-anuncios.py --root . --apply",
     "importar:anuncios": "python scripts/importar-anuncios.py --root .",
+    "robo:social": "node scripts/servidor-robo-social.mjs",
     "test:seguranca": "node scripts/validar-impacto360.mjs",
     "test:mobile": "node scripts/validar-impacto360.mjs"
   },
