@@ -19,4 +19,10 @@
     storeCovers.defer = true;
     document.head.appendChild(storeCovers);
   }
+  if (!document.querySelector('script[src*="impacto360-catalogos-novos.js"]')) {
+    const catalogos = document.createElement("script");
+    catalogos.src = "integracoes/impacto360-catalogos-novos.js?v=20260701-catalogos-v1";
+    catalogos.defer = true;
+    document.head.appendChild(catalogos);
+  }
 })();
