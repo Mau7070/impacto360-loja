@@ -1,0 +1,1691 @@
+{
+  "generatedAt": "2026-07-07T09:14:45",
+  "branch": "codex/importar-produtos-amazon-20260707",
+  "backup": "C:\\Users\\PMNB\\Documents\\Codex\\2026-06-30\\qu\\publish-impacto360-catalogos\\backups\\2026-07-07-0846-pre-importacao-amazon",
+  "sourceFiles": {
+    "produtos_amazon_30.docx": 28,
+    "word_30_produtos_buscados_brasil_tendencias_afiliado.docx": 29,
+    "catalogo_amazon_cavalgada_cavalos.docx": 25,
+    "lista_30_eletrodomesticos_amazon_top_disponiveis_v2.docx": 29,
+    "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx": 30
+  },
+  "expectedFromFiveFiles": 150,
+  "registeredAmazonProducts": 141,
+  "notRegisteredFromDocx": 9,
+  "activeProducts": 13,
+  "manualReviewProducts": 128,
+  "storeDistribution": [
+    {
+      "storeId": "impacto-casa",
+      "storeName": "Casa e Cozinha",
+      "total": 72,
+      "active": 6
+    },
+    {
+      "storeId": "impacto-sport",
+      "storeName": "Esporte e Lazer",
+      "total": 20,
+      "active": 4
+    },
+    {
+      "storeId": "impacto-ofertas",
+      "storeName": "Ofertas Relâmpago",
+      "total": 16,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-eletronicos",
+      "storeName": "Tecnologia Geral",
+      "total": 8,
+      "active": 1
+    },
+    {
+      "storeId": "impacto-moda",
+      "storeName": "Moda",
+      "total": 7,
+      "active": 1
+    },
+    {
+      "storeId": "impacto-tech-computadores",
+      "storeName": "Loja Exclusiva de Computadores",
+      "total": 4,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-mobile",
+      "storeName": "Loja Exclusiva de Celulares",
+      "total": 3,
+      "active": 1
+    },
+    {
+      "storeId": "impacto-pet",
+      "storeName": "Pet",
+      "total": 3,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-livraria",
+      "storeName": "Livros",
+      "total": 2,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-beauty-care",
+      "storeName": "Beleza e Saúde",
+      "total": 2,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-ferramentas",
+      "storeName": "Ferramentas",
+      "total": 2,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-auto",
+      "storeName": "Automotivo",
+      "total": 1,
+      "active": 0
+    },
+    {
+      "storeId": "impacto-kids",
+      "storeName": "Infantil",
+      "total": 1,
+      "active": 0
+    }
+  ],
+  "marketingRotation": {
+    "banners": 4,
+    "ads": 8,
+    "amazonItemsInRotation": 12
+  },
+  "sync": {
+    "dataFiles": 6,
+    "images": 27
+  },
+  "archivedSourceFiles": 5,
+  "removedGeneratedNoise": [
+    "scripts\\__pycache__"
+  ],
+  "validations": {
+    "activeAmazonNonAffiliateLinks": 0,
+    "activeAmazonMissingImages": 0,
+    "activeAmazonInvalidPrices": 0,
+    "amazonRotationNonAffiliateLinks": 0
+  },
+  "activeProductsDetail": [
+    {
+      "name": "Fire TV Stick HD",
+      "storeId": "impacto-eletronicos",
+      "category": "Eletrônicos",
+      "price": "R$ 265,00",
+      "image": "public/images/anuncios/fire-tv-stick-hd-06cca260.webp",
+      "affiliateLink": "https://link.amazon/B0fl9GkGF"
+    },
+    {
+      "name": "Samsung Galaxy Fit3 grafite",
+      "storeId": "impacto-mobile",
+      "category": "Celulares",
+      "price": "R$ 201,04",
+      "image": "public/images/anuncios/samsung-galaxy-fit3-grafite-0234014f.webp",
+      "affiliateLink": "https://link.amazon/B04vKd9BE"
+    },
+    {
+      "name": "Mochila Impermeável de Grande Capacidade Escolar e Universitária, Alças Reforçadas, Compartimento Interno para Notebook, Ideal para Dia a Dia, Trabalho e Viagem (PRETO)",
+      "storeId": "impacto-moda",
+      "category": "Moda",
+      "price": "R$ 90,00",
+      "image": "public/images/anuncios/mochila-impermeavel-d3c5d583.webp",
+      "affiliateLink": "https://link.amazon/B0d58ABhu"
+    },
+    {
+      "name": "Sela Australiana preta para cavalo com conjunto completo",
+      "storeId": "impacto-sport",
+      "category": "Auto, Ferramentas e Esporte",
+      "price": "R$ 439,90",
+      "image": "public/images/anuncios/sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2.webp",
+      "affiliateLink": "https://link.amazon/B01HFaCXr"
+    },
+    {
+      "name": "Sela para Cavalo Mangalarga + kit completo pronta para uso",
+      "storeId": "impacto-sport",
+      "category": "Auto, Ferramentas e Esporte",
+      "price": "R$ 569,05",
+      "image": "public/images/anuncios/sela-para-cavalo-mangalarga-kit-completo-pronta-para-uso-a60abfea.webp",
+      "affiliateLink": "https://link.amazon/B0ioU7Ax8"
+    },
+    {
+      "name": "Sela Australiana Cavalgada Luxo marrom pronta para uso",
+      "storeId": "impacto-sport",
+      "category": "Auto, Ferramentas e Esporte",
+      "price": "R$ 575,00",
+      "image": "public/images/anuncios/sela-australiana-cavalgada-luxo-marrom-pronta-para-uso-3d1841b3.webp",
+      "affiliateLink": "https://link.amazon/B0bKm2KLk"
+    },
+    {
+      "name": "Sela Americana completa tradicional preta",
+      "storeId": "impacto-sport",
+      "category": "Auto, Ferramentas e Esporte",
+      "price": "R$ 439,90",
+      "image": "public/images/anuncios/sela-americana-completa-tradicional-preta-50037823.webp",
+      "affiliateLink": "https://link.amazon/B01N5Pw2q"
+    },
+    {
+      "name": "WAP Liquidificador WB2000 com Copo de Vidro 2 L",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 348,99",
+      "image": "public/images/anuncios/wap-liquidificador-wb2000-com-copo-de-vidro-2-l-93e67fb4.webp",
+      "affiliateLink": "https://link.amazon/B0am7OwYk"
+    },
+    {
+      "name": "Cooktop 4 Bocas de Indução Midea Built In Even Pro",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 1.039,20",
+      "image": "public/images/anuncios/cooktop-4-bocas-de-inducao-midea-built-in-even-pro-a9e102da.webp",
+      "affiliateLink": "https://link.amazon/B00imBhxj"
+    },
+    {
+      "name": "Philips Walita Airfryer Série 1000 XL 6,2 L - 220V",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 349,00",
+      "image": "public/images/anuncios/philips-walita-airfryer-serie-1000-xl-6-2-l-220v-914245c1.webp",
+      "affiliateLink": "https://link.amazon/B07jZ73KV"
+    },
+    {
+      "name": "Forno Elétrico Oster 45 L Grafite - 110V",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 635,55",
+      "image": "public/images/anuncios/forno-eletrico-oster-45-l-grafite-110v-1b0eb778.webp",
+      "affiliateLink": "https://link.amazon/B08N9zarl"
+    },
+    {
+      "name": "Fritadeira Philco Air Fryer Oven 12 L PFR2200P - 127V",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 420,00",
+      "image": "public/images/anuncios/fritadeira-philco-air-fryer-oven-12-l-pfr2200p-127v-71b03296.webp",
+      "affiliateLink": "https://link.amazon/B05HQ0ZC2"
+    },
+    {
+      "name": "Cafeteira Espresso Oster PrimaLatte Touch Red - 127V",
+      "storeId": "impacto-casa",
+      "category": "Casa e Cozinha",
+      "price": "R$ 979,00",
+      "image": "public/images/anuncios/cafeteira-espresso-oster-primalatte-touch-red-127v-ec6a20c6.webp",
+      "affiliateLink": "https://link.amazon/B080ESfOU"
+    }
+  ],
+  "manualReviewDetail": [
+    {
+      "name": "Echo Dot (geração mais recente)",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0hosBXdw",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Echo Pop branco",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0azZ1fPP",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kindle 16 GB preto",
+      "storeId": "impacto-livraria",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0eSyLYsd",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kindle Paperwhite 16 GB",
+      "storeId": "impacto-livraria",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B07AX0xZB",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Ninja Creami sorveteira",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0eaFpKD8",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philips Walita Airfryer Forno 12 L",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06WgOHfc",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panela de pressão elétrica Electrolux PCC20",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0amZUJ3y",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Nespresso Essenza Mini preta",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B07f97cJP",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Britânia Sanduicheira e Grill Press",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0es0d3Oy",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "WAP Aspirador Vertical High Speed Plus",
+      "storeId": "impacto-ofertas",
+      "price": "R$ 121,41",
+      "link": "https://link.amazon/B0hE69dq0",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "WAP Robot W100 aspirador robô",
+      "storeId": "impacto-ofertas",
+      "price": "R$ 317,53",
+      "link": "https://link.amazon/B0hqbgaVn",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "WAP Lavadora de Alta Pressão Ousada Plus",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05Pb1H3f",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "JBL Go 4 preta",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gnIAKVM",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "JBL Wave Buds 2",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05Zhkgfa",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Samsung Galaxy Buds Core",
+      "storeId": "impacto-mobile",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02BpcFE5",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Tramontina Mônaco jogo de panelas 5 peças",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0ftixFuH",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Tramontina Solar inox 6 peças",
+      "storeId": "impacto-casa",
+      "price": "R$ 546,16",
+      "link": "https://link.amazon/B00MRXyU6",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Stanley Quencher H2.0 887 ml",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05V1wcXV",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Soft Brush escova secadora",
+      "storeId": "impacto-beauty-care",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B09EtE5Pg",
+      "pendencias": [
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Taiff Secador Tourmaline 2100 W",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B08uzAsrP",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "La Roche-Posay Anthelios XL-Protect FPS60",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0j9xqkKp",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Bosch GSR 1000 Smart com acessórios",
+      "storeId": "impacto-ferramentas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B01cAIf3P",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Mondial Liquidificador Turbo Power",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0dTrkQgg",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Amazfit Bip 6",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05rIdjXJ",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "JBL Tune 520BT preto",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fipNzyr",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Echo Spot com Alexa",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B041pdlra",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "SSD 1TB",
+      "storeId": "impacto-tech-computadores",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fhQlOmf",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Fone de ouvido Bluetooth",
+      "storeId": "impacto-eletronicos",
+      "price": "R$ 89,10",
+      "link": "https://link.amazon/B08s7WqYX",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Smartphone Samsung Galaxy",
+      "storeId": "impacto-mobile",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B04fYj9tm",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Liquidificador",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0eTthMea",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit de chave de fenda",
+      "storeId": "impacto-ferramentas",
+      "price": "R$ 320,38",
+      "link": "https://link.amazon/B0gBsBZL8",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Aparador de Pelos Philips All-in-One 16 em 1 Série 9000 | Máquina para Rosto, Cabelo e Corpo | Barbeador Elétrico Multigroom à prova d'água | MG9532/15",
+      "storeId": "impacto-beauty-care",
+      "price": "R$ 573,13",
+      "link": "https://link.amazon/B0307OEqr",
+      "pendencias": [
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Mouse sem fio",
+      "storeId": "impacto-tech-computadores",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0e9rvni1",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Mini projetor portátil",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02awFH1Z",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Smart TV",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B04o1cqVi",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Short masculino",
+      "storeId": "impacto-moda",
+      "price": "R$ 56,90",
+      "link": "https://link.amazon/B0dSaAzMK",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Kit com 10 Pares de Meias Cano Alto Algodão Usee Brasil (BR, Alfa, G, Regular, Regular, Branco) : Amazon.com.br: Moda",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06fzFcuD",
+      "pendencias": [
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Capa de chuva para motociclista",
+      "storeId": "impacto-auto",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0f1HdJvW",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Monitor para bebês / babá eletrônica",
+      "storeId": "impacto-kids",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05OcgorY",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Azeite de oliva",
+      "storeId": "impacto-pet",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0dVC3PAr",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Tapete higiênico para pets",
+      "storeId": "impacto-pet",
+      "price": "R$ 16,30",
+      "link": "https://link.amazon/B06Oskf3X",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Estojo escolar",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B04dJNUPB",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Piscina inflável",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0bP2HlA8",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Jogo de lençol queen",
+      "storeId": "impacto-pet",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0hVY9BdW",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Garrafa térmica",
+      "storeId": "impacto-casa",
+      "price": "R$ 63,98",
+      "link": "https://link.amazon/B0esX8C8S",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Câmera de segurança Wi-Fi",
+      "storeId": "impacto-eletronicos",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fD8APQi",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Ventilador de mesa",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0bGtHHJU",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Régua de extensão elétrica",
+      "storeId": "impacto-casa",
+      "price": "R$ 36,88",
+      "link": "https://link.amazon/B0fg008x6",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Jogo de talheres",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0ch1a2Ep",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Impressora multifuncional",
+      "storeId": "impacto-tech-computadores",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0dJRHHgx",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Smartwatch / relógio digital",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0dfRxG98",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Livros de autoajuda",
+      "storeId": "impacto-ofertas",
+      "price": "R$ 23,54",
+      "link": "https://link.amazon/B0iNzdtmF",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Medidor de pressão arterial",
+      "storeId": "impacto-tech-computadores",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0483mcNM",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Air fryer",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B01C2PUSM",
+      "pendencias": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Cinto Cowboy Vintage Western Unissex com fivela floral",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0dOyDHVO",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Castela Cinto Country Unissex preto com cavalo em bronze",
+      "storeId": "impacto-moda",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fp3agCv",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
+      "storeId": "impacto-moda",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06rvfSSf",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+      "storeId": "impacto-moda",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06a1b9Su",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+      "storeId": "impacto-moda",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06wiYkgg",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Camisa Feminina Country Radade bordada manga longa",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B07ndTeqT",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B08MYK46R",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Bota Botina feminina texana country com zíper ou elástico",
+      "storeId": "impacto-moda",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0c1gXdmC",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B07J7hMN1",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Bota Texana Feminina Country cano alto premium bico quadrado",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00k6MDTs",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Bota Texana Country Masculina cano longo marrom 801",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B03KNdtgL",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "ROPER Bota Country Masculina Marrom",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gweOWXa",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Sela Americana preta simples completa com manta e freio inox",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0231tbhV",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Sela Americana Tradicional marrom 16 polegadas",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0av77mAv",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Sela Australiana marrom com rédea e cabeçada completa",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05QYnZAk",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00qiBiY6",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit Peitoral + Cabeçada argolados para cavalo",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B077igHUb",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fTcSr0s",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02D0hzpv",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06PI8m9L",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Estribos ingleses almofadados para equitação",
+      "storeId": "impacto-sport",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0b07BAs2",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Jogo de Panelas Tramontina Solar Fundo Triplo 4 peças",
+      "storeId": "impacto-casa",
+      "price": "R$ 546,16",
+      "link": "https://link.amazon/B0fD1I6rU",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "name": "Jogo de Panelas Tramontina Solar Fundo Triplo 3 peças",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02NwJ608",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Liquidificador Oster 1400 Full Preto 3,2 L - 127V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B09WILEQB",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Liquidificador Oster 1400 Full Preto 3,2 L - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02efQEtl",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Blender Ultra Power 1000 Oster com 2 Copos - 127V",
+      "storeId": "impacto-ofertas",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B08coqJeG",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 127V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B06O5Alk7",
+      "pendencias": [
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00nNViLC",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Cooktop 4 Bocas de Indução Electrolux Experience IE60P",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B010EpifQ",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Fogão Cooktop de Indução Philco 4 bocas PCT40A",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0ec5FpKL",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philips Walita Airfryer Forno Série 5000 12 L - 110V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0ftKLGke",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philips Walita Airfryer Forno Série 5000 12 L - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B07cRbTxb",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philips Walita Airfryer Série 1000 XL 6,2 L - 110V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B03lDNuzt",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Air Fryer Rita Lobo EAF40 5,8 L - 127V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0aNScTOj",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Air Fryer Forno EAF90 12 L 5 em 1 Rotisserie - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05bFz6RN",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Air Fryer Forno 5 em 1 12 L Digital",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B01q7iGND",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 127V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B05cofquE",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02qPuJPM",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Forno Elétrico Philco PFE40I Air Fry 40 L 2 em 1",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00TFphUR",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Nespresso Vertuo Pop Preta - 110V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0eWeSjB7",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philips Walita Espresso Superautomática Série 1200 - 110V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0b0Iow6e",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Cafeteira Espresso Oster PrimaLatte Touch - 127V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0g0ctodQ",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Batedeira Planetária Artisan KitchenAid Empire Red - 220V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02mH1yt4",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Oster Batedeira Planetária Digital Bowl Inox 5 L - 110V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gfMV7jG",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico PFE80A, 80L, 4 resistências - 127/220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B03534BGX",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico 65L PFE65 Dupla Resistência - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gHRgyHa",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico PFE60I Função Dourar - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gqrQthl",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico PFE60I Função Dourar - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B04vFZY19",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Best Forno Elétrico Preto e Branco - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B09f4KQim",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Best Forno Elétrico Plus com Espeto Giratório - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0c8NCD9k",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0hV1g0Ng",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gJwWB04",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Mondial Forno Elétrico Grand Family II FRN-52-W Branco/Inox - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gz4goVe",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Fogatti Forno Elétrico Top 40 - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gq0WW87",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico PFE44P Dupla Resistência - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0fGFL4ZS",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico 50L PFE52P Dupla Resistência - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B08Aap2we",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Forno Elétrico 50L PFE52B Dupla Resistência - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0acWILfW",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Britânia Forno Elétrico BFE55P Dupla Resistência - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B019MKKA8",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Suggar Forno Elétrico de Bancada FE4201PT - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00D7zwie",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0i4uk5sz",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST25LWRU Branco - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02Kfd7Vc",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0aBP7H9m",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST65LWRU Branco - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0gniS5tK",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST67LSRU Inox Antibactéria - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0d7itnTk",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST66NBRU Black Glass - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0etLK8TT",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Panasonic Micro-ondas NN-ST55LMRU Prata - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02hl8D4v",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Micro-ondas MT30S Prata Espelhado com Tira Odor - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0bMCwqrQ",
+      "pendencias": [
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B01dGDbop",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B03myQRLQ",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Micro-ondas MB37R Branco com 55 receitas - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0d6XGfW3",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Electrolux Micro-ondas ME23S Inox Efficient - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B00I7oiSX",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Midea Forno Micro-ondas MXSA35P1 Branco e Preto - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B02xHEZD1",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "LG Micro-ondas NeoChef MS3033DS - 127 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B0hm25olb",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "name": "Philco Micro-ondas PMO38E Limpa Fácil 1400W - 220 V",
+      "storeId": "impacto-casa",
+      "price": "Preço no anúncio",
+      "link": "https://link.amazon/B064ueRyN",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    }
+  ],
+  "testNotes": [
+    "py_compile: scripts/anuncios_core.py, scripts/importar-anuncios.py e scripts/finalizar-importacao-amazon.py sem erro.",
+    "Importacao Amazon aplicada: 141 cadastrados; estado final com 13 ativos completos e 128 em revisao manual.",
+    "scripts/auditar-anuncios.py --root .: exit 0; ativos sem foto 0; ativos sem link 0.",
+    "scripts/validar-impacto360.mjs: todos os testes obrigatorios passaram.",
+    "Checagem Amazon especifica: 0 links ativos fora do afiliado; 0 imagens ausentes; 0 precos ativos fora de R$ 0,00; pacote sincronizado.",
+    "Navegador local em http://127.0.0.1:8765/index.html: rodizio com 12 links Amazon afiliados, 25 imagens Amazon carregadas, 0 imagens quebradas e 0 erros de console.",
+    "Build Vite nao executado porque node_modules nao estava instalado; nao instalei dependencias para preservar o projeto."
+  ],
+  "changedFiles": [
+    "scripts/anuncios_core.py",
+    "scripts/importar-anuncios.py",
+    "scripts/finalizar-importacao-amazon.py",
+    "dados/products.json",
+    "dados/stores.json",
+    "dados/ultima-importacao-anuncios.json",
+    "dados/produtos-importados-2026-07-07.json",
+    "dados/banners-anuncios.json",
+    "dados/relatorio-correcao-amazon-2026-07-07.json",
+    "pacote-github-pages-pronto/dados/products.json",
+    "pacote-github-pages-pronto/dados/stores.json",
+    "pacote-github-pages-pronto/dados/ultima-importacao-anuncios.json",
+    "pacote-github-pages-pronto/dados/produtos-importados-2026-07-07.json",
+    "pacote-github-pages-pronto/dados/banners-anuncios.json",
+    "pacote-github-pages-pronto/public/images/anuncios/*.webp",
+    "importacoes/originais/2026-07-07/*.docx"
+  ]
+}

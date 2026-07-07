@@ -1,0 +1,60 @@
+{
+  "executedAt": "2026-07-01",
+  "sourceFiles": {
+    "20_melhores_fornos_bancada_mercado_livre.docx": 20,
+    "catalogo_evangelico_RECRIADO_30_produtos_links_atualizados_mercado_livre.docx": 30
+  },
+  "rawExtracted": 72,
+  "uniqueAfterDeduplication": 50,
+  "productsAddedOrUpdated": 50,
+  "activeImported": 5,
+  "manualReviewImported": 45,
+  "correctedOldFornoRecords": [
+    {
+      "id": "loja-parceira-001",
+      "previousLink": "https://meli.la/1guTPms",
+      "newLink": "https://meli.la/1guTPms",
+      "status": "duplicado",
+      "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+    },
+    {
+      "id": "mercado-livre-produto-019",
+      "previousLink": "https://meli.la/1guTPms",
+      "newLink": "https://meli.la/1guTPms",
+      "status": "duplicado",
+      "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+    },
+    {
+      "id": "mercado-livre-produto-020",
+      "previousLink": "https://meli.la/1guTPms",
+      "newLink": "https://meli.la/1guTPms",
+      "status": "duplicado",
+      "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+    },
+    {
+      "id": "mercado-livre-produto-023",
+      "previousLink": "https://meli.la/1guTPms",
+      "newLink": "https://meli.la/1guTPms",
+      "status": "duplicado",
+      "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+    },
+    {
+      "id": "mercado-livre-produto-029",
+      "previousLink": "https://meli.la/1guTPms",
+      "newLink": "https://meli.la/1guTPms",
+      "status": "duplicado",
+      "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+    }
+  ],
+  "imageGenerated": {
+    "path": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
+    "width": 500,
+    "height": 338,
+    "bytes": 11118
+  },
+  "notes": [
+    "A cópia completa do catálogo evangélico estava em Downloads; a cópia truncada em Desktop tinha somente quatro itens e deixou de existir durante a execução.",
+    "Produtos evangélicos com apenas link de busca do Mercado Livre foram mantidos em revisão manual.",
+    "Fornos sem imagem confirmada automaticamente foram mantidos em revisão manual."
+  ]
+}

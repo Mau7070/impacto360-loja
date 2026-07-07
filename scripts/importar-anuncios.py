@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 import sys
+import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -53,6 +54,12 @@ class ImportedItem:
     embedded_extension: str = ".png"
     embedded_image_safe: bool = False
     source_notes: list[str] = field(default_factory=list)
+    validation_link: str = ""
+    source_product_link: str = ""
+    source: str = "Mercado Livre"
+    button_label: str = "Comprar no Mercado Livre"
+    product_id_prefix: str = "importado-ml"
+    allow_validated_title: bool = False
 
     def key(self) -> str:
         return canonical_link(self.link) or normalize_text(self.title)
@@ -218,6 +225,459 @@ def extract_tvs(path: Path) -> list[ImportedItem]:
     return items
 
 
+def row_hyperlinks(document: Document, row: Any) -> list[str]:
+    links: list[str] = []
+    for cell in row.cells:
+        links.extend(cell_hyperlinks(document, cell))
+    return list(dict.fromkeys(clean_url(link) for link in links if clean_url(link)))
+
+
+def choose_direct_product_link(links: Iterable[str]) -> str:
+    candidates = list(dict.fromkeys(clean_url(link) for link in links if clean_url(link)))
+    for candidate in candidates:
+        if link_is_direct_product(candidate) and "meli.la/" not in candidate.lower():
+            return candidate
+    for candidate in candidates:
+        if "meli.la/" in candidate.lower():
+            return candidate
+    return candidates[0] if candidates else ""
+
+
+def clean_catalog_text(value: str) -> str:
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    return (
+        text.replace("Cristă", "Cristã")
+        .replace("cristă", "cristã")
+        .replace("Biblia", "Bíblia")
+    )
+
+
+def clean_amazon_title(value: str) -> str:
+    title = re.sub(r"\s+", " ", str(value or "")).strip()
+    title = re.sub(r"\s*\|\s*Amazon(?:\.com\.br)?\s*$", "", title, flags=re.IGNORECASE).strip()
+    return title or str(value or "").strip()
+
+
+def amazon_link_kind(value: str) -> str:
+    value = clean_url(value)
+    if not value:
+        return ""
+    try:
+        parsed = urllib.parse.urlsplit(value)
+    except ValueError:
+        return ""
+    host = parsed.netloc.lower().removeprefix("www.")
+    if host in {"link.amazon", "amzn.to"}:
+        return "affiliate"
+    if "amazon." in host:
+        return "product" if link_is_direct_product(value) else "search"
+    return ""
+
+
+def split_amazon_links(links: Iterable[str]) -> tuple[str, str, str]:
+    clean_links = list(dict.fromkeys(clean_url(link) for link in links if clean_url(link)))
+    affiliate = next((link for link in clean_links if amazon_link_kind(link) == "affiliate"), "")
+    product = next((link for link in clean_links if amazon_link_kind(link) == "product"), "")
+    search = next((link for link in clean_links if amazon_link_kind(link) == "search"), "")
+    return affiliate, product, search
+
+
+def amazon_item_from_parts(
+    *,
+    title: str,
+    link: str,
+    validation_link: str,
+    source_product_link: str,
+    source_file: str,
+    description: str,
+    hinted_category: str,
+    price: str = "Preço no anúncio",
+    rating: float | None = None,
+    embedded_image: bytes | None = None,
+    embedded_extension: str = ".png",
+    embedded_image_safe: bool = False,
+    source_notes: list[str] | None = None,
+    allow_validated_title: bool = False,
+) -> ImportedItem:
+    return ImportedItem(
+        title=title,
+        link=link,
+        source_file=source_file,
+        description=description,
+        hinted_category=hinted_category,
+        price=price,
+        rating=rating,
+        embedded_image=embedded_image,
+        embedded_extension=embedded_extension,
+        embedded_image_safe=embedded_image_safe,
+        source_notes=source_notes or [],
+        validation_link=validation_link or link,
+        source_product_link=source_product_link,
+        source="Amazon",
+        button_label="Comprar na Amazon",
+        product_id_prefix="importado-amazon",
+        allow_validated_title=allow_validated_title,
+    )
+
+
+def extract_amazon_card_catalog(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    for table in document.tables:
+        if not table.rows or len(table.rows[0].cells) < 2:
+            continue
+        image_cell, detail_cell = table.rows[0].cells[0], table.rows[0].cells[1]
+        raw_text = detail_cell.text.strip()
+        if not re.match(r"^\s*\d{1,3}\.", raw_text):
+            continue
+        lines = [clean_catalog_text(line) for line in raw_text.splitlines() if clean_catalog_text(line)]
+        if not lines:
+            continue
+        title = title_without_number(lines[0])
+        if not title:
+            continue
+        links = cell_hyperlinks(document, detail_cell)
+        affiliate, product_link, search_link = split_amazon_links(links)
+        link = affiliate
+        validation_link = product_link or affiliate
+        if not link or not validation_link:
+            continue
+        image, extension = cell_image(document, image_cell)
+        category = metadata_value(raw_text, "Categoria") or "Amazon"
+        description = " ".join(lines)
+        notes = [
+            "Fonte: catálogo Amazon enviado pelo usuário.",
+            "Foto e preço devem ser validados pelo link direto da Amazon; botão da loja usa somente o link de afiliado.",
+        ]
+        if search_link and not product_link:
+            notes.append("O arquivo também traz link de busca/conferência; item depende do link de afiliado para validar produto exato.")
+        items.append(
+            amazon_item_from_parts(
+                title=title,
+                link=link,
+                validation_link=validation_link,
+                source_product_link=product_link or search_link,
+                source_file=path.name,
+                description=description,
+                hinted_category=category,
+                price=parse_brazilian_price(raw_text),
+                rating=parse_rating(raw_text),
+                embedded_image=image,
+                embedded_extension=extension,
+                embedded_image_safe=False,
+                source_notes=notes,
+            )
+        )
+    return items
+
+
+def extract_amazon_trend_tables(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    for table in document.tables:
+        if len(table.rows) < 2:
+            continue
+        headers = [normalize_text(cell.text) for cell in table.rows[0].cells]
+        if "produto termo" not in " ".join(headers) or "link de afiliado" not in " ".join(headers):
+            continue
+        for row in table.rows[1:]:
+            cells = row.cells
+            if len(cells) < 10:
+                continue
+            title = clean_catalog_text(cells[1].text)
+            if not title:
+                continue
+            category = clean_catalog_text(cells[2].text) or "Amazon"
+            direct_links = cell_hyperlinks(document, cells[8])
+            affiliate_links = cell_hyperlinks(document, cells[9])
+            affiliate, product_link, search_link = split_amazon_links(direct_links + affiliate_links)
+            link = affiliate
+            validation_link = product_link or affiliate
+            if not link or not validation_link:
+                continue
+            rank = clean_catalog_text(cells[0].text)
+            commission = clean_catalog_text(cells[3].text)
+            score = clean_catalog_text(cells[4].text)
+            trend = clean_catalog_text(cells[5].text)
+            opportunity = clean_catalog_text(cells[6].text)
+            dates = clean_catalog_text(cells[7].text)
+            description = (
+                f"Produto/termo {rank} do catálogo de tendências Amazon. "
+                f"Categoria informada: {category}. Comissão estimada: {commission}. "
+                f"Score: {score}. Tendência: {trend}. Oportunidade: {opportunity}. "
+                f"Datas fortes: {dates}. Confira preço, variação, vendedor, frete e disponibilidade diretamente na Amazon."
+            )
+            notes = [
+                "Fonte: catálogo de produtos buscados no Brasil e tendências para afiliado.",
+                "O link de busca foi usado apenas como referência; o botão da loja preserva o link de afiliado.",
+            ]
+            if search_link:
+                notes.append("Produto veio de termo de busca; quando o link afiliado resolve para item exato, o título validado da Amazon é priorizado.")
+            items.append(
+                amazon_item_from_parts(
+                    title=title,
+                    link=link,
+                    validation_link=validation_link,
+                    source_product_link=product_link or search_link,
+                    source_file=path.name,
+                    description=description,
+                    hinted_category=category,
+                    source_notes=notes,
+                    allow_validated_title=True,
+                )
+            )
+    return items
+
+
+def extract_amazon_ovens_microwaves(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    for table_index, table in enumerate(document.tables):
+        if len(table.rows) < 2 or len(table.rows[0].cells) < 9:
+            continue
+        headers = [normalize_text(cell.text) for cell in table.rows[0].cells]
+        if "link direto amazon" not in " ".join(headers) or "link de afiliado" not in " ".join(headers):
+            continue
+        group = "Fornos de mesa" if table_index == 0 else "Micro-ondas"
+        for row in table.rows[1:]:
+            cells = row.cells
+            title = clean_catalog_text(cells[1].text)
+            if not title:
+                continue
+            voltage = clean_catalog_text(cells[3].text)
+            if voltage and voltage not in title:
+                title = f"{title} - {voltage}"
+            links = []
+            links.extend(cell_hyperlinks(document, cells[7]))
+            links.extend(cell_hyperlinks(document, cells[8]))
+            affiliate, product_link, search_link = split_amazon_links(links)
+            link = affiliate
+            validation_link = product_link or affiliate
+            if not link or not validation_link:
+                continue
+            description = (
+                f"Item {clean_catalog_text(cells[0].text)} do catálogo Amazon de {group}. "
+                f"Capacidade: {clean_catalog_text(cells[2].text)}. "
+                f"Voltagem: {clean_catalog_text(cells[3].text)}. "
+                f"Avaliação informada: {clean_catalog_text(cells[4].text)}. "
+                f"Envio/entrega: {clean_catalog_text(cells[5].text)}. "
+                f"Comissão estimada: {clean_catalog_text(cells[6].text)}. "
+                "Confira preço, voltagem, frete e disponibilidade diretamente na Amazon."
+            )
+            items.append(
+                amazon_item_from_parts(
+                    title=title,
+                    link=link,
+                    validation_link=validation_link,
+                    source_product_link=product_link or search_link,
+                    source_file=path.name,
+                    description=description,
+                    hinted_category=group,
+                    rating=parse_rating(cells[4].text),
+                    source_notes=[
+                        "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil.",
+                        "Foto e preço importados a partir da página original; botão usa link de afiliado.",
+                    ],
+                )
+            )
+    return items
+
+
+def extract_amazon_catalog(path: Path) -> list[ImportedItem]:
+    name = normalize_text(path.name)
+    if "buscados brasil tendencias" in name:
+        return extract_amazon_trend_tables(path)
+    if "fornos de mesa microondas" in name:
+        return extract_amazon_ovens_microwaves(path)
+    return extract_amazon_card_catalog(path)
+
+
+def extract_ovens(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    data_tables = [
+        table
+        for table in document.tables
+        if len(table.rows) > 1 and len(table.columns) >= 7
+    ]
+    if not data_tables:
+        return []
+    table = max(data_tables, key=lambda candidate: len(candidate.rows))
+    items: list[ImportedItem] = []
+    for row in table.rows[1:]:
+        cells = row.cells
+        number = cells[0].text.strip()
+        title = clean_catalog_text(cells[1].text)
+        if not title:
+            continue
+        links = row_hyperlinks(document, row)
+        link = choose_direct_product_link(links)
+        if not link:
+            continue
+        liters = clean_catalog_text(cells[2].text)
+        reason = clean_catalog_text(cells[3].text)
+        indicated_for = clean_catalog_text(cells[4].text)
+        if "http" in indicated_for.lower():
+            indicated_for = ""
+        price_text = clean_catalog_text(cells[5].text)
+        description_parts = [
+            f"Item {number} do catálogo de fornos de bancada.",
+            f"Capacidade: {liters}." if liters else "",
+            reason,
+            f"Indicado para: {indicated_for}." if indicated_for else "",
+            price_text,
+        ]
+        short_links = [candidate for candidate in links if "meli.la/" in candidate.lower()]
+        direct_links = [candidate for candidate in links if "mercadolivre.com" in candidate.lower()]
+        source_notes = ["Fonte: curadoria de fornos de bancada Mercado Livre."]
+        if short_links and direct_links and link not in short_links:
+            source_notes.append(
+                "Link direto do produto priorizado porque o link curto do arquivo pode apontar para lista ou recomendação."
+            )
+        items.append(
+            ImportedItem(
+                title=title,
+                link=link,
+                source_file=path.name,
+                description=" ".join(part for part in description_parts if part),
+                hinted_category="Fornos elétricos de bancada",
+                price=parse_brazilian_price(price_text),
+                rating=parse_rating(reason),
+                embedded_image_safe=False,
+                source_notes=source_notes,
+            )
+        )
+    return items
+
+
+def extract_evangelical(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    for table in document.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                text = cell.text.strip()
+                if not re.search(r"\bITEM\s+\d+\b", text, re.IGNORECASE):
+                    continue
+                blocks = re.split(r"(?=\bITEM\s+\d+\b)", text, flags=re.IGNORECASE)
+                cell_links = cell_hyperlinks(document, cell)
+                for block in blocks:
+                    if not re.search(r"\bITEM\s+\d+\b", block, re.IGNORECASE):
+                        continue
+                    lines = [
+                        clean_catalog_text(line)
+                        for line in block.splitlines()
+                        if clean_catalog_text(line)
+                    ]
+                    if len(lines) < 2:
+                        continue
+                    item_number = lines[0]
+                    title = lines[1]
+                    category = next(
+                        (
+                            line
+                            for line in lines[2:]
+                            if "mercado livre" not in normalize_text(line)
+                            and not line.lower().startswith("http")
+                            and not line.lower().startswith("link direto")
+                            and not line.lower().startswith("busca alternativa")
+                        ),
+                        "Produtos religiosos",
+                    )
+                    block_links = re.findall(r"https?://[^\s<>]+", block)
+                    links = list(dict.fromkeys(block_links + cell_links))
+                    direct_links = [
+                        link for link in links if link_is_direct_product(link) and "meli.la/" in link.lower()
+                    ]
+                    link = direct_links[0] if direct_links else preferred_link(links, block)
+                    if not title or not link:
+                        continue
+                    items.append(
+                        ImportedItem(
+                            title=title,
+                            link=link,
+                            source_file=path.name,
+                            description=(
+                                f"{item_number} do catálogo evangélico. "
+                                f"Categoria informada: {category}. "
+                                "Confira preço, edição, acabamento, frete e disponibilidade diretamente no anúncio."
+                            ),
+                            hinted_category=category,
+                            price="Preço no anúncio",
+                            embedded_image_safe=False,
+                            source_notes=[
+                                "Fonte: catálogo evangélico com links atualizados do Mercado Livre."
+                            ],
+                        )
+                    )
+    return items
+
+
+def extract_cookware_catalog(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    catalog_note = " ".join(
+        clean_catalog_text(paragraph.text)
+        for paragraph in document.paragraphs
+        if clean_catalog_text(paragraph.text)
+    )
+    for table in document.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                text = cell.text.strip()
+                if not re.search(r"\bITEM\s+\d+\b", text, re.IGNORECASE):
+                    continue
+                blocks = re.split(r"(?=\bITEM\s+\d+\b)", text, flags=re.IGNORECASE)
+                cell_links = cell_hyperlinks(document, cell)
+                for block in blocks:
+                    if not re.search(r"\bITEM\s+\d+\b", block, re.IGNORECASE):
+                        continue
+                    lines = [
+                        clean_catalog_text(line)
+                        for line in block.splitlines()
+                        if clean_catalog_text(line)
+                    ]
+                    if len(lines) < 2:
+                        continue
+                    item_number = lines[0]
+                    title = lines[1]
+                    block_links = re.findall(r"https?://[^\s<>]+", block)
+                    links = list(dict.fromkeys(block_links + cell_links))
+                    short_links = [
+                        candidate for candidate in links if "meli.la/" in candidate.lower()
+                    ]
+                    link = short_links[0] if short_links else choose_direct_product_link(links)
+                    if not title or not link:
+                        continue
+                    search_only = not link_is_direct_product(link)
+                    notes = [
+                        "Fonte: catálogo de jogos de panelas Pacific e similares com links Mercado Livre."
+                    ]
+                    if search_only:
+                        notes.append(
+                            "Item com link de busca/lista; manter em revisão manual até confirmar o anúncio exato."
+                        )
+                    description = (
+                        f"{item_number} do catálogo de panelas Pacific e similares. "
+                        "Categoria informada: Jogos de panelas. "
+                        "Confira preço, quantidade de peças, compatibilidade com indução, frete e disponibilidade diretamente no anúncio."
+                    )
+                    if catalog_note:
+                        description = f"{description} Observação do arquivo: {catalog_note}"
+                    items.append(
+                        ImportedItem(
+                            title=title,
+                            link=link,
+                            source_file=path.name,
+                            description=description,
+                            hinted_category="Panelas",
+                            price="Preço no anúncio",
+                            embedded_image_safe=False,
+                            source_notes=notes,
+                        )
+                    )
+    return items
+
+
 def extract_battery_toys(path: Path) -> list[ImportedItem]:
     document = Document(path)
     quick_table = max(document.tables, key=lambda candidate: len(candidate.rows))
@@ -263,6 +723,16 @@ def extract_battery_toys(path: Path) -> list[ImportedItem]:
 
 def extract_docx(path: Path) -> list[ImportedItem]:
     name = normalize_text(path.name)
+    if "produtos buscados" in name and "tendencias" in name:
+        return extract_amazon_trend_tables(path)
+    if "amazon" in name:
+        return extract_amazon_catalog(path)
+    if "panelas" in name or "pacific" in name:
+        return extract_cookware_catalog(path)
+    if "fornos bancada" in name or "forno" in name:
+        return extract_ovens(path)
+    if "evangelico" in name or "evangelicos" in name:
+        return extract_evangelical(path)
     if "lanternas uv" in name:
         return extract_lanterns(path)
     if "tvs mercado livre" in name:
@@ -432,18 +902,31 @@ def build_product(
     existing: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     product = dict(existing or {})
-    classification = classify_product(item.title, item.description, item.hinted_category)
-    match = title_similarity(item.title, check.get("title", ""))
+    validation_link = item.validation_link or item.link
+    checked_title = clean_amazon_title(check.get("title", "")) if item.source == "Amazon" else check.get("title", "")
+    display_title = (
+        checked_title
+        if item.allow_validated_title and check.get("ok") and checked_title
+        else item.title
+    )
+    classification = classify_product(display_title, item.description, item.hinted_category)
+    match = title_similarity(display_title, checked_title or check.get("title", ""))
+    validated_link_is_product = (
+        link_is_direct_product(validation_link)
+        or link_is_direct_product(check.get("finalUrl", ""))
+        or link_is_direct_product(check.get("directProductUrl", ""))
+    )
     valid_online = (
-        link_is_direct_product(item.link)
+        validated_link_is_product
         and bool(check.get("ok"))
         and bool(match["safe"])
     )
     status = "ativo" if valid_online and image_relative else "revisao_manual"
-    price = check.get("price") or item.price or product.get("price") or "Preço no anúncio"
+    raw_price = check.get("price") or item.price or product.get("price") or "Preço no anúncio"
+    price = parse_brazilian_price(raw_price)
     rating = check.get("rating") if check.get("rating") is not None else item.rating
     product_id = product.get("id") or stable_product_id(
-        "importado-ml", item.title, item.link
+        item.product_id_prefix, display_title, item.link
     )
     description = item.description.strip() or (
         f"Produto selecionado no arquivo {item.source_file}. "
@@ -452,18 +935,21 @@ def build_product(
     pendencias: list[str] = []
     if not check.get("ok"):
         pendencias.append("link não confirmado online")
+    if not validated_link_is_product:
+        pendencias.append("link de produto não confirmado")
     if check.get("title") and not match["safe"]:
         pendencias.append("título do link diverge do produto")
     if not image_relative:
         pendencias.append("imagem real não confirmada")
     if price == "Preço no anúncio":
         pendencias.append("preço dinâmico no anúncio")
+        status = "revisao_manual"
 
     product.update(
         {
             "id": product_id,
             "storeId": classification["storeId"],
-            "name": item.title,
+            "name": display_title,
             "description": description,
             "descricaoCurta": description,
             "descricaoDetalhada": description,
@@ -475,17 +961,18 @@ def build_product(
             "affiliateLink": item.link,
             "linkCompra": item.link,
             "linkOriginal": item.link,
-            "linkResolvidoApenasLeitura": check.get("directProductUrl") or check.get("finalUrl") or "",
+            "linkResolvidoApenasLeitura": check.get("directProductUrl") or check.get("finalUrl") or item.source_product_link or "",
+            "linkProdutoApenasLeitura": item.source_product_link or check.get("finalUrl") or "",
             "category": classification["category"],
             "categoria": classification["category"],
             "subcategoria": classification["subcategoria"],
-            "source": "Mercado Livre",
-            "origem": "Mercado Livre",
+            "source": item.source,
+            "origem": item.source,
             "status": status,
             "aprovadoParaPublicacao": status == "ativo",
             "editable": True,
             "actionType": "buy",
-            "buttonLabel": "Comprar no Mercado Livre",
+            "buttonLabel": item.button_label,
             "rating": rating,
             "nota": rating,
             "origemImportacao": item.source_file,
@@ -497,6 +984,9 @@ def build_product(
             "validacaoOnline": {
                 **check,
                 "titleMatch": match,
+                "affiliateLinkCadastrado": item.link,
+                "validationLinkUsadoParaFoto": validation_link,
+                "sourceProductLink": item.source_product_link,
                 "checkedAt": today_iso(),
             },
             "ultimaRevisao": today_iso(),
@@ -533,7 +1023,7 @@ def main() -> int:
     if args.offline:
         for item in merged:
             checks[item.key()] = {
-                "requestedUrl": item.link,
+                "requestedUrl": item.validation_link or item.link,
                 "ok": True,
                 "title": item.title,
                 "image": "",
@@ -542,7 +1032,7 @@ def main() -> int:
     else:
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:
             pending = {
-                executor.submit(check_link, item.link, item.title): item
+                executor.submit(check_link, item.validation_link or item.link, item.title): item
                 for item in merged
             }
             for future in as_completed(pending):
@@ -670,7 +1160,7 @@ def main() -> int:
         write_json(products_path, products)
         write_json(stores_path, stores)
         write_json(root / "dados" / "ultima-importacao-anuncios.json", report)
-        write_json(root / "dados" / "produtos-importados-2026-06-23.json", imported_products)
+        write_json(root / "dados" / f"produtos-importados-{today_iso()}.json", imported_products)
         print(f"Aplicado: {added} adicionados, {updated} atualizados, {active} ativos, {manual} para revisão.")
     else:
         preview = root / "dados" / "preview-importacao-anuncios.json"

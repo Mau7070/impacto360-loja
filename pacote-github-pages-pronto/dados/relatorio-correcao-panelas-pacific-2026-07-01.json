@@ -1,0 +1,920 @@
+{
+  "executedAt": "2026-07-01",
+  "sourceFile": "catalogo_panelas_Pacific_e_similares_30_produtos_links_mercado_livre.docx",
+  "backup": "C:\\Users\\PMNB\\Documents\\Codex\\2026-06-30\\qu\\publish-impacto360-catalogos\\backups\\2026-07-01-1106-pre-importacao-panelas-pacific",
+  "totalProdutosPanelas": 30,
+  "ativos": 17,
+  "revisaoManual": 13,
+  "linksDiretosMeli": 25,
+  "linksBuscaOuLista": 5,
+  "imagensConfirmadas": 17,
+  "produtosAtivos": [
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-premium-design-australiano-20-pe-06d38457",
+      "nome": "Jogo de Panelas Pacific Premium Design Australiano 20 peças",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 1.295,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-pacific-premium-design-australiano-20-pecas-06d38457.webp",
+      "linkCompra": "https://meli.la/1yGxP7B",
+      "tituloValidadoNoLink": "Jogo Panelas Linha Premium Creta Antiaderente Luxo 22 Peças",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-rose-premium-933b80b5",
+      "nome": "Jogo de Panelas Pacific Rose Premium",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 942,04",
+      "imagem": "public/images/anuncios/jogo-de-panelas-pacific-rose-premium-933b80b5.webp",
+      "linkCompra": "https://meli.la/1e51k2J",
+      "tituloValidadoNoLink": "Jogo De Panelas Mônaco Diamante Premium 20 Peças - Cerâmica",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-antiaderente-premium-77cc94d9",
+      "nome": "Jogo de Panelas Pacific Antiaderente Premium",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 474,05",
+      "imagem": "public/images/anuncios/jogo-de-panelas-pacific-antiaderente-premium-77cc94d9.webp",
+      "linkCompra": "https://meli.la/1s4aahQ",
+      "tituloValidadoNoLink": "Jogo De Panelas Cerâmica Antiaderente Indução Bege",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-20-pecas-premium-ef08b472",
+      "nome": "Jogo de Panelas Pacific 20 Peças Premium",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 187,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-pacific-20-pecas-premium-ef08b472.webp",
+      "linkCompra": "https://meli.la/21ijBx8",
+      "tituloValidadoNoLink": "Jogo De Panelas Carvalho 4 Peças Vidro E Baqueliete",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-conjunto-de-panelas-pacific-design-australiano-ca83be18",
+      "nome": "Conjunto de Panelas Pacific Design Australiano",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 1.065,00",
+      "imagem": "public/images/anuncios/conjunto-de-panelas-pacific-design-australiano-ca83be18.webp",
+      "linkCompra": "https://meli.la/2eV4Xz4",
+      "tituloValidadoNoLink": "Conjunto De Panelas Pacific Luxo Antiaderente Induçao Bordô",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-mimo-style-ceramica-inducao-10-pecas-fc3e26bc",
+      "nome": "Jogo de Panelas Mimo Style Cerâmica Indução 10 Peças",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 334,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-mimo-style-ceramica-inducao-10-pecas-fc3e26bc.webp",
+      "linkCompra": "https://meli.la/2rpQvnA",
+      "tituloValidadoNoLink": "Jogo De Panelas Mimo Style Cerâmica Indução 10 Peças Grafite",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d",
+      "nome": "Jogo de Panelas Mimo Style Premium 9 Peças Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 283,72",
+      "imagem": "public/images/anuncios/jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d.webp",
+      "linkCompra": "https://meli.la/1uLrkhD.",
+      "tituloValidadoNoLink": "Jogo De Panelas Indução Mimo Style Cerâmica 7 Peças Bege",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-tramontina-monaco-inducao-2e56d70d",
+      "nome": "Jogo de Panelas Tramontina Mônaco Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 999,90",
+      "imagem": "public/images/anuncios/jogo-de-panelas-tramontina-monaco-inducao-2e56d70d.webp",
+      "linkCompra": "https://meli.la/2MfgpjM",
+      "tituloValidadoNoLink": "Jogo De Panelas Original Ceramica 21 Peças Monaco Diamante",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-brinox-ceramic-life-inducao-bf7ba401",
+      "nome": "Jogo de Panelas Brinox Ceramic Life Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 721,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-brinox-ceramic-life-inducao-bf7ba401.webp",
+      "linkCompra": "https://meli.la/1oGzqan",
+      "tituloValidadoNoLink": "Jogo De Panelas Brinox Ceramic Life Easy 8 Peças Com Indução Cinza",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-brinox-ceramic-life-smart-plus-984353d9",
+      "nome": "Jogo de Panelas Brinox Ceramic Life Smart Plus",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 636,22",
+      "imagem": "public/images/anuncios/jogo-de-panelas-brinox-ceramic-life-smart-plus-984353d9.webp",
+      "linkCompra": "https://meli.la/2uYR2dn",
+      "tituloValidadoNoLink": "Jogo De Panelas Brinox Ceramic Life Easy 8 Peças Com Indução Cinza",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-magnific-inducao-aa37d6c5",
+      "nome": "Jogo de Panelas Panelux Magnific Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 395,49",
+      "imagem": "public/images/anuncios/jogo-de-panelas-panelux-magnific-inducao-aa37d6c5.webp",
+      "linkCompra": "https://meli.la/14z7r5o.",
+      "tituloValidadoNoLink": "Conjunto De Panelas Panelux 5000074 Magnific 6 Peças Grafite",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-ceraflame-premiere-joy-5-pecas-21b03983",
+      "nome": "Jogo de Panelas Ceraflame Premiere Joy 5 Peças",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 1.207,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-ceraflame-premiere-joy-5-pecas-21b03983.webp",
+      "linkCompra": "https://meli.la/1f1CmfM",
+      "tituloValidadoNoLink": "Jogo De Panelas Ceraflame New Premiere+ 5 Pç Chocolate",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-ceraflame-duo-smart-cbd83bbd",
+      "nome": "Jogo de Panelas Ceraflame Duo Smart",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 1.116,00",
+      "imagem": "public/images/anuncios/jogo-de-panelas-ceraflame-duo-smart-cbd83bbd.webp",
+      "linkCompra": "https://meli.la/2oA33oS",
+      "tituloValidadoNoLink": "Jogo De Panelas Cerâmica Ceraflame Duo+ Smart 5 Peças Preto",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-la-cuisine-antiaderente-inducao-3672bed8",
+      "nome": "Jogo de Panelas La Cuisine Antiaderente Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 678,90",
+      "imagem": "public/images/anuncios/jogo-de-panelas-la-cuisine-antiaderente-inducao-3672bed8.webp",
+      "linkCompra": "https://meli.la/2LzZ9V2",
+      "tituloValidadoNoLink": "Jogo De Panelas 4mm 14 Peças Antiaderente Cerâmico Indução",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-hercules-inducao-premium-c6bb10ba",
+      "nome": "Jogo de Panelas Hércules Indução Premium",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 385,48",
+      "imagem": "public/images/anuncios/jogo-de-panelas-hercules-inducao-premium-c6bb10ba.webp",
+      "linkCompra": "https://meli.la/1oJfzMj",
+      "tituloValidadoNoLink": "Jogo De Panelas Cerâmica Plus Indução 2.5mm 7 Peças - Jhamba Azul",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-de-ceramica-10-pecas-inducao-baa007c6",
+      "nome": "Jogo de Panelas de Cerâmica 10 Peças Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 546,15",
+      "imagem": "public/images/anuncios/jogo-de-panelas-de-ceramica-10-pecas-inducao-baa007c6.webp",
+      "linkCompra": "https://meli.la/25sxyDS",
+      "tituloValidadoNoLink": "Jogo De Panelas Cerâmica Antiaderente 5 Peças Indução Gás Preto",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-premium-antiaderente-titanium-inducao-23dc3cbb",
+      "nome": "Jogo de Panelas Premium Antiaderente Titanium Indução",
+      "status": "ativo",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "R$ 634,80",
+      "imagem": "public/images/anuncios/jogo-de-panelas-premium-antiaderente-titanium-inducao-23dc3cbb.webp",
+      "linkCompra": "https://meli.la/26L6kMm",
+      "tituloValidadoNoLink": "Kit 4 Panelas Premium Antiaderente Titanium Frigigold Preto",
+      "tituloDoLinkSeguro": true,
+      "pendencias": []
+    }
+  ],
+  "produtosRevisaoManual": [
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
+      "nome": "Jogo de Panelas Pacific Cerâmica Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-ceramica-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-granito-titanium-6ad7841a",
+      "nome": "Jogo de Panelas Pacific Granito Titanium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/18NGDz5",
+      "tituloValidadoNoLink": "Jogo De Panelas Teflon Munique 11 Pçs Com Panela De Pressão",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-rosa-ceramica-54eafabf",
+      "nome": "Jogo de Panelas Pacific Rosa Cerâmica",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2PyzbQU",
+      "tituloValidadoNoLink": "Conjunto De Panelas Ceraflame Duo Smart, 5 Peças, Preto",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
+      "nome": "Jogo de Panelas Pacific Indução 20 Peças",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-inducao-20-pecas",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
+      "nome": "Jogo de Panelas Pacific Premium Rose Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-premium-rose-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-tramontina-paris-antiaderente-f8d431ac",
+      "nome": "Jogo de Panelas Tramontina Paris Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Nsnx2V",
+      "tituloValidadoNoLink": "Coze Vapore Tramontina Paris Antiaderente 5,7 Litros 22cm Cor Vermelho",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-premium-antiaderente-8657d377",
+      "nome": "Jogo de Panelas Panelux Premium Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1wzvy19",
+      "tituloValidadoNoLink": "Kit Panela De Pressão Antiaderente 4,5 Litros + 3 Litros Grafite",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-marble-edition-0ba2f429",
+      "nome": "Jogo de Panelas Oster Marble Edition",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1Er61g9",
+      "tituloValidadoNoLink": "Jogo De Panelas Tramontina 8 Peças Inox Fundo Triplo Allegra Com Cozi Vapore Prateado",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-bioceramic-c195dc72",
+      "nome": "Jogo de Panelas Oster Bioceramic",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Zb1Vu7",
+      "tituloValidadoNoLink": "Jogo De Panelas E Leiteira Oster Marble Edition 5 Peças Dark Grey",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-euro-home-ceramic-premium-845bb5e4",
+      "nome": "Jogo de Panelas Euro Home Ceramic Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1PzBWPC",
+      "tituloValidadoNoLink": "Jogo Panelas Cerâmica Antiaderente Indução Original Orleans",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
+      "nome": "Jogo de Panelas Roichen Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-roichen-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
+      "nome": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-com-fundo-de-inducao-ceramica-premium-760d7a98",
+      "nome": "Jogo de Panelas com Fundo de Indução Cerâmica Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/15cF1re",
+      "tituloValidadoNoLink": "Jogo De Panelas Induçao Antiaderente Cerâmica 10 Peças Ppg Pfoa Free Baunilha",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    }
+  ],
+  "produtosComImagemOuLinkDivergente": [
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
+      "nome": "Jogo de Panelas Pacific Cerâmica Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-ceramica-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-granito-titanium-6ad7841a",
+      "nome": "Jogo de Panelas Pacific Granito Titanium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/18NGDz5",
+      "tituloValidadoNoLink": "Jogo De Panelas Teflon Munique 11 Pçs Com Panela De Pressão",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-rosa-ceramica-54eafabf",
+      "nome": "Jogo de Panelas Pacific Rosa Cerâmica",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2PyzbQU",
+      "tituloValidadoNoLink": "Conjunto De Panelas Ceraflame Duo Smart, 5 Peças, Preto",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
+      "nome": "Jogo de Panelas Pacific Indução 20 Peças",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-inducao-20-pecas",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
+      "nome": "Jogo de Panelas Pacific Premium Rose Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-premium-rose-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-tramontina-paris-antiaderente-f8d431ac",
+      "nome": "Jogo de Panelas Tramontina Paris Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Nsnx2V",
+      "tituloValidadoNoLink": "Coze Vapore Tramontina Paris Antiaderente 5,7 Litros 22cm Cor Vermelho",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-premium-antiaderente-8657d377",
+      "nome": "Jogo de Panelas Panelux Premium Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1wzvy19",
+      "tituloValidadoNoLink": "Kit Panela De Pressão Antiaderente 4,5 Litros + 3 Litros Grafite",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-marble-edition-0ba2f429",
+      "nome": "Jogo de Panelas Oster Marble Edition",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1Er61g9",
+      "tituloValidadoNoLink": "Jogo De Panelas Tramontina 8 Peças Inox Fundo Triplo Allegra Com Cozi Vapore Prateado",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-bioceramic-c195dc72",
+      "nome": "Jogo de Panelas Oster Bioceramic",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Zb1Vu7",
+      "tituloValidadoNoLink": "Jogo De Panelas E Leiteira Oster Marble Edition 5 Peças Dark Grey",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-euro-home-ceramic-premium-845bb5e4",
+      "nome": "Jogo de Panelas Euro Home Ceramic Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1PzBWPC",
+      "tituloValidadoNoLink": "Jogo Panelas Cerâmica Antiaderente Indução Original Orleans",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
+      "nome": "Jogo de Panelas Roichen Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-roichen-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
+      "nome": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-com-fundo-de-inducao-ceramica-premium-760d7a98",
+      "nome": "Jogo de Panelas com Fundo de Indução Cerâmica Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/15cF1re",
+      "tituloValidadoNoLink": "Jogo De Panelas Induçao Antiaderente Cerâmica 10 Peças Ppg Pfoa Free Baunilha",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    }
+  ],
+  "produtosComValorInconsistente": [
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
+      "nome": "Jogo de Panelas Pacific Cerâmica Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-ceramica-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-granito-titanium-6ad7841a",
+      "nome": "Jogo de Panelas Pacific Granito Titanium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/18NGDz5",
+      "tituloValidadoNoLink": "Jogo De Panelas Teflon Munique 11 Pçs Com Panela De Pressão",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-rosa-ceramica-54eafabf",
+      "nome": "Jogo de Panelas Pacific Rosa Cerâmica",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2PyzbQU",
+      "tituloValidadoNoLink": "Conjunto De Panelas Ceraflame Duo Smart, 5 Peças, Preto",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
+      "nome": "Jogo de Panelas Pacific Indução 20 Peças",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-inducao-20-pecas",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
+      "nome": "Jogo de Panelas Pacific Premium Rose Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-premium-rose-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-tramontina-paris-antiaderente-f8d431ac",
+      "nome": "Jogo de Panelas Tramontina Paris Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Nsnx2V",
+      "tituloValidadoNoLink": "Coze Vapore Tramontina Paris Antiaderente 5,7 Litros 22cm Cor Vermelho",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-premium-antiaderente-8657d377",
+      "nome": "Jogo de Panelas Panelux Premium Antiaderente",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1wzvy19",
+      "tituloValidadoNoLink": "Kit Panela De Pressão Antiaderente 4,5 Litros + 3 Litros Grafite",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-marble-edition-0ba2f429",
+      "nome": "Jogo de Panelas Oster Marble Edition",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1Er61g9",
+      "tituloValidadoNoLink": "Jogo De Panelas Tramontina 8 Peças Inox Fundo Triplo Allegra Com Cozi Vapore Prateado",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-oster-bioceramic-c195dc72",
+      "nome": "Jogo de Panelas Oster Bioceramic",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/2Zb1Vu7",
+      "tituloValidadoNoLink": "Jogo De Panelas E Leiteira Oster Marble Edition 5 Peças Dark Grey",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-euro-home-ceramic-premium-845bb5e4",
+      "nome": "Jogo de Panelas Euro Home Ceramic Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/1PzBWPC",
+      "tituloValidadoNoLink": "Jogo Panelas Cerâmica Antiaderente Indução Original Orleans",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
+      "nome": "Jogo de Panelas Roichen Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-roichen-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
+      "nome": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao",
+      "tituloValidadoNoLink": "Mercado Libre",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-com-fundo-de-inducao-ceramica-premium-760d7a98",
+      "nome": "Jogo de Panelas com Fundo de Indução Cerâmica Premium",
+      "status": "revisao_manual",
+      "categoria": "Casa e Cozinha",
+      "subcategoria": "Panelas",
+      "preco": "Preço no anúncio",
+      "imagem": "public/placeholder-produto-mercado-livre.svg",
+      "linkCompra": "https://meli.la/15cF1re",
+      "tituloValidadoNoLink": "Jogo De Panelas Induçao Antiaderente Cerâmica 10 Peças Ppg Pfoa Free Baunilha",
+      "tituloDoLinkSeguro": false,
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    }
+  ],
+  "produtosImportadosNoDia": 80,
+  "imagensSincronizadasNoPacote": 220
+}

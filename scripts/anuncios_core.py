@@ -132,6 +132,12 @@ def link_is_direct_product(value: str) -> bool:
     path = parsed.path.lower()
     if host.endswith("meli.la"):
         return bool(path.strip("/"))
+    if host.endswith("link.amazon") or host.endswith("amzn.to"):
+        return bool(path.strip("/"))
+    if "amazon." in host:
+        if path.startswith("/s") or path.startswith("/stores") or path in {"", "/"}:
+            return False
+        return "/dp/" in path or "/gp/product/" in path or re.search(r"/dp/[a-z0-9]{10}", path) is not None
     if "mercadolivre.com" in host:
         if host.startswith("lista.") or "/loja/" in path:
             return False
@@ -146,7 +152,12 @@ def link_is_direct_product(value: str) -> bool:
 
 def parse_brazilian_price(value: str) -> str:
     match = PRICE_PATTERN.search(value or "")
-    return f"R$ {match.group(1)}" if match else "Preço no anúncio"
+    if not match:
+        return "Preço no anúncio"
+    amount = match.group(1)
+    if "," not in amount:
+        amount = f"{amount},00"
+    return f"R$ {amount}"
 
 
 def parse_rating(value: str) -> float | None:
@@ -172,6 +183,162 @@ def image_exists(root: Path, value: str) -> bool:
 
 def classify_product(title: str, description: str = "", hinted_category: str = "") -> dict[str, str]:
     text = normalize_text(f"{title} {description} {hinted_category}")
+
+    if any(
+        marker in text
+        for marker in (
+            "biblia",
+            "harpa crista",
+            "harpa crista",
+            "evangelico",
+            "evangelica",
+            "cristao",
+            "crista",
+            "gospel",
+            "devocional",
+            "estudo biblico",
+            "artigo para igreja",
+        )
+    ):
+        subcategory = "Produtos religiosos"
+        if "biblia" in text:
+            subcategory = "Bíblias"
+        elif "devocional" in text:
+            subcategory = "Devocionais"
+        elif "harpa" in text:
+            subcategory = "Harpa cristã"
+        return {
+            "storeId": "impacto-fe",
+            "category": "Religiosa/Gospel",
+            "subcategoria": subcategory,
+        }
+
+    if any(marker in text for marker in ("baba eletronica", "monitor para bebes", "monitor para bebe")):
+        return {
+            "storeId": "impacto-kids",
+            "category": "Bebê e Infantil",
+            "subcategoria": "Bebês",
+        }
+
+    if any(marker in text for marker in ("kindle", "leitura digital", "e reader", "ereader")):
+        return {
+            "storeId": "impacto-livraria",
+            "category": "Educação",
+            "subcategoria": "Leitura digital",
+        }
+
+    if any(
+        marker in text
+        for marker in (
+            "echo dot",
+            "echo pop",
+            "alexa",
+            "fire tv",
+            "streaming",
+            "fone de ouvido",
+            "caixa de som",
+            "camera de seguranca",
+            "camera wi fi",
+            "mini projetor",
+            "projetor portatil",
+        )
+    ):
+        return {
+            "storeId": "impacto-eletronicos",
+            "category": "Eletrônicos",
+            "subcategoria": "Gadgets",
+        }
+
+    if any(
+        marker in text
+        for marker in (
+            "liquidificador",
+            "air fryer",
+            "airfryer",
+            "fritadeira",
+            "cafeteira",
+            "sanduicheira",
+            "sorveteira",
+            "panela eletrica",
+            "panela de pressao eletrica",
+            "cooktop",
+            "placa de inducao",
+            "micro ondas",
+            "microondas",
+            "batedeira",
+            "ventilador",
+            "garrafa termica",
+        )
+    ):
+        return {
+            "storeId": "impacto-casa",
+            "category": "Casa e Cozinha",
+            "subcategoria": "Eletrodomésticos",
+        }
+
+    if any(
+        marker in text
+        for marker in (
+            "maquina de cortar cabelo",
+            "aparador de pelos",
+            "barbeador",
+            "escova secadora",
+            "creme facial",
+            "protetor solar",
+            "perfume",
+            "shampoo",
+            "cosmetico",
+        )
+    ):
+        return {
+            "storeId": "impacto-beauty-care",
+            "category": "Casa e Família",
+            "subcategoria": "Cuidados pessoais",
+        }
+
+    if any(marker in text for marker in ("cachorro", "gato", "pet ", "racao", "coleira pet", "caminha pet")):
+        return {
+            "storeId": "impacto-pet",
+            "category": "Casa e Família",
+            "subcategoria": "Pet",
+        }
+
+    if any(marker in text for marker in ("capa de chuva motociclista", "motociclista", "motoqueiro")):
+        return {
+            "storeId": "impacto-auto",
+            "category": "Auto, Ferramentas e Esporte",
+            "subcategoria": "Acessórios para motociclistas",
+        }
+
+    if any(marker in text for marker in ("cinto country", "chapeu country", "chapéu country", "camisa country")):
+        return {
+            "storeId": "impacto-moda",
+            "category": "Moda",
+            "subcategoria": "Moda country",
+        }
+
+    if any(marker in text for marker in ("sela", "cabecada", "cabeçada", "cabresto", "peitoral", "cavalgada", "cavalo")):
+        return {
+            "storeId": "impacto-sport",
+            "category": "Auto, Ferramentas e Esporte",
+            "subcategoria": "Cavalgada e equitação",
+        }
+
+    if any(
+        marker in text
+        for marker in (
+            "forno eletrico",
+            "forno de bancada",
+            "forno eletrico de bancada",
+            "forno de mesa",
+            "forno bancada",
+        )
+    ):
+        return {
+            "storeId": "impacto-casa",
+            "category": "Casa e Cozinha",
+            "subcategoria": "Pequenos eletros",
+        }
 
     if any(marker in text for marker in ("carrinho de bebe", "berco", "mobile giratorio")):
         return {
@@ -255,6 +422,7 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
             "calca feminina",
             "saia",
             "bolsa",
+            "mochila",
             "moda feminina",
             "moda masculina",
             "roupa",
@@ -299,6 +467,13 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
             "storeId": "impacto-mobile",
             "category": "Celulares",
             "subcategoria": "Smartphones",
+        }
+
+    if "panela" in text:
+        return {
+            "storeId": "impacto-casa",
+            "category": "Casa e Cozinha",
+            "subcategoria": "Panelas",
         }
 
     if any(

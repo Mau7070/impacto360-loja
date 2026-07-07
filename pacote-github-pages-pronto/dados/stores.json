@@ -31,7 +31,8 @@
       "Xiaomi",
       "acessorios para celular"
     ],
-    "section": "Celulares para cada rotina"
+    "section": "Celulares para cada rotina",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-mobile.webp"
   },
   {
     "id": "impacto-tech-computadores",
@@ -62,7 +63,8 @@
       "Cadeiras gamer",
       "Mesas gamer"
     ],
-    "section": "Monte seu setup"
+    "section": "Monte seu setup",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-tech-computadores.webp"
   },
   {
     "id": "impacto-casa",
@@ -92,7 +94,8 @@
       "Facas e corte",
       "Organizacao"
     ],
-    "section": "Casa, cozinha e utilidades"
+    "section": "Casa, cozinha e utilidades",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-casa.webp"
   },
   {
     "id": "impacto-moda",
@@ -123,7 +126,8 @@
       "Saias e shorts",
       "Plus size"
     ],
-    "section": "Moda feminina e achados"
+    "section": "Moda feminina e achados",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-moda.webp"
   },
   {
     "id": "impacto-calcados",
@@ -158,7 +162,8 @@
       "conforto",
       "promoção"
     ],
-    "section": "Calce conforto e estilo"
+    "section": "Calce conforto e estilo",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-calcados.webp"
   },
   {
     "id": "impacto-ofertas",
@@ -183,7 +188,8 @@
       "Combos"
     ],
     "section": "Corredor das promoções",
-    "timer": "Oferta termina em: 02h 15min"
+    "timer": "Oferta termina em: 02h 15min",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-ofertas.webp"
   },
   {
     "id": "lojas-parceiras",
@@ -203,7 +209,8 @@
       "Mercado Livre",
       "Ofertas comissionadas"
     ],
-    "section": "Parceiros oficiais e listas selecionadas"
+    "section": "Parceiros oficiais e listas selecionadas",
+    "coverImage": "public/images/capas-lojas-2026/capa-lojas-parceiras.webp"
   },
   {
     "id": "impacto-eletronicos",
@@ -231,7 +238,8 @@
       "Fones",
       "Acessorios de audio"
     ],
-    "section": "Tecnologia invisível no dia a dia"
+    "section": "Tecnologia invisível no dia a dia",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-eletronicos.webp"
   },
   {
     "id": "impacto-games",
@@ -263,7 +271,8 @@
       "Headset gamer",
       "Iluminacao RGB"
     ],
-    "section": "Setup gamer completo"
+    "section": "Setup gamer completo",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-games.webp"
   },
   {
     "id": "impacto-educa",
@@ -288,7 +297,8 @@
       "Livros",
       "Treinamentos profissionais"
     ],
-    "section": "Prepare-se para concursos"
+    "section": "Prepare-se para concursos",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-educa.webp"
   },
   {
     "id": "impacto-livraria",
@@ -315,7 +325,8 @@
       "Saúde",
       "Educação"
     ],
-    "section": "Leitura que transforma"
+    "section": "Leitura que transforma",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-livraria.webp"
   },
   {
     "id": "impacto-beauty-care",
@@ -340,7 +351,8 @@
       "Aparelhos de beleza",
       "Bem-estar"
     ],
-    "section": "Rotina de autocuidado"
+    "section": "Rotina de autocuidado",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-beauty-care.webp"
   },
   {
     "id": "impacto-kids",
@@ -366,7 +378,8 @@
       "Jogos educativos",
       "Presentes"
     ],
-    "section": "Aprender brincando"
+    "section": "Aprender brincando",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-kids.webp"
   },
   {
     "id": "impacto-pet",
@@ -399,7 +412,8 @@
       "peixes",
       "pequenos animais"
     ],
-    "section": "Cuidado para todos os pets"
+    "section": "Cuidado para todos os pets",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-pet.webp"
   },
   {
     "id": "impacto-decor",
@@ -426,7 +440,8 @@
       "Tapetes",
       "Objetos decorativos"
     ],
-    "section": "Ambientes prontos"
+    "section": "Ambientes prontos",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-decor.webp"
   },
   {
     "id": "impacto-fe",
@@ -452,7 +467,8 @@
       "Harpa cristã",
       "Artigos para igreja"
     ],
-    "section": "Produtos para fé, estudo e inspiração"
+    "section": "Produtos para fé, estudo e inspiração",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-fe.webp"
   },
   {
     "id": "impacto-music-studio",
@@ -491,7 +507,8 @@
       "Narração musical para vídeo"
     ],
     "section": "Transforme sua história em música",
-    "notice": "Serviço sob encomenda. A produção depende das informações fornecidas pelo cliente."
+    "notice": "Serviço sob encomenda. A produção depende das informações fornecidas pelo cliente.",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-music-studio.webp"
   },
   {
     "id": "impacto-academico",
@@ -530,7 +547,8 @@
       "Orientação estrutural de TCC"
     ],
     "section": "Estude melhor, escreva melhor e apresente melhor.",
-    "notice": "Serviço voltado para apoio, aprendizagem, revisão, orientação e organização acadêmica. Não substitui a autoria do estudante."
+    "notice": "Serviço voltado para apoio, aprendizagem, revisão, orientação e organização acadêmica. Não substitui a autoria do estudante.",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-academico.webp"
   },
   {
     "id": "impacto-personalizados",
@@ -568,7 +586,8 @@
       "Catálogo simples",
       "Arte para redes sociais"
     ],
-    "section": "Design prático para comunicar melhor"
+    "section": "Design prático para comunicar melhor",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-personalizados.webp"
   },
   {
     "id": "impacto-criadores",
@@ -601,7 +620,8 @@
       "Ideias de conteúdo",
       "Arte para redes sociais"
     ],
-    "section": "Crie com mais consistência"
+    "section": "Crie com mais consistência",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-criadores.webp"
   },
   {
     "id": "impacto-auto",
@@ -628,7 +648,8 @@
       "Produtos de limpeza",
       "Moto peças"
     ],
-    "section": "Digite modelo, ano e versão do veículo"
+    "section": "Digite modelo, ano e versão do veículo",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-auto.webp"
   },
   {
     "id": "impacto-ferramentas",
@@ -654,7 +675,8 @@
       "Segurança no trabalho",
       "Organização de oficina"
     ],
-    "section": "Faça você mesmo"
+    "section": "Faça você mesmo",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-ferramentas.webp"
   },
   {
     "id": "impacto-sport",
@@ -681,7 +703,8 @@
       "Garrafas",
       "Acessórios esportivos"
     ],
-    "section": "Movimente sua rotina"
+    "section": "Movimente sua rotina",
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-sport.webp"
   },
   {
     "id": "impacto-brinquedos",
@@ -710,6 +733,7 @@
       "Robôs e dinossauros"
     ],
     "section": "Brincar, aprender e imaginar",
-    "active": true
+    "active": true,
+    "coverImage": "public/images/capas-lojas-2026/capa-impacto-brinquedos.webp"
   }
 ]

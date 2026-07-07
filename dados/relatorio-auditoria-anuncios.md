@@ -1,22 +1,24 @@
 # Relatório de auditoria de anúncios
 
-Data: 2026-06-23
+Data: 2026-07-07
 
 ## Resumo
 
-- Anúncios analisados: 293
-- Anúncios ativos: 181
-- Inativos/revisão: 112
+- Anúncios analisados: 514
+- Anúncios ativos: 216
+- Inativos/revisão: 298
 - Grupos duplicados: 5
 - Conflitos de imagem compartilhada: 0
 
 ## Problemas encontrados
 
-- foto arquivo inexistente: 37
-- link nao direto ou placeholder: 22
+- foto arquivo inexistente: 32
+- link nao direto ou placeholder: 52
+- loja categoria incorreta: 54
 - sem botao compra: 1
-- sem foto: 49
+- sem foto: 221
 - sem link: 29
+- titulo generico ou incompleto: 1
 
 ## Critérios de publicação
 
