@@ -2252,10 +2252,10 @@
     "image": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp",
     "category": "Ofertas gerais",
     "storeId": "lojas-parceiras",
-    "badge": "Mercado Livre",
+    "badge": "Revisar",
     "affiliateLink": "https://mercadolivre.com/sec/14EbgVy",
     "source": "Mercado Livre",
-    "status": "ativo",
+    "status": "revisao_manual",
     "type": "external-store",
     "actionType": "external-store",
     "originalOrder": 8,
@@ -2298,12 +2298,13 @@
     "videos": [],
     "linkOriginal": "https://mercadolivre.com/sec/14EbgVy",
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists/94d0f376-6e3b-4a35-bfe4-ef5edc397ee2?matt_tool=22604102&forceInApp=true",
-    "linkStatus": "link afiliado aberto para leitura",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial"
+      "video nao encontrado em fonte oficial",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:28.199Z",
@@ -2332,7 +2333,7 @@
     "observacoesInternas": "",
     "fotoPrincipal": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem_ok",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://mercadolivre.com/sec/14EbgVy",
@@ -2341,7 +2342,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://mercadolivre.com/sec/14EbgVy",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_adicionado",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -2360,10 +2361,21 @@
         "status": "ativo"
       }
     ],
-    "aprovadoParaPublicacao": true,
+    "aprovadoParaPublicacao": false,
     "possivelDuplicado": true,
     "statusDuplicidade": "revisar_duplicidade",
-    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto"
+    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "dados/importedMercadoLivreProducts.json"
+    }
   },
   {
     "id": "mercado-livre-produto-008",
@@ -4002,11 +4014,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Mercado Livre",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1K6Jhmd",
     "linkOriginal": "https://meli.la/1K6Jhmd",
     "source": "Mercado Livre",
-    "status": "ativo",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -4069,12 +4081,13 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "link afiliado aberto para leitura",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial"
+      "video nao encontrado em fonte oficial",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:47.497Z",
@@ -4097,7 +4110,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-019/imagem-01.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem_ok",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1K6Jhmd",
@@ -4106,7 +4119,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1K6Jhmd",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_adicionado",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -4125,10 +4138,21 @@
         "status": "ativo"
       }
     ],
-    "aprovadoParaPublicacao": true,
+    "aprovadoParaPublicacao": false,
     "possivelDuplicado": true,
     "statusDuplicidade": "revisar_duplicidade",
-    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto"
+    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "dados/importedMercadoLivreProducts.json"
+    }
   },
   {
     "id": "mercado-livre-produto-020",
@@ -4151,11 +4175,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Mercado Livre",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1Dinaeg",
     "linkOriginal": "https://meli.la/1Dinaeg",
     "source": "Mercado Livre",
-    "status": "ativo",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -4218,12 +4242,13 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "link afiliado aberto para leitura",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial"
+      "video nao encontrado em fonte oficial",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:49.433Z",
@@ -4246,7 +4271,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-020/imagem-01.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem_ok",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1Dinaeg",
@@ -4255,7 +4280,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1Dinaeg",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_adicionado",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -4274,10 +4299,21 @@
         "status": "ativo"
       }
     ],
-    "aprovadoParaPublicacao": true,
+    "aprovadoParaPublicacao": false,
     "possivelDuplicado": true,
     "statusDuplicidade": "revisar_duplicidade",
-    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto"
+    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "dados/importedMercadoLivreProducts.json"
+    }
   },
   {
     "id": "mercado-livre-produto-021",
@@ -4594,11 +4630,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Mercado Livre",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/34dtQGa",
     "linkOriginal": "https://meli.la/34dtQGa",
     "source": "Mercado Livre",
-    "status": "ativo",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -4661,12 +4697,13 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "link afiliado aberto para leitura",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial"
+      "video nao encontrado em fonte oficial",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:54.283Z",
@@ -4689,7 +4726,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-023/imagem-01.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem_ok",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/34dtQGa",
@@ -4698,7 +4735,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/34dtQGa",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_adicionado",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -4717,10 +4754,21 @@
         "status": "ativo"
       }
     ],
-    "aprovadoParaPublicacao": true,
+    "aprovadoParaPublicacao": false,
     "possivelDuplicado": true,
     "statusDuplicidade": "revisar_duplicidade",
-    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto"
+    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "dados/importedMercadoLivreProducts.json"
+    }
   },
   {
     "id": "mercado-livre-produto-024",
@@ -5478,11 +5526,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Mercado Livre",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/11MQYNu",
     "linkOriginal": "https://meli.la/11MQYNu",
     "source": "Mercado Livre",
-    "status": "ativo",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -5545,12 +5593,13 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "link afiliado aberto para leitura",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial"
+      "video nao encontrado em fonte oficial",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:54:02.626Z",
@@ -5573,7 +5622,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/produtos-impacto360/mercado-livre-produto-029/imagem-01.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem_ok",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/11MQYNu",
@@ -5582,7 +5631,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/11MQYNu",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_adicionado",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -5601,10 +5650,21 @@
         "status": "ativo"
       }
     ],
-    "aprovadoParaPublicacao": true,
+    "aprovadoParaPublicacao": false,
     "possivelDuplicado": true,
     "statusDuplicidade": "revisar_duplicidade",
-    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto"
+    "acaoDuplicidade": "nao apagar; revisar e mesclar ofertas se for o mesmo produto",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "dados/importedMercadoLivreProducts.json"
+    }
   },
   {
     "id": "mercado-livre-produto-030",

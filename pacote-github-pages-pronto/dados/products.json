@@ -2674,10 +2674,10 @@
     "image": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "category": "Casa e Cozinha",
     "storeId": "impacto-casa",
-    "badge": "Duplicado corrigido",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "duplicado",
+    "status": "revisao_manual",
     "type": "external-store",
     "actionType": "buy",
     "originalOrder": 8,
@@ -2720,11 +2720,12 @@
     "videos": [],
     "linkOriginal": "https://meli.la/1guTPms",
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "link confirmado",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
-      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido"
+      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -2753,7 +2754,7 @@
     "observacoesInternas": "",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem real confirmada no link",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -2762,7 +2763,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1guTPms",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -2816,7 +2817,18 @@
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
     "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
-    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp."
+    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "mercado-livre-produto-008",
@@ -4809,11 +4821,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Duplicado corrigido",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "duplicado",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -4876,11 +4888,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "link confirmado",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
-      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido"
+      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -4903,7 +4916,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem real confirmada no link",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -4912,7 +4925,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1guTPms",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -4965,7 +4978,18 @@
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
     "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
-    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp."
+    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "mercado-livre-produto-020",
@@ -4988,11 +5012,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Duplicado corrigido",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "duplicado",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -5055,11 +5079,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "link confirmado",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
-      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido"
+      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -5082,7 +5107,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem real confirmada no link",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -5091,7 +5116,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1guTPms",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -5144,7 +5169,18 @@
     ],
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
-    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp."
+    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "mercado-livre-produto-021",
@@ -5525,11 +5561,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Duplicado corrigido",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "duplicado",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -5592,11 +5628,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "link confirmado",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
-      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido"
+      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -5619,7 +5656,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem real confirmada no link",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -5628,7 +5665,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1guTPms",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -5681,7 +5718,18 @@
     ],
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
-    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp."
+    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "mercado-livre-produto-024",
@@ -6599,11 +6647,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Duplicado corrigido",
+    "badge": "Revisar",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "duplicado",
+    "status": "revisao_manual",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -6666,11 +6714,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "link confirmado",
+    "linkStatus": "revisao manual",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
-      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido"
+      "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -6693,7 +6742,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "imagem real confirmada no link",
+    "statusImagem": "foto_link_inconsistente",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -6702,7 +6751,7 @@
     "linkPrincipalFonte": "",
     "linkCompra": "https://meli.la/1guTPms",
     "tipoLink": "comissionado",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "plataformaOrigem": "Mercado Livre",
     "geraComissao": true,
     "ofertas": [
@@ -6755,7 +6804,18 @@
     ],
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
-    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp."
+    "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
+    "statusAnuncio": "revisao_manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "mercado-livre-produto-030",
@@ -32168,10 +32228,11 @@
     "arquivosOrigem": [
       "20_melhores_fornos_bancada_mercado_livre.docx"
     ],
-    "statusImagem": "foto/link precisa conferencia",
+    "statusImagem": "foto_link_inconsistente",
     "linkStatus": "revisao manual",
     "pendencias": [
-      "foto/link divergente: titulo do link nao corresponde ao produto"
+      "foto/link divergente: titulo do link nao corresponde ao produto",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "observacaoImportacao": "Fonte: curadoria de fornos de bancada Mercado Livre. Link direto do produto priorizado porque o link curto do arquivo pode apontar para lista ou recomendação.",
     "validacaoOnline": {
@@ -32208,7 +32269,7 @@
       "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154"
     ],
     "chamadaCompra": "Comprar no Mercado Livre",
-    "statusLink": "link_comissionado_corrigido",
+    "statusLink": "revisao manual",
     "tipoLink": "comissionado",
     "geraComissao": true,
     "observacaoCorrecao": "Produto canônico corrigido em 2026-07-01 a partir do catálogo de fornos; substitui registros antigos com imagem de forno e link de notebook/lista.",
@@ -32224,8 +32285,16 @@
         "ratio": 0.2581,
         "overlap": 0.0,
         "modelMatch": false
-      }
-    }
+      },
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    },
+    "statusAnuncio": "revisao_manual",
+    "revisaoManualRecomendada": true,
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
   },
   {
     "id": "importado-ml-britania-bfe55p-forno-eletrico-52-l-dupla-resistencia-94d00d8f",
@@ -44294,13 +44363,14 @@
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem manual necessária",
-    "linkStatus": "revisão manual",
+    "statusImagem": "foto_link_inconsistente",
+    "linkStatus": "revisao manual",
     "pendencias": [
       "link não confirmado online",
       "título do link diverge do produto",
       "imagem real não confirmada",
-      "preço dinâmico no anúncio"
+      "preço dinâmico no anúncio",
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
     ],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
@@ -44325,7 +44395,20 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0F19G2FZS",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "statusAnuncio": "revisao_manual",
+    "revisaoManualRecomendada": true,
+    "statusLink": "revisao manual",
+    "publicarNaHome": false,
+    "publicar": false,
+    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "auditoriaPublicacao": {
+      "checkedAt": "2026-07-08",
+      "status": "revisao_manual",
+      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
+      "acao": "publicacao removida da vitrine; manter para conferencia manual",
+      "fonte": "pacote-github-pages-pronto/dados/products.json"
+    }
   },
   {
     "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937",
