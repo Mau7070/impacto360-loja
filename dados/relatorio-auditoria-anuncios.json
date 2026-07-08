@@ -1,12 +1,12 @@
 {
-  "executedAt": "2026-07-07",
+  "executedAt": "2026-07-08",
   "appliedSafeFixes": false,
   "totals": {
     "products": 514,
-    "stores": 24,
-    "active": 216,
-    "inactiveOrReview": 298,
-    "issues": 390,
+    "stores": 26,
+    "active": 187,
+    "inactiveOrReview": 327,
+    "issues": 354,
     "duplicateGroups": 5,
     "imageConflicts": 0,
     "storesCorrected": 0,
@@ -16,393 +16,13 @@
   "issueCounts": {
     "foto_arquivo_inexistente": 32,
     "link_nao_direto_ou_placeholder": 52,
-    "loja_categoria_incorreta": 54,
+    "loja_categoria_incorreta": 18,
     "sem_botao_compra": 1,
     "sem_foto": 221,
     "sem_link": 29,
     "titulo_generico_ou_incompleto": 1
   },
   "issues": {
-    "loja_categoria_incorreta": [
-      {
-        "id": "telefone-mercado-livre-001",
-        "title": "Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "telefone-mercado-livre-005",
-        "title": "Samsung Galaxy A07 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "telefone-mercado-livre-010",
-        "title": "Apple iPhone 14 128GB Estelar",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "mercado-livre-produto-005",
-        "title": "Acer Predator Helios Neo Phn16-72-99my Intel Ci9 14ªgeração 32gb 1tb Ssd Rtx4070 Windows11 Cor Preto",
-        "storeId": "impacto-tech-computadores",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "servico-impacto-music-studio-05",
-        "title": "Música gospel autoral",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "celular-ml-docx-001",
-        "title": "Samsung Galaxy A15 5G 128 GB",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-002",
-        "title": "Samsung Galaxy A06 128 GB",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-003",
-        "title": "Samsung Galaxy A06 5G 128 GB",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-005",
-        "title": "Samsung Galaxy A17",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-006",
-        "title": "Samsung Galaxy A36 5G 256 GB",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-008",
-        "title": "Samsung Galaxy A55 5G 256 GB",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-012",
-        "title": "Samsung Galaxy A16 5G",
-        "storeId": "impacto-mobile",
-        "status": "duplicado",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-013",
-        "title": "Samsung Galaxy A05s",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-014",
-        "title": "Samsung Galaxy A05",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-015",
-        "title": "Samsung Galaxy A03",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-016",
-        "title": "Samsung Galaxy S21 FE 5G",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-017",
-        "title": "Samsung Galaxy S23 FE",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-018",
-        "title": "Samsung Galaxy S24 FE",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-021",
-        "title": "Samsung Galaxy S25+",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-022",
-        "title": "Samsung Galaxy S25 Ultra",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-071",
-        "title": "Apple iPhone 11",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-072",
-        "title": "Apple iPhone XR",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-073",
-        "title": "Apple iPhone XS",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-074",
-        "title": "Apple iPhone 12",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-075",
-        "title": "Apple iPhone 12 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-076",
-        "title": "Apple iPhone 13",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-077",
-        "title": "Apple iPhone 13 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-079",
-        "title": "Apple iPhone 14 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-080",
-        "title": "Apple iPhone 14 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-081",
-        "title": "Apple iPhone 15",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-082",
-        "title": "Apple iPhone 15 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-083",
-        "title": "Apple iPhone 15 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-085",
-        "title": "Apple iPhone 16",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-087",
-        "title": "Apple iPhone 16 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-088",
-        "title": "Apple iPhone 16 Pro",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-089",
-        "title": "Apple iPhone 16 Pro Max",
-        "storeId": "impacto-mobile",
-        "status": "duplicado",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-090",
-        "title": "Apple iPhone 17 Pro",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "celular-ml-docx-084",
-        "title": "Apple iPhone 15 Pro Max",
-        "storeId": "impacto-mobile",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "moda-feminina-docx-01",
-        "title": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-02",
-        "title": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-08",
-        "title": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-10",
-        "title": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-14",
-        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
-        "storeId": "impacto-moda",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "impacto-moda",
-        "status": "rascunho",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-16",
-        "title": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-18",
-        "title": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-19",
-        "title": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-21",
-        "title": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-22",
-        "title": "Saia Midi De Couro Fenda Evangélica Social Luxo",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-23",
-        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
-        "storeId": "impacto-moda",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-25",
-        "title": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-26",
-        "title": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
-        "storeId": "impacto-moda",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "importado-ml-carrinho-de-controle-remoto-recarregavel-tracao-4x4-rapi-0281cafd",
-        "title": "Carrinho de Controle Remoto Recarregável Tração 4x4 Rápido Gira 360",
-        "storeId": "impacto-brinquedos",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      },
-      {
-        "id": "importado-ml-carrinho-de-controle-remoto-rapido-360-recarregavel-trac-9da0fc44",
-        "title": "Carrinho de Controle Remoto Rápido 360 Recarregável Tração 4x4",
-        "storeId": "impacto-brinquedos",
-        "status": "ativo",
-        "lojaSugerida": "impacto-pet"
-      }
-    ],
     "link_nao_direto_ou_placeholder": [
       {
         "id": "telefone-mercado-livre-003",
@@ -1167,8 +787,136 @@
       {
         "id": "moda-feminina-docx-15",
         "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "rascunho"
+      }
+    ],
+    "loja_categoria_incorreta": [
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-01",
+        "title": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-02",
+        "title": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-08",
+        "title": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-10",
+        "title": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-14",
+        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "grife-prime",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-16",
+        "title": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-18",
+        "title": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-19",
+        "title": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-21",
+        "title": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-22",
+        "title": "Saia Midi De Couro Fenda Evangélica Social Luxo",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-23",
+        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-25",
+        "title": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-26",
+        "title": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
+        "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+        "title": "Camisa Feminina Country Radade bordada manga longa",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
+        "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-montaria"
       }
     ],
     "sem_foto": [
@@ -1247,25 +995,25 @@
       {
         "id": "moda-feminina-docx-13",
         "title": "Kit 2 Short Alfaiataria Feminino Cintura Alta Envio Imediato",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "moda-feminina-docx-14",
         "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "moda-feminina-docx-15",
         "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "rascunho"
       },
       {
         "id": "moda-feminina-docx-23",
         "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
@@ -2015,7 +1763,7 @@
       {
         "id": "importado-amazon-short-masculino-d918c4b3",
         "title": "Short masculino",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
@@ -2039,7 +1787,7 @@
       {
         "id": "importado-amazon-azeite-de-oliva-6f89abfc",
         "title": "Azeite de oliva",
-        "storeId": "impacto-pet",
+        "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
       {
@@ -2063,7 +1811,7 @@
       {
         "id": "importado-amazon-jogo-de-lencol-queen-1a9228b1",
         "title": "Jogo de lençol queen",
-        "storeId": "impacto-pet",
+        "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
       {
@@ -2129,109 +1877,109 @@
       {
         "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
         "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
         "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
         "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
         "title": "Camisa Feminina Country Radade bordada manga longa",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
         "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
         "title": "Bota Botina feminina texana country com zíper ou elástico",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
         "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
         "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
         "title": "Bota Texana Country Masculina cano longo marrom 801",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
         "title": "ROPER Bota Country Masculina Marrom",
-        "storeId": "impacto-sport",
+        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
         "title": "Sela Americana preta simples completa com manta e freio inox",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
         "title": "Sela Americana Tradicional marrom 16 polegadas",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
         "title": "Sela Australiana marrom com rédea e cabeçada completa",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
         "title": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
         "title": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
         "title": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
         "title": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
         "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
         "title": "Estribos ingleses almofadados para equitação",
-        "storeId": "impacto-sport",
+        "storeId": "impacto-montaria",
         "status": "revisao_manual"
       },
       {
@@ -2503,7 +2251,7 @@
       {
         "id": "moda-feminina-docx-15",
         "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "impacto-moda",
+        "storeId": "grife-prime",
         "status": "rascunho"
       }
     ],
@@ -2520,13 +2268,13 @@
     {
       "reason": "link",
       "key": "https://meli.la/1gutpms",
-      "keep": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
+      "keep": "loja-parceira-001",
       "duplicates": [
-        "loja-parceira-001",
         "mercado-livre-produto-019",
         "mercado-livre-produto-020",
         "mercado-livre-produto-023",
-        "mercado-livre-produto-029"
+        "mercado-livre-produto-029",
+        "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
       ]
     },
     {

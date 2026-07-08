@@ -130,6 +130,36 @@
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-moda.webp"
   },
   {
+    "id": "grife-prime",
+    "slug": "grife-prime",
+    "route": "/loja/grife-prime",
+    "name": "GRIFE PRIME",
+    "commercialName": "Moda, Country e Acessorios",
+    "floor": "terreo",
+    "category": "Moda e Calçados",
+    "type": "products",
+    "theme": "fashion",
+    "icon": "GP",
+    "color": "#9f6a2e",
+    "gradient": "linear-gradient(135deg,#fff4e8,#ffffff 48%,#efe7dc)",
+    "description": "Boutique premium para moda feminina, moda country, botas, cintos, chapeus, bolsas e acessorios.",
+    "subcategories": [
+      "Moda feminina",
+      "Moda country",
+      "Botas e botinas",
+      "Cintos",
+      "Chapeus",
+      "Camisas",
+      "Bolsas",
+      "Mochilas",
+      "Acessorios",
+      "Looks premium"
+    ],
+    "section": "Moda premium e achados de estilo",
+    "active": true,
+    "coverImage": "public/images/anuncios/mochila-impermeavel-d3c5d583.webp"
+  },
+  {
     "id": "impacto-calcados",
     "name": "IMPACTO CALÇADOS",
     "commercialName": "Loja Exclusiva de Calçados",
@@ -705,6 +735,36 @@
     ],
     "section": "Movimente sua rotina",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-sport.webp"
+  },
+  {
+    "id": "impacto-montaria",
+    "slug": "montaria",
+    "route": "/loja/montaria",
+    "name": "IMPACTO MONTARIA",
+    "commercialName": "Montaria Prime",
+    "floor": "ala-externa",
+    "category": "Auto, Ferramentas e Esporte",
+    "type": "products",
+    "theme": "sport",
+    "icon": "CAV",
+    "color": "#8b5e34",
+    "gradient": "linear-gradient(135deg,#fff8ed,#ffffff 46%,#e8f4ec)",
+    "description": "Selas, arreios, cabecadas, peitorais e acessorios selecionados para cavalgada, rodeio e equitacao.",
+    "subcategories": [
+      "Selas",
+      "Arreios",
+      "Cabecadas",
+      "Peitorais",
+      "Freios e redeas",
+      "Estribos",
+      "Protecao para cavalo",
+      "Cavalgada",
+      "Equitacao",
+      "Rodeio"
+    ],
+    "section": "Montaria, selaria e cavalgada",
+    "active": true,
+    "coverImage": "public/images/anuncios/sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2.webp"
   },
   {
     "id": "impacto-brinquedos",

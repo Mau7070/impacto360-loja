@@ -183,6 +183,7 @@ def image_exists(root: Path, value: str) -> bool:
 
 def classify_product(title: str, description: str = "", hinted_category: str = "") -> dict[str, str]:
     text = normalize_text(f"{title} {description} {hinted_category}")
+    padded_text = f" {text} "
 
     if any(
         marker in text
@@ -296,7 +297,20 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
             "subcategoria": "Cuidados pessoais",
         }
 
-    if any(marker in text for marker in ("cachorro", "gato", "pet ", "racao", "coleira pet", "caminha pet")):
+    if any(
+        marker in padded_text
+        for marker in (
+            " cachorro ",
+            " cachorros ",
+            " gato ",
+            " gatos ",
+            " pet ",
+            " pets ",
+            " racao ",
+            " coleira pet ",
+            " caminha pet ",
+        )
+    ):
         return {
             "storeId": "impacto-pet",
             "category": "Casa e Família",
@@ -310,18 +324,52 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
             "subcategoria": "Acessórios para motociclistas",
         }
 
-    if any(marker in text for marker in ("cinto country", "chapeu country", "chapéu country", "camisa country")):
+    if any(
+        marker in text
+        for marker in (
+            "cinto country",
+            "chapeu country",
+            "chapéu country",
+            "camisa country",
+            "botina country",
+            "bota country",
+            "bota texana",
+            "texana",
+            "rodeo",
+        )
+    ):
         return {
-            "storeId": "impacto-moda",
-            "category": "Moda",
-            "subcategoria": "Moda country",
+            "storeId": "grife-prime",
+            "category": "Moda e Acessorios",
+            "subcategoria": "Country premium",
         }
 
-    if any(marker in text for marker in ("sela", "cabecada", "cabeçada", "cabresto", "peitoral", "cavalgada", "cavalo")):
+    if any(
+        marker in text
+        for marker in (
+            "sela",
+            "selaria",
+            "cabecada",
+            "cabeçada",
+            "cabresto",
+            "peitoral",
+            "redea",
+            "rédea",
+            "freio",
+            "estribo",
+            "caneleira",
+            "boots horse",
+            "cavalgada",
+            "cavalo",
+            "mangalarga",
+            "equitação",
+            "equitacao",
+        )
+    ):
         return {
-            "storeId": "impacto-sport",
+            "storeId": "impacto-montaria",
             "category": "Auto, Ferramentas e Esporte",
-            "subcategoria": "Cavalgada e equitação",
+            "subcategoria": "Montaria e equitacao",
         }
 
     if any(
@@ -430,8 +478,8 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
         )
     ):
         return {
-            "storeId": "impacto-moda",
-            "category": "Moda",
+            "storeId": "grife-prime",
+            "category": "Moda e Acessorios",
             "subcategoria": "Moda feminina" if "feminin" in text else "Moda",
         }
 
@@ -480,6 +528,7 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
         marker in text
         for marker in (
             "panela",
+            "casa e utilidades",
             "cozinha",
             "utensilio",
             "faca",
@@ -487,6 +536,12 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
             "movel",
             "tapete",
             "processador de alimentos",
+            "processador eletrico",
+            "triturador de alimentos",
+            "amassador de batatas",
+            "pulverizador",
+            "azeite",
+            "vinagre",
             "moedor",
         )
     ):

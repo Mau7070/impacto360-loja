@@ -1,12 +1,12 @@
 {
-  "executedAt": "2026-06-23",
+  "executedAt": "2026-07-07",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 293,
+    "products": 514,
     "stores": 24,
-    "active": 181,
-    "inactiveOrReview": 112,
-    "issues": 138,
+    "active": 216,
+    "inactiveOrReview": 298,
+    "issues": 390,
     "duplicateGroups": 5,
     "imageConflicts": 0,
     "storesCorrected": 0,
@@ -14,13 +14,395 @@
     "duplicatesInactivated": 0
   },
   "issueCounts": {
-    "foto_arquivo_inexistente": 37,
-    "link_nao_direto_ou_placeholder": 22,
+    "foto_arquivo_inexistente": 32,
+    "link_nao_direto_ou_placeholder": 52,
+    "loja_categoria_incorreta": 54,
     "sem_botao_compra": 1,
-    "sem_foto": 49,
-    "sem_link": 29
+    "sem_foto": 221,
+    "sem_link": 29,
+    "titulo_generico_ou_incompleto": 1
   },
   "issues": {
+    "loja_categoria_incorreta": [
+      {
+        "id": "telefone-mercado-livre-001",
+        "title": "Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "telefone-mercado-livre-005",
+        "title": "Samsung Galaxy A07 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "telefone-mercado-livre-010",
+        "title": "Apple iPhone 14 128GB Estelar",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "mercado-livre-produto-005",
+        "title": "Acer Predator Helios Neo Phn16-72-99my Intel Ci9 14ªgeração 32gb 1tb Ssd Rtx4070 Windows11 Cor Preto",
+        "storeId": "impacto-tech-computadores",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "celular-ml-docx-001",
+        "title": "Samsung Galaxy A15 5G 128 GB",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-002",
+        "title": "Samsung Galaxy A06 128 GB",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-003",
+        "title": "Samsung Galaxy A06 5G 128 GB",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-005",
+        "title": "Samsung Galaxy A17",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-006",
+        "title": "Samsung Galaxy A36 5G 256 GB",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-008",
+        "title": "Samsung Galaxy A55 5G 256 GB",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-012",
+        "title": "Samsung Galaxy A16 5G",
+        "storeId": "impacto-mobile",
+        "status": "duplicado",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-013",
+        "title": "Samsung Galaxy A05s",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-014",
+        "title": "Samsung Galaxy A05",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-015",
+        "title": "Samsung Galaxy A03",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-016",
+        "title": "Samsung Galaxy S21 FE 5G",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-017",
+        "title": "Samsung Galaxy S23 FE",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-018",
+        "title": "Samsung Galaxy S24 FE",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-021",
+        "title": "Samsung Galaxy S25+",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-022",
+        "title": "Samsung Galaxy S25 Ultra",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-071",
+        "title": "Apple iPhone 11",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-072",
+        "title": "Apple iPhone XR",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-073",
+        "title": "Apple iPhone XS",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-074",
+        "title": "Apple iPhone 12",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-075",
+        "title": "Apple iPhone 12 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-076",
+        "title": "Apple iPhone 13",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-077",
+        "title": "Apple iPhone 13 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-079",
+        "title": "Apple iPhone 14 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-080",
+        "title": "Apple iPhone 14 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-081",
+        "title": "Apple iPhone 15",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-082",
+        "title": "Apple iPhone 15 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-083",
+        "title": "Apple iPhone 15 Pro",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-085",
+        "title": "Apple iPhone 16",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-087",
+        "title": "Apple iPhone 16 Plus",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-088",
+        "title": "Apple iPhone 16 Pro",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-089",
+        "title": "Apple iPhone 16 Pro Max",
+        "storeId": "impacto-mobile",
+        "status": "duplicado",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-090",
+        "title": "Apple iPhone 17 Pro",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "celular-ml-docx-084",
+        "title": "Apple iPhone 15 Pro Max",
+        "storeId": "impacto-mobile",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "moda-feminina-docx-01",
+        "title": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-02",
+        "title": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-08",
+        "title": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-10",
+        "title": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-14",
+        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "impacto-moda",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-16",
+        "title": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-18",
+        "title": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-19",
+        "title": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-21",
+        "title": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-22",
+        "title": "Saia Midi De Couro Fenda Evangélica Social Luxo",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-23",
+        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-25",
+        "title": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-26",
+        "title": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
+        "storeId": "impacto-moda",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-ml-carrinho-de-controle-remoto-recarregavel-tracao-4x4-rapi-0281cafd",
+        "title": "Carrinho de Controle Remoto Recarregável Tração 4x4 Rápido Gira 360",
+        "storeId": "impacto-brinquedos",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      },
+      {
+        "id": "importado-ml-carrinho-de-controle-remoto-rapido-360-recarregavel-trac-9da0fc44",
+        "title": "Carrinho de Controle Remoto Rápido 360 Recarregável Tração 4x4",
+        "storeId": "impacto-brinquedos",
+        "status": "ativo",
+        "lojaSugerida": "impacto-pet"
+      }
+    ],
     "link_nao_direto_ou_placeholder": [
       {
         "id": "telefone-mercado-livre-003",
@@ -49,13 +431,6 @@
         "storeId": "impacto-mobile",
         "status": "revisao_manual",
         "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
-      },
-      {
-        "id": "loja-parceira-001",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "lojas-parceiras",
-        "status": "revisao_manual",
-        "link": "https://mercadolivre.com/sec/14EbgVy"
       },
       {
         "id": "loja-parceira-002",
@@ -175,6 +550,223 @@
         "storeId": "impacto-eletronicos",
         "status": "revisao_manual",
         "link": "https://lista.mercadolivre.com.br/philco-ptv43va4regb"
+      },
+      {
+        "id": "importado-ml-biblia-almeida-com-harpa-crista-sbb-60270582",
+        "title": "Bíblia Almeida com Harpa Cristã SBB",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-almeida-com-harpa-crista-sbb"
+      },
+      {
+        "id": "importado-ml-biblia-com-harpa-crista-feminina-floral-5c5ac2da",
+        "title": "Bíblia com Harpa Cristã Feminina Floral",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-com-harpa-crista-feminina-floral"
+      },
+      {
+        "id": "importado-ml-biblia-com-harpa-crista-capa-branca-c4e41a8d",
+        "title": "Bíblia com Harpa Cristã Capa Branca",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-com-harpa-crista-capa-branca"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-letra-jumbo-capa-dura-add52269",
+        "title": "Bíblia Sagrada Letra Jumbo Capa Dura",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-letra-jumbo-capa-dura"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-pentecostal-com-harpa-f7af9b37",
+        "title": "Bíblia de Estudo Pentecostal com Harpa",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-pentecostal-com-harpa"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-com-harpa-crista-com-ziper-1f9275c9",
+        "title": "Bíblia Sagrada com Harpa Cristã com Zíper",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-com-harpa-crista-ziper"
+      },
+      {
+        "id": "importado-ml-harpa-crista-cpad-com-musica-7c8a318c",
+        "title": "Harpa Cristã CPAD com Música",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/harpa-crista-cpad-com-musica"
+      },
+      {
+        "id": "importado-ml-harpa-crista-capa-luxo-57c3b50c",
+        "title": "Harpa Cristã Capa Luxo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/harpa-crista-capa-luxo"
+      },
+      {
+        "id": "importado-ml-harpa-crista-pequena-de-bolso-d8ac775f",
+        "title": "Harpa Cristã Pequena de Bolso",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/harpa-crista-pequena-bolso"
+      },
+      {
+        "id": "importado-ml-novo-testamento-com-salmos-e-proverbios-0539a43b",
+        "title": "Novo Testamento com Salmos e Provérbios",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/novo-testamento-com-salmos-e-proverbios"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-da-mulher-377fc782",
+        "title": "Bíblia de Estudo da Mulher",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-da-mulher"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-aplicacao-pessoal-2eeedbbb",
+        "title": "Bíblia de Estudo Aplicação Pessoal",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-aplicacao-pessoal"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-nvi-1e75b745",
+        "title": "Bíblia de Estudo NVI",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-nvi"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-thompson-a2eac4c0",
+        "title": "Bíblia de Estudo Thompson",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-thompson-estudo"
+      },
+      {
+        "id": "importado-ml-biblia-king-james-de-estudo-372b64b7",
+        "title": "Bíblia King James de Estudo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-king-james-estudo"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-almeida-revista-e-corrigida-f0cbc36d",
+        "title": "Bíblia Sagrada Almeida Revista e Corrigida",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-almeida-revista-e-corrigida"
+      },
+      {
+        "id": "importado-ml-livro-historia-do-cristianismo-paul-johnson-cbdc0606",
+        "title": "Livro História do Cristianismo - Paul Johnson",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-historia-do-cristianismo-paul-johnson"
+      },
+      {
+        "id": "importado-ml-livro-historia-da-igreja-crista-c69ca94c",
+        "title": "Livro História da Igreja Cristã",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-historia-da-igreja-crista"
+      },
+      {
+        "id": "importado-ml-livro-historia-eclesiastica-eusebio-de-cesareia-08a7dea4",
+        "title": "Livro História Eclesiástica - Eusébio de Cesareia",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-historia-eclesiastica-eusebio-de-cesareia"
+      },
+      {
+        "id": "importado-ml-livro-historia-dos-hebreus-flavio-josefo-bfa8712d",
+        "title": "Livro História dos Hebreus - Flávio Josefo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-historia-dos-hebreus-flavio-josefo"
+      },
+      {
+        "id": "importado-ml-livro-antiguidades-judaicas-flavio-josefo-f045c113",
+        "title": "Livro Antiguidades Judaicas - Flávio Josefo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-antiguidades-judaicas-flavio-josefo"
+      },
+      {
+        "id": "importado-ml-comentario-biblico-matthew-henry-b167cf0b",
+        "title": "Comentário Bíblico Matthew Henry",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-comentario-biblico-matthew-henry"
+      },
+      {
+        "id": "importado-ml-manual-biblico-halley-c12061f7",
+        "title": "Manual Bíblico Halley",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-manual-biblico-halley"
+      },
+      {
+        "id": "importado-ml-teologia-sistematica-wayne-grudem-5a6cd026",
+        "title": "Teologia Sistemática - Wayne Grudem",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-teologia-sistematica-wayne-grudem"
+      },
+      {
+        "id": "importado-ml-o-peregrino-john-bunyan-7e1b21cc",
+        "title": "O Peregrino - John Bunyan",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-o-peregrino-john-bunyan"
+      },
+      {
+        "id": "importado-ml-cristianismo-puro-e-simples-c-s-lewis-272a7516",
+        "title": "Cristianismo Puro e Simples - C. S. Lewis",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/livro-cristianismo-puro-e-simples-c-s-lewis"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
+        "title": "Jogo de Panelas Pacific Cerâmica Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-ceramica-inducao"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
+        "title": "Jogo de Panelas Pacific Indução 20 Peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-inducao-20-pecas"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
+        "title": "Jogo de Panelas Pacific Premium Rose Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-premium-rose-inducao"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
+        "title": "Jogo de Panelas Roichen Premium Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-roichen-premium-inducao"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
+        "title": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual",
+        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao"
       }
     ],
     "foto_arquivo_inexistente": [
@@ -205,41 +797,6 @@
         "storeId": "impacto-mobile",
         "status": "rascunho",
         "image": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png"
-      },
-      {
-        "id": "loja-parceira-001",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "lojas-parceiras",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp"
-      },
-      {
-        "id": "mercado-livre-produto-019",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/mercado-livre-produto-019/imagem-01.webp"
-      },
-      {
-        "id": "mercado-livre-produto-020",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "impacto-tech-computadores",
-        "status": "duplicado",
-        "image": "public/produtos-impacto360/mercado-livre-produto-020/imagem-01.webp"
-      },
-      {
-        "id": "mercado-livre-produto-023",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "impacto-tech-computadores",
-        "status": "duplicado",
-        "image": "public/produtos-impacto360/mercado-livre-produto-023/imagem-01.webp"
-      },
-      {
-        "id": "mercado-livre-produto-029",
-        "title": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v",
-        "storeId": "impacto-tech-computadores",
-        "status": "duplicado",
-        "image": "public/produtos-impacto360/mercado-livre-produto-029/imagem-01.webp"
       },
       {
         "id": "servico-impacto-music-studio-01",
@@ -908,6 +1465,1038 @@
         "title": "Brinquedo Infantil Menina Casinha Feliz Trigêmeos Coelhinho",
         "storeId": "impacto-brinquedos",
         "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-nardelli-top-60-black-forno-eletrico-de-bancada-60-l-9a75ef71",
+        "title": "Nardelli Top 60 Black - Forno elétrico de bancada 60 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-philco-pfe60i-forno-eletrico-de-mesa-60-l-6fac8026",
+        "title": "Philco PFE60I - Forno elétrico de mesa 60 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-mondial-grand-family-ii-frn-52-b-forno-eletrico-52-l-06207e3e",
+        "title": "Mondial Grand Family II FRN-52-B - Forno elétrico 52 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-nardelli-top-40-easy-clean-forno-eletrico-40-l-1ccac7d4",
+        "title": "Nardelli Top 40 Easy Clean - Forno elétrico 40 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-moob-50-l-forno-eletrico-bancada-com-timer-e-luz-interna-2736a06c",
+        "title": "Moob 50 L - Forno elétrico bancada com timer e luz interna",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-fischer-gourmet-grill-forno-eletrico-de-bancada-44-l-bab9b655",
+        "title": "Fischer Gourmet Grill - Forno elétrico de bancada 44 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-oster-ofor455-forno-de-bancada-45-l-grafite-a54ee976",
+        "title": "Oster OFOR455 - Forno de bancada 45 L grafite",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-mueller-sonetto-forno-eletrico-de-bancada-44-l-ffa480d2",
+        "title": "Mueller Sonetto - Forno elétrico de bancada 44 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-britania-bfe36p-forno-de-bancada-36-l-161ecd70",
+        "title": "Britânia BFE36P - Forno de bancada 36 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-britania-bfe55p-forno-eletrico-52-l-dupla-resistencia-94d00d8f",
+        "title": "Britânia BFE55P - Forno elétrico 52 L dupla resistência",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-fischer-turbo-fast-air-convection-forno-de-bancada-80-l-ad53f5f1",
+        "title": "Fischer Turbo Fast Air Convection - Forno de bancada 80 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-dako-supreme-forno-eletrico-de-bancada-44-l-98eea937",
+        "title": "Dako Supreme - Forno elétrico de bancada 44 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-layr-crystal-inox-advanced-forno-eletrico-46-l-aaa25f40",
+        "title": "Layr Crystal Inox Advanced - Forno elétrico 46 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-mueller-fratello-forno-de-bancada-44-l-807448ed",
+        "title": "Mueller Fratello - Forno de bancada 44 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-fogatti-top-48-black-forno-eletrico-de-bancada-48-l-eb095eed",
+        "title": "Fogatti Top 48 Black - Forno elétrico de bancada 48 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-nardelli-top-48-black-forno-eletrico-de-bancada-48-l-9037f1d1",
+        "title": "Nardelli Top 48 Black - Forno elétrico de bancada 48 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-philco-pfe52p-forno-eletrico-50-l-dupla-resistencia-72fc3a69",
+        "title": "Philco PFE52P - Forno elétrico 50 L dupla resistência",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-suggar-fe4202pt-forno-eletrico-de-bancada-42-l-e602e38c",
+        "title": "Suggar FE4202PT - Forno elétrico de bancada 42 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-suggar-fe5011br-forno-eletrico-50-l-branco-c400369d",
+        "title": "Suggar FE5011BR - Forno elétrico 50 L branco",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-almeida-com-harpa-crista-sbb-60270582",
+        "title": "Bíblia Almeida com Harpa Cristã SBB",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-com-harpa-crista-feminina-floral-5c5ac2da",
+        "title": "Bíblia com Harpa Cristã Feminina Floral",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-com-harpa-crista-capa-branca-c4e41a8d",
+        "title": "Bíblia com Harpa Cristã Capa Branca",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-letra-jumbo-capa-dura-add52269",
+        "title": "Bíblia Sagrada Letra Jumbo Capa Dura",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-pentecostal-com-harpa-f7af9b37",
+        "title": "Bíblia de Estudo Pentecostal com Harpa",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-com-harpa-crista-com-ziper-1f9275c9",
+        "title": "Bíblia Sagrada com Harpa Cristã com Zíper",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-harpa-crista-cpad-com-musica-7c8a318c",
+        "title": "Harpa Cristã CPAD com Música",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-harpa-crista-capa-luxo-57c3b50c",
+        "title": "Harpa Cristã Capa Luxo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-harpa-crista-pequena-de-bolso-d8ac775f",
+        "title": "Harpa Cristã Pequena de Bolso",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-novo-testamento-com-salmos-e-proverbios-0539a43b",
+        "title": "Novo Testamento com Salmos e Provérbios",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-da-mulher-377fc782",
+        "title": "Bíblia de Estudo da Mulher",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-aplicacao-pessoal-2eeedbbb",
+        "title": "Bíblia de Estudo Aplicação Pessoal",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-nvi-1e75b745",
+        "title": "Bíblia de Estudo NVI",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-de-estudo-thompson-a2eac4c0",
+        "title": "Bíblia de Estudo Thompson",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-king-james-de-estudo-372b64b7",
+        "title": "Bíblia King James de Estudo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-biblia-sagrada-almeida-revista-e-corrigida-f0cbc36d",
+        "title": "Bíblia Sagrada Almeida Revista e Corrigida",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-livro-historia-do-cristianismo-paul-johnson-cbdc0606",
+        "title": "Livro História do Cristianismo - Paul Johnson",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-livro-historia-da-igreja-crista-c69ca94c",
+        "title": "Livro História da Igreja Cristã",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-livro-historia-eclesiastica-eusebio-de-cesareia-08a7dea4",
+        "title": "Livro História Eclesiástica - Eusébio de Cesareia",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-livro-historia-dos-hebreus-flavio-josefo-bfa8712d",
+        "title": "Livro História dos Hebreus - Flávio Josefo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-livro-antiguidades-judaicas-flavio-josefo-f045c113",
+        "title": "Livro Antiguidades Judaicas - Flávio Josefo",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-comentario-biblico-matthew-henry-b167cf0b",
+        "title": "Comentário Bíblico Matthew Henry",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-manual-biblico-halley-c12061f7",
+        "title": "Manual Bíblico Halley",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-teologia-sistematica-wayne-grudem-5a6cd026",
+        "title": "Teologia Sistemática - Wayne Grudem",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-o-peregrino-john-bunyan-7e1b21cc",
+        "title": "O Peregrino - John Bunyan",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-cristianismo-puro-e-simples-c-s-lewis-272a7516",
+        "title": "Cristianismo Puro e Simples - C. S. Lewis",
+        "storeId": "impacto-fe",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
+        "title": "Jogo de Panelas Pacific Cerâmica Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-granito-titanium-6ad7841a",
+        "title": "Jogo de Panelas Pacific Granito Titanium",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-rosa-ceramica-54eafabf",
+        "title": "Jogo de Panelas Pacific Rosa Cerâmica",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
+        "title": "Jogo de Panelas Pacific Indução 20 Peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
+        "title": "Jogo de Panelas Pacific Premium Rose Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-tramontina-paris-antiaderente-f8d431ac",
+        "title": "Jogo de Panelas Tramontina Paris Antiaderente",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-panelux-premium-antiaderente-8657d377",
+        "title": "Jogo de Panelas Panelux Premium Antiaderente",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-oster-marble-edition-0ba2f429",
+        "title": "Jogo de Panelas Oster Marble Edition",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-oster-bioceramic-c195dc72",
+        "title": "Jogo de Panelas Oster Bioceramic",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-euro-home-ceramic-premium-845bb5e4",
+        "title": "Jogo de Panelas Euro Home Ceramic Premium",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
+        "title": "Jogo de Panelas Roichen Premium Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
+        "title": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-jogo-de-panelas-com-fundo-de-inducao-ceramica-premium-760d7a98",
+        "title": "Jogo de Panelas com Fundo de Indução Cerâmica Premium",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-echo-dot-geracao-mais-recente-b0ce2322",
+        "title": "Echo Dot (geração mais recente)",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-echo-pop-branco-26cc52ee",
+        "title": "Echo Pop branco",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kindle-16-gb-preto-f1e205fc",
+        "title": "Kindle 16 GB preto",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kindle-paperwhite-16-gb-1f2aa791",
+        "title": "Kindle Paperwhite 16 GB",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-ninja-creami-sorveteira-f48d31e3",
+        "title": "Ninja Creami sorveteira",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philips-walita-airfryer-forno-12-l-a6f1d0b0",
+        "title": "Philips Walita Airfryer Forno 12 L",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-75fc8b38",
+        "title": "Panela de pressão elétrica Electrolux PCC20",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-nespresso-essenza-mini-preta-b1fbc339",
+        "title": "Nespresso Essenza Mini preta",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-britania-sanduicheira-e-grill-press-dfda3df7",
+        "title": "Britânia Sanduicheira e Grill Press",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-wap-aspirador-vertical-high-speed-plus-947e208f",
+        "title": "WAP Aspirador Vertical High Speed Plus",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-wap-robot-w100-aspirador-robo-65017e82",
+        "title": "WAP Robot W100 aspirador robô",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-wap-lavadora-de-alta-pressao-ousada-plus-a9d22a43",
+        "title": "WAP Lavadora de Alta Pressão Ousada Plus",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jbl-go-4-preta-df2d2805",
+        "title": "JBL Go 4 preta",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jbl-wave-buds-2-316fcd19",
+        "title": "JBL Wave Buds 2",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-samsung-galaxy-buds-core-b0019a76",
+        "title": "Samsung Galaxy Buds Core",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tramontina-monaco-jogo-de-panelas-5-pecas-3d3f7382",
+        "title": "Tramontina Mônaco jogo de panelas 5 peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tramontina-solar-inox-6-pecas-1b733944",
+        "title": "Tramontina Solar inox 6 peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-stanley-quencher-h2-0-887-ml-78711ebf",
+        "title": "Stanley Quencher H2.0 887 ml",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-soft-brush-escova-secadora-e0aa1cbd",
+        "title": "Philco Soft Brush escova secadora",
+        "storeId": "impacto-beauty-care",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-la-roche-posay-anthelios-xl-protect-fps60-b5d85c4c",
+        "title": "La Roche-Posay Anthelios XL-Protect FPS60",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bosch-gsr-1000-smart-com-acessorios-163b6d4d",
+        "title": "Bosch GSR 1000 Smart com acessórios",
+        "storeId": "impacto-ferramentas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mondial-liquidificador-turbo-power-8df5d041",
+        "title": "Mondial Liquidificador Turbo Power",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-amazfit-bip-6-ba5e4b2d",
+        "title": "Amazfit Bip 6",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-echo-spot-com-alexa-7ec62b3f",
+        "title": "Echo Spot com Alexa",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-ssd-kingston-nv3-1tb-m-2-2280-nvme-gen4-desempenho-e-efi-7f74a4f5",
+        "title": "SSD 1TB",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fone-de-ouvido-bluetooth-60082827",
+        "title": "Fone de ouvido Bluetooth",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-samsung-galaxy-s24-fe-5g-celular-256gb-8gb-ram-tela-6-7--fdd070d0",
+        "title": "Smartphone Samsung Galaxy",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-liquidificador-fe3b690f",
+        "title": "Liquidificador",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-de-chave-de-fenda-b41fac3e",
+        "title": "Kit de chave de fenda",
+        "storeId": "impacto-ferramentas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-aparador-de-pelos-philips-all-in-one-16-em-1-serie-9000--8b755906",
+        "title": "Aparador de Pelos Philips All-in-One 16 em 1 Série 9000 | Máquina para Rosto, Cabelo e Corpo | Barbeador Elétrico Multigroom à prova d'água | MG9532/15",
+        "storeId": "impacto-beauty-care",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mouse-sem-fio-60d95b7b",
+        "title": "Mouse sem fio",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-soundcore-projetor-portatil-da-anker-netflix-4k-oficial--7bb727e2",
+        "title": "Mini projetor portátil",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-smart-tv-1b443a57",
+        "title": "Smart TV",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-short-masculino-d918c4b3",
+        "title": "Short masculino",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-com-10-pares-de-meias-cano-alto-algodao-usee-brasil--3e73619e",
+        "title": "Kit com 10 Pares de Meias Cano Alto Algodão Usee Brasil (BR, Alfa, G, Regular, Regular, Branco) : Amazon.com.br: Moda",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-capa-de-chuva-impermeavel-com-capuz-para-motoboy-e-motoc-459f1b5b",
+        "title": "Capa de chuva para motociclista",
+        "storeId": "impacto-auto",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-monitor-para-bebes-baba-eletronica-b3329280",
+        "title": "Monitor para bebês / babá eletrônica",
+        "storeId": "impacto-kids",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-azeite-de-oliva-6f89abfc",
+        "title": "Azeite de oliva",
+        "storeId": "impacto-pet",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tapete-higienico-para-pets-98a9c175",
+        "title": "Tapete higiênico para pets",
+        "storeId": "impacto-pet",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-estojo-escolar-4181ca81",
+        "title": "Estojo escolar",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-piscina-inflavel-3fb5a757",
+        "title": "Piscina inflável",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jogo-de-lencol-queen-1a9228b1",
+        "title": "Jogo de lençol queen",
+        "storeId": "impacto-pet",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-garrafa-termica-9619258c",
+        "title": "Garrafa térmica",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-camera-de-seguranca-wi-fi-2f99a47e",
+        "title": "Câmera de segurança Wi-Fi",
+        "storeId": "impacto-eletronicos",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-ventilador-de-mesa-7355d113",
+        "title": "Ventilador de mesa",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-regua-de-extensao-eletrica-d82344d1",
+        "title": "Régua de extensão elétrica",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jogo-de-talheres-c5857c4c",
+        "title": "Jogo de talheres",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-impressora-multifuncional-cc166385",
+        "title": "Impressora multifuncional",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-smartwatch-relogio-digital-04969c95",
+        "title": "Smartwatch / relógio digital",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-livros-de-autoajuda-e50fddd8",
+        "title": "Livros de autoajuda",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-medidor-de-pressao-arterial-e75cf547",
+        "title": "Medidor de pressão arterial",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-air-fryer-7c2877c2",
+        "title": "Air fryer",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
+        "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+        "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+        "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+        "title": "Camisa Feminina Country Radade bordada manga longa",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
+        "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+        "title": "Bota Botina feminina texana country com zíper ou elástico",
+        "storeId": "impacto-moda",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+        "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+        "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+        "title": "Bota Texana Country Masculina cano longo marrom 801",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+        "title": "ROPER Bota Country Masculina Marrom",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
+        "title": "Sela Americana preta simples completa com manta e freio inox",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
+        "title": "Sela Americana Tradicional marrom 16 polegadas",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
+        "title": "Sela Australiana marrom com rédea e cabeçada completa",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
+        "title": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
+        "title": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
+        "title": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
+        "title": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
+        "title": "Estribos ingleses almofadados para equitação",
+        "storeId": "impacto-sport",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-4-pecas-1b443440",
+        "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 4 peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-3-pecas-a288b64f",
+        "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 3 peças",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-liquidificador-oster-1400-full-preto-3-2-l-220v-633b1454",
+        "title": "Liquidificador Oster 1400 Full Preto 3,2 L - 220V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-blender-ultra-power-1000-oster-com-2-copos-127v-e35aad9e",
+        "title": "Blender Ultra Power 1000 Oster com 2 Copos - 127V",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-6-l-127v-e01f6a2e",
+        "title": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 127V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-6-l-220v-5d442c21",
+        "title": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 220V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-cooktop-4-bocas-de-inducao-electrolux-experience-ie60p-25efddb5",
+        "title": "Cooktop 4 Bocas de Indução Electrolux Experience IE60P",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fogao-cooktop-de-inducao-philco-4-bocas-pct40a-bc44317b",
+        "title": "Fogão Cooktop de Indução Philco 4 bocas PCT40A",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-110v-bb6fdf2a",
+        "title": "Philips Walita Airfryer Forno Série 5000 12 L - 110V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-220v-1a395bdd",
+        "title": "Philips Walita Airfryer Forno Série 5000 12 L - 220V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philips-walita-airfryer-serie-1000-xl-6-2-l-110v-33ea132c",
+        "title": "Philips Walita Airfryer Série 1000 XL 6,2 L - 110V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-air-fryer-rita-lobo-eaf40-5-8-l-127v-0c68cc99",
+        "title": "Electrolux Air Fryer Rita Lobo EAF40 5,8 L - 127V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-air-fryer-forno-eaf90-12-l-5-em-1-rotisserie--af58cf05",
+        "title": "Electrolux Air Fryer Forno EAF90 12 L 5 em 1 Rotisserie - 220V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-air-fryer-forno-5-em-1-12-l-digital-f04570a9",
+        "title": "Electrolux Air Fryer Forno 5 em 1 12 L Digital",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-forno-e-fritadeira-sem-oleo-oster-french-door-42-l-127v-0dbfbad1",
+        "title": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 127V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-forno-e-fritadeira-sem-oleo-oster-french-door-42-l-220v-aa59ac20",
+        "title": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 220V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-forno-eletrico-philco-pfe40i-air-fry-40-l-2-em-1-38d9d418",
+        "title": "Forno Elétrico Philco PFE40I Air Fry 40 L 2 em 1",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-oster-batedeira-planetaria-digital-bowl-inox-5-l-110v-ea011f2d",
+        "title": "Oster Batedeira Planetária Digital Bowl Inox 5 L - 110V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-pfe80a-80l-4-resistencias-127-220--8e1ddcf9",
+        "title": "Philco Forno Elétrico PFE80A, 80L, 4 resistências - 127/220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-65l-pfe65-dupla-resistencia-127-v-cc45df70",
+        "title": "Philco Forno Elétrico 65L PFE65 Dupla Resistência - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-220-v-cba1afae",
+        "title": "Philco Forno Elétrico PFE60I Função Dourar - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-best-forno-eletrico-preto-e-branco-127-v-71ae3d20",
+        "title": "Best Forno Elétrico Preto e Branco - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-best-forno-eletrico-plus-com-espeto-giratorio-220-v-e0224229",
+        "title": "Best Forno Elétrico Plus com Espeto Giratório - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-80a51280",
+        "title": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-w-branco-i-c22063e5",
+        "title": "Mondial Forno Elétrico Grand Family II FRN-52-W Branco/Inox - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fogatti-forno-eletrico-top-40-127-v-971a5700",
+        "title": "Fogatti Forno Elétrico Top 40 - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b",
+        "title": "Philco Forno Elétrico PFE44P Dupla Resistência - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-50l-pfe52p-dupla-resistencia-127-v-12b177f6",
+        "title": "Philco Forno Elétrico 50L PFE52P Dupla Resistência - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-forno-eletrico-50l-pfe52b-dupla-resistencia-220-v-2b73f90e",
+        "title": "Philco Forno Elétrico 50L PFE52B Dupla Resistência - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce",
+        "title": "Britânia Forno Elétrico BFE55P Dupla Resistência - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3",
+        "title": "Suggar Forno Elétrico de Bancada FE4201PT - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st27lwru-branco-espelhado-127-v-85534206",
+        "title": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st25lwru-branco-127-v-c6843c86",
+        "title": "Panasonic Micro-ondas NN-ST25LWRU Branco - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st27lwru-branco-espelhado-220-v-bc2cbf3a",
+        "title": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st65lwru-branco-127-v-1c4eba69",
+        "title": "Panasonic Micro-ondas NN-ST65LWRU Branco - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st67lsru-inox-antibacteria-127--4fb64dd4",
+        "title": "Panasonic Micro-ondas NN-ST67LSRU Inox Antibactéria - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-panasonic-micro-ondas-nn-st55lmru-prata-220-v-e8215981",
+        "title": "Panasonic Micro-ondas NN-ST55LMRU Prata - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-micro-ondas-meo44-branco-com-tira-odor-e-mant-d4cc328e",
+        "title": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-micro-ondas-meo44-branco-com-tira-odor-e-mant-3ac0d153",
+        "title": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-micro-ondas-mb37r-branco-com-55-receitas-127--58a910ac",
+        "title": "Electrolux Micro-ondas MB37R Branco com 55 receitas - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-electrolux-micro-ondas-me23s-inox-efficient-127-v-d4f2b052",
+        "title": "Electrolux Micro-ondas ME23S Inox Efficient - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-midea-forno-micro-ondas-mxsa35p1-branco-e-preto-127-v-ed11a01e",
+        "title": "Midea Forno Micro-ondas MXSA35P1 Branco e Preto - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-lg-micro-ondas-neochef-ms3033ds-127-v-dbeb5038",
+        "title": "LG Micro-ondas NeoChef MS3033DS - 127 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-philco-micro-ondas-pmo38e-limpa-facil-1400w-220-v-5d0b2519",
+        "title": "Philco Micro-ondas PMO38E Limpa Fácil 1400W - 220 V",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
       }
     ],
     "sem_botao_compra": [
@@ -917,9 +2506,29 @@
         "storeId": "impacto-moda",
         "status": "rascunho"
       }
+    ],
+    "titulo_generico_ou_incompleto": [
+      {
+        "id": "importado-amazon-liquidificador-fe3b690f",
+        "title": "Liquidificador",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      }
     ]
   },
   "duplicates": [
+    {
+      "reason": "link",
+      "key": "https://meli.la/1gutpms",
+      "keep": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
+      "duplicates": [
+        "loja-parceira-001",
+        "mercado-livre-produto-019",
+        "mercado-livre-produto-020",
+        "mercado-livre-produto-023",
+        "mercado-livre-produto-029"
+      ]
+    },
     {
       "reason": "link",
       "key": "https://meli.la/2f5pdk6",
@@ -942,16 +2551,6 @@
       "keep": "celular-ml-docx-088",
       "duplicates": [
         "celular-ml-docx-089"
-      ]
-    },
-    {
-      "reason": "titulo",
-      "key": "forno eletrico philco 65l dupla resistencia pfe65 127v",
-      "keep": "mercado-livre-produto-019",
-      "duplicates": [
-        "mercado-livre-produto-020",
-        "mercado-livre-produto-023",
-        "mercado-livre-produto-029"
       ]
     },
     {
