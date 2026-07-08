@@ -1,0 +1,342 @@
+{
+  "executedAt": "2026-07-08",
+  "sourceFile": "C:\\Users\\PMNB\\Desktop\\mauricio lic\\amazon\\catalogo_amazon_cavalgada_cavalos.docx",
+  "extractedProducts": 25,
+  "updatedProducts": [
+    "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
+    "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
+    "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
+    "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+    "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+    "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+    "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
+    "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+    "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+    "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+    "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+    "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+    "importado-amazon-sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2",
+    "importado-amazon-sela-para-cavalo-mangalarga-kit-completo-pronta-para-uso-a60abfea",
+    "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
+    "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
+    "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
+    "importado-amazon-sela-australiana-cavalgada-luxo-marrom-pronta-para-uso-3d1841b3",
+    "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
+    "importado-amazon-sela-americana-completa-tradicional-preta-50037823",
+    "importado-amazon-kit-peitoral-cabecada-argolados-para-cavalo-bff91087",
+    "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
+    "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
+    "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
+    "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8"
+  ],
+  "movedToStore": "impacto-montaria",
+  "activeAfterUpdate": 25,
+  "manualReview": [],
+  "missingPrice": [
+    {
+      "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+      "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm"
+    },
+    {
+      "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+      "title": "Camisa Feminina Country Radade bordada manga longa"
+    },
+    {
+      "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
+      "title": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia"
+    }
+  ],
+  "imageErrors": [],
+  "adsAdded": 21,
+  "adsUpdated": 4,
+  "products": [
+    {
+      "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
+      "name": "Cinto Cowboy Vintage Western Unissex com fivela floral",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 79,99",
+      "image": "public/images/anuncios/cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d.webp",
+      "affiliateLink": "https://link.amazon/B0dOyDHVO",
+      "directLink": "https://www.amazon.com.br/Cowboy-Vintage-Western-Unissex-Entalhada/dp/B0FZD21TWH",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
+      "name": "Castela Cinto Country Unissex preto com cavalo em bronze",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 39,99",
+      "image": "public/images/anuncios/castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d.webp",
+      "affiliateLink": "https://link.amazon/B0fp3agCv",
+      "directLink": "https://www.amazon.com.br/Castela-Country-Unissex-Decorativa-Western/dp/B0FZXB26WF",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
+      "name": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 24,90",
+      "image": "public/images/anuncios/kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f.webp",
+      "affiliateLink": "https://link.amazon/B06rvfSSf",
+      "directLink": "https://www.amazon.com.br/Country-Entalhado-Fivela-Cowboy-Rodeio/dp/B0DW9FW1BN",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+      "name": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 224,64",
+      "image": "public/images/anuncios/chapeu-country-cowboy-americano-barretos-com-bandinha-brilhante-1308db98.webp",
+      "affiliateLink": "https://link.amazon/B06a1b9Su",
+      "directLink": "https://www.amazon.com.br/Americano-Barretos-Sertanejo-Cavalgada-BRILHANTE/dp/B0GSJDGK74",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+      "name": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "Pre?o no an?ncio",
+      "image": "public/images/anuncios/camisa-country-masculina-bordada-bordo-rodeo-farm-57693445.webp",
+      "affiliateLink": "https://link.amazon/B06wiYkgg",
+      "directLink": "https://www.amazon.com.br/Country-Masculina-Bordada-Rodeo-Farm/dp/B0CHGST77R",
+      "pendencias": [
+        "preco dinamico no anuncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+      "name": "Camisa Feminina Country Radade bordada manga longa",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "Pre?o no an?ncio",
+      "image": "public/images/anuncios/camisa-feminina-country-radade-bordada-manga-longa-63125664.webp",
+      "affiliateLink": "https://link.amazon/B07ndTeqT",
+      "directLink": "https://www.amazon.com.br/Feminina-Country-Bordada-Bandeira-Algod%C3%A3o/dp/B0DZY1J7NB",
+      "pendencias": [
+        "preco dinamico no anuncio",
+        "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
+      "name": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 123,69",
+      "image": "public/images/anuncios/kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1.webp",
+      "affiliateLink": "https://link.amazon/B08MYK46R",
+      "directLink": "https://www.amazon.com.br/Chapeu-Country-Infantil-Sertanejo-Cavalgada/dp/B0FT3BC55P",
+      "pendencias": [
+        "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+      "name": "Bota Botina feminina texana country com zíper ou elástico",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 78,90",
+      "image": "public/images/anuncios/bota-botina-feminina-texana-country-com-ziper-ou-elastico-8c50d8d0.webp",
+      "affiliateLink": "https://link.amazon/B0c1gXdmC",
+      "directLink": "https://www.amazon.com.br/feminina-Country-Confort%C3%A1vel-El%C3%A1stico-Num%C3%A9rico/dp/B0FS2BTXK2",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+      "name": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 129,90",
+      "image": "public/images/anuncios/bota-feminina-texana-country-couro-legitimo-cano-alto-paint-horse-bd10adac.webp",
+      "affiliateLink": "https://link.amazon/B07J7hMN1",
+      "directLink": "https://www.amazon.com.br/Feminina-Leg%C3%ADtimo-Americana-Paint-Horse/dp/B0F22PZX3X",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+      "name": "Bota Texana Feminina Country cano alto premium bico quadrado",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 474,90",
+      "image": "public/images/anuncios/bota-texana-feminina-country-cano-alto-premium-bico-quadrado-5159d7c6.webp",
+      "affiliateLink": "https://link.amazon/B00k6MDTs",
+      "directLink": "https://www.amazon.com.br/Texana-Feminina-Country-Premium-Quadrado/dp/B0CZY5LZNK",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+      "name": "Bota Texana Country Masculina cano longo marrom 801",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 227,05",
+      "image": "public/images/anuncios/bota-texana-country-masculina-cano-longo-marrom-801-4486efff.webp",
+      "affiliateLink": "https://link.amazon/B03KNdtgL",
+      "directLink": "https://www.amazon.com.br/Texana-Country-Masculina-Longo-Marrom/dp/B0BSPXQ464",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+      "name": "ROPER Bota Country Masculina Marrom",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 1.621,36",
+      "image": "public/images/anuncios/roper-bota-country-masculina-marrom-87e4565b.webp",
+      "affiliateLink": "https://link.amazon/B0gweOWXa",
+      "directLink": "https://www.amazon.com.br/ROPER-Bota-Country-Masculina-Marrom/dp/B005I7GPEK",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2",
+      "name": "Sela Australiana preta para cavalo com conjunto completo",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 439,90",
+      "image": "public/images/anuncios/sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2.webp",
+      "affiliateLink": "https://link.amazon/B01HFaCXr",
+      "directLink": "https://www.amazon.com.br/Australiana-cavalgada-cavalo-conjunto-completo/dp/B086VK6BP7",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-para-cavalo-mangalarga-kit-completo-pronta-para-uso-a60abfea",
+      "name": "Sela para Cavalo Mangalarga + kit completo pronta para uso",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 512,14",
+      "image": "public/images/anuncios/sela-para-cavalo-mangalarga-kit-completo-pronta-para-uso-a60abfea.webp",
+      "affiliateLink": "https://link.amazon/B0ioU7Ax8",
+      "directLink": "https://www.amazon.com.br/Cavalo-Mangalarga-Completo-Pronta-Preto/dp/B0CK4X892H",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
+      "name": "Sela Americana preta simples completa com manta e freio inox",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 529,00",
+      "image": "public/images/anuncios/sela-americana-preta-simples-completa-com-manta-e-freio-inox-56dea01d.webp",
+      "affiliateLink": "https://link.amazon/B0231tbhV",
+      "directLink": "https://www.amazon.com.br/Americana-Simples-Cavalgada-Passeios-Completa/dp/B085Z8MQCX",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
+      "name": "Sela Americana Tradicional marrom 16 polegadas",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 495,90",
+      "image": "public/images/anuncios/sela-americana-tradicional-marrom-16-polegadas-130a8801.webp",
+      "affiliateLink": "https://link.amazon/B0av77mAv",
+      "directLink": "https://www.amazon.com.br/Americana-Tradicional-montaria-cavalgada-polegadas/dp/B0C81Q65JN",
+      "pendencias": [
+        "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
+      "name": "Sela Australiana marrom com rédea e cabeçada completa",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 439,90",
+      "image": "public/images/anuncios/sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1.webp",
+      "affiliateLink": "https://link.amazon/B05QYnZAk",
+      "directLink": "https://www.amazon.com.br/Australiana-cavalaria-cabe%C3%A7ada-completa-Marrom/dp/B086VJTW19",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-australiana-cavalgada-luxo-marrom-pronta-para-uso-3d1841b3",
+      "name": "Sela Australiana Cavalgada Luxo marrom pronta para uso",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 575,00",
+      "image": "public/images/anuncios/sela-australiana-cavalgada-luxo-marrom-pronta-para-uso-3d1841b3.webp",
+      "affiliateLink": "https://link.amazon/B0bKm2KLk",
+      "directLink": "https://www.amazon.com.br/Australiana-Cavalgada-montaria-passeio-trabalho/dp/B0C81W9FC2",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
+      "name": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 599,00",
+      "image": "public/images/anuncios/sela-australiana-preta-completa-simples-com-aba-arreada-16-polegadas-7a10633e.webp",
+      "affiliateLink": "https://link.amazon/B00qiBiY6",
+      "directLink": "https://www.amazon.com.br/Australiana-Completa-Simples-Polegadas-Mangalarga/dp/B08Z1R89MR",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-sela-americana-completa-tradicional-preta-50037823",
+      "name": "Sela Americana completa tradicional preta",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 439,90",
+      "image": "public/images/anuncios/sela-americana-completa-tradicional-preta-50037823.webp",
+      "affiliateLink": "https://link.amazon/B01N5Pw2q",
+      "directLink": "https://www.amazon.com.br/Sela-Americana-Completo-Tradicional-Preto/dp/B085RJYVBM",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-kit-peitoral-cabecada-argolados-para-cavalo-bff91087",
+      "name": "Kit Peitoral + Cabeçada argolados para cavalo",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 128,40",
+      "image": "public/images/anuncios/kit-peitoral-cabecada-argolados-para-cavalo-bff91087.webp",
+      "affiliateLink": "https://link.amazon/B077igHUb",
+      "directLink": "https://www.amazon.com.br/Peitoral-cabe%C3%A7ada-Argolados-Traias-Cavalos/dp/B0CLT8QW7C",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
+      "name": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 398,88",
+      "image": "public/images/anuncios/kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622.webp",
+      "affiliateLink": "https://link.amazon/B0fTcSr0s",
+      "directLink": "https://www.amazon.com.br/Cabe%C3%A7ada-Argolas-R%C3%A9dea-Freio-Cavalo/dp/B095KJBG6W",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
+      "name": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "Pre?o no an?ncio",
+      "image": "public/images/anuncios/peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd.webp",
+      "affiliateLink": "https://link.amazon/B02D0hzpv",
+      "directLink": "https://www.amazon.com.br/Peitoral-Cabe%C3%A7ada-Aplique-Pel%C3%BAcia-Cavalo/dp/B0987SKNT4",
+      "pendencias": [
+        "preco dinamico no anuncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
+      "name": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 379,90",
+      "image": "public/images/anuncios/kit-color-simples-boots-horse-azul-claro-caneleira-de-protecao-f0d38b6d.webp",
+      "affiliateLink": "https://link.amazon/B06PI8m9L",
+      "directLink": "https://www.amazon.com.br/Caneleira-Prote%C3%A7%C3%A3o-Vaquejada-Cavalgada-Original/dp/B0G71Z7KZV",
+      "pendencias": []
+    },
+    {
+      "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
+      "name": "Estribos ingleses almofadados para equitação",
+      "status": "ativo",
+      "storeId": "impacto-montaria",
+      "price": "R$ 337,72",
+      "image": "public/images/anuncios/estribos-ingleses-almofadados-para-equitacao-f6d89fd8.webp",
+      "affiliateLink": "https://link.amazon/B0b07BAs2",
+      "directLink": "https://www.amazon.com.br/Estribos-ingleses-almofadado-estribos-equita%C3%A7%C3%A3o/dp/B0F22BPRDC",
+      "pendencias": [
+        "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
+      ]
+    }
+  ]
+}
