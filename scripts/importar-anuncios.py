@@ -97,6 +97,62 @@ def preferred_link(links: Iterable[str], fallback_text: str = "") -> str:
     return clean_url(candidates[0]) if candidates else extract_first_url(fallback_text)
 
 
+def preferred_affiliate_link(links: Iterable[str], fallback_text: str = "") -> str:
+    candidates = list(dict.fromkeys(clean_url(link) for link in links if clean_url(link)))
+    candidates.extend(
+        clean_url(link)
+        for link in re.findall(r"https?://[^\s<>]+", fallback_text or "")
+        if clean_url(link) not in candidates
+    )
+    for marker in ("meli.la/", "link.amazon/"):
+        for candidate in candidates:
+            if marker in candidate.lower():
+                return clean_url(candidate)
+    for candidate in candidates:
+        lowered = candidate.lower()
+        if "mercadolivre.com" in lowered or "amazon." in lowered:
+            return clean_url(candidate)
+    return clean_url(candidates[0]) if candidates else extract_first_url(fallback_text)
+
+
+def preferred_product_page_link(links: Iterable[str], fallback_text: str = "") -> str:
+    candidates = list(dict.fromkeys(clean_url(link) for link in links if clean_url(link)))
+    candidates.extend(
+        clean_url(link)
+        for link in re.findall(r"https?://[^\s<>]+", fallback_text or "")
+        if clean_url(link) not in candidates
+    )
+    direct_markers = (
+        "produto.mercadolivre.com",
+        "mercadolivre.com.br/",
+        "amazon.com.br/dp/",
+        "amazon.com.br/gp/product/",
+    )
+    for candidate in candidates:
+        lowered = candidate.lower()
+        if any(marker in lowered for marker in direct_markers) and "lista.mercadolivre" not in lowered:
+            return clean_url(candidate)
+    return preferred_affiliate_link(candidates, fallback_text)
+
+
+def marketplace_from_link(link: str) -> str:
+    lowered = clean_url(link).lower()
+    if "amazon." in lowered or "link.amazon" in lowered or "amzn.to" in lowered:
+        return "Amazon"
+    if "mercadolivre" in lowered or "meli.la" in lowered:
+        return "Mercado Livre"
+    return "Loja parceira"
+
+
+def purchase_button_label(link: str) -> str:
+    source = marketplace_from_link(link)
+    if source == "Amazon":
+        return "Comprar na Amazon"
+    if source == "Mercado Livre":
+        return "Comprar no Mercado Livre"
+    return "Comprar na loja parceira"
+
+
 def cell_image(document: Document, cell: Any) -> tuple[bytes | None, str]:
     for blip in cell._tc.iter(qn("a:blip")):
         relationship_id = blip.get(R_EMBED)
@@ -721,8 +777,84 @@ def extract_battery_toys(path: Path) -> list[ImportedItem]:
     return items
 
 
+def extract_offer_tables(path: Path) -> list[ImportedItem]:
+    document = Document(path)
+    items: list[ImportedItem] = []
+    normalized_name = normalize_text(path.name)
+    default_category = "Materiais escolares" if "materiais" in normalized_name else "Calcados"
+    for table_index, table in enumerate(document.tables):
+        if not table.rows:
+            continue
+        headers = [normalize_text(cell.text) for cell in table.rows[0].cells]
+        if "produto" not in headers or "categoria" not in headers:
+            continue
+        product_index = headers.index("produto")
+        category_index = headers.index("categoria")
+        brand_index = headers.index("marca") if "marca" in headers else None
+        for row in table.rows[1:]:
+            cells = list(row.cells)
+            if product_index >= len(cells):
+                continue
+            title = title_without_number(cells[product_index].text.strip())
+            if not title:
+                continue
+            row_text = " ".join(cell.text for cell in cells)
+            row_links: list[str] = []
+            for cell in cells:
+                row_links.extend(cell_hyperlinks(document, cell))
+            link = preferred_affiliate_link(row_links, row_text)
+            if not link:
+                continue
+            product_page_link = preferred_product_page_link(row_links, row_text)
+            category = cells[category_index].text.strip() if category_index < len(cells) else ""
+            brand = cells[brand_index].text.strip() if brand_index is not None and brand_index < len(cells) else ""
+            if "materiais" in normalized_name:
+                hinted_category = f"loja livraria prioridade {default_category}"
+            elif "calcados" in normalized_name:
+                hinted_category = f"loja calcados prioridade {category or default_category}"
+            else:
+                hinted_category = category or default_category
+            details = [title]
+            if category:
+                details.append(f"Categoria: {category}")
+            if brand:
+                details.append(f"Marca: {brand}")
+            if "materiais" in normalized_name:
+                details.append("Produto selecionado na lista de materiais escolares enviada para a livraria.")
+            elif "calcados" in normalized_name:
+                details.append("Produto selecionado na lista de calcados enviada para a loja de calcados.")
+            else:
+                details.append("Produto selecionado no catalogo enviado.")
+            details.append("Confira preco, estoque, frete, garantia, tamanho/cor e condicoes diretamente no anuncio.")
+            source = marketplace_from_link(link or product_page_link)
+            section = "Mercado Livre" if "meli.la/" in link.lower() else source
+            items.append(
+                ImportedItem(
+                    title=title,
+                    link=link,
+                    source_file=f"{path.name} | Tabela {table_index + 1} {section}",
+                    description=". ".join(part for part in details if part),
+                    hinted_category=hinted_category,
+                    price=parse_brazilian_price(row_text),
+                    embedded_image_safe=False,
+                    source_notes=[
+                        "Foto buscada a partir do link do produto; link de afiliado preservado no cadastro."
+                    ],
+                    validation_link=product_page_link or link,
+                    source_product_link=product_page_link,
+                    source=source,
+                    button_label=purchase_button_label(link),
+                    product_id_prefix="importado-amazon" if source == "Amazon" else "importado-ml",
+                    allow_validated_title=False,
+                )
+            )
+    return items
+
+
 def extract_docx(path: Path) -> list[ImportedItem]:
     name = normalize_text(path.name)
+    if "materiais escolares" in name or "calcados" in name:
+        return extract_offer_tables(path)
     if "produtos buscados" in name and "tendencias" in name:
         return extract_amazon_trend_tables(path)
     if "amazon" in name:
@@ -943,7 +1075,6 @@ def build_product(
         pendencias.append("imagem real não confirmada")
     if price == "Preço no anúncio":
         pendencias.append("preço dinâmico no anúncio")
-        status = "revisao_manual"
 
     product.update(
         {
@@ -970,6 +1101,9 @@ def build_product(
             "origem": item.source,
             "status": status,
             "aprovadoParaPublicacao": status == "ativo",
+            "destaqueHome": True,
+            "homeRotation": True,
+            "rotacaoTelaInicial": True,
             "editable": True,
             "actionType": "buy",
             "buttonLabel": item.button_label,
@@ -993,6 +1127,103 @@ def build_product(
         }
     )
     return product
+
+
+def product_link(product: dict[str, Any]) -> str:
+    return str(
+        product.get("affiliateLink")
+        or product.get("linkCompra")
+        or product.get("linkOriginal")
+        or ""
+    ).strip()
+
+
+def product_image(product: dict[str, Any]) -> str:
+    return str(product.get("image") or product.get("imagemPrincipal") or "").strip()
+
+
+def product_summary(product: dict[str, Any]) -> str:
+    description = str(
+        product.get("descricaoCurta") or product.get("description") or product.get("name") or ""
+    ).strip()
+    description = re.sub(r"\s+", " ", description)
+    if len(description) > 170:
+        description = description[:167].rstrip() + "..."
+    return description
+
+
+def update_home_rotation(root: Path, imported_products: list[dict[str, Any]]) -> dict[str, int]:
+    banners_path = root / "dados" / "banners-anuncios.json"
+    data = load_json(
+        banners_path,
+        {"settings": {"bannerRotationMs": 6500, "adRotationMs": 5200}, "banners": [], "ads": []},
+    )
+    data["settings"] = data.get("settings") or {"bannerRotationMs": 6500, "adRotationMs": 5200}
+    data["banners"] = data.get("banners") if isinstance(data.get("banners"), list) else []
+    data["ads"] = data.get("ads") if isinstance(data.get("ads"), list) else []
+    ads: list[dict[str, Any]] = data["ads"]
+    by_id = {str(ad.get("id")): ad for ad in ads}
+    priority = max((int(ad.get("priority") or 0) for ad in ads), default=0)
+    prepared = 0
+    active = 0
+    for product in imported_products:
+        ad_id = f"ad-produto-{product.get('id')}"
+        link = product_link(product)
+        image = product_image(product)
+        ready = (
+            str(product.get("status", "")).lower() == "ativo"
+            and bool(link)
+            and bool(image)
+            and not image_is_placeholder(image)
+        )
+        prepared += 1
+        if ready:
+            active += 1
+        product["homeRotation"] = True
+        product["rotacaoTelaInicial"] = True
+        product["destaqueHome"] = True
+        product["homeRotationAdId"] = ad_id
+        current = by_id.get(ad_id)
+        if current is None:
+            priority += 1
+            current = {"id": ad_id, "priority": priority}
+            ads.append(current)
+        current.update(
+            {
+                "productId": product.get("id"),
+                "storeId": product.get("storeId"),
+                "image": image,
+                "title": product.get("name") or product.get("nome") or "",
+                "description": product_summary(product),
+                "buttonLabel": product.get("buttonLabel") or "Ver oferta",
+                "link": link,
+                "startDate": today_iso(),
+                "endDate": "",
+                "active": ready,
+                "source": "produto-importado-docx",
+                "rotationGroup": "materiais-calcados-2026-07-09",
+            }
+        )
+    write_json(banners_path, data)
+    return {"prepared": prepared, "active": active, "inactive": prepared - active}
+
+
+def check_item_link(item: ImportedItem) -> dict[str, Any]:
+    candidates = [item.link]
+    for candidate in (item.validation_link, item.source_product_link):
+        if candidate and canonical_link(candidate) != canonical_link(item.link):
+            candidates.append(candidate)
+    last_result: dict[str, Any] | None = None
+    for candidate in list(dict.fromkeys(candidates)):
+        result = check_link(candidate, item.title).as_dict()
+        if item.source_product_link:
+            result["sourceProductLink"] = item.source_product_link
+        if candidate != item.link:
+            result["validationLinkFallback"] = candidate
+        if result.get("ok"):
+            return result
+        last_result = result
+    return last_result or check_link(item.link, item.title).as_dict()
 
 
 def main() -> int:
@@ -1023,7 +1254,7 @@ def main() -> int:
     if args.offline:
         for item in merged:
             checks[item.key()] = {
-                "requestedUrl": item.validation_link or item.link,
+                "requestedUrl": item.link,
                 "ok": True,
                 "title": item.title,
                 "image": "",
@@ -1032,12 +1263,12 @@ def main() -> int:
     else:
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:
             pending = {
-                executor.submit(check_link, item.validation_link or item.link, item.title): item
+                executor.submit(check_item_link, item): item
                 for item in merged
             }
             for future in as_completed(pending):
                 item = pending[future]
-                checks[item.key()] = future.result().as_dict()
+                checks[item.key()] = future.result()
                 status = "OK" if checks[item.key()].get("ok") else "REVISAR"
                 print(f"[{status}] {item.title[:72]}")
 
@@ -1051,7 +1282,12 @@ def main() -> int:
 
         def candidate_score(candidate: ImportedItem) -> tuple[int, int, int]:
             candidate_check = checks[candidate.key()]
-            similarity = title_similarity(candidate.title, candidate_check.get("title", ""))
+            candidate_title = (
+                clean_amazon_title(candidate_check.get("title", ""))
+                if candidate.source == "Amazon"
+                else candidate_check.get("title", "")
+            )
+            similarity = title_similarity(candidate.title, candidate_title)
             return (
                 int(bool(candidate_check.get("ok")) and bool(similarity["safe"])),
                 int(bool(candidate_check.get("image"))),
@@ -1087,10 +1323,11 @@ def main() -> int:
 
     for item in merged:
         check = checks[item.key()]
-        match = title_similarity(item.title, check.get("title", ""))
+        checked_title = clean_amazon_title(check.get("title", "")) if item.source == "Amazon" else check.get("title", "")
+        match = title_similarity(item.title, checked_title)
         image_relative = ""
         if check.get("ok") and match["safe"] and check.get("image"):
-            filename = f"{slugify(item.title)}-{stable_product_id('ml', item.title, item.link)[-8:]}.webp"
+            filename = f"{slugify(item.title)}-{stable_product_id(item.product_id_prefix, item.title, item.link)[-8:]}.webp"
             image_relative = f"public/images/anuncios/{filename}"
             destination = root / image_relative
             if args.apply:
@@ -1133,6 +1370,11 @@ def main() -> int:
             products.append(product)
 
     store_created = ensure_toy_store(stores)
+    rotation = (
+        update_home_rotation(root, imported_products)
+        if args.apply
+        else {"prepared": len(imported_products), "active": active, "inactive": manual}
+    )
     report = {
         "executedAt": today_iso(),
         "sourceFiles": extraction_counts,
@@ -1143,6 +1385,7 @@ def main() -> int:
         "activeImported": active,
         "manualReviewImported": manual,
         "toyStoreCreated": store_created,
+        "homeRotation": rotation,
         "imageErrors": image_errors,
         "manualReview": [
             {

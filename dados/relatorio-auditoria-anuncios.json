@@ -1,12 +1,12 @@
 {
-  "executedAt": "2026-07-08",
+  "executedAt": "2026-07-09",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 514,
+    "products": 700,
     "stores": 26,
-    "active": 187,
-    "inactiveOrReview": 327,
-    "issues": 354,
+    "active": 323,
+    "inactiveOrReview": 377,
+    "issues": 447,
     "duplicateGroups": 5,
     "imageConflicts": 0,
     "storesCorrected": 0,
@@ -16,9 +16,9 @@
   "issueCounts": {
     "foto_arquivo_inexistente": 32,
     "link_nao_direto_ou_placeholder": 52,
-    "loja_categoria_incorreta": 18,
+    "loja_categoria_incorreta": 58,
     "sem_botao_compra": 1,
-    "sem_foto": 221,
+    "sem_foto": 274,
     "sem_link": 29,
     "titulo_generico_ou_incompleto": 1
   },
@@ -898,25 +898,305 @@
         "lojaSugerida": "impacto-fe"
       },
       {
-        "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
-        "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
-        "storeId": "grife-prime",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-montaria"
+        "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
+        "title": "Castela Cinto Country Unissex preto com cavalo em bronze",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
       },
       {
-        "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
-        "title": "Camisa Feminina Country Radade bordada manga longa",
-        "storeId": "grife-prime",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-montaria"
+        "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
+        "title": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
       },
       {
-        "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
-        "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
-        "storeId": "grife-prime",
+        "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+        "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+        "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+        "title": "Bota Botina feminina texana country com zíper ou elástico",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+        "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+        "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+        "title": "Bota Texana Country Masculina cano longo marrom 801",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+        "title": "ROPER Bota Country Masculina Marrom",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-material-escolar-completo-com-mochila-cabo-de-aco-no-35064b30",
+        "title": "Kit Material Escolar Completo com Mochila Cabo de Aço Notebook",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-mochila-e-material-escolar-menino-infantil-completo-cb22d9bb",
+        "title": "Kit Mochila e Material Escolar Menino Infantil Completo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-bolsa-de-caneta-kuromi-roxa-de-12-capsulas-e05357fd",
+        "title": "Bolsa de Caneta Kuromi Roxa de 12 Cápsulas",
+        "storeId": "impacto-livraria",
         "status": "revisao_manual",
-        "lojaSugerida": "impacto-montaria"
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-material-escolar-tema-futebol-com-bolsa-lona-9019f072",
+        "title": "Kit Material Escolar Tema Futebol com Bolsa Lona",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-de-estilo-novo-escolar-para-estudantes-bba98bc4",
+        "title": "Mochila de Estilo Novo Escolar para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-bolsa-grande-feminina-para-notebook-026efe70",
+        "title": "Mochila Escolar Bolsa Grande Feminina para Notebook",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-floresta-7d6388c1",
+        "title": "Mochila Escolar 42x30 cm Estilo Floresta",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-de-grande-capacidade-040d9862",
+        "title": "Mochila Escolar de Grande Capacidade",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-menino-menina-faculdade-trabalho-30l-1816e3b5",
+        "title": "Mochila Escolar Menino/Menina Faculdade Trabalho 30L",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-de-mochila-escolar-para-rapaz-cf9652cf",
+        "title": "Kit de Mochila Escolar para Rapaz",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-simples-moderno-f8baa3d4",
+        "title": "Mochila Escolar 42x30 cm Estilo Simples Moderno",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-conjunto-de-mochila-escolar-para-estudantes-8b5a8ffc",
+        "title": "Conjunto de Mochila Escolar para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-infantil-com-dinossauros-7034ece2",
+        "title": "Mochila Escolar Infantil com Dinossauros",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-para-novo-ano-escolar-13957ddb",
+        "title": "Mochila Escolar para Novo Ano Escolar",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-hawlander-mochila-escolar-infantil-para-meninas-87c3bb05",
+        "title": "Hawlander Mochila Escolar Infantil para Meninas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-bolsa-feminina-de-rodinhas-dog-lilas-33a819b5",
+        "title": "Mochila Bolsa Feminina de Rodinhas Dog - Lilás",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bolsa-escolar-hello-kitty-com-lancheira-para-meninas-98cb2bbf",
+        "title": "Bolsa escolar Hello Kitty com lancheira para meninas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-de-rodinhas-futebol-masculina-2774458f",
+        "title": "Mochila Infantil de Rodinhas Futebol Masculina",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-creche-lancheira-estojo-zoop-com-canetinhas-52c34250",
+        "title": "Kit Mochila Creche + Lancheira + Estojo ZOOP com Canetinhas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-flvge-caderno-cristao-para-estudos-3b1a349d",
+        "title": "FLVGE Caderno cristão para estudos",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-monster-jam-mini-mochila-com-lancheira-para-criancas-c69c6cd0",
+        "title": "Monster Jam Mini Mochila com Lancheira para Crianças",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-e-estojo-masculina-bolso-notebook-shock-pret-7adb1a84",
+        "title": "Kit Mochila e Estojo Masculina Bolso Notebook Shock - Preto",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-sanrio-mochila-infantil-kuromi-a7726b17",
+        "title": "SANRIO Mochila infantil Kuromi",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-escolar-infantil-cristiano-ronaldo-cr7-rodinhas-97a489ce",
+        "title": "Mochila Escolar Infantil Cristiano Ronaldo CR7 Rodinhas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-escolar-emoji-lhama-grande-b9f22827",
+        "title": "Mochila Escolar Emoji Lhama Grande",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-capivara-rosa-03429b38",
+        "title": "Mochila Infantil Capivara Rosa",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-heritage-2-0-04aa4fc2",
+        "title": "Mochila Heritage 2.0",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-costas-lancheira-infantil-zoop-amarelo-328faa90",
+        "title": "Kit Mochila Costas + Lancheira Infantil ZOOP - Amarelo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-escolar-3-em-1-com-mochila-lancheira-termica-e-estoj-7b7272c8",
+        "title": "Kit escolar 3 em 1 com mochila, lancheira térmica e estojo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-de-costas-creche-zoop-azul-marinho-55793e6e",
+        "title": "Mochila Infantil de Costas Creche ZOOP - Azul Marinho",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-get-trend-marvel-spiderman-kit-escolar-fcff5ba5",
+        "title": "Get Trend Marvel Spiderman Kit escolar",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-star-wars-mochila-baby-yoda-com-lancheira-8fc3c8d3",
+        "title": "STAR WARS Mochila Baby Yoda com lancheira",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-canetas-esferograficas-diamante-cristal-colorido-3e33b12c",
+        "title": "Kit Canetas Esferográficas Diamante Cristal Colorido",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
+        "title": "Chinelo Preto Infantil Dino Dinossauro",
+        "storeId": "impacto-calcados",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
       }
     ],
     "sem_foto": [
@@ -1875,114 +2155,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
-        "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
-        "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
-        "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
-        "title": "Camisa Feminina Country Radade bordada manga longa",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
-        "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
-        "title": "Bota Botina feminina texana country com zíper ou elástico",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
-        "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
-        "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
-        "title": "Bota Texana Country Masculina cano longo marrom 801",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
-        "title": "ROPER Bota Country Masculina Marrom",
-        "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
-        "title": "Sela Americana preta simples completa com manta e freio inox",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
-        "title": "Sela Americana Tradicional marrom 16 polegadas",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
-        "title": "Sela Australiana marrom com rédea e cabeçada completa",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
-        "title": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
-        "title": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
-        "title": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
-        "title": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
-        "title": "Estribos ingleses almofadados para equitação",
-        "storeId": "impacto-montaria",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-4-pecas-1b443440",
         "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 4 peças",
         "storeId": "impacto-casa",
@@ -2244,6 +2416,432 @@
         "id": "importado-amazon-philco-micro-ondas-pmo38e-limpa-facil-1400w-220-v-5d0b2519",
         "title": "Philco Micro-ondas PMO38E Limpa Fácil 1400W - 220 V",
         "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-kit-12-unidades-material-escolar-infantil-6-pecas-comple-b1d5600d",
+        "title": "Kit 12 Unidades Material Escolar Infantil 6 Peças Completo",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-bolsa-de-caneta-kuromi-roxa-de-12-capsulas-e05357fd",
+        "title": "Bolsa de Caneta Kuromi Roxa de 12 Cápsulas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-kit-material-escolar-tema-futebol-com-bolsa-lona-9019f072",
+        "title": "Kit Material Escolar Tema Futebol com Bolsa Lona",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-estojo-escolar-grande-capacidade-cor-solida-1890b9a2",
+        "title": "Estojo Escolar Grande Capacidade Cor Sólida",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-estojo-escolar-com-conjunto-de-lapis-e-materiais-4fefa611",
+        "title": "Estojo Escolar com Conjunto de Lápis e Materiais",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-kit-de-mochila-escolar-para-rapaz-cf9652cf",
+        "title": "Kit de Mochila Escolar para Rapaz",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-conjunto-de-mochila-escolar-para-estudantes-8b5a8ffc",
+        "title": "Conjunto de Mochila Escolar para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-estojo-escolar-transparente-multicolorido-para-estudante-cc6f7453",
+        "title": "Estojo Escolar Transparente Multicolorido para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-estojo-escolar-com-frete-gratis-b4f6d575",
+        "title": "Estojo Escolar com Frete Grátis",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-kit-canetinha-24-unidades-coloridas-escolar-estojo-04e3d317",
+        "title": "Kit Canetinha 24 Unidades Coloridas Escolar Estojo",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-suporte-para-caneta-de-escrivaninha-com-9-divisorias-4f135f6e",
+        "title": "Suporte para caneta de escrivaninha com 9 divisórias",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bolsa-escolar-hello-kitty-com-lancheira-para-meninas-98cb2bbf",
+        "title": "Bolsa escolar Hello Kitty com lancheira para meninas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-kit-criativo-infantil-com-canetinhas-24-36-48-e-60-cores-62f30cac",
+        "title": "Kit Criativo Infantil com Canetinhas 24, 36, 48 e 60 Cores",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-flvge-caderno-cristao-para-estudos-3b1a349d",
+        "title": "FLVGE Caderno cristão para estudos",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-taimes-necessaire-estojo-transparente-stitch-disney-162d6047",
+        "title": "Taimes Necessaire Estojo Transparente Stitch Disney",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tiefossi-caderno-pautado-b5-com-capa-dura-5e8cd1c2",
+        "title": "TIEFOSSI Caderno pautado B5 com capa dura",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-caderno-com-5-materias-pautado-para-faculdade-53d312b6",
+        "title": "Caderno com 5 matérias pautado para faculdade",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-livro-bobbie-capivara-canetinhas-touch-marca-texto-1c1e8c0a",
+        "title": "Livro Bobbie Capivara + Canetinhas Touch Marca Texto",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-de-costas-creche-zoop-azul-marinho-55793e6e",
+        "title": "Mochila Infantil de Costas Creche ZOOP - Azul Marinho",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-get-trend-marvel-spiderman-kit-escolar-fcff5ba5",
+        "title": "Get Trend Marvel Spiderman Kit escolar",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-star-wars-mochila-baby-yoda-com-lancheira-8fc3c8d3",
+        "title": "STAR WARS Mochila Baby Yoda com lancheira",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-takeya-garrafa-de-agua-esportiva-em-aco-inox-40b9bd87",
+        "title": "Takeya Garrafa de água esportiva em aço inox",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-wildkin-garrafa-infantil-de-aco-inox-400-ml-b3010fd0",
+        "title": "Wildkin Garrafa infantil de aço inox 400 ml",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-estojo-luxoso-30-anos-caran-d-ache-edicao-limitada-52c7e6c6",
+        "title": "Estojo Luxoso 30 Anos Caran D'Ache Edição Limitada",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-beadthoven-conjunto-com-12-canetas-decorativas-8c2414b0",
+        "title": "Beadthoven Conjunto com 12 canetas decorativas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-marcadores-touch-ponta-dupla-100-120-168-204-262-cores-91df6328",
+        "title": "Marcadores Touch ponta dupla 100/120/168/204/262 cores",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-conjunto-profissional-de-160-lapis-aquarela-6047a531",
+        "title": "Conjunto profissional de 160 lápis aquarela",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-caderno-homem-aranha-tilibra-universitario-variacao-7688840b",
+        "title": "Caderno Homem Aranha TILIBRA Universitário - variação",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelo-nuvem-anatomico-100-eva-0e08b4ae",
+        "title": "Chinelo Nuvem Anatômico 100% EVA",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelo-feminino-com-suporte-de-arco-c86ec456",
+        "title": "Chinelo Feminino com Suporte de Arco",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelo-feminino-verao-cortica-63ffbce1",
+        "title": "Chinelo Feminino Verão Cortiça",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelo-rider-feel-slide-masculino-preto-8d1886db",
+        "title": "Chinelo Rider Feel Slide Masculino Preto",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelos-ortopedicos-masculinos-017fbb5d",
+        "title": "Chinelos Ortopédicos Masculinos",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-pantufa-chinelo-capivara-antiderrapante-dd1ac783",
+        "title": "Pantufa Chinelo Capivara Antiderrapante",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-adidas-adilette-aqua-unissex-adulto-7b29abd9",
+        "title": "Adidas Adilette Aqua Unissex Adulto",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-crocs-crocband-clog-infantil-ballerina-pink-88cfae13",
+        "title": "Crocs Crocband Clog Infantil Ballerina Pink",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-suiyfit-tenis-feminino-bico-largo-f0c332bd",
+        "title": "Suiyfit Tênis Feminino Bico Largo",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-camper-tenis-masculino-de-couro-ariel-42fa3b00",
+        "title": "Camper Tênis Masculino de Couro Ariel",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-beaudrm-sandalia-feminina-salto-gatinho-61bf8a42",
+        "title": "BEAUDRM Sandália Feminina Salto Gatinho",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-planone-bota-de-chuva-curta-feminina-5d759f6d",
+        "title": "Planone Bota de Chuva Curta Feminina",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-masculino-mormaii-urban-smash-6e646d43",
+        "title": "Tênis Masculino Mormaii Urban Smash",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-olympikus-treino-f48e8734",
+        "title": "Tênis Olympikus Treino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-fila-ride-feminino-21996241",
+        "title": "Tênis Fila Ride Feminino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-reebok-classic-leather-infantil-unissex-9fc274aa",
+        "title": "Reebok Classic Leather Infantil Unissex",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fila-f-13-m-masculino-f97a8356",
+        "title": "Fila F-13 M Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fila-disruptor-ii-infantil-802bf630",
+        "title": "Fila Disruptor II Infantil",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-masculino-fila-racer-fastpace-87a8cbd6",
+        "title": "Tênis Masculino Fila Racer Fastpace",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fila-nobella-masculino-83e3598f",
+        "title": "Fila Nobella Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-mizuno-neo-vortex-adulto-unissex-2c723a02",
+        "title": "Tênis Mizuno Neo Vortex Adulto Unissex",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-coturno-feminina-sola-tratorada-623770a3",
+        "title": "Bota Coturno Feminina Sola Tratorada",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bota-feminina-anabela-baixa-couro-usaflex-15d44b33",
+        "title": "Bota Feminina Anabela Baixa Couro Usaflex",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sapato-democrata-air-magnum-preto-6510da45",
+        "title": "Sapato Democrata Air Magnum Preto",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-bestgift-mocassim-masculino-marrom-escuro-8f711fda",
+        "title": "Bestgift Mocassim Masculino Marrom Escuro",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-dockers-pullman-mocassim-masculino-cfdb2fa8",
+        "title": "Dockers Pullman Mocassim Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sapatos-sociais-masculinos-bico-fino-5d7905cb",
+        "title": "Sapatos Sociais Masculinos Bico Fino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-tenis-infantil-menino-klin-freestyle-baby-8b024c36",
+        "title": "Tênis Infantil Menino Klin Freestyle Baby",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-nike-air-force-1-07-masculino-289f68aa",
+        "title": "Nike Air Force 1 07 Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-puma-mb1-iridescent-dreams-masculino-c07f0993",
+        "title": "Puma MB1 Iridescent Dreams Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-nike-air-jordan-1-mid-se-masculino-66f1b33c",
+        "title": "Nike Air Jordan 1 Mid SE Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-muck-boot-rover-infantil-camuflagem-ecab5953",
+        "title": "Muck Boot Rover Infantil Camuflagem",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-sandalia-feminina-versatil-peep-toe-eced857d",
+        "title": "Sandália Feminina Versátil Peep Toe",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-fila-racer-fastpace-masculino-variacao-528f4b51",
+        "title": "Fila Racer Fastpace Masculino - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mizuno-glow-3-feminino-variacao-0d559ee4",
+        "title": "Mizuno Glow 3 Feminino - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mizuno-neo-vortex-variacao-43a768cf",
+        "title": "Mizuno Neo Vortex - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-mizuno-neo-vortex-masculino-variacao-a919dbdc",
+        "title": "Mizuno Neo Vortex Masculino - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-democrata-air-magnum-variacao-e0abe2c7",
+        "title": "Democrata Air Magnum - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-crocs-crocband-variacao-583f9322",
+        "title": "Crocs Crocband - Variação",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-nike-court-vision-low-next-nature-dafeb889",
+        "title": "Nike Court Vision Low Next Nature",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-feminino-courtjam-control-3-original-032e3bc1",
+        "title": "Tenis Adidas Feminino Courtjam Control 3 Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-fila-venture-tracer-2-masculino-confortavel-origin-e1dcc40e",
+        "title": "Tenis FILA Venture Tracer 2 Masculino Confortavel Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-unissex-grand-court-base-20-simp-original-cd742307",
+        "title": "Tenis Adidas Unissex Grand Court Base 20 Simp Original",
+        "storeId": "impacto-calcados",
         "status": "revisao_manual"
       }
     ],

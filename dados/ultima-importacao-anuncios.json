@@ -1,25 +1,127 @@
 {
-  "executedAt": "2026-07-07",
+  "executedAt": "2026-07-09",
   "sourceFiles": {
-    "produtos_amazon_30.docx": 28,
-    "word_30_produtos_buscados_brasil_tendencias_afiliado.docx": 29,
-    "catalogo_amazon_cavalgada_cavalos.docx": 25,
-    "lista_30_eletrodomesticos_amazon_top_disponiveis_v2.docx": 29,
-    "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx": 30
+    "lista_100_materiais_escolares_links_diretos.docx": 95,
+    "lista_200_calcados_amazon_mercado_livre.docx": 91
   },
-  "rawExtracted": 141,
-  "uniqueAfterDeduplication": 141,
+  "rawExtracted": 186,
+  "uniqueAfterDeduplication": 186,
   "productsAdded": 0,
-  "productsUpdated": 141,
-  "activeImported": 13,
-  "manualReviewImported": 128,
+  "productsUpdated": 186,
+  "activeImported": 115,
+  "manualReviewImported": 71,
   "toyStoreCreated": false,
+  "homeRotation": {
+    "prepared": 186,
+    "active": 115,
+    "inactive": 71
+  },
   "imageErrors": [],
   "manualReview": [
     {
-      "id": "importado-amazon-echo-dot-geracao-mais-recente-b0ce2322",
-      "title": "Echo Dot (geração mais recente)",
-      "link": "https://link.amazon/B0hosBXdw",
+      "id": "importado-ml-kit-12-unidades-material-escolar-infantil-6-pecas-comple-b1d5600d",
+      "title": "Kit 12 Unidades Material Escolar Infantil 6 Peças Completo",
+      "link": "https://meli.la/1nt5SkQ",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-bolsa-de-caneta-kuromi-roxa-de-12-capsulas-e05357fd",
+      "title": "Bolsa de Caneta Kuromi Roxa de 12 Cápsulas",
+      "link": "https://meli.la/1jpgWKC",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-tema-futebol-com-bolsa-lona-9019f072",
+      "title": "Kit Material Escolar Tema Futebol com Bolsa Lona",
+      "link": "https://meli.la/312uSx9",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-grande-capacidade-cor-solida-1890b9a2",
+      "title": "Estojo Escolar Grande Capacidade Cor Sólida",
+      "link": "https://meli.la/2RXH9WQ",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-com-conjunto-de-lapis-e-materiais-4fefa611",
+      "title": "Estojo Escolar com Conjunto de Lápis e Materiais",
+      "link": "https://meli.la/1f3EGcK",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-de-mochila-escolar-para-rapaz-cf9652cf",
+      "title": "Kit de Mochila Escolar para Rapaz",
+      "link": "https://meli.la/2E3zBBB",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-conjunto-de-mochila-escolar-para-estudantes-8b5a8ffc",
+      "title": "Conjunto de Mochila Escolar para Estudantes",
+      "link": "https://meli.la/2hrYYBg",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-transparente-multicolorido-para-estudante-cc6f7453",
+      "title": "Estojo Escolar Transparente Multicolorido para Estudantes",
+      "link": "https://meli.la/1WGBLvm",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-com-frete-gratis-b4f6d575",
+      "title": "Estojo Escolar com Frete Grátis",
+      "link": "https://meli.la/1ZL8Zhi",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-canetinha-24-unidades-coloridas-escolar-estojo-04e3d317",
+      "title": "Kit Canetinha 24 Unidades Coloridas Escolar Estojo",
+      "link": "https://meli.la/1CoX4X6",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-suporte-para-caneta-de-escrivaninha-com-9-divisorias-4f135f6e",
+      "title": "Suporte para caneta de escrivaninha com 9 divisórias",
+      "link": "https://link.amazon/B08HXWjB2",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -28,29 +130,9 @@
       ]
     },
     {
-      "id": "importado-amazon-echo-pop-branco-26cc52ee",
-      "title": "Echo Pop branco",
-      "link": "https://link.amazon/B0azZ1fPP",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kindle-16-gb-preto-f1e205fc",
-      "title": "Kindle 16 GB preto",
-      "link": "https://link.amazon/B0eSyLYsd",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kindle-paperwhite-16-gb-1f2aa791",
-      "title": "Kindle Paperwhite 16 GB",
-      "link": "https://link.amazon/B07AX0xZB",
+      "id": "importado-amazon-bolsa-escolar-hello-kitty-com-lancheira-para-meninas-98cb2bbf",
+      "title": "Bolsa escolar Hello Kitty com lancheira para meninas",
+      "link": "https://link.amazon/B07cjtlNH",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -59,19 +141,9 @@
       ]
     },
     {
-      "id": "importado-amazon-ninja-creami-sorveteira-f48d31e3",
-      "title": "Ninja Creami sorveteira",
-      "link": "https://link.amazon/B0eaFpKD8",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-philips-walita-airfryer-forno-12-l-a6f1d0b0",
-      "title": "Philips Walita Airfryer Forno 12 L",
-      "link": "https://link.amazon/B06WgOHfc",
+      "id": "importado-amazon-kit-criativo-infantil-com-canetinhas-24-36-48-e-60-cores-62f30cac",
+      "title": "Kit Criativo Infantil com Canetinhas 24, 36, 48 e 60 Cores",
+      "link": "https://link.amazon/B0iJO5Dz2",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -80,9 +152,9 @@
       ]
     },
     {
-      "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-75fc8b38",
-      "title": "Panela de pressão elétrica Electrolux PCC20",
-      "link": "https://link.amazon/B0amZUJ3y",
+      "id": "importado-amazon-flvge-caderno-cristao-para-estudos-3b1a349d",
+      "title": "FLVGE Caderno cristão para estudos",
+      "link": "https://link.amazon/B08arey2Y",
       "pendencias": [
         "título do link diverge do produto",
         "imagem real não confirmada",
@@ -90,20 +162,9 @@
       ]
     },
     {
-      "id": "importado-amazon-nespresso-essenza-mini-preta-b1fbc339",
-      "title": "Nespresso Essenza Mini preta",
-      "link": "https://link.amazon/B07f97cJP",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-britania-sanduicheira-e-grill-press-dfda3df7",
-      "title": "Britânia Sanduicheira e Grill Press",
-      "link": "https://link.amazon/B0es0d3Oy",
+      "id": "importado-amazon-taimes-necessaire-estojo-transparente-stitch-disney-162d6047",
+      "title": "Taimes Necessaire Estojo Transparente Stitch Disney",
+      "link": "https://link.amazon/B06DoCTaO",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -112,27 +173,93 @@
       ]
     },
     {
-      "id": "importado-amazon-wap-aspirador-vertical-high-speed-plus-947e208f",
-      "title": "WAP Aspirador Vertical High Speed Plus",
-      "link": "https://link.amazon/B0hE69dq0",
+      "id": "importado-amazon-tiefossi-caderno-pautado-b5-com-capa-dura-5e8cd1c2",
+      "title": "TIEFOSSI Caderno pautado B5 com capa dura",
+      "link": "https://link.amazon/B0aNuQJsp",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-com-5-materias-pautado-para-faculdade-53d312b6",
+      "title": "Caderno com 5 matérias pautado para faculdade",
+      "link": "https://link.amazon/B0ajhPyG2",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-livro-bobbie-capivara-canetinhas-touch-marca-texto-1c1e8c0a",
+      "title": "Livro Bobbie Capivara + Canetinhas Touch Marca Texto",
+      "link": "https://link.amazon/B08BcYw7n",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-infantil-de-costas-creche-zoop-azul-marinho-55793e6e",
+      "title": "Mochila Infantil de Costas Creche ZOOP - Azul Marinho",
+      "link": "https://link.amazon/B0gbL87w3",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-get-trend-marvel-spiderman-kit-escolar-fcff5ba5",
+      "title": "Get Trend Marvel Spiderman Kit escolar",
+      "link": "https://link.amazon/B05zBfGgi",
       "pendencias": [
         "título do link diverge do produto",
         "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-wap-robot-w100-aspirador-robo-65017e82",
-      "title": "WAP Robot W100 aspirador robô",
-      "link": "https://link.amazon/B0hqbgaVn",
+      "id": "importado-amazon-star-wars-mochila-baby-yoda-com-lancheira-8fc3c8d3",
+      "title": "STAR WARS Mochila Baby Yoda com lancheira",
+      "link": "https://link.amazon/B02VgrbPf",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-takeya-garrafa-de-agua-esportiva-em-aco-inox-40b9bd87",
+      "title": "Takeya Garrafa de água esportiva em aço inox",
+      "link": "https://link.amazon/B0ioDgGd8",
+      "pendencias": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-wildkin-garrafa-infantil-de-aco-inox-400-ml-b3010fd0",
+      "title": "Wildkin Garrafa infantil de aço inox 400 ml",
+      "link": "https://link.amazon/B05ZmO7bn",
       "pendencias": [
         "título do link diverge do produto",
         "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-wap-lavadora-de-alta-pressao-ousada-plus-a9d22a43",
-      "title": "WAP Lavadora de Alta Pressão Ousada Plus",
-      "link": "https://link.amazon/B05Pb1H3f",
+      "id": "importado-amazon-estojo-luxoso-30-anos-caran-d-ache-edicao-limitada-52c7e6c6",
+      "title": "Estojo Luxoso 30 Anos Caran D'Ache Edição Limitada",
+      "link": "https://link.amazon/B03gu3aqD",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -141,656 +268,27 @@
       ]
     },
     {
-      "id": "importado-amazon-jbl-go-4-preta-df2d2805",
-      "title": "JBL Go 4 preta",
-      "link": "https://link.amazon/B0gnIAKVM",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-jbl-wave-buds-2-316fcd19",
-      "title": "JBL Wave Buds 2",
-      "link": "https://link.amazon/B05Zhkgfa",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-samsung-galaxy-buds-core-b0019a76",
-      "title": "Samsung Galaxy Buds Core",
-      "link": "https://link.amazon/B02BpcFE5",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-tramontina-monaco-jogo-de-panelas-5-pecas-3d3f7382",
-      "title": "Tramontina Mônaco jogo de panelas 5 peças",
-      "link": "https://link.amazon/B0ftixFuH",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-tramontina-solar-inox-6-pecas-1b733944",
-      "title": "Tramontina Solar inox 6 peças",
-      "link": "https://link.amazon/B00MRXyU6",
+      "id": "importado-amazon-beadthoven-conjunto-com-12-canetas-decorativas-8c2414b0",
+      "title": "Beadthoven Conjunto com 12 canetas decorativas",
+      "link": "https://link.amazon/B0eGiZtYV",
       "pendencias": [
         "título do link diverge do produto",
         "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-stanley-quencher-h2-0-887-ml-78711ebf",
-      "title": "Stanley Quencher H2.0 887 ml",
-      "link": "https://link.amazon/B05V1wcXV",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-philco-soft-brush-escova-secadora-e0aa1cbd",
-      "title": "Philco Soft Brush escova secadora",
-      "link": "https://link.amazon/B09EtE5Pg",
-      "pendencias": [
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-taiff-secador-tourmaline-2100-w-15c4b454",
-      "title": "Taiff Secador Tourmaline 2100 W",
-      "link": "https://link.amazon/B08uzAsrP",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-la-roche-posay-anthelios-xl-protect-fps60-b5d85c4c",
-      "title": "La Roche-Posay Anthelios XL-Protect FPS60",
-      "link": "https://link.amazon/B0j9xqkKp",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-bosch-gsr-1000-smart-com-acessorios-163b6d4d",
-      "title": "Bosch GSR 1000 Smart com acessórios",
-      "link": "https://link.amazon/B01cAIf3P",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-mondial-liquidificador-turbo-power-8df5d041",
-      "title": "Mondial Liquidificador Turbo Power",
-      "link": "https://link.amazon/B0dTrkQgg",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-amazfit-bip-6-ba5e4b2d",
-      "title": "Amazfit Bip 6",
-      "link": "https://link.amazon/B05rIdjXJ",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-jbl-tune-520bt-preto-2b4c68ba",
-      "title": "JBL Tune 520BT preto",
-      "link": "https://link.amazon/B0fipNzyr",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-echo-spot-com-alexa-7ec62b3f",
-      "title": "Echo Spot com Alexa",
-      "link": "https://link.amazon/B041pdlra",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-ssd-kingston-nv3-1tb-m-2-2280-nvme-gen4-desempenho-e-efi-7f74a4f5",
-      "title": "SSD 1TB",
-      "link": "https://link.amazon/B0fhQlOmf",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-fone-de-ouvido-bluetooth-60082827",
-      "title": "Fone de ouvido Bluetooth",
-      "link": "https://link.amazon/B08s7WqYX",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-samsung-galaxy-s24-fe-5g-celular-256gb-8gb-ram-tela-6-7--fdd070d0",
-      "title": "Smartphone Samsung Galaxy",
-      "link": "https://link.amazon/B04fYj9tm",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-liquidificador-fe3b690f",
-      "title": "Liquidificador",
-      "link": "https://link.amazon/B0eTthMea",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-de-chave-de-fenda-b41fac3e",
-      "title": "Kit de chave de fenda",
-      "link": "https://link.amazon/B0gBsBZL8",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-aparador-de-pelos-philips-all-in-one-16-em-1-serie-9000--8b755906",
-      "title": "Aparador de Pelos Philips All-in-One 16 em 1 Série 9000 | Máquina para Rosto, Cabelo e Corpo | Barbeador Elétrico Multigroom à prova d'água | MG9532/15",
-      "link": "https://link.amazon/B0307OEqr",
-      "pendencias": [
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-mouse-sem-fio-60d95b7b",
-      "title": "Mouse sem fio",
-      "link": "https://link.amazon/B0e9rvni1",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-soundcore-projetor-portatil-da-anker-netflix-4k-oficial--7bb727e2",
-      "title": "Mini projetor portátil",
-      "link": "https://link.amazon/B02awFH1Z",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-smart-tv-1b443a57",
-      "title": "Smart TV",
-      "link": "https://link.amazon/B04o1cqVi",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-short-masculino-d918c4b3",
-      "title": "Short masculino",
-      "link": "https://link.amazon/B0dSaAzMK",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-com-10-pares-de-meias-cano-alto-algodao-usee-brasil--3e73619e",
-      "title": "Kit com 10 Pares de Meias Cano Alto Algodão Usee Brasil (BR, Alfa, G, Regular, Regular, Branco) : Amazon.com.br: Moda",
-      "link": "https://link.amazon/B06fzFcuD",
-      "pendencias": [
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-capa-de-chuva-impermeavel-com-capuz-para-motoboy-e-motoc-459f1b5b",
-      "title": "Capa de chuva para motociclista",
-      "link": "https://link.amazon/B0f1HdJvW",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-monitor-para-bebes-baba-eletronica-b3329280",
-      "title": "Monitor para bebês / babá eletrônica",
-      "link": "https://link.amazon/B05OcgorY",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-azeite-de-oliva-6f89abfc",
-      "title": "Azeite de oliva",
-      "link": "https://link.amazon/B0dVC3PAr",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-tapete-higienico-para-pets-98a9c175",
-      "title": "Tapete higiênico para pets",
-      "link": "https://link.amazon/B06Oskf3X",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-estojo-escolar-4181ca81",
-      "title": "Estojo escolar",
-      "link": "https://link.amazon/B04dJNUPB",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-piscina-inflavel-3fb5a757",
-      "title": "Piscina inflável",
-      "link": "https://link.amazon/B0bP2HlA8",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-jogo-de-lencol-queen-1a9228b1",
-      "title": "Jogo de lençol queen",
-      "link": "https://link.amazon/B0hVY9BdW",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-garrafa-termica-9619258c",
-      "title": "Garrafa térmica",
-      "link": "https://link.amazon/B0esX8C8S",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-camera-de-seguranca-wi-fi-2f99a47e",
-      "title": "Câmera de segurança Wi-Fi",
-      "link": "https://link.amazon/B0fD8APQi",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-ventilador-de-mesa-7355d113",
-      "title": "Ventilador de mesa",
-      "link": "https://link.amazon/B0bGtHHJU",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-regua-de-extensao-eletrica-d82344d1",
-      "title": "Régua de extensão elétrica",
-      "link": "https://link.amazon/B0fg008x6",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-jogo-de-talheres-c5857c4c",
-      "title": "Jogo de talheres",
-      "link": "https://link.amazon/B0ch1a2Ep",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-impressora-multifuncional-cc166385",
-      "title": "Impressora multifuncional",
-      "link": "https://link.amazon/B0dJRHHgx",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-smartwatch-relogio-digital-04969c95",
-      "title": "Smartwatch / relógio digital",
-      "link": "https://link.amazon/B0dfRxG98",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-livros-de-autoajuda-e50fddd8",
-      "title": "Livros de autoajuda",
-      "link": "https://link.amazon/B0iNzdtmF",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada"
-      ]
-    },
-    {
-      "id": "importado-amazon-medidor-de-pressao-arterial-e75cf547",
-      "title": "Medidor de pressão arterial",
-      "link": "https://link.amazon/B0483mcNM",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-air-fryer-7c2877c2",
-      "title": "Air fryer",
-      "link": "https://link.amazon/B01C2PUSM",
-      "pendencias": [
-        "link não confirmado online",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
-      "title": "Cinto Cowboy Vintage Western Unissex com fivela floral",
-      "link": "https://link.amazon/B0dOyDHVO",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
-      "title": "Castela Cinto Country Unissex preto com cavalo em bronze",
-      "link": "https://link.amazon/B0fp3agCv",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
-      "title": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
-      "link": "https://link.amazon/B06rvfSSf",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
-      "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
-      "link": "https://link.amazon/B06a1b9Su",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
-      "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
-      "link": "https://link.amazon/B06wiYkgg",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
-      "title": "Camisa Feminina Country Radade bordada manga longa",
-      "link": "https://link.amazon/B07ndTeqT",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
-      "title": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
-      "link": "https://link.amazon/B08MYK46R",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
-      "title": "Bota Botina feminina texana country com zíper ou elástico",
-      "link": "https://link.amazon/B0c1gXdmC",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
-      "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
-      "link": "https://link.amazon/B07J7hMN1",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
-      "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
-      "link": "https://link.amazon/B00k6MDTs",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
-      "title": "Bota Texana Country Masculina cano longo marrom 801",
-      "link": "https://link.amazon/B03KNdtgL",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
-      "title": "ROPER Bota Country Masculina Marrom",
-      "link": "https://link.amazon/B0gweOWXa",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
-      "title": "Sela Americana preta simples completa com manta e freio inox",
-      "link": "https://link.amazon/B0231tbhV",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
-      "title": "Sela Americana Tradicional marrom 16 polegadas",
-      "link": "https://link.amazon/B0av77mAv",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
-      "title": "Sela Australiana marrom com rédea e cabeçada completa",
-      "link": "https://link.amazon/B05QYnZAk",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
-      "title": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
-      "link": "https://link.amazon/B00qiBiY6",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-peitoral-cabecada-argolados-para-cavalo-bff91087",
-      "title": "Kit Peitoral + Cabeçada argolados para cavalo",
-      "link": "https://link.amazon/B077igHUb",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
-      "title": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
-      "link": "https://link.amazon/B0fTcSr0s",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
-      "title": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
-      "link": "https://link.amazon/B02D0hzpv",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
-      "title": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
-      "link": "https://link.amazon/B06PI8m9L",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
-      "title": "Estribos ingleses almofadados para equitação",
-      "link": "https://link.amazon/B0b07BAs2",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-4-pecas-1b443440",
-      "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 4 peças",
-      "link": "https://link.amazon/B0fD1I6rU",
+      "id": "importado-amazon-marcadores-touch-ponta-dupla-100-120-168-204-262-cores-91df6328",
+      "title": "Marcadores Touch ponta dupla 100/120/168/204/262 cores",
+      "link": "https://link.amazon/B06tFBsf1",
       "pendencias": [
         "título do link diverge do produto",
         "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-3-pecas-a288b64f",
-      "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 3 peças",
-      "link": "https://link.amazon/B02NwJ608",
+      "id": "importado-amazon-conjunto-profissional-de-160-lapis-aquarela-6047a531",
+      "title": "Conjunto profissional de 160 lápis aquarela",
+      "link": "https://link.amazon/B081QQow0",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -799,17 +297,9 @@
       ]
     },
     {
-      "id": "importado-amazon-liquidificador-oster-1400-full-preto-3-2-l-127v-08b89a1c",
-      "title": "Liquidificador Oster 1400 Full Preto 3,2 L - 127V",
-      "link": "https://link.amazon/B09WILEQB",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-liquidificador-oster-1400-full-preto-3-2-l-220v-633b1454",
-      "title": "Liquidificador Oster 1400 Full Preto 3,2 L - 220V",
-      "link": "https://link.amazon/B02efQEtl",
+      "id": "importado-amazon-caderno-homem-aranha-tilibra-universitario-variacao-7688840b",
+      "title": "Caderno Homem Aranha TILIBRA Universitário - variação",
+      "link": "https://link.amazon/B0b7OqGwe",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -818,9 +308,37 @@
       ]
     },
     {
-      "id": "importado-amazon-blender-ultra-power-1000-oster-com-2-copos-127v-e35aad9e",
-      "title": "Blender Ultra Power 1000 Oster com 2 Copos - 127V",
-      "link": "https://link.amazon/B08coqJeG",
+      "id": "importado-amazon-chinelo-nuvem-anatomico-100-eva-0e08b4ae",
+      "title": "Chinelo Nuvem Anatômico 100% EVA",
+      "link": "https://link.amazon/B0brugyCw",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "id": "importado-amazon-chinelo-feminino-com-suporte-de-arco-c86ec456",
+      "title": "Chinelo Feminino com Suporte de Arco",
+      "link": "https://link.amazon/B0aDveCCI",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "id": "importado-amazon-chinelo-feminino-verao-cortica-63ffbce1",
+      "title": "Chinelo Feminino Verão Cortiça",
+      "link": "https://link.amazon/B09fYlJKK",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-chinelo-rider-feel-slide-masculino-preto-8d1886db",
+      "title": "Chinelo Rider Feel Slide Masculino Preto",
+      "link": "https://link.amazon/B08ttzned",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -829,18 +347,18 @@
       ]
     },
     {
-      "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-6-l-127v-e01f6a2e",
-      "title": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 127V",
-      "link": "https://link.amazon/B06O5Alk7",
+      "id": "importado-amazon-chinelos-ortopedicos-masculinos-017fbb5d",
+      "title": "Chinelos Ortopédicos Masculinos",
+      "link": "https://link.amazon/B07qfC3ZM",
       "pendencias": [
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
+        "título do link diverge do produto",
+        "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-6-l-220v-5d442c21",
-      "title": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 220V",
-      "link": "https://link.amazon/B00nNViLC",
+      "id": "importado-amazon-pantufa-chinelo-capivara-antiderrapante-dd1ac783",
+      "title": "Pantufa Chinelo Capivara Antiderrapante",
+      "link": "https://link.amazon/B08xqeIuI",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -849,9 +367,19 @@
       ]
     },
     {
-      "id": "importado-amazon-cooktop-4-bocas-de-inducao-electrolux-experience-ie60p-25efddb5",
-      "title": "Cooktop 4 Bocas de Indução Electrolux Experience IE60P",
-      "link": "https://link.amazon/B010EpifQ",
+      "id": "importado-amazon-adidas-adilette-aqua-unissex-adulto-7b29abd9",
+      "title": "Adidas Adilette Aqua Unissex Adulto",
+      "link": "https://link.amazon/B08kxGBzk",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-crocs-crocband-clog-infantil-ballerina-pink-88cfae13",
+      "title": "Crocs Crocband Clog Infantil Ballerina Pink",
+      "link": "https://link.amazon/B0bhLnyEX",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -860,9 +388,19 @@
       ]
     },
     {
-      "id": "importado-amazon-fogao-cooktop-de-inducao-philco-4-bocas-pct40a-bc44317b",
-      "title": "Fogão Cooktop de Indução Philco 4 bocas PCT40A",
-      "link": "https://link.amazon/B0ec5FpKL",
+      "id": "importado-amazon-suiyfit-tenis-feminino-bico-largo-f0c332bd",
+      "title": "Suiyfit Tênis Feminino Bico Largo",
+      "link": "https://link.amazon/B0egKVmdt",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-camper-tenis-masculino-de-couro-ariel-42fa3b00",
+      "title": "Camper Tênis Masculino de Couro Ariel",
+      "link": "https://link.amazon/B09WbeDmD",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -871,19 +409,27 @@
       ]
     },
     {
-      "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-110v-bb6fdf2a",
-      "title": "Philips Walita Airfryer Forno Série 5000 12 L - 110V",
-      "link": "https://link.amazon/B0ftKLGke",
+      "id": "importado-amazon-beaudrm-sandalia-feminina-salto-gatinho-61bf8a42",
+      "title": "BEAUDRM Sandália Feminina Salto Gatinho",
+      "link": "https://link.amazon/B0ir44DDS",
       "pendencias": [
         "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
+        "imagem real não confirmada"
       ]
     },
     {
-      "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-220v-1a395bdd",
-      "title": "Philips Walita Airfryer Forno Série 5000 12 L - 220V",
-      "link": "https://link.amazon/B07cRbTxb",
+      "id": "importado-amazon-planone-bota-de-chuva-curta-feminina-5d759f6d",
+      "title": "Planone Bota de Chuva Curta Feminina",
+      "link": "https://link.amazon/B0e0YDTEV",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-masculino-mormaii-urban-smash-6e646d43",
+      "title": "Tênis Masculino Mormaii Urban Smash",
+      "link": "https://link.amazon/B0e9Y43db",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -892,9 +438,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philips-walita-airfryer-serie-1000-xl-6-2-l-110v-33ea132c",
-      "title": "Philips Walita Airfryer Série 1000 XL 6,2 L - 110V",
-      "link": "https://link.amazon/B03lDNuzt",
+      "id": "importado-amazon-tenis-olympikus-treino-f48e8734",
+      "title": "Tênis Olympikus Treino",
+      "link": "https://link.amazon/B05zEfdnv",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -903,19 +449,9 @@
       ]
     },
     {
-      "id": "importado-amazon-electrolux-air-fryer-rita-lobo-eaf40-5-8-l-127v-0c68cc99",
-      "title": "Electrolux Air Fryer Rita Lobo EAF40 5,8 L - 127V",
-      "link": "https://link.amazon/B0aNScTOj",
-      "pendencias": [
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-air-fryer-forno-eaf90-12-l-5-em-1-rotisserie--af58cf05",
-      "title": "Electrolux Air Fryer Forno EAF90 12 L 5 em 1 Rotisserie - 220V",
-      "link": "https://link.amazon/B05bFz6RN",
+      "id": "importado-amazon-tenis-fila-ride-feminino-21996241",
+      "title": "Tênis Fila Ride Feminino",
+      "link": "https://link.amazon/B03pRQCeC",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -924,9 +460,49 @@
       ]
     },
     {
-      "id": "importado-amazon-electrolux-air-fryer-forno-5-em-1-12-l-digital-f04570a9",
-      "title": "Electrolux Air Fryer Forno 5 em 1 12 L Digital",
-      "link": "https://link.amazon/B01q7iGND",
+      "id": "importado-amazon-reebok-classic-leather-infantil-unissex-9fc274aa",
+      "title": "Reebok Classic Leather Infantil Unissex",
+      "link": "https://link.amazon/B06H0MI8g",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-fila-f-13-m-masculino-f97a8356",
+      "title": "Fila F-13 M Masculino",
+      "link": "https://link.amazon/B01YFJKPc",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-fila-disruptor-ii-infantil-802bf630",
+      "title": "Fila Disruptor II Infantil",
+      "link": "https://link.amazon/B05aiv6mT",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-masculino-fila-racer-fastpace-87a8cbd6",
+      "title": "Tênis Masculino Fila Racer Fastpace",
+      "link": "https://link.amazon/B05n3pEo0",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-fila-nobella-masculino-83e3598f",
+      "title": "Fila Nobella Masculino",
+      "link": "https://link.amazon/B0eNiLWj7",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -935,9 +511,9 @@
       ]
     },
     {
-      "id": "importado-amazon-forno-e-fritadeira-sem-oleo-oster-french-door-42-l-127v-0dbfbad1",
-      "title": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 127V",
-      "link": "https://link.amazon/B05cofquE",
+      "id": "importado-amazon-tenis-mizuno-neo-vortex-adulto-unissex-2c723a02",
+      "title": "Tênis Mizuno Neo Vortex Adulto Unissex",
+      "link": "https://link.amazon/B0hOhNwAN",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -946,9 +522,19 @@
       ]
     },
     {
-      "id": "importado-amazon-forno-e-fritadeira-sem-oleo-oster-french-door-42-l-220v-aa59ac20",
-      "title": "Forno e Fritadeira Sem Óleo Oster French Door 42 L - 220V",
-      "link": "https://link.amazon/B02qPuJPM",
+      "id": "importado-amazon-bota-coturno-feminina-sola-tratorada-623770a3",
+      "title": "Bota Coturno Feminina Sola Tratorada",
+      "link": "https://link.amazon/B01yTdElz",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-feminina-anabela-baixa-couro-usaflex-15d44b33",
+      "title": "Bota Feminina Anabela Baixa Couro Usaflex",
+      "link": "https://link.amazon/B03uy4PcW",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -957,9 +543,9 @@
       ]
     },
     {
-      "id": "importado-amazon-forno-eletrico-philco-pfe40i-air-fry-40-l-2-em-1-38d9d418",
-      "title": "Forno Elétrico Philco PFE40I Air Fry 40 L 2 em 1",
-      "link": "https://link.amazon/B00TFphUR",
+      "id": "importado-amazon-sapato-democrata-air-magnum-preto-6510da45",
+      "title": "Sapato Democrata Air Magnum Preto",
+      "link": "https://link.amazon/B08jF7R6F",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -968,41 +554,9 @@
       ]
     },
     {
-      "id": "importado-amazon-nespresso-vertuo-pop-preta-110v-a5ebd474",
-      "title": "Nespresso Vertuo Pop Preta - 110V",
-      "link": "https://link.amazon/B0eWeSjB7",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-philips-walita-espresso-superautomatica-serie-1200-110v-94776495",
-      "title": "Philips Walita Espresso Superautomática Série 1200 - 110V",
-      "link": "https://link.amazon/B0b0Iow6e",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-cafeteira-espresso-oster-primalatte-touch-127v-2bb47962",
-      "title": "Cafeteira Espresso Oster PrimaLatte Touch - 127V",
-      "link": "https://link.amazon/B0g0ctodQ",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-batedeira-planetaria-artisan-kitchenaid-empire-red-220v-0497fe11",
-      "title": "Batedeira Planetária Artisan KitchenAid Empire Red - 220V",
-      "link": "https://link.amazon/B02mH1yt4",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-oster-batedeira-planetaria-digital-bowl-inox-5-l-110v-ea011f2d",
-      "title": "Oster Batedeira Planetária Digital Bowl Inox 5 L - 110V",
-      "link": "https://link.amazon/B0gfMV7jG",
+      "id": "importado-amazon-bestgift-mocassim-masculino-marrom-escuro-8f711fda",
+      "title": "Bestgift Mocassim Masculino Marrom Escuro",
+      "link": "https://link.amazon/B06WDiGyj",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1011,9 +565,19 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-pfe80a-80l-4-resistencias-127-220--8e1ddcf9",
-      "title": "Philco Forno Elétrico PFE80A, 80L, 4 resistências - 127/220 V",
-      "link": "https://link.amazon/B03534BGX",
+      "id": "importado-amazon-dockers-pullman-mocassim-masculino-cfdb2fa8",
+      "title": "Dockers Pullman Mocassim Masculino",
+      "link": "https://link.amazon/B079tkTp6",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-sapatos-sociais-masculinos-bico-fino-5d7905cb",
+      "title": "Sapatos Sociais Masculinos Bico Fino",
+      "link": "https://link.amazon/B0gaYyHsV",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1022,9 +586,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-65l-pfe65-dupla-resistencia-127-v-cc45df70",
-      "title": "Philco Forno Elétrico 65L PFE65 Dupla Resistência - 127 V",
-      "link": "https://link.amazon/B0gHRgyHa",
+      "id": "importado-amazon-tenis-infantil-menino-klin-freestyle-baby-8b024c36",
+      "title": "Tênis Infantil Menino Klin Freestyle Baby",
+      "link": "https://link.amazon/B01g5jw2M",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1033,17 +597,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937",
-      "title": "Philco Forno Elétrico PFE60I Função Dourar - 127 V",
-      "link": "https://link.amazon/B0gqrQthl",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-220-v-cba1afae",
-      "title": "Philco Forno Elétrico PFE60I Função Dourar - 220 V",
-      "link": "https://link.amazon/B04vFZY19",
+      "id": "importado-amazon-nike-air-force-1-07-masculino-289f68aa",
+      "title": "Nike Air Force 1 07 Masculino",
+      "link": "https://link.amazon/B0bilKTU5",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1052,9 +608,9 @@
       ]
     },
     {
-      "id": "importado-amazon-best-forno-eletrico-preto-e-branco-127-v-71ae3d20",
-      "title": "Best Forno Elétrico Preto e Branco - 127 V",
-      "link": "https://link.amazon/B09f4KQim",
+      "id": "importado-amazon-puma-mb1-iridescent-dreams-masculino-c07f0993",
+      "title": "Puma MB1 Iridescent Dreams Masculino",
+      "link": "https://link.amazon/B028RVh1D",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1063,9 +619,9 @@
       ]
     },
     {
-      "id": "importado-amazon-best-forno-eletrico-plus-com-espeto-giratorio-220-v-e0224229",
-      "title": "Best Forno Elétrico Plus com Espeto Giratório - 220 V",
-      "link": "https://link.amazon/B0c8NCD9k",
+      "id": "importado-amazon-nike-air-jordan-1-mid-se-masculino-66f1b33c",
+      "title": "Nike Air Jordan 1 Mid SE Masculino",
+      "link": "https://link.amazon/B09W9A6sI",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1074,9 +630,28 @@
       ]
     },
     {
-      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-80a51280",
-      "title": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 127 V",
-      "link": "https://link.amazon/B0hV1g0Ng",
+      "id": "importado-amazon-muck-boot-rover-infantil-camuflagem-ecab5953",
+      "title": "Muck Boot Rover Infantil Camuflagem",
+      "link": "https://link.amazon/B03WE4XOT",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada"
+      ]
+    },
+    {
+      "id": "importado-amazon-sandalia-feminina-versatil-peep-toe-eced857d",
+      "title": "Sandália Feminina Versátil Peep Toe",
+      "link": "https://link.amazon/B09Oq26zi",
+      "pendencias": [
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio"
+      ]
+    },
+    {
+      "id": "importado-amazon-fila-racer-fastpace-masculino-variacao-528f4b51",
+      "title": "Fila Racer Fastpace Masculino - Variação",
+      "link": "https://link.amazon/B0gHCU8tG",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1085,17 +660,9 @@
       ]
     },
     {
-      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-72b91b7b",
-      "title": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 220 V",
-      "link": "https://link.amazon/B0gJwWB04",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-w-branco-i-c22063e5",
-      "title": "Mondial Forno Elétrico Grand Family II FRN-52-W Branco/Inox - 127 V",
-      "link": "https://link.amazon/B0gz4goVe",
+      "id": "importado-amazon-mizuno-glow-3-feminino-variacao-0d559ee4",
+      "title": "Mizuno Glow 3 Feminino - Variação",
+      "link": "https://link.amazon/B01wVHdAL",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1104,9 +671,9 @@
       ]
     },
     {
-      "id": "importado-amazon-fogatti-forno-eletrico-top-40-127-v-971a5700",
-      "title": "Fogatti Forno Elétrico Top 40 - 127 V",
-      "link": "https://link.amazon/B0gq0WW87",
+      "id": "importado-amazon-mizuno-neo-vortex-variacao-43a768cf",
+      "title": "Mizuno Neo Vortex - Variação",
+      "link": "https://link.amazon/B02JsYTOB",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1115,9 +682,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b",
-      "title": "Philco Forno Elétrico PFE44P Dupla Resistência - 220 V",
-      "link": "https://link.amazon/B0fGFL4ZS",
+      "id": "importado-amazon-mizuno-neo-vortex-masculino-variacao-a919dbdc",
+      "title": "Mizuno Neo Vortex Masculino - Variação",
+      "link": "https://link.amazon/B06SoNnjQ",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1126,9 +693,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-50l-pfe52p-dupla-resistencia-127-v-12b177f6",
-      "title": "Philco Forno Elétrico 50L PFE52P Dupla Resistência - 127 V",
-      "link": "https://link.amazon/B08Aap2we",
+      "id": "importado-amazon-democrata-air-magnum-variacao-e0abe2c7",
+      "title": "Democrata Air Magnum - Variação",
+      "link": "https://link.amazon/B0cNpCURZ",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1137,9 +704,9 @@
       ]
     },
     {
-      "id": "importado-amazon-philco-forno-eletrico-50l-pfe52b-dupla-resistencia-220-v-2b73f90e",
-      "title": "Philco Forno Elétrico 50L PFE52B Dupla Resistência - 220 V",
-      "link": "https://link.amazon/B0acWILfW",
+      "id": "importado-amazon-crocs-crocband-variacao-583f9322",
+      "title": "Crocs Crocband - Variação",
+      "link": "https://link.amazon/B0e2xEivz",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1148,9 +715,9 @@
       ]
     },
     {
-      "id": "importado-amazon-britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce",
-      "title": "Britânia Forno Elétrico BFE55P Dupla Resistência - 220 V",
-      "link": "https://link.amazon/B019MKKA8",
+      "id": "importado-amazon-nike-court-vision-low-next-nature-dafeb889",
+      "title": "Nike Court Vision Low Next Nature",
+      "link": "https://link.amazon/B0eDwRXoT",
       "pendencias": [
         "link não confirmado online",
         "título do link diverge do produto",
@@ -1159,170 +726,30 @@
       ]
     },
     {
-      "id": "importado-amazon-suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3",
-      "title": "Suggar Forno Elétrico de Bancada FE4201PT - 127 V",
-      "link": "https://link.amazon/B00D7zwie",
+      "id": "importado-ml-tenis-adidas-feminino-courtjam-control-3-original-032e3bc1",
+      "title": "Tenis Adidas Feminino Courtjam Control 3 Original",
+      "link": "https://meli.la/1EtFuq9",
       "pendencias": [
-        "link não confirmado online",
         "título do link diverge do produto",
         "imagem real não confirmada",
         "preço dinâmico no anúncio"
       ]
     },
     {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st27lwru-branco-espelhado-127-v-85534206",
-      "title": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 127 V",
-      "link": "https://link.amazon/B0i4uk5sz",
+      "id": "importado-ml-tenis-fila-venture-tracer-2-masculino-confortavel-origin-e1dcc40e",
+      "title": "Tenis FILA Venture Tracer 2 Masculino Confortavel Original",
+      "link": "https://meli.la/1Hrjo7i",
       "pendencias": [
-        "link não confirmado online",
         "título do link diverge do produto",
         "imagem real não confirmada",
         "preço dinâmico no anúncio"
       ]
     },
     {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st25lwru-branco-127-v-c6843c86",
-      "title": "Panasonic Micro-ondas NN-ST25LWRU Branco - 127 V",
-      "link": "https://link.amazon/B02Kfd7Vc",
+      "id": "importado-ml-tenis-adidas-unissex-grand-court-base-20-simp-original-cd742307",
+      "title": "Tenis Adidas Unissex Grand Court Base 20 Simp Original",
+      "link": "https://meli.la/2nMCCyK",
       "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st27lwru-branco-espelhado-220-v-bc2cbf3a",
-      "title": "Panasonic Micro-ondas NN-ST27LWRU Branco Espelhado - 220 V",
-      "link": "https://link.amazon/B0aBP7H9m",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st65lwru-branco-127-v-1c4eba69",
-      "title": "Panasonic Micro-ondas NN-ST65LWRU Branco - 127 V",
-      "link": "https://link.amazon/B0gniS5tK",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st67lsru-inox-antibacteria-127--4fb64dd4",
-      "title": "Panasonic Micro-ondas NN-ST67LSRU Inox Antibactéria - 127 V",
-      "link": "https://link.amazon/B0d7itnTk",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st66nbru-black-glass-220-v-19ed8bb5",
-      "title": "Panasonic Micro-ondas NN-ST66NBRU Black Glass - 220 V",
-      "link": "https://link.amazon/B0etLK8TT",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-panasonic-micro-ondas-nn-st55lmru-prata-220-v-e8215981",
-      "title": "Panasonic Micro-ondas NN-ST55LMRU Prata - 220 V",
-      "link": "https://link.amazon/B02hl8D4v",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-micro-ondas-mt30s-prata-espelhado-com-tira-od-5106bc55",
-      "title": "Electrolux Micro-ondas MT30S Prata Espelhado com Tira Odor - 220 V",
-      "link": "https://link.amazon/B0bMCwqrQ",
-      "pendencias": [
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-micro-ondas-meo44-branco-com-tira-odor-e-mant-d4cc328e",
-      "title": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 127 V",
-      "link": "https://link.amazon/B01dGDbop",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-micro-ondas-meo44-branco-com-tira-odor-e-mant-3ac0d153",
-      "title": "Electrolux Micro-ondas MEO44 Branco com Tira Odor e Manter Aquecido - 220 V",
-      "link": "https://link.amazon/B03myQRLQ",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-micro-ondas-mb37r-branco-com-55-receitas-127--58a910ac",
-      "title": "Electrolux Micro-ondas MB37R Branco com 55 receitas - 127 V",
-      "link": "https://link.amazon/B0d6XGfW3",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-electrolux-micro-ondas-me23s-inox-efficient-127-v-d4f2b052",
-      "title": "Electrolux Micro-ondas ME23S Inox Efficient - 127 V",
-      "link": "https://link.amazon/B00I7oiSX",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-midea-forno-micro-ondas-mxsa35p1-branco-e-preto-127-v-ed11a01e",
-      "title": "Midea Forno Micro-ondas MXSA35P1 Branco e Preto - 127 V",
-      "link": "https://link.amazon/B02xHEZD1",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-lg-micro-ondas-neochef-ms3033ds-127-v-dbeb5038",
-      "title": "LG Micro-ondas NeoChef MS3033DS - 127 V",
-      "link": "https://link.amazon/B0hm25olb",
-      "pendencias": [
-        "link não confirmado online",
-        "título do link diverge do produto",
-        "imagem real não confirmada",
-        "preço dinâmico no anúncio"
-      ]
-    },
-    {
-      "id": "importado-amazon-philco-micro-ondas-pmo38e-limpa-facil-1400w-220-v-5d0b2519",
-      "title": "Philco Micro-ondas PMO38E Limpa Fácil 1400W - 220 V",
-      "link": "https://link.amazon/B064ueRyN",
-      "pendencias": [
-        "link não confirmado online",
         "título do link diverge do produto",
         "imagem real não confirmada",
         "preço dinâmico no anúncio"

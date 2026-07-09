@@ -185,6 +185,20 @@ def classify_product(title: str, description: str = "", hinted_category: str = "
     text = normalize_text(f"{title} {description} {hinted_category}")
     padded_text = f" {text} "
 
+    if "loja livraria prioridade" in text:
+        return {
+            "storeId": "impacto-livraria",
+            "category": "Educacao",
+            "subcategoria": "Material escolar",
+        }
+
+    if "loja calcados prioridade" in text:
+        return {
+            "storeId": "impacto-calcados",
+            "category": "Calcados",
+            "subcategoria": "Calcados",
+        }
+
     if any(
         marker in text
         for marker in (
