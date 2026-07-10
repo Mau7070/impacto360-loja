@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mau7070.github.io/impacto360-loja/sitemap.xml
+Sitemap: https://impacto360afiliado.com.br/sitemap.xml

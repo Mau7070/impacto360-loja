@@ -1,119 +1,176 @@
-# RELATORIO_MELHORIAS_IMPACTO360
+# Relatório de melhorias Impacto360 Afiliado
 
 Data: 2026-07-10
 
-## 1. Resumo da revisao
+## 1. Resumo da auditoria
 
-Esta revisao corrigiu o worktree mais recente da loja Impacto360 Afiliado: `C:\Users\PMNB\Documents\Codex\2026-07-09\us\work\impacto360-publicacao`.
+Foi feita nova auditoria da loja Impacto360 Afiliado com foco em transformar a home em vitrine real de produtos, manter UTF-8 íntegro, preservar a marca e não alterar links de afiliado. Antes das mudanças foi criado o backup `backups/2026-07-10-auditoria-vitrine-categorias-seo.tar.gz`.
 
-A inspecao publica ainda mostrava HTML antigo com codificacao quebrada e textos como "Shopping interno liberado" e "Alas e andares virtuais". Localmente, esses textos tambem existiam em `index.html`, `impacto360.html` e no pacote `pacote-github-pages-pronto`. A correcao sincronizou a home, o fallback 404, a vitrine, as categorias, os blocos de parceiros, o sitemap e as paginas individuais de produto.
+Arquivos centrais alterados:
 
-Backup criado antes das alteracoes:
+- `index.html`, `impacto360.html` e `pacote-github-pages-pronto/index.html`.
+- `scripts/gerar-paginas-produtos.mjs`.
+- `scripts/lint-impacto360.mjs`.
+- `robots.txt`.
+- `sitemap.xml` e `pacote-github-pages-pronto/sitemap.xml`.
+- `RELATORIO_MELHORIAS_IMPACTO360.md`.
+- `dados/auditoria-produtos-impacto360.json`.
 
-- `backups/2026-07-10-utf8-vitrine-publicacao.tar.gz`
+## 2. Produtos encontrados no catálogo
 
-## 2. O que foi corrigido
+Fonte auditada: `dados/products.json`.
 
-- UTF-8: removidos marcadores de mojibake dos HTMLs publicos e arquivos auxiliares rastreados.
-- Hero: "Shopping interno liberado" foi substituido por "Explore ofertas selecionadas".
-- Categorias: "Alas e andares virtuais" foi substituido por "Categorias do shopping".
-- Home: a vitrine renderiza produtos reais com imagem, preco, loja, linha de avaliacao e botao "Ver oferta".
-- Categorias comerciais: 11 atalhos claros foram adicionados/validados.
-- Como funciona: secao completa com 4 passos.
-- Parceiros: blocos separados para Top Amazon, Top Mercado Livre e Outras lojas parceiras.
-- Produtos individuais: 323 paginas estaticas em `/produto/<id>/`, cada uma com JSON-LD `Product`.
-- Sitemap: atualizado com a home e as paginas de produto.
+- Produtos totais no catálogo: 700.
+- Produtos ativos/publicáveis com link e imagem: 323.
+- Lojas cadastradas: 26.
+- Produtos com nome: 323.
+- Produtos com imagem: 323.
+- Produtos com preço: 323.
+- Produtos com loja/origem: 323.
+- Produtos com link preservado: 323.
+- Produtos com avaliação explícita: 24.
+- Produtos com disponibilidade explícita: 30.
+- Produtos com categoria: 323.
+- Produtos com data de última revisão/verificação: 323.
 
-## 3. Arquivos principais alterados
+## 3. Produtos completos
 
-- `index.html`
-- `impacto360.html`
-- `404.html`
-- `pacote-github-pages-pronto/index.html`
-- `pacote-github-pages-pronto/404.html`
-- `sitemap.xml`
-- `pacote-github-pages-pronto/sitemap.xml`
-- `package.json`
-- `impacto-360-afiliados/src/data/categorias.json`
-- `impacto-360-afiliados/src/utils/catalogAutomation.js`
+Critério completo usado: nome, imagem, preço, loja, link, avaliação, disponibilidade, categoria e última verificação.
 
-## 4. Arquivos criados
+- Produtos completos por esse critério: 0.
+- Motivo: a maioria dos produtos ativos não possui avaliação e/ou disponibilidade explícita em campos próprios.
 
-- `scripts/gerar-paginas-produtos.mjs`
-- `scripts/lint-impacto360.mjs`
-- `produto/<id>/index.html` para 323 produtos ativos publicaveis
-- `pacote-github-pages-pronto/produto/<id>/index.html` para os mesmos 323 produtos
-- `RELATORIO_MELHORIAS_IMPACTO360.md`
+A lista completa está em `dados/auditoria-produtos-impacto360.json`, campo `produtosCompletos`.
 
-## 5. Links de afiliado preservados
+## 4. Produtos incompletos
 
-`dados/products.json` e `dados/stores.json` nao foram editados nesta revisao. As paginas individuais e botoes "Ver oferta" apenas reutilizam os links ja cadastrados nos produtos. Nenhum link de afiliado foi reescrito.
+- Produtos incompletos por campos avançados: 323.
+- Campos faltantes mais comuns: avaliação e disponibilidade.
+- Os cards e páginas não inventam esses dados; quando faltam, exibem “pendente de revisão”.
 
-## 6. Resultado do lint
+A lista completa está em `dados/auditoria-produtos-impacto360.json`, campo `produtosIncompletos`.
 
-Comando:
+## 5. Produtos exibidos em Ofertas em destaque
 
-```powershell
-npm.cmd run lint
-```
+A home agora renderiza produtos reais do catálogo:
 
-Resultado: aprovado.
+- Vitrine inicial: 20 produtos reais com imagem, nome, preço, loja/origem, status de avaliação/disponibilidade, selo de afiliado e botão `Ver oferta`.
+- Validação estática desktop: 38 cards de produto renderizados.
+- Validação estática mobile: 40 cards de produto renderizados.
+- Primeiro card validado: produto Samsung Galaxy com preço, origem Mercado Livre, botão `Ver oferta`, imagem carregada e link preservado.
 
-O lint confirmou UTF-8 nos HTMLs publicos, ausencia dos textos antigos, home com categorias, "Como funciona", blocos de parceiros, cards com "Ver oferta", sitemap com `/produto/` e paginas individuais com JSON-LD `Product`.
+## 6. Categorias comerciais criadas
 
-## 7. Resultado do build
+Foram exibidas 11 categorias comerciais com identificador visual simples, descrição curta, contagem e ação/filtro:
 
-Comando:
+- Celulares e Tecnologia.
+- Casa e Cozinha.
+- Calçados.
+- Moda Masculina.
+- Moda Feminina.
+- Ferramentas.
+- Eletrodomésticos.
+- Materiais Escolares.
+- Produtos para Cavalgada.
+- Ofertas do Dia.
+- Mais Vendidos.
 
-```powershell
-npm.cmd run build
-```
+## 7. Blocos por loja criados
 
-Resultado: aprovado.
+Foram mantidos/criados blocos separados na home:
 
-Observacao: o Vite manteve avisos sobre scripts tradicionais sem `type="module"`:
+- Top Amazon.
+- Top Mercado Livre.
+- Outras lojas parceiras.
 
-- `integracoes/impacto360-admin-robos.js`
-- `integracoes/impacto360-banners-anuncios.js?v=20260625-1`
+Auditoria de origem nos produtos publicáveis:
 
-Os avisos nao bloquearam o build.
+- Amazon: 78 produtos.
+- Mercado Livre: 243 produtos.
+- Outras origens: 2 produtos.
 
-## 8. Testes adicionais
+Cada bloco usa somente produtos existentes. Se uma origem ficar sem produto suficiente em nova carga futura, a seção mostra estado “Em preparação”.
 
-Comando:
+## 8. Seções em preparação
 
-```powershell
-npm.cmd run test:seguranca
-```
+Na validação atual, os três blocos por origem aparecem com produtos. Não houve bloco vazio no preview estático.
 
-Resultado: aprovado.
+## 9. Páginas de produto
 
-Comando:
+Foram geradas páginas individuais de produto:
 
-```powershell
-npm.cmd run auditar:anuncios
-```
+- 323 URLs canônicas amigáveis em `/produto/nome-do-produto/`.
+- 646 diretórios publicados no total, incluindo aliases por `id` antigo para compatibilidade.
+- Cada página contém imagem, nome, loja, preço, CTA `Comprar no site parceiro`, aviso de afiliado, categoria, status, última verificação e produtos relacionados.
 
-Resultado:
+## 10. SEO implementado
 
-- Analisados: 700
-- Ativos: 323
-- Problemas catalogados: 447
-- Duplicados: 5
-- Ativos sem foto: 0
-- Ativos sem link: 0
+- Home mantém title e description.
+- Open Graph preservado.
+- `sitemap.xml` atualizado com 323 URLs canônicas de produto.
+- `robots.txt` atualizado para apontar `https://impacto360afiliado.com.br/sitemap.xml`.
+- JSON-LD `Product` gerado nas páginas individuais.
+- O JSON-LD não cria avaliação, contagem de reviews ou disponibilidade quando esses campos não existem de forma confiável.
+- Preço estruturado só é incluído quando o preço pode ser convertido com segurança.
 
-Validacao renderizada em navegador headless:
+## 11. Verificação final de UTF-8
 
-- Desktop 1280x720: 11 categorias, 30 cards de produto, 3 blocos de parceiros, 4 cards em "Como funciona", hero corrigido e botao "Ver oferta".
-- Mobile 390x844: mesmos blocos renderizados, sem overflow horizontal.
-- DOM final: sem textos antigos e sem marcadores de mojibake.
-- Imagem principal da vitrine carregada; imagens restantes seguem lazy-load sem falha detectada no conjunto renderizado.
+Verificações realizadas nos HTMLs públicos e scripts alterados:
 
-Servidor local:
+- Sem marcadores de dupla codificação tipo A.
+- Sem marcadores de dupla codificação tipo B.
+- Sem caractere de substituição indevido.
+- Sem termos antigos do hero e da seção de categorias nos arquivos públicos.
+- Acentuação validada visualmente no preview estático.
 
-- `http://127.0.0.1:4175/`
+## 12. Links de afiliado preservados
 
-## 9. Observacao sobre publicacao
+Nenhum produto existente foi apagado e `dados/products.json` não teve links de afiliado modificados. A home e as páginas individuais usam os campos de link já cadastrados (`linkCompra`, `linkAfiliado`, `affiliateLink`, `linkComissionado`, `linkPlataforma` e equivalentes).
 
-A consulta publica anterior ainda retornava HTML antigo. Estas correcoes estao prontas no worktree `impacto360-publicacao`, mas o site publico so deve refletir a nova home depois que este branch/artefato for publicado no GitHub Pages.
+## 13. Resultado do lint
+
+`npm.cmd run lint`: aprovado.
+
+O lint foi atualizado para refletir a regra atual:
+
+- Home precisa continuar exibindo `Ver oferta`.
+- Páginas individuais usam `Comprar no site parceiro`.
+- Avaliação ausente deve ser tratada como pendente de revisão.
+
+## 14. Resultado do build
+
+`npm.cmd run build`: aprovado.
+
+Observação: o Vite manteve avisos não bloqueantes sobre dois scripts legados sem `type="module"`, mas a build foi gerada com sucesso.
+
+## 15. Pendências reais
+
+- Nenhum produto ativo possui simultaneamente todos os campos avançados exigidos, porque avaliação e disponibilidade ainda faltam em grande parte do catálogo.
+- Há somente 2 produtos classificados como outras origens fora de Amazon/Mercado Livre.
+- Os produtos com avaliação ou disponibilidade ausente precisam de revisão cadastral futura se a loja quiser remover os rótulos “pendente de revisão”.
+
+## Validação visual local
+
+Servidor estático validado: `http://127.0.0.1:4180/`.
+
+Desktop:
+
+- 11 categorias com descrição e identificador visual.
+- 20 cards na vitrine inicial.
+- 8 cards em Recomendado para você.
+- 3 blocos por origem.
+- 38 botões `Ver oferta`.
+- 38 preços e 38 selos de afiliado.
+- Sem mojibake e sem textos antigos.
+- Sem overflow horizontal.
+
+Mobile:
+
+- 11 categorias com descrição e identificador visual.
+- 20 cards na vitrine inicial.
+- 8 cards em Recomendado para você.
+- 3 blocos por origem.
+- 40 botões `Ver oferta`.
+- 40 preços e 40 selos de afiliado.
+- Sem mojibake e sem textos antigos.
+- Sem overflow horizontal.

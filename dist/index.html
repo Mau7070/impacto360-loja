@@ -397,8 +397,39 @@
       text-align: left;
       box-shadow: 0 14px 34px rgba(8,25,47,.07);
     }
+    .category-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .category-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef5ff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .04em;
+      flex: 0 0 auto;
+    }
     .category-shortcut strong { font-size: 16px; line-height: 1.2; }
     .category-shortcut span { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .category-shortcut .category-icon {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 950;
+    }
+    .category-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .category-count { color: var(--blue); }
     .category-shortcut:hover {
       border-color: rgba(29,92,255,.28);
       transform: translateY(-1px);
@@ -988,7 +1019,7 @@
             <p>Atalhos para lojas e serviços com maior intenção de compra.</p>
           </div>
         </div>
-        <div class="store-grid" id="recommendedStores"></div>
+        <div class="product-grid" id="recommendedStores"></div>
       </div>
     </section>
 
@@ -12966,17 +12997,17 @@
     const coverOrder = ["eletronicos", "brinquedos", "moda", "casa", "beleza", "outros"];
     const openingGroups = coverOrder.map(id => ({ id, ...coverProfiles[id] }));
     const commercialCategories = [
-      { label: "Celulares e Tecnologia", action: "category", value: "Tecnologia", terms: ["celular", "smartphone", "iphone", "notebook", "computador", "informatica", "informática", "tecnologia", "tv", "eletronico", "eletrônico"] },
-      { label: "Casa e Cozinha", action: "category", value: "Casa e Família", terms: ["casa", "cozinha", "utensilio", "utensílio", "panela", "forno", "decoracao", "decoração"] },
-      { label: "Calçados", action: "store", value: "impacto-calcados", terms: ["calcado", "calçado", "tenis", "tênis", "sapato", "sandalia", "sandália", "chinelo", "bota"] },
-      { label: "Moda Masculina", action: "search", value: "masculino", terms: ["masculino", "homem", "masculina"] },
-      { label: "Moda Feminina", action: "search", value: "feminina", terms: ["feminina", "mulher", "vestido", "blusa", "saia"] },
-      { label: "Ferramentas", action: "store", value: "impacto-ferramentas", terms: ["ferramenta", "lanterna", "oficina", "auto", "veiculo", "veículo"] },
-      { label: "Eletrodomésticos", action: "search", value: "eletrodoméstico", terms: ["eletrodomestico", "eletrodoméstico", "forno", "air fryer", "geladeira", "micro-ondas"] },
-      { label: "Materiais Escolares", action: "store", value: "impacto-livraria", terms: ["escolar", "caderno", "lapis", "lápis", "estojo", "mochila", "caneta"] },
-      { label: "Produtos para Cavalgada", action: "search", value: "cavalgada", terms: ["cavalgada", "cavalo", "equestre", "sela", "country"] },
-      { label: "Ofertas", action: "filter", value: "offers", terms: ["oferta", "promoção", "promocao", "desconto"] },
-      { label: "Mais procurados", action: "filter", value: "popular", terms: [] }
+      { label: "Celulares e Tecnologia", icon: "5G", description: "Smartphones, notebooks e eletrônicos para comparar antes de comprar.", action: "category", value: "Tecnologia", terms: ["celular", "smartphone", "iphone", "notebook", "computador", "informatica", "informática", "tecnologia", "tv", "eletronico", "eletrônico"] },
+      { label: "Casa e Cozinha", icon: "CK", description: "Utensílios, fornos, panelas e itens úteis para a rotina da casa.", action: "category", value: "Casa e Família", terms: ["casa", "cozinha", "utensilio", "utensílio", "panela", "forno", "decoracao", "decoração"] },
+      { label: "Calçados", icon: "TEN", description: "Tênis, sapatos, sandálias e opções para uso diário.", action: "store", value: "impacto-calcados", terms: ["calcado", "calçado", "tenis", "tênis", "sapato", "sandalia", "sandália", "chinelo", "bota"] },
+      { label: "Moda Masculina", icon: "MM", description: "Peças, acessórios e buscas focadas no público masculino.", action: "search", value: "masculino", terms: ["masculino", "homem", "masculina"] },
+      { label: "Moda Feminina", icon: "MF", description: "Roupas, calçados e achados de moda feminina em lojas parceiras.", action: "search", value: "feminina", terms: ["feminina", "mulher", "vestido", "blusa", "saia"] },
+      { label: "Ferramentas", icon: "FER", description: "Itens de oficina, manutenção, autos e pequenos reparos.", action: "store", value: "impacto-ferramentas", terms: ["ferramenta", "lanterna", "oficina", "auto", "veiculo", "veículo"] },
+      { label: "Eletrodomésticos", icon: "ELET", description: "Forno, micro-ondas, air fryer e equipamentos para cozinha.", action: "search", value: "eletrodoméstico", terms: ["eletrodomestico", "eletrodoméstico", "forno", "air fryer", "geladeira", "micro-ondas"] },
+      { label: "Materiais Escolares", icon: "ESC", description: "Cadernos, estojos, mochilas e materiais para estudo.", action: "store", value: "impacto-livraria", terms: ["escolar", "caderno", "lapis", "lápis", "estojo", "mochila", "caneta"] },
+      { label: "Produtos para Cavalgada", icon: "EQ", description: "Busca dedicada a itens e acessórios de uso equestre.", action: "search", value: "cavalgada", terms: ["cavalgada", "cavalo", "equestre", "sela", "country"] },
+      { label: "Ofertas do Dia", icon: "OF", description: "Atalhos para ofertas, promoções e oportunidades cadastradas.", action: "filter", value: "offers", terms: ["oferta", "promoção", "promocao", "desconto"] },
+      { label: "Mais Vendidos", icon: "TOP", description: "Produtos e lojas com maior volume de itens na vitrine.", action: "filter", value: "popular", terms: [] }
     ];
 
     window.handleStoreCoverError = function handleStoreCoverError(img) {
@@ -13285,8 +13316,9 @@
         const count = countProductsForCommercialCategory(category);
         const suffix = count ? count + " produtos" : "em organização";
         return '<button class="category-shortcut" type="button" onclick="openCommercialCategory(' + index + ')">' +
-          '<strong>' + escapeHtml(category.label) + '</strong>' +
-          '<span>' + escapeHtml(suffix) + '</span>' +
+          '<span class="category-top"><span class="category-icon">' + escapeHtml(category.icon || "GO") + '</span><strong>' + escapeHtml(category.label) + '</strong></span>' +
+          '<p class="category-description">' + escapeHtml(category.description || "Atalho de compra em organização.") + '</p>' +
+          '<span class="category-count">' + escapeHtml(suffix) + '</span>' +
         '</button>';
       }).join("");
     }
@@ -13456,10 +13488,7 @@
       renderCommercialCategories();
       renderOpeningShowcase();
       renderPartnerStoreShowcase();
-      const recommended = ["impacto-brinquedos", "impacto-moda", "impacto-mobile", "impacto-casa", "impacto-eletronicos", "lojas-parceiras", "impacto-beauty-care"]
-        .map(id => stores.find(store => store.id === id))
-        .filter(Boolean);
-      document.getElementById("recommendedStores").innerHTML = recommended.map(renderStoreCard).join("");
+      renderRecommendedShopping();
     }
 
     function renderOpeningShowcase() {
@@ -13497,11 +13526,12 @@
 
     function renderPartnerSourceSection(section) {
       const items = productsForPartnerSource(section.id);
-      if (!items.length) return "";
       return '<div class="partner-block">' +
         '<h3>' + escapeHtml(section.title) + '</h3>' +
         '<p>' + escapeHtml(section.description) + '</p>' +
-        '<div class="product-grid">' + items.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId))).join("") + '</div>' +
+        (items.length
+          ? '<div class="product-grid">' + items.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId))).join("") + '</div>'
+          : '<div class="empty-state">Em preparação: faltam produtos ativos desta origem com imagem, preço e link preservado.</div>') +
       '</div>';
     }
 
@@ -13512,8 +13542,30 @@
         { id: "amazon", title: "Top Amazon", description: "Produtos cadastrados com origem Amazon, exibidos sem alterar preço, link ou disponibilidade." },
         { id: "mercado-livre", title: "Top Mercado Livre", description: "Ofertas cadastradas com links Mercado Livre preservados." },
         { id: "outras", title: "Outras lojas parceiras", description: "Itens de outras origens já presentes no catálogo." }
-      ].map(renderPartnerSourceSection).filter(Boolean);
+      ].map(renderPartnerSourceSection);
       holder.innerHTML = sections.length ? '<div class="partner-showcase">' + sections.join("") + '</div>' : "";
+    }
+
+    function renderRecommendedShopping() {
+      const holder = document.getElementById("recommendedStores");
+      if (!holder) return;
+      const recommendedProducts = uniqueProducts([
+        ...openingProductItems(),
+        ...products.filter(productIsVisible)
+      ]).slice(0, 8);
+      if (recommendedProducts.length) {
+        holder.className = "product-grid";
+        holder.innerHTML = recommendedProducts.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId))).join("");
+        return;
+      }
+      holder.className = "commercial-category-grid";
+      holder.innerHTML = commercialCategories.slice(0, 6).map((category, index) =>
+        '<button class="category-shortcut" type="button" onclick="openCommercialCategory(' + index + ')">' +
+          '<span class="category-top"><span class="category-icon">' + escapeHtml(category.icon || "GO") + '</span><strong>' + escapeHtml(category.label) + '</strong></span>' +
+          '<p class="category-description">' + escapeHtml(category.description || "Atalho de compra em organização.") + '</p>' +
+          '<span class="category-count">em preparação</span>' +
+        '</button>'
+      ).join("");
     }
 
     function renderOpeningCategoryCard(group) {
@@ -13642,8 +13694,8 @@
       const price = firstFilled(item, ["price", "preco", "precoAtual"]) || "Consultar";
       const previousPrice = firstFilled(item, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
       const ratingValue = firstFilled(item, ["avaliacao", "rating", "reviewRating", "nota"]);
-      const ratingLabel = ratingValue ? "Avaliação " + ratingValue : "Avaliação na loja parceira";
-      const availability = firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]);
+      const ratingLabel = ratingValue ? "Avaliação " + ratingValue : "Avaliação pendente de revisão";
+      const availability = firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]) || "Disponibilidade pendente de revisão";
       const lastCheck = dateLabel(firstFilled(item, ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"]));
       const metaItems = [
         sourceLabel,

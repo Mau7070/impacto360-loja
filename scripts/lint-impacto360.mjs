@@ -55,7 +55,7 @@ ok("categorias comerciais visiveis", html.includes("Categorias do shopping") && 
 ok("como funciona completo", html.includes("Como funciona") && html.includes("1. Seleção") && html.includes("4. Transparência"));
 ok("blocos de parceiros", html.includes("Top Amazon") && html.includes("Top Mercado Livre") && html.includes("Outras lojas parceiras"));
 ok("cards com ver oferta", html.includes("Ver oferta"));
-ok("cards com avaliacao", html.includes("Avaliação na loja parceira") && html.includes("Avaliação "));
+ok("cards com avaliacao", html.includes("Avaliação pendente de revisão") && html.includes("Avaliação "));
 ok("cards com loja e afiliado", html.includes("Link de afiliado") && html.includes("store?.commercialName"));
 
 const products = JSON.parse(read("dados/products.json"));
@@ -72,7 +72,7 @@ ok("paginas individuais geradas", productDirs.length > 0, `${productDirs.length}
 if (productDirs.length) {
   const sample = read(path.join("produto", productDirs[0].name, "index.html"));
   ok("pagina produto com json-ld", sample.includes('type="application/ld+json"') && sample.includes('"@type": "Product"'));
-  ok("pagina produto com botao ver oferta", sample.includes(">Ver oferta<"));
+  ok("pagina produto com botao comprar no parceiro", sample.includes(">Comprar no site parceiro<"));
 }
 
 const failed = checks.filter(check => !check.pass);
