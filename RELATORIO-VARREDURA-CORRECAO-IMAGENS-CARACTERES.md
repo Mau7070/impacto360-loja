@@ -22,11 +22,11 @@ Portanto, a falha nao era falta total de imagem. Era o prefixo `public/` aplicad
 
 A pagina e o arquivo de produtos ainda continham textos com mojibake, por exemplo:
 
-`NavegaÃ§Ã£o rÃ¡pida`
+`Navega??o r?pida`
 
 O texto correto deve ser:
 
-`Navegação rápida`
+`Navega??o r?pida`
 
 A correcao agora repara os textos visiveis e os dados carregados em memoria, sem precisar reescrever o `index.html` gigante diretamente.
 
@@ -54,7 +54,7 @@ Foi executado teste no Chrome em modo controlado.
 Antes da correcao:
 
 - `mojibake: true`
-- texto encontrado: `NavegaÃ§Ã£o rÃ¡pida`
+- texto encontrado: `Navega??o r?pida`
 - imagens apontavam para `public/produtos-impacto360/...`
 
 Depois da correcao simulada:

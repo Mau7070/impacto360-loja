@@ -69,16 +69,16 @@ export function suggestCategory(product, categories) {
   const rules = [
     ['Celulares', ['smartphone', 'celular', 'iphone', 'galaxy', 'motorola', 'xiaomi', 'redmi']],
     ['Livraria', ['livro', 'leitura', 'planner', 'ebook', 'guia']],
-    ['InformÃ¡tica', ['notebook', 'mouse', 'teclado', 'webcam', 'computador', 'ssd', 'monitor']],
+    ['Informática', ['notebook', 'mouse', 'teclado', 'webcam', 'computador', 'ssd', 'monitor']],
     ['Games e setup gamer', ['gamer', 'console', 'rgb', 'mousepad', 'headset gamer', 'controle']],
-    ['TV e Ã¡udio', ['smart tv', 'tv ', 'caixa de som', 'fone', 'audio', 'audio']],
+    ['TV e áudio', ['smart tv', 'tv ', 'caixa de som', 'fone', 'audio', 'áudio']],
     ['Casa e utilidades', ['cozinha', 'utensilio', 'utensilio', 'panela', 'faca', 'organizador', 'casa']],
-    ['EletrÃ´nicos e Casa', ['eletrÃ´nico', 'smart', 'casa', 'bluetooth', 'carregador', 'caixa', 'led']],
+    ['Eletrônicos e Casa', ['eletrônico', 'smart', 'casa', 'bluetooth', 'carregador', 'caixa', 'led']],
     ['Ferramentas', ['ferramenta', 'parafusadeira', 'furadeira', 'chave', 'broca']],
-    ['Brinquedos', ['brinquedo', 'crianÃ§a', 'bloco', 'boneca', 'jogo']],
-    ['CalÃ§ados', ['tÃªnis', 'sapato', 'sandÃ¡lia', 'calÃ§ado', 'bota']],
-    ['Moda', ['camiseta', 'moda', 'roupa', 'bolsa', 'calÃ§a', 'vestido']],
-    ['ServiÃ§os Impacto360', ['arte digital', 'catalogo', 'catalogo', 'post', 'banner', 'curriculo', 'curriculo', 'apresentacao', 'apresentacao']],
+    ['Brinquedos', ['brinquedo', 'criança', 'bloco', 'boneca', 'jogo']],
+    ['Calçados', ['tênis', 'sapato', 'sandália', 'calçado', 'bota']],
+    ['Moda', ['camiseta', 'moda', 'roupa', 'bolsa', 'calça', 'vestido']],
+    ['Serviços Impacto360', ['arte digital', 'catalogo', 'catálogo', 'post', 'banner', 'curriculo', 'currículo', 'apresentacao', 'apresentação']],
   ]
 
   const found = rules.find(([, keywords]) => keywords.some((keyword) => text.includes(keyword)))
@@ -135,10 +135,10 @@ export function validateProduct(product) {
 
   if (!product.nome) errors.push('Informe o nome do produto.')
   if (!product.categoria) errors.push('Informe ou aceite a categoria sugerida.')
-  if (!product.preco || product.preco <= 0) errors.push('Informe um preÃ§o vÃ¡lido.')
+  if (!product.preco || product.preco <= 0) errors.push('Informe um preço válido.')
   if (!product.imagem) errors.push('Informe uma imagem.')
   if (!product.linkCompra) errors.push('Informe o link de compra.')
-  if (!product.descricaoCurta) errors.push('Informe uma descriÃ§Ã£o curta.')
+  if (!product.descricaoCurta) errors.push('Informe uma descrição curta.')
 
   return {
     valid: errors.length === 0,

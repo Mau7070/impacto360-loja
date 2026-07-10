@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "lint": "node scripts/lint-impacto360.mjs",
     "build": "vite build",
     "preview": "vite preview",
+    "gerar:produtos": "node scripts/gerar-paginas-produtos.mjs",
     "auditar:anuncios": "python scripts/auditar-anuncios.py --root .",
     "corrigir:imagens": "python scripts/corrigir-imagens-anuncios.py --root . --apply",
     "importar:anuncios": "python scripts/importar-anuncios.py --root .",
