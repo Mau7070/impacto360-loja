@@ -1,0 +1,3211 @@
+{
+  "geradoEm": "2026-07-10",
+  "fonte": {
+    "produtos": "dados/products.json",
+    "lojas": "dados/stores.json"
+  },
+  "criteriosObrigatorios": [
+    "nome",
+    "imagem",
+    "preco",
+    "loja",
+    "linkAfiliado",
+    "avaliacao",
+    "disponibilidade",
+    "categoria",
+    "ultimaVerificacao"
+  ],
+  "totais": {
+    "catalogo": 700,
+    "lojas": 26,
+    "publicaveis": 323,
+    "completos": 0,
+    "incompletos": 323,
+    "comAvaliacao": 24,
+    "comDisponibilidade": 30
+  },
+  "blocosPorOrigem": {
+    "amazon": 78,
+    "mercadoLivre": 243,
+    "outras": 2
+  },
+  "produtosCompletos": [],
+  "produtosIncompletos": [
+    {
+      "id": "telefone-mercado-livre-001",
+      "nome": "Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "telefone-mercado-livre-004",
+      "nome": "Motorola Moto G15 256GB",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "telefone-mercado-livre-005",
+      "nome": "Samsung Galaxy A07 256GB 8GB RAM",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "telefone-mercado-livre-008",
+      "nome": "Motorola Moto G35 5G 256GB",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-001",
+      "nome": "Notebook Asus Tuf Gaming F16 Fx608jhr Nvidia Rtx 5050 Intel Core I7 14650hx 16gb Ram 512gb Ssd Windows 11 Home Tela 16 165hz Nível Ips Cinza - Rv016w",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-002",
+      "nome": "Notebook Gamer Acer Nitro V15 Anv15-52-737p Intel® Core I7-13620h 13ªg 16gb Ram 512gb Ssd Rtx4050 Fhd 15.6",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-003",
+      "nome": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 256gb Ssd Windows 11 15.3 - 83ns0003br Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-004",
+      "nome": "Pc Completo Bluepc Task I5 6ª 8gb Ddr4 Ssd 240gb Monitor 15 8 Gb 240 Gb Integrada",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-005",
+      "nome": "Acer Predator Helios Neo Phn16-72-99my Intel Ci9 14ªgeração 32gb 1tb Ssd Rtx4070 Windows11 Cor Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-006",
+      "nome": "Notebook Hp 256r G9 Intel Core I5-1334u 15.6 Hd Intel Uhd 256gb Ssd 16gb Ram Windows 11 Home 64 Pls Sl - Bq9l2at#ak4 Cinza-escuro",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-007",
+      "nome": "Pc Computador Slim Intel I7 16gb Ssd 480gb Monitor 19 Branco",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-008",
+      "nome": "Notebook Asus Vivobook 15, Intel Core I5 1334u 1,3 Ghz, 8gb Ram, 256gb Ssd, Keepos Linux, Tela 15,6 Fhd, Cool Silver - X1504va-nj1739 Prateado",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-009",
+      "nome": "Notebook Asus Tuf Gaming F16, Nvidia Rtx 3050, Intel Core 5 210h 2,2 Ghz, 8gb Ram, 512gb Ssd, Keepos Linux, Tela 16 Fhd+ Nível Ips 144hz, Mecha Gray - Fx607vj-rl002 Cinza",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-010",
+      "nome": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I7-13620h 16gb 512gb Ssd Linux 15.3 - 83nss00100 Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-011",
+      "nome": "Notebook Asus V16 V3607vu Nvidia Rtx 4050 Intel Core 5 210h 16gb Ram 512gb Ssd Linux Keepos Tela 16 Led Nível Ips 144hz Preto - Rp354 Matte Black",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-013",
+      "nome": "Pc Gamer Completo I7 3.4ghz 16gb Ssd 480gb 500w Monitor 19 480 Gb 16 Gb Placa De Video Integrada",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-014",
+      "nome": "Mini Desktop Intel Core I7 16gb Ram Ssd 1tb+monitor 19 Win11 960 Gb 16 Gb Integrada",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-015",
+      "nome": "Computador All-in-one 19 I5 8gb Ssd 256gb Va Wi-fi 5ghz Branco Bivolt",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-016",
+      "nome": "Notebook Asus Vivobook Go 15, Intel Core I3 N305, 8gb Ram, 512gb Ssd, Windows 11 Home, Tela Nanoedge 15,6 Fhd, Cool Silver - E1504ga-nj435w",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-017",
+      "nome": "Notebook Asus Vivobook Go 15, Intel Celeron Dual Core N4500, 4gb Ram, 128gb Emmc, Windows 11 Home, Tela 15,60&#x27; Led, Rosa - E510ka-br833ws",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-018",
+      "nome": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 16gb 512gb Ssd Windows 11 15.3 - 83ns0001br Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-021",
+      "nome": "Notebook Acer Nitro V15 Anv15-52-96aq Intel® Core I9-13900h De 13° G 16gb 512gb Ssd Rtx4060 Windows 11 Home 15.6 Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-022",
+      "nome": "Notebook Samsung Galaxy Book4 Intel® Core I5-1335u (1.3 Ghz, Até 4.6ghz, 12 Mb L3 Cache), Windows 11 Home, 8gb, 512gb Ssd, Iris Xe, 15.6&#x27;&#x27; Full Hd Led, 1.55kg",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-024",
+      "nome": "Notebook Asus Vivobook Go 15 E1504 Amd Ryzen 5 7520u 8gb Ram 256gb Ssd Linux Keepos 15,6 Fhd Black E1504fa-nj731 Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-025",
+      "nome": "Notebook Asus V16 V3607vu Nvidia Rtx 4050 Intel Core 5 210h 16gb Ram 512gb Ssd Windows 11 Home Tela 16 Led Fhd 144hz Nível Ips Black - Rp306w Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-026",
+      "nome": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Linux 15.3 - 83nss00000 Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-027",
+      "nome": "Notebook Gamer Lenovo Loq 15irx9 Intel Core I5-13450hx 16gb 512gb Ssd Rtx 3050 Windows 11 - 83kh0006br Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-028",
+      "nome": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Windows 11 15.3 - 83ns0002br Luna Grey",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-030",
+      "nome": "Computador Dell 24 All-in-one Ec24250 23.8 Ips Full Hd 13ª Gen Intel Core I7 16gb 1tb Ssd Win 11 Aio-i1303-m41 Branco",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-031",
+      "nome": "Notebook Asus Tuf Gaming F16, Intel Core 5, Nvidia Rtx 3050, 16gb Ram, 512gb Ssd, Windows 11 Home, Tela 16 Ips 144hz, Mecha Gray - Fx607vj-rl007w",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-033",
+      "nome": "Notebook Elitebook 640 G10, 14 , Intel Core I5, Windows 11 Pro, 16gb Ram, 512gb Ssd Hp Prateado",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-034",
+      "nome": "Computador Completo I7 16gb Ssd 480gb Monitor Mouse Teclado 480 Gb 16 Gb Intel Hd Graphics 4000",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-036",
+      "nome": "Cpu Hp Intel Core I7 16gb Ram Ssd 512gb Win 11 Original Wifi 16 Gb",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "mercado-livre-produto-037",
+      "nome": "Notebook Asus Vivobook 15 X1504va Intel Core I5 1334u 8gb Ram 512gb Ssd Linux Keepos Intel Iris Xe Tela 15,6 Led Fhd Silver - Nj1741",
+      "loja": "Mercado Livre",
+      "categoria": "Informática",
+      "pendencias": [
+        "avaliacao"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-001",
+      "nome": "Samsung Galaxy A15 5G 128 GB",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-003",
+      "nome": "Samsung Galaxy A06 5G 128 GB",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-005",
+      "nome": "Samsung Galaxy A17",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-006",
+      "nome": "Samsung Galaxy A36 5G 256 GB",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-009",
+      "nome": "Samsung Galaxy A35",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-013",
+      "nome": "Samsung Galaxy A05s",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-014",
+      "nome": "Samsung Galaxy A05",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-021",
+      "nome": "Samsung Galaxy S25+",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-022",
+      "nome": "Samsung Galaxy S25 Ultra",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-025",
+      "nome": "Motorola Moto G06",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-026",
+      "nome": "Motorola Moto G05",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-028",
+      "nome": "Motorola Moto G34 5G",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-029",
+      "nome": "Motorola Moto G54 5G",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-030",
+      "nome": "Motorola Moto G24",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-034",
+      "nome": "Motorola Moto G85 5G",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-035",
+      "nome": "Motorola Edge 40 Neo",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-088",
+      "nome": "Apple iPhone 16 Pro",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "celular-ml-docx-084",
+      "nome": "Apple iPhone 15 Pro Max",
+      "loja": "Mercado Livre",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-01",
+      "nome": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-02",
+      "nome": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-03",
+      "nome": "Camisa Xadrez Plus Size Blusa Feminina Moda Casual G1 G2 G3",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-04",
+      "nome": "Blusa Feminina Básica Manga Curta Moda Casual Trabalho",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-05",
+      "nome": "Regata Feminina Poliamida Premium Forrada Alça Larga Moda",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-07",
+      "nome": "Jaqueta Feminina Couro Casaco Blusa Moda Outono Inverno",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-08",
+      "nome": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-09",
+      "nome": "Short Feminino Couro Fake Cintura Alta C Bolsos Casual Moda",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-10",
+      "nome": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-11",
+      "nome": "Blusa Feminina Manga Bufante Lateral Estampado Moda Estilosa",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-12",
+      "nome": "Macacão Virginia Manga Longa Zíper Moda Gringa Canelado Luxo",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-16",
+      "nome": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-17",
+      "nome": "Camisa Polo Todas As Cores / Malha Piquet / Feminina",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-18",
+      "nome": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-19",
+      "nome": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-21",
+      "nome": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-22",
+      "nome": "Saia Midi De Couro Fenda Evangélica Social Luxo",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-25",
+      "nome": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "moda-feminina-docx-26",
+      "nome": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
+      "loja": "Catalogo Moda Feminina",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-01",
+      "nome": "Kit C/12 Utensílios de Cozinha Silicone Cabo Madeira",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-03",
+      "nome": "Kit Utensílios para Cozinha 5 Peças Aço Inox",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-08",
+      "nome": "Kit Completo 12 Utensílios de Cozinha Silicone Cabo Madeira",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-12",
+      "nome": "Spray Pulverizador de Vidro 100 ml para Azeite, Óleo e Vinagre",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-13",
+      "nome": "Kit 19 Utensílios de Cozinha Silicone com Escumadeira Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-15",
+      "nome": "Kit 12 Utensílios Silicone Cabo Madeira Gourmet",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-21",
+      "nome": "Mini Processador de Alimentos 250 ml Recarregável com Cabo USB Verde",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-22",
+      "nome": "Processador Elétrico Mini Triturador de Alimentos Alho USB",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-23",
+      "nome": "Mini Processador de Alimentos Elétrico Recarregável Onistek ON-UD119",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-26",
+      "nome": "Mini Processador de Alimentos Elétrico Sem Fio 3 Lâminas",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-27",
+      "nome": "Mini Processador de Alimentos Manual Elétrico Recarregável USB",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "cozinha-ml-docx-28",
+      "nome": "Mini Processador de Alimentos 250 ml Recarregável com Cabo USB",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-boneca-bebe-reborn-pintada-realista-menina-48cm-de-silic-a33f348d",
+      "nome": "Boneca Bebe Reborn Pintada Realista Menina 48cm De Silicone",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-boneca-lola-baby-com-chupeta-bebe-menina-brinquedo-bambo-5835a560",
+      "nome": "Boneca Lola Baby Com Chupeta Bebê Menina Brinquedo - Bambola",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-maleta-maquiagem-infantil-lavavel-completa-menina-2845e4e7",
+      "nome": "Kit Maleta Maquiagem Infantil Lavável Completa Menina",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mobile-giratorio-lindo-com-luz-e-som-para-berco-e-carrin-09f54ab7",
+      "nome": "Móbile Giratório Lindo Com Luz E Som Para Berço E Carrinho",
+      "loja": "Mercado Livre",
+      "categoria": "Bebê e Infantil",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-penteadeira-infantil-com-acessorios-para-menina-princesa-6397a635",
+      "nome": "Penteadeira Infantil Com Acessórios Para Menina Princesa",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-recarregavel-menina-unicornio-6324fca3",
+      "nome": "Carrinho Controle Remoto Recarregável Menina Unicórnio",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-estojo-de-maquiagem-infantil-nao-toxico-espelho-meni-7019c618",
+      "nome": "Kit Estojo De Maquiagem Infantil Não Tóxico Espelho Menina",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-maquiagem-infantil-maleta-batom-sombra-unha-gloss-4295fac0",
+      "nome": "Kit Maquiagem Infantil Maleta + Batom Sombra Unha Gloss",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-panelinha-de-brinquedo-infantil-menina-de-crianca-827ec668",
+      "nome": "Kit Panelinha De Brinquedo Infantil Menina De Criança",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-barraca-infantil-tenda-meninas-brinquedos-casinha-com-lu-36770493",
+      "nome": "Barraca Infantil Tenda Meninas Brinquedos Casinha Com Luzes",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-castelo-cabana-barraca-princesa-infantil-menina-brinqued-427337f2",
+      "nome": "Castelo cabana barraca princesa infantil menina brinquedo 99 Toys rosa",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-ursinho-que-reza-menina-menino-pelucia-hipoalergenico-bu-db1ff9bc",
+      "nome": "Ursinho Que Reza Menina/menino Pelúcia Hipoalergênico Buba",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-penteadeira-infantil-rosa-mesinha-carteira-didatica-meni-4780fae9",
+      "nome": "Penteadeira Infantil Rosa Mesinha Carteira Didática Meninas",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-casinha-de-boneca-mdf-30-moveis-brinquedo-meninas-e395f477",
+      "nome": "Casinha De Boneca Mdf + 30 Móveis Brinquedo Meninas",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-blocos-de-montar-family-blocks-educativo-400-pecas-8e00a30d",
+      "nome": "Blocos De Montar Family Blocks Educativo 400 Peças",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-maleta-de-ferramentas-infantil-22-pecas-brinquedo-menino-0c732ce0",
+      "nome": "Maleta De Ferramentas Infantil 22 Peças Brinquedo Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-dinossauro-t-rex-brinquedo-anda-solta-fumaca-som-luz-rug-ad77b440",
+      "nome": "Dinossauro T Rex Brinquedo Anda Solta Fumaça Som Luz Rugido",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-motosserra-eletrica-brinquedo-menino-infantil-ferramenta-f8dc58ef",
+      "nome": "Motosserra Elétrica Brinquedo Menino Infantil Ferramentas",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-de-ferramentas-infantil-mochila-brinquedo-crianca-me-f9f068db",
+      "nome": "Kit De Ferramentas Infantil Mochila Brinquedo Criança Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-miniatura-empilhadeira-metal-friccao-colecao-carrinho-me-78c1ab1d",
+      "nome": "Miniatura Empilhadeira Metal Fricção Coleção Carrinho Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-pista-carrinhos-corrida-brinquedo-infantil-presente-meni-899096df",
+      "nome": "Pista Carrinhos Corrida Brinquedo Infantil Presente Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-dinossauro-pterodactilo-com-luz-som-e-asas-articuladas-ed6b4e9a",
+      "nome": "Dinossauro Pterodáctilo Com Luz Som E Asas Articuladas",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-365nm-profissional-alonefire-sv127-recarrega-39fbb119",
+      "nome": "Lanterna UV 365nm Profissional Alonefire SV127 Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-alonefire-h42uv-36w-365nm-usb-recarregavel-016b41d0",
+      "nome": "Lanterna UV Alonefire H42UV 36W 365nm USB Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-alonefire-sv103-365nm-10w-usb-recarregavel-31653183",
+      "nome": "Lanterna UV Alonefire SV103 365nm 10W USB Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-e-branca-wuben-p26-2-em-1-para-escorpiao-88f1abd0",
+      "nome": "Lanterna UV e Branca Wuben P26 2 em 1 para Escorpião",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-led-potente-luz-negra-ybf-para-detectar-esco-1458c04f",
+      "nome": "Lanterna UV LED Potente Luz Negra YBF para Detectar Escorpião",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-lanterna-uv-recarregavel-led-t6-80000lm-luz-negra-tatica-693cf417",
+      "nome": "Lanterna UV Recarregável LED T6 80000lm Luz Negra Tática Caça Escorpião",
+      "loja": "Mercado Livre",
+      "categoria": "Ferramentas",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-crystal-uhd-4k-43du8000-6850303e",
+      "nome": "Smart TV 43” Crystal UHD 4K 43DU8000",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-crystal-uhd-4k-50du7700-2738445a",
+      "nome": "Smart TV 50” Crystal UHD 4K 50DU7700",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-55-crystal-uhd-4k-55du7700-2024-b3253f46",
+      "nome": "Smart TV 55” Crystal UHD 4K 55DU7700 (2024)",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-55-qled-4k-q60d-2024-ce411a4d",
+      "nome": "Smart TV 55” QLED 4K Q60D (2024)",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-60-crystal-uhd-4k-60du7700-2024-797e21c3",
+      "nome": "Smart TV 60” Crystal UHD 4K 60DU7700 (2024)",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-65-crystal-uhd-4k-65du7700-2024-da27fed4",
+      "nome": "Smart TV 65” Crystal UHD 4K 65DU7700 (2024)",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-ambilight-4k-50pug7908-78-eecbddbd",
+      "nome": "Smart TV 50” Ambilight 4K 50PUG7908/78",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-65-4k-google-tv-65p755-35ecd821",
+      "nome": "Smart TV 65” 4K Google TV 65P755",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-4k-50pug7300-e866424f",
+      "nome": "Smart TV 50” 4K 50PUG7300",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-43-full-hd-43pfg6910-78-d7c2050a",
+      "nome": "Smart TV 43” Full HD 43PFG6910/78",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-roku-tv-50u6125-78g-19767174",
+      "nome": "Smart TV 50” Roku TV 50U6125/78G",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-smart-tv-50-uhd-4k-50a6k-cb022f25",
+      "nome": "Smart TV 50” UHD 4K 50A6K",
+      "loja": "Mercado Livre",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-drone-recarregavel-controle-remoto-seguro-infa-f4dc32ff",
+      "nome": "Brinquedo Drone Recarregável Controle Remoto Seguro Infantil",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-drone-de-brinquedo-com-sensor-e-controle-remoto-bateria--d28b0ea0",
+      "nome": "Drone de Brinquedo com Sensor e Controle Remoto Bateria Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mini-drone-controle-remoto-guedes-vermelho-sensor-infrav-177caeb3",
+      "nome": "Mini Drone Controle Remoto Guedes Vermelho Sensor Infravermelho Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-drone-infantil-brinquedo-com-controle-remoto-luz-led-rec-0ee1c21f",
+      "nome": "Drone Infantil Brinquedo com Controle Remoto Luz LED Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-aviao-de-controle-remoto-modelo-drone-bateria-recarregav-3684336c",
+      "nome": "Avião de Controle Remoto Modelo Drone Bateria Recarregável com Luz",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-espada-drone-voadora-de-controle-remoto-com-luzes-e-bate-24b06951",
+      "nome": "Espada Drone Voadora de Controle Remoto com Luzes e Bateria Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-helicoptero-de-controle-remoto-infantil-joygod-azul-com--82797eab",
+      "nome": "Helicóptero de Controle Remoto Infantil JOYGOD Azul com Sensor de Mão",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-helicoptero-controle-remoto-bateria-recarregavel-voa-de--4a4adcf2",
+      "nome": "Helicóptero Controle Remoto Bateria Recarregável Voa de Verdade",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mini-helicoptero-drone-com-controle-remoto-infantil-sens-f6baf18b",
+      "nome": "Mini Helicóptero Drone com Controle Remoto Infantil Sensor de Movimento",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-drone-helicoptero-de-brinquedo-controle-remoto-para-inic-f524a9cc",
+      "nome": "Drone Helicóptero de Brinquedo Controle Remoto para Iniciantes",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-recarregavel-grande-presente-ad41c01b",
+      "nome": "Carrinho Controle Remoto Recarregável Grande Presente",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carro-controle-remoto-rally-drift-subaru-bateria-recarre-ae285a40",
+      "nome": "Carro Controle Remoto Rally Drift Subaru Bateria Recarregável Verde",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-4x4-recarregavel-brinquedo-radi-0011dbde",
+      "nome": "Carrinho Controle Remoto 4x4 Recarregável Brinquedo Radical",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-rosa-bateria-recarregavel-luz-l-73971257",
+      "nome": "Carrinho Controle Remoto Rosa Bateria Recarregável Luz LED",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-de-controle-remoto-recarregavel-tracao-4x4-rapi-0281cafd",
+      "nome": "Carrinho de Controle Remoto Recarregável Tração 4x4 Rápido Gira 360",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-brastoy-controle-remoto-recarregavel-1-16-off-road-4x4-v-57533439",
+      "nome": "Brastoy Controle Remoto Recarregável 1:16 Off-road 4x4 Verde",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-carrinho-controle-remoto-rally-jipe-max-bateri-37f5723c",
+      "nome": "Brinquedo Carrinho Controle Remoto Rally Jipe Max Bateria Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-de-controle-remoto-rapido-360-recarregavel-trac-9da0fc44",
+      "nome": "Carrinho de Controle Remoto Rápido 360 Recarregável Tração 4x4",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-azul-4x4-gira-360-rapido-recarr-5cc882cd",
+      "nome": "Carrinho Controle Remoto Azul 4x4 Gira 360 Rápido Recarregável Solta Fumaça",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carro-controle-remoto-acrobatico-recarregavel-guedes-ver-435da0d4",
+      "nome": "Carro Controle Remoto Acrobático Recarregável Guedes Vermelho 15km/h",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-de-controle-remoto-4x4-giro-360-pirueta-carro-m-f9d8c908",
+      "nome": "Carrinho de Controle Remoto 4x4 Giro 360 Pirueta Carro Maluco",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-carro-acrobatico-brinquedo-radi-bc34cb61",
+      "nome": "Carrinho Controle Remoto Carro Acrobático Brinquedo Radical",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-controle-remoto-caminhao-cargo-truck-recarregav-7a8516ae",
+      "nome": "Carrinho Controle Remoto Caminhão Cargo Truck Recarregável Infantil",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caminhao-cacamba-basculante-controle-remoto-recarregavel-c6a985af",
+      "nome": "Caminhão Caçamba Basculante Controle Remoto Recarregável Trator RC 2.4GHz",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-trator-de-controle-remoto-recarregavel-pa-escavadeira-es-20f74fab",
+      "nome": "Trator de Controle Remoto Recarregável Pá Escavadeira Esteira Grande",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-trator-esteira-controle-remoto-infantil-track-brinquedo--f105cc4c",
+      "nome": "Trator Esteira Controle Remoto Infantil Track Brinquedo Realista Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caminhao-basculante-brinquedo-recarregavel-controle-remo-12d31303",
+      "nome": "Caminhão Basculante Brinquedo Recarregável Controle Remoto",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caminhao-betoneira-de-brinquedo-controle-remoto-recarreg-e5692815",
+      "nome": "Caminhão Betoneira de Brinquedo Controle Remoto Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-carrinho-caminhao-controle-remoto-grande-com-cacamba-bat-efb784a4",
+      "nome": "Carrinho Caminhão Controle Remoto Grande com Caçamba Bateria Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-robo-unicornio-com-controle-remoto-e-bateria-recarregave-fa4f6ad1",
+      "nome": "Robô Unicórnio com Controle Remoto e Bateria Recarregável Rosa",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-brinquedo-mega-robo-com-30-funcoes-e-bateria-recarregave-d22cde8d",
+      "nome": "Brinquedo Mega Robô com 30 Funções e Bateria Recarregável",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-barco-lancha-de-controle-remoto-recarregavel-envio-full-935bb96b",
+      "nome": "Barco Lancha de Controle Remoto Recarregável - Envio Full",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-192-blocos-ima-magneticos-construcao-tipo-minecraft--b756e16a",
+      "nome": "Kit 192 Blocos Imã Magnéticos Construção Tipo Minecraft Montar",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-dinossauro-t-rex-brinquedo-rugido-fumaca-luz-anda-led-me-8cf1e986",
+      "nome": "Dinossauro T-rex Brinquedo Rugido Fumaça Luz Anda Led Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Brinquedos",
+      "pendencias": [
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-biblia-sagrada-com-harpa-crista-letra-gigante-a3e879b9",
+      "nome": "Bíblia Sagrada com Harpa Cristã letra gigante",
+      "loja": "Mercado Livre",
+      "categoria": "Religiosa/Gospel",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-biblia-arc-letra-jumbo-com-harpa-crista-b4e023f6",
+      "nome": "Bíblia ARC Letra Jumbo com Harpa Cristã",
+      "loja": "Mercado Livre",
+      "categoria": "Religiosa/Gospel",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-biblia-sagrada-letra-hipergigante-com-harpa-f80cd2e5",
+      "nome": "Bíblia Sagrada Letra Hipergigante com Harpa",
+      "loja": "Mercado Livre",
+      "categoria": "Religiosa/Gospel",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-biblia-sagrada-letra-grande-harpa-e-corinhos-bdf4f153",
+      "nome": "Bíblia Sagrada Letra Grande Harpa e Corinhos",
+      "loja": "Mercado Livre",
+      "categoria": "Religiosa/Gospel",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-pacific-antiaderente-premium-77cc94d9",
+      "nome": "Jogo de Panelas Pacific Antiaderente Premium",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-conjunto-de-panelas-pacific-design-australiano-ca83be18",
+      "nome": "Conjunto de Panelas Pacific Design Australiano",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-mimo-style-ceramica-inducao-10-pecas-fc3e26bc",
+      "nome": "Jogo de Panelas Mimo Style Cerâmica Indução 10 Peças",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d",
+      "nome": "Jogo de Panelas Mimo Style Premium 9 Peças Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-tramontina-monaco-inducao-2e56d70d",
+      "nome": "Jogo de Panelas Tramontina Mônaco Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-brinox-ceramic-life-smart-plus-984353d9",
+      "nome": "Jogo de Panelas Brinox Ceramic Life Smart Plus",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-magnific-inducao-aa37d6c5",
+      "nome": "Jogo de Panelas Panelux Magnific Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-ceraflame-premiere-joy-5-pecas-21b03983",
+      "nome": "Jogo de Panelas Ceraflame Premiere Joy 5 Peças",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-ceraflame-duo-smart-cbd83bbd",
+      "nome": "Jogo de Panelas Ceraflame Duo Smart",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-la-cuisine-antiaderente-inducao-3672bed8",
+      "nome": "Jogo de Panelas La Cuisine Antiaderente Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-hercules-inducao-premium-c6bb10ba",
+      "nome": "Jogo de Panelas Hércules Indução Premium",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-de-ceramica-10-pecas-inducao-baa007c6",
+      "nome": "Jogo de Panelas de Cerâmica 10 Peças Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-premium-antiaderente-titanium-inducao-23dc3cbb",
+      "nome": "Jogo de Panelas Premium Antiaderente Titanium Indução",
+      "loja": "Mercado Livre",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-fire-tv-stick-hd-06cca260",
+      "nome": "Fire TV Stick HD",
+      "loja": "Amazon",
+      "categoria": "Eletrônicos",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-samsung-galaxy-fit3-grafite-0234014f",
+      "nome": "Samsung Galaxy Fit3 grafite",
+      "loja": "Amazon",
+      "categoria": "Celulares",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-impermeavel-de-grande-capacidade-escolar-e-unive-ff943af9",
+      "nome": "Mochila Impermeável de Grande Capacidade Escolar e Universitária, Alças Reforçadas, Compartimento Interno para Notebook, Ideal para Dia a Dia, Trabalho e Viagem (PRETO)",
+      "loja": "Amazon",
+      "categoria": "Moda e Acessorios",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-cinto-cowboy-vintage-western-unissex-com-fivela-floral-2129542d",
+      "nome": "Cinto Cowboy Vintage Western Unissex com fivela floral",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
+      "nome": "Castela Cinto Country Unissex preto com cavalo em bronze",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
+      "nome": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+      "nome": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+      "nome": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-camisa-feminina-country-radade-bordada-manga-longa-63125664",
+      "nome": "Camisa Feminina Country Radade bordada manga longa",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-country-infantil-com-cinto-fivela-e-chapeu-cowboy-5e624db1",
+      "nome": "Kit Country Infantil com cinto, fivela e chapéu cowboy",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+      "nome": "Bota Botina feminina texana country com zíper ou elástico",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+      "nome": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+      "nome": "Bota Texana Feminina Country cano alto premium bico quadrado",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+      "nome": "Bota Texana Country Masculina cano longo marrom 801",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+      "nome": "ROPER Bota Country Masculina Marrom",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-australiana-preta-para-cavalo-com-conjunto-completo-1d79daf2",
+      "nome": "Sela Australiana preta para cavalo com conjunto completo",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-para-cavalo-mangalarga-kit-completo-pronta-para-uso-a60abfea",
+      "nome": "Sela para Cavalo Mangalarga + kit completo pronta para uso",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-americana-preta-simples-completa-com-manta-e-freio--56dea01d",
+      "nome": "Sela Americana preta simples completa com manta e freio inox",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-americana-tradicional-marrom-16-polegadas-130a8801",
+      "nome": "Sela Americana Tradicional marrom 16 polegadas",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-australiana-marrom-com-redea-e-cabecada-completa-6a1670a1",
+      "nome": "Sela Australiana marrom com rédea e cabeçada completa",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-australiana-cavalgada-luxo-marrom-pronta-para-uso-3d1841b3",
+      "nome": "Sela Australiana Cavalgada Luxo marrom pronta para uso",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-australiana-preta-completa-simples-com-aba-arreada--7a10633e",
+      "nome": "Sela Australiana preta completa simples com aba arreada 16 polegadas",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sela-americana-completa-tradicional-preta-50037823",
+      "nome": "Sela Americana completa tradicional preta",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-peitoral-cabecada-argolados-para-cavalo-bff91087",
+      "nome": "Kit Peitoral + Cabeçada argolados para cavalo",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-cabecada-3-argolas-redea-4-argolas-freio-6c9fa622",
+      "nome": "Kit Cabeçada 3 argolas + rédea 4 argolas + freio",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd",
+      "nome": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-color-simples-boots-horse-azul-claro-caneleira-de-pr-f0d38b6d",
+      "nome": "Kit Color Simples Boots Horse azul-claro / caneleira de proteção",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-estribos-ingleses-almofadados-para-equitacao-f6d89fd8",
+      "nome": "Estribos ingleses almofadados para equitação",
+      "loja": "Amazon",
+      "categoria": "Auto, Ferramentas e Esporte",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-wap-liquidificador-wb2000-com-copo-de-vidro-2-l-93e67fb4",
+      "nome": "WAP Liquidificador WB2000 com Copo de Vidro 2 L",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-cooktop-4-bocas-de-inducao-midea-built-in-even-pro-a9e102da",
+      "nome": "Cooktop 4 Bocas de Indução Midea Built In Even Pro",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-philips-walita-airfryer-serie-1000-xl-6-2-l-220v-914245c1",
+      "nome": "Philips Walita Airfryer Série 1000 XL 6,2 L - 220V",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-forno-eletrico-oster-45-l-grafite-110v-1b0eb778",
+      "nome": "Forno Elétrico Oster 45 L Grafite - 110V",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-fritadeira-philco-air-fryer-oven-12-l-pfr2200p-127v-71b03296",
+      "nome": "Fritadeira Philco Air Fryer Oven 12 L PFR2200P - 127V",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-cafeteira-espresso-oster-primalatte-touch-red-127v-ec6a20c6",
+      "nome": "Cafeteira Espresso Oster PrimaLatte Touch Red - 127V",
+      "loja": "Amazon",
+      "categoria": "Casa e Cozinha",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-completo-ensino-medio-faculdade-env-c445b380",
+      "nome": "Material Escolar Kit Completo Ensino Médio/Faculdade - Envio Full",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-completo-50-itens-2c6526d0",
+      "nome": "Kit Material Escolar Completo 50 Itens",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-completo-45-unidades-068612d0",
+      "nome": "Material Escolar Kit Completo 45 Unidades",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-completo-com-mochila-cabo-de-aco-no-35064b30",
+      "nome": "Kit Material Escolar Completo com Mochila Cabo de Aço Notebook",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-completo-ensino-volta-as-aulas-prom-03e49501",
+      "nome": "Material Escolar Kit Completo Ensino Volta às Aulas Promoção",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-escolar-infantil-material-escolar-papelaria-barata-c69ec437",
+      "nome": "Kit Escolar Infantil Material Escolar Papelaria Barata",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-mochila-e-material-escolar-menino-infantil-completo-cb22d9bb",
+      "nome": "Kit Mochila e Material Escolar Menino Infantil Completo",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-escolar-material-completo-ensino-faculdade-medio-pre-2fbb9f4f",
+      "nome": "Kit Escolar Material Completo Ensino Faculdade Médio Premium",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-completo-material-escolar-presente-papelaria-infanti-dc10f9c5",
+      "nome": "Kit Completo Material Escolar Presente Papelaria Infantil",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-completo-ensino-medio-juvenil-menin-74ff5b38",
+      "nome": "Kit Material Escolar Completo Ensino Médio Juvenil Menino",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-masculino-ensino-fundamental-medio--621d94ba",
+      "nome": "Material Escolar Kit Masculino Ensino Fundamental Médio Faculdade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-completo-com-estojo-e-caderno-fac3a337",
+      "nome": "Kit Material Escolar Completo com Estojo e Caderno",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-completo-ensino-fundamental-medio-f-62f3320c",
+      "nome": "Material Escolar Kit Completo Ensino Fundamental/Médio/Faculdade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-35-itens-fundamental-medio-faculdad-d9140913",
+      "nome": "Kit Material Escolar 35 Itens Fundamental Médio Faculdade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-kit-material-escolar-fundamental-1-completo-meninas-meni-d6604229",
+      "nome": "Kit Material Escolar Fundamental 1 Completo Meninas/Meninos",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-material-escolar-kit-completo-ensino-fundamental-medio-f-5bd5f0bf",
+      "nome": "Material Escolar Kit Completo Ensino Fundamental Médio Facul",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-de-estilo-novo-escolar-para-estudantes-bba98bc4",
+      "nome": "Mochila de Estilo Novo Escolar para Estudantes",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-novo-grande-estojo-escolar-multifuncional-2a598ae1",
+      "nome": "Novo Grande Estojo Escolar Multifuncional",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-plus-estrelas-1-materia-b68111bf",
+      "nome": "Caderno Universitário Plus Estrelas 1 Matéria",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-bolsa-grande-feminina-para-notebook-026efe70",
+      "nome": "Mochila Escolar Bolsa Grande Feminina para Notebook",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-urban-capa-dura-game-240-folhas-83195681",
+      "nome": "Caderno Universitário Urban Capa Dura Game 240 Folhas",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-42x30-cm-estilo-floresta-7d6388c1",
+      "nome": "Mochila Escolar 42x30 cm Estilo Floresta",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-multifuncional-em-nylon-929443f0",
+      "nome": "Estojo Escolar Multifuncional em Nylon",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-plus-personalizado-com-sua-foto-24-9a096e26",
+      "nome": "Caderno Universitário Plus Personalizado com sua Foto 240 Folhas",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-de-grande-capacidade-040d9862",
+      "nome": "Mochila Escolar de Grande Capacidade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-escolar-universitario-20-materias-400-folhas-big-c45f4fa5",
+      "nome": "Caderno Escolar Universitário 20 Matérias 400 Folhas Bigbang",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-menino-menina-faculdade-trabalho-30l-1816e3b5",
+      "nome": "Mochila Escolar Menino/Menina Faculdade Trabalho 30L",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-72-compartimentos-grande-capacidade-e5a9989a",
+      "nome": "Estojo Escolar 72 Compartimentos Grande Capacidade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-novo-estojo-escolar-de-grande-capacidade-df0179fd",
+      "nome": "Novo Estojo Escolar de Grande Capacidade",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-escolar-universitario-1-materia-70-folhas-preto-0a3b63ab",
+      "nome": "Caderno Escolar Universitário 1 Matéria 70 Folhas Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-42x30-cm-estilo-simples-moderno-f8baa3d4",
+      "nome": "Mochila Escolar 42x30 cm Estilo Simples Moderno",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-box-feminino-grande-com-divisoria-1a48c7c9",
+      "nome": "Estojo Escolar Box Feminino Grande com Divisória",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-10-materias-160-folhas-capa-dura-p-076a4e5b",
+      "nome": "Caderno Universitário 10 Matérias 160 Folhas Capa Dura Preto",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-estojo-escolar-grande-hello-kitty-fff411e3",
+      "nome": "Estojo Escolar Grande Hello Kitty",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-1-materia-96-folhas-cute-cats-77b89d1f",
+      "nome": "Caderno 1 Matéria 96 Folhas Cute Cats",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-infantil-com-dinossauros-7034ece2",
+      "nome": "Mochila Escolar Infantil com Dinossauros",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-capa-dura-infinity-linhas-80-folha-11dc7a84",
+      "nome": "Caderno Universitário Capa Dura Infinity Linhas 80 Folhas",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-mochila-escolar-para-novo-ano-escolar-13957ddb",
+      "nome": "Mochila Escolar para Novo Ano Escolar",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-caderno-universitario-15-materias-240-folhas-capa-dura-s-a169f67d",
+      "nome": "Caderno Universitário 15 Matérias 240 Folhas Capa Dura Sortido",
+      "loja": "Mercado Livre",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-estojo-material-escolar-maleta-68-pecas-completo-azul-375f8ea8",
+      "nome": "Estojo Material Escolar Maleta 68 Peças Completo - Azul",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-estojo-material-escolar-maleta-48-pecas-completo-preto-405c0b60",
+      "nome": "Estojo Material Escolar Maleta 48 Peças Completo - Preto",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-estojo-material-escolar-maleta-48-68-86-150-208-pecas-82a3cb1d",
+      "nome": "Estojo Material Escolar Maleta 48/68/86/150/208 Peças",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-6-carteiras-oxford-com-ziper-para-documentos-e-material--1f472b80",
+      "nome": "6 Carteiras Oxford com Zíper para documentos e material escolar",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-hawlander-mochila-escolar-infantil-para-meninas-87c3bb05",
+      "nome": "Hawlander Mochila Escolar Infantil para Meninas",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mowee-caderno-com-5-disciplinas-pacote-com-2-af1080d2",
+      "nome": "MOWEE Caderno com 5 disciplinas - pacote com 2",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-estojo-canetas-touch-marcador-kit-de-24-cores-ponta-dupl-c3eaae05",
+      "nome": "Estojo Canetas Touch Marcador Kit de 24 Cores Ponta Dupla",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-bolsa-feminina-de-rodinhas-dog-lilas-33a819b5",
+      "nome": "Mochila Bolsa Feminina de Rodinhas Dog - Lilás",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tiefossi-caderno-pautado-b5-f395b518",
+      "nome": "TIEFOSSI Caderno pautado B5",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-6-livros-24-canetinhas-cute-comfy-goods-6830f33f",
+      "nome": "Kit 6 Livros + 24 Canetinhas Cute Comfy Goods",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-universitario-espiral-1-materia-never-403b7768",
+      "nome": "Caderno Universitário Espiral 1 Matéria Never",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-infantil-de-rodinhas-futebol-masculina-2774458f",
+      "nome": "Mochila Infantil de Rodinhas Futebol Masculina",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-espiral-universitario-zip-pastel-1m-80-folhas-ti-29cae5ef",
+      "nome": "Caderno Espiral Universitário Zip Pastel 1M 80 Folhas Tilibra",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-mochila-creche-lancheira-estojo-zoop-com-canetinhas-52c34250",
+      "nome": "Kit Mochila Creche + Lancheira + Estojo ZOOP com Canetinhas",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-monster-jam-mini-mochila-com-lancheira-para-criancas-c69c6cd0",
+      "nome": "Monster Jam Mini Mochila com Lancheira para Crianças",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-mochila-e-estojo-masculina-bolso-notebook-shock-pret-7adb1a84",
+      "nome": "Kit Mochila e Estojo Masculina Bolso Notebook Shock - Preto",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-homem-aranha-tilibra-universitario-brochura-fa72e918",
+      "nome": "Caderno Homem Aranha TILIBRA Universitário Brochura",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sanrio-mochila-infantil-kuromi-a7726b17",
+      "nome": "SANRIO Mochila infantil Kuromi",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-escolar-infantil-cristiano-ronaldo-cr7-rodinhas-97a489ce",
+      "nome": "Mochila Escolar Infantil Cristiano Ronaldo CR7 Rodinhas",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-de-disco-reposicionavel-medio-cerejeira-floral-9e1a12ca",
+      "nome": "Caderno de Disco Reposicionável Médio Cerejeira Floral",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-escolar-emoji-lhama-grande-b9f22827",
+      "nome": "Mochila Escolar Emoji Lhama Grande",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-infantil-capivara-rosa-03429b38",
+      "nome": "Mochila Infantil Capivara Rosa",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-mochila-heritage-2-0-04aa4fc2",
+      "nome": "Mochila Heritage 2.0",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-mochila-costas-lancheira-infantil-zoop-amarelo-328faa90",
+      "nome": "Kit Mochila Costas + Lancheira Infantil ZOOP - Amarelo",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-escolar-3-em-1-com-mochila-lancheira-termica-e-estoj-7b7272c8",
+      "nome": "Kit escolar 3 em 1 com mochila, lancheira térmica e estojo",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-caderno-universitario-plus-1-materia-profissoes-teologia-fa62b7e7",
+      "nome": "Caderno Universitário Plus 1 Matéria Profissões Teologia",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-canetas-esferograficas-diamante-cristal-colorido-3e33b12c",
+      "nome": "Kit Canetas Esferográficas Diamante Cristal Colorido",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tilibra-caderno-brochura-colegial-bridgerton-80-folhas-b27fa68b",
+      "nome": "TILIBRA Caderno Brochura Colegial Bridgerton 80 Folhas",
+      "loja": "Amazon",
+      "categoria": "Educacao",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-adidas-adilette-aqua-chinelo-feminino-77c65d19",
+      "nome": "Adidas Adilette Aqua Chinelo Feminino",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-crocs-classic-clog-navy-41bd8b84",
+      "nome": "Crocs Classic Clog Navy",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-kit-2-chinelos-masculino-polo-wear-639d00b1",
+      "nome": "Kit 2 Chinelos Masculino Polo Wear",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
+      "nome": "Chinelo Preto Infantil Dino Dinossauro",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-puma-club-ii-4df3dfa5",
+      "nome": "Tênis Puma Club II",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-fila-speedrocker-feminino-2f881eb9",
+      "nome": "Tênis Fila Speedrocker Feminino",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-mizuno-glow-3-feminino-8523f389",
+      "nome": "Tênis Mizuno Glow 3 Feminino",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-tenis-mizuno-neo-vortex-masculino-t37-ab0948e1",
+      "nome": "Tênis Mizuno Neo Vortex Masculino T37",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-skechers-tenis-masculino-plataforma-33154de5",
+      "nome": "Skechers Tênis Masculino Plataforma",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-lucky-brand-ellanzo-mocassim-feminino-f63176ff",
+      "nome": "Lucky Brand Ellanzo Mocassim Feminino",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-adidas-nmd-r1-infantil-sem-cadarco-5c46bb77",
+      "nome": "Adidas NMD R1 Infantil Sem Cadarço",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-nike-dunk-high-se-gs-all-star-2021-a7d03580",
+      "nome": "Nike Dunk High SE GS All Star 2021",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-lugz-zen-hi-bota-feminina-4b64d3c7",
+      "nome": "Lugz Zen Hi Bota Feminina",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-sandalia-casual-salto-baixo-beira-rio-6bc97a8b",
+      "nome": "Sandália Casual Salto Baixo Beira Rio",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-steven-byanka-sandalia-feminina-64c9db4a",
+      "nome": "STEVEN Byanka Sandália Feminina",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-amazon-bota-feminina-anabela-usaflex-ud26002-7820f8ba",
+      "nome": "Bota Feminina Anabela Usaflex UD26002",
+      "loja": "Amazon",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-corre-4-marrom-unissex-corrida-original-8c9a7552",
+      "nome": "Tenis Olympikus Corre 4 Marrom Unissex Corrida Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-fila-recovery-masculino-esportivo-preto-original-6808d00a",
+      "nome": "Tenis FILA Recovery Masculino Esportivo Preto Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-fila-original-fitness-tennis-club-ii-masculino-6cad2114",
+      "nome": "Tenis FILA Original Fitness Tennis Club Ii Masculino",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-sagaz-masculino-original-7a7448f7",
+      "nome": "Tenis Olympikus Sagaz Masculino Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-fila-feminino-street-fit-2-academia-leve-original-989243cc",
+      "nome": "Tenis FILA Feminino Street Fit 2 Academia Leve Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-dynamic-esportivo-conforto-treino-origin-76ac424b",
+      "nome": "Tenis Olympikus Dynamic Esportivo Conforto Treino Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-fila-masculino-master-ace-para-jogar-tennis-origin-1eb9121b",
+      "nome": "Tenis FILA Masculino Master Ace Para Jogar Tennis Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-sem-cadarco-cli-slip-on-original-confort-80cb597e",
+      "nome": "Tenis Olympikus Sem Cadarco Cli Slip On Original Confortavel",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-preto-masculino-volta-2-original-03c87763",
+      "nome": "Tenis Olympikus Preto Masculino Volta 2 Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-quadra-2-masculino-volei-original-esport-fe3b65be",
+      "nome": "Tenis Olympikus Quadra 2 Masculino Volei Original Esportivo",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-olympikus-inverse-2-esportivo-original-77aaba61",
+      "nome": "Tenis Olympikus Inverse 2 Esportivo Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-new-balance-574-v2-casual-unissex-original-bd3b6cbb",
+      "nome": "Tenis New Balance 574 V2 Casual Unissex Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-mizuno-neo-pryzma-feminino-original-5a821455",
+      "nome": "Tenis Mizuno Neo Pryzma Feminino Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-puma-masculino-esportivo-maxima-pro-branco-origina-47ad4730",
+      "nome": "Tenis PUMA Masculino Esportivo Maxima Pro Branco Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-asics-gel-dedicate-8-clay-saibro-original-1magnus-dd4671a2",
+      "nome": "Tenis ASICS Gel Dedicate 8 Clay Saibro Original 1magnus",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-new-balance-530-retro-feminino-casual-original-a4dc9570",
+      "nome": "Tenis New Balance 530 Retro Feminino Casual Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-mizuno-goya-3-feminino-original-82cae387",
+      "nome": "Tenis Mizuno Goya 3 Feminino Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-puma-casual-unisex-caven-20-branco-original-c511adb2",
+      "nome": "Tenis PUMA Casual Unisex Caven 20 Branco Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-puma-skyrocket-lite-2-masculino-esportivo-original-5bc606c1",
+      "nome": "Tenis PUMA Skyrocket Lite 2 Masculino Esportivo Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-puma-shuffle-downtown-lancamento-original-pt-entre-b8bd662a",
+      "nome": "Tenis PUMA Shuffle Downtown Lancamento Original Pt Entrega",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-tenis-new-balance-1080-v15-feminino-lancamento-original-c85f7ce4",
+      "nome": "Tenis New Balance 1080 V15 Feminino Lancamento Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-havaianas-harry-potter-original-unissex-presente-6c400fff",
+      "nome": "Chinelo Havaianas Harry Potter Original Unissex Presente Nf",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-rider-slide-street-original-lancamento-confortav-97708b91",
+      "nome": "Chinelo Rider Slide Street Original Lancamento Confortavel",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-cartago-alabama-masculino-original-2edf4dfc",
+      "nome": "Chinelo Cartago Alabama Masculino Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-rider-original-masculino-com-solado-leve-e-macio-6ddeea2b",
+      "nome": "Chinelo Rider Original Masculino Com Solado Leve E Macio",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-cartago-coimbra-ii-masculino-original-casual-349a5393",
+      "nome": "Chinelo Cartago Coimbra Ii Masculino Original Casual",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-rider-star-iii-masculino-original-super-conforto-cf0b5c77",
+      "nome": "Chinelo Rider Star Iii Masculino Original Super Conforto",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-cartago-milao-plus-masculino-tiras-largas-origin-fdc8ef86",
+      "nome": "Chinelo Cartago Milao Plus Masculino Tiras Largas Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-chinelo-rider-slide-free-ii-confortavel-original-12323-99a787d6",
+      "nome": "Chinelo Rider Slide Free Ii Confortavel Original 12323",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-bota-feminina-comfortflex-original-detalhes-em-dourado-l-62b33fab",
+      "nome": "Bota Feminina Comfortflex Original Detalhes Em Dourado Leve",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-bota-masculina-democrata-grid-couro-preto-original-ba6a4081",
+      "nome": "Bota Masculina Democrata Grid Couro Preto Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "importado-ml-sandalia-feminina-salto-baixo-tira-moleca-fivela-origina-15fbf042",
+      "nome": "Sandalia Feminina Salto Baixo Tira Moleca Fivela Original",
+      "loja": "Mercado Livre",
+      "categoria": "Calcados",
+      "pendencias": [
+        "avaliacao",
+        "disponibilidade"
+      ]
+    }
+  ]
+}
