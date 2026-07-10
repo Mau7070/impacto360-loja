@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IMPACTO 360 AFILIADO | Shopping Virtual Premium</title>
-  <meta name="description" content="Shopping virtual premium com lojas por alas, produtos de afiliados, serviÃ§os digitais e experiÃªncia de compra moderna." />
+  <title>Impacto360 Afiliado | Ofertas selecionadas em um shopping virtual</title>
+  <meta name="description" content="Encontre produtos da Amazon, Mercado Livre e outras lojas parceiras em uma vitrine organizada com links oficiais de afiliado da Impacto360 Afiliado." />
   <meta name="theme-color" content="#06152d" />
-  <meta property="og:title" content="IMPACTO 360 AFILIADO" />
-  <meta property="og:description" content="Entre no shopping virtual premium IMPACTO 360 AFILIADO." />
+  <meta property="og:title" content="Impacto360 Afiliado" />
+  <meta property="og:description" content="Ofertas selecionadas em um só shopping virtual, com compra finalizada no site parceiro e sem custo adicional para você." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://impacto360afiliado.com.br/" />
   <meta property="og:image" content="https://impacto360afiliado.com.br/public/fachada-shopping-premium-referencia.png" />
@@ -170,6 +170,27 @@
       flex-wrap: wrap;
       margin-left: auto;
     }
+    .header-search {
+      flex: 1 1 320px;
+      min-height: 46px;
+      border: 1px solid rgba(8,25,47,.10);
+      border-radius: 999px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 16px;
+      color: #1d3554;
+      box-shadow: 0 12px 28px rgba(8,25,47,.06);
+    }
+    .header-search span { font-weight: 950; color: var(--blue); }
+    .header-search input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      color: var(--ink);
+      background: transparent;
+    }
     .nav-btn, .btn {
       border: 1px solid rgba(8,25,47,.10);
       border-radius: 999px;
@@ -196,6 +217,19 @@
       color: #10213a;
       border-color: transparent;
       background: linear-gradient(135deg, #f3ce7b, #fff1bd);
+    }
+    .hero-actions {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .hero-actions .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .shopping-view {
@@ -304,6 +338,30 @@
       border-color: transparent;
     }
 
+    .trust-strip {
+      padding: 18px 0 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .trust-item {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid rgba(8,25,47,.08);
+      border-radius: var(--radius);
+      padding: 10px;
+      background: rgba(255,255,255,.82);
+      color: #17314f;
+      font-size: 13px;
+      font-weight: 850;
+      box-shadow: 0 10px 26px rgba(8,25,47,.05);
+    }
+
     section { padding: 42px 0; }
     .section-title {
       display: flex;
@@ -318,6 +376,34 @@
       line-height: 1.05;
     }
     .section-title p { margin: 8px 0 0; max-width: 620px; color: var(--muted); line-height: 1.55; }
+
+    .commercial-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+      gap: 12px;
+    }
+    .category-shortcut {
+      min-height: 118px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      background: #fff;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      text-align: left;
+      box-shadow: 0 14px 34px rgba(8,25,47,.07);
+    }
+    .category-shortcut strong { font-size: 16px; line-height: 1.2; }
+    .category-shortcut span { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .category-shortcut:hover {
+      border-color: rgba(29,92,255,.28);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 42px rgba(8,25,47,.11);
+    }
 
     .floor-block {
       margin-bottom: 28px;
@@ -368,6 +454,7 @@
       flex-direction: column;
     }
     .store-banner {
+      position: relative;
       min-height: 96px;
       padding: 16px;
       color: #fff;
@@ -375,8 +462,41 @@
       align-items: flex-start;
       justify-content: space-between;
       background: var(--store-gradient);
+      overflow: hidden;
+    }
+    .store-card.has-cover .store-banner { min-height: 154px; padding: 0; }
+    .store-cover-img, .store-hero-image, .category-cover-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(1.08) contrast(1.04);
+    }
+    .store-cover-img {
+      position: absolute;
+      inset: 0;
+    }
+    .store-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,21,45,.12), rgba(6,21,45,.74));
+      pointer-events: none;
+    }
+    .store-card:not(.has-cover) .store-banner::after { display: none; }
+    .store-banner-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      min-height: 154px;
+      padding: 16px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
     }
     .store-banner.light { color: #10213a; }
+    .store-card.has-cover .store-banner.light { color: #fff; }
     .store-icon {
       width: 52px;
       height: 52px;
@@ -411,6 +531,76 @@
       gap: 8px;
       flex-wrap: wrap;
     }
+
+    .opening-showcase {
+      border-color: rgba(29,92,255,.20);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(246,251,255,.96)),
+        radial-gradient(circle at 12% 0%, rgba(39,215,232,.16), transparent 32%);
+    }
+    .category-cover-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .category-cover-card {
+      position: relative;
+      min-height: 184px;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 8px;
+      overflow: hidden;
+      color: #fff;
+      background: #06152d;
+      box-shadow: 0 18px 42px rgba(8,25,47,.12);
+      text-align: left;
+      isolation: isolate;
+    }
+    .category-cover-card img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+    .category-cover-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(6,21,45,.10), rgba(6,21,45,.82));
+    }
+    .category-cover-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 58px rgba(8,25,47,.18);
+    }
+    .category-cover-content {
+      min-height: 184px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .category-cover-content strong {
+      font-size: 23px;
+      line-height: 1.05;
+    }
+    .category-cover-content span {
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .opening-products-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 8px 0 14px;
+    }
+    .opening-products-head h3 { margin: 0; font-size: 24px; }
+    .opening-products-head p { margin: 5px 0 0; color: var(--muted); }
+    .opening-products.product-grid { grid-template-columns: repeat(auto-fit, minmax(252px, 1fr)); }
+    .opening-products .product-media { aspect-ratio: 4 / 3; }
+    .opening-actions { margin-top: 16px; }
 
     .assistant-fab {
       position: fixed;
@@ -449,15 +639,31 @@
       background: var(--store-gradient);
       position: relative;
       isolation: isolate;
+      overflow: hidden;
+    }
+    .store-hero.has-cover {
+      min-height: clamp(330px, 42vw, 520px);
+      display: flex;
+      align-items: flex-end;
+      background: #06152d;
+    }
+    .store-hero-image {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
     }
     .store-hero.light { color: #10213a; }
+    .store-hero.has-cover.light { color: #fff; }
     .store-hero::after {
       content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: radial-gradient(circle at 78% 0%, rgba(255,255,255,.34), transparent 34%);
+      background:
+        linear-gradient(90deg, rgba(6,21,45,.84), rgba(6,21,45,.32) 48%, rgba(6,21,45,.70)),
+        radial-gradient(circle at 78% 0%, rgba(255,255,255,.30), transparent 34%);
     }
+    .store-hero-content { position: relative; z-index: 1; width: min(820px, 100%); }
     .store-hero h1 { margin: 12px 0; font-size: clamp(32px, 5vw, 62px); line-height: 1; }
     .store-hero p { max-width: 760px; color: inherit; opacity: .82; line-height: 1.55; }
     .store-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
@@ -485,7 +691,17 @@
       align-items: center;
       justify-content: center;
     }
-    .product-media img { width: 100%; height: 100%; object-fit: contain; object-position: center; padding: 10px; background: #fff; transition: transform .25s ease; }
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: 7px;
+      background: #fff;
+      filter: saturate(1.06) contrast(1.03);
+      image-rendering: auto;
+      transition: transform .25s ease;
+    }
     .product-card:hover img { transform: scale(1.04); }
     .media-status {
       display: inline-flex;
@@ -542,9 +758,45 @@
     .specs span { border-radius: 999px; background: #f0f5fb; color: #40546d; padding: 6px 8px; font-size: 11px; font-weight: 800; }
     .price-line { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .price { color: #0f7d69; font-size: 18px; font-weight: 950; }
+    .old-price { color: #8794a3; text-decoration: line-through; font-size: 13px; font-weight: 800; }
+    .product-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+    .product-meta span, .affiliate-mini {
+      border-radius: 999px;
+      background: #f4f8fb;
+      color: #40546d;
+      padding: 6px 8px;
+      font-size: 11px;
+      font-weight: 850;
+    }
+    .affiliate-mini { background: #ecfdf6; color: #0d6b51; }
     .product-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .product-actions .btn { flex: 1 1 150px; justify-content: center; min-height: 48px; }
     .product-card[data-publicacao="revisar"] .product-actions .btn-primary { background: #7c5300; }
+
+    .partner-showcase {
+      display: grid;
+      gap: 22px;
+    }
+    .partner-block {
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+    }
+    .partner-block h3 { margin: 0; font-size: 24px; }
+    .partner-block p { margin: 6px 0 14px; color: var(--muted); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .info-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(8,25,47,.06);
+    }
+    .info-card strong { display: block; margin-bottom: 8px; }
+    .info-card p { margin: 0; color: var(--muted); line-height: 1.55; }
 
     .footer {
       margin-top: 48px;
@@ -599,26 +851,30 @@
       .assistant-panel { top: 70px; right: 14px; bottom: auto; max-height: calc(100svh - 92px); overflow: auto; }
       .header-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
       .brand { min-width: 0; }
-      .internal-nav { margin-left: 0; }
+      .header-search { width: 100%; flex-basis: auto; }
+      .internal-nav { margin-left: 0; width: 100%; }
+      .trust-grid { grid-template-columns: 1fr; }
       .store-grid, .product-grid { grid-template-columns: 1fr; }
+      .commercial-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .category-cover-grid { grid-template-columns: 1fr; }
       .mall-hero { padding-top: 22px; }
       .mall-panel { padding: 18px; }
       .product-card { border-radius: 8px; }
       .product-info h3 { font-size: 18px; }
       .product-info p { font-size: 14px; }
       .product-actions .btn { flex-basis: 100%; }
-      .floor-head, .section-title { display: block; }
+      .floor-head, .section-title, .opening-products-head { display: block; }
       .footer-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-<body class="locked">
+<body class="inside">
   <main class="entrance-view" aria-label="Fachada do shopping IMPACTO 360 AFILIADO">
     <button class="enter-hotspot" type="button" onclick="enterShopping()" aria-label="Entrar no shopping">ENTRAR NO SHOPPING</button>
     <div class="entrance-bar" aria-hidden="true">
       <span>Compra segura</span>
       <span>Links de afiliados oficiais</span>
-      <span>NavegaÃ§Ã£o rÃ¡pida</span>
+      <span>Navegação rápida</span>
       <span>Ofertas selecionadas</span>
     </div>
   </main>
@@ -626,44 +882,67 @@
   <main class="shopping-view">
     <header class="app-header">
       <div class="container header-inner">
-        <button class="brand" type="button" onclick="goEntrance()" aria-label="Voltar para a fachada">
+        <button class="brand" type="button" onclick="backToMall()" aria-label="Voltar para o início">
           <span class="brand-mark">360</span>
           <span><strong>IMPACTO 360</strong><span>AFILIADO</span></span>
         </button>
+        <label class="header-search" aria-label="Buscar produtos e categorias">
+          <span>+</span>
+          <input id="headerSearchInput" type="search" placeholder="Buscar produto, loja ou categoria" oninput="syncSearchFromHeader()" />
+        </label>
         <nav class="internal-nav" aria-label="Menu interno">
-          <button class="nav-btn active" data-category="all" onclick="setCategory('all')">InÃ­cio do shopping</button>
-          <button class="nav-btn" data-category="all" onclick="setCategory('all')">Todas as lojas</button>
+          <button class="nav-btn active" data-category="all" onclick="setCategory('all')">Início</button>
+          <button class="nav-btn" onclick="scrollToSection('commercialCategories')">Categorias</button>
+          <button class="nav-btn" data-category="Tecnologia" onclick="setCategory('Tecnologia')">Tecnologia</button>
+          <button class="nav-btn" data-category="Casa e Família" onclick="setCategory('Casa e Família')">Casa</button>
+          <button class="nav-btn" data-category="Moda e Calçados" onclick="setCategory('Moda e Calçados')">Moda</button>
+          <button class="nav-btn" data-category="Brinquedos" onclick="setCategory('Brinquedos')">Brinquedos</button>
           <button class="nav-btn" data-category="Ofertas" onclick="setCategory('Ofertas')">Ofertas</button>
-          <button class="nav-btn" data-category="ServiÃ§os Digitais" onclick="setCategory('ServiÃ§os Digitais')">ServiÃ§os digitais</button>
+          <button class="nav-btn" onclick="scrollToSection('mallFloors')">Lojas</button>
+          <button class="nav-btn" data-category="Serviços Digitais" onclick="setCategory('Serviços Digitais')">Serviços</button>
           <button class="nav-btn" data-filter="favorites" onclick="setSpecialFilter('favorites')">Favoritos</button>
-          <button class="nav-btn" onclick="shareShopping()">Compartilhar shopping</button>
+          <button class="nav-btn" onclick="openContact()">Contato</button>
         </nav>
       </div>
     </header>
 
+    <section class="trust-strip" aria-label="Confiança e transparência">
+      <div class="container trust-grid">
+        <div class="trust-item">Links oficiais de afiliado</div>
+        <div class="trust-item">Compra finalizada no site parceiro</div>
+        <div class="trust-item">Ofertas selecionadas</div>
+        <div class="trust-item">Sem custo adicional para você</div>
+        <div class="trust-item">Produtos revisados quando possível</div>
+      </div>
+    </section>
+
     <section class="mall-hero">
       <div class="container">
         <div class="mall-panel">
-          <span class="eyebrow">Shopping interno liberado</span>
-          <h1>Shopping Virtual IMPACTO 360</h1>
-          <p>Escolha uma ala, entre em uma loja e descubra as melhores ofertas e serviÃ§os em uma experiÃªncia moderna, clara e confiÃ¡vel.</p>
+          <span class="eyebrow">Explore ofertas selecionadas</span>
+          <h1>Impacto360 Afiliado — ofertas selecionadas em um só shopping virtual.</h1>
+          <p>Encontre produtos da Amazon, Mercado Livre e outras lojas parceiras com praticidade, organização e links diretos.</p>
           <div class="search-row">
             <label class="search-box" aria-label="Busca interna">
               <span>+</span>
-              <input id="searchInput" type="search" placeholder="Buscar loja, produto, serviÃ§o ou categoria..." oninput="renderMall()" />
+              <input id="searchInput" type="search" placeholder="Buscar loja, produto, serviço ou categoria..." oninput="syncSearchFromHero()" />
             </label>
             <button class="btn btn-gold" onclick="setViewMode('grid')">Grade</button>
             <button class="btn btn-gold" onclick="setViewMode('corridor')">Corredor</button>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="setFilter('offers'); scrollToSection('openingShowcase')">Ver ofertas</button>
+            <button class="btn btn-gold" onclick="scrollToSection('commercialCategories')">Explorar categorias</button>
           </div>
           <div class="floor-tabs" id="floorTabs"></div>
           <div class="filters" id="filters">
             <button class="filter-chip active" data-filter="all" onclick="setFilter('all')">Todos</button>
             <button class="filter-chip" data-filter="popular" onclick="setFilter('popular')">Mais acessadas</button>
             <button class="filter-chip" data-filter="offers" onclick="setFilter('offers')">Ofertas</button>
-            <button class="filter-chip" data-filter="services" onclick="setFilter('services')">ServiÃ§os</button>
-            <button class="filter-chip" data-filter="products" onclick="setFilter('products')">Produtos fÃ­sicos</button>
+            <button class="filter-chip" data-filter="services" onclick="setFilter('services')">Serviços digitais</button>
+            <button class="filter-chip" data-filter="products" onclick="setFilter('products')">Produtos físicos</button>
             <button class="filter-chip" data-filter="new" onclick="setFilter('new')">Novidades</button>
-            <button class="filter-chip" data-filter="bestsellers" onclick="setFilter('bestsellers')">Mais vendidos</button>
+            <button class="filter-chip" data-filter="bestsellers" onclick="setFilter('bestsellers')">Mais procurados</button>
           </div>
         </div>
       </div>
@@ -673,12 +952,26 @@
       <div class="container">
         <div class="section-title">
           <div>
-            <h2>Alas e andares virtuais</h2>
+            <h2>Categorias do shopping</h2>
+            <p>Atalhos por intenção de compra, preservando o conceito de shopping virtual com navegação mais direta.</p>
+          </div>
+        </div>
+        <div class="commercial-category-grid" id="commercialCategories"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Ofertas em destaque</h2>
             <p>Lojas organizadas como vitrines internas, com busca, filtros, favoritos e compartilhamento.</p>
           </div>
           <button class="btn btn-primary" onclick="toggleAssistant()">Precisa de ajuda?</button>
         </div>
+        <div id="openingShowcase"></div>
         <div id="mercadoLivreShowcase"></div>
+        <div id="partnerStoreShowcase"></div>
         <div id="mallFloors"></div>
       </div>
     </section>
@@ -687,11 +980,45 @@
       <div class="container">
         <div class="section-title">
           <div>
-            <h2>Recomendado para vocÃª</h2>
-            <p>Atalhos para lojas e serviÃ§os com maior intenÃ§Ã£o de compra.</p>
+            <h2>Recomendado para você</h2>
+            <p>Atalhos para lojas e serviços com maior intenção de compra.</p>
           </div>
         </div>
         <div class="store-grid" id="recommendedStores"></div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Como funciona</h2>
+            <p>Selecionamos ofertas em lojas conhecidas, você escolhe o produto e a compra é finalizada no site oficial da loja parceira.</p>
+          </div>
+        </div>
+        <div class="info-grid">
+          <div class="info-card"><strong>1. Seleção</strong><p>As vitrines usam produtos e links já cadastrados no catálogo da Impacto360 Afiliado.</p></div>
+          <div class="info-card"><strong>2. Escolha</strong><p>Você compara categorias, lojas e produtos disponíveis na vitrine.</p></div>
+          <div class="info-card"><strong>3. Compra</strong><p>O botão abre o site parceiro responsável pelo pedido, pagamento, entrega e disponibilidade.</p></div>
+          <div class="info-card"><strong>4. Transparência</strong><p>Podemos receber comissão sem custo adicional para você.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transparencia">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Confiança e transparência</h2>
+            <p>A Impacto360 Afiliado pode receber comissão quando você compra por meio dos links indicados. A compra é realizada no site da loja parceira, sem custo adicional para você.</p>
+          </div>
+        </div>
+        <div class="info-grid">
+          <div class="info-card" id="afiliado"><strong>Aviso de afiliado</strong><p>A Impacto360 Afiliado pode receber comissão quando você compra por meio dos links indicados. A compra é realizada no site da loja parceira, sem custo adicional para você.</p></div>
+          <div class="info-card" id="privacidade"><strong>Política de privacidade</strong><p>Dados de navegação podem ser usados apenas para melhorar a experiência, favoritos locais e compartilhamento quando solicitado pelo usuário.</p></div>
+          <div class="info-card" id="termos"><strong>Termos de uso</strong><p>Preços, disponibilidade, entrega e garantia devem ser confirmados no site parceiro antes da compra.</p></div>
+          <div class="info-card" id="contato"><strong>Contato</strong><p>Atendimento pelo e-mail contato@impacto360afiliado.com ou pelo botão de contato quando disponível.</p></div>
+        </div>
       </div>
     </section>
 
@@ -700,22 +1027,23 @@
         <div class="footer-grid">
           <div>
             <div class="brand"><span class="brand-mark">360</span><span><strong>IMPACTO 360</strong><span>AFILIADO</span></span></div>
-            <p>Shopping virtual premium com ofertas, serviÃ§os digitais e oportunidades selecionadas.</p>
+            <p>Shopping virtual com ofertas, produtos físicos, serviços digitais e links de afiliado preservados.</p>
           </div>
           <div>
             <strong>Institucional</strong>
-            <a href="#sobre">Sobre</a>
-            <a href="#privacidade">PolÃ­tica de Privacidade</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#afiliado">Aviso de afiliado</a>
+            <a href="#privacidade">Política de Privacidade</a>
             <a href="#termos">Termos de Uso</a>
-            <a href="#afiliado">Aviso de Afiliado</a>
           </div>
           <div>
             <strong>Contato</strong>
             <a href="mailto:contato@impacto360afiliado.com">contato@impacto360afiliado.com</a>
+            <button class="btn btn-gold" onclick="openContact()">WhatsApp ou contato</button>
             <button class="btn btn-gold" onclick="shareShopping()">Compartilhar shopping</button>
           </div>
         </div>
-        <div class="affiliate-note" id="afiliado">O IMPACTO 360 AFILIADO pode receber comissÃ£o por compras realizadas por meio dos links indicados, sem custo adicional para o usuÃ¡rio.</div>
+        <div class="affiliate-note">A Impacto360 Afiliado pode receber comissão quando você compra por meio dos links indicados. A compra é realizada no site da loja parceira, sem custo adicional para você.</div>
       </div>
     </footer>
   </main>
@@ -738,11 +1066,11 @@
 
   <aside class="assistant-panel" id="assistantPanel">
     <h3>Precisa de ajuda?</h3>
-    <p>Digite na busca o que procura. SugestÃµes rÃ¡pidas: celular, notebook, calÃ§ado, mÃºsica, ABNT, pet, ferramenta, oferta.</p>
+    <p>Digite na busca o que procura. Sugestões rápidas: celular, notebook, calçado, música, ABNT, pet, ferramenta, oferta.</p>
     <div class="chips">
       <button class="chip" onclick="quickSearch('celular')">Celular</button>
       <button class="chip" onclick="quickSearch('notebook')">Notebook</button>
-      <button class="chip" onclick="quickSearch('mÃºsica')">MÃºsica</button>
+      <button class="chip" onclick="quickSearch('música')">Música</button>
       <button class="chip" onclick="quickSearch('ABNT')">ABNT</button>
     </div>
   </aside>
@@ -762,20 +1090,20 @@
     "icon": "MOBILE",
     "color": "#12b8d7",
     "gradient": "linear-gradient(135deg,#e9fbff,#ffffff 42%,#d8f5ee)",
-    "description": "Loja premium de smartphones, acessÃ³rios, wearables e telefonia mÃ³vel.",
+    "description": "Loja premium de smartphones, acessórios, wearables e telefonia móvel.",
     "subcategories": [
       "Smartphones",
       "Capas",
-      "PelÃ­culas",
+      "Películas",
       "Carregadores",
       "Fones Bluetooth",
       "Smartwatches",
       "Cabos",
       "Suportes veiculares",
       "Power banks",
-      "AcessÃ³rios premium",
-      "Celulares custo-benefÃ­cio",
-      "Celulares com melhor cÃ¢mera",
+      "Acessórios premium",
+      "Celulares custo-benefício",
+      "Celulares com melhor câmera",
       "Celulares com melhor bateria"
     ],
     "section": "Celulares para cada rotina"
@@ -791,11 +1119,11 @@
     "icon": "PC",
     "color": "#1f4fd8",
     "gradient": "linear-gradient(135deg,#061d3f,#173b75 48%,#eef6ff)",
-    "description": "InformÃ¡tica sofisticada: notebooks, desktops, monitores, perifÃ©ricos, peÃ§as e setups.",
+    "description": "Informática sofisticada: notebooks, desktops, monitores, periféricos, peças e setups.",
     "subcategories": [
       "Notebooks",
       "PCs gamer",
-      "Computadores de escritÃ³rio",
+      "Computadores de escritório",
       "Monitores",
       "Teclados",
       "Mouses",
@@ -803,9 +1131,9 @@
       "Impressoras",
       "SSDs",
       "HDs",
-      "Placas de vÃ­deo",
+      "Placas de vídeo",
       "Processadores",
-      "MemÃ³ria RAM",
+      "Memória RAM",
       "Cadeiras gamer",
       "Mesas gamer"
     ],
@@ -816,23 +1144,23 @@
     "name": "IMPACTO CASA",
     "commercialName": "Casa e Cozinha",
     "floor": "terreo",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "home",
     "icon": "CASA",
     "color": "#23a58f",
     "gradient": "linear-gradient(135deg,#fffaf2,#ffffff 45%,#e4f7ee)",
-    "description": "Ambiente claro, elegante e aconchegante para casa, cozinha e organizaÃ§Ã£o.",
+    "description": "Ambiente claro, elegante e aconchegante para casa, cozinha e organização.",
     "subcategories": [
-      "MÃ³veis",
-      "DecoraÃ§Ã£o",
-      "EletrodomÃ©sticos",
-      "UtensÃ­lios de cozinha",
-      "OrganizaÃ§Ã£o",
+      "Móveis",
+      "Decoração",
+      "Eletrodomésticos",
+      "Utensílios de cozinha",
+      "Organização",
       "Cama, mesa e banho",
-      "IluminaÃ§Ã£o",
+      "Iluminação",
       "Jardim",
-      "Ferramentas domÃ©sticas",
+      "Ferramentas domésticas",
       "Pequenos eletros"
     ],
     "section": "Casa dos sonhos"
@@ -842,22 +1170,22 @@
     "name": "IMPACTO MODA",
     "commercialName": "Moda",
     "floor": "terreo",
-    "category": "Moda e CalÃ§ados",
+    "category": "Moda e Calçados",
     "type": "products",
     "theme": "fashion",
     "icon": "MODA",
     "color": "#c6975b",
     "gradient": "linear-gradient(135deg,#fff7ef,#ffffff 45%,#ece7dd)",
-    "description": "Boutique moderna com moda feminina, masculina, acessÃ³rios e looks completos.",
+    "description": "Boutique moderna com moda feminina, masculina, acessórios e looks completos.",
     "subcategories": [
       "Moda feminina",
       "Moda masculina",
       "Moda plus size",
-      "Moda Ã­ntima",
+      "Moda íntima",
       "Bolsas",
-      "AcessÃ³rios",
-      "RelÃ³gios",
-      "Ã“culos",
+      "Acessórios",
+      "Relógios",
+      "Óculos",
       "Roupas sociais",
       "Roupas casuais"
     ],
@@ -866,27 +1194,27 @@
   {
     "id": "impacto-calcados",
     "name": "IMPACTO CALCADOS",
-    "commercialName": "Loja Exclusiva de CalÃ§ados",
+    "commercialName": "Loja Exclusiva de Calçados",
     "floor": "terreo",
-    "category": "Moda e CalÃ§ados",
+    "category": "Moda e Calçados",
     "type": "products",
     "theme": "shoes",
     "icon": "CALC",
     "color": "#395de8",
     "gradient": "linear-gradient(135deg,#f5f7ff,#ffffff 42%,#dfe8ff)",
-    "description": "Loja sofisticada de tÃªnis, sapatos, sandÃ¡lias, botas e calÃ§ados de conforto.",
+    "description": "Loja sofisticada de tênis, sapatos, sandálias, botas e calçados de conforto.",
     "subcategories": [
-      "TÃªnis masculino",
-      "TÃªnis feminino",
+      "Tênis masculino",
+      "Tênis feminino",
       "Sapatos sociais",
-      "SandÃ¡lias",
+      "Sandálias",
       "Botas",
       "Chinelos",
-      "CalÃ§ados infantis",
-      "CalÃ§ados esportivos",
-      "CalÃ§ados para trabalho",
+      "Calçados infantis",
+      "Calçados esportivos",
+      "Calçados para trabalho",
       "Palmilhas",
-      "AcessÃ³rios"
+      "Acessórios"
     ],
     "filters": [
       "casual",
@@ -894,14 +1222,14 @@
       "social",
       "infantil",
       "conforto",
-      "promoÃ§Ã£o"
+      "promoção"
     ],
     "section": "Calce conforto e estilo"
   },
   {
     "id": "impacto-ofertas",
     "name": "IMPACTO OFERTAS",
-    "commercialName": "Ofertas RelÃ¢mpago",
+    "commercialName": "Ofertas Relâmpago",
     "floor": "terreo",
     "category": "Ofertas",
     "type": "products",
@@ -909,18 +1237,18 @@
     "icon": "OFERTA",
     "color": "#e65536",
     "gradient": "linear-gradient(135deg,#fff4e8,#fff 42%,#ffe2d6)",
-    "description": "Corredor das promocoes com cupons, descontos, ultimas unidades e ofertas do dia.",
+    "description": "Corredor das promoções com cupons, descontos, últimas unidades e ofertas do dia.",
     "subcategories": [
       "Ofertas do dia",
       "Cupons",
       "Ultimas unidades",
       "Mais baratos",
-      "Frete grÃ¡tis",
+      "Frete grátis",
       "Mais vendidos",
-      "PromoÃ§Ãµes por tempo limitado",
+      "Promoções por tempo limitado",
       "Combos"
     ],
-    "section": "Corredor das promoÃ§Ãµes",
+    "section": "Corredor das promoções",
     "timer": "Oferta termina em: 02h 15min"
   },
   {
@@ -954,19 +1282,19 @@
     "icon": "ELEC",
     "color": "#16a8d8",
     "gradient": "linear-gradient(135deg,#071b34,#123e62 42%,#eafcff)",
-    "description": "Gadgets, automaÃ§Ã£o, seguranÃ§a eletrÃ´nica e dispositivos inteligentes.",
+    "description": "Gadgets, automação, segurança eletrônica e dispositivos inteligentes.",
     "subcategories": [
       "Gadgets",
       "Caixas de som",
-      "CÃ¢meras",
+      "Câmeras",
       "Drones",
-      "AutomaÃ§Ã£o residencial",
+      "Automação residencial",
       "Assistentes virtuais",
-      "SeguranÃ§a eletrÃ´nica",
-      "Games acessÃ³rios",
+      "Segurança eletrônica",
+      "Games acessórios",
       "Dispositivos inteligentes"
     ],
-    "section": "Tecnologia invisÃ­vel no dia a dia"
+    "section": "Tecnologia invisível no dia a dia"
   },
   {
     "id": "impacto-games",
@@ -979,7 +1307,7 @@
     "icon": "GAME",
     "color": "#5b6cff",
     "gradient": "linear-gradient(135deg,#10142c,#1c3568 46%,#ebf6ff)",
-    "description": "Games, consoles, acessÃ³rios, gift cards e setup gamer completo.",
+    "description": "Games, consoles, acessórios, gift cards e setup gamer completo.",
     "subcategories": [
       "Consoles",
       "Jogos",
@@ -989,7 +1317,7 @@
       "Teclados gamer",
       "Mouses gamer",
       "Monitores gamer",
-      "AcessÃ³rios",
+      "Acessórios",
       "Gift cards"
     ],
     "section": "Setup gamer completo"
@@ -997,9 +1325,9 @@
   {
     "id": "impacto-educa",
     "name": "IMPACTO EDUCA",
-    "commercialName": "Cursos e EducaÃ§Ã£o",
+    "commercialName": "Cursos e Educação",
     "floor": "primeiro-andar",
-    "category": "EducaÃ§Ã£o",
+    "category": "Educação",
     "type": "products",
     "theme": "education",
     "icon": "EDU",
@@ -1012,7 +1340,7 @@
       "Apostilas",
       "Concursos",
       "Idiomas",
-      "InformÃ¡tica",
+      "Informática",
       "Desenvolvimento pessoal",
       "Livros",
       "Treinamentos profissionais"
@@ -1024,43 +1352,43 @@
     "name": "IMPACTO LIVRARIA",
     "commercialName": "Livros",
     "floor": "primeiro-andar",
-    "category": "EducaÃ§Ã£o",
+    "category": "Educação",
     "type": "products",
     "theme": "books",
     "icon": "LIVRO",
     "color": "#8a6a3d",
     "gradient": "linear-gradient(135deg,#fff8ed,#ffffff 46%,#eee2d2)",
-    "description": "Livraria moderna, acolhedora e organizada para estudo, leitura e inspiraÃ§Ã£o.",
+    "description": "Livraria moderna, acolhedora e organizada para estudo, leitura e inspiração.",
     "subcategories": [
       "Literatura",
-      "DidÃ¡ticos",
+      "Didáticos",
       "Concursos",
-      "AcadÃªmicos",
+      "Acadêmicos",
       "Infantis",
       "Religiosos",
       "Autoajuda",
-      "NegÃ³cios",
-      "HistÃ³ria",
-      "SaÃºde",
-      "EducaÃ§Ã£o"
+      "Negócios",
+      "História",
+      "Saúde",
+      "Educação"
     ],
     "section": "Leitura que transforma"
   },
   {
     "id": "impacto-beauty-care",
     "name": "IMPACTO BEAUTY & CARE",
-    "commercialName": "Beleza e SaÃºde",
+    "commercialName": "Beleza e Saúde",
     "floor": "segundo-andar",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "beauty",
     "icon": "BEAUTY",
     "color": "#c77aa8",
     "gradient": "linear-gradient(135deg,#fff1f8,#ffffff 48%,#e9fff8)",
-    "description": "Beleza, saÃºde, autocuidado, perfumes, cosmÃ©ticos e bem-estar.",
+    "description": "Beleza, saúde, autocuidado, perfumes, cosméticos e bem-estar.",
     "subcategories": [
       "Perfumes",
-      "CosmÃ©ticos",
+      "Cosméticos",
       "Maquiagem",
       "Cuidados com a pele",
       "Cuidados com cabelo",
@@ -1076,21 +1404,21 @@
     "name": "IMPACTO KIDS",
     "commercialName": "Infantil",
     "floor": "segundo-andar",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "kids",
     "icon": "KIDS",
     "color": "#f0a52b",
     "gradient": "linear-gradient(135deg,#fff7db,#ffffff 46%,#eaf7ff)",
-    "description": "Produtos infantis, brinquedos, material escolar, bebÃªs e presentes.",
+    "description": "Produtos infantis, brinquedos, material escolar, bebês e presentes.",
     "subcategories": [
       "Brinquedos",
       "Roupas infantis",
-      "CalÃ§ados infantis",
+      "Calçados infantis",
       "Material escolar",
-      "BebÃªs",
+      "Bebês",
       "Carrinhos",
-      "BerÃ§os",
+      "Berços",
       "Livros infantis",
       "Jogos educativos",
       "Presentes"
@@ -1102,15 +1430,15 @@
     "name": "IMPACTO PET",
     "commercialName": "Pet",
     "floor": "segundo-andar",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "pet",
     "icon": "PET",
     "color": "#20a879",
     "gradient": "linear-gradient(135deg,#effff7,#ffffff 46%,#fff9e8)",
-    "description": "RaÃ§Ãµes, petiscos, brinquedos, caminhas e cuidado animal com carinho.",
+    "description": "Rações, petiscos, brinquedos, caminhas e cuidado animal com carinho.",
     "subcategories": [
-      "RaÃ§Ãµes",
+      "Rações",
       "Petiscos",
       "Brinquedos",
       "Caminhas",
@@ -1118,11 +1446,11 @@
       "Guias",
       "Higiene pet",
       "Areia",
-      "Tapetes higiÃªnicos",
+      "Tapetes higiênicos",
       "Transporte"
     ],
     "filters": [
-      "cÃ£es",
+      "cães",
       "gatos",
       "aves",
       "peixes",
@@ -1133,25 +1461,25 @@
   {
     "id": "impacto-decor",
     "name": "IMPACTO DECOR",
-    "commercialName": "MÃ³veis e DecoraÃ§Ã£o",
+    "commercialName": "Móveis e Decoração",
     "floor": "segundo-andar",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "decor",
     "icon": "DEC",
     "color": "#b58a55",
     "gradient": "linear-gradient(135deg,#fbf4e8,#ffffff 46%,#e9f4ee)",
-    "description": "Showroom de interiores com mÃ³veis, iluminaÃ§Ã£o, tapetes e objetos decorativos.",
+    "description": "Showroom de interiores com móveis, iluminação, tapetes e objetos decorativos.",
     "subcategories": [
-      "SofÃ¡s",
+      "Sofás",
       "Mesas",
       "Cadeiras",
       "Racks",
       "Guarda-roupas",
       "Camas",
-      "EscritÃ³rio",
+      "Escritório",
       "Quadros",
-      "LuminÃ¡rias",
+      "Luminárias",
       "Tapetes",
       "Objetos decorativos"
     ],
@@ -1159,173 +1487,173 @@
   },
   {
     "id": "impacto-fe",
-    "name": "IMPACTO FÃ’â¬°",
+    "name": "IMPACTO FÉ",
     "commercialName": "Religiosa/Gospel",
     "floor": "segundo-andar",
-    "category": "Casa e FamÃ­lia",
+    "category": "Casa e Família",
     "type": "products",
     "theme": "faith",
     "icon": "FE",
     "color": "#d2a84f",
     "gradient": "linear-gradient(135deg,#fffaf0,#ffffff 48%,#eef7ff)",
-    "description": "Produtos para fÃ©, estudo bÃ­blico, mÃºsica gospel, presentes e inspiraÃ§Ã£o.",
+    "description": "Produtos para fé, estudo bíblico, música gospel, presentes e inspiração.",
     "subcategories": [
-      "BÃ­blias",
-      "Livros cristÃ£os",
-      "MÃºsica gospel",
+      "Bíblias",
+      "Livros cristãos",
+      "Música gospel",
       "Presentes religiosos",
       "Quadros",
       "Camisetas",
       "Devocionais",
-      "Materiais de estudo bÃ­blico",
-      "Harpa cristÃ£",
+      "Materiais de estudo bíblico",
+      "Harpa cristã",
       "Artigos para igreja"
     ],
-    "section": "Produtos para fÃ©, estudo e inspiraÃ§Ã£o"
+    "section": "Produtos para fé, estudo e inspiração"
   },
   {
     "id": "impacto-music-studio",
     "name": "IMPACTO MUSIC STUDIO",
-    "commercialName": "ComposiÃ§Ãµes Musicais",
+    "commercialName": "Composições Musicais",
     "floor": "terceiro-andar",
-    "category": "ServiÃ§os Digitais",
+    "category": "Serviços Digitais",
     "type": "services",
     "theme": "music",
     "icon": "MUSIC",
     "color": "#c89c4a",
     "gradient": "linear-gradient(135deg,#06152d,#123b68 46%,#f8d27a)",
-    "description": "EstÃºdio musical moderno para letras, jingles, homenagens e projetos autorais sob encomenda.",
+    "description": "Estúdio musical moderno para letras, jingles, homenagens e projetos autorais sob encomenda.",
     "subcategories": [
-      "MÃºsica personalizada",
-      "MÃºsica gospel",
-      "MÃºsica sertaneja",
+      "Música personalizada",
+      "Música gospel",
+      "Música sertaneja",
       "Jingle comercial",
-      "MÃºsica para campanha",
-      "MÃºsica infantil",
-      "Homenagem de aniversÃ¡rio",
-      "Homenagem romÃ¢ntica",
+      "Música para campanha",
+      "Música infantil",
+      "Homenagem de aniversário",
+      "Homenagem romântica",
       "Letra personalizada",
       "Cifra",
       "Guia de melodia",
-      "MÃºsica para vÃ­deo"
+      "Música para vídeo"
     ],
     "services": [
       "Letra personalizada simples",
       "Letra com cifra",
       "Jingle comercial",
-      "MÃºsica para homenagem",
-      "MÃºsica gospel autoral",
-      "MÃºsica infantil personalizada",
-      "MÃºsica para campanha",
-      "NarraÃ§Ã£o musical para vÃ­deo"
+      "Música para homenagem",
+      "Música gospel autoral",
+      "Música infantil personalizada",
+      "Música para campanha",
+      "Narração musical para vídeo"
     ],
-    "section": "Transforme sua histÃ³ria em mÃºsica",
-    "notice": "ServiÃ§o sob encomenda. A produÃ§Ã£o depende das informaÃ§Ãµes fornecidas pelo cliente."
+    "section": "Transforme sua história em música",
+    "notice": "Serviço sob encomenda. A produção depende das informações fornecidas pelo cliente."
   },
   {
     "id": "impacto-academico",
-    "name": "IMPACTO ACADÃŠMICO",
-    "commercialName": "Trabalhos AcadÃªmicos",
+    "name": "IMPACTO ACADÊMICO",
+    "commercialName": "Trabalhos Acadêmicos",
     "floor": "terceiro-andar",
-    "category": "ServiÃ§os Digitais",
+    "category": "Serviços Digitais",
     "type": "services",
     "theme": "academic",
     "icon": "ABNT",
     "color": "#214775",
     "gradient": "linear-gradient(135deg,#081f3d,#ffffff 52%,#f6e6b6)",
-    "description": "Apoio acadÃªmico Ã©tico para revisÃ£o, orientaÃ§Ã£o, organizaÃ§Ã£o e aprendizagem.",
+    "description": "Apoio acadêmico ético para revisão, orientação, organização e aprendizagem.",
     "subcategories": [
-      "RevisÃ£o textual",
-      "FormataÃ§Ã£o ABNT",
-      "CorreÃ§Ã£o ortogrÃ¡fica",
+      "Revisão textual",
+      "Formatação ABNT",
+      "Correção ortográfica",
       "Mapas mentais",
       "Resumos de estudo",
-      "Slides acadÃªmicos",
-      "QuestÃµes comentadas",
-      "EstruturaÃ§Ã£o de ideias",
-      "OrientaÃ§Ã£o de pesquisa",
-      "OrganizaÃ§Ã£o de referÃªncias",
-      "PreparaÃ§Ã£o para provas",
+      "Slides acadêmicos",
+      "Questões comentadas",
+      "Estruturação de ideias",
+      "Orientação de pesquisa",
+      "Organização de referências",
+      "Preparação para provas",
       "Material de estudo personalizado"
     ],
     "services": [
-      "RevisÃ£o acadÃªmica",
-      "FormataÃ§Ã£o ABNT",
-      "OrganizaÃ§Ã£o de trabalho",
-      "CriaÃ§Ã£o de mapa mental",
+      "Revisão acadêmica",
+      "Formatação ABNT",
+      "Organização de trabalho",
+      "Criação de mapa mental",
       "Resumo comentado",
-      "QuestÃµes com gabarito",
-      "Slides para apresentaÃ§Ã£o",
-      "OrientaÃ§Ã£o estrutural de TCC"
+      "Questões com gabarito",
+      "Slides para apresentação",
+      "Orientação estrutural de TCC"
     ],
     "section": "Estude melhor, escreva melhor e apresente melhor.",
-    "notice": "ServiÃ§o voltado para apoio, aprendizagem, revisÃ£o, orientaÃ§Ã£o e organizaÃ§Ã£o acadÃªmica. NÃ£o substitui a autoria do estudante."
+    "notice": "Serviço voltado para apoio, aprendizagem, revisão, orientação e organização acadêmica. Não substitui a autoria do estudante."
   },
   {
     "id": "impacto-personalizados",
     "name": "IMPACTO PERSONALIZADOS",
     "commercialName": "Design e Materiais Personalizados",
     "floor": "terceiro-andar",
-    "category": "ServiÃ§os Digitais",
+    "category": "Serviços Digitais",
     "type": "services",
     "theme": "design",
     "icon": "ART",
     "color": "#28a7b8",
     "gradient": "linear-gradient(135deg,#e7fbff,#ffffff 48%,#fff3df)",
-    "description": "AteliÃª digital criativo para convites, cartÃµes, banners, currÃ­culos, portfÃ³lios e apresentaÃ§Ãµes.",
+    "description": "Ateliê digital criativo para convites, cartões, banners, currículos, portfólios e apresentações.",
     "subcategories": [
       "Convites digitais",
-      "CartÃµes",
+      "Cartões",
       "Banners",
-      "Artes para impressÃ£o",
-      "CurrÃ­culos",
-      "PortfÃ³lios",
-      "ApresentaÃ§Ãµes",
-      "CatÃ¡logos",
+      "Artes para impressão",
+      "Currículos",
+      "Portfólios",
+      "Apresentações",
+      "Catálogos",
       "Logotipos simples"
     ],
     "services": [
       "Convite digital",
       "Banner personalizado",
-      "CurrÃ­culo visual",
-      "ApresentaÃ§Ã£o profissional",
-      "CatÃ¡logo simples",
+      "Currículo visual",
+      "Apresentação profissional",
+      "Catálogo simples",
       "Arte para redes sociais"
     ],
-    "section": "Design prÃ¡tico para comunicar melhor"
+    "section": "Design prático para comunicar melhor"
   },
   {
     "id": "impacto-criadores",
     "name": "IMPACTO CRIADORES",
-    "commercialName": "Apoio para Criadores de ConteÃºdo",
+    "commercialName": "Apoio para Criadores de Conteúdo",
     "floor": "terceiro-andar",
-    "category": "ServiÃ§os Digitais",
+    "category": "Serviços Digitais",
     "type": "services",
     "theme": "creators",
     "icon": "CRIAR",
     "color": "#3b82f6",
     "gradient": "linear-gradient(135deg,#071b34,#103f78 46%,#eafcff)",
-    "description": "EstÃºdio digital para templates, capas, roteiros, ideias e calendÃ¡rio editorial.",
+    "description": "Estúdio digital para templates, capas, roteiros, ideias e calendário editorial.",
     "subcategories": [
       "Templates para posts",
-      "Capas para vÃ­deos",
+      "Capas para vídeos",
       "Roteiros",
-      "Ideias de conteÃºdo",
+      "Ideias de conteúdo",
       "Artes para redes sociais",
       "Kits digitais",
       "Identidade visual",
-      "EdiÃ§Ã£o bÃ¡sica",
-      "CalendÃ¡rio editorial"
+      "Edição básica",
+      "Calendário editorial"
     ],
     "services": [
       "Kit de posts",
-      "Capa para vÃ­deo",
+      "Capa para vídeo",
       "Roteiro curto",
-      "CalendÃ¡rio editorial",
-      "Ideias de conteÃºdo",
+      "Calendário editorial",
+      "Ideias de conteúdo",
       "Arte para redes sociais"
     ],
-    "section": "Crie com mais consistÃªncia"
+    "section": "Crie com mais consistência"
   },
   {
     "id": "impacto-auto",
@@ -1338,21 +1666,21 @@
     "icon": "AUTO",
     "color": "#23334a",
     "gradient": "linear-gradient(135deg,#1a2638,#eef4f9 50%,#c9d5df)",
-    "description": "ConcessionÃ¡ria/oficina premium com peÃ§as, acessÃ³rios, som automotivo e manutenÃ§Ã£o.",
+    "description": "Concessionária/oficina premium com peças, acessórios, som automotivo e manutenção.",
     "subcategories": [
-      "PeÃ§as automotivas",
-      "FarÃ³is",
+      "Peças automotivas",
+      "Faróis",
       "Lanternas",
-      "AcessÃ³rios internos",
-      "AcessÃ³rios externos",
+      "Acessórios internos",
+      "Acessórios externos",
       "Som automotivo",
       "Ferramentas",
       "Pneus",
       "Rodas",
       "Produtos de limpeza",
-      "Moto peÃ§as"
+      "Moto peças"
     ],
-    "section": "Digite modelo, ano e versÃ£o do veÃ­culo"
+    "section": "Digite modelo, ano e versão do veículo"
   },
   {
     "id": "impacto-ferramentas",
@@ -1365,20 +1693,20 @@
     "icon": "TOOL",
     "color": "#d6a033",
     "gradient": "linear-gradient(135deg,#292b2f,#fff6dc 52%,#e8edf3)",
-    "description": "Loja robusta e organizada de ferramentas manuais, elÃ©tricas, oficina e jardinagem.",
+    "description": "Loja robusta e organizada de ferramentas manuais, elétricas, oficina e jardinagem.",
     "subcategories": [
       "Ferramentas manuais",
-      "Ferramentas elÃ©tricas",
+      "Ferramentas elétricas",
       "Furadeiras",
       "Parafusadeiras",
       "Serras",
       "Kits de ferramentas",
       "Jardinagem",
-      "MediÃ§Ã£o",
-      "SeguranÃ§a no trabalho",
-      "OrganizaÃ§Ã£o de oficina"
+      "Medição",
+      "Segurança no trabalho",
+      "Organização de oficina"
     ],
-    "section": "FaÃ§a vocÃª mesmo"
+    "section": "Faça você mesmo"
   },
   {
     "id": "impacto-sport",
@@ -1391,10 +1719,10 @@
     "icon": "RUN",
     "color": "#1593d2",
     "gradient": "linear-gradient(135deg,#eaf9ff,#ffffff 48%,#e8ffe8)",
-    "description": "Academia, aventura, esportes, camping, pesca e acessÃ³rios para vida ativa.",
+    "description": "Academia, aventura, esportes, camping, pesca e acessórios para vida ativa.",
     "subcategories": [
       "Academia",
-      "MusculaÃ§Ã£o",
+      "Musculação",
       "Corrida",
       "Ciclismo",
       "Camping",
@@ -1403,7 +1731,7 @@
       "Lutas",
       "Mochilas",
       "Garrafas",
-      "AcessÃ³rios esportivos"
+      "Acessórios esportivos"
     ],
     "section": "Movimente sua rotina"
   }
@@ -1837,10 +2165,10 @@
     "image": "public/placeholder-loja-mercado-livre.svg",
     "category": "Loja parceira",
     "storeId": "lojas-parceiras",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://mercadolivre.com/sec/14EbgVy",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "type": "external-store",
     "actionType": "external-store",
     "originalOrder": 8,
@@ -1848,26 +2176,7 @@
       "Loja parceira",
       "Link original preservado",
       "Abrir em nova aba"
-    ],
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    ]
   },
   {
     "id": "mercado-livre-produto-008",
@@ -2548,11 +2857,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Informacao nao especificada pelo fornecedor",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/1K6Jhmd",
     "linkOriginal": "https://meli.la/1K6Jhmd",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "pendente",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -2587,26 +2896,7 @@
       "Link de comissao original",
       "Pendente de revisao",
       "Loja de computadores"
-    ],
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    ]
   },
   {
     "id": "mercado-livre-produto-020",
@@ -2627,11 +2917,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Informacao nao especificada pelo fornecedor",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/1Dinaeg",
     "linkOriginal": "https://meli.la/1Dinaeg",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "pendente",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -2666,26 +2956,7 @@
       "Link de comissao original",
       "Pendente de revisao",
       "Loja de computadores"
-    ],
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    ]
   },
   {
     "id": "mercado-livre-produto-021",
@@ -2826,11 +3097,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Informacao nao especificada pelo fornecedor",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/34dtQGa",
     "linkOriginal": "https://meli.la/34dtQGa",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "pendente",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -2865,26 +3136,7 @@
       "Link de comissao original",
       "Pendente de revisao",
       "Loja de computadores"
-    ],
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    ]
   },
   {
     "id": "mercado-livre-produto-024",
@@ -3205,11 +3457,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Informacao nao especificada pelo fornecedor",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/11MQYNu",
     "linkOriginal": "https://meli.la/11MQYNu",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "pendente",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -3244,26 +3496,7 @@
       "Link de comissao original",
       "Pendente de revisao",
       "Loja de computadores"
-    ],
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    ]
   },
   {
     "id": "mercado-livre-produto-030",
@@ -5327,10 +5560,10 @@
     "image": "public/produtos-impacto360/loja-parceira-001/imagem-01.webp",
     "category": "Ofertas gerais",
     "storeId": "lojas-parceiras",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://mercadolivre.com/sec/14EbgVy",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "type": "external-store",
     "actionType": "external-store",
     "originalOrder": 8,
@@ -5373,13 +5606,12 @@
     "videos": [],
     "linkOriginal": "https://mercadolivre.com/sec/14EbgVy",
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists/94d0f376-6e3b-4a35-bfe4-ef5edc397ee2?matt_tool=22604102&forceInApp=true",
-    "linkStatus": "revisao manual",
+    "linkStatus": "link afiliado aberto para leitura",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "video nao encontrado em fonte oficial"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:28.199Z",
@@ -5395,21 +5627,7 @@
     "legendaFacebook": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v\n\nForno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Loja parceira, Link original preservado, Abrir em nova aba.\n\nPreço: R$ 674,90\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://mercadolivre.com/sec/14EbgVy",
     "textoCatalogo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v - Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Loja parceira, Link original preservado, Abrir em nova aba.",
     "chamadaCompra": "Comprar no Mercado Livre",
-    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas",
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas"
   },
   {
     "id": "mercado-livre-produto-008",
@@ -6663,11 +6881,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/1K6Jhmd",
     "linkOriginal": "https://meli.la/1K6Jhmd",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -6730,13 +6948,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "revisao manual",
+    "linkStatus": "link afiliado aberto para leitura",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "video nao encontrado em fonte oficial"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:47.497Z",
@@ -6752,21 +6969,7 @@
     "legendaFacebook": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v\n\nForno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.\n\nPreço: R$ 674,90\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1K6Jhmd",
     "textoCatalogo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v - Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.",
     "chamadaCompra": "Comprar no Mercado Livre",
-    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas",
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas"
   },
   {
     "id": "mercado-livre-produto-020",
@@ -6789,11 +6992,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/1Dinaeg",
     "linkOriginal": "https://meli.la/1Dinaeg",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -6856,13 +7059,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "revisao manual",
+    "linkStatus": "link afiliado aberto para leitura",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "video nao encontrado em fonte oficial"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:49.433Z",
@@ -6878,21 +7080,7 @@
     "legendaFacebook": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v\n\nForno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.\n\nPreço: R$ 674,90\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1Dinaeg",
     "textoCatalogo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v - Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.",
     "chamadaCompra": "Comprar no Mercado Livre",
-    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas",
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas"
   },
   {
     "id": "mercado-livre-produto-021",
@@ -7139,11 +7327,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/34dtQGa",
     "linkOriginal": "https://meli.la/34dtQGa",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -7206,13 +7394,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "revisao manual",
+    "linkStatus": "link afiliado aberto para leitura",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "video nao encontrado em fonte oficial"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:53:54.283Z",
@@ -7228,21 +7415,7 @@
     "legendaFacebook": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v\n\nForno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.\n\nPreço: R$ 674,90\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/34dtQGa",
     "textoCatalogo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v - Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.",
     "chamadaCompra": "Comprar no Mercado Livre",
-    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas",
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas"
   },
   {
     "id": "mercado-livre-produto-024",
@@ -7822,11 +7995,11 @@
     "categoria": "Computadores e Informatica",
     "subcategoria": "Mercado Livre",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Mercado Livre",
     "affiliateLink": "https://meli.la/11MQYNu",
     "linkOriginal": "https://meli.la/11MQYNu",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "ativo",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -7889,13 +8062,12 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/social/md20251208121946/lists",
-    "linkStatus": "revisao manual",
+    "linkStatus": "link afiliado aberto para leitura",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "galeria com menos de 5 imagens confirmadas",
-      "video nao encontrado em fonte oficial",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "video nao encontrado em fonte oficial"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-06-08T11:54:02.626Z",
@@ -7911,21 +8083,7 @@
     "legendaFacebook": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v\n\nForno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.\n\nPreço: R$ 674,90\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/11MQYNu",
     "textoCatalogo": "Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v - Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v é uma opção para quem procura ofertas gerais com compra direcionada pelo Mercado Livre. Destaques identificados no título: Link de comissao original, Pendente de revisao, Loja de computadores.",
     "chamadaCompra": "Comprar no Mercado Livre",
-    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas",
-    "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "statusLink": "revisao manual",
-    "statusImagem": "foto_link_inconsistente",
-    "publicarNaHome": false,
-    "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
-    "auditoriaPublicacao": {
-      "checkedAt": "2026-07-08",
-      "status": "revisao_manual",
-      "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
-      "acao": "publicacao removida da vitrine; manter para conferencia manual",
-      "fonte": "pacote-github-pages-pronto/index.html"
-    }
+    "hashtags": "#Impacto360 #MercadoLivre #ofertasgerais #OfertasSelecionadas"
   },
   {
     "id": "mercado-livre-produto-030",
@@ -12673,41 +12831,41 @@
     const floors = [
   {
     "id": "terreo",
-    "label": "TÃ©rreo",
-    "title": "TÃ©rreo  -  Lojas Principais",
-    "description": "Acesso rÃ¡pido Ã s lojas de maior procura e ao corredor de ofertas."
+    "label": "Térreo",
+    "title": "Térreo  -  Lojas Principais",
+    "description": "Acesso rápido às lojas de maior procura e ao corredor de ofertas."
   },
   {
     "id": "primeiro-andar",
-    "label": "1Âº Andar",
-    "title": "1Âº Andar  -  Tecnologia e Entretenimento",
-    "description": "Tecnologia, games, eletrÃ´nicos, cursos e livraria em alas modernas."
+    "label": "1º Andar",
+    "title": "1º Andar  -  Tecnologia e Entretenimento",
+    "description": "Tecnologia, games, eletrônicos, cursos e livraria em alas modernas."
   },
   {
     "id": "segundo-andar",
-    "label": "2Âº Andar",
-    "title": "2Âº Andar  -  Casa, FamÃ­lia e Bem-estar",
-    "description": "Cuidados pessoais, famÃ­lia, decoraÃ§Ã£o, pet e itens de fÃ©."
+    "label": "2º Andar",
+    "title": "2º Andar  -  Casa, Família e Bem-estar",
+    "description": "Cuidados pessoais, família, decoração, pet e itens de fé."
   },
   {
     "id": "terceiro-andar",
-    "label": "3Âº Andar",
-    "title": "3Âº Andar  -  ServiÃ§os Digitais",
-    "description": "ServiÃ§os criativos, acadÃªmicos e materiais personalizados sob orÃ§amento."
+    "label": "3º Andar",
+    "title": "3º Andar  -  Serviços Digitais",
+    "description": "Serviços criativos, acadêmicos e materiais personalizados sob orçamento."
   },
   {
     "id": "ala-externa",
     "label": "Ala Externa",
     "title": "Ala Externa  -  Auto, Ferramentas e Esporte",
-    "description": "Produtos para veÃ­culo, oficina, ferramentas e vida ativa."
+    "description": "Produtos para veículo, oficina, ferramentas e vida ativa."
   }
 ];
     const settings = {
   "siteName": "IMPACTO 360 AFILIADO",
   "siteUrl": "https://impacto360afiliado.com.br/",
   "contactEmail": "contato@impacto360afiliado.com",
-  "whatsapp": "https://wa.me/?text=OlÃ¡,%20quero%20atendimento%20do%20IMPACTO%20360%20AFILIADO.",
-  "affiliateNotice": "O IMPACTO 360 AFILIADO pode receber comissÃ£o por compras realizadas por meio dos links indicados, sem custo adicional para o usuÃ¡rio."
+  "whatsapp": "https://wa.me/?text=Ol%C3%A1,%20quero%20atendimento%20do%20IMPACTO%20360%20AFILIADO.",
+  "affiliateNotice": "O IMPACTO 360 AFILIADO pode receber comissão por compras realizadas por meio dos links indicados, sem custo adicional para o usuário."
 };
     let activeFloor = "all";
     let activeCategory = "all";
@@ -12717,10 +12875,111 @@
     const REVIEW_MESSAGE = "Revisar antes de publicar.";
     const placeholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="560" font-size="56" font-weight="700">Imagem em revisão</text><text x="600" y="632" font-size="34">Adicione foto real do produto</text></g></svg>');
     window.ai360PlaceholderImage = placeholderImage;
+    function alternateAssetSrc(value) {
+      const source = String(value || "").trim();
+      if (!source || source.startsWith("data:") || /^https?:\/\//i.test(source)) return "";
+      if (source.startsWith("public/")) return source.slice(7);
+      if (source.startsWith("/public/")) return "/" + source.slice(8);
+      if (source.startsWith("images/") || source.startsWith("produtos-impacto360/") || source.startsWith("imagens/")) return "public/" + source;
+      if (source.startsWith("/images/") || source.startsWith("/produtos-impacto360/") || source.startsWith("/imagens/")) return "/public" + source;
+      return "";
+    }
+    function tryAlternateImagePath(img) {
+      if (!img || img.dataset.altPathApplied === "true") return false;
+      const nextSrc = alternateAssetSrc(img.getAttribute("src") || img.src);
+      if (!nextSrc || nextSrc === img.getAttribute("src")) return false;
+      img.dataset.altPathApplied = "true";
+      img.src = nextSrc;
+      return true;
+    }
     window.handleProductImageError = function handleProductImageError(img) {
       if (!img || img.dataset.fallbackApplied === "true") return;
+      if (tryAlternateImagePath(img)) return;
       img.dataset.fallbackApplied = "true";
       img.src = window.ai360PlaceholderImage;
+    };
+
+    const coverAssets = {
+      moda: "public/images/capas-lojas/capa-moda.png",
+      brinquedos: "public/images/capas-lojas/capa-brinquedos.png",
+      eletronicos: "public/images/capas-lojas/capa-eletronicos.png",
+      casa: "public/images/capas-lojas/capa-casa-decoracao.png",
+      beleza: "public/images/capas-lojas/capa-beleza.png",
+      outros: "public/images/capas-lojas/capa-outros.png"
+    };
+
+    const coverProfiles = {
+      eletronicos: {
+        label: "Eletrônicos",
+        subtitle: "Celulares, TVs, informática e gadgets",
+        cover: coverAssets.eletronicos,
+        openStoreId: "impacto-mobile",
+        limit: 4,
+        keywords: ["celular", "smartphone", "iphone", "samsung", "motorola", "xiaomi", "computador", "informatica", "informática", "notebook", "laptop", "monitor", "teclado", "mouse", "headset", "gamer", "eletronico", "eletrônico", "eletronicos", "eletrônicos", "tv", "smart tv", "drone", "fone", "camera", "câmera", "tablet", "carregador"]
+      },
+      brinquedos: {
+        label: "Brinquedos",
+        subtitle: "Carrinhos, bonecas, drones e educativos",
+        cover: coverAssets.brinquedos,
+        openStoreId: "impacto-brinquedos",
+        limit: 4,
+        keywords: ["brinquedo", "brinquedos", "boneca", "carrinho", "infantil", "crianca", "kids", "bebe", "baby", "educativo", "dinossauro", "robo", "helicoptero", "controle remoto", "mini cozinha", "maleta", "penteadeira", "pelucia", "cabana", "casinha"]
+      },
+      moda: {
+        label: "Moda",
+        subtitle: "Vestidos, looks, acessórios e achados",
+        cover: coverAssets.moda,
+        openStoreId: "impacto-moda",
+        limit: 4,
+        keywords: ["moda", "vestido", "blusa", "camisa", "calca", "calça", "legging", "jaqueta", "casaco", "saia", "short", "regata", "look", "roupa", "feminina", "masculina", "calcado", "calçado", "tenis", "tênis", "sandalia", "sandália", "bolsa", "acessorio", "acessório", "plus size"]
+      },
+      casa: {
+        label: "Casa e Decoração",
+        subtitle: "Cozinha, decor, utilidades e organização",
+        cover: coverAssets.casa,
+        openStoreId: "impacto-casa",
+        limit: 4,
+        keywords: ["casa", "cozinha", "decor", "decoracao", "decoração", "movel", "móvel", "moveis", "móveis", "utensilio", "utensílio", "panela", "faca", "facas", "silicone", "forno", "mesa", "banho", "cama", "organizador", "tapete", "lampada", "lâmpada", "pulverizador", "azeite", "oleo", "óleo", "eletrodomestico", "eletrodoméstico"]
+      },
+      beleza: {
+        label: "Beleza",
+        subtitle: "Autocuidado, cosméticos e bem-estar",
+        cover: coverAssets.beleza,
+        openStoreId: "impacto-beauty-care",
+        limit: 4,
+        keywords: ["beleza", "beauty", "care", "saude", "saúde", "cosmetico", "cosmético", "maquiagem", "perfume", "skincare", "pele", "cabelo", "barba", "higiene", "bem-estar", "autocuidado", "spa"]
+      },
+      outros: {
+        label: "Outros",
+        subtitle: "Ofertas gerais, serviços e produtos variados",
+        cover: coverAssets.outros,
+        openStoreId: "lojas-parceiras",
+        limit: 4,
+        keywords: ["oferta", "ofertas", "servico", "serviço", "servicos", "serviços", "ferramenta", "auto", "pet", "esporte", "livro", "curso", "academico", "acadêmico", "personalizado", "criador", "musica", "música", "parceira", "mercado livre", "gerais"]
+      }
+    };
+
+    const coverOrder = ["eletronicos", "brinquedos", "moda", "casa", "beleza", "outros"];
+    const openingGroups = coverOrder.map(id => ({ id, ...coverProfiles[id] }));
+    const commercialCategories = [
+      { label: "Celulares e Tecnologia", action: "category", value: "Tecnologia", terms: ["celular", "smartphone", "iphone", "notebook", "computador", "informatica", "informática", "tecnologia", "tv", "eletronico", "eletrônico"] },
+      { label: "Casa e Cozinha", action: "category", value: "Casa e Família", terms: ["casa", "cozinha", "utensilio", "utensílio", "panela", "forno", "decoracao", "decoração"] },
+      { label: "Calçados", action: "store", value: "impacto-calcados", terms: ["calcado", "calçado", "tenis", "tênis", "sapato", "sandalia", "sandália", "chinelo", "bota"] },
+      { label: "Moda Masculina", action: "search", value: "masculino", terms: ["masculino", "homem", "masculina"] },
+      { label: "Moda Feminina", action: "search", value: "feminina", terms: ["feminina", "mulher", "vestido", "blusa", "saia"] },
+      { label: "Ferramentas", action: "store", value: "impacto-ferramentas", terms: ["ferramenta", "lanterna", "oficina", "auto", "veiculo", "veículo"] },
+      { label: "Eletrodomésticos", action: "search", value: "eletrodoméstico", terms: ["eletrodomestico", "eletrodoméstico", "forno", "air fryer", "geladeira", "micro-ondas"] },
+      { label: "Materiais Escolares", action: "store", value: "impacto-livraria", terms: ["escolar", "caderno", "lapis", "lápis", "estojo", "mochila", "caneta"] },
+      { label: "Produtos para Cavalgada", action: "search", value: "cavalgada", terms: ["cavalgada", "cavalo", "equestre", "sela", "country"] },
+      { label: "Ofertas", action: "filter", value: "offers", terms: ["oferta", "promoção", "promocao", "desconto"] },
+      { label: "Mais procurados", action: "filter", value: "popular", terms: [] }
+    ];
+
+    window.handleStoreCoverError = function handleStoreCoverError(img) {
+      if (tryAlternateImagePath(img)) return;
+      const holder = img?.closest(".has-cover");
+      if (holder) holder.classList.remove("has-cover");
+      if (img) img.remove();
     };
 
     function getProductLink(item) {
@@ -12868,9 +13127,11 @@
     async function boot() {
       if (isAdminRoute()) return;
       await loadEditableData();
-      forceEntrance();
       renderFloorTabs();
       renderMall();
+      document.body.className = "inside";
+      const initialStoreId = location.hash && location.hash.startsWith("#loja-") ? location.hash.replace("#loja-", "") : "";
+      if (initialStoreId && stores.some(store => store.id === initialStoreId)) openStore(initialStoreId);
     }
 
     function isAdminRoute() {
@@ -12910,14 +13171,216 @@
       return String(text || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase();
     }
 
+    function syncSearchFromHeader() {
+      const term = document.getElementById("headerSearchInput")?.value || "";
+      const heroInput = document.getElementById("searchInput");
+      if (heroInput && heroInput.value !== term) heroInput.value = term;
+      renderMall();
+    }
+
+    function syncSearchFromHero() {
+      const term = document.getElementById("searchInput")?.value || "";
+      const headerInput = document.getElementById("headerSearchInput");
+      if (headerInput && headerInput.value !== term) headerInput.value = term;
+      renderMall();
+    }
+
+    function applySearchTerm(term) {
+      if (document.body.classList.contains("store-open")) backToMall();
+      const value = String(term || "");
+      const headerInput = document.getElementById("headerSearchInput");
+      const heroInput = document.getElementById("searchInput");
+      if (headerInput) headerInput.value = value;
+      if (heroInput) heroInput.value = value;
+      renderMall();
+    }
+
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function openContact() {
+      const link = String(settings.whatsapp || "").trim();
+      if (link) window.open(link, "_blank", "noopener,noreferrer");
+      else location.href = "mailto:" + settings.contactEmail;
+    }
+
+    function productIsVisible(item) {
+      if (String(item.status || "").toLowerCase() !== "ativo") return false;
+      if (item.aprovadoParaPublicacao === false) return false;
+      if (!getProductLink(item)) return false;
+      return resolveProductImage(item).hasPhoto;
+    }
+
     function storeProducts(storeId) {
-      return products.filter(item => {
-        if (item.storeId !== storeId) return false;
-        if (String(item.status || "").toLowerCase() !== "ativo") return false;
-        if (item.aprovadoParaPublicacao === false) return false;
-        if (!getProductLink(item)) return false;
-        return resolveProductImage(item).hasPhoto;
+      return products.filter(item => item.storeId === storeId && productIsVisible(item));
+    }
+
+    function allStoreProducts(storeId) {
+      return products.filter(item => item.storeId === storeId);
+    }
+
+    function productSearchText(item) {
+      return normalize([
+        item?.storeId,
+        item?.source,
+        item?.badge,
+        item?.category,
+        item?.categoria,
+        item?.subcategoria,
+        item?.name,
+        item?.nome,
+        item?.description,
+        item?.descricaoCurta,
+        ...(Array.isArray(item?.specs) ? item.specs : [])
+      ].join(" "));
+    }
+
+    function countProductsForCommercialCategory(category) {
+      const visible = products.filter(productIsVisible);
+      if (category.action === "filter" && category.value === "offers") {
+        return visible.filter(item => /oferta|promo/i.test([item.badge, item.storeId, item.category, item.categoria].join(" "))).length;
+      }
+      if (category.action === "filter" && category.value === "popular") return visible.length;
+      const terms = (category.terms || []).map(normalize).filter(Boolean);
+      if (!terms.length) return 0;
+      return visible.filter(item => {
+        const text = productSearchText(item);
+        return terms.some(term => text.includes(term));
+      }).length;
+    }
+
+    function openCommercialCategory(index) {
+      const category = commercialCategories[index];
+      if (!category) return;
+      if (category.action === "store") {
+        const store = stores.find(item => item.id === category.value);
+        if (store) openStore(store.id);
+        else applySearchTerm(category.label);
+        return;
+      }
+      if (category.action === "category") {
+        setCategory(category.value);
+        scrollToSection("mallFloors");
+        return;
+      }
+      if (category.action === "filter") {
+        setFilter(category.value);
+        scrollToSection("openingShowcase");
+        return;
+      }
+      applySearchTerm(category.value || category.label);
+      scrollToSection("mallFloors");
+    }
+
+    function renderCommercialCategories() {
+      const holder = document.getElementById("commercialCategories");
+      if (!holder) return;
+      holder.innerHTML = commercialCategories.map((category, index) => {
+        const count = countProductsForCommercialCategory(category);
+        const suffix = count ? count + " produtos" : "em organização";
+        return '<button class="category-shortcut" type="button" onclick="openCommercialCategory(' + index + ')">' +
+          '<strong>' + escapeHtml(category.label) + '</strong>' +
+          '<span>' + escapeHtml(suffix) + '</span>' +
+        '</button>';
+      }).join("");
+    }
+
+    function storeCoverImage(store) {
+      return coverProfiles[storeGroupId(store)]?.cover || coverAssets.outros;
+    }
+
+    function scoreTextForGroup(text, groupId) {
+      const group = coverProfiles[groupId];
+      if (!group) return 0;
+      const normalizedText = normalize(text);
+      return group.keywords.reduce((score, keyword) => {
+        const normalizedKeyword = normalize(keyword);
+        return score + (normalizedKeyword && normalizedText.includes(normalizedKeyword) ? 1 : 0);
+      }, 0);
+    }
+
+    function bestGroupFromText(text, fallback = "outros") {
+      let best = fallback;
+      let bestScore = 0;
+      for (const groupId of coverOrder) {
+        const score = scoreTextForGroup(text, groupId);
+        if (score > bestScore) {
+          best = groupId;
+          bestScore = score;
+        }
+      }
+      return best;
+    }
+
+    function productGroupId(item) {
+      const text = [
+        item?.storeId,
+        item?.category,
+        item?.categoria,
+        item?.subcategoria,
+        item?.name,
+        item?.nome,
+        item?.description,
+        item?.descricaoCurta,
+        item?.badge,
+        ...(Array.isArray(item?.specs) ? item.specs : [])
+      ].join(" ");
+      return bestGroupFromText(text, "outros");
+    }
+
+    function storeGroupId(store) {
+      if (!store) return "outros";
+      const counts = {};
+      storeProducts(store.id).forEach(item => {
+        const groupId = productGroupId(item);
+        counts[groupId] = (counts[groupId] || 0) + 1;
       });
+      const dominant = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+      if (dominant && dominant[1] > 0) return dominant[0];
+
+      const text = [
+        store.id,
+        store.name,
+        store.commercialName,
+        store.category,
+        store.theme,
+        store.description,
+        ...(Array.isArray(store.subcategories) ? store.subcategories : [])
+      ].join(" ");
+      return bestGroupFromText(text, "outros");
+    }
+
+    function uniqueProducts(items) {
+      const seen = new Set();
+      return items.filter(item => {
+        if (!item || seen.has(item.id)) return false;
+        seen.add(item.id);
+        return true;
+      });
+    }
+
+    function productsForOpeningGroup(group) {
+      const groupId = typeof group === "string" ? group : group.id;
+      const limit = typeof group === "string" ? coverProfiles[groupId]?.limit : group.limit;
+      return uniqueProducts(products.filter(item => productIsVisible(item) && productGroupId(item) === groupId)).slice(0, limit || 4);
+    }
+
+    function automaticOpeningGroups() {
+      return openingGroups
+        .map(group => ({
+          ...group,
+          count: productsForOpeningGroup(group).length,
+          storesCount: stores.filter(store => storeGroupId(store) === group.id).length
+        }))
+        .filter(group => group.count > 0 || group.storesCount > 0);
+    }
+
+    function openingProductItems() {
+      const items = automaticOpeningGroups().flatMap(productsForOpeningGroup);
+      if (items.length) return uniqueProducts(items);
+      return products.filter(productIsVisible).slice(0, 16);
     }
 
     function storeSearchText(store) {
@@ -12986,27 +13449,87 @@
         .filter(group => group.stores.length);
 
       holder.innerHTML = byFloor.length ? byFloor.map(group => renderFloor(group.floor, group.stores)).join("") : '<div class="empty-state">Nenhuma loja encontrada para esta busca.</div>';
-      renderMercadoLivreShowcase();
-      const recommended = ["impacto-ofertas", "lojas-parceiras", "impacto-mobile", "impacto-tech-computadores", "impacto-music-studio", "impacto-academico", "impacto-calcados"]
+      renderCommercialCategories();
+      renderOpeningShowcase();
+      renderPartnerStoreShowcase();
+      const recommended = ["impacto-brinquedos", "impacto-moda", "impacto-mobile", "impacto-casa", "impacto-eletronicos", "lojas-parceiras", "impacto-beauty-care"]
         .map(id => stores.find(store => store.id === id))
         .filter(Boolean);
       document.getElementById("recommendedStores").innerHTML = recommended.map(renderStoreCard).join("");
     }
 
-    function renderMercadoLivreShowcase() {
-      const holder = document.getElementById("mercadoLivreShowcase");
+    function renderOpeningShowcase() {
+      const holder = document.getElementById("openingShowcase");
       if (!holder) return;
-      const importedItems = products.filter(item => item.source === "Mercado Livre" && item.aprovadoParaPublicacao !== false).slice(0, 8);
-      if (!importedItems.length) {
+      const featuredItems = openingProductItems().slice(0, 20);
+      const groups = automaticOpeningGroups();
+      if (!featuredItems.length) {
         holder.innerHTML = "";
         return;
       }
       holder.innerHTML =
-        '<section class="floor-block mercado-showcase">' +
-          '<div class="floor-head"><div><h3>Produtos Mercado Livre importados</h3><p>Links de comissao preservados e organizados nas lojas corretas. Produtos sem foto segura ficam em revisao antes de virar destaque.</p></div><span class="chip">' + importedMercadoLivreProducts.length + ' links preservados</span></div>' +
-          '<div class="product-grid">' + importedItems.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId) || stores.find(store => store.id === "impacto-ofertas"))).join("") + '</div>' +
-          '<div class="store-card-actions"><button class="btn btn-primary" onclick="openStore(\'impacto-mobile\')">Celulares</button><button class="btn" onclick="openStore(\'impacto-casa\')">Casa e cozinha</button><button class="btn" onclick="openStore(\'impacto-moda\')">Moda</button></div>' +
+        '<section class="floor-block opening-showcase">' +
+          '<div class="floor-head"><div><h3>Vitrine inicial em destaque</h3><p>Capas grandes por loja e produtos reais mais nítidos, incluindo brinquedos, moda, casa, tecnologia e outros achados.</p></div><span class="chip">' + featuredItems.length + ' itens em vitrine</span></div>' +
+          '<div class="category-cover-grid">' + groups.map(renderOpeningCategoryCard).join("") + '</div>' +
+          '<div class="opening-products-head"><div><h3>Produtos em destaque</h3><p>Fotos maiores, leitura rápida de preço e acesso direto ao anúncio.</p></div><span class="chip">' + importedMercadoLivreProducts.length + ' links preservados</span></div>' +
+          '<div class="product-grid opening-products">' + featuredItems.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId) || stores.find(store => store.id === "impacto-ofertas"))).join("") + '</div>' +
+          '<div class="store-card-actions opening-actions"><button class="btn btn-primary" onclick="openStore(\'impacto-brinquedos\')">Ver brinquedos</button><button class="btn" onclick="openStore(\'impacto-moda\')">Ver moda</button><button class="btn" onclick="openOpeningGroup(\'outros\')">Ver outros</button><button class="btn" onclick="openStore(\'impacto-mobile\')">Ver tecnologia</button></div>' +
         '</section>';
+    }
+
+    function sourceText(item) {
+      return normalize([item?.source, item?.badge, getProductLink(item), item?.affiliateLink, item?.linkOriginal].join(" "));
+    }
+
+    function productsForPartnerSource(sourceId) {
+      const visible = products.filter(productIsVisible);
+      if (sourceId === "amazon") return uniqueProducts(visible.filter(item => sourceText(item).includes("amazon"))).slice(0, 4);
+      if (sourceId === "mercado-livre") return uniqueProducts(visible.filter(item => /mercado livre|mercadolivre|meli\.la/.test(sourceText(item)))).slice(0, 4);
+      return uniqueProducts(visible.filter(item => {
+        const text = sourceText(item);
+        return !text.includes("amazon") && !/mercado livre|mercadolivre|meli\.la/.test(text);
+      })).slice(0, 4);
+    }
+
+    function renderPartnerSourceSection(section) {
+      const items = productsForPartnerSource(section.id);
+      if (!items.length) return "";
+      return '<div class="partner-block">' +
+        '<h3>' + escapeHtml(section.title) + '</h3>' +
+        '<p>' + escapeHtml(section.description) + '</p>' +
+        '<div class="product-grid">' + items.map(item => renderProductCard(item, stores.find(store => store.id === item.storeId))).join("") + '</div>' +
+      '</div>';
+    }
+
+    function renderPartnerStoreShowcase() {
+      const holder = document.getElementById("partnerStoreShowcase");
+      if (!holder) return;
+      const sections = [
+        { id: "amazon", title: "Top Amazon", description: "Produtos cadastrados com origem Amazon, exibidos sem alterar preço, link ou disponibilidade." },
+        { id: "mercado-livre", title: "Top Mercado Livre", description: "Ofertas cadastradas com links Mercado Livre preservados." },
+        { id: "outras", title: "Outras lojas parceiras", description: "Itens de outras origens já presentes no catálogo." }
+      ].map(renderPartnerSourceSection).filter(Boolean);
+      holder.innerHTML = sections.length ? '<div class="partner-showcase">' + sections.join("") + '</div>' : "";
+    }
+
+    function renderOpeningCategoryCard(group) {
+      const count = group.count ?? productsForOpeningGroup(group).length;
+      return '<button class="category-cover-card" type="button" onclick="openOpeningGroup(\'' + escapeJs(group.id) + '\')" aria-label="Abrir ' + escapeAttr(group.label) + '">' +
+        '<img src="' + escapeAttr(group.cover) + '" alt="" loading="lazy" decoding="async" onerror="handleStoreCoverError(this)">' +
+        '<span class="category-cover-content">' +
+          '<strong>' + escapeHtml(group.label) + '</strong>' +
+          '<span>' + escapeHtml(group.subtitle) + '</span>' +
+          '<span>' + count + ' produtos prontos</span>' +
+        '</span>' +
+      '</button>';
+    }
+
+    function openOpeningGroup(groupId) {
+      const group = automaticOpeningGroups().find(item => item.id === groupId) || coverProfiles[groupId];
+      const store = stores.find(item => item.id === group?.openStoreId && storeGroupId(item) === groupId)
+        || stores.find(item => storeGroupId(item) === groupId)
+        || stores.find(item => item.id === group?.openStoreId);
+      if (store) openStore(store.id);
     }
 
     function renderFloor(floor, floorStores) {
@@ -13023,8 +13546,12 @@
     function renderStoreCard(store) {
       const items = storeProducts(store.id);
       const chips = store.subcategories.slice(0, 3).map(item => '<span class="chip">' + escapeHtml(item) + '</span>').join("");
-      return '<article class="store-card" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
-        '<div class="store-banner ' + (isLightStore(store) ? "light" : "") + '"><span class="store-icon">' + escapeHtml(store.icon) + '</span><span class="chip">' + escapeHtml(floors.find(f => f.id === store.floor)?.label || "") + '</span></div>' +
+      const cover = storeCoverImage(store);
+      return '<article class="store-card has-cover" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
+        '<div class="store-banner ' + (isLightStore(store) ? "light" : "") + '">' +
+          '<img class="store-cover-img" src="' + escapeAttr(cover) + '" alt="" loading="lazy" decoding="async" onerror="handleStoreCoverError(this)">' +
+          '<div class="store-banner-content"><span class="store-icon">' + escapeHtml(store.icon) + '</span><span class="chip">' + escapeHtml(floors.find(f => f.id === store.floor)?.label || "") + '</span></div>' +
+        '</div>' +
         '<div class="store-card-body">' +
           '<h3>' + escapeHtml(store.name) + '</h3>' +
           '<p>' + escapeHtml(store.description) + '</p>' +
@@ -13048,33 +13575,53 @@
     }
 
     function renderStorePage(store) {
-      const items = storeProducts(store.id);
-      const readyItems = items.filter(item => item.aprovadoParaPublicacao !== false);
-      const reviewItems = items.filter(item => item.aprovadoParaPublicacao === false || item.status === "rascunho" || item.statusImagem === "imagem_manual_necessaria");
+      const items = allStoreProducts(store.id);
+      const readyItems = items.filter(productIsVisible);
+      const reviewItems = items.filter(item => !productIsVisible(item) || item.aprovadoParaPublicacao === false || item.status === "rascunho" || item.statusImagem === "imagem_manual_necessaria");
       const featured = readyItems.slice(0, 3);
       const chips = store.subcategories.map(item => '<button class="chip" onclick="quickSearch(\'' + escapeJs(item) + '\')">' + escapeHtml(item) + '</button>').join("");
+      const cover = storeCoverImage(store);
       document.getElementById("storePage").innerHTML =
-        '<section class="store-hero ' + (isLightStore(store) ? "light" : "") + '" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
-          '<span class="eyebrow">' + escapeHtml(store.commercialName) + '</span>' +
-          '<h1>' + escapeHtml(store.name) + '</h1>' +
-          '<p>' + escapeHtml(store.description) + '</p>' +
-          '<div class="chips">' + chips + '</div>' +
-          (store.notice ? '<div class="notice">' + escapeHtml(store.notice) + '</div>' : '') +
-          (store.timer ? '<div class="notice">' + escapeHtml(store.timer) + '</div>' : '') +
-          '<div class="store-actions">' +
-            '<button class="btn btn-gold" onclick="backToMall()">Voltar ao shopping</button>' +
-            '<button class="btn btn-primary" onclick="shareStore(\'' + store.id + '\')">Compartilhar loja</button>' +
-            '<button class="btn" onclick="showToast(\'EspaÃ§o preparado para visualizaÃ§Ã£o 360 futura\')">Ver em 360Â°</button>' +
+        '<section class="store-hero has-cover ' + (isLightStore(store) ? "light" : "") + '" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
+          '<img class="store-hero-image" src="' + escapeAttr(cover) + '" alt="" loading="eager" decoding="async" onerror="handleStoreCoverError(this)">' +
+          '<div class="store-hero-content">' +
+            '<span class="eyebrow">' + escapeHtml(store.commercialName) + '</span>' +
+            '<h1>' + escapeHtml(store.name) + '</h1>' +
+            '<p>' + escapeHtml(store.description) + '</p>' +
+            '<div class="chips">' + chips + '</div>' +
+            (store.notice ? '<div class="notice">' + escapeHtml(store.notice) + '</div>' : '') +
+            (store.timer ? '<div class="notice">' + escapeHtml(store.timer) + '</div>' : '') +
+            '<div class="store-actions">' +
+              '<button class="btn btn-gold" onclick="backToMall()">Voltar ao shopping</button>' +
+              '<button class="btn btn-primary" onclick="shareStore(\'' + store.id + '\')">Compartilhar loja</button>' +
+              '<button class="btn" onclick="showToast(\'Espaço preparado para visualização 360 futura\')">Ver em 360°</button>' +
+            '</div>' +
           '</div>' +
         '</section>' +
-        '<section><div class="section-title"><div><h2>' + escapeHtml(store.section || "Destaques") + '</h2><p>Produtos e serviÃ§os desta loja com campos editÃ¡veis para links de afiliado ou orÃ§amento.</p></div></div><div class="store-grid">' + featured.map(item => renderHighlight(item)).join("") + '</div></section>' +
+        '<section><div class="section-title"><div><h2>' + escapeHtml(store.section || "Destaques") + '</h2><p>Produtos e serviços desta loja com campos editáveis para links de afiliado ou orçamento.</p></div></div><div class="store-grid">' + featured.map(item => renderHighlight(item)).join("") + '</div></section>' +
         '<section><div class="section-title"><div><h2>Mais procurados</h2><p>Itens prontos para compra com link de venda preservado.</p></div></div><div class="product-grid">' + (readyItems.length ? readyItems.map(item => renderProductCard(item, store)).join("") : '<div class="empty-state">Nenhum produto pronto para destaque nesta loja.</div>') + '</div></section>' +
-        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Ãrea preparada para novos produtos, serviÃ§os e campanhas.</p></div></div><div class="product-grid">' + readyItems.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>' +
-        (reviewItems.length ? '<section><div class="section-title"><div><h2>Produtos pendentes de revisÃ£o</h2><p>Itens preservados com link, foto ou descriÃ§Ã£o aguardando aprovaÃ§Ã£o manual.</p></div></div><div class="product-grid">' + reviewItems.map(item => renderProductCard(item, store)).join("") + '</div></section>' : '');
+        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Área preparada para novos produtos, serviços e campanhas.</p></div></div><div class="product-grid">' + readyItems.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>' +
+        (reviewItems.length ? '<section><div class="section-title"><div><h2>Produtos pendentes de revisão</h2><p>Itens preservados com link, foto ou descrição aguardando aprovação manual.</p></div></div><div class="product-grid">' + reviewItems.map(item => renderProductCard(item, store)).join("") + '</div></section>' : '');
     }
 
     function renderHighlight(item) {
       return '<article class="highlight-card store-card"><div class="store-card-body"><span class="chip">' + escapeHtml(item.badge) + '</span><h3>' + escapeHtml(item.name) + '</h3><p>' + escapeHtml(item.description) + '</p></div></article>';
+    }
+
+    function firstFilled(item, keys) {
+      for (const key of keys) {
+        const value = item?.[key];
+        if (value !== undefined && value !== null && String(value).trim()) return String(value).trim();
+      }
+      return "";
+    }
+
+    function dateLabel(value) {
+      const raw = String(value || "").trim();
+      if (!raw) return "";
+      const date = new Date(raw);
+      if (Number.isNaN(date.getTime())) return raw;
+      return date.toLocaleDateString("pt-BR", { timeZone: "UTC" });
     }
 
     function renderProductCard(item, store) {
@@ -13086,20 +13633,36 @@
       const linkPlataforma = getProductLink(item);
       const semImagemValida = !media.principal || media.principal === placeholderImage;
       const precisaRevisao = !linkPlataforma || semImagemValida || item.statusImagem === "imagem_manual_necessaria" || item.aprovadoParaPublicacao === false;
-      const actionLabel = isQuote ? "Solicitar orÃ§amento" : (isExternalStore ? "Entrar na loja parceira" : (isMercadoLivre ? "Comprar no Mercado Livre" : "Comprar agora"));
+      const actionLabel = isQuote ? "Solicitar orçamento" : "Ver oferta";
+      const sourceLabel = firstFilled(item, ["source", "badge"]) || store?.commercialName || "Loja parceira";
+      const price = firstFilled(item, ["price", "preco", "precoAtual"]) || "Consultar";
+      const previousPrice = firstFilled(item, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
+      const ratingValue = firstFilled(item, ["avaliacao", "rating", "reviewRating", "nota"]);
+      const ratingLabel = ratingValue ? "Avaliação " + ratingValue : "Avaliação na loja parceira";
+      const availability = firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]);
+      const lastCheck = dateLabel(firstFilled(item, ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"]));
+      const metaItems = [
+        sourceLabel,
+        ratingLabel,
+        availability,
+        lastCheck ? "Revisto em " + lastCheck : "",
+        precisaRevisao ? "Pendente de revisão" : ""
+      ].filter(Boolean);
       return '<article class="product-card" data-status="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '" data-publicacao="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '">' +
         '<div class="product-media">' +
           '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async" onerror="handleProductImageError(this)">' +
           '<span class="badge">' + escapeHtml(item.badge) + '</span>' +
-          (video.statusVideo !== "sem_video" ? '<span class="video-chip">VÃ­deo</span>' : '') +
+          (video.statusVideo !== "sem_video" ? '<span class="video-chip">Vídeo</span>' : '') +
           '<button class="favorite ' + (isFavorite(item.id) ? "active" : "") + '" onclick="toggleFavorite(\'' + item.id + '\')" aria-label="Favoritar produto">&hearts;</button>' +
         '</div>' +
         '<div class="product-info">' +
           '<h3>' + escapeHtml(item.name) + '</h3>' +
           '<p>' + escapeHtml(item.description) + '</p>' +
           '<div class="specs">' + (item.specs || []).map(spec => '<span>' + escapeHtml(spec) + '</span>').join("") + '</div>' +
+          '<div class="product-meta">' + metaItems.map(meta => '<span>' + escapeHtml(meta) + '</span>').join("") + '</div>' +
           '<span class="media-status ' + (precisaRevisao ? "review" : "") + '">' + escapeHtml(precisaRevisao ? "Revisar antes de publicar" : media.label) + '</span>' +
-          '<div class="price-line"><strong class="price">' + escapeHtml(item.price) + '</strong><span class="chip">' + escapeHtml(store?.commercialName || "Impacto 360") + '</span></div>' +
+          '<span class="affiliate-mini">Link de afiliado</span>' +
+          '<div class="price-line"><span><strong class="price">' + escapeHtml(price) + '</strong>' + (previousPrice ? '<span class="old-price"> ' + escapeHtml(previousPrice) + '</span>' : '') + '</span><span class="chip">' + escapeHtml(store?.commercialName || "Impacto 360") + '</span></div>' +
           '<div class="product-actions">' +
             '<button class="btn btn-primary" data-link-plataforma="' + escapeAttr(linkPlataforma) + '" onclick="' + (isQuote ? 'requestQuote(\'' + item.id + '\')' : 'buyProduct(\'' + item.id + '\')') + '">' + actionLabel + '</button>' +
             '<button class="btn" onclick="shareProduct(\'' + item.id + '\')">Compartilhar produto</button>' +
@@ -13123,7 +13686,7 @@
       const item = products.find(product => product.id === itemId);
       const store = stores.find(s => s.id === item?.storeId);
       const linkPlataforma = item ? getProductLink(item) : "";
-      const text = "OlÃ¡, quero solicitar orÃ§amento no IMPACTO 360 AFILIADO. Loja: " + (store?.name || "") + ". ServiÃ§o: " + (item?.name || "") + (linkPlataforma ? ". Link: " + linkPlataforma : "") + ".";
+      const text = "Olá, quero solicitar orçamento no IMPACTO 360 AFILIADO. Loja: " + (store?.name || "") + ". Serviço: " + (item?.name || "") + (linkPlataforma ? ". Link: " + linkPlataforma : "") + ".";
       window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
     }
 
@@ -13140,10 +13703,7 @@
     }
 
     function quickSearch(term) {
-      if (document.body.classList.contains("store-open")) backToMall();
-      const input = document.getElementById("searchInput");
-      input.value = term;
-      renderMall();
+      applySearchTerm(term);
       showToast("Busca aplicada: " + term);
     }
 
@@ -13162,10 +13722,10 @@
       }
       copyText(text + " " + url);
     }
-    function shareShopping() { shareText("ConheÃ§a o IMPACTO 360 AFILIADO, um shopping virtual premium."); }
+    function shareShopping() { shareText("Conheça o IMPACTO 360 AFILIADO, um shopping virtual com ofertas selecionadas e links de afiliado."); }
     function shareStore(storeId) {
       const store = stores.find(item => item.id === storeId);
-      shareText("ConheÃ§a a loja " + (store?.name || "IMPACTO 360") + " dentro do IMPACTO 360 AFILIADO.", store?.name || settings.siteName);
+      shareText("Conheça a loja " + (store?.name || "IMPACTO 360") + " dentro do IMPACTO 360 AFILIADO.", store?.name || settings.siteName);
     }
     function shareCurrentStore() { if (currentStore) shareStore(currentStore.id); }
     function shareProduct(itemId) {
@@ -13216,7 +13776,13 @@
       setSpecialFilter,
       setFilter,
       setViewMode,
+      syncSearchFromHeader,
+      syncSearchFromHero,
+      scrollToSection,
+      openContact,
       openStore,
+      openOpeningGroup,
+      openCommercialCategory,
       quickSearch,
       toggleAssistant,
       shareShopping,
@@ -13251,6 +13817,7 @@
 <!-- IMPACTO360_ADMIN_ROBOS_START -->
 <script src="integracoes/impacto360-admin-robos.js"></script>
 <!-- IMPACTO360_ADMIN_ROBOS_END -->
+<script src="integracoes/impacto360-banners-anuncios.js?v=20260625-1"></script>
 </body>
 </html>
 

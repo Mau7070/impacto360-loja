@@ -1,6 +1,6 @@
 # Relatório de auditoria de anúncios
 
-Data: 2026-07-09
+Data: 2026-07-10
 
 ## Resumo
 
