@@ -1,12 +1,14 @@
 {
-  "executedAt": "2026-07-10",
+  "executedAt": "2026-07-13",
   "appliedSafeFixes": false,
   "totals": {
     "products": 700,
     "stores": 26,
     "active": 323,
     "inactiveOrReview": 377,
-    "issues": 447,
+    "publicOffers": 613,
+    "pendingOrBlocked": 87,
+    "issues": 453,
     "duplicateGroups": 5,
     "imageConflicts": 0,
     "storesCorrected": 0,
@@ -14,7 +16,7 @@
     "duplicatesInactivated": 0
   },
   "issueCounts": {
-    "foto_arquivo_inexistente": 32,
+    "foto_arquivo_inexistente": 38,
     "link_nao_direto_ou_placeholder": 52,
     "loja_categoria_incorreta": 58,
     "sem_botao_compra": 1,
@@ -23,6 +25,274 @@
     "titulo_generico_ou_incompleto": 1
   },
   "issues": {
+    "foto_arquivo_inexistente": [
+      {
+        "id": "telefone-mercado-livre-002",
+        "title": "iPhone 16e (256 Gb) - Branco - Distribuidor Autorizado",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-002/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-003",
+        "title": "Samsung Galaxy S25 FE 5G 128GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-003/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-006",
+        "title": "Samsung Galaxy A16 5G 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-006/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-007",
+        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-007/imagem-01.webp"
+      },
+      {
+        "id": "telefone-mercado-livre-009",
+        "title": "Xiaomi Redmi 14C 256GB",
+        "storeId": "impacto-mobile",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png"
+      },
+      {
+        "id": "telefone-mercado-livre-010",
+        "title": "Apple iPhone 14 128GB Estelar",
+        "storeId": "impacto-mobile",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/telefone-mercado-livre-010/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-012",
+        "title": "Notebook Asus Vivobook 15 M1502, Amd Ryzen 7, 8 Gb Ram, 512 Gb Ssd, Keepos Linux, Cool Silver - M1502ya-nj611",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/mercado-livre-produto-012/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-032",
+        "title": "Notebook Lenovo Ideapad Slim 3 15irh10 Intel Core I5-13420h 8gb 512gb Ssd Windows 11 15.3 - 83ns0002br Luna Grey",
+        "storeId": "impacto-tech-computadores",
+        "status": "duplicado",
+        "image": "public/produtos-impacto360/mercado-livre-produto-032/imagem-01.webp"
+      },
+      {
+        "id": "loja-parceira-002",
+        "title": "Teclado E Mouse Sem Fio Dell Km3322w Preto",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/loja-parceira-002/imagem-01.webp"
+      },
+      {
+        "id": "mercado-livre-produto-035",
+        "title": "Notebook Gamer Acer Nitro V16 Anv16-72-7327 Intel Core 7 240h 32gb Ram 1tb Ssd Rtx5060 Windows 11 Home 16 Wuxga 180 Hz Preto",
+        "storeId": "impacto-tech-computadores",
+        "status": "revisao_manual",
+        "image": "public/produtos-impacto360/mercado-livre-produto-035/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-01",
+        "title": "Letra personalizada simples",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-02",
+        "title": "Letra com cifra",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-03",
+        "title": "Jingle comercial",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-04",
+        "title": "Música para homenagem",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-06",
+        "title": "Música infantil personalizada",
+        "storeId": "impacto-kids",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-07",
+        "title": "Música para campanha",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-07/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-music-studio-08",
+        "title": "Narração musical para vídeo",
+        "storeId": "impacto-pet",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-music-studio-08/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-01",
+        "title": "Revisão acadêmica",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-02",
+        "title": "Formatação ABNT",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-03",
+        "title": "Organização de trabalho",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-04",
+        "title": "Criação de mapa mental",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-05",
+        "title": "Resumo comentado",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-06",
+        "title": "Questões com gabarito",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-07",
+        "title": "Slides para apresentação",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-07/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-academico-08",
+        "title": "Orientação estrutural de TCC",
+        "storeId": "impacto-academico",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-academico-08/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-01",
+        "title": "Convite digital",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-02",
+        "title": "Banner personalizado",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-03",
+        "title": "Currículo visual",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-04",
+        "title": "Apresentação profissional",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-05",
+        "title": "Catálogo simples",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-personalizados-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-personalizados-06/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-01",
+        "title": "Kit de posts",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-01/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-02",
+        "title": "Capa para vídeo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-02/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-03",
+        "title": "Roteiro curto",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-03/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-04",
+        "title": "Calendário editorial",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-04/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-05",
+        "title": "Ideias de conteúdo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-05/imagem-01.webp"
+      },
+      {
+        "id": "servico-impacto-criadores-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-criadores",
+        "status": "rascunho",
+        "image": "public/produtos-impacto360/servico-impacto-criadores-06/imagem-01.webp"
+      }
+    ],
     "link_nao_direto_ou_placeholder": [
       {
         "id": "telefone-mercado-livre-003",
@@ -387,232 +657,6 @@
         "storeId": "impacto-casa",
         "status": "revisao_manual",
         "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao"
-      }
-    ],
-    "foto_arquivo_inexistente": [
-      {
-        "id": "telefone-mercado-livre-003",
-        "title": "Samsung Galaxy S25 FE 5G 128GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-003/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-006",
-        "title": "Samsung Galaxy A16 5G 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-006/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-007",
-        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-007/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-009",
-        "title": "Xiaomi Redmi 14C 256GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png"
-      },
-      {
-        "id": "servico-impacto-music-studio-01",
-        "title": "Letra personalizada simples",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-01/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-02",
-        "title": "Letra com cifra",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-02/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-03",
-        "title": "Jingle comercial",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-03/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-04",
-        "title": "Música para homenagem",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-04/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-05",
-        "title": "Música gospel autoral",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-05/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-06",
-        "title": "Música infantil personalizada",
-        "storeId": "impacto-kids",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-06/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-07",
-        "title": "Música para campanha",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-07/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-music-studio-08",
-        "title": "Narração musical para vídeo",
-        "storeId": "impacto-pet",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-music-studio-08/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-01",
-        "title": "Revisão acadêmica",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-01/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-02",
-        "title": "Formatação ABNT",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-02/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-03",
-        "title": "Organização de trabalho",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-03/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-04",
-        "title": "Criação de mapa mental",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-04/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-05",
-        "title": "Resumo comentado",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-05/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-06",
-        "title": "Questões com gabarito",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-06/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-07",
-        "title": "Slides para apresentação",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-07/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-academico-08",
-        "title": "Orientação estrutural de TCC",
-        "storeId": "impacto-academico",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-academico-08/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-01",
-        "title": "Convite digital",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-01/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-02",
-        "title": "Banner personalizado",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-02/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-03",
-        "title": "Currículo visual",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-03/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-04",
-        "title": "Apresentação profissional",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-04/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-05",
-        "title": "Catálogo simples",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-05/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-personalizados-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-personalizados-06/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-01",
-        "title": "Kit de posts",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-01/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-02",
-        "title": "Capa para vídeo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-02/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-03",
-        "title": "Roteiro curto",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-03/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-04",
-        "title": "Calendário editorial",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-04/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-05",
-        "title": "Ideias de conteúdo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-05/imagem-01.webp"
-      },
-      {
-        "id": "servico-impacto-criadores-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-criadores",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/servico-impacto-criadores-06/imagem-01.webp"
       }
     ],
     "sem_link": [

@@ -55,12 +55,26 @@ ok("categorias comerciais visiveis", html.includes("Categorias do shopping") && 
 ok("como funciona completo", html.includes("Como funciona") && html.includes("1. Seleção") && html.includes("4. Transparência"));
 ok("blocos de parceiros", html.includes("Top Amazon") && html.includes("Top Mercado Livre") && html.includes("Outras lojas parceiras"));
 ok("cards com ver oferta", html.includes("Ver oferta"));
-ok("cards com avaliacao", html.includes("Avaliação pendente de revisão") && html.includes("Avaliação "));
-ok("cards com loja e afiliado", html.includes("Link de afiliado") && html.includes("store?.commercialName"));
+ok("cards ocultam pendencias tecnicas", html.includes("Confirmar no site parceiro") && html.includes("Conferir preço atualizado") && !html.includes('"Avaliação pendente de revisão"'));
+ok("cards com loja e afiliado", html.includes("Link de afiliado") && html.includes("Loja parceira:"));
 
 const products = JSON.parse(read("dados/products.json"));
 const activeProducts = products.filter(product => String(product.status || "").toLowerCase() === "ativo");
+const usableLink = value => {
+  const link = String(value || "").trim();
+  if (!/^https?:\/\//i.test(link)) return false;
+  if (/COLOCAR_|placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(link)) return false;
+  if (/mercadolivre\.com\.br\/loja\//i.test(link) || /lista\.mercadolivre\.com\.br/i.test(link)) return false;
+  return true;
+};
+const linkFields = ["linkCompra", "linkAfiliado", "affiliateLink", "linkComissionado", "linkPlataforma", "link_original_afiliado", "linkOriginal", "urlProduto", "url"];
+const publicProducts = products.filter(product => {
+  const status = String(product.status || product.statusPublicacao || product.auditoriaPublicacao || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
+    && linkFields.some(field => usableLink(product[field]));
+});
 ok("catalogo com produtos ativos", activeProducts.length > 0, `${activeProducts.length} ativo(s)`);
+ok("catalogo com produtos publicos por link", publicProducts.length >= 8, `${publicProducts.length} publico(s)`);
 
 const sitemap = read("sitemap.xml");
 ok("sitemap tem paginas de produto", sitemap.includes("<loc>https://impacto360afiliado.com.br/produto/"));
@@ -72,7 +86,7 @@ ok("paginas individuais geradas", productDirs.length > 0, `${productDirs.length}
 if (productDirs.length) {
   const sample = read(path.join("produto", productDirs[0].name, "index.html"));
   ok("pagina produto com json-ld", sample.includes('type="application/ld+json"') && sample.includes('"@type": "Product"'));
-  ok("pagina produto com botao comprar no parceiro", sample.includes(">Comprar no site parceiro<"));
+  ok("pagina produto com botao de oferta", />(?:Comprar no site parceiro|Ver oferta no Mercado Livre|Ver oferta na Amazon|Conferir preço atualizado)</.test(sample));
 }
 
 const failed = checks.filter(check => !check.pass);

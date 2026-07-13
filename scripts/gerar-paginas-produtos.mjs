@@ -17,7 +17,7 @@ const linkFields = [
   "url",
 ];
 
-const imageFields = ["fotoPrincipal", "imagemPrincipal", "image", "imagem", "thumbnail"];
+const imageFields = ["fotoPrincipal", "imagemPrincipal", "imagem", "image", "imageUrl", "thumbnail", "foto", "productImage", "src"];
 const ratingFields = ["avaliacao", "rating", "reviewRating", "nota"];
 const availabilityFields = ["disponibilidade", "estoque", "statusDisponibilidade"];
 const lastCheckFields = ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"];
@@ -50,19 +50,20 @@ function isUsableLink(link) {
 function getProductImage(product) {
   const gallery = Array.isArray(product?.galeria) ? product.galeria : [];
   const extras = Array.isArray(product?.fotosExtras) ? product.fotosExtras : [];
+  const images = Array.isArray(product?.images) ? product.images : [];
   const candidates = [
     ...imageFields.map(field => product?.[field]),
     gallery[0],
     extras[0],
+    images[0],
   ].map(value => String(value || "").trim());
-  return candidates.find(value => value && !/placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(value)) || "";
+  return candidates.find(value => value && !/foto preservada|imagem pendente|placeholder quebrado|placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(value)) || "";
 }
 
 function productIsPublishable(product) {
-  return String(product.status || "").toLowerCase() === "ativo"
-    && product.aprovadoParaPublicacao !== false
-    && isUsableLink(getProductLink(product))
-    && Boolean(getProductImage(product));
+  const status = normalizeText(firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao"]));
+  return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
+    && isUsableLink(getProductLink(product));
 }
 
 function htmlEscape(value) {
@@ -173,6 +174,135 @@ function dateLabel(value) {
   return date.toLocaleDateString("pt-BR", { timeZone: "UTC" });
 }
 
+function cleanCommercialText(value) {
+  return String(value || "")
+    .replace(/https?:\/\/\S+/gi, "")
+    .replace(/\b(?:COLOCAR_LINK_AFILIADO_AQUI|COLOCAR_LINK_AQUI|Inserir link(?: de afiliado)?(?: antes de publicar)?|Foto preservada|imagem pendente|placeholder quebrado)\b/gi, "")
+    .replace(/\b(?:Avalia[cç][aã]o|Disponibilidade|Categoria|[UÚ]ltima verifica[cç][aã]o)\s+pendente(?:\s+de\s+revis[aã]o)?\b/gi, "")
+    .replace(/\bPendente de revis[aã]o\b/gi, "")
+    .replace(/\bRevisar antes de publicar\b/gi, "")
+    .replace(/\bSob consulta\b/gi, "")
+    .replace(/\bLink preservado da loja parceira\.?/gi, "")
+    .replace(/\bselecionado para a vitrine(?: do Shopping Impacto360)?\.?/gi, "")
+    .replace(/\bProduto preparado para voc[eê] inserir seu link de afiliado[^.]*\.?/gi, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,;:])/g, "$1")
+    .trim();
+}
+
+function cleanCommercialTitle(value) {
+  const title = cleanCommercialText(value)
+    .replace(/\b5g\b/gi, "5G")
+    .replace(/\b4g\b/gi, "4G")
+    .replace(/\b(\d+)\s*gb\b/gi, "$1GB")
+    .replace(/\b(\d+)\s*tb\b/gi, "$1TB")
+    .replace(/\bram\b/gi, "RAM")
+    .replace(/\bssd\b/gi, "SSD")
+    .replace(/\bnfc\b/gi, "NFC")
+    .replace(/\bwi[- ]?fi\b/gi, "Wi-Fi")
+    .replace(/\bdual sim\b/gi, "Dual SIM")
+    .replace(/\biphone\b/gi, "iPhone");
+  return title || "Produto Impacto360";
+}
+
+function truncateText(value, limit) {
+  const text = String(value || "").trim();
+  if (!limit || text.length <= limit) return text;
+  const sliced = text.slice(0, limit - 1).replace(/\s+\S*$/, "");
+  return `${(sliced || text.slice(0, limit - 1)).trim()}…`;
+}
+
+function hasReliablePrice(value) {
+  const text = normalizeText(value);
+  return Boolean(text) && !/sob consulta|consultar|preco pendente|preco nao validado|pendente/.test(text);
+}
+
+function displayPriceLabel(value) {
+  return hasReliablePrice(value) ? String(value).trim() : "Conferir preço atualizado";
+}
+
+function sourceText(product) {
+  return normalizeText([product?.source, product?.badge, getProductLink(product), product?.affiliateLink, product?.linkOriginal].join(" "));
+}
+
+function partnerName(product, store) {
+  const text = sourceText(product);
+  if (/amazon/.test(text)) return "Amazon";
+  if (/mercado livre|mercadolivre|meli\.la/.test(text)) return "Mercado Livre";
+  const source = cleanCommercialText(firstFilled(product, ["source"]));
+  if (source && !/revisar|pendente|oferta verificada/i.test(source)) return source;
+  return store?.commercialName || store?.name || "site parceiro";
+}
+
+function commercialCtaLabel(product, store) {
+  const partner = partnerName(product, store);
+  if (product.actionType === "quote") return "Solicitar orçamento";
+  if (partner === "Mercado Livre") return "Ver oferta no Mercado Livre";
+  if (partner === "Amazon") return "Ver oferta na Amazon";
+  return "Comprar no site parceiro";
+}
+
+function categoryProfile(product) {
+  const text = normalizeText([product?.storeId, product?.category, product?.categoria, product?.subcategoria, product?.name, product?.description].join(" "));
+  if (/celular|smartphone|iphone|motorola|samsung|xiaomi|5g|mobile/.test(text)) return "smartphone";
+  if (/casa|cozinha|panela|forno|air fryer|utensilio|eletrodomestico/.test(text)) return "casa";
+  if (/calcado|tenis|sapato|sandalia|chinelo|bota|moda|camisa|vestido|bolsa/.test(text)) return "moda";
+  if (/ferramenta|furadeira|oficina|lanterna|auto|veiculo/.test(text)) return "ferramentas";
+  if (/cavalgada|cavalo|equestre|sela|country|arreio|cabecada/.test(text)) return "cavalgada";
+  if (/escolar|caderno|estojo|mochila|caneta|livraria/.test(text)) return "escolar";
+  if (/brinquedo|boneca|carrinho|infantil|dinossauro|robo|drone/.test(text)) return "brinquedos";
+  return "geral";
+}
+
+function commercialDescription(product, store) {
+  const title = cleanCommercialTitle(firstFilled(product, ["name", "nome", "title"]));
+  const original = cleanCommercialText(firstFilled(product, ["descricaoCurta", "description", "descricao", "descricaoDetalhada", "fullDescription"]));
+  if (original && original.length > 42 && !/apenas uma op[cç][aã]o|campos edit[aá]veis/i.test(original)) {
+    return truncateText(original, 260);
+  }
+  const partner = partnerName(product, store);
+  const confirm = "Confira no anúncio parceiro preço, frete, garantia, variações e condições de pagamento.";
+  const profile = categoryProfile(product);
+  if (profile === "smartphone") return truncateText(`${title} para comparar versão, armazenamento, conectividade e uso diário com compra direcionada pela ${partner}. ${confirm}`, 260);
+  if (profile === "casa") return truncateText(`${title} para equipar casa e cozinha com praticidade. ${confirm}`, 260);
+  if (profile === "moda") return truncateText(`${title} para conferir estilo, conforto, material, numeração e variações disponíveis no parceiro. ${confirm}`, 260);
+  if (profile === "ferramentas") return truncateText(`${title} para manutenção, oficina ou uso doméstico. Confirme potência, voltagem, acessórios e garantia no parceiro.`, 260);
+  if (profile === "cavalgada") return truncateText(`${title} para cavalgada, montaria, desfile ou rotina rural. Confirme material, medidas e compatibilidade no parceiro.`, 260);
+  if (profile === "escolar") return truncateText(`${title} para estudo, organização e rotina escolar. ${confirm}`, 260);
+  if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa, conteúdo da embalagem e condições de entrega no parceiro.`, 260);
+  return truncateText(`${title} disponível em loja parceira com link preservado. ${confirm}`, 260);
+}
+
+function productBenefitTags(product, store, priceLabel) {
+  const title = cleanCommercialTitle(firstFilled(product, ["name", "nome", "title"]));
+  const text = [title, product?.description, product?.descricaoCurta, ...(Array.isArray(product?.specs) ? product.specs : [])].join(" ");
+  const tags = [];
+  const add = value => {
+    const clean = truncateText(cleanCommercialText(value), 36);
+    if (clean && !/revisar|pendente|rascunho|inserir link|foto preservada/i.test(clean) && !tags.some(item => normalizeText(item) === normalizeText(clean))) tags.push(clean);
+  };
+  (Array.isArray(product?.specs) ? product.specs : []).slice(0, 4).forEach(add);
+  const patterns = [
+    /\b\d+\s*(?:GB|TB)\b/ig,
+    /\b\d+\s*GB\s*RAM\b/ig,
+    /\b5G\b/ig,
+    /\bNFC\b/ig,
+    /\bWi-Fi\b/ig,
+    /\b\d+\s*MP\b/ig,
+    /\b\d+\s*(?:mAh|L|W|V)\b/ig,
+    /\b(?:110V|127V|220V|bivolt)\b/ig,
+  ];
+  for (const pattern of patterns) {
+    for (const match of text.matchAll(pattern)) add(match[0]);
+  }
+  add(categoryProfile(product) === "geral" ? firstFilled(product, ["category", "categoria"]) : firstFilled(product, ["subcategoria", "category", "categoria"]));
+  if (!hasReliablePrice(priceLabel)) add("Preço atualizado no parceiro");
+  add(partnerName(product, store));
+  return tags.slice(0, 4);
+}
+
+const pagePlaceholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><rect x="210" y="260" width="780" height="620" rx="42" fill="#ffffff" stroke="#d9e4ef" stroke-width="10"/><circle cx="430" cy="455" r="72" fill="#e9f2fb"/><path d="M290 760l190-190 130 130 96-96 204 204v72H290z" fill="#dceaf6"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="960" font-size="46" font-weight="700">Foto em conferência</text><text x="600" y="1022" font-size="32">Veja detalhes no parceiro</text></g></svg>');
+
 function relatedProducts(product, products) {
   const category = normalizeText(firstFilled(product, ["category", "categoria", "subcategoria"]));
   const storeId = product.storeId;
@@ -189,36 +319,40 @@ function renderRelatedProducts(product, products) {
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
         ${related.map(item => `<a class="related-card" href="/produto/${htmlEscape(productSlug(item))}/">
-          <img src="${htmlEscape(webPath(getProductImage(item)))}" alt="${htmlEscape(firstFilled(item, ["name", "nome"]) || "Produto relacionado")}">
-          <strong>${htmlEscape(firstFilled(item, ["name", "nome"]) || "Produto relacionado")}</strong>
-          <span>${htmlEscape(firstFilled(item, ["price", "preco", "precoAtual"]) || "Consultar")}</span>
+          <img src="${htmlEscape(webPath(getProductImage(item)) || pagePlaceholderImage)}" alt="${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}">
+          <strong>${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}</strong>
+          <span>${htmlEscape(displayPriceLabel(firstFilled(item, ["price", "preco", "precoAtual"])))}</span>
         </a>`).join("")}
       </div>
     </section>`;
 }
 
 function productPage(product, store, products) {
-  const title = firstFilled(product, ["name", "nome"]) || "Produto Impacto360";
-  const description = firstFilled(product, ["descricaoCurta", "description", "descricaoDetalhada"]) || "Oferta selecionada pela Impacto360 Afiliado.";
-  const priceLabel = firstFilled(product, ["price", "preco", "precoAtual"]) || "Consultar";
-  const price = numericPrice(priceLabel);
-  const image = webPath(getProductImage(product));
+  const title = cleanCommercialTitle(firstFilled(product, ["name", "nome"]) || "Produto Impacto360");
+  const description = commercialDescription(product, store);
+  const rawPriceLabel = firstFilled(product, ["price", "preco", "precoAtual"]);
+  const priceLabel = displayPriceLabel(rawPriceLabel);
+  const price = numericPrice(rawPriceLabel);
+  const realImage = webPath(getProductImage(product));
+  const image = realImage || pagePlaceholderImage;
   const link = getProductLink(product);
   const rating = firstFilled(product, ratingFields);
   const ratingValue = ratingSchemaValue(rating);
   const reviewCount = reviewCountValue(product);
-  const availability = firstFilled(product, availabilityFields);
+  const rawAvailability = firstFilled(product, availabilityFields);
+  const availability = cleanCommercialText(rawAvailability);
+  const displayAvailability = availability && !/pendente|revis[aã]o|sob consulta/i.test(availability) ? availability : "Confirmar no site parceiro";
   const schemaAvailabilityUrl = schemaAvailability(availability);
   const category = firstFilled(product, ["category", "categoria", "subcategoria"]);
-  const status = firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao"]) || "ativo";
   const lastCheck = dateLabel(firstFilled(product, lastCheckFields));
-  const storeName = store?.commercialName || store?.name || firstFilled(product, ["source", "badge"]) || "Loja parceira";
+  const storeName = partnerName(product, store);
+  const ctaLabel = commercialCtaLabel(product, store);
+  const benefitTags = productBenefitTags(product, store, rawPriceLabel);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: title,
     description,
-    image,
     brand: firstFilled(product, ["brand", "marca"]) || storeName,
     category,
     url: productUrl(product),
@@ -232,6 +366,7 @@ function productPage(product, store, products) {
       },
     },
   };
+  if (realImage) schema.image = realImage;
   if (price) schema.offers.price = price;
   if (schemaAvailabilityUrl) schema.offers.availability = schemaAvailabilityUrl;
   if (ratingValue && reviewCount) {
@@ -275,6 +410,8 @@ function productPage(product, store, products) {
     .price { display:block; margin:18px 0 8px; font-size:1.8rem; font-weight:950; }
     .meta { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
     .chip { border:1px solid var(--line); border-radius:999px; padding:8px 10px; background:#fff; color:var(--muted); font-weight:800; font-size:.84rem; }
+    .specs { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0; }
+    .specs span { border-radius:999px; background:#eef5ff; color:#315178; padding:8px 10px; font-size:.84rem; font-weight:850; }
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border-radius:8px; background:linear-gradient(135deg, var(--blue), #0d3fb9); color:#fff; font-weight:950; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .related { margin-top:34px; }
@@ -299,16 +436,16 @@ function productPage(product, store, products) {
         <span class="eyebrow">${htmlEscape(storeName)}</span>
         <h1>${htmlEscape(title)}</h1>
         <p>${htmlEscape(description)}</p>
+        ${benefitTags.length ? `<div class="specs">${benefitTags.map(item => `<span>${htmlEscape(item)}</span>`).join("")}</div>` : ""}
         <strong class="price">${htmlEscape(priceLabel)}</strong>
         <div class="meta">
-          <span class="chip">${htmlEscape(firstFilled(product, ["source", "badge"]) || "Loja parceira")}</span>
-          <span class="chip">${htmlEscape(rating ? `Avaliação ${rating}` : "Avaliação pendente de revisão")}</span>
-          <span class="chip">${htmlEscape(availability || "Disponibilidade pendente de revisão")}</span>
-          <span class="chip">${htmlEscape(category || "Categoria pendente de revisão")}</span>
-          <span class="chip">${htmlEscape("Status: " + status)}</span>
-          <span class="chip">${htmlEscape(lastCheck ? "Revisto em " + lastCheck : "Última verificação pendente de revisão")}</span>
+          <span class="chip">${htmlEscape("Loja parceira: " + storeName)}</span>
+          ${rating ? `<span class="chip">${htmlEscape(`Avaliação ${cleanCommercialText(rating)}`)}</span>` : ""}
+          <span class="chip">${htmlEscape(displayAvailability)}</span>
+          ${category ? `<span class="chip">${htmlEscape(category)}</span>` : ""}
+          ${lastCheck ? `<span class="chip">${htmlEscape("Revisado em " + lastCheck)}</span>` : ""}
         </div>
-        <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">Comprar no site parceiro</a>
+        <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">${htmlEscape(ctaLabel)}</a>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
