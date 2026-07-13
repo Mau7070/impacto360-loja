@@ -319,3 +319,36 @@ Alterações realizadas nesta rodada:
 - Os controles visíveis de andares foram removidos: `Todos os andares`, `Térreo`, `1º Andar`, `2º Andar`, `3º Andar` e `Ala Externa`.
 - Os rótulos de andar dentro dos cards de loja foram removidos.
 - Os títulos das seções foram simplificados para categorias comerciais, sem termos de andar.
+
+## 18. Correção final dos 4 cards repetidos de forno - 2026-07-13
+
+Alterações realizadas nesta rodada:
+
+- Backup criado antes das mudanças: `backups/2026-07-13-1132-pre-correcao-fornos-repetidos.zip`.
+- Criado o script reutilizável `scripts/corrigir-fornos-repetidos-mercado-livre.mjs`.
+- Substituídos os quatro cards repetidos do forno Philco PFE65 pelos produtos resolvidos a partir dos links enviados.
+- As imagens foram importadas do Mercado Livre e salvas em `public/images/anuncios/` e `pacote-github-pages-pronto/public/images/anuncios/`.
+- Os links curtos de afiliado foram preservados como links de compra.
+- Os metadados internos antigos do forno foram removidos dos quatro produtos corrigidos.
+- O registro extra `loja-parceira-001` foi mantido fora da vitrine como `revisao_manual`, sem apagar o link original, para impedir nova publicação errada.
+
+Produtos atualizados:
+
+- `mercado-livre-produto-019`: Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD. Link preservado: `https://meli.la/1K6Jhmd`.
+- `mercado-livre-produto-020`: Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux. Link preservado: `https://meli.la/1Dinaeg`.
+- `mercado-livre-produto-023`: iPhone 16e 128 GB Preto - Distribuidor Autorizado. Link preservado: `https://meli.la/34dtQGa`.
+- `mercado-livre-produto-029`: Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco. Link preservado: `https://meli.la/11MQYNu`.
+
+Observação de origem:
+
+- `https://meli.la/34dtQGa` e `https://meli.la/11MQYNu` abriram listas sociais do Mercado Livre, não uma página única de produto. Foram usados itens reais visíveis nessas listas e o link de afiliado curto continuou como botão de compra.
+
+Validação antes da publicação:
+
+- `index.html`, `impacto360.html`, `pacote-github-pages-pronto/index.html` e os JSONs públicos não contêm mais `Forno Elétrico Philco 65l Dupla Resistência Pfe65 127v` nem `R$ 674,90` nos registros corrigidos.
+- Os quatro produtos corrigidos estão `ativo` e `aprovadoParaPublicacao: true`.
+- O registro extra `loja-parceira-001` está `revisao_manual`, `aprovadoParaPublicacao: false` e `productIsVisible: false`.
+- `npm.cmd run gerar:produtos`: aprovado, com 333 páginas canônicas de produto.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
+- `npm.cmd run test:seguranca`: aprovado.

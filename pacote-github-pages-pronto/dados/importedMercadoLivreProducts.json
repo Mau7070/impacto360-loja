@@ -421,13 +421,13 @@
   },
   {
     "id": "loja-parceira-001",
-    "name": "Lista parceira Mercado Livre",
-    "description": "Acesse a loja ou lista parceira no Mercado Livre. Link de comissao preservado exatamente como enviado.",
-    "price": "Acessar loja",
-    "image": "public/placeholder-loja-mercado-livre.svg",
-    "category": "Loja parceira",
+    "name": "Lista parceira Mercado Livre em revisão",
+    "description": "Registro mantido fora da vitrine para revisão manual porque o link não confirmou um produto único com segurança.",
+    "price": "Conferir no Mercado Livre",
+    "image": "public/placeholder-produto-mercado-livre.svg",
+    "category": "Ofertas gerais",
     "storeId": "lojas-parceiras",
-    "badge": "Revisar",
+    "badge": "Revisão manual",
     "affiliateLink": "https://mercadolivre.com/sec/14EbgVy",
     "source": "Mercado Livre",
     "status": "revisao_manual",
@@ -442,22 +442,101 @@
     "statusAnuncio": "revisao_manual",
     "aprovadoParaPublicacao": false,
     "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
+    "linkStatus": "link preservado para revisão manual",
     "statusLink": "revisao manual",
     "statusImagem": "foto_link_inconsistente",
     "publicarNaHome": false,
     "publicar": false,
     "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "Confirmar produto correto antes de publicar"
     ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Registro oculto em 2026-07-13 para remover resquícios do card repetido de forno sem apagar o link original.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json"
-    }
+    },
+    "title": "Lista parceira Mercado Livre em revisão",
+    "nome": "Lista parceira Mercado Livre em revisão",
+    "slug": "lista-parceira-mercado-livre-em-revisao",
+    "descricaoCurta": "Registro mantido fora da vitrine para revisão manual porque o link não confirmou um produto único com segurança.",
+    "descricaoDetalhada": "Registro mantido fora da vitrine para revisão manual porque o link não confirmou um produto único com segurança. O link original foi preservado para nova conferência antes de qualquer publicação.",
+    "descricaoCompleta": "Registro mantido fora da vitrine para revisão manual porque o link não confirmou um produto único com segurança. O link original foi preservado para nova conferência antes de qualquer publicação.",
+    "preco": "Conferir no Mercado Livre",
+    "precoPromocional": null,
+    "precoAnterior": null,
+    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
+    "fotoPrincipal": "public/placeholder-produto-mercado-livre.svg",
+    "galeria": [],
+    "imagens": [],
+    "linkOriginal": "https://mercadolivre.com/sec/14EbgVy",
+    "linkAfiliado": "https://mercadolivre.com/sec/14EbgVy",
+    "link_afiliado": "https://mercadolivre.com/sec/14EbgVy",
+    "linkComissionado": "https://mercadolivre.com/sec/14EbgVy",
+    "linkPlataforma": "https://mercadolivre.com/sec/14EbgVy",
+    "linkCompra": "https://mercadolivre.com/sec/14EbgVy",
+    "statusPublicacao": "revisao_manual",
+    "productIsVisible": false,
+    "ofertas": [
+      {
+        "loja": "Mercado Livre",
+        "preco": "Conferir no Mercado Livre",
+        "linkCompra": "https://mercadolivre.com/sec/14EbgVy",
+        "linkAfiliado": "https://mercadolivre.com/sec/14EbgVy",
+        "linkOriginal": "https://mercadolivre.com/sec/14EbgVy"
+      }
+    ],
+    "postagem": {
+      "legendaWhatsApp": "",
+      "legendaInstagram": "",
+      "legendaFacebook": "",
+      "hashtags": "",
+      "cta": "Revisar antes de publicar"
+    },
+    "legendaWhatsApp": "",
+    "legendaInstagram": "",
+    "legendaFacebook": "",
+    "textoCatalogo": "Lista parceira Mercado Livre em revisão",
+    "observation": "Registro oculto em 2026-07-13 para remover resquícios do card repetido de forno sem apagar o link original.",
+    "validacaoOnline": {
+      "status": "revisao_manual",
+      "data": "2026-07-13",
+      "linkAfiliadoPreservado": "https://mercadolivre.com/sec/14EbgVy",
+      "motivo": "link não confirmou produto único com segurança"
+    },
+    "updatedAt": "2026-07-13T14:45:30.831Z",
+    "categoria": "Ofertas gerais",
+    "subcategoria": "Mercado Livre",
+    "linkResolvidoApenasLeitura": null,
+    "linkPrincipalFonte": null,
+    "linkFinal": null,
+    "permalinkPublico": null,
+    "urlProduto": null,
+    "curadoriaMidia": {
+      "numeroCatalogo": null,
+      "imagemPrincipalAtual": "public/placeholder-produto-mercado-livre.svg",
+      "imagemProntaParaPostagem": false,
+      "imagemCatalogoHtml": "public/placeholder-produto-mercado-livre.svg",
+      "videoAtual": "",
+      "videoProntoParaPostagem": false,
+      "precisaRevisao": true,
+      "pendencias": [
+        "confirmar_produto_correto"
+      ],
+      "observacaoCuradoria": "Registro oculto; link preservado para revisao manual antes de nova publicacao."
+    },
+    "mercadoLivre": {
+      "linkAfiliadoPreservado": "https://mercadolivre.com/sec/14EbgVy",
+      "observacao": "Link mantido para revisao manual; produto unico nao confirmado com seguranca."
+    },
+    "fonteMidia": "Registro oculto para revisao manual em 2026-07-13.",
+    "statusMidia": "sem imagem publicada; item fora da vitrine",
+    "ultimaRevisao": "2026-07-13",
+    "duplicadoDe": null,
+    "linksPreservados": [],
+    "observacaoCorrecao": "Registro oculto em 2026-07-13 para remover residuos de card repetido sem apagar o link original."
   },
   {
     "id": "mercado-livre-produto-008",
@@ -1121,161 +1200,315 @@
   },
   {
     "id": "mercado-livre-produto-019",
-    "name": "Produto de informatica Mercado Livre 019",
-    "slug": "produto-informatica-mercado-livre-019",
-    "brand": "Informacao nao especificada pelo fornecedor",
-    "marca": "Informacao nao especificada pelo fornecedor",
-    "description": "Cadastro criado a partir do link original enviado. Nome, imagem, preco e dados tecnicos devem ser revisados quando o Mercado Livre permitir consulta.",
-    "descricaoCurta": "Produto de informatica importado por link original de comissao.",
-    "descricaoDetalhada": "Informacao nao especificada pelo fornecedor. O produto foi cadastrado a partir do link original enviado e deve ser revisado manualmente antes de uma campanha detalhada.",
-    "price": "Consultar",
-    "preco": "Consultar",
+    "name": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD",
+    "slug": "notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-8gb-256gb-ssd",
+    "brand": "Acer",
+    "marca": "Acer",
+    "description": "Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.",
+    "descricaoCurta": "Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.",
+    "descricaoDetalhada": "Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "price": "Conferir preco no Mercado Livre",
+    "preco": "Conferir preco no Mercado Livre",
     "precoPromocional": null,
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
+    "image": "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp",
+    "imagemPrincipal": "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp",
+    "galeria": [
+      "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp"
+    ],
     "category": "Computadores e Informatica",
     "categoria": "Computadores e Informatica",
-    "subcategoria": "Informacao nao especificada pelo fornecedor",
+    "subcategoria": "Notebooks",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Oferta Mercado Livre",
     "affiliateLink": "https://meli.la/1K6Jhmd",
     "linkOriginal": "https://meli.la/1K6Jhmd",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
-    "estoque": "Consultar disponibilidade",
-    "condicao": "Informacao nao especificada pelo fornecedor",
-    "garantia": "Informacao nao especificada pelo fornecedor",
-    "observation": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
+    "status": "ativo",
+    "estoque": "Confirmar no Mercado Livre",
+    "condicao": "Confirmar no Mercado Livre",
+    "garantia": "Confirmar no Mercado Livre",
+    "observation": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/1K6Jhmd.",
     "actionType": "buy",
     "originalOrder": 20,
     "especificacoes": {
-      "processador": "Informacao nao especificada pelo fornecedor",
-      "memoriaRam": "Informacao nao especificada pelo fornecedor",
-      "armazenamento": "Informacao nao especificada pelo fornecedor",
-      "placaVideo": "Informacao nao especificada pelo fornecedor",
-      "tela": "Informacao nao especificada pelo fornecedor",
-      "sistemaOperacional": "Informacao nao especificada pelo fornecedor",
-      "garantia": "Informacao nao especificada pelo fornecedor"
+      "marca": "Acer",
+      "categoria": "Computadores e Informatica",
+      "subcategoria": "Notebooks",
+      "fonte": "Mercado Livre",
+      "linkAfiliadoPreservado": "https://meli.la/1K6Jhmd"
     },
     "seo": {
-      "titulo": "Produto de informatica Mercado Livre 019",
-      "descricao": "Produto de informatica cadastrado a partir de link original de comissao do Mercado Livre.",
+      "titulo": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD | IMPACTO 360 AFILIADO",
+      "descricao": "Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.",
       "palavrasChave": [
-        "informatica",
-        "computadores",
-        "mercado livre",
-        "impacto 360 afiliado"
+        "Mercado Livre",
+        "Acer",
+        "Notebooks",
+        "Impacto360"
       ]
     },
     "destaques": [
-      "Produto para loja de informatica",
-      "Cadastro baseado no link original",
-      "Consultar disponibilidade"
+      "Intel Core i3",
+      "8 GB DDR5",
+      "SSD NVMe 256 GB",
+      "Tela 15,3"
     ],
     "specs": [
-      "Link de comissao original",
-      "Pendente de revisao",
-      "Loja de computadores"
+      "Intel Core i3",
+      "8 GB DDR5",
+      "SSD NVMe 256 GB",
+      "Tela 15,3"
     ],
     "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
+    "aprovadoParaPublicacao": true,
+    "revisaoManualRecomendada": false,
+    "linkStatus": "link de afiliado preservado e produto corrigido",
     "statusLink": "revisao manual",
     "statusImagem": "foto_link_inconsistente",
     "publicarNaHome": false,
     "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "pendencias": [],
+    "observacoes": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/1K6Jhmd.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json"
-    }
+    },
+    "title": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD",
+    "nome": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD",
+    "precoAnterior": null,
+    "fotoPrincipal": "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp",
+    "imagens": [
+      "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp"
+    ],
+    "linkAfiliado": "https://meli.la/1K6Jhmd",
+    "link_afiliado": "https://meli.la/1K6Jhmd",
+    "linkComissionado": "https://meli.la/1K6Jhmd",
+    "linkPlataforma": "https://meli.la/1K6Jhmd",
+    "linkCompra": "https://meli.la/1K6Jhmd",
+    "linkPrincipalFonte": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+    "linkFinal": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+    "permalinkPublico": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+    "urlProduto": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+    "origem": "Mercado Livre",
+    "statusPublicacao": "ativo",
+    "curadoriaMidia": {
+      "imagemPrincipalAtual": "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp",
+      "imagemProntaParaPostagem": true,
+      "imagemCatalogoHtml": "public/images/anuncios/notebook-acer-aspire-go-15-ag15-51p-34kt-ml.webp",
+      "precisaRevisao": false,
+      "pendencias": [],
+      "observacaoCuradoria": "Produto resolvido pelo link curto meli.la/1K6Jhmd em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre."
+    },
+    "postagem": {
+      "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nNotebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\nConferir preco atualizado\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nVer oferta no Mercado Livre:\nhttps://meli.la/1K6Jhmd\n\nEste conteudo pode conter link de afiliado.",
+      "legendaInstagram": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nConferir preco atualizado\n\nConfira os detalhes no Mercado Livre pelo link de afiliado preservado.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "legendaFacebook": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nPreco: Conferir preco atualizado\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1K6Jhmd",
+      "hashtags": "#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "cta": "Ver oferta"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nNotebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\nConferir preco atualizado\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nComprar no Mercado Livre:\nhttps://meli.la/1K6Jhmd\n\nEste conteudo pode conter link de afiliado.",
+    "legendaInstagram": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nConferir preco atualizado\n\nConfira os detalhes antes de comprar. Link de afiliado preservado no catalogo.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+    "legendaFacebook": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD\n\nNotebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.\n\nPreco: Conferir preco atualizado\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1K6Jhmd",
+    "textoCatalogo": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD - Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11.",
+    "origemCorrecao": "Produto resolvido pelo link curto meli.la/1K6Jhmd em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre.",
+    "fonteMidia": "HTML publico do Mercado Livre consultado em 2026-07-13",
+    "statusMidia": "imagem real importada do Mercado Livre",
+    "updatedAt": "2026-07-13T14:45:30.831Z",
+    "historicoCorrecoes": [
+      {
+        "data": "2026-07-13",
+        "motivo": "substituicao de card repetido de forno PFE65",
+        "nomeNovo": "Notebook Acer Aspire Go 15 AG15-51P-34KT Intel Core i3 8GB 256GB SSD",
+        "linkAfiliadoPreservado": "https://meli.la/1K6Jhmd",
+        "linkFonteProduto": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422"
+      }
+    ],
+    "descricaoCompleta": "Notebook Acer Aspire Go 15 com Intel Core i3-1215U, 8 GB DDR5, SSD NVMe de 256 GB, tela 15,3 polegadas e Windows 11. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "ofertas": [
+      {
+        "loja": "Mercado Livre",
+        "preco": "Conferir preco no Mercado Livre",
+        "linkCompra": "https://meli.la/1K6Jhmd",
+        "linkAfiliado": "https://meli.la/1K6Jhmd",
+        "linkOriginal": "https://meli.la/1K6Jhmd"
+      }
+    ],
+    "validacaoOnline": {
+      "status": "corrigido",
+      "data": "2026-07-13",
+      "fonteProduto": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+      "fonteImagem": "https://http2.mlstatic.com/D_NQ_NP_644949-MLA108097438209_032026-O.webp",
+      "linkAfiliadoPreservado": "https://meli.la/1K6Jhmd"
+    },
+    "observacaoCorrecao": "Card repetido substituido por produto resolvido do link enviado; dados antigos preservados apenas no backup desta rodada.",
+    "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+    "mercadoLivre": {
+      "linkAfiliadoPreservado": "https://meli.la/1K6Jhmd",
+      "linkProdutoApenasLeitura": "https://www.mercadolivre.com.br/notebook-acer-aspire-go-15-ag15-51p-34kt-intel-core-i3-1215u-12-geraco-8gb-ddr5-256gb-ssd-nvme-tela-153-windows-11/p/MLB66168422",
+      "fonteImagem": "https://http2.mlstatic.com/D_NQ_NP_644949-MLA108097438209_032026-O.webp",
+      "observacao": "Produto resolvido pelo link curto meli.la/1K6Jhmd em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre."
+    },
+    "duplicadoDe": null,
+    "linksPreservados": []
   },
   {
     "id": "mercado-livre-produto-020",
-    "name": "Produto de informatica Mercado Livre 020",
-    "slug": "produto-informatica-mercado-livre-020",
-    "brand": "Informacao nao especificada pelo fornecedor",
-    "marca": "Informacao nao especificada pelo fornecedor",
-    "description": "Cadastro criado a partir do link original enviado. Nome, imagem, preco e dados tecnicos devem ser revisados quando o Mercado Livre permitir consulta.",
-    "descricaoCurta": "Produto de informatica importado por link original de comissao.",
-    "descricaoDetalhada": "Informacao nao especificada pelo fornecedor. O produto foi cadastrado a partir do link original enviado e deve ser revisado manualmente antes de uma campanha detalhada.",
-    "price": "Consultar",
-    "preco": "Consultar",
+    "name": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux",
+    "slug": "notebook-asus-tuf-gaming-a15-ryzen-7-rtx-3050-16gb-512gb-linux",
+    "brand": "Asus",
+    "marca": "Asus",
+    "description": "Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.",
+    "descricaoCurta": "Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.",
+    "descricaoDetalhada": "Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "price": "Conferir preco no Mercado Livre",
+    "preco": "Conferir preco no Mercado Livre",
     "precoPromocional": null,
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
+    "image": "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp",
+    "imagemPrincipal": "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp",
+    "galeria": [
+      "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp"
+    ],
     "category": "Computadores e Informatica",
     "categoria": "Computadores e Informatica",
-    "subcategoria": "Informacao nao especificada pelo fornecedor",
+    "subcategoria": "Notebooks gamer",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Oferta Mercado Livre",
     "affiliateLink": "https://meli.la/1Dinaeg",
     "linkOriginal": "https://meli.la/1Dinaeg",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
-    "estoque": "Consultar disponibilidade",
-    "condicao": "Informacao nao especificada pelo fornecedor",
-    "garantia": "Informacao nao especificada pelo fornecedor",
-    "observation": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
+    "status": "ativo",
+    "estoque": "Confirmar no Mercado Livre",
+    "condicao": "Confirmar no Mercado Livre",
+    "garantia": "Confirmar no Mercado Livre",
+    "observation": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/1Dinaeg.",
     "actionType": "buy",
     "originalOrder": 21,
     "especificacoes": {
-      "processador": "Informacao nao especificada pelo fornecedor",
-      "memoriaRam": "Informacao nao especificada pelo fornecedor",
-      "armazenamento": "Informacao nao especificada pelo fornecedor",
-      "placaVideo": "Informacao nao especificada pelo fornecedor",
-      "tela": "Informacao nao especificada pelo fornecedor",
-      "sistemaOperacional": "Informacao nao especificada pelo fornecedor",
-      "garantia": "Informacao nao especificada pelo fornecedor"
+      "marca": "Asus",
+      "categoria": "Computadores e Informatica",
+      "subcategoria": "Notebooks gamer",
+      "fonte": "Mercado Livre",
+      "linkAfiliadoPreservado": "https://meli.la/1Dinaeg"
     },
     "seo": {
-      "titulo": "Produto de informatica Mercado Livre 020",
-      "descricao": "Produto de informatica cadastrado a partir de link original de comissao do Mercado Livre.",
+      "titulo": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux | IMPACTO 360 AFILIADO",
+      "descricao": "Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.",
       "palavrasChave": [
-        "informatica",
-        "computadores",
-        "mercado livre",
-        "impacto 360 afiliado"
+        "Mercado Livre",
+        "Asus",
+        "Notebooks gamer",
+        "Impacto360"
       ]
     },
     "destaques": [
-      "Produto para loja de informatica",
-      "Cadastro baseado no link original",
-      "Consultar disponibilidade"
+      "Ryzen 7",
+      "RTX 3050",
+      "16 GB RAM",
+      "SSD 512 GB"
     ],
     "specs": [
-      "Link de comissao original",
-      "Pendente de revisao",
-      "Loja de computadores"
+      "Ryzen 7",
+      "RTX 3050",
+      "16 GB RAM",
+      "SSD 512 GB"
     ],
     "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
+    "aprovadoParaPublicacao": true,
+    "revisaoManualRecomendada": false,
+    "linkStatus": "link de afiliado preservado e produto corrigido",
     "statusLink": "revisao manual",
     "statusImagem": "foto_link_inconsistente",
     "publicarNaHome": false,
     "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "pendencias": [],
+    "observacoes": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/1Dinaeg.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json"
-    }
+    },
+    "title": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux",
+    "nome": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux",
+    "precoAnterior": null,
+    "fotoPrincipal": "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp",
+    "imagens": [
+      "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp"
+    ],
+    "linkAfiliado": "https://meli.la/1Dinaeg",
+    "link_afiliado": "https://meli.la/1Dinaeg",
+    "linkComissionado": "https://meli.la/1Dinaeg",
+    "linkPlataforma": "https://meli.la/1Dinaeg",
+    "linkCompra": "https://meli.la/1Dinaeg",
+    "linkPrincipalFonte": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+    "linkFinal": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+    "permalinkPublico": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+    "urlProduto": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+    "origem": "Mercado Livre",
+    "statusPublicacao": "ativo",
+    "curadoriaMidia": {
+      "imagemPrincipalAtual": "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp",
+      "imagemProntaParaPostagem": true,
+      "imagemCatalogoHtml": "public/images/anuncios/notebook-asus-tuf-gaming-a15-ryzen7-rtx3050-ml.webp",
+      "precisaRevisao": false,
+      "pendencias": [],
+      "observacaoCuradoria": "Produto resolvido pelo link curto meli.la/1Dinaeg em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre."
+    },
+    "postagem": {
+      "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nNotebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\nConferir preco atualizado\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nVer oferta no Mercado Livre:\nhttps://meli.la/1Dinaeg\n\nEste conteudo pode conter link de afiliado.",
+      "legendaInstagram": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nConferir preco atualizado\n\nConfira os detalhes no Mercado Livre pelo link de afiliado preservado.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "legendaFacebook": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nPreco: Conferir preco atualizado\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1Dinaeg",
+      "hashtags": "#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "cta": "Ver oferta"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nNotebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\nConferir preco atualizado\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nComprar no Mercado Livre:\nhttps://meli.la/1Dinaeg\n\nEste conteudo pode conter link de afiliado.",
+    "legendaInstagram": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nConferir preco atualizado\n\nConfira os detalhes antes de comprar. Link de afiliado preservado no catalogo.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+    "legendaFacebook": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux\n\nNotebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.\n\nPreco: Conferir preco atualizado\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/1Dinaeg",
+    "textoCatalogo": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux - Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black.",
+    "origemCorrecao": "Produto resolvido pelo link curto meli.la/1Dinaeg em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre.",
+    "fonteMidia": "HTML publico do Mercado Livre consultado em 2026-07-13",
+    "statusMidia": "imagem real importada do Mercado Livre",
+    "updatedAt": "2026-07-13T14:45:30.831Z",
+    "historicoCorrecoes": [
+      {
+        "data": "2026-07-13",
+        "motivo": "substituicao de card repetido de forno PFE65",
+        "nomeNovo": "Notebook Asus TUF Gaming A15 Ryzen 7 RTX 3050 16GB 512GB Linux",
+        "linkAfiliadoPreservado": "https://meli.la/1Dinaeg",
+        "linkFonteProduto": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734"
+      }
+    ],
+    "descricaoCompleta": "Notebook Asus TUF Gaming A15 com Ryzen 7, placa RTX 3050, 16 GB de RAM, SSD de 512 GB e Linux em acabamento Graphite Black. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "ofertas": [
+      {
+        "loja": "Mercado Livre",
+        "preco": "Conferir preco no Mercado Livre",
+        "linkCompra": "https://meli.la/1Dinaeg",
+        "linkAfiliado": "https://meli.la/1Dinaeg",
+        "linkOriginal": "https://meli.la/1Dinaeg"
+      }
+    ],
+    "validacaoOnline": {
+      "status": "corrigido",
+      "data": "2026-07-13",
+      "fonteProduto": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+      "fonteImagem": "https://http2.mlstatic.com/D_NQ_NP_765183-MLB106604647550_022026-O.webp",
+      "linkAfiliadoPreservado": "https://meli.la/1Dinaeg"
+    },
+    "observacaoCorrecao": "Card repetido substituido por produto resolvido do link enviado; dados antigos preservados apenas no backup desta rodada.",
+    "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+    "mercadoLivre": {
+      "linkAfiliadoPreservado": "https://meli.la/1Dinaeg",
+      "linkProdutoApenasLeitura": "https://www.mercadolivre.com.br/notebook-asus-tuf-gaming-a15-3050-ryzen-7-16gb-512gb-linux/up/MLBU3787624031?pdp_filters=item_id%3AMLB6254159734",
+      "fonteImagem": "https://http2.mlstatic.com/D_NQ_NP_765183-MLB106604647550_022026-O.webp",
+      "observacao": "Produto resolvido pelo link curto meli.la/1Dinaeg em 2026-07-13. O preco nao apareceu de forma confiavel no HTML publico, por isso foi mantido como conferencia no Mercado Livre."
+    },
+    "duplicadoDe": null,
+    "linksPreservados": []
   },
   {
     "id": "mercado-livre-produto-021",
@@ -1399,82 +1632,159 @@
   },
   {
     "id": "mercado-livre-produto-023",
-    "name": "Produto de informatica Mercado Livre 023",
-    "slug": "produto-informatica-mercado-livre-023",
-    "brand": "Informacao nao especificada pelo fornecedor",
-    "marca": "Informacao nao especificada pelo fornecedor",
-    "description": "Cadastro criado a partir do link original enviado. Nome, imagem, preco e dados tecnicos devem ser revisados quando o Mercado Livre permitir consulta.",
-    "descricaoCurta": "Produto de informatica importado por link original de comissao.",
-    "descricaoDetalhada": "Informacao nao especificada pelo fornecedor. O produto foi cadastrado a partir do link original enviado e deve ser revisado manualmente antes de uma campanha detalhada.",
-    "price": "Consultar",
-    "preco": "Consultar",
+    "name": "iPhone 16e 128 GB Preto - Distribuidor Autorizado",
+    "slug": "iphone-16e-128-gb-preto-distribuidor-autorizado",
+    "brand": "Apple",
+    "marca": "Apple",
+    "description": "iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.",
+    "descricaoCurta": "iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.",
+    "descricaoDetalhada": "iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "price": "R$ 3.599,00",
+    "preco": "R$ 3.599,00",
     "precoPromocional": null,
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
-    "category": "Computadores e Informatica",
-    "categoria": "Computadores e Informatica",
-    "subcategoria": "Informacao nao especificada pelo fornecedor",
-    "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "image": "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp",
+    "imagemPrincipal": "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp",
+    "galeria": [
+      "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp"
+    ],
+    "category": "Celulares e Smartphones",
+    "categoria": "Celulares e Smartphones",
+    "subcategoria": "Smartphones",
+    "storeId": "impacto-mobile",
+    "badge": "Oferta Mercado Livre",
     "affiliateLink": "https://meli.la/34dtQGa",
     "linkOriginal": "https://meli.la/34dtQGa",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
-    "estoque": "Consultar disponibilidade",
-    "condicao": "Informacao nao especificada pelo fornecedor",
-    "garantia": "Informacao nao especificada pelo fornecedor",
-    "observation": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
+    "status": "ativo",
+    "estoque": "Confirmar no Mercado Livre",
+    "condicao": "Confirmar no Mercado Livre",
+    "garantia": "Confirmar no Mercado Livre",
+    "observation": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/34dtQGa.",
     "actionType": "buy",
     "originalOrder": 24,
     "especificacoes": {
-      "processador": "Informacao nao especificada pelo fornecedor",
-      "memoriaRam": "Informacao nao especificada pelo fornecedor",
-      "armazenamento": "Informacao nao especificada pelo fornecedor",
-      "placaVideo": "Informacao nao especificada pelo fornecedor",
-      "tela": "Informacao nao especificada pelo fornecedor",
-      "sistemaOperacional": "Informacao nao especificada pelo fornecedor",
-      "garantia": "Informacao nao especificada pelo fornecedor"
+      "marca": "Apple",
+      "categoria": "Celulares e Smartphones",
+      "subcategoria": "Smartphones",
+      "fonte": "Mercado Livre",
+      "linkAfiliadoPreservado": "https://meli.la/34dtQGa"
     },
     "seo": {
-      "titulo": "Produto de informatica Mercado Livre 023",
-      "descricao": "Produto de informatica cadastrado a partir de link original de comissao do Mercado Livre.",
+      "titulo": "iPhone 16e 128 GB Preto - Distribuidor Autorizado | IMPACTO 360 AFILIADO",
+      "descricao": "iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.",
       "palavrasChave": [
-        "informatica",
-        "computadores",
-        "mercado livre",
-        "impacto 360 afiliado"
+        "Mercado Livre",
+        "Apple",
+        "Smartphones",
+        "Impacto360"
       ]
     },
     "destaques": [
-      "Produto para loja de informatica",
-      "Cadastro baseado no link original",
-      "Consultar disponibilidade"
+      "128 GB",
+      "Cor preta",
+      "Distribuidor autorizado",
+      "Lista Mercado Livre"
     ],
     "specs": [
-      "Link de comissao original",
-      "Pendente de revisao",
-      "Loja de computadores"
+      "128 GB",
+      "Cor preta",
+      "Distribuidor autorizado",
+      "Lista Mercado Livre"
     ],
     "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
+    "aprovadoParaPublicacao": true,
+    "revisaoManualRecomendada": false,
+    "linkStatus": "link de afiliado preservado e produto corrigido",
     "statusLink": "revisao manual",
     "statusImagem": "foto_link_inconsistente",
     "publicarNaHome": false,
     "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "pendencias": [],
+    "observacoes": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/34dtQGa.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json"
-    }
+    },
+    "title": "iPhone 16e 128 GB Preto - Distribuidor Autorizado",
+    "nome": "iPhone 16e 128 GB Preto - Distribuidor Autorizado",
+    "precoAnterior": null,
+    "fotoPrincipal": "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp",
+    "imagens": [
+      "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp"
+    ],
+    "linkAfiliado": "https://meli.la/34dtQGa",
+    "link_afiliado": "https://meli.la/34dtQGa",
+    "linkComissionado": "https://meli.la/34dtQGa",
+    "linkPlataforma": "https://meli.la/34dtQGa",
+    "linkCompra": "https://meli.la/34dtQGa",
+    "linkPrincipalFonte": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+    "linkFinal": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+    "permalinkPublico": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+    "urlProduto": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+    "origem": "Mercado Livre",
+    "statusPublicacao": "ativo",
+    "curadoriaMidia": {
+      "imagemPrincipalAtual": "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp",
+      "imagemProntaParaPostagem": true,
+      "imagemCatalogoHtml": "public/images/anuncios/iphone-16e-128gb-preto-mercado-livre.webp",
+      "precisaRevisao": false,
+      "pendencias": [],
+      "observacaoCuradoria": "O link curto meli.la/34dtQGa abriu uma lista social do Mercado Livre; foi usado o primeiro item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra."
+    },
+    "postagem": {
+      "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\niPhone 16e 128 GB Preto - Distribuidor Autorizado\nR$ 3.599,00\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nVer oferta no Mercado Livre:\nhttps://meli.la/34dtQGa\n\nEste conteudo pode conter link de afiliado.",
+      "legendaInstagram": "iPhone 16e 128 GB Preto - Distribuidor Autorizado\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nR$ 3.599,00\n\nConfira os detalhes no Mercado Livre pelo link de afiliado preservado.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "legendaFacebook": "iPhone 16e 128 GB Preto - Distribuidor Autorizado\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nPreco: R$ 3.599,00\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/34dtQGa",
+      "hashtags": "#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "cta": "Ver oferta"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\niPhone 16e 128 GB Preto - Distribuidor Autorizado\nR$ 3.599,00\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nComprar no Mercado Livre:\nhttps://meli.la/34dtQGa\n\nEste conteudo pode conter link de afiliado.",
+    "legendaInstagram": "iPhone 16e 128 GB Preto - Distribuidor Autorizado\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nR$ 3.599,00\n\nConfira os detalhes antes de comprar. Link de afiliado preservado no catalogo.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+    "legendaFacebook": "iPhone 16e 128 GB Preto - Distribuidor Autorizado\n\niPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.\n\nPreco: R$ 3.599,00\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/34dtQGa",
+    "textoCatalogo": "iPhone 16e 128 GB Preto - Distribuidor Autorizado - iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre.",
+    "origemCorrecao": "O link curto meli.la/34dtQGa abriu uma lista social do Mercado Livre; foi usado o primeiro item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra.",
+    "fonteMidia": "HTML publico do Mercado Livre consultado em 2026-07-13",
+    "statusMidia": "imagem real importada do Mercado Livre",
+    "updatedAt": "2026-07-13T14:45:30.831Z",
+    "historicoCorrecoes": [
+      {
+        "data": "2026-07-13",
+        "motivo": "substituicao de card repetido de forno PFE65",
+        "nomeNovo": "iPhone 16e 128 GB Preto - Distribuidor Autorizado",
+        "linkAfiliadoPreservado": "https://meli.la/34dtQGa",
+        "linkFonteProduto": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784"
+      }
+    ],
+    "descricaoCompleta": "iPhone 16e com 128 GB na cor preta, anunciado por distribuidor autorizado em lista parceira do Mercado Livre. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "ofertas": [
+      {
+        "loja": "Mercado Livre",
+        "preco": "R$ 3.599,00",
+        "linkCompra": "https://meli.la/34dtQGa",
+        "linkAfiliado": "https://meli.la/34dtQGa",
+        "linkOriginal": "https://meli.la/34dtQGa"
+      }
+    ],
+    "validacaoOnline": {
+      "status": "corrigido",
+      "data": "2026-07-13",
+      "fonteProduto": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+      "fonteImagem": "https://http2.mlstatic.com/D_Q_NP_2X_961264-MLA95713213402_102025-AB.webp",
+      "linkAfiliadoPreservado": "https://meli.la/34dtQGa"
+    },
+    "observacaoCorrecao": "Card repetido substituido por produto resolvido do link enviado; dados antigos preservados apenas no backup desta rodada.",
+    "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+    "mercadoLivre": {
+      "linkAfiliadoPreservado": "https://meli.la/34dtQGa",
+      "linkProdutoApenasLeitura": "https://www.mercadolivre.com.br/iphone-16e-128-gb-preto-distribuidor-autorizado/p/MLB1046215784",
+      "fonteImagem": "https://http2.mlstatic.com/D_Q_NP_2X_961264-MLA95713213402_102025-AB.webp",
+      "observacao": "O link curto meli.la/34dtQGa abriu uma lista social do Mercado Livre; foi usado o primeiro item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra."
+    },
+    "duplicadoDe": null,
+    "linksPreservados": []
   },
   {
     "id": "mercado-livre-produto-024",
@@ -1778,82 +2088,159 @@
   },
   {
     "id": "mercado-livre-produto-029",
-    "name": "Produto de informatica Mercado Livre 029",
-    "slug": "produto-informatica-mercado-livre-029",
-    "brand": "Informacao nao especificada pelo fornecedor",
-    "marca": "Informacao nao especificada pelo fornecedor",
-    "description": "Cadastro criado a partir do link original enviado. Nome, imagem, preco e dados tecnicos devem ser revisados quando o Mercado Livre permitir consulta.",
-    "descricaoCurta": "Produto de informatica importado por link original de comissao.",
-    "descricaoDetalhada": "Informacao nao especificada pelo fornecedor. O produto foi cadastrado a partir do link original enviado e deve ser revisado manualmente antes de uma campanha detalhada.",
-    "price": "Consultar",
-    "preco": "Consultar",
+    "name": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco",
+    "slug": "computador-all-in-one-23-8-i7-16gb-ssd-512gb-full-hd-branco",
+    "brand": "Mercado Livre",
+    "marca": "Mercado Livre",
+    "description": "Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.",
+    "descricaoCurta": "Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.",
+    "descricaoDetalhada": "Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "price": "R$ 2.994,00",
+    "preco": "R$ 2.994,00",
     "precoPromocional": null,
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
+    "image": "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp",
+    "imagemPrincipal": "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp",
+    "galeria": [
+      "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp"
+    ],
     "category": "Computadores e Informatica",
     "categoria": "Computadores e Informatica",
-    "subcategoria": "Informacao nao especificada pelo fornecedor",
+    "subcategoria": "Computadores All in One",
     "storeId": "impacto-tech-computadores",
-    "badge": "Revisar",
+    "badge": "Oferta Mercado Livre",
     "affiliateLink": "https://meli.la/11MQYNu",
     "linkOriginal": "https://meli.la/11MQYNu",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
-    "estoque": "Consultar disponibilidade",
-    "condicao": "Informacao nao especificada pelo fornecedor",
-    "garantia": "Informacao nao especificada pelo fornecedor",
-    "observation": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
+    "status": "ativo",
+    "estoque": "Confirmar no Mercado Livre",
+    "condicao": "Confirmar no Mercado Livre",
+    "garantia": "Confirmar no Mercado Livre",
+    "observation": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/11MQYNu.",
     "actionType": "buy",
     "originalOrder": 30,
     "especificacoes": {
-      "processador": "Informacao nao especificada pelo fornecedor",
-      "memoriaRam": "Informacao nao especificada pelo fornecedor",
-      "armazenamento": "Informacao nao especificada pelo fornecedor",
-      "placaVideo": "Informacao nao especificada pelo fornecedor",
-      "tela": "Informacao nao especificada pelo fornecedor",
-      "sistemaOperacional": "Informacao nao especificada pelo fornecedor",
-      "garantia": "Informacao nao especificada pelo fornecedor"
+      "marca": "Mercado Livre",
+      "categoria": "Computadores e Informatica",
+      "subcategoria": "Computadores All in One",
+      "fonte": "Mercado Livre",
+      "linkAfiliadoPreservado": "https://meli.la/11MQYNu"
     },
     "seo": {
-      "titulo": "Produto de informatica Mercado Livre 029",
-      "descricao": "Produto de informatica cadastrado a partir de link original de comissao do Mercado Livre.",
+      "titulo": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco | IMPACTO 360 AFILIADO",
+      "descricao": "Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.",
       "palavrasChave": [
-        "informatica",
-        "computadores",
-        "mercado livre",
-        "impacto 360 afiliado"
+        "Mercado Livre",
+        "Mercado Livre",
+        "Computadores All in One",
+        "Impacto360"
       ]
     },
     "destaques": [
-      "Produto para loja de informatica",
-      "Cadastro baseado no link original",
-      "Consultar disponibilidade"
+      "Tela 23,8 Full HD",
+      "Processador i7",
+      "16 GB RAM",
+      "SSD 512 GB"
     ],
     "specs": [
-      "Link de comissao original",
-      "Pendente de revisao",
-      "Loja de computadores"
+      "Tela 23,8 Full HD",
+      "Processador i7",
+      "16 GB RAM",
+      "SSD 512 GB"
     ],
     "statusAnuncio": "revisao_manual",
-    "aprovadoParaPublicacao": false,
-    "revisaoManualRecomendada": true,
-    "linkStatus": "revisao manual",
+    "aprovadoParaPublicacao": true,
+    "revisaoManualRecomendada": false,
+    "linkStatus": "link de afiliado preservado e produto corrigido",
     "statusLink": "revisao manual",
     "statusImagem": "foto_link_inconsistente",
     "publicarNaHome": false,
     "publicar": false,
-    "pendencias": [
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
-    ],
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "pendencias": [],
+    "observacoes": "Corrigido em 2026-07-13: substituido card repetido de forno PFE65 por produto resolvido do link enviado. Link de afiliado preservado: https://meli.la/11MQYNu.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "pacote-github-pages-pronto/dados/importedMercadoLivreProducts.json"
-    }
+    },
+    "title": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco",
+    "nome": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco",
+    "precoAnterior": null,
+    "fotoPrincipal": "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp",
+    "imagens": [
+      "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp"
+    ],
+    "linkAfiliado": "https://meli.la/11MQYNu",
+    "link_afiliado": "https://meli.la/11MQYNu",
+    "linkComissionado": "https://meli.la/11MQYNu",
+    "linkPlataforma": "https://meli.la/11MQYNu",
+    "linkCompra": "https://meli.la/11MQYNu",
+    "linkPrincipalFonte": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+    "linkFinal": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+    "permalinkPublico": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+    "urlProduto": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+    "origem": "Mercado Livre",
+    "statusPublicacao": "ativo",
+    "curadoriaMidia": {
+      "imagemPrincipalAtual": "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp",
+      "imagemProntaParaPostagem": true,
+      "imagemCatalogoHtml": "public/images/anuncios/computador-all-in-one-i7-16gb-512gb-mercado-livre.webp",
+      "precisaRevisao": false,
+      "pendencias": [],
+      "observacaoCuradoria": "O link curto meli.la/11MQYNu abriu uma lista social do Mercado Livre; foi usado o segundo item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra."
+    },
+    "postagem": {
+      "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nComputador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\nR$ 2.994,00\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nVer oferta no Mercado Livre:\nhttps://meli.la/11MQYNu\n\nEste conteudo pode conter link de afiliado.",
+      "legendaInstagram": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nR$ 2.994,00\n\nConfira os detalhes no Mercado Livre pelo link de afiliado preservado.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "legendaFacebook": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nPreco: R$ 2.994,00\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/11MQYNu",
+      "hashtags": "#Impacto360 #MercadoLivre #OfertasSelecionadas",
+      "cta": "Ver oferta"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nComputador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\nR$ 2.994,00\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nComprar no Mercado Livre:\nhttps://meli.la/11MQYNu\n\nEste conteudo pode conter link de afiliado.",
+    "legendaInstagram": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nR$ 2.994,00\n\nConfira os detalhes antes de comprar. Link de afiliado preservado no catalogo.\n\n#Impacto360 #MercadoLivre #OfertasSelecionadas",
+    "legendaFacebook": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco\n\nComputador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.\n\nPreco: R$ 2.994,00\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://meli.la/11MQYNu",
+    "textoCatalogo": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco - Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB.",
+    "origemCorrecao": "O link curto meli.la/11MQYNu abriu uma lista social do Mercado Livre; foi usado o segundo item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra.",
+    "fonteMidia": "HTML publico do Mercado Livre consultado em 2026-07-13",
+    "statusMidia": "imagem real importada do Mercado Livre",
+    "updatedAt": "2026-07-13T14:45:30.831Z",
+    "historicoCorrecoes": [
+      {
+        "data": "2026-07-13",
+        "motivo": "substituicao de card repetido de forno PFE65",
+        "nomeNovo": "Computador All in One 23,8 I7 16GB SSD 512GB Full HD Branco",
+        "linkAfiliadoPreservado": "https://meli.la/11MQYNu",
+        "linkFonteProduto": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535"
+      }
+    ],
+    "descricaoCompleta": "Computador All in One com tela Full HD de 23,8 polegadas, processador i7, 16 GB de RAM e SSD de 512 GB. Confira preco, disponibilidade, variacoes e garantia diretamente no Mercado Livre antes de comprar.",
+    "ofertas": [
+      {
+        "loja": "Mercado Livre",
+        "preco": "R$ 2.994,00",
+        "linkCompra": "https://meli.la/11MQYNu",
+        "linkAfiliado": "https://meli.la/11MQYNu",
+        "linkOriginal": "https://meli.la/11MQYNu"
+      }
+    ],
+    "validacaoOnline": {
+      "status": "corrigido",
+      "data": "2026-07-13",
+      "fonteProduto": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+      "fonteImagem": "https://http2.mlstatic.com/D_Q_NP_2X_872557-MLA100196104758_122025-AB.webp",
+      "linkAfiliadoPreservado": "https://meli.la/11MQYNu"
+    },
+    "observacaoCorrecao": "Card repetido substituido por produto resolvido do link enviado; dados antigos preservados apenas no backup desta rodada.",
+    "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+    "mercadoLivre": {
+      "linkAfiliadoPreservado": "https://meli.la/11MQYNu",
+      "linkProdutoApenasLeitura": "https://www.mercadolivre.com.br/computador-pc-all-in-one-238-i7-16gb-ssd-512gb-full-hd-aio-branco/p/MLB62954535",
+      "fonteImagem": "https://http2.mlstatic.com/D_Q_NP_2X_872557-MLA100196104758_122025-AB.webp",
+      "observacao": "O link curto meli.la/11MQYNu abriu uma lista social do Mercado Livre; foi usado o segundo item real listado publicamente em 2026-07-13, mantendo o link de afiliado original como link de compra."
+    },
+    "duplicadoDe": null,
+    "linksPreservados": []
   },
   {
     "id": "mercado-livre-produto-030",
