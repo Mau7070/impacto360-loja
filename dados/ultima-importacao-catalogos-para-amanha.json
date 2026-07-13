@@ -1,0 +1,1195 @@
+{
+  "executedAt": "2026-07-13",
+  "rotationGroup": "catalogos-para-amanha-2026-07-13",
+  "sourceFiles": {
+    "produtos_mercado_livre_extraidos_das_imagens.docx": 62,
+    "Lista_15_iPhones_15_e_16_Mercado_Livre.docx": 15,
+    "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx": 121
+  },
+  "rowsExtracted": 198,
+  "acceptedForValidation": 193,
+  "productsAdded": 141,
+  "productsUpdated": 52,
+  "activeImportedOrUpdated": 142,
+  "pendingCount": 56,
+  "pending": [
+    {
+      "title": "Apple iPhone 16 128 GB Preto",
+      "sourceFile": "Lista_15_iPhones_15_e_16_Mercado_Livre.docx",
+      "reason": "link de afiliado duplicado em outro produto",
+      "affiliateLink": "https://meli.la/1JtE1SZ",
+      "directLink": "https://www.mercadolivre.com.br/apple-iphone-16-128-gb-preto-distribuidor-autorizado/p/MLB1040287808"
+    },
+    {
+      "title": "Apple iPhone 16 256 GB Rosa",
+      "sourceFile": "Lista_15_iPhones_15_e_16_Mercado_Livre.docx",
+      "reason": "link de afiliado duplicado em outro produto",
+      "affiliateLink": "https://meli.la/18zVjZb",
+      "directLink": "https://www.mercadolivre.com.br/apple-iphone-16-256-gb-rosa-distribuidor-autorizado/p/MLB1040287790"
+    },
+    {
+      "title": "Tenis NIKE MD Runner 2 LW Masculino Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": "sem link de afiliado real",
+      "directLink": "https://www.mercadolivre.com.br/tenis-nike-md-runner-2-lw-masculino-original/up/MLBU1504891745"
+    },
+    {
+      "title": "Tenis Olympikus Sem Cadarco Cli Slip On Original Confortavel",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": "link de afiliado duplicado em outro produto",
+      "affiliateLink": "https://meli.la/2LsbRTE",
+      "directLink": "https://www.mercadolivre.com.br/tenis-olympikus-sem-cadarco-cli-slip-on-original-confortavel/up/MLBU3817471003"
+    },
+    {
+      "title": "Tenis Mizuno Wave Pro 14 Original Garantia Importado Frete",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": "link de afiliado duplicado em outro produto",
+      "affiliateLink": "https://meli.la/2ogF6vQ",
+      "directLink": "https://www.mercadolivre.com.br/tenis-mizuno-wave-pro-14-original-garantia-importado--frete/up/MLBU3905125414"
+    },
+    {
+      "title": "Conjunto de Panelas Antiaderente 10 Peças Coffee Cappuccino Imperial",
+      "sourceFile": "produtos_mercado_livre_extraidos_das_imagens.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2H657bH",
+      "directLink": "https://www.mercadolivre.com.br/conjunto-de-panelas-antiaderente-10-pecas-coffee-cappuccino-imperial/p/MLB62276281"
+    },
+    {
+      "title": "Secador de Cabelos Mondial Preto 2000W SCN-01/SCN-16",
+      "sourceFile": "produtos_mercado_livre_extraidos_das_imagens.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1YB34h7",
+      "directLink": "https://www.mercadolivre.com.br/secador-de-cabelo-mondial-black-tiff-2000w-scn-16-cor-pretoazul/p/MLB19563260"
+    },
+    {
+      "title": "Tenis FILA Venture Tracer 2 Masculino Confortavel Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1Hrjo7i",
+      "directLink": "https://www.mercadolivre.com.br/tenis-fila-venture-tracer-2-masculino-confortavel-original/up/MLBU3942653944"
+    },
+    {
+      "title": "Tenis Adidas Unissex Grand Court Base 20 Simp Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2nMCCyK",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-unissex-grand-court-base-20-simp--original/up/MLBU4043351872"
+    },
+    {
+      "title": "Tenis NIKE SB Fokus Masculino Azuldourado Original 749477",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2cs8dqF",
+      "directLink": "https://www.mercadolivre.com.br/tenis-nike-sb-fokus-masculino-azuldourado-original-749477/up/MLBU1508947334"
+    },
+    {
+      "title": "Tenis Adidas Feminino Grand Court Base 30 Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1xzREh7",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-feminino-grand-court-base-30-original/up/MLBU3886126015"
+    },
+    {
+      "title": "Tenis NIKE Shox NZ Masculino Original Promocao Brinde",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2vpCgdA",
+      "directLink": "https://www.mercadolivre.com.br/tenis-nike-shox-nz-masculino-original-promocao--brinde/up/MLBU4084300028"
+    },
+    {
+      "title": "Tenis Adidas Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2UYJsWk",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-original/up/MLBU1959947902"
+    },
+    {
+      "title": "Tenis Adidas Superstar Foundation Vermelho Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/16JrUsY",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-superstar-foundation-vermelho-original/up/MLBU2812063848"
+    },
+    {
+      "title": "Tenis Adidas Space Diver 20 W Original N42",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2uATCJ3",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-space-diver-20-w-original-n42/up/MLBU2796608447"
+    },
+    {
+      "title": "Tenis Olympikus Masculino Leve Confortavel Evasense Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1BzMZWm",
+      "directLink": "https://www.mercadolivre.com.br/tenis-olympikus-masculino-leve-confortavel-evasense-original/up/MLBU3900262505"
+    },
+    {
+      "title": "Tenis NIKE Journey Run Masculino",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2ftyry4",
+      "directLink": "https://www.mercadolivre.com.br/tenis-nike-journey-run-masculino/up/MLBU3813987448"
+    },
+    {
+      "title": "Tenis FILA Progress Lite Masculino Corrida Esporte Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/21Ui7xx",
+      "directLink": "https://www.mercadolivre.com.br/tenis-fila-progress-lite-masculino-corrida-esporte-original/up/MLBU3874222349"
+    },
+    {
+      "title": "Tenis Adidas Forest Grove W Preto Azul Original Cg6123",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/13UKL8o",
+      "directLink": "https://www.mercadolivre.com.br/tenis-adidas-forest-grove-w--preto-azul--original-cg6123/up/MLBU4091301806"
+    },
+    {
+      "title": "Tenis FILA Rise Up Masculino Casual Confortavel Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2MfU8iP",
+      "directLink": "https://www.mercadolivre.com.br/tenis-fila-rise-up-masculino-casual-confortavel-original/up/MLBU3706051011"
+    },
+    {
+      "title": "Tenis FILA 34 Original Energized Cage Flex Ot Pro Nr 34 Bras",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2MTieq8",
+      "directLink": "https://www.mercadolivre.com.br/tenis-fila-34-original-energized-cage-flex-ot-pro-nr-34-bras/up/MLBU2220615283"
+    },
+    {
+      "title": "Tenis Mizuno Glow 3 Feminino Original Corrida Caminhada",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2N5xWaR",
+      "directLink": "https://www.mercadolivre.com.br/tenis-mizuno-glow-3-feminino-original-corrida-caminhada/up/MLBU3795278899"
+    },
+    {
+      "title": "Tenis ASICS Gel Sparta Midnight Pure Silver Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1L4TcWK",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-gel-sparta-midnight-pure-silver-original/up/MLBU4069893225"
+    },
+    {
+      "title": "Tenis ASICS Gel Dedicate 8 Clay Saibro Original 1magnus",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1dEB4m3",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-gel-dedicate-8-clay-saibro-original-1magnus/up/MLBU4090594353"
+    },
+    {
+      "title": "Tenis Mizuno Jet 8 Masculino Corrida Original Confortavel",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2mHZryV",
+      "directLink": "https://www.mercadolivre.com.br/tenis-mizuno-jet-8-masculino-corrida-original-confortavel/up/MLBU3655766718"
+    },
+    {
+      "title": "Tenis PUMA Xray 3 Bdp Masculino Lancamento Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2yy3FAR",
+      "directLink": "https://www.mercadolivre.com.br/tenis-puma-xray-3-bdp-masculino-lancamento-original/up/MLBU3782171788"
+    },
+    {
+      "title": "Tenis ASICS Gel Nagoya St Masculino Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1FgcfWS",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-gel-nagoya-st-masculino-original/up/MLBU3855738492"
+    },
+    {
+      "title": "Tenis Mizuno Space 5 Masculino Confortavel Duravel Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1unkVZ9",
+      "directLink": "https://www.mercadolivre.com.br/tenis-mizuno-space-5-masculino-confortavel-duravel-original/up/MLBU3824213943"
+    },
+    {
+      "title": "Tenis ASICS Nimbus 25 Original E Novo Na Caixa",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2gJJHiq",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-nimbus-25-original-e-novo-na-caixa/up/MLBU3939416594"
+    },
+    {
+      "title": "Tenis ASICS Gel Venture 11 Masculino Original Nota Fiscal",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1vzxAvQ",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-gel-venture-11-masculino-original--nota-fiscal/up/MLBU3806028885"
+    },
+    {
+      "title": "Tenis PUMA Rsx Reinvention Masculino Preto Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2SNEPtP",
+      "directLink": "https://www.mercadolivre.com.br/tenis-puma-rsx-reinvention-masculino-preto-original/up/MLBU3834410000"
+    },
+    {
+      "title": "Tenis ASICS Gelsparta 2 Feminino Preto Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1rzHuB2",
+      "directLink": "https://www.mercadolivre.com.br/tenis-asics-gelsparta-2-feminino--preto--original/up/MLBU4081262491"
+    },
+    {
+      "title": "Tenis Mizuno Prophecy 15 Original Couro Macio Frete Gratis",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2j6bVTd",
+      "directLink": "https://www.mercadolivre.com.br/tenis-mizuno-prophecy-15-original-couro-macio--frete-gratis/up/MLBU3842519403"
+    },
+    {
+      "title": "Tenis New Balance 990v6 Novo Original Usa",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2AuPaqW",
+      "directLink": "https://www.mercadolivre.com.br/tenis-new-balance-990v6-novo-original-usa/up/MLBU3725508668"
+    },
+    {
+      "title": "Chinelo Rider Slide Street Original Lancamento Confortavel",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1vUaKBb",
+      "directLink": "https://www.mercadolivre.com.br/chinelo-rider-slide-street-original-lancamento-confortavel/up/MLBU4038189825"
+    },
+    {
+      "title": "Sandalia Robusta Feminina Casual Confortavel Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1ZZGiUe",
+      "directLink": "https://www.mercadolivre.com.br/sandalia-robusta-feminina-casual-confortavel-original/up/MLBU3679251623"
+    },
+    {
+      "title": "Bota Masculina Democrata Grid Couro Preto Original",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1XL1Mv8",
+      "directLink": "https://www.mercadolivre.com.br/bota-masculina-democrata-grid-couro-preto-original/up/MLBU3877262276"
+    },
+    {
+      "title": "Sapatenis Com Chinelo Polo Blu Original Masculino 3 Pares",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/1pkShpx",
+      "directLink": "https://www.mercadolivre.com.br/sapatenis-com-chinelo-polo-blu-original-masculino-3-pares/up/MLBU4091028608"
+    },
+    {
+      "title": "Sapato Social Masculino Pegada 100 Couro Original Brinde",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2s3uD3d",
+      "directLink": "https://www.mercadolivre.com.br/sapato-social-masculino-pegada-100-couro-original--brinde/up/MLBU4103127614"
+    },
+    {
+      "title": "Sapatenis Masculino Tenis Casual Conforto Original Premium",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://meli.la/2LkSq6g",
+      "directLink": "https://www.mercadolivre.com.br/sapatenis-masculino-tenis-casual-conforto-original-premium/up/MLBU3832819844"
+    },
+    {
+      "title": "Chinelo Charme Dupé Feminino Roxo",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B02DdM9iL",
+      "directLink": "https://www.amazon.com.br/dp/B07SR12P79"
+    },
+    {
+      "title": "Chinelo Nuvem Anatômico 100% EVA",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B07RQja69",
+      "directLink": "https://www.amazon.com.br/dp/B0H7L6HXPQ"
+    },
+    {
+      "title": "Chinelo Feminino com Suporte de Arco",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0fofY2DF",
+      "directLink": "https://www.amazon.com.br/dp/B0GYSP5926"
+    },
+    {
+      "title": "Chinelo Feminino Verão Cortiça",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B00n3iSQw",
+      "directLink": "https://www.amazon.com.br/dp/B0H1L6ZJHY"
+    },
+    {
+      "title": "Pantufa Birken Slide Massageador Feminino",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0iSwfxLS",
+      "directLink": "https://www.amazon.com.br/dp/B0H7JG3G16"
+    },
+    {
+      "title": "Chinelos Ortopédicos Masculinos",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0a8UBEFT",
+      "directLink": "https://www.amazon.com.br/dp/B0FH1YCT71"
+    },
+    {
+      "title": "Chinelo Preto Infantil Dino Dinossauro",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B08LOyY8r",
+      "directLink": "https://www.amazon.com.br/dp/B0G78F5K32"
+    },
+    {
+      "title": "Adidas Adilette Aqua Unissex Adulto",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B05sZaFNP",
+      "directLink": "https://www.amazon.com.br/dp/B0H73GZR49"
+    },
+    {
+      "title": "Crocs Duet Plus Preto/Grafite",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0j4QRkrY",
+      "directLink": "https://www.amazon.com.br/dp/B005GCCJJ2"
+    },
+    {
+      "title": "Crocs Swiftwater River Sandal Infantil",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B057ulQqY",
+      "directLink": "https://www.amazon.com.br/dp/B07VB9FL9F"
+    },
+    {
+      "title": "Crocs Scooby Doo Infantil",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B02mcRtrN",
+      "directLink": "https://www.amazon.com.br/dp/B001KR0DE0"
+    },
+    {
+      "title": "Propét Fast Walker Masculino Preto",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "preço dinâmico no anúncio",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0iRkH5kB",
+      "directLink": "https://www.amazon.com.br/dp/B002E9ICBE"
+    },
+    {
+      "title": "Propet Daybreak Tênis Masculino",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B03PNveNe",
+      "directLink": "https://www.amazon.com.br/dp/B002OHDYNW"
+    },
+    {
+      "title": "Suiyfit Tênis Feminino Bico Largo",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0irDfy66",
+      "directLink": "https://www.amazon.com.br/dp/B0GS5W3XG3"
+    },
+    {
+      "title": "BEAUDRM Sandália Feminina Salto Gatinho",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B036tXwrM",
+      "directLink": "https://www.amazon.com.br/dp/B0H3LPVW91"
+    },
+    {
+      "title": "Planone Bota de Chuva Curta Feminina",
+      "sourceFile": "lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx",
+      "reason": [
+        "link não confirmado online",
+        "título do link diverge do produto",
+        "imagem real não confirmada",
+        "link afiliado nao confirmado com produto/imagem"
+      ],
+      "affiliateLink": "https://link.amazon/B0bqFB63K",
+      "directLink": "https://www.amazon.com.br/dp/B09KTNFZNC"
+    }
+  ],
+  "imageErrors": [],
+  "batchReports": [
+    {
+      "batchProductIds": [
+        "importado-ml-copo-eletrico-misturador-de-cafe-automatico-usb-recarreg-ef389892",
+        "importado-ml-cobertor-70x100-flannel-sherpa-relevo-macio-7f4e8319",
+        "importado-ml-amassador-e-fatiador-de-alho-2-em-1-manual-de-cozinha-20f83d9f",
+        "importado-ml-kit-4-espatulas-de-silicone-resistentes-ao-calor-preto-25c1472b",
+        "importado-ml-kit-2-cameras-seguranca-ip-interna-externa-wi-fi-icsee-e719c428",
+        "importado-ml-cobertor-queen-grosso-coberdrom-la-carneiro-dupla-face-05fca00c",
+        "importado-ml-kit-2-travesseiros-70x50-antialergico-lavavel-fibra-sili-6bbc2dd7",
+        "importado-ml-kit-10-potes-vidro-370ml-hermetico-marmita-forno-refrata-98f7fe54",
+        "importado-ml-cesto-de-roupa-suja-de-bambu-com-tampa-e-alcas-50-litros-1f82a3ef",
+        "importado-ml-jogo-de-toalhas-de-banho-gigante-algodao-4-pecas-grossas-1b5f442e",
+        "importado-ml-purificador-de-agua-gelada-fria-e-natural-electrolux-pe1-1787a605",
+        "importado-ml-mantas-super-king-gigante-microfibra-coberta-aveludado-m-0f39c41f",
+        "importado-ml-kit-50-cabides-veludo-antideslizante-slim-adulto-efcd96aa",
+        "importado-ml-purificador-de-agua-consul-refrigerado-natural-e-gelada--d7a0a399",
+        "importado-ml-jogo-de-panelas-ceramico-antiaderente-inducao-10-pecas-d21676a1",
+        "importado-ml-karsten-empire-fio-cardado-jogo-de-banho-cor-branco-9685ccbd",
+        "importado-ml-cadeira-escritorio-ergonomica-genebra-b500-luvinco-d83049e8",
+        "importado-ml-conjunto-de-panelas-antiaderente-10-pecas-coffee-cappucc-52a94a5a",
+        "importado-ml-cadeira-gamer-e-escritorio-x-ray-fit-com-led-rgb-ergonom-b78ade89",
+        "importado-ml-kit-10-potes-vidro-hermetico-aristus-640ml-marmita-anti--22e7d447"
+      ],
+      "checked": 20,
+      "active": 19,
+      "inactive": 1,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 1
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-jogo-talheres-faqueiro-buzios-aco-inox-24-pecas-tramonti-dd0fc817",
+        "importado-ml-jogo-de-panelas-antiaderente-multi-aluminio-com-10-pecas-6d2bea4e",
+        "importado-ml-conjunto-fitness-virginia-top-shorts-meia-coxa-cintura-a-f9947797",
+        "importado-ml-trena-laser-40m-recarregavel-usb-medidor-digital-de-dist-8f669d29",
+        "importado-ml-transmissor-receptor-hdmi-sem-fio-wireless-1080p-full-hd-1fed9182",
+        "importado-ml-bolsa-love-feminina-mochila-escolar-spector-reforcada-ro-505f7444",
+        "importado-ml-pneu-moto-maggion-trail-viper-110-90-17-c-c-traseiro-bro-39022120",
+        "importado-ml-copo-termico-gigante-1-2l-inox-com-tampa-e-canudo-rosa-b50d4bea",
+        "importado-ml-aparelho-de-jantar-e-cha-ryo-maresia-20-pecas-branco-e-m-99de0a5b",
+        "importado-ml-kit-2-moletom-gola-careca-liso-confortavel-inverno-quent-90b3fa6f",
+        "importado-ml-whey-protein-concentrado-450g-growth-supplements-morango-3b61b9c6",
+        "importado-ml-aquecedor-de-ar-eletrico-portatil-de-ambiente-branco-2e94ef4b",
+        "importado-ml-kit-4-short-tactel-masculino-casual-praia-bermuda-bolso-92dc49c8",
+        "importado-ml-kit-5-overgrip-raquete-beach-furado-wilson-2947062d",
+        "importado-ml-kit-10-pares-de-meias-lupo-soquete-invisivel-sport-7ccf6c29",
+        "importado-ml-sapatilha-nautica-cachoeira-seca-rapido-confortavel-c1ed0178",
+        "importado-ml-kit-5-pares-aparador-livros-organizador-lateral-biblioca-097ad12e",
+        "importado-ml-air-fryer-forno-25l-french-door-mondial-afdo-25l-fd-3df86a7e",
+        "importado-ml-sanduicheira-grill-2-em-1-kian-preta-eletrica-750w-7b56ff52",
+        "importado-ml-parafusadeira-furadeira-com-2-baterias-maleta-kit-comple-20a256fb"
+      ],
+      "checked": 20,
+      "active": 20,
+      "inactive": 0,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 2
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-mini-compressor-digital-portatil-rezzet-para-carro-moto--04477f96",
+        "importado-ml-colonia-turma-da-monica-cebolinha-jequiti-25ml-111e9bd6",
+        "importado-ml-carregador-compativel-iphone-8-x-xr-11-12-13-14-pro-max--046260f7",
+        "importado-ml-hisense-smart-tv-fhd-43-polegadas-43a4nv-hdr10-dts-virtu-a4def0ab",
+        "importado-ml-fritadeira-air-fryer-oven-12l-mondial-afon-12l-bi-2000w-86637d2c",
+        "importado-ml-creatina-monohidratada-pura-1kg-dark-lab-sem-sabor-62171410",
+        "importado-ml-parafusadeira-furadeira-3-8-bateria-tb12a-the-black-tool-d2f0269f",
+        "importado-ml-escada-de-aluminio-dobravel-compacta-com-3-degraus-botaf-b8c84441",
+        "importado-ml-panela-pipoqueira-tramontina-3-5l-faz-pipoca-doce-salgad-e902b6d6",
+        "importado-ml-panela-de-pressao-4-5-litros-antiaderente-fechamento-ext-4b4fc463",
+        "importado-ml-secador-de-cabelos-mondial-preto-2000w-scn-01-scn-16-a24e1413",
+        "importado-ml-jogo-de-xicaras-com-pires-6-pecas-bubly-bolha-perola-caf-0cb58ff1",
+        "importado-ml-lavadora-lava-jato-portatil-pressao-2-baterias-maleta-bb6e7ded",
+        "importado-ml-conjunto-de-panelas-8-pecas-ceramic-life-smart-plus-vani-81de7a17",
+        "importado-ml-guarda-roupa-casal-6-portas-2-gavetas-franca-wt-espresso-6e594edf",
+        "importado-ml-jogo-de-toalhas-buddemeyer-vanilla-extra-soft-banho-2-pe-4b768dc0",
+        "importado-ml-kit-faca-e-garfo-para-destrinchar-premium-laguiole-la-ma-48b00a28",
+        "importado-ml-sofa-3-lugares-clean-retratil-reclinavel-cama-inbox-cinz-ddfeb07d",
+        "importado-ml-potes-hermeticos-electrolux-de-plastico-branco-retangula-271ed285",
+        "importado-ml-cadeira-escritorio-confortavel-ergonomica-elements-lira--3501a8f7"
+      ],
+      "checked": 20,
+      "active": 19,
+      "inactive": 1,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 3
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-guarda-roupa-casal-bartira-ville-6-portas-e-2-gavetas-3f254e0f",
+        "importado-ml-rack-tv-55-polegadas-sala-home-estante-organizador-multi-9b5b1c17",
+        "importado-ml-apple-iphone-15-128-gb-azul-716d3389",
+        "importado-ml-apple-iphone-15-128-gb-preto-0398da93",
+        "importado-ml-apple-iphone-15-256-gb-azul-94c2bfdd",
+        "celular-ml-docx-085",
+        "importado-ml-apple-iphone-15-256-gb-rosa-ad894ddf",
+        "importado-ml-apple-iphone-15-256-gb-verde-4b1d598e",
+        "importado-ml-apple-iphone-15-256-gb-amarelo-698151ab",
+        "importado-ml-apple-iphone-16-128-gb-branco-6ce4f20f",
+        "importado-ml-apple-iphone-16-128-gb-rosa-15da7d6f",
+        "importado-ml-apple-iphone-16-128-gb-verde-acinzentado-6d2b3b15",
+        "importado-ml-apple-iphone-16-256-gb-preto-017f8640",
+        "importado-ml-apple-iphone-16-256-gb-branco-43ad7dc6",
+        "importado-ml-apple-iphone-16-256-gb-ultramarino-b3e4f5d5",
+        "importado-ml-tenis-adidas-feminino-courtjam-control-3-original-032e3bc1",
+        "importado-ml-tenis-olympikus-corre-4-marrom-unissex-corrida-original-8c9a7552",
+        "importado-ml-tenis-fila-venture-tracer-2-masculino-confortavel-origin-e1dcc40e",
+        "importado-ml-tenis-adidas-unissex-grand-court-base-20-simp-original-cd742307",
+        "importado-ml-tenis-fila-recovery-masculino-esportivo-preto-original-6808d00a"
+      ],
+      "checked": 20,
+      "active": 18,
+      "inactive": 2,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 4
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-tenis-nike-sb-fokus-masculino-azuldourado-original-74947-e84dc2bd",
+        "importado-ml-tenis-adidas-feminino-grand-court-base-30-original-03bc4156",
+        "importado-ml-tenis-olympikus-nuvem-feminino-original-confortavel-corr-58ef0e7b",
+        "importado-ml-tenis-fila-original-fitness-tennis-club-ii-masculino-6cad2114",
+        "importado-ml-tenis-nike-shox-nz-masculino-original-promocao-brinde-2f40df03",
+        "importado-ml-tenis-adidas-original-960418a7",
+        "importado-ml-tenis-olympikus-sagaz-masculino-original-7a7448f7",
+        "importado-ml-tenis-fila-feminino-street-fit-2-academia-leve-original-989243cc",
+        "importado-ml-tenis-nike-court-vision-low-next-nature-feminino-24eb6873",
+        "importado-ml-tenis-olympikus-dynamic-esportivo-conforto-treino-origin-76ac424b",
+        "importado-ml-tenis-fila-masculino-master-ace-para-jogar-tennis-origin-1eb9121b",
+        "importado-ml-tenis-adidas-superstar-foundation-vermelho-original-18cb841c",
+        "importado-ml-tenis-fila-fastness-feminino-original-confortavel-corrid-c10d0042",
+        "importado-ml-tenis-nike-air-max-bia-masculino-214dd981",
+        "importado-ml-tenis-adidas-space-diver-20-w-original-n42-a6997e1b",
+        "importado-ml-tenis-olympikus-masculino-leve-confortavel-evasense-orig-e5c4f669",
+        "importado-ml-tenis-fila-action-masculino-original-cce2613b",
+        "importado-ml-tenis-nike-journey-run-masculino-0c630472",
+        "importado-ml-tenis-olympikus-preto-masculino-volta-2-original-03c87763",
+        "importado-ml-tenis-fila-progress-lite-masculino-corrida-esporte-origi-17ce127e"
+      ],
+      "checked": 20,
+      "active": 11,
+      "inactive": 9,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 5
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-tenis-nike-zoom-vapor-pro-3-hc-premium-masculino-d42a835d",
+        "importado-ml-tenis-adidas-forest-grove-w-preto-azul-original-cg6123-e4ed44b8",
+        "importado-ml-tenis-olympikus-quadra-2-masculino-volei-original-esport-fe3b65be",
+        "importado-ml-tenis-fila-rise-up-masculino-casual-confortavel-original-e3243182",
+        "importado-ml-tenis-nike-court-vision-mid-nn-masculino-4297f970",
+        "importado-ml-tenis-olympikus-inverse-2-esportivo-original-77aaba61",
+        "importado-ml-tenis-fila-34-original-energized-cage-flex-ot-pro-nr-34--6e33fd8c",
+        "importado-ml-tenis-mizuno-glow-3-feminino-original-corrida-caminhada-aa40e2c3",
+        "importado-ml-tenis-puma-smash-v2-masculino-dia-a-dia-original-1169e6c2",
+        "importado-ml-tenis-asics-gel-sparta-midnight-pure-silver-original-0feaa18a",
+        "importado-ml-tenis-new-balance-574-v2-casual-unissex-original-bd3b6cbb",
+        "importado-ml-tenis-mizuno-neo-pryzma-feminino-original-5a821455",
+        "importado-ml-tenis-puma-masculino-esportivo-maxima-pro-branco-origina-47ad4730",
+        "importado-ml-tenis-asics-gel-dedicate-8-clay-saibro-original-1magnus-dd4671a2",
+        "importado-ml-tenis-new-balance-530-retro-feminino-casual-original-a4dc9570",
+        "importado-ml-tenis-mizuno-goya-3-feminino-original-82cae387",
+        "importado-ml-tenis-puma-casual-unisex-caven-20-branco-original-c511adb2",
+        "importado-ml-tenis-asics-novablast-6-conforto-running-esportivo-origi-1aac54bd",
+        "importado-ml-tenis-new-balance-327-v1-original-unissex-casual-lancame-3a4689bc",
+        "importado-ml-tenis-mizuno-jet-8-masculino-corrida-original-confortave-2e6ead00"
+      ],
+      "checked": 20,
+      "active": 13,
+      "inactive": 7,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 6
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-tenis-puma-skyrocket-lite-2-masculino-esportivo-original-5bc606c1",
+        "importado-ml-tenis-asics-gel-evasion-caminhada-cinza-feminino-origina-254125b1",
+        "importado-ml-tenis-new-balance-9060-sneakers-original-nota-fiscal-bri-94713b5c",
+        "importado-ml-tenis-mizuno-cool-ride-3-masculino-corrida-original-2b636429",
+        "importado-ml-tenis-puma-xray-3-bdp-masculino-lancamento-original-99f9c58a",
+        "importado-ml-tenis-asics-gel-nagoya-st-masculino-original-5a6df9cb",
+        "importado-ml-tenis-new-balance-nb-numeric-tiago-lemos-1010-original-102f9174",
+        "importado-ml-tenis-mizuno-space-5-masculino-confortavel-duravel-origi-5020ef58",
+        "importado-ml-tenis-democrata-bill-couro-casual-original-nota-fiscal-0c7d45a8",
+        "importado-ml-tenis-asics-nimbus-25-original-e-novo-na-caixa-57782f00",
+        "importado-ml-tenis-new-balance-1080-v15-masculino-original-31316313",
+        "importado-ml-tenis-puma-shuffle-downtown-lancamento-original-pt-entre-b8bd662a",
+        "importado-ml-tenis-asics-gel-venture-11-masculino-original-nota-fisca-8b95a716",
+        "importado-ml-tenis-new-balance-55-unissex-casual-original-b69e0250",
+        "importado-ml-tenis-puma-rsx-reinvention-masculino-preto-original-ef34226b",
+        "importado-ml-tenis-asics-gelsparta-2-feminino-preto-original-eb7620e1",
+        "importado-ml-tenis-new-balance-1080-v15-feminino-lancamento-original-c85f7ce4",
+        "importado-ml-tenis-mizuno-prophecy-15-original-couro-macio-frete-grat-79d98b97",
+        "importado-ml-tenis-puma-skt-padrao-original-masculino-feminino-confor-84784b61",
+        "importado-ml-tenis-new-balance-530-original-c8755a76"
+      ],
+      "checked": 20,
+      "active": 12,
+      "inactive": 8,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 7
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-tenis-mizuno-neo-vista-2-feminino-original-f1dcae5d",
+        "importado-ml-tenis-puma-masculino-casual-court-classic-clean-original-861a2d44",
+        "importado-ml-tenis-new-balance-990v6-novo-original-usa-67454964",
+        "importado-ml-chinelo-havaianas-harry-potter-original-unissex-presente-6c400fff",
+        "importado-ml-chinelo-kenner-original-kivah-full-force-masculina-6d85b29a",
+        "importado-ml-chinelo-rider-slide-street-original-lancamento-confortav-97708b91",
+        "importado-ml-chinelo-cartago-alabama-masculino-original-2edf4dfc",
+        "importado-ml-chinelo-havaianas-top-brasil-logo-original-adulto-c67d052b",
+        "importado-ml-chinelo-kenner-kivah-tamanho-40-preto-masculino-original-a52e9498",
+        "importado-ml-chinelo-rider-original-masculino-com-solado-leve-e-macio-6ddeea2b",
+        "importado-ml-chinelo-cartago-coimbra-ii-masculino-original-casual-349a5393",
+        "importado-ml-chinelo-havaianas-original-adulto-o-tup-times-038af094",
+        "importado-ml-chinelo-kenner-ibiza-feminina-lancamento-original-a012fe92",
+        "importado-ml-chinelo-rider-star-iii-masculino-original-super-conforto-cf0b5c77",
+        "importado-ml-chinelo-cartago-milao-plus-masculino-tiras-largas-origin-fdc8ef86",
+        "importado-ml-chinelo-rider-slide-free-ii-confortavel-original-12323-99a787d6",
+        "importado-ml-chinelo-cartago-alabama-masculino-confortavel-original-4b429e78",
+        "importado-ml-bota-feminina-comfortflex-original-detalhes-em-dourado-l-62b33fab",
+        "importado-ml-sandalia-robusta-feminina-casual-confortavel-original-01b97941",
+        "importado-ml-bota-masculina-democrata-grid-couro-preto-original-ba6a4081"
+      ],
+      "checked": 20,
+      "active": 16,
+      "inactive": 4,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 8
+    },
+    {
+      "batchProductIds": [
+        "importado-ml-sapatenis-com-chinelo-polo-blu-original-masculino-3-pare-68a6866c",
+        "importado-ml-sapato-social-masculino-pegada-100-couro-original-brinde-df73e533",
+        "importado-ml-sandalia-feminina-unica-original-salto-alto-fino-10-cm-3bdbc5b8",
+        "importado-ml-sapatenis-masculino-tenis-casual-conforto-original-premi-94f82b31",
+        "importado-ml-sapato-social-masculino-pegada-100-couro-original-envio--a973f138",
+        "importado-ml-sandalia-feminina-salto-baixo-tira-moleca-fivela-origina-15fbf042",
+        "importado-ml-bota-beira-rio-original-112-salto-baixo-quadrado-feminin-8a0fd605",
+        "importado-amazon-chinelo-charme-dupe-feminino-roxo-ce5431a8",
+        "importado-amazon-chinelo-nuvem-anatomico-100-eva-0e08b4ae",
+        "importado-amazon-chinelo-feminino-com-suporte-de-arco-c86ec456",
+        "importado-amazon-chinelo-feminino-verao-cortica-63ffbce1",
+        "importado-amazon-chinelo-rider-feel-slide-masculino-preto-8d1886db",
+        "importado-amazon-adidas-adilette-aqua-chinelo-feminino-77c65d19",
+        "importado-amazon-crocs-classic-clog-navy-41bd8b84",
+        "importado-amazon-pantufa-birken-slide-massageador-feminino-f4bde080",
+        "importado-amazon-chinelos-ortopedicos-masculinos-017fbb5d",
+        "importado-amazon-sandalia-de-dedo-kenner-summer-joao-gomes-masculino-54766fc8",
+        "importado-amazon-pantufa-chinelo-capivara-antiderrapante-dd1ac783",
+        "importado-amazon-kit-2-chinelos-masculino-polo-wear-639d00b1",
+        "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8"
+      ],
+      "checked": 20,
+      "active": 10,
+      "inactive": 10,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 9
+    },
+    {
+      "batchProductIds": [
+        "importado-amazon-adidas-adilette-aqua-unissex-adulto-7b29abd9",
+        "importado-amazon-crocs-duet-plus-preto-grafite-94b4468e",
+        "importado-amazon-crocs-swiftwater-river-sandal-infantil-975d5b26",
+        "importado-amazon-crocs-crocband-clog-infantil-ballerina-pink-88cfae13",
+        "importado-amazon-crocs-scooby-doo-infantil-b4c3e85e",
+        "importado-amazon-propet-fast-walker-masculino-preto-13f9784a",
+        "importado-amazon-vince-fulton-tenis-masculino-de-camurca-79a4b73b",
+        "importado-amazon-propet-daybreak-tenis-masculino-68866d8d",
+        "importado-amazon-suiyfit-tenis-feminino-bico-largo-f0c332bd",
+        "importado-amazon-camper-tenis-masculino-de-couro-ariel-42fa3b00",
+        "importado-amazon-beaudrm-sandalia-feminina-salto-gatinho-61bf8a42",
+        "importado-amazon-planone-bota-de-chuva-curta-feminina-5d759f6d",
+        "importado-amazon-tenis-masculino-mormaii-urban-smash-6e646d43"
+      ],
+      "checked": 13,
+      "active": 4,
+      "inactive": 9,
+      "missingStore": [],
+      "duplicateActiveLinks": [],
+      "ok": true,
+      "batch": 10
+    }
+  ],
+  "importedProductIds": [
+    "importado-ml-copo-eletrico-misturador-de-cafe-automatico-usb-recarreg-ef389892",
+    "importado-ml-cobertor-70x100-flannel-sherpa-relevo-macio-7f4e8319",
+    "importado-ml-amassador-e-fatiador-de-alho-2-em-1-manual-de-cozinha-20f83d9f",
+    "importado-ml-kit-4-espatulas-de-silicone-resistentes-ao-calor-preto-25c1472b",
+    "importado-ml-kit-2-cameras-seguranca-ip-interna-externa-wi-fi-icsee-e719c428",
+    "importado-ml-cobertor-queen-grosso-coberdrom-la-carneiro-dupla-face-05fca00c",
+    "importado-ml-kit-2-travesseiros-70x50-antialergico-lavavel-fibra-sili-6bbc2dd7",
+    "importado-ml-kit-10-potes-vidro-370ml-hermetico-marmita-forno-refrata-98f7fe54",
+    "importado-ml-cesto-de-roupa-suja-de-bambu-com-tampa-e-alcas-50-litros-1f82a3ef",
+    "importado-ml-jogo-de-toalhas-de-banho-gigante-algodao-4-pecas-grossas-1b5f442e",
+    "importado-ml-purificador-de-agua-gelada-fria-e-natural-electrolux-pe1-1787a605",
+    "importado-ml-mantas-super-king-gigante-microfibra-coberta-aveludado-m-0f39c41f",
+    "importado-ml-kit-50-cabides-veludo-antideslizante-slim-adulto-efcd96aa",
+    "importado-ml-purificador-de-agua-consul-refrigerado-natural-e-gelada--d7a0a399",
+    "importado-ml-jogo-de-panelas-ceramico-antiaderente-inducao-10-pecas-d21676a1",
+    "importado-ml-karsten-empire-fio-cardado-jogo-de-banho-cor-branco-9685ccbd",
+    "importado-ml-cadeira-escritorio-ergonomica-genebra-b500-luvinco-d83049e8",
+    "importado-ml-conjunto-de-panelas-antiaderente-10-pecas-coffee-cappucc-52a94a5a",
+    "importado-ml-cadeira-gamer-e-escritorio-x-ray-fit-com-led-rgb-ergonom-b78ade89",
+    "importado-ml-kit-10-potes-vidro-hermetico-aristus-640ml-marmita-anti--22e7d447",
+    "importado-ml-jogo-talheres-faqueiro-buzios-aco-inox-24-pecas-tramonti-dd0fc817",
+    "importado-ml-jogo-de-panelas-antiaderente-multi-aluminio-com-10-pecas-6d2bea4e",
+    "importado-ml-conjunto-fitness-virginia-top-shorts-meia-coxa-cintura-a-f9947797",
+    "importado-ml-trena-laser-40m-recarregavel-usb-medidor-digital-de-dist-8f669d29",
+    "importado-ml-transmissor-receptor-hdmi-sem-fio-wireless-1080p-full-hd-1fed9182",
+    "importado-ml-bolsa-love-feminina-mochila-escolar-spector-reforcada-ro-505f7444",
+    "importado-ml-pneu-moto-maggion-trail-viper-110-90-17-c-c-traseiro-bro-39022120",
+    "importado-ml-copo-termico-gigante-1-2l-inox-com-tampa-e-canudo-rosa-b50d4bea",
+    "importado-ml-aparelho-de-jantar-e-cha-ryo-maresia-20-pecas-branco-e-m-99de0a5b",
+    "importado-ml-kit-2-moletom-gola-careca-liso-confortavel-inverno-quent-90b3fa6f",
+    "importado-ml-whey-protein-concentrado-450g-growth-supplements-morango-3b61b9c6",
+    "importado-ml-aquecedor-de-ar-eletrico-portatil-de-ambiente-branco-2e94ef4b",
+    "importado-ml-kit-4-short-tactel-masculino-casual-praia-bermuda-bolso-92dc49c8",
+    "importado-ml-kit-5-overgrip-raquete-beach-furado-wilson-2947062d",
+    "importado-ml-kit-10-pares-de-meias-lupo-soquete-invisivel-sport-7ccf6c29",
+    "importado-ml-sapatilha-nautica-cachoeira-seca-rapido-confortavel-c1ed0178",
+    "importado-ml-kit-5-pares-aparador-livros-organizador-lateral-biblioca-097ad12e",
+    "importado-ml-air-fryer-forno-25l-french-door-mondial-afdo-25l-fd-3df86a7e",
+    "importado-ml-sanduicheira-grill-2-em-1-kian-preta-eletrica-750w-7b56ff52",
+    "importado-ml-parafusadeira-furadeira-com-2-baterias-maleta-kit-comple-20a256fb",
+    "importado-ml-mini-compressor-digital-portatil-rezzet-para-carro-moto--04477f96",
+    "importado-ml-colonia-turma-da-monica-cebolinha-jequiti-25ml-111e9bd6",
+    "importado-ml-carregador-compativel-iphone-8-x-xr-11-12-13-14-pro-max--046260f7",
+    "importado-ml-hisense-smart-tv-fhd-43-polegadas-43a4nv-hdr10-dts-virtu-a4def0ab",
+    "importado-ml-fritadeira-air-fryer-oven-12l-mondial-afon-12l-bi-2000w-86637d2c",
+    "importado-ml-creatina-monohidratada-pura-1kg-dark-lab-sem-sabor-62171410",
+    "importado-ml-parafusadeira-furadeira-3-8-bateria-tb12a-the-black-tool-d2f0269f",
+    "importado-ml-escada-de-aluminio-dobravel-compacta-com-3-degraus-botaf-b8c84441",
+    "importado-ml-panela-pipoqueira-tramontina-3-5l-faz-pipoca-doce-salgad-e902b6d6",
+    "importado-ml-panela-de-pressao-4-5-litros-antiaderente-fechamento-ext-4b4fc463",
+    "importado-ml-secador-de-cabelos-mondial-preto-2000w-scn-01-scn-16-a24e1413",
+    "importado-ml-jogo-de-xicaras-com-pires-6-pecas-bubly-bolha-perola-caf-0cb58ff1",
+    "importado-ml-lavadora-lava-jato-portatil-pressao-2-baterias-maleta-bb6e7ded",
+    "importado-ml-conjunto-de-panelas-8-pecas-ceramic-life-smart-plus-vani-81de7a17",
+    "importado-ml-guarda-roupa-casal-6-portas-2-gavetas-franca-wt-espresso-6e594edf",
+    "importado-ml-jogo-de-toalhas-buddemeyer-vanilla-extra-soft-banho-2-pe-4b768dc0",
+    "importado-ml-kit-faca-e-garfo-para-destrinchar-premium-laguiole-la-ma-48b00a28",
+    "importado-ml-sofa-3-lugares-clean-retratil-reclinavel-cama-inbox-cinz-ddfeb07d",
+    "importado-ml-potes-hermeticos-electrolux-de-plastico-branco-retangula-271ed285",
+    "importado-ml-cadeira-escritorio-confortavel-ergonomica-elements-lira--3501a8f7",
+    "importado-ml-guarda-roupa-casal-bartira-ville-6-portas-e-2-gavetas-3f254e0f",
+    "importado-ml-rack-tv-55-polegadas-sala-home-estante-organizador-multi-9b5b1c17",
+    "importado-ml-apple-iphone-15-128-gb-azul-716d3389",
+    "importado-ml-apple-iphone-15-128-gb-preto-0398da93",
+    "importado-ml-apple-iphone-15-256-gb-azul-94c2bfdd",
+    "celular-ml-docx-085",
+    "importado-ml-apple-iphone-15-256-gb-rosa-ad894ddf",
+    "importado-ml-apple-iphone-15-256-gb-verde-4b1d598e",
+    "importado-ml-apple-iphone-15-256-gb-amarelo-698151ab",
+    "importado-ml-apple-iphone-16-128-gb-branco-6ce4f20f",
+    "importado-ml-apple-iphone-16-128-gb-rosa-15da7d6f",
+    "importado-ml-apple-iphone-16-128-gb-verde-acinzentado-6d2b3b15",
+    "importado-ml-apple-iphone-16-256-gb-preto-017f8640",
+    "importado-ml-apple-iphone-16-256-gb-branco-43ad7dc6",
+    "importado-ml-apple-iphone-16-256-gb-ultramarino-b3e4f5d5",
+    "importado-ml-tenis-adidas-feminino-courtjam-control-3-original-032e3bc1",
+    "importado-ml-tenis-olympikus-corre-4-marrom-unissex-corrida-original-8c9a7552",
+    "importado-ml-tenis-fila-venture-tracer-2-masculino-confortavel-origin-e1dcc40e",
+    "importado-ml-tenis-adidas-unissex-grand-court-base-20-simp-original-cd742307",
+    "importado-ml-tenis-fila-recovery-masculino-esportivo-preto-original-6808d00a",
+    "importado-ml-tenis-nike-sb-fokus-masculino-azuldourado-original-74947-e84dc2bd",
+    "importado-ml-tenis-adidas-feminino-grand-court-base-30-original-03bc4156",
+    "importado-ml-tenis-olympikus-nuvem-feminino-original-confortavel-corr-58ef0e7b",
+    "importado-ml-tenis-fila-original-fitness-tennis-club-ii-masculino-6cad2114",
+    "importado-ml-tenis-nike-shox-nz-masculino-original-promocao-brinde-2f40df03",
+    "importado-ml-tenis-adidas-original-960418a7",
+    "importado-ml-tenis-olympikus-sagaz-masculino-original-7a7448f7",
+    "importado-ml-tenis-fila-feminino-street-fit-2-academia-leve-original-989243cc",
+    "importado-ml-tenis-nike-court-vision-low-next-nature-feminino-24eb6873",
+    "importado-ml-tenis-olympikus-dynamic-esportivo-conforto-treino-origin-76ac424b",
+    "importado-ml-tenis-fila-masculino-master-ace-para-jogar-tennis-origin-1eb9121b",
+    "importado-ml-tenis-adidas-superstar-foundation-vermelho-original-18cb841c",
+    "importado-ml-tenis-fila-fastness-feminino-original-confortavel-corrid-c10d0042",
+    "importado-ml-tenis-nike-air-max-bia-masculino-214dd981",
+    "importado-ml-tenis-adidas-space-diver-20-w-original-n42-a6997e1b",
+    "importado-ml-tenis-olympikus-masculino-leve-confortavel-evasense-orig-e5c4f669",
+    "importado-ml-tenis-fila-action-masculino-original-cce2613b",
+    "importado-ml-tenis-nike-journey-run-masculino-0c630472",
+    "importado-ml-tenis-olympikus-preto-masculino-volta-2-original-03c87763",
+    "importado-ml-tenis-fila-progress-lite-masculino-corrida-esporte-origi-17ce127e",
+    "importado-ml-tenis-nike-zoom-vapor-pro-3-hc-premium-masculino-d42a835d",
+    "importado-ml-tenis-adidas-forest-grove-w-preto-azul-original-cg6123-e4ed44b8",
+    "importado-ml-tenis-olympikus-quadra-2-masculino-volei-original-esport-fe3b65be",
+    "importado-ml-tenis-fila-rise-up-masculino-casual-confortavel-original-e3243182",
+    "importado-ml-tenis-nike-court-vision-mid-nn-masculino-4297f970",
+    "importado-ml-tenis-olympikus-inverse-2-esportivo-original-77aaba61",
+    "importado-ml-tenis-fila-34-original-energized-cage-flex-ot-pro-nr-34--6e33fd8c",
+    "importado-ml-tenis-mizuno-glow-3-feminino-original-corrida-caminhada-aa40e2c3",
+    "importado-ml-tenis-puma-smash-v2-masculino-dia-a-dia-original-1169e6c2",
+    "importado-ml-tenis-asics-gel-sparta-midnight-pure-silver-original-0feaa18a",
+    "importado-ml-tenis-new-balance-574-v2-casual-unissex-original-bd3b6cbb",
+    "importado-ml-tenis-mizuno-neo-pryzma-feminino-original-5a821455",
+    "importado-ml-tenis-puma-masculino-esportivo-maxima-pro-branco-origina-47ad4730",
+    "importado-ml-tenis-asics-gel-dedicate-8-clay-saibro-original-1magnus-dd4671a2",
+    "importado-ml-tenis-new-balance-530-retro-feminino-casual-original-a4dc9570",
+    "importado-ml-tenis-mizuno-goya-3-feminino-original-82cae387",
+    "importado-ml-tenis-puma-casual-unisex-caven-20-branco-original-c511adb2",
+    "importado-ml-tenis-asics-novablast-6-conforto-running-esportivo-origi-1aac54bd",
+    "importado-ml-tenis-new-balance-327-v1-original-unissex-casual-lancame-3a4689bc",
+    "importado-ml-tenis-mizuno-jet-8-masculino-corrida-original-confortave-2e6ead00",
+    "importado-ml-tenis-puma-skyrocket-lite-2-masculino-esportivo-original-5bc606c1",
+    "importado-ml-tenis-asics-gel-evasion-caminhada-cinza-feminino-origina-254125b1",
+    "importado-ml-tenis-new-balance-9060-sneakers-original-nota-fiscal-bri-94713b5c",
+    "importado-ml-tenis-mizuno-cool-ride-3-masculino-corrida-original-2b636429",
+    "importado-ml-tenis-puma-xray-3-bdp-masculino-lancamento-original-99f9c58a",
+    "importado-ml-tenis-asics-gel-nagoya-st-masculino-original-5a6df9cb",
+    "importado-ml-tenis-new-balance-nb-numeric-tiago-lemos-1010-original-102f9174",
+    "importado-ml-tenis-mizuno-space-5-masculino-confortavel-duravel-origi-5020ef58",
+    "importado-ml-tenis-democrata-bill-couro-casual-original-nota-fiscal-0c7d45a8",
+    "importado-ml-tenis-asics-nimbus-25-original-e-novo-na-caixa-57782f00",
+    "importado-ml-tenis-new-balance-1080-v15-masculino-original-31316313",
+    "importado-ml-tenis-puma-shuffle-downtown-lancamento-original-pt-entre-b8bd662a",
+    "importado-ml-tenis-asics-gel-venture-11-masculino-original-nota-fisca-8b95a716",
+    "importado-ml-tenis-new-balance-55-unissex-casual-original-b69e0250",
+    "importado-ml-tenis-puma-rsx-reinvention-masculino-preto-original-ef34226b",
+    "importado-ml-tenis-asics-gelsparta-2-feminino-preto-original-eb7620e1",
+    "importado-ml-tenis-new-balance-1080-v15-feminino-lancamento-original-c85f7ce4",
+    "importado-ml-tenis-mizuno-prophecy-15-original-couro-macio-frete-grat-79d98b97",
+    "importado-ml-tenis-puma-skt-padrao-original-masculino-feminino-confor-84784b61",
+    "importado-ml-tenis-new-balance-530-original-c8755a76",
+    "importado-ml-tenis-mizuno-neo-vista-2-feminino-original-f1dcae5d",
+    "importado-ml-tenis-puma-masculino-casual-court-classic-clean-original-861a2d44",
+    "importado-ml-tenis-new-balance-990v6-novo-original-usa-67454964",
+    "importado-ml-chinelo-havaianas-harry-potter-original-unissex-presente-6c400fff",
+    "importado-ml-chinelo-kenner-original-kivah-full-force-masculina-6d85b29a",
+    "importado-ml-chinelo-rider-slide-street-original-lancamento-confortav-97708b91",
+    "importado-ml-chinelo-cartago-alabama-masculino-original-2edf4dfc",
+    "importado-ml-chinelo-havaianas-top-brasil-logo-original-adulto-c67d052b",
+    "importado-ml-chinelo-kenner-kivah-tamanho-40-preto-masculino-original-a52e9498",
+    "importado-ml-chinelo-rider-original-masculino-com-solado-leve-e-macio-6ddeea2b",
+    "importado-ml-chinelo-cartago-coimbra-ii-masculino-original-casual-349a5393",
+    "importado-ml-chinelo-havaianas-original-adulto-o-tup-times-038af094",
+    "importado-ml-chinelo-kenner-ibiza-feminina-lancamento-original-a012fe92",
+    "importado-ml-chinelo-rider-star-iii-masculino-original-super-conforto-cf0b5c77",
+    "importado-ml-chinelo-cartago-milao-plus-masculino-tiras-largas-origin-fdc8ef86",
+    "importado-ml-chinelo-rider-slide-free-ii-confortavel-original-12323-99a787d6",
+    "importado-ml-chinelo-cartago-alabama-masculino-confortavel-original-4b429e78",
+    "importado-ml-bota-feminina-comfortflex-original-detalhes-em-dourado-l-62b33fab",
+    "importado-ml-sandalia-robusta-feminina-casual-confortavel-original-01b97941",
+    "importado-ml-bota-masculina-democrata-grid-couro-preto-original-ba6a4081",
+    "importado-ml-sapatenis-com-chinelo-polo-blu-original-masculino-3-pare-68a6866c",
+    "importado-ml-sapato-social-masculino-pegada-100-couro-original-brinde-df73e533",
+    "importado-ml-sandalia-feminina-unica-original-salto-alto-fino-10-cm-3bdbc5b8",
+    "importado-ml-sapatenis-masculino-tenis-casual-conforto-original-premi-94f82b31",
+    "importado-ml-sapato-social-masculino-pegada-100-couro-original-envio--a973f138",
+    "importado-ml-sandalia-feminina-salto-baixo-tira-moleca-fivela-origina-15fbf042",
+    "importado-ml-bota-beira-rio-original-112-salto-baixo-quadrado-feminin-8a0fd605",
+    "importado-amazon-chinelo-charme-dupe-feminino-roxo-ce5431a8",
+    "importado-amazon-chinelo-nuvem-anatomico-100-eva-0e08b4ae",
+    "importado-amazon-chinelo-feminino-com-suporte-de-arco-c86ec456",
+    "importado-amazon-chinelo-feminino-verao-cortica-63ffbce1",
+    "importado-amazon-chinelo-rider-feel-slide-masculino-preto-8d1886db",
+    "importado-amazon-adidas-adilette-aqua-chinelo-feminino-77c65d19",
+    "importado-amazon-crocs-classic-clog-navy-41bd8b84",
+    "importado-amazon-pantufa-birken-slide-massageador-feminino-f4bde080",
+    "importado-amazon-chinelos-ortopedicos-masculinos-017fbb5d",
+    "importado-amazon-sandalia-de-dedo-kenner-summer-joao-gomes-masculino-54766fc8",
+    "importado-amazon-pantufa-chinelo-capivara-antiderrapante-dd1ac783",
+    "importado-amazon-kit-2-chinelos-masculino-polo-wear-639d00b1",
+    "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
+    "importado-amazon-adidas-adilette-aqua-unissex-adulto-7b29abd9",
+    "importado-amazon-crocs-duet-plus-preto-grafite-94b4468e",
+    "importado-amazon-crocs-swiftwater-river-sandal-infantil-975d5b26",
+    "importado-amazon-crocs-crocband-clog-infantil-ballerina-pink-88cfae13",
+    "importado-amazon-crocs-scooby-doo-infantil-b4c3e85e",
+    "importado-amazon-propet-fast-walker-masculino-preto-13f9784a",
+    "importado-amazon-vince-fulton-tenis-masculino-de-camurca-79a4b73b",
+    "importado-amazon-propet-daybreak-tenis-masculino-68866d8d",
+    "importado-amazon-suiyfit-tenis-feminino-bico-largo-f0c332bd",
+    "importado-amazon-camper-tenis-masculino-de-couro-ariel-42fa3b00",
+    "importado-amazon-beaudrm-sandalia-feminina-salto-gatinho-61bf8a42",
+    "importado-amazon-planone-bota-de-chuva-curta-feminina-5d759f6d",
+    "importado-amazon-tenis-masculino-mormaii-urban-smash-6e646d43"
+  ]
+}

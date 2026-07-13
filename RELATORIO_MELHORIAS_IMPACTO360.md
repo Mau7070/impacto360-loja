@@ -352,3 +352,72 @@ Validação antes da publicação:
 - `npm.cmd run lint`: aprovado.
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
+
+## 19. Importação dos catálogos DOCX para amanhã - 2026-07-13
+
+Arquivos de origem lidos:
+
+- `produtos_mercado_livre_extraidos_das_imagens.docx`.
+- `Lista_15_iPhones_15_e_16_Mercado_Livre.docx`.
+- `lista_130_calcados_mais_vendidos_ml_amazon_com_afiliado.docx`.
+
+Segurança aplicada antes da importação:
+
+- Backup criado antes das mudanças: `backups/2026-07-13-1207-pre-importacao-catalogos-para-amanha.zip`.
+- Cópia dos DOCX preservada em `importacoes/originais/2026-07-13-catalogos-para-amanha`.
+- Criado o importador `scripts/importar-catalogos-para-amanha.py`.
+- O link de afiliado foi preservado como link de compra.
+- O link direto foi usado apenas para validação e importação da foto real.
+- Produto sem afiliado, com afiliado duplicado ou sem confirmação segura de título/foto ficou fora da vitrine pública.
+
+Resultado da extração:
+
+- Linhas extraídas dos DOCX: 198.
+- Linhas aceitas para validação online: 193.
+- Produtos adicionados: 141.
+- Produtos atualizados: 52.
+- Produtos ativos ou atualizados como ativos: 142.
+- Pendências mantidas fora da vitrine: 56.
+
+Pendências registradas:
+
+- 1 produto sem link de afiliado real.
+- 4 produtos com link de afiliado duplicado em outro produto.
+- 51 produtos não confirmaram, de forma segura, a combinação link afiliado + título + foto real.
+
+Validação por lotes de 20:
+
+- Lote 1: 20 checados, 19 ativos, OK.
+- Lote 2: 20 checados, 20 ativos, OK.
+- Lote 3: 20 checados, 19 ativos, OK.
+- Lote 4: 20 checados, 18 ativos, OK.
+- Lote 5: 20 checados, 11 ativos, OK.
+- Lote 6: 20 checados, 13 ativos, OK.
+- Lote 7: 20 checados, 12 ativos, OK.
+- Lote 8: 20 checados, 16 ativos, OK.
+- Lote 9: 20 checados, 10 ativos, OK.
+- Lote 10: 13 checados, 4 ativos, OK.
+
+Ambiente e rodízio:
+
+- Os produtos ativos ficaram nas lojas corretas: `impacto-mobile`, `impacto-calcados`, `impacto-casa`, `impacto-ofertas`, `grife-prime`, `impacto-ferramentas` e `impacto-eletronicos`.
+- 193 anúncios foram preparados em `dados/banners-anuncios.json`.
+- 142 anúncios ficaram ativos no rodízio `catalogos-para-amanha-2026-07-13`.
+- O pacote `pacote-github-pages-pronto` foi sincronizado com os mesmos dados e imagens.
+
+Auditoria global após a importação:
+
+- Produtos importados/atualizados na rodada: 193.
+- Produtos ativos da rodada: 142.
+- Ativos sem link: 0.
+- Ativos sem foto real: 0.
+- Ativos sem loja válida: 0.
+- Links ativos duplicados: 0.
+- Páginas individuais geradas: 440.
+
+Validações executadas:
+
+- `npm.cmd run gerar:produtos`: aprovado, com 440 páginas canônicas.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
+- `npm.cmd run test:seguranca`: aprovado.
