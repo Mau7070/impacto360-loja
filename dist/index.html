@@ -13292,7 +13292,8 @@
 
     function productIsVisible(item) {
       const status = normalize(item.status || item.statusPublicacao || item.auditoriaPublicacao);
-      if (/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
+      if (/rascunho|revisao|pendente|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
+      if (item?.aprovadoParaPublicacao === false) return false;
       if (!getProductLink(item)) return false;
       return resolveProductImage(item).hasPhoto;
     }

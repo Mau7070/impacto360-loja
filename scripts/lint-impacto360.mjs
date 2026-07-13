@@ -84,7 +84,8 @@ const imageIsUsable = product => {
 };
 const publicProducts = products.filter(product => {
   const status = String(product.status || product.statusPublicacao || product.auditoriaPublicacao || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
+  return !/rascunho|revisao|pendente|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
+    && product.aprovadoParaPublicacao !== false
     && linkFields.some(field => usableLink(product[field]))
     && imageIsUsable(product);
 });

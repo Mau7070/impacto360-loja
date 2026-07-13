@@ -76,8 +76,9 @@ function getProductImage(product) {
 
 function productIsPublishable(product) {
   const status = normalizeText(firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao"]));
-  return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
-    && isUsableLink(getProductLink(product))
+  if (/rascunho|revisao|pendente|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
+  if (product?.aprovadoParaPublicacao === false) return false;
+  return isUsableLink(getProductLink(product))
     && Boolean(getProductImage(product));
 }
 

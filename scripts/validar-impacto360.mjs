@@ -124,7 +124,7 @@ ok("nenhum ativo em loja inexistente", activeInMissingStore.length === 0, `${act
 ok("nenhum link ativo duplicado", activeDuplicates.length === 0, `${activeDuplicates.length} encontrado(s)`);
 ok("loja de brinquedos criada", Boolean(toyStore));
 ok("loja de brinquedos com anuncios ativos", activeToys.length > 0, `${activeToys.length} ativo(s)`);
-ok("vitrine filtra links publicos validos", html.includes("getProductLink(item)") && html.includes("rascunho|duplicado|inativo"));
+ok("vitrine filtra links publicos validos", html.includes("getProductLink(item)") && html.includes("rascunho|revisao|pendente|duplicado|inativo") && html.includes("aprovadoParaPublicacao === false"));
 
 const failed = checks.filter(check => !check.pass);
 for (const check of checks) {

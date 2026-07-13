@@ -277,3 +277,32 @@ Mobile:
 - 40 preços e 40 selos de afiliado.
 - Sem mojibake e sem textos antigos.
 - Sem overflow horizontal.
+
+## 16. Correção de publicações duplicadas e fotos PFE65 - 2026-07-13
+
+Alterações realizadas nesta rodada:
+
+- Backup criado antes das mudanças: `backups/2026-07-13-0959-pre-correcao-publicacoes-pfe65.zip`.
+- 6 registros Mercado Livre do Philco PFE65 foram mantidos no catálogo, mas retirados da publicação com status `duplicado`.
+- 1 registro Amazon do Philco PFE65 foi mantido como `pendente_validacao`, sem voltar para a vitrine.
+- 6 anúncios de forno com foto real local foram ativados com título curto, descrição comercial reduzida e botão `Ver oferta`.
+- O filtro público da home, do pacote e do gerador de páginas agora ignora `revisao_manual`, `pendente_*`, `duplicado` e qualquer item com `aprovadoParaPublicacao: false`.
+- A vitrine pública passou a considerar apenas produtos ativos/aprovados com link utilizável e foto real.
+- Links de afiliado existentes foram preservados; nenhum link afiliado foi substituído por link direto.
+- O arquivo `afiliado.docx` citado pelo usuário não estava disponível no caminho informado nem na pasta de anexos da sessão; os itens dependentes desse arquivo foram registrados no Word de pendências.
+
+Resultado da auditoria local do catálogo após a correção:
+
+- Produtos totais no catálogo: 700.
+- Produtos públicos após o novo filtro: 329.
+- Produtos ativos: 329.
+- PFE65 público após a correção: 0.
+- Textos não-URL com caractere `?` residual no catálogo: 0.
+
+Validações executadas nesta rodada:
+
+- `npm.cmd run gerar:produtos`: aprovado, com 329 páginas canônicas.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
+- `npm.cmd run test:seguranca`: aprovado.
+- `produtos_pendentes.docx`: criado e verificado estruturalmente com 15 parágrafos, 1 tabela, 6 linhas e 0 textos com `?` residual.

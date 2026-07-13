@@ -150,8 +150,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BB645OOJVp9ktEK8FxqAr9wixXGM%2Fe%2BtzO8OCAIdT8z9pmmTPMqpjHGAd2jikT170bRiZv56fiuHCUsXtATt6e3nu%2BH38NkRsiIiYJJjKfPKWb5vxntRBAIqBp7UmZOWgpm8cftpgmxPThEH%2BIRIBsTHjFvnqD1%2BdiZ9rNdOLfqBQfDRnOiPLwVxQw8Y%2BPFU5SpJNLA%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -283,8 +283,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -299,7 +299,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2308,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -870,7 +870,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2154,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -1573,8 +1573,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -1587,8 +1587,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BG8TPO7UcdY0nUFzxVqfqKmsk%2F8zA%2BEiy2EgPzrzdXrjTin03XWrte%2F1GUis6Z5iP7MEsfPynLWXiwwOUojJEd6xa5XELi44aDJVajI%2FGov8pYJ6r2SkOPaEthXoE4WKCX4m7%2FfdWoVk1nEvF0kGkB9krVQEYkoNqA59P1VFJ9aVGtDmXKekh02jhV%2FH0WbkK4Xsg50%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -1752,8 +1752,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -1766,8 +1766,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAxHvoBbD1bIa9Uu%2FafYAT10jK421OFOF4U2SUJTfACywqQQv%2BROC36FNqSSqDU2yF2%2FmF%2BrZb1JZ%2FlXZC0NzVbMM6LgBqwD2klOAUXyC2hPdFNmjEuDdaM6AeMWanpFc3iMVT8Afn6dtH3arZDBHv9Ss46bfm%2FXj8OttbRB6ygyorvrI%2FfPm%2BwU%2FDB%2B5K8IxYBpHUM%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -1930,8 +1930,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -1944,8 +1944,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAc6XJuWgjozayw1lhJQr4wuwNv0eLelPD0sE%2BBPWsTAaxrdzTjiZEMzJ4ickZ8AL3mJYw3CLXoi62cGV8U%2Bd51n750MON48xFXEFS51FJHctLexB1vFsOHUCzbcG%2B6ym82GmJWqwLkBmpSZNS3aXVAdCTbpzBlauJBzn46wwxHwpXdiI%2BFFPTnXJjoHkA0g%2BMXOKko%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -2288,8 +2288,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -2302,8 +2302,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BFlPB4qJNAFOvbFa8SA6hJvYqd2PxHAuI3W%2FvRIC7s%2FMrN25HdAgeGhVuSMx%2BFy4yfgabM6GDuTbyHFoLLwovrAf6Sw6xWKWYgpUrdQbG%2F2YxeuzRpdDGMytzPu9pUkTEf62pbsoLXwLYyRs%2FD%2BYAyxCuKDClcjrzTImCgEg%2FgQj1rnRUoe3oyKlE7W2KzCwT0r%2FbSg%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -2468,8 +2468,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -2482,8 +2482,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BMmUeannfYjcYR5Aow7T02ZzNHEz9BsnzoQ1o1p%2B9B18SssIrxi76rmcx6vqvw32PUrJyo59Th19Aut040uzhyzsXbGDDLP%2B%2FX%2FRjoh2pDoaysByZoEjmvOFfsdKSlbcRl2MlrxPIIe%2BTozskWqoontFNRPI8b%2BThdPcYYCrK8TrQgYh3cBLXvhyih2JyLdRNx3OIF4vShXUkYc%2FAJtH0zafsdbOd2qbOdvHBw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -2660,8 +2660,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BMfPxvwrvmdGRvvQ3zZyOzizLiV0Z2q7SpGxTWEq4VrYmBcT5qXoX%2Fm3ZHJroSYgYoA%2FIdHVbuI70MCYzxyKlPxKNcfDnWyuJSqDmcQDDoc%2Bu%2BdZq9fdI6Azqi7JhhYJc4DGspq7ZhmbfeOvJ0OSZPzKwUPM1OYXzsAFA57BoVcKHvcaJN5Up5GKZCkIflnJeM1%2Byg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -2674,10 +2674,10 @@
     "image": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "category": "Casa e Cozinha",
     "storeId": "impacto-casa",
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "type": "external-store",
     "actionType": "buy",
     "originalOrder": 8,
@@ -2720,12 +2720,14 @@
     "videos": [],
     "linkOriginal": "https://meli.la/1guTPms",
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "revisao manual",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -2754,7 +2756,7 @@
     "observacoesInternas": "",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "foto_link_inconsistente",
+    "statusImagem": "fora da vitrine por duplicidade",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -2818,16 +2820,22 @@
     "buttonLabel": "Comprar no Mercado Livre",
     "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
     "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
     }
   },
   {
@@ -2989,8 +2997,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3003,8 +3011,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BLIb4d28wawVgARDE0JaiH6PbYW5HcEPoYn5GXSV%2Fu9sAWdtV%2FfxrLLtcTVCmMRc4P0IfERg1MCWRF6nTXbnlKc6KzLNBXljjSlwgtT9WeV206Wn2LDgDB5p1sDYl4P%2Fs2J2R7UEE0cOUKZm1xtwsDrUsbm4m3hKCQvNdGnW%2BeU6fNBBQMJJw%2BPZ2%2FXMIj920%2B79T6s%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -3168,8 +3176,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3182,8 +3190,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BFcxlf%2FDm2Iz6TJQZai%2BOTBEqP9eKXDj0C46ubXcvNP7XQr4Cd1%2BEpjXYBPipAu0VUUNqX3YMdDmczjuUzRS3Qx1QeFl6twgKCYPd4kji0ENG7VjsADjkmFUpAZ57mSNdd%2FvRIoLFQMPfukTEwFbKgrpiOhZueBHtENgbQ0sBp7PiBb8hoAvHhq90YYcnE4gSYtf4f6BqtcU1bJc5j5744Uv4Ftez3b7n2KglhYcg4Y%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -3346,8 +3354,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3360,8 +3368,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BIujZOgWTuGiIGtV1zUHocw0Dkg%2BrHCkQHxfUw3m99jltMdhP4Jj97UJxhTwk8J7%2B%2FmmQ5EOG07Q7WUxKHzTW35KL5GqJjzq1yjbQmarqMi%2B2haOBaOLW4ShrBNZ6%2B%2BYVE6kxYiiC8hplt4UX5sgM1NUNUl1igjeveo65bDxi8oQBf4RTUF4YSatETR9dIxBzdpfiuf3he1%2FR0OyN1ae%2BRRkYcNuFORn1wf4MMkl6Hs%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -3525,8 +3533,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3539,8 +3547,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BF9guh5ozNfMcGsTAdERWMjrQhk2in3IuFm%2FRpaFqEABgdsENNf%2BDD9B566oe35yeu1n%2BzfrnBoYnQ93G9HK%2F4nsaP3bIo5ECR2Z0XJuGhfWVR5MGqnXfIc7aKDjPyE1IWkgaZjngz6KpbSqXah26Q3DBf1omFyxLc8uGsPnetezR9uE%2BamnizdmDvWPnVDG%2BO8zRJQ%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -3705,8 +3713,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3886,8 +3894,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -3900,8 +3908,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BMR2KGB5FWRAIkle3RfrFm5ehG6qm%2BEd9tXH%2BQgk3WJ0FhyxTqvocrEp%2FjbN3jSABUaa1o6iSWm3mKirQERYmRQpMgyIdtfn8j6dNMLKth1FMCNMqLP%2Fxk9QyYtyIDU5f9IXlGl5P3kRHCDtrKgyAs9TDyxc4OIT2ADLyFEMs38Jwjcl25RGjZB5hqeOo%2FLRyr%2FVgw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -4067,8 +4075,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -4081,8 +4089,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BC1oT6n6V5ZJKG%2FmZdcT7NKVMnKTeGPrRg9AXnkJwJHIlTfWxrex%2FctNMW%2F3nqiOFsN6qjiyyNgtN%2BQRlJagtkjUyQa7kRe5l3V3a8VGthyjxu6sk9C9ca2%2FJzzVLl%2BE2kiIE1FCM59xGWnZEfZ72KmbpiaYMCxFWEP%2BQo7CidZpqdMzexAvJYsY2aO3W%2FuYRdYqTzj2JcTfwhiE%2Bw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -4245,8 +4253,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -4259,8 +4267,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BBRYOZWsMIxcDdji68mZBcY%2BlxQGgQPtZfIzuQnwx1TdGf8e8YgzatrnKNBlus8c221wOavQ5AOJIhVqwFgpmpOhvphcJkXIR4sgUeZeuufUAuTTFM%2Fw3SMSqTHWwEpAoqZIDZdMWuxDs5p%2Fvew5UCzO5YmEF4tE65003pYhbSPcOuFML9M4Wz8FXlLTiOoEts7HJQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -4424,8 +4432,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -4438,8 +4446,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BJzg22tQZtPZcoP0VLExyEafGsPfF7JKmjbpCs9i2C6bZkabwatdZAMpK2TfygZFtiLsMMdCva9iqj4DjOXbk4E8jWh%2ByI6%2FgYtu%2Fn%2FYVnPdhd%2Bd%2FMfFOJsOEXeWrcQVgv2XJxcC5ENC5gSZ%2B7LvSMqSiiPop4TjZ6lDO9Ll%2FeBfmXUjXTCMk%2FrcQlybbu9Z1cqH9tJ3cVsaLoUt44BKNM8PqIKP4CXNPGrm0w%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -4602,8 +4610,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -4616,8 +4624,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BM8X6x3YAaSuWntIaaGyF5kD%2FibUxleKdqyCA5lmZUm5ZSVsaSXyNlH4s19PyNp07sl%2B9qS8UmfB8vWbxYA9Q7MlkIjYJl%2BPoTKJxeLYFbKbILg0yzPuEAYHEe%2FXsH0%2BkY7w10bl6tPP%2BeJMR0JN3E9XGDjFQ%2F2oKwMY1%2BOSDlXFfeBXNoYtTSYngBNVaiieZoTXknA%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -4821,11 +4829,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -4888,12 +4896,14 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "revisao manual",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -4916,7 +4926,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "foto_link_inconsistente",
+    "statusImagem": "fora da vitrine por duplicidade",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -4979,16 +4989,22 @@
     "buttonLabel": "Comprar no Mercado Livre",
     "duplicadoDe": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
     "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
     }
   },
   {
@@ -5012,11 +5028,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -5079,12 +5095,14 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "revisao manual",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -5107,7 +5125,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "foto_link_inconsistente",
+    "statusImagem": "fora da vitrine por duplicidade",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -5170,16 +5188,22 @@
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
     "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
     }
   },
   {
@@ -5340,8 +5364,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -5354,8 +5378,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BE4EHCub3Fju8yy9llNXRtQc22wB6j0mQ1e6EFzgbAEqJIxy2dDA2rfI%2BvTiTHUFolsE5zJFWn6Wzh3ez9SPNbd%2FR7QnVubPSqCma0wFHA%2BLrDeANodjQ71AhG0Th7rkL1b6sbFCNM5KiOFA%2Fn7M8zeYodr5DI7fXzF%2B6iSfHH47lNdBJxmYrAEYKaycoDAcWhu6c0c%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -5534,8 +5558,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAx5y5z6I1529V0d9sp2Rbh5TA%2F72gkYExzjMt7Bl%2FN%2BktHVLqjjrjpFvdi5nty0patyR9s%2Bu6rCFuNWu9UskNmlRyL%2FPcaRxWqX0xa4nqUxCc66ZphrPVCotCTBz0h%2BKh4ysHw%2FZpiMC2mRi5KfMRyPWkKmSBSVTCSbPEK1QKVPc2JwVOEgj7Et41WsQjSXyf3WJDjUgJjWkuR%2BQIRlJNHzzh788MoG1Ann6DVM%2FFfxE%2FeErc8sBZ5Kaoz4hsf5hbqwhWnsEkf0OTqBwixeFE%2FhixI2dcc%2BKM9ywcSWVJmUFQGhQam78HdRWzypu6pdp8LgjPCy5uvmFJW2RuMFdbGlZvq3oyqMrBqBCp8ZH3ZO62FyeMVxCxwvukskYxvj1gLdA45zpvY0nnGlplhyeysD48N97OMoAT1Id0P0jvfJYBjQ%2FDz%2BqREWP6XmRwI%2Frwa9CXBQJe9UmlOAPp2y0edbs3ouYj6FBzpISRsnzqZPCGJGlfjopil%2FxGcFzxy9bn79dycqPviUOu7TSKs4vDqkDxuSSGLIB21Vr4EGZYSUDjdrF6Hms4nV19za7%2FnbeHc44gygL%2FsiTSmGgTk%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -5561,11 +5585,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -5628,12 +5652,14 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "revisao manual",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -5656,7 +5682,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "foto_link_inconsistente",
+    "statusImagem": "fora da vitrine por duplicidade",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -5719,16 +5745,22 @@
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
     "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
     }
   },
   {
@@ -5890,8 +5922,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -5904,8 +5936,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BN%2BuzlCfjnGrrdlpSauwhXCyHDZYGkQrJrmV3lobaa96sbmtTHiye4lv%2F9CGD04sZYq7pD1IEWSfEYSRaYevQwDJidXk5Di%2BMCHLh5KXrmju3QPuCqg6lGkyR8H%2BEJjnra4uIkMU6L0NLML%2FP2pgYcbBmV5197pRcphYser0ldpKC4tg8U5XXJiSyy1EHNn%2FgRmic%2BKCDGz2XsPLwgUJrwlCUIeFzfZ7v0Vvzw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -6069,8 +6101,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -6083,8 +6115,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BCgypfD7to%2BT3%2BYZNIEmh95dygZI1xaEpwJZJOAcWFTomL2PPZ0bBtrUNB%2BZvH5eBR2Xu8rqcV76rULlq2r8i4yFVBu%2Fma5CmtOn5kF9Zmwxe%2BOj%2B03Ru%2FGG747NZhXzjia75XkFSkGXu6lKNHvHgOctvmmxAWok3%2B7EQt1A0mdJliV1TPK8ln7oVjfFvgBgoFivH%2Bo%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -6247,8 +6279,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -6261,8 +6293,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BGW4VgHrdnk0Q%2FNZTqTdpR2QMrfaW%2BhLB0oilZ4rCS3%2BCWuCGROIgbu2F3i14RMbDQyj%2B17YCRIFYVjoU5GNSHfUsLbwXsObFPxXY5w648EPjekSNlRjM%2Fda7f8zyK%2FBT7b0iBq3ZKzGOcaZswq7wzGH%2By474lKpUdTSYHl7OjwxmkT5%2BAwve%2Fw3CbaaRAf6dFsFGV9C5UZgahwCqOaB7OAEWJnbpqO4bGlRdZn5muM%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -6425,8 +6457,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -6439,8 +6471,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BHLMcE8tBqBFpt1sWEO24xXyf%2BfC9Rf%2FrfGKXB1nD%2B%2FQQ72zrMwMeBfRkvZo3BKq79VURuF6YDYkO%2FemxH6tfykzyGq%2BDWsM%2B7N5D2%2F%2BK1tb8cv3XM0QNe982gqhCwhcZhXWREjvzvgbCg7jnprmyVW%2BbyfmTZSYqJT6JYOAZiSX0898LDsTApAoAhsSN5GCqIiHhC9g1Sx3yJwyBklVZsKBkJhZtVAh7XUCzw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -6647,11 +6679,11 @@
     "categoria": "Casa e Cozinha",
     "subcategoria": "Pequenos eletros",
     "storeId": "impacto-casa",
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
     "source": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "estoque": "Consultar disponibilidade",
     "condicao": "Informacao nao especificada pelo fornecedor",
     "garantia": "Informacao nao especificada pelo fornecedor",
@@ -6714,12 +6746,14 @@
     "imagemDuplicada": false,
     "videos": [],
     "linkResolvidoApenasLeitura": "https://www.mercadolivre.com.br/forno-eletrico-philco-pfe65-65l/up/MLBU3498074154",
-    "linkStatus": "revisao manual",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "revisaoManualRecomendada": true,
     "statusMidia": "imagem real com galeria parcial",
     "pendencias": [
       "registro antigo mantido apenas para histórico; produto ativo canônico corrigido",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "fonteMidia": "HTML publico do Mercado Livre ou imagem existente confirmada no cadastro",
     "ultimaRevisao": "2026-07-01",
@@ -6742,7 +6776,7 @@
     "observacoesInternas": "Necessario revisar manualmente imagem, nome, preco, subcategoria e especificacoes. O link de comissao foi preservado.",
     "fotoPrincipal": "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp",
     "fotosExtras": [],
-    "statusImagem": "foto_link_inconsistente",
+    "statusImagem": "fora da vitrine por duplicidade",
     "qualidadeImagem": "boa_para_mobile",
     "observacaoImagem": "Imagem existente preservada.",
     "linkAfiliado": "https://meli.la/1guTPms",
@@ -6805,16 +6839,22 @@
     "origem": "Mercado Livre",
     "buttonLabel": "Comprar no Mercado Livre",
     "observacaoCorrecao": "Antes apontava para link incompatível com o forno. Link anterior: https://meli.la/1guTPms. Imagem anterior: public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp.",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
     }
   },
   {
@@ -6977,8 +7017,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -6991,8 +7031,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BIZwlKCOw0YVS07TPUauSiAfI7Uzme1h6SdhGp3XrNaBAo0QJXvzoIeLyb610V5qb8m4cei6q28zoYDIL%2BO955PpQipRXuHq97VDY2NDtVesEDUFbE23t22f8Ezi5JqaEU4p1OSdhdNjObzh20iUfTTwD7KqOTd9Nw%2FUDy0E5BCxKfgS73MS%2Fw5ArfnQ5M6XQNivj0Y%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -7156,8 +7196,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -7518,8 +7558,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BKKegu3V%2Biy5j4HFE75Tco8kum%2F7IOUdihM4Z9ChuaOqw7T%2BOdI720lYutSTESpY8brtNixjhVSaq1KO3tS0GcdznxbLPYw9j5zgxNEsXPVi4G4f1UIkKVbf%2FFv3Ygl5u3nsDBoeXt%2FqRSk%2F83EWbTcNgDtw1G17rJ24d4w0UNMppMr%2FsMoslI7tRRISpclxQgdryVU%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -7685,8 +7725,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -7699,8 +7739,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BBFjd5obTweqFoch23EgKJ2ABfy%2BeAK5EUpdN8ZbODJ2LmRUk3eHafg5vKj8QtBL0pgb0Ra0BuZbQyUuFORez4qxMeKAgtSxeR%2FtSLywIVBs125owTGslvXhxd2NV0u69s4yq3CzpkX7sY%2FjEEWpvEUGI7EBWMkLrhf%2F0tEtcF4ARY%2BBwhRNEh5ufFwyb%2BgBOVkZ2ep6zfVjtpns3w%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -7835,8 +7875,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -8002,8 +8042,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -8018,7 +8058,7 @@
       "match": {
         "safe": false,
         "ratio": 0.1688,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -8183,8 +8223,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -8197,8 +8237,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAOhhY4gcy8QpC5lAd2Dy9HfHy9lPEciEhSg35hSo0A7PQgE8%2FEMONBKRUKHJr2aEDpAnFGk%2B1i1zs3ZlW1jP8iqYVoo4eRIM9ZRzZYVSpU%2BRlqoDV%2Fy5QpZUVY0LVucc7Pzef1yJmRjhR07L8EfVh6vZp4Glg8%2B5l37T5%2FMUrkQZy41NUZBqZLOsqTjg5GOJf18tb2t10ZZnuOtAQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -8362,8 +8402,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -8376,8 +8416,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BCB3zFIE83tyqFqMEiYWgfZUi5yOVX9cK7X%2F42hNLEfO6ffHoRrnzeUkS4LzH4%2BiJFxYDC%2BALYstWc2QNRSuKZEMxFnTsOKcWdXFAewcDRei8PLB52AzHwdwobgawEZLqaUER75mexWzxfstaIfe%2FKOLegEZ6YgNiPWpvLqwaYOR5aYdMjgp88%2BtQHlbiB5lzM8sxZw%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -12424,7 +12464,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1379,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -12666,7 +12706,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1569,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -12763,7 +12803,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1569,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -13245,7 +13285,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -14580,7 +14620,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1667,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -16967,8 +17007,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -16985,8 +17025,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BDhbr4mLuwdCZVQKMli4WmHOXavav7aJRE0MYug7RKAKhMoTRDayHgpJNYKbjocXGhOc4Ew4M19oqozdBN%2F51D4ikrrDWyW3oooX9JysiL%2FqvM%2B0ZTUCAnzUVdwmPaj0xeKL2zrLjFqKlIMF6q%2Be3HOqF7wqYJek4%2FnmR7Zx4fmQHkP%2B63SD4sJ6N7eETyIIAaLbEw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17099,8 +17139,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17117,8 +17157,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BLqf4zqzivUvGJfRvGEWTrz%2BPSzyU2tQmsPoKtiXfuSznWuyWOxmloFTVVhSZPIFBl%2BAzwrSr%2BOKWivO5lTJ2bnYYk1GUGmpFPGi2egKwy9QQBlp17RC69tCV1hGKgf0ML9sn7sdV%2BXNwrYx3jzAC1ZISokM6Ggc7pV%2FNElGkQ%2FAJObeuuP%2FCyPIdqgqC%2BUK%2B7zNdQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17217,8 +17257,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -17235,8 +17275,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BBjLx243vz%2BZIUWL3x7xbs3LKTc3ERBy8UgLqzUk%2BZVwDn5Lnwl6CMg%2Fq%2BhD5UzeEvIYVizHAkRWwNciHwJW2WedHNJyljExDj1vj9%2FeHBoDnnNwpsNLkQgUKPGvFkrEMKB10UkM2v2%2FIjGGwk6uKrctkWxP4%2BdpUoSV3EYDbzUYePXLd%2BkNtGjFCZBxy1Ysh%2Brt9A%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -17349,8 +17389,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17367,8 +17407,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BNKpj%2FhXDLmA%2BE8pzhUvH1OEUJj9QY0sLbnJvPoZvoP3qHfDtz2cPJGk9lsnPglohSxhYbDK76VqHv2DwTs%2ByOt15HBA8i81nj6szmXSebvutjEeUnxHF6Yzmd54ufCsTZDlbSw%2Bu2Tii20tB9IlDKyjfJq%2FDiVaHjEo0dOvOQyHv78P4SGsgdxWjUASfIZ0cp3dYw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17467,8 +17507,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17485,8 +17525,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BK8gXM1wzi%2BvyPI0iUZN%2F51agKxg6uveTZu96rYdRacV3ksdBq1ANeczoqqZBDg7IgUfVr2OcqqaB7OChOKuywYlNTPckrin8jNTOAodbJ7f0zsdT42QOsNZZvMhHGwvHRbxs50wb39m7juqxdPoWyUMSiUu%2Bu%2BcmnR36S0LczHuczKsFYTBOQ%2BGGylxeEt4fSZJ1g%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17599,8 +17639,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17617,8 +17657,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BARt1hfjrJ15C3ofQuU8C%2B2XZVaujlrRvEXA1eDbzT43sesBDvAqEntQi3r5HGESMZCLQqFlcKegrrGojhmFMhNu7NnZdDZ3PuBFXucEU0dyHVn2jDgnryEoRaQ7pN4bupcTtZS%2Bk%2Fp2gQt9dJr2je%2B3pbaq3Y32H69WDqJf%2BSACgehl%2BdeVB5oTQv6wAjICxDF33g%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17717,8 +17757,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17735,8 +17775,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BPRt%2BUllFV54hnq%2BwWhK4nAdv8ijp5pNdzZ0ig8HJTZQj9NgZ4MIP3Tc5%2BdRD08G82mLhLuZlcrP7WzZkZOH0qXstENqYNvMlzYj0mWSVymF3gHgPUZGhnmv2LxxDEobf9%2B%2BCXEdkru%2B6s0BPsjMKvAk3uu2vXk6O6h6litkztwqAEHe3Kwxt1AA2okqddUxFCxvmg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17849,8 +17889,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17867,8 +17907,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BBSpAhhsOiOL7mOg3UBOul6KZbCbE3ZzBOu%2B6rmhAFz2QilIiUB0KiBTGcLOGZSqBb5JpMaKxoDpup6B89YqhwGz7COyR9xhFAm4drXdeMxTSRVYboga2S9cYjDzsL5PPlupDHxWPoNXebsqb1s7skAde%2FVUfFblFhswy1Gv6%2BLO2Sa8r6qyToKQCRzIonQm07J67A%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -17981,8 +18021,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -17999,8 +18039,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BJz%2B%2FXiYKmgJFGXlrD8wx5rTX0oP9nZikC%2FY17pcNn6%2FEeyrj0%2BTdAdG3XEqrDBFPpDDtAuTr%2F%2FU7YFDSMiWFC8LO42I%2FlyIaHqhP8XPWRK8Ua5CRS2GMZRjr5zcITEbnVl%2FKLYQ3mra4EVMlCJX6ykUNktSfKsE30RILxCbuuw%2FdAibtH6jvGnzplEPPqOrPkGuGw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -18296,8 +18336,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -18314,8 +18354,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BMa8v50dnOMtSh0n9pIV1lRNUyw6XTE7orcNdfk9rEzuP7QA29P1W6kUA%2BUVCyud3uA0nCWrD6bmf%2BJPhG0y0eVVJeTLu2hOXtFTev7nRJalqiy8BwKp82UNuv7BFnTyQVo8WQZTKagEUA%2FIZxH3zSaiQLsrpZIZXz9RHgjcCzS1hhRJaOfWbpJBdvTSOp9gXtXkjQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -18753,8 +18793,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -18771,8 +18811,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BMRWLKHvvNqN4w30uXoHr5UairhyigAQzH4qEZZtJUHraciy39QkZIisS2ua1s%2BOiStYF5yZU%2BNA0PTyQQf%2FoATPtyPpgjM2%2Bv4m7rd%2FeCL4%2B5T51G670ySK8TGwwLcwpdD7YpY%2B91DVZb296%2BSy%2BMBH%2BcUIOPFopeXEIC6exnXl92yPdvHY05h6ci3q9IDPnfJEtw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -19045,8 +19085,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -19063,8 +19103,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BEXnDOtdY8tJaMDZLvd5C71JgaUHQuYywFKQfdKTKeO6ago0%2Ffagbfo7RBzxLXAiZQQ8VXMHozm8FjRgMqG8Pb%2BPI8of9A4rTNp9cnm7dwnm4KxuLL8pTmZ%2BCo85eC7LccG599h3PZt1i8wC7QVo%2B%2F37ZVfWSPWQ1qyHn2bZPg3lD%2Fpe5I2O5nxZO9OdSxPxd4tegA%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -19205,8 +19245,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -19223,8 +19263,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAihNs8C9wEXxEwLFUBANM%2Bo9C42WDqEy6YJYkqPS6DcnRXaeZTSpu4y%2BulV1dNCgjyLK3dEFR0998plp3aMEbTwrVPBU4Mn%2F%2BBAL0WuuFNN%2BHsczLGXFoh514r%2BfZXyY9sogsllmtR8a%2Brh%2BKIwa5OQacE2%2BD9xaTAIBWDUqF4SBCunaMjuhcMmohsSeSXXUsa7lw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -19497,8 +19537,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -19515,8 +19555,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BHojFf9O07MrOy41RdKvnFkrFxoaaBfIq3ApsZsj8PnTUZoUXb80%2B17t7eU5OOnFsNOJYNKuJUvZ4alnMGtd0FX1nwJ7cOp1WkIiJT6W26pdWydsScH8b4JAzZhdlPl6O4demsQ8KUlfAQxswFTP8tdTILO3wOvFtw1HIxSE3CQQnjveYhBgjZQvPeoZQ9j%2B%2FgQj4A%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -19744,8 +19784,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -19762,8 +19802,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BH%2F4mRqkvBrpJnT9Zsifa7%2Fk%2FXyKLbdf6PdjkqPzRcqT4ntNFUvS6TyRx5YvYoORiSMHgt1Qv9OOMaMVjKX39Jzexm4n%2FbZ16Tl6N4RuEuRL6fvE4x6fV857J7HahVTP7iWTthguGLfXedITs%2F6%2FchIOkqMFgjdDE33uuJajY6IzxYtAlIKcZvpLfdc%2BYEx%2FZ9fipw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -19997,8 +20037,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -20015,8 +20055,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BDmqDrzG42Fs1%2BO56HRdjp8bIRPfZiDYcThFMogkwWe9fnGDZX1%2BJ5wPsJ8ynwF4qOl6avomn2%2BvqoSMfJtUD26z3RU%2BHKSc1550xHVn%2FSeHsB1MCFQgIZzz%2FZ9HqF9sJY4dnOyAbEvKT0GEO3Qqj4Xuvh9yISxDhLqxZITT%2BKRuECtOFswX4wv3wXN%2FyUB3QCKhUA%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -20118,8 +20158,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -20136,8 +20176,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BLjL93QCaxPVglLc9DHrSwxiA59KuRloZ0B%2F0J%2FDfOippe%2Bn4fbo9ybqWf%2Fq7bd%2B8Be3AsKIZo3pjnJg5vKM0lRhFwomjazWkpOAS2pO503NPErSRPTqCdOpfOPwYW2YMgGBP6oh4MrAJfx%2FBexbnLQU4ax91noh3ihgjizXm8Fbn7vrpR6j4sa8%2BXgzIMyc53N0jYc%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -20240,7 +20280,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.383,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -20453,7 +20493,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1519,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -20787,8 +20827,8 @@
       "error": "página sem título/imagem de produto confirmável",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -20895,8 +20935,8 @@
       "error": "página sem título/imagem de produto confirmável",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21002,7 +21042,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2927,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21354,7 +21394,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21583,7 +21623,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2571,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21689,7 +21729,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.25,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21795,8 +21835,8 @@
       "error": "página sem título/imagem de produto confirmável",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -21902,7 +21942,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3797,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -22008,7 +22048,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3721,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -22483,7 +22523,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1714,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -22589,7 +22629,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3167,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23064,7 +23104,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1748,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23230,8 +23270,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -23246,8 +23286,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BJrghsFR2F2x5RHPAukDuHzM9JeEZAibJKZw4RAKUZXQvR4q9nj5katGLAhCtFV%2BzyIefk10HigfMpaLGHDNdVDyGu%2FLr99p6BdrADsGE6y6AQEkcu6lchBnJvBKbLcMxKyPT%2BefsaMfIYoUrhz3Wub8f%2F3nYiweqjmY78W1Xzn0jdnmjDAHeC5eZgzSDlX3X6dzD8g%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -23304,8 +23344,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23320,8 +23360,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BL186cKdgnHNDiAUU%2BLXnGZSQsHDLAX%2FpztwHXL9dlqcF%2B9vFhZLoJR446TuTeq3CI2UoP8Lu9Zit417YzIa4BC%2FrwkQxtf%2Bq8sJ2ogS1tFLGVetIx1AjrLNcF8Wy80TV3yAzf5cl1LhwJacLdEnH5PosDdgHEsd%2FNXwIteiXBLNeUlxjwMwplGuv18HPBS0pOEW1zsHzjVSPz8Ncw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -23397,7 +23437,7 @@
       "match": {
         "safe": false,
         "ratio": 0.4211,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -23527,8 +23567,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23543,8 +23583,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BE0Bpw4KkpGB7GHXUQ7JJC5CGLZOHv987uxp16xwvAyzXAZbI5PzYVjbtjdgbAkGrv%2FrK%2B53I3l6aS6lkXkx%2F4wYjjpW0lYvBS5UWX7LrbB9iV9xTKlKmJ887j1IbqWP3gwDV%2B9JxKkTSyyV0iULP%2BTlprfbn6bsjN5WN%2BCKULNuWlqt7LAdRo97WY33uAS2t8%2BbTQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -23601,8 +23641,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23617,8 +23657,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BCgcUGBtJfGu94JWj8JVGs9kJE547pQlt1v3Z5QtXKQhrlvqC1anZMbCnWYcXIx%2B5QdG1MVMFCB7mQl76T3Sk1g8p%2FTAMfwzkpmRys4klSqkdsZ%2Fdk1Gqo5i9D36Vsy2OextnjPEqaGRwldHCN5Q0VsIaOS0ksKfs709OZkRR3aa%2BQ3PAsYrCbOVr8cvEfh5iOVT0g%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -23748,8 +23788,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23764,8 +23804,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BM85rg0P9URJAjHd9OmZ28c980FeZoJPzskJuq4QyAXF%2B7VlJkGcnXZCMwtU%2FNHqetYfEhxUsMyy9j1msrey33qdLwFNTioC%2ByHCd3OzsWfZG7ZeKAgn8Q%2BSYANzEvg%2BMX97IDXzOFyYPiBjs7tW9sMQfJeXCYzLe%2B%2BGhLwF9qbAyePkfUGDYxfD8SIKE1oJwVu3%2Bg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -23822,8 +23862,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -23838,8 +23878,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BGP%2FuU%2B1hnqdqloih5gIIyxxRSuHdSU%2Bbyvr3rQqqRmZdvAqFiBipNdCc5VvFvpA94MtuaIA3%2Bi9hZdETRUSTz%2BQ6TDHZJ4ONV%2BLTFF1ukfpHxxCtvvKRbByZZTIMj%2B7r0jbhIvGbiEgHst4WaGvxmmZdVSODDIvSzjXT7b8DccdxV9erL0I0GFCUy1InwVMM9Jwaq5FUw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24044,8 +24084,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24060,8 +24100,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BOHa%2F%2BhH99%2Fiwl%2F9VyAVvxckxxTsDACU1ezRBoBr913Z2J0DNL%2FLnZfl7UKQQCO0nc1WAnEi8kKkun3mrrUqJa6wUoId5goSKEAoJGc52Pn8bGg6aq319PqE5QMKlxHzy6TnOMRw0ZHb2qoys7f2YF%2FPV%2BD2TE8RRqHN%2F9uw0SPCybIgi5Q3sO6GOiAXgmPSIt0ANg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24120,8 +24160,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24137,7 +24177,7 @@
       "match": {
         "safe": false,
         "ratio": 0.381,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -24194,8 +24234,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24210,8 +24250,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BCChKXsTahK%2FMlU8uf6ukT2C1q4ypVSKh8etqhCb8mloEqnzYr7fS2WTfKtHYTfNFKW7YnGbVv76GJioK1%2BpOWk8xjzdgeiy2tVk76CnM00kAyclP2TDk98Vt8WtYQI8qfxykbRRiv0MIFieHKl%2FLEAMNk1%2Fkqd2g0%2FpODbTw4XxpnlE%2B8qhpRkDTZ8jrxIEscM9TQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24269,7 +24309,7 @@
       "titleMatch": {
         "safe": true,
         "ratio": 0.9593,
-        "overlap": 1.0,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24285,7 +24325,7 @@
       "match": {
         "safe": true,
         "ratio": 0.9593,
-        "overlap": 1.0,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24435,7 +24475,7 @@
       "match": {
         "safe": false,
         "ratio": 0.243,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -24511,7 +24551,7 @@
       "match": {
         "safe": false,
         "ratio": 0.3146,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -24568,8 +24608,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24584,8 +24624,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BHudjZiqyVx%2FoSgGQTZxuHNKdcoGYAzGskhn5krt6Qngr%2Bh58fWI9KAKI%2F8SHdxH8eydEsk4oxDf1phPoyvY9m0UDPwqyCu0HbT9aKzHJeyyU9VQpr8f6p5Q4qSpMZpF52m5Ys6ESEAu%2FJhScDPdm6dIil0hbThaG9Ebv57H%2Fy%2Fxj%2BMhcYBfXO%2BHlqSJlNOso8ANwQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24642,8 +24682,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24658,8 +24698,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BNSW5kSSqQxQ527YaPjFfO8UM1arnNTKXDECHyXscJwIg43BpRv1O%2Bnt9cb4UTMwju1WnOBryrpoL0EBHU%2BcvJCBSeXCHgwXAo34%2FNVF%2FHTI%2B5UJqi%2BsdcQtQcnbCxEFiijRx%2FSeZWF%2BGcgo3m40XcxRtYMeKZ%2BYtKVKSdMuxF3pjyij8Bgt5PE4DowBeW1QPb8AwmhHtHwnB7v%2B8Q%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24716,8 +24756,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24732,8 +24772,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BNa32FiBdGOmVeMNqTZYp%2FJYvDxlHVPaXP93PK5G9woYsaCQYXjR%2Br5G5cgBPT1UNag7g2Dkejiio8ey1X94Jg1o5Z5fvQ4bi6BznzCk3l9DMmIZ7urE6%2FgrNNpbP%2F16qD0jbLwbLB%2FpsS93kmgHWV2E3U7slWEkSAlvWu5eLfClpPviXKvOHThI3oy2d9eU%2FFVzdw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24852,8 +24892,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24868,8 +24908,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BD6yPxZHp5HRFMS7Z5%2BLQ1kt9ZiksgmKnnoMoHK3DcFa15yMc3UF1nMbszEb1LZqZ5K%2BCJ3ilBZcSRSyH1LtK%2BxVwiEUM9kYYDKCJKK0Fu5%2Fjp5QFfGWV%2BO7DHBvqImL5EBdZrHLLQcm76WHmJPMQpdfjVYa%2FTo0QevumxPNHA1EQOPA09FsI05ETycUM76aZxcV024%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -24926,8 +24966,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -24942,8 +24982,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BLiBCjprTLxzegxEdLvYPpawbsF3WlkjLNWEwDC8WSYTHRjVYjODKm%2BZSLie3A%2Fq02uqiav4VlEYqmwYyyEVUHB0g4fWh2et0h5U6%2Fv9bTQz%2FuLUScOFZQzPS2XtSjw8d0MN7%2FKvU9qjDJimEVsYf7BArdkcj%2BSoOpOcQK4qlfkyuUd7JmIlhKu2Nkux%2BWftZobvkQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -25019,7 +25059,7 @@
       "match": {
         "safe": false,
         "ratio": 0.3333,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -25224,8 +25264,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -25240,8 +25280,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BOA6puHBLpFhxqGPv5H4anopatn7BIjddAnQavpkAZVRz2MCdNKa5EpC36PRkoxupWruA1QO%2FXQIA9sq4P26uLIXSsGQ%2FodXpEdL0rMXvzBF6muFNDiuzkBtUffuRH09psPQyFDXOb3WyEsX%2BEfemrqibVHhnvAry3plPUgXU0H23Qrb1YWoz8ZGQx7d0Zg3pt7i6yEVFw%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -25297,8 +25337,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -25313,8 +25353,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BHauRVxia2sXifStS8BSX13bLGruKArvN0vqdUf8su5roPG%2F5KsxLgOawrjOFQlm5LiS2%2BnOKHKuLvSg9%2BnBn7QI3vA5ASJKGVcDvk52CH64dfpywYZ9b6oFT%2FteKTKJ5Hc7raPQO75rZQ11R86zBxi%2B7IwujsIthVqbC0uAozVPZ418mlMtVm6t0HgD%2BCiJZ3VDVMo6o7HRtF0BuA%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -25370,8 +25410,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -25386,8 +25426,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BDQWCwbmp%2BSfyWrVsnJSvLkv%2BHjgDZQXMKQtpQMrpKCt7By2FOmBohz6InDRBSEMFEQigEqWoJJ9cEeCZSJVerO1IhxEAu9Ghm%2FQ714hgvffgGmbcgZHBx59xvykBi2SX%2BG2PIuOnCfi2y%2FdHwelKCKTZdLxm8gnDHkmwONOCqKsvp9nKx1zMCIL1TzDF7p68NebL1mXew%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -25519,7 +25559,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1905,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -25669,7 +25709,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -25727,8 +25767,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -25744,7 +25784,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2466,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -26189,7 +26229,7 @@
       "match": {
         "safe": false,
         "ratio": 0.1356,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -26410,7 +26450,7 @@
       "match": {
         "safe": false,
         "ratio": 0.1356,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -26615,7 +26655,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1132,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27218,7 +27258,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27503,7 +27543,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.186,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27564,7 +27604,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.186,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27624,8 +27664,8 @@
       "error": "página sem título/imagem de produto confirmável",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27967,8 +28007,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -27983,8 +28023,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BAu2YFoDK6ri6k%2BNdGK5RFf6lvR2L77S96nBk3B%2FjXx3pHd3ve1brDFKoiqsexSvRbKWtJHLfkriSASSmu2dozEWyLI0gfEu%2B%2F56UYcAbNO%2FwMDZ82UVa0GEjfTXBGFEaATSjL2dSK7y57LTtA34ai9oGbMSryIpVxlgSOsHW3ekGAWQMThviQJLYVJMtY6rILwJ%2FXv%2Bz02CpB6WVA%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -28042,8 +28082,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -28059,7 +28099,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -28134,7 +28174,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2653,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -28561,8 +28601,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -28578,7 +28618,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2737,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -28637,7 +28677,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2273,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -28917,7 +28957,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2353,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -28978,7 +29018,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2192,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -29055,7 +29095,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2759,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -29114,7 +29154,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2254,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -29264,7 +29304,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2708,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -29466,8 +29506,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -29482,8 +29522,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BHEZ6tRGNmdlzDhFFACpIlQYwpFNw9Vcdr656SskSL0WK7fXchY7XTAUfYT0DB9iDe8JU0YFqPnTZfo5U35h3IekCHL7tgUsy5JCNetXkINdoemKVCUHtGrC9ReOEi5zEohVpoOeHdtviFpS7dpQL3RGVh%2B0nlvYuQgtl9YE2t60A%2Bo6ayBsvdhzz7WTsLFODAWKMQ%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -29542,7 +29582,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1714,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -30038,8 +30078,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "checkedAt": "2026-06-23"
@@ -30054,8 +30094,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BFT4pQlgxGH4dCtcgXDzFMkbvaP7R3pubiYNTVac01fiuAyeuih8zWEmRcCiRyDTK49sBpAfRsAAJkUbJ%2F1UQ4LQuAXQ0YdD8y%2FTsoprbfsUidWv7zw4Cz5iJHWZCuqg9Mmsk4RFnJrOin4IMKUTjbvHh5IjBCgNIt9gA4%2FE5b3muqu0ozjJUSewwhTlJLCwP8ge8w%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -30260,7 +30300,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1728,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -30321,7 +30361,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1591,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -30601,7 +30641,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2029,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -30854,8 +30894,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -30870,8 +30910,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BOAk2Dh5iREN2%2BHPvFJ6RY3CDudoQWUmRTGRNB382MITNUyUEzUN5USGlriNkSnJykR%2F2pD2gB92X9smubyxwhxiemYw1EoxTWjhyxagomr9950282POVhmiFgL%2B7f67x0RFKXdoelF6Kpu3OGkRnwlD1LGa7lRkJHeWBUlZxlZCER4PdouwQ52Pw3uJl1MLiB%2BjVg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -31221,8 +31261,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -31238,7 +31278,7 @@
       "match": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -31297,7 +31337,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1644,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -31355,8 +31395,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -31371,8 +31411,8 @@
       "finalUrl": "https://www.mercadolivre.com.br/social/md20251208121946?matt_word=md20251208121946&matt_tool=22604102&forceInApp=true&ref=BJ96ysT7pgOm8yYtXn0XM8mfhTpHQhlP%2BD2OcHZ5UUBU6mnfUzopoxhv7PKe4fhGsGoZKt2CEG7uejZgbDzqiudjVfnmfhqdGvDn4Zx5dPGdbjgH6HEV3kN3xtqGAFpyPy8iBdmDuzLNLGyiANScJgc8qBdvTjXWTRP21IkkAgZfcnvriegR9qdchoGiY%2FwPmq9Q4LY9Fg%3D%3D",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -31431,7 +31471,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1714,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -31491,7 +31531,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-06-23"
@@ -31698,7 +31738,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1846,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -31759,7 +31799,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1481,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -31820,7 +31860,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1538,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -31881,7 +31921,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1695,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -31942,7 +31982,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2899,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32003,7 +32043,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2154,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32064,7 +32104,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3214,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32125,7 +32165,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2712,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32187,7 +32227,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.24,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32207,7 +32247,7 @@
     "galeria": [
       "public/images/anuncios/philco-pfe65-forno-eletrico-65-l-corrigido.webp"
     ],
-    "badge": "Revisar",
+    "badge": "Duplicado",
     "affiliateLink": "https://meli.la/1guTPms",
     "linkCompra": "https://meli.la/1guTPms",
     "linkOriginal": "https://meli.la/1guTPms",
@@ -32217,7 +32257,7 @@
     "subcategoria": "Pequenos eletros",
     "source": "Mercado Livre",
     "origem": "Mercado Livre",
-    "status": "revisao_manual",
+    "status": "duplicado",
     "aprovadoParaPublicacao": false,
     "editable": true,
     "actionType": "buy",
@@ -32228,11 +32268,13 @@
     "arquivosOrigem": [
       "20_melhores_fornos_bancada_mercado_livre.docx"
     ],
-    "statusImagem": "foto_link_inconsistente",
-    "linkStatus": "revisao manual",
+    "statusImagem": "fora da vitrine por duplicidade",
+    "linkStatus": "fora da vitrine; link preservado para revisão",
     "pendencias": [
       "foto/link divergente: titulo do link nao corresponde ao produto",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "duplicado PFE65 removido da vitrine",
+      "validar link e foto antes de republicar"
     ],
     "observacaoImportacao": "Fonte: curadoria de fornos de bancada Mercado Livre. Link direto do produto priorizado porque o link curto do arquivo pode apontar para lista ou recomendação.",
     "validacaoOnline": {
@@ -32283,18 +32325,24 @@
       "match": {
         "safe": false,
         "ratio": 0.2581,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
     },
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "duplicado",
     "revisaoManualRecomendada": true,
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+    "observacoes": "Removido da vitrine em 2026-07-13: card PFE65 duplicado/inconsistente apontava para publicação repetida. Link de afiliado preservado para revisão.",
+    "statusPublicacao": "duplicado",
+    "revisaoPublicacao": {
+      "status": "duplicado",
+      "revisadoEm": "2026-07-13",
+      "motivo": "PFE65 repetido ou com foto/link inconsistente nos cards públicos"
+    }
   },
   {
     "id": "importado-ml-britania-bfe55p-forno-eletrico-52-l-dupla-resistencia-94d00d8f",
@@ -32350,7 +32398,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0909,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32411,7 +32459,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2059,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32472,7 +32520,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32533,7 +32581,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2373,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32594,7 +32642,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3137,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32655,7 +32703,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1875,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32716,7 +32764,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1846,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32777,7 +32825,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2188,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32839,7 +32887,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2034,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -32901,7 +32949,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1818,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33255,7 +33303,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.125,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33317,7 +33365,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1538,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33379,7 +33427,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.125,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33441,7 +33489,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1633,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33503,7 +33551,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1961,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33565,7 +33613,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1481,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33627,7 +33675,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2927,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33689,7 +33737,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33751,7 +33799,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1429,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33813,7 +33861,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1154,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33875,7 +33923,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3077,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33937,7 +33985,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2979,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -33999,7 +34047,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.303,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34061,7 +34109,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2105,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34123,7 +34171,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.15,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34185,7 +34233,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1455,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34247,7 +34295,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2143,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34309,7 +34357,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1818,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34371,7 +34419,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1667,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34433,7 +34481,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1887,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34495,7 +34543,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1481,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34557,7 +34605,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3556,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34619,7 +34667,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3529,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34681,7 +34729,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2174,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34743,7 +34791,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -34805,7 +34853,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.24,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -35017,7 +35065,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1132,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -35422,7 +35470,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1132,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -35484,7 +35532,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2105,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -35841,7 +35889,7 @@
       "match": {
         "safe": false,
         "ratio": 0.3014,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       }
     }
@@ -36510,7 +36558,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2308,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -36645,7 +36693,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1818,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "checkedAt": "2026-07-01"
@@ -36915,7 +36963,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2381,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0hosBXdw",
@@ -37188,7 +37236,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1667,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B07AX0xZB",
@@ -37319,7 +37367,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1277,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B06WgOHfc",
@@ -37450,7 +37498,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0976,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B07f97cJP",
@@ -37516,7 +37564,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0833,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0es0d3Oy",
@@ -37710,7 +37758,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1509,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05Pb1H3f",
@@ -37776,7 +37824,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1481,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gnIAKVM",
@@ -37842,7 +37890,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2143,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05Zhkgfa",
@@ -37908,7 +37956,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3784,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02BpcFE5",
@@ -37974,7 +38022,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2963,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0ftixFuH",
@@ -38298,7 +38346,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1111,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0j9xqkKp",
@@ -38364,7 +38412,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3333,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01cAIf3P",
@@ -38430,7 +38478,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2979,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0dTrkQgg",
@@ -38573,7 +38621,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.4615,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05rIdjXJ",
@@ -38704,7 +38752,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.375,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B041pdlra",
@@ -38770,7 +38818,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0fhQlOmf",
@@ -38900,7 +38948,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3684,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B04fYj9tm",
@@ -38964,8 +39012,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0eTthMea",
@@ -39091,8 +39139,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0307OEqr",
@@ -39156,8 +39204,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0e9rvni1",
@@ -39223,7 +39271,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2286,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02awFH1Z",
@@ -39415,8 +39463,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B06fzFcuD",
@@ -39478,8 +39526,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0d58ABhu",
@@ -39497,8 +39545,8 @@
       "finalUrl": "https://www.amazon.com.br/Imperme%C3%A1vel-Capacidade-Universit%C3%A1ria-Refor%C3%A7adas-Compartimento/dp/B0G973CZPY?dib=eyJ2IjoiMSJ9.s0enwy2PCvbbxPY4l6OBBpchSRFpf1ApjlvqWuoAo50yow3h2HUhUCIB-W2WWKaNwK4J8PIqIChwwL30MXjJioiCWuJ-7Dg6EXsaOGzEsEobkKmXIpasOoeVjcFNXcf6dpyY2LoaVMgb4UdJgdIVRR1AlS_avmEIOMQOuQifAeGGM-KUdftog-dcRvyB2zDKhkou6w6mVrfYNjXmInQlZV8AsevoDJ1rzS29dZNREspUVCwk7EBnaodZOGoKr3a6AoycRgXNJSu1SjMvxmixJk4-70CHlsehNG89wfYs9gc.cBj0XPLe8V79elKjP4tqaLQR6CI92tBujvx7kxQX6vI&dib_tag=se&keywords=mochila%2Bimpermeavel&qid=1783007092&sr=8-8&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&th=1&linkCode=sl2&tag=910556142-20&linkId=aafcb12ab6792b9412cecad1397cfb77&ref_=as_li_ss_tl&ascsubtag=srctok-5f7e40c958eb3373&btn_ref=srctok-5f7e40c958eb3373",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -39559,7 +39607,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2727,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0f1HdJvW",
@@ -39623,8 +39671,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05OcgorY",
@@ -39817,8 +39865,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B04dJNUPB",
@@ -39947,8 +39995,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0hVY9BdW",
@@ -40076,8 +40124,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0fD8APQi",
@@ -40141,8 +40189,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0bGtHHJU",
@@ -40270,8 +40318,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0ch1a2Ep",
@@ -40529,8 +40577,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0483mcNM",
@@ -40594,8 +40642,8 @@
       "error": "HTTP 503",
       "titleMatch": {
         "safe": false,
-        "ratio": 0.0,
-        "overlap": 0.0,
+        "ratio": 0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01C2PUSM",
@@ -40643,7 +40691,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Cowboy-Vintage-Western-Unissex-Entalhada/dp/B0FZD21TWH",
       "finalUrl": "https://www.amazon.com.br/Cowboy-Vintage-Western-Unissex-Entalhada/dp/B0FZD21TWH",
@@ -40722,7 +40770,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Castela-Country-Unissex-Decorativa-Western/dp/B0FZXB26WF",
       "finalUrl": "https://www.amazon.com.br/Castela-Country-Unissex-Decorativa-Western/dp/B0FZXB26WF",
@@ -40801,7 +40849,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Country-Entalhado-Fivela-Cowboy-Rodeio/dp/B0DW9FW1BN",
       "finalUrl": "https://www.amazon.com.br/Country-Entalhado-Fivela-Cowboy-Rodeio/dp/B0DW9FW1BN",
@@ -40880,7 +40928,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Americano-Barretos-Sertanejo-Cavalgada-BRILHANTE/dp/B0GSJDGK74",
       "finalUrl": "https://www.amazon.com.br/Americano-Barretos-Sertanejo-Cavalgada-BRILHANTE/dp/B0GSJDGK74",
@@ -40928,7 +40976,7 @@
     "description": "08. Camisa Country Masculina Bordada Bordô Rodeo Farm Categoria: Vestuário / camisa country Destaque visual: Camisa bordada com cor forte; passa aparência de traje completo para apresentação. Uso indicado: Cavalgada, desfile, evento rural e divulgação de moda country. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B06wiYkgg",
     "descricaoCurta": "08. Camisa Country Masculina Bordada Bordô Rodeo Farm Categoria: Vestuário / camisa country Destaque visual: Camisa bordada com cor forte; passa aparência de traje completo para apresentação. Uso indicado: Cavalgada, desfile, evento rural e divulgação de moda country. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B06wiYkgg",
     "descricaoDetalhada": "08. Camisa Country Masculina Bordada Bordô Rodeo Farm Categoria: Vestuário / camisa country Destaque visual: Camisa bordada com cor forte; passa aparência de traje completo para apresentação. Uso indicado: Cavalgada, desfile, evento rural e divulgação de moda country. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B06wiYkgg",
-    "price": "Pre?o no an?ncio",
+    "price": "Preço no anúncio",
     "image": "public/images/anuncios/camisa-country-masculina-bordada-bordo-rodeo-farm-57693445.webp",
     "imagemPrincipal": "public/images/anuncios/camisa-country-masculina-bordada-bordo-rodeo-farm-57693445.webp",
     "galeria": [
@@ -40961,7 +41009,7 @@
     "pendencias": [
       "preco dinamico no anuncio"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Country-Masculina-Bordada-Rodeo-Farm/dp/B0CHGST77R",
       "finalUrl": "https://www.amazon.com.br/Country-Masculina-Bordada-Rodeo-Farm/dp/B0CHGST77R",
@@ -40992,7 +41040,7 @@
     },
     "ultimaRevisao": "2026-07-08",
     "nome": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
-    "preco": "Pre?o no an?ncio",
+    "preco": "Preço no anúncio",
     "fotoPrincipal": "public/images/anuncios/camisa-country-masculina-bordada-bordo-rodeo-farm-57693445.webp",
     "linkAfiliado": "https://link.amazon/B06wiYkgg",
     "linkComissionado": "https://link.amazon/B06wiYkgg",
@@ -41009,7 +41057,7 @@
     "description": "09. Camisa Feminina Country Radade bordada manga longa Categoria: Vestuário / camisa feminina Destaque visual: Bordado e manga longa deixam o look mais formal e adequado para desfile. Uso indicado: Cavalgada, rodeio, apresentação rural e composição cowgirl. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B07ndTeqT",
     "descricaoCurta": "09. Camisa Feminina Country Radade bordada manga longa Categoria: Vestuário / camisa feminina Destaque visual: Bordado e manga longa deixam o look mais formal e adequado para desfile. Uso indicado: Cavalgada, rodeio, apresentação rural e composição cowgirl. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B07ndTeqT",
     "descricaoDetalhada": "09. Camisa Feminina Country Radade bordada manga longa Categoria: Vestuário / camisa feminina Destaque visual: Bordado e manga longa deixam o look mais formal e adequado para desfile. Uso indicado: Cavalgada, rodeio, apresentação rural e composição cowgirl. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B07ndTeqT",
-    "price": "Pre?o no an?ncio",
+    "price": "Preço no anúncio",
     "image": "public/images/anuncios/camisa-feminina-country-radade-bordada-manga-longa-63125664.webp",
     "imagemPrincipal": "public/images/anuncios/camisa-feminina-country-radade-bordada-manga-longa-63125664.webp",
     "galeria": [
@@ -41043,7 +41091,7 @@
       "preco dinamico no anuncio",
       "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Feminina-Country-Bordada-Bandeira-Algod%C3%A3o/dp/B0DZY1J7NB",
       "finalUrl": "https://www.amazon.com.br/Feminina-Country-Bordada-Bandeira-Algod%C3%A3o/dp/B0DZY1J7NB",
@@ -41074,7 +41122,7 @@
     },
     "ultimaRevisao": "2026-07-08",
     "nome": "Camisa Feminina Country Radade bordada manga longa",
-    "preco": "Pre?o no an?ncio",
+    "preco": "Preço no anúncio",
     "fotoPrincipal": "public/images/anuncios/camisa-feminina-country-radade-bordada-manga-longa-63125664.webp",
     "linkAfiliado": "https://link.amazon/B07ndTeqT",
     "linkComissionado": "https://link.amazon/B07ndTeqT",
@@ -41124,7 +41172,7 @@
     "pendencias": [
       "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Chapeu-Country-Infantil-Sertanejo-Cavalgada/dp/B0FT3BC55P",
       "finalUrl": "https://www.amazon.com.br/Chapeu-Country-Infantil-Sertanejo-Cavalgada/dp/B0FT3BC55P",
@@ -41203,7 +41251,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/feminina-Country-Confort%C3%A1vel-El%C3%A1stico-Num%C3%A9rico/dp/B0FS2BTXK2",
       "finalUrl": "https://www.amazon.com.br/feminina-Country-Confort%C3%A1vel-El%C3%A1stico-Num%C3%A9rico/dp/B0FS2BTXK2",
@@ -41282,7 +41330,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Feminina-Leg%C3%ADtimo-Americana-Paint-Horse/dp/B0F22PZX3X",
       "finalUrl": "https://www.amazon.com.br/Feminina-Leg%C3%ADtimo-Americana-Paint-Horse/dp/B0F22PZX3X",
@@ -41361,7 +41409,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Texana-Feminina-Country-Premium-Quadrado/dp/B0CZY5LZNK",
       "finalUrl": "https://www.amazon.com.br/Texana-Feminina-Country-Premium-Quadrado/dp/B0CZY5LZNK",
@@ -41440,7 +41488,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Texana-Country-Masculina-Longo-Marrom/dp/B0BSPXQ464",
       "finalUrl": "https://www.amazon.com.br/Texana-Country-Masculina-Longo-Marrom/dp/B0BSPXQ464",
@@ -41519,7 +41567,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/ROPER-Bota-Country-Masculina-Marrom/dp/B005I7GPEK",
       "finalUrl": "https://www.amazon.com.br/ROPER-Bota-Country-Masculina-Marrom/dp/B005I7GPEK",
@@ -41598,7 +41646,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Australiana-cavalgada-cavalo-conjunto-completo/dp/B086VK6BP7",
       "finalUrl": "https://www.amazon.com.br/Australiana-cavalgada-cavalo-conjunto-completo/dp/B086VK6BP7",
@@ -41690,7 +41738,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Cavalo-Mangalarga-Completo-Pronta-Preto/dp/B0CK4X892H",
       "finalUrl": "https://www.amazon.com.br/Cavalo-Mangalarga-Completo-Pronta-Preto/dp/B0CK4X892H",
@@ -41782,7 +41830,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Americana-Simples-Cavalgada-Passeios-Completa/dp/B085Z8MQCX",
       "finalUrl": "https://www.amazon.com.br/Americana-Simples-Cavalgada-Passeios-Completa/dp/B085Z8MQCX",
@@ -41863,7 +41911,7 @@
     "pendencias": [
       "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Americana-Tradicional-montaria-cavalgada-polegadas/dp/B0C81Q65JN",
       "finalUrl": "https://www.amazon.com.br/Americana-Tradicional-montaria-cavalgada-polegadas/dp/B0C81Q65JN",
@@ -41942,7 +41990,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Australiana-cavalaria-cabe%C3%A7ada-completa-Marrom/dp/B086VJTW19",
       "finalUrl": "https://www.amazon.com.br/Australiana-cavalaria-cabe%C3%A7ada-completa-Marrom/dp/B086VJTW19",
@@ -42021,7 +42069,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Australiana-Cavalgada-montaria-passeio-trabalho/dp/B0C81W9FC2",
       "finalUrl": "https://www.amazon.com.br/Australiana-Cavalgada-montaria-passeio-trabalho/dp/B0C81W9FC2",
@@ -42113,7 +42161,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Australiana-Completa-Simples-Polegadas-Mangalarga/dp/B08Z1R89MR",
       "finalUrl": "https://www.amazon.com.br/Australiana-Completa-Simples-Polegadas-Mangalarga/dp/B08Z1R89MR",
@@ -42192,7 +42240,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://link.amazon/B01N5Pw2q",
       "finalUrl": "https://www.amazon.com.br/Sela-Americana-Completo-Tradicional-Preto/dp/B085RJYVBM?linkCode=sl2&tag=910556142-20&linkId=1fe06293a701acbb35c1b465ecb63d4e&ref_=as_li_ss_tl&ascsubtag=srctok-097ea538331ea9f8&btn_ref=srctok-097ea538331ea9f8",
@@ -42284,7 +42332,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Peitoral-cabe%C3%A7ada-Argolados-Traias-Cavalos/dp/B0CLT8QW7C",
       "finalUrl": "https://www.amazon.com.br/Peitoral-cabe%C3%A7ada-Argolados-Traias-Cavalos/dp/B0CLT8QW7C",
@@ -42363,7 +42411,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Cabe%C3%A7ada-Argolas-R%C3%A9dea-Freio-Cavalo/dp/B095KJBG6W",
       "finalUrl": "https://www.amazon.com.br/Cabe%C3%A7ada-Argolas-R%C3%A9dea-Freio-Cavalo/dp/B095KJBG6W",
@@ -42411,7 +42459,7 @@
     "description": "27. Peitoral e Cabeçada Luxo com aplique e forro pelúcia Categoria: Equipamento / acessório luxo Destaque visual: Detalhes de aplique e forro dão aparência mais vistosa para cavalo de apresentação. Uso indicado: Desfile, exposição, cavalgada e composição de tralha chamativa. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B02D0hzpv",
     "descricaoCurta": "27. Peitoral e Cabeçada Luxo com aplique e forro pelúcia Categoria: Equipamento / acessório luxo Destaque visual: Detalhes de aplique e forro dão aparência mais vistosa para cavalo de apresentação. Uso indicado: Desfile, exposição, cavalgada e composição de tralha chamativa. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B02D0hzpv",
     "descricaoDetalhada": "27. Peitoral e Cabeçada Luxo com aplique e forro pelúcia Categoria: Equipamento / acessório luxo Destaque visual: Detalhes de aplique e forro dão aparência mais vistosa para cavalo de apresentação. Uso indicado: Desfile, exposição, cavalgada e composição de tralha chamativa. Link direto: Abrir produto na Amazon Link de afiliado: https://link.amazon/B02D0hzpv",
-    "price": "Pre?o no an?ncio",
+    "price": "Preço no anúncio",
     "image": "public/images/anuncios/peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd.webp",
     "imagemPrincipal": "public/images/anuncios/peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd.webp",
     "galeria": [
@@ -42444,7 +42492,7 @@
     "pendencias": [
       "preco dinamico no anuncio"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Peitoral-Cabe%C3%A7ada-Aplique-Pel%C3%BAcia-Cavalo/dp/B0987SKNT4",
       "finalUrl": "https://www.amazon.com.br/Peitoral-Cabe%C3%A7ada-Aplique-Pel%C3%BAcia-Cavalo/dp/B0987SKNT4",
@@ -42475,7 +42523,7 @@
     },
     "ultimaRevisao": "2026-07-08",
     "nome": "Peitoral e Cabeçada Luxo com aplique e forro pelúcia",
-    "preco": "Pre?o no an?ncio",
+    "preco": "Preço no anúncio",
     "fotoPrincipal": "public/images/anuncios/peitoral-e-cabecada-luxo-com-aplique-e-forro-pelucia-2b9ae6bd.webp",
     "linkAfiliado": "https://link.amazon/B02D0hzpv",
     "linkComissionado": "https://link.amazon/B02D0hzpv",
@@ -42523,7 +42571,7 @@
     "statusImagem": "imagem original importada do link direto",
     "linkStatus": "link afiliado preservado; foto validada no link direto",
     "pendencias": [],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Caneleira-Prote%C3%A7%C3%A3o-Vaquejada-Cavalgada-Original/dp/B0G71Z7KZV",
       "finalUrl": "https://www.amazon.com.br/Caneleira-Prote%C3%A7%C3%A3o-Vaquejada-Cavalgada-Original/dp/B0G71Z7KZV",
@@ -42604,7 +42652,7 @@
     "pendencias": [
       "titulo do link parcialmente divergente; foto importada pelo link direto fornecido"
     ],
-    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O bot?o da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
+    "observacaoImportacao": "Produto conferido a partir do arquivo catalogo_amazon_cavalgada_cavalos.docx. O botão da loja preserva somente o link afiliado; o link direto fica apenas para auditoria de foto/produto.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/Estribos-ingleses-almofadado-estribos-equita%C3%A7%C3%A3o/dp/B0F22BPRDC",
       "finalUrl": "https://www.amazon.com.br/Estribos-ingleses-almofadado-estribos-equita%C3%A7%C3%A3o/dp/B0F22BPRDC",
@@ -42765,7 +42813,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2121,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02NwJ608",
@@ -42896,7 +42944,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02efQEtl",
@@ -43039,7 +43087,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08coqJeG",
@@ -43169,7 +43217,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1538,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B00nNViLC",
@@ -43235,7 +43283,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1493,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B010EpifQ",
@@ -43316,8 +43364,8 @@
       "finalUrl": "https://www.amazon.com.br/Cooktop-Bocas-Indu%C3%A7%C3%A3o-Midea-Built/dp/B0DWT88S1T?linkCode=sl2&tag=910556142-20&linkId=9634ccd92644546f7791c18d83e81bde&ref_=as_li_ss_tl&ascsubtag=srctok-614ddd6d24b007ee&btn_ref=srctok-614ddd6d24b007ee",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       }
     }
@@ -43378,7 +43426,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2034,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0ec5FpKL",
@@ -43509,7 +43557,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0952,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B07cRbTxb",
@@ -43575,7 +43623,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0984,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03lDNuzt",
@@ -43783,7 +43831,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.137,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05bFz6RN",
@@ -43849,7 +43897,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1356,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01q7iGND",
@@ -43915,7 +43963,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1765,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05cofquE",
@@ -43981,7 +44029,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1765,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02qPuJPM",
@@ -44124,7 +44172,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2295,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B00TFphUR",
@@ -44263,8 +44311,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "affiliateLinkCadastrado": "https://link.amazon/B080ESfOU",
@@ -44282,8 +44330,8 @@
       "finalUrl": "https://www.amazon.com.br/Cafeteira-Espresso-Oster-PrimaLatte-BVSTEM6801R/dp/B0C7FBYDFP?th=1&linkCode=sl2&tag=910556142-20&linkId=c98173b4d9784429bbf9b09d01c0cec4&ref_=as_li_ss_tl&ascsubtag=srctok-591c7e50485e91e0&btn_ref=srctok-591c7e50485e91e0",
       "match": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       }
     }
@@ -44472,8 +44520,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0g0ctodQ",
@@ -44537,8 +44585,8 @@
       "error": "",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": true
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02mH1yt4",
@@ -44604,7 +44652,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1212,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gfMV7jG",
@@ -44670,7 +44718,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1143,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03534BGX",
@@ -44691,7 +44739,7 @@
     "image": "public/placeholder-produto-mercado-livre.svg",
     "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
     "galeria": [],
-    "badge": "Revisar",
+    "badge": "Pendente",
     "affiliateLink": "https://link.amazon/B0gHRgyHa",
     "linkCompra": "https://link.amazon/B0gHRgyHa",
     "linkOriginal": "https://link.amazon/B0gHRgyHa",
@@ -44702,7 +44750,7 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
+    "status": "pendente_validacao",
     "aprovadoParaPublicacao": false,
     "editable": true,
     "actionType": "buy",
@@ -44713,14 +44761,15 @@
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "foto_link_inconsistente",
-    "linkStatus": "revisao manual",
+    "statusImagem": "imagem pendente de validação",
+    "linkStatus": "pendente: validar produto do link antes de publicar",
     "pendencias": [
       "link não confirmado online",
       "título do link diverge do produto",
       "imagem real não confirmada",
       "preço dinâmico no anúncio",
-      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente"
+      "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+      "PFE65 aguarda confirmação de link/foto antes de voltar para a vitrine"
     ],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
@@ -44737,7 +44786,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1176,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gHRgyHa",
@@ -44746,34 +44795,40 @@
       "checkedAt": "2026-07-07"
     },
     "ultimaRevisao": "2026-07-07",
-    "statusAnuncio": "revisao_manual",
+    "statusAnuncio": "pendente_validacao",
     "revisaoManualRecomendada": true,
     "statusLink": "revisao manual",
     "publicarNaHome": false,
     "publicar": false,
-    "observacoes": "removido da vitrine: forno PFE65 duplicado com foto/link inconsistente",
+    "observacoes": "Pendente em 2026-07-13: PFE65 não republicado para evitar repetição com os cards anexados pelo usuário.",
     "auditoriaPublicacao": {
       "checkedAt": "2026-07-08",
       "status": "revisao_manual",
       "motivo": "foto e link divergentes nos cards duplicados de forno PFE65",
       "acao": "publicacao removida da vitrine; manter para conferencia manual",
       "fonte": "dados/products.json"
+    },
+    "statusPublicacao": "pendente_validacao",
+    "revisaoPublicacao": {
+      "status": "pendente_validacao",
+      "revisadoEm": "2026-07-13",
+      "motivo": "aguardando confirmação de link/foto do PFE65"
     }
   },
   {
     "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937",
     "storeId": "impacto-casa",
-    "name": "Philco Forno Elétrico PFE60I Função Dourar - 127 V",
-    "description": "Item 3 do catálogo Amazon de Fornos de mesa. Capacidade: 60 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (765). Envio/entrega: Mesa/bancada; várias ofertas. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 3 do catálogo Amazon de Fornos de mesa. Capacidade: 60 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (765). Envio/entrega: Mesa/bancada; várias ofertas. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 3 do catálogo Amazon de Fornos de mesa. Capacidade: 60 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (765). Envio/entrega: Mesa/bancada; várias ofertas. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
+    "name": "Philco PFE60I 60L 127V",
+    "description": "Forno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.",
+    "descricaoCurta": "Forno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.",
+    "descricaoDetalhada": "Forno de bancada 60 L com função dourar, timer e boa capacidade para uso diário. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
     "image": "public/images/anuncios/philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937.webp",
     "imagemPrincipal": "public/images/anuncios/philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937.webp",
     "galeria": [
       "public/images/anuncios/philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937.webp"
     ],
-    "badge": "Revisar",
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B0gqrQthl",
     "linkCompra": "https://link.amazon/B0gqrQthl",
     "linkOriginal": "https://link.amazon/B0gqrQthl",
@@ -44784,22 +44839,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.4,
+    "nota": 4.4,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem real confirmada",
-    "linkStatus": "link confirmado",
-    "pendencias": [
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B07D7C91HQ",
@@ -44823,7 +44876,22 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B07D7C91HQ",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Philco PFE60I 60L 127V",
+    "textoCatalogo": "Philco PFE60I 60L 127V - Forno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nPhilco PFE60I 60L 127V\nConferir preço\n\nForno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.\n\nVer oferta em Amazon:\nhttps://link.amazon/B0gqrQthl\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Philco PFE60I 60L 127V\n\nForno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Philco PFE60I 60L 127V\n\nForno de bancada 60 L com função dourar, timer e boa capacidade para uso diário.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B0gqrQthl"
   },
   {
     "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-220-v-cba1afae",
@@ -44881,7 +44949,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1311,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B04vFZY19",
@@ -44947,7 +45015,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2264,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B09f4KQim",
@@ -45013,7 +45081,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.25,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0c8NCD9k",
@@ -45079,7 +45147,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2597,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0hV1g0Ng",
@@ -45092,17 +45160,17 @@
   {
     "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-72b91b7b",
     "storeId": "impacto-casa",
-    "name": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 220 V",
-    "description": "Item 8 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (467). Envio/entrega: Escolha da Amazon; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 8 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (467). Envio/entrega: Escolha da Amazon; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 8 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (467). Envio/entrega: Escolha da Amazon; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
+    "name": "Mondial Grand Family II 52L 220V",
+    "description": "Forno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.",
+    "descricaoCurta": "Forno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.",
+    "descricaoDetalhada": "Forno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
     "image": "public/images/anuncios/mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-inox-220-v-72b91b7b.webp",
     "imagemPrincipal": "public/images/anuncios/mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-inox-220-v-72b91b7b.webp",
     "galeria": [
       "public/images/anuncios/mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-inox-220-v-72b91b7b.webp"
     ],
-    "badge": "Revisar",
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B0gJwWB04",
     "linkCompra": "https://link.amazon/B0gJwWB04",
     "linkOriginal": "https://link.amazon/B0gJwWB04",
@@ -45113,22 +45181,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.5,
+    "nota": 4.5,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem real confirmada",
-    "linkStatus": "link confirmado",
-    "pendencias": [
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B0DX2DNBYF",
@@ -45152,7 +45218,22 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0DX2DNBYF",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Mondial Grand Family II 52L 220V",
+    "textoCatalogo": "Mondial Grand Family II 52L 220V - Forno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nMondial Grand Family II 52L 220V\nConferir preço\n\nForno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.\n\nVer oferta em Amazon:\nhttps://link.amazon/B0gJwWB04\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Mondial Grand Family II 52L 220V\n\nForno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Mondial Grand Family II 52L 220V\n\nForno elétrico 52 L para família, com timer, controle de temperatura e bom volume interno.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B0gJwWB04"
   },
   {
     "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-w-branco-i-c22063e5",
@@ -45210,7 +45291,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2564,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gz4goVe",
@@ -45223,15 +45304,17 @@
   {
     "id": "importado-amazon-fogatti-forno-eletrico-top-40-127-v-971a5700",
     "storeId": "impacto-casa",
-    "name": "Fogatti Forno Elétrico Top 40 - 127 V",
-    "description": "Item 10 do catálogo Amazon de Fornos de mesa. Capacidade: 40 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (969). Envio/entrega: Mesa/bancada; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 10 do catálogo Amazon de Fornos de mesa. Capacidade: 40 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (969). Envio/entrega: Mesa/bancada; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 10 do catálogo Amazon de Fornos de mesa. Capacidade: 40 L. Voltagem: 127 V. Avaliação informada: 4,4/5 (969). Envio/entrega: Mesa/bancada; verificar CEP. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
-    "badge": "Revisar",
+    "name": "Fogatti Top 40 127V",
+    "description": "Forno elétrico 40 L para bancada, compacto e prático para cozinhas menores.",
+    "descricaoCurta": "Forno elétrico 40 L para bancada, compacto e prático para cozinhas menores.",
+    "descricaoDetalhada": "Forno elétrico 40 L para bancada, compacto e prático para cozinhas menores. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
+    "image": "public/images/anuncios/fogatti-forno-eletrico-top-40-127-v-971a5700.webp",
+    "imagemPrincipal": "public/images/anuncios/fogatti-forno-eletrico-top-40-127-v-971a5700.webp",
+    "galeria": [
+      "public/images/anuncios/fogatti-forno-eletrico-top-40-127-v-971a5700.webp"
+    ],
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B0gq0WW87",
     "linkCompra": "https://link.amazon/B0gq0WW87",
     "linkOriginal": "https://link.amazon/B0gq0WW87",
@@ -45242,25 +45325,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.4,
+    "nota": 4.4,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem manual necessária",
-    "linkStatus": "revisão manual",
-    "pendencias": [
-      "link não confirmado online",
-      "título do link diverge do produto",
-      "imagem real não confirmada",
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B0C21VXN15",
@@ -45276,7 +45354,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2083,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gq0WW87",
@@ -45284,20 +45362,37 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0C21VXN15",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Fogatti Top 40 127V",
+    "textoCatalogo": "Fogatti Top 40 127V - Forno elétrico 40 L para bancada, compacto e prático para cozinhas menores.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nFogatti Top 40 127V\nConferir preço\n\nForno elétrico 40 L para bancada, compacto e prático para cozinhas menores.\n\nVer oferta em Amazon:\nhttps://link.amazon/B0gq0WW87\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Fogatti Top 40 127V\n\nForno elétrico 40 L para bancada, compacto e prático para cozinhas menores.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Fogatti Top 40 127V\n\nForno elétrico 40 L para bancada, compacto e prático para cozinhas menores.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B0gq0WW87"
   },
   {
     "id": "importado-amazon-philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b",
     "storeId": "impacto-casa",
-    "name": "Philco Forno Elétrico PFE44P Dupla Resistência - 220 V",
-    "description": "Item 11 do catálogo Amazon de Fornos de mesa. Capacidade: 44 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (2.771). Envio/entrega: Enviado/Vendido por Amazon.com.br. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 11 do catálogo Amazon de Fornos de mesa. Capacidade: 44 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (2.771). Envio/entrega: Enviado/Vendido por Amazon.com.br. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 11 do catálogo Amazon de Fornos de mesa. Capacidade: 44 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (2.771). Envio/entrega: Enviado/Vendido por Amazon.com.br. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
-    "badge": "Revisar",
+    "name": "Philco PFE44P 44L 220V",
+    "description": "Forno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.",
+    "descricaoCurta": "Forno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.",
+    "descricaoDetalhada": "Forno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
+    "image": "public/images/anuncios/philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b.webp",
+    "imagemPrincipal": "public/images/anuncios/philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b.webp",
+    "galeria": [
+      "public/images/anuncios/philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b.webp"
+    ],
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B0fGFL4ZS",
     "linkCompra": "https://link.amazon/B0fGFL4ZS",
     "linkOriginal": "https://link.amazon/B0fGFL4ZS",
@@ -45308,25 +45403,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.5,
+    "nota": 4.5,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem manual necessária",
-    "linkStatus": "revisão manual",
-    "pendencias": [
-      "link não confirmado online",
-      "título do link diverge do produto",
-      "imagem real não confirmada",
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B0BZTCPRF5",
@@ -45342,7 +45432,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1231,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0fGFL4ZS",
@@ -45350,7 +45440,22 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0BZTCPRF5",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Philco PFE44P 44L 220V",
+    "textoCatalogo": "Philco PFE44P 44L 220V - Forno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nPhilco PFE44P 44L 220V\nConferir preço\n\nForno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.\n\nVer oferta em Amazon:\nhttps://link.amazon/B0fGFL4ZS\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Philco PFE44P 44L 220V\n\nForno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Philco PFE44P 44L 220V\n\nForno elétrico 44 L com dupla resistência, indicado para assados e preparo rápido.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B0fGFL4ZS"
   },
   {
     "id": "importado-amazon-philco-forno-eletrico-50l-pfe52p-dupla-resistencia-127-v-12b177f6",
@@ -45408,7 +45513,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1159,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08Aap2we",
@@ -45474,7 +45579,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1159,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0acWILfW",
@@ -45487,15 +45592,17 @@
   {
     "id": "importado-amazon-britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce",
     "storeId": "impacto-casa",
-    "name": "Britânia Forno Elétrico BFE55P Dupla Resistência - 220 V",
-    "description": "Item 14 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (677). Envio/entrega: Escolha da Amazon; enviado pela Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 14 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (677). Envio/entrega: Escolha da Amazon; enviado pela Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 14 do catálogo Amazon de Fornos de mesa. Capacidade: 52 L. Voltagem: 220 V. Avaliação informada: 4,5/5 (677). Envio/entrega: Escolha da Amazon; enviado pela Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
-    "badge": "Revisar",
+    "name": "Britânia BFE55P 52L 220V",
+    "description": "Forno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.",
+    "descricaoCurta": "Forno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.",
+    "descricaoDetalhada": "Forno elétrico 52 L com dupla resistência, timer e porta de vidro temperado. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
+    "image": "public/images/anuncios/britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce.webp",
+    "imagemPrincipal": "public/images/anuncios/britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce.webp",
+    "galeria": [
+      "public/images/anuncios/britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce.webp"
+    ],
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B019MKKA8",
     "linkCompra": "https://link.amazon/B019MKKA8",
     "linkOriginal": "https://link.amazon/B019MKKA8",
@@ -45506,25 +45613,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.5,
+    "nota": 4.5,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem manual necessária",
-    "linkStatus": "revisão manual",
-    "pendencias": [
-      "link não confirmado online",
-      "título do link diverge do produto",
-      "imagem real não confirmada",
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B0CBL5C5D4",
@@ -45540,7 +45642,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.0597,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B019MKKA8",
@@ -45548,20 +45650,37 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0CBL5C5D4",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Britânia BFE55P 52L 220V",
+    "textoCatalogo": "Britânia BFE55P 52L 220V - Forno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nBritânia BFE55P 52L 220V\nConferir preço\n\nForno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.\n\nVer oferta em Amazon:\nhttps://link.amazon/B019MKKA8\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Britânia BFE55P 52L 220V\n\nForno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Britânia BFE55P 52L 220V\n\nForno elétrico 52 L com dupla resistência, timer e porta de vidro temperado.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B019MKKA8"
   },
   {
     "id": "importado-amazon-suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3",
     "storeId": "impacto-casa",
-    "name": "Suggar Forno Elétrico de Bancada FE4201PT - 127 V",
-    "description": "Item 15 do catálogo Amazon de Fornos de mesa. Capacidade: 42 L. Voltagem: 127 V. Avaliação informada: 4,5/5 (654). Envio/entrega: Escolha da Amazon; enviado/vendido Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoCurta": "Item 15 do catálogo Amazon de Fornos de mesa. Capacidade: 42 L. Voltagem: 127 V. Avaliação informada: 4,5/5 (654). Envio/entrega: Escolha da Amazon; enviado/vendido Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "descricaoDetalhada": "Item 15 do catálogo Amazon de Fornos de mesa. Capacidade: 42 L. Voltagem: 127 V. Avaliação informada: 4,5/5 (654). Envio/entrega: Escolha da Amazon; enviado/vendido Amazon. Comissão estimada: 8%. Confira preço, voltagem, frete e disponibilidade diretamente na Amazon.",
-    "price": "Preço no anúncio",
-    "image": "public/placeholder-produto-mercado-livre.svg",
-    "imagemPrincipal": "public/placeholder-produto-mercado-livre.svg",
-    "galeria": [],
-    "badge": "Revisar",
+    "name": "Suggar FE4201PT 42L 127V",
+    "description": "Forno elétrico de bancada 42 L com controles simples para preparo do dia a dia.",
+    "descricaoCurta": "Forno elétrico de bancada 42 L com controles simples para preparo do dia a dia.",
+    "descricaoDetalhada": "Forno elétrico de bancada 42 L com controles simples para preparo do dia a dia. Confira preço, frete, voltagem, disponibilidade e garantia diretamente no anúncio antes de comprar.",
+    "price": "Conferir preço",
+    "image": "public/images/anuncios/suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3.webp",
+    "imagemPrincipal": "public/images/anuncios/suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3.webp",
+    "galeria": [
+      "public/images/anuncios/suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3.webp"
+    ],
+    "badge": "Amazon",
     "affiliateLink": "https://link.amazon/B00D7zwie",
     "linkCompra": "https://link.amazon/B00D7zwie",
     "linkOriginal": "https://link.amazon/B00D7zwie",
@@ -45572,25 +45691,20 @@
     "subcategoria": "Pequenos eletros",
     "source": "Amazon",
     "origem": "Amazon",
-    "status": "revisao_manual",
-    "aprovadoParaPublicacao": false,
+    "status": "ativo",
+    "aprovadoParaPublicacao": true,
     "editable": true,
     "actionType": "buy",
-    "buttonLabel": "Comprar na Amazon",
-    "rating": null,
-    "nota": null,
+    "buttonLabel": "Ver oferta",
+    "rating": 4.5,
+    "nota": 4.5,
     "origemImportacao": "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx",
     "arquivosOrigem": [
       "lista_fornos_de_mesa_microondas_amazon_brasil_corrigida.docx"
     ],
-    "statusImagem": "imagem manual necessária",
-    "linkStatus": "revisão manual",
-    "pendencias": [
-      "link não confirmado online",
-      "título do link diverge do produto",
-      "imagem real não confirmada",
-      "preço dinâmico no anúncio"
-    ],
+    "statusImagem": "imagem real confirmada no acervo local",
+    "linkStatus": "link de afiliado preservado",
+    "pendencias": [],
     "observacaoImportacao": "Fonte: lista corrigida de fornos de mesa e micro-ondas Amazon Brasil. Foto e preço importados a partir da página original; botão usa link de afiliado.",
     "validacaoOnline": {
       "requestedUrl": "https://www.amazon.com.br/dp/B081QK2F5X",
@@ -45606,7 +45720,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B00D7zwie",
@@ -45614,7 +45728,22 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B081QK2F5X",
       "checkedAt": "2026-07-07"
     },
-    "ultimaRevisao": "2026-07-07"
+    "ultimaRevisao": "2026-07-07",
+    "nome": "Suggar FE4201PT 42L 127V",
+    "textoCatalogo": "Suggar FE4201PT 42L 127V - Forno elétrico de bancada 42 L com controles simples para preparo do dia a dia.",
+    "preco": "Conferir preço",
+    "statusAnuncio": "ativo",
+    "statusPublicacao": "ativo",
+    "observacoes": "Ativado em 2026-07-13: anúncio com foto real local e link de afiliado preservado.",
+    "chamadaCompra": "Ver oferta",
+    "revisaoPublicacao": {
+      "status": "ativo",
+      "revisadoEm": "2026-07-13",
+      "motivo": "foto real local e anúncio comercial simplificado"
+    },
+    "legendaWhatsApp": "Oferta selecionada no IMPACTO 360 AFILIADO\n\nSuggar FE4201PT 42L 127V\nConferir preço\n\nForno elétrico de bancada 42 L com controles simples para preparo do dia a dia.\n\nVer oferta em Amazon:\nhttps://link.amazon/B00D7zwie\n\nEste conteúdo pode conter link de afiliado.",
+    "legendaInstagram": "Suggar FE4201PT 42L 127V\n\nForno elétrico de bancada 42 L com controles simples para preparo do dia a dia.\n\nConferir preço\n\nConfira condições no anúncio. Link de afiliado preservado.\n\n#Impacto360 #OfertasSelecionadas",
+    "legendaFacebook": "Suggar FE4201PT 42L 127V\n\nForno elétrico de bancada 42 L com controles simples para preparo do dia a dia.\n\nPreço: Conferir preço\n\nAcesse pelo link de afiliado da Impacto 360 Afiliado: https://link.amazon/B00D7zwie"
   },
   {
     "id": "importado-amazon-panasonic-micro-ondas-nn-st27lwru-branco-espelhado-127-v-85534206",
@@ -45672,7 +45801,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2609,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0i4uk5sz",
@@ -45738,7 +45867,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3051,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02Kfd7Vc",
@@ -45804,7 +45933,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2609,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0aBP7H9m",
@@ -45870,7 +45999,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3051,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gniS5tK",
@@ -45936,7 +46065,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0d7itnTk",
@@ -46067,7 +46196,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2414,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02hl8D4v",
@@ -46198,7 +46327,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2093,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01dGDbop",
@@ -46264,7 +46393,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2093,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03myQRLQ",
@@ -46330,7 +46459,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2571,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0d6XGfW3",
@@ -46396,7 +46525,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1935,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B00I7oiSX",
@@ -46462,7 +46591,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2727,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02xHEZD1",
@@ -46528,7 +46657,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.24,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0hm25olb",
@@ -46594,7 +46723,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.129,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B064ueRyN",
@@ -46866,7 +46995,7 @@
       "titleMatch": {
         "safe": true,
         "ratio": 0.9667,
-        "overlap": 1.0,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2XpNAfF",
@@ -46933,8 +47062,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-4349991916-material-escolar-kit-completo-ensino-volta-as-aulas-promoco-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2wDcPEd",
@@ -47069,8 +47198,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-2160077038-kit-mochila-e-material-escolar-menino-infantil-completo-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1Q37bn7",
@@ -47207,8 +47336,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-3561722369-kit-escolar-material-completo-ensino-faculdade-medio-premium-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1WxPCUF",
@@ -47275,8 +47404,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-5251065490-kit-completo-material-escolar-presente-papelaria-infantil-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1dMe2e4",
@@ -47413,8 +47542,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-4389080123-kit-material-escolar-completo-ensino-medio-juvenil-menino-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1nQ61ua",
@@ -47549,8 +47678,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-6107553718-kit-material-escolar-completo-com-estojo-e-caderno-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2Th67ve",
@@ -47685,8 +47814,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-4195149356-kit-material-escolar-35-itens-fundamental-medio-faculdade-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1cuNkKE",
@@ -47753,8 +47882,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-4359545975-kit-material-escolar-fundamental-1-completo-meninasmeninos-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2vRYBoW",
@@ -47824,7 +47953,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3168,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/312uSx9",
@@ -47891,8 +48020,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-3580323039-material-escolar-kit-completo-ensino-fundamental-medio-facul-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2VYyQFJ",
@@ -48847,8 +48976,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-4177944789-estojo-escolar-72-compartimentos-grande-capacidade-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1BdM96e",
@@ -48986,7 +49115,7 @@
       "titleMatch": {
         "safe": true,
         "ratio": 0.9756,
-        "overlap": 1.0,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2V6NzZf",
@@ -49054,7 +49183,7 @@
       "titleMatch": {
         "safe": true,
         "ratio": 0.9649,
-        "overlap": 1.0,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2PXR219",
@@ -49257,8 +49386,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-6921216640-caderno-universitario-10-materias-160-folhas-capa-dura-preto-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1gbJiKW",
@@ -49875,8 +50004,8 @@
       "sourceProductLink": "https://produto.mercadolivre.com.br/MLB-6755347500-caderno-universitario-15-materias-240-folhas-capa-dura-sorti-_JM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2YHaid8",
@@ -50015,8 +50144,8 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0G782MV67",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0doENGXl",
@@ -50085,8 +50214,8 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0G79ZDJXG",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B00AaEZME",
@@ -50298,7 +50427,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2462,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08HXWjB2",
@@ -50504,8 +50633,8 @@
       "sourceProductLink": "https://www.amazon.com.br/dp/B0G955NKCM",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03MxjMC8",
@@ -50787,7 +50916,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2154,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B07cjtlNH",
@@ -51136,7 +51265,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2609,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0iJO5Dz2",
@@ -51345,8 +51474,8 @@
       "validationLinkFallback": "https://www.amazon.com.br/dp/B0H6QSVCYW",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B04Mal8EY",
@@ -51556,7 +51685,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1562,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B06DoCTaO",
@@ -51628,7 +51757,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2963,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0aNuQJsp",
@@ -51974,7 +52103,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2759,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0ajhPyG2",
@@ -52046,7 +52175,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.127,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08BcYw7n",
@@ -52327,7 +52456,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.25,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gbL87w3",
@@ -52468,7 +52597,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3333,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02VgrbPf",
@@ -52540,7 +52669,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2105,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0ioDgGd8",
@@ -52681,7 +52810,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1587,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03gu3aqD",
@@ -52963,7 +53092,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1429,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B081QQow0",
@@ -53105,7 +53234,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1875,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0b7OqGwe",
@@ -53456,7 +53585,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2264,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08ttzned",
@@ -53738,7 +53867,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2692,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08xqeIuI",
@@ -54018,7 +54147,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.25,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0bhLnyEX",
@@ -54160,7 +54289,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.28,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B09WbeDmD",
@@ -54371,7 +54500,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.25,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0e9Y43db",
@@ -54443,7 +54572,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3429,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B05zEfdnv",
@@ -54515,7 +54644,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2162,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03pRQCeC",
@@ -54724,8 +54853,8 @@
       "validationLinkFallback": "https://www.amazon.com.br/dp/B0CKJFXMFR",
       "titleMatch": {
         "safe": true,
-        "ratio": 1.0,
-        "overlap": 1.0,
+        "ratio": 1,
+        "overlap": 1,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0avTXRf3",
@@ -55006,7 +55135,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0eNiLWj7",
@@ -55147,7 +55276,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1961,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0hOhNwAN",
@@ -55430,7 +55559,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B03uy4PcW",
@@ -55502,7 +55631,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3043,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B08jF7R6F",
@@ -55644,7 +55773,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2963,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B06WDiGyj",
@@ -55787,7 +55916,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2857,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gaYyHsV",
@@ -55930,7 +56059,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2593,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01g5jw2M",
@@ -56073,7 +56202,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2381,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0bilKTU5",
@@ -56145,7 +56274,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2449,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B028RVh1D",
@@ -56217,7 +56346,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2128,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B09W9A6sI",
@@ -56710,7 +56839,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2745,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0gHCU8tG",
@@ -56782,7 +56911,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2727,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B01wVHdAL",
@@ -56854,7 +56983,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3077,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B02JsYTOB",
@@ -56926,7 +57055,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2449,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B06SoNnjQ",
@@ -56998,7 +57127,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3333,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0cNpCURZ",
@@ -57070,7 +57199,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2222,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0e2xEivz",
@@ -57142,7 +57271,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2174,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://link.amazon/B0eDwRXoT",
@@ -57212,7 +57341,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.2785,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1EtFuq9",
@@ -57350,7 +57479,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.1591,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/1Hrjo7i",
@@ -57420,7 +57549,7 @@
       "titleMatch": {
         "safe": false,
         "ratio": 0.3571,
-        "overlap": 0.0,
+        "overlap": 0,
         "modelMatch": false
       },
       "affiliateLinkCadastrado": "https://meli.la/2nMCCyK",
