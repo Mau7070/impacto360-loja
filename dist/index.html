@@ -472,7 +472,7 @@
       background: rgba(255,255,255,.82);
       box-shadow: 0 18px 42px rgba(8,25,47,.08);
       overflow: hidden;
-      transition: box-shadow .22s ease, border-color .22s ease;
+      transition: box-shadow .18s ease, border-color .18s ease;
     }
     .store-card:hover {
       transform: translateY(-5px);
@@ -480,8 +480,8 @@
       box-shadow: 0 24px 58px rgba(8,25,47,.13);
     }
     .product-card:hover {
-      border-color: rgba(29,92,255,.24);
-      box-shadow: 0 24px 58px rgba(8,25,47,.13);
+      border-color: var(--line);
+      box-shadow: 0 12px 28px rgba(8,25,47,.08);
     }
     .store-card {
       min-height: 272px;
@@ -635,7 +635,7 @@
     }
     .opening-products-head h3 { margin: 0; font-size: 24px; }
     .opening-products-head p { margin: 5px 0 0; color: var(--muted); }
-    .opening-products.product-grid { grid-template-columns: repeat(auto-fit, minmax(252px, 1fr)); }
+    .opening-products.product-grid { grid-template-columns: repeat(auto-fit, minmax(218px, 1fr)); }
     .opening-products .product-media { aspect-ratio: 4 / 3; }
     .opening-actions { margin-top: 16px; }
 
@@ -715,32 +715,46 @@
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+      gap: 12px;
     }
-    .product-card { background: #fff; display: flex; flex-direction: column; min-width: 0; }
+    .product-card {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(8,25,47,.08);
+      contain: layout paint;
+      transition: none;
+    }
     .product-media {
       position: relative;
       aspect-ratio: 1 / 1;
-      background: #f4f8fb;
+      background: #fff;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      contain: paint;
     }
     .product-media img {
+      display: block;
       width: 100%;
       height: 100%;
       -o-object-fit: contain;
          object-fit: contain;
       -o-object-position: center;
          object-position: center;
-      padding: 7px;
+      padding: 8px;
       background: #fff;
-      filter: saturate(1.06) contrast(1.03);
+      filter: none;
       image-rendering: auto;
+      transform: none !important;
+      transition: none !important;
+      backface-visibility: hidden;
     }
-    .product-card:hover img { transform: none; }
+    .product-card:hover img { transform: none !important; }
     .media-status {
       display: inline-flex;
       align-items: center;
@@ -789,27 +803,28 @@
       font-size: 20px;
     }
     .favorite.active { background: #ffe5ec; }
-    .product-info { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
-    .product-info h3 { margin: 0; font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .product-info p { margin: 0; color: var(--muted); line-height: 1.45; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .specs { display: flex; gap: 6px; flex-wrap: wrap; }
-    .specs span { border-radius: 999px; background: #f0f5fb; color: #40546d; padding: 6px 8px; font-size: 11px; font-weight: 800; }
+    .product-info { padding: 12px; display: flex; flex-direction: column; gap: 7px; flex: 1; min-width: 0; }
+    .product-info h3 { margin: 0; font-size: 15px; line-height: 1.28; min-height: 38px; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .product-info p { margin: 0; color: var(--muted); line-height: 1.35; font-size: 12px; min-height: 16px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .specs { display: flex; gap: 5px; flex-wrap: wrap; min-height: 24px; }
+    .specs span { border-radius: 999px; background: #f0f5fb; color: #40546d; padding: 5px 7px; font-size: 10.5px; font-weight: 800; }
+    .specs span:nth-child(n+3) { display: none; }
     .price-line { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .price { color: #0f7d69; font-size: 18px; font-weight: 950; }
     .old-price { color: #8794a3; text-decoration: line-through; font-size: 13px; font-weight: 800; }
-    .product-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+    .product-meta { display: flex; flex-wrap: wrap; gap: 5px; }
     .product-meta span, .affiliate-mini {
       border-radius: 999px;
       background: #f4f8fb;
       color: #40546d;
-      padding: 6px 8px;
-      font-size: 11px;
+      padding: 5px 7px;
+      font-size: 10.5px;
       font-weight: 850;
     }
     .affiliate-mini { background: #ecfdf6; color: #0d6b51; }
     .product-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-    .product-actions .btn { flex: 1 1 150px; justify-content: center; min-height: 48px; }
-    .product-actions .btn-primary { min-width: min(100%, 190px); }
+    .product-actions .btn { flex: 1 1 100%; justify-content: center; min-height: 42px; }
+    .product-actions .btn-primary { min-width: 100%; }
     .product-card[data-publicacao="revisar"] .product-actions .btn-primary { background: #7c5300; }
 
     .partner-showcase {
@@ -12931,11 +12946,31 @@
       img.src = nextSrc;
       return true;
     }
+    function tryNextProductImage(img) {
+      if (!img) return false;
+      let fallbacks = [];
+      try { fallbacks = JSON.parse(img.dataset.fallbackImages || "[]"); } catch (error) { fallbacks = []; }
+      while (fallbacks.length) {
+        const nextSrc = String(fallbacks.shift() || "").trim();
+        img.dataset.fallbackImages = JSON.stringify(fallbacks);
+        if (!nextSrc || nextSrc === img.getAttribute("src")) continue;
+        img.dataset.altPathApplied = "false";
+        img.src = nextSrc;
+        return true;
+      }
+      return false;
+    }
     window.handleProductImageError = function handleProductImageError(img) {
       if (!img || img.dataset.fallbackApplied === "true") return;
       if (tryAlternateImagePath(img)) return;
+      if (tryNextProductImage(img)) return;
       img.dataset.fallbackApplied = "true";
-      img.src = window.ai360PlaceholderImage;
+      const card = img.closest(".product-card, .related-card");
+      if (card) {
+        card.remove();
+        return;
+      }
+      img.remove();
     };
 
     const coverAssets = {
@@ -13067,11 +13102,13 @@
         produto?.productImage,
         produto?.src,
         images[0]
-      ].filter(isValidImageSource);
-      const src = String(candidates[0] || "").trim();
+      ].filter(isValidImageSource).map(value => String(value || "").trim());
+      const uniqueCandidates = [...new Set(candidates)];
+      const src = String(uniqueCandidates[0] || "").trim();
       return {
         src: src || placeholderImage,
         hasPhoto: Boolean(src),
+        candidates: uniqueCandidates,
         status: src ? (produto?.statusImagem || "imagem_ok") : "imagem_manual_necessaria",
         label: src ? "Imagem do produto" : "Foto em conferência"
       };
@@ -13084,6 +13121,7 @@
       return {
         principal: resolved.src,
         fotosExtras,
+        fallbacks: [...new Set([...resolved.candidates.slice(1), ...fotosExtras])],
         alt,
         status: resolved.hasPhoto ? resolved.status : "revisar_foto",
         label: resolved.hasPhoto ? resolved.label : "Revisar foto"
@@ -13256,7 +13294,7 @@
       const status = normalize(item.status || item.statusPublicacao || item.auditoriaPublicacao);
       if (/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
       if (!getProductLink(item)) return false;
-      return true;
+      return resolveProductImage(item).hasPhoto;
     }
 
     function storeProducts(storeId) {
@@ -13775,22 +13813,21 @@
     }
 
     function commercialDescription(item, store) {
-      const title = cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]));
       const original = cleanCommercialText(firstFilled(item, ["descricaoCurta", "description", "descricao", "descricaoDetalhada", "fullDescription"]));
       if (original && original.length > 42 && !/apenas uma op[cç][aã]o|campos edit[aá]veis/i.test(original)) {
-        return truncateText(original, 210);
+        return truncateText(original, 92);
       }
       const partner = partnerName(item, store);
-      const confirm = "Confira no anúncio parceiro preço, frete, garantia, variações e condições de pagamento.";
+      const confirm = "Confira preço e frete no parceiro.";
       const profile = categoryProfile(item);
-      if (profile === "smartphone") return truncateText(`${title} para comparar versão, armazenamento, conectividade e uso diário com compra direcionada pela ${partner}. ${confirm}`, 210);
-      if (profile === "casa") return truncateText(`${title} para equipar casa e cozinha com praticidade. ${confirm}`, 210);
-      if (profile === "moda") return truncateText(`${title} para conferir estilo, conforto, material, numeração e variações disponíveis no parceiro. ${confirm}`, 210);
-      if (profile === "ferramentas") return truncateText(`${title} para manutenção, oficina ou uso doméstico. Confirme potência, voltagem, acessórios e garantia no parceiro.`, 210);
-      if (profile === "cavalgada") return truncateText(`${title} para cavalgada, montaria, desfile ou rotina rural. Confirme material, medidas e compatibilidade no parceiro.`, 210);
-      if (profile === "escolar") return truncateText(`${title} para estudo, organização e rotina escolar. ${confirm}`, 210);
-      if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa, conteúdo da embalagem e condições de entrega no parceiro.`, 210);
-      return truncateText(`${title} disponível em loja parceira com link preservado. ${confirm}`, 210);
+      if (profile === "smartphone") return truncateText(`Tecnologia para comparar antes da compra. ${confirm}`, 92);
+      if (profile === "casa") return truncateText(`Item para casa, cozinha ou rotina. ${confirm}`, 92);
+      if (profile === "moda") return truncateText(`Confira estilo, tamanho e variações. ${confirm}`, 92);
+      if (profile === "ferramentas") return truncateText(`Veja potência, voltagem e acessórios. ${confirm}`, 92);
+      if (profile === "cavalgada") return truncateText(`Confira material, medidas e compatibilidade. ${confirm}`, 92);
+      if (profile === "escolar") return truncateText(`Opção para estudo e organização. ${confirm}`, 92);
+      if (profile === "brinquedos") return truncateText(`Confira detalhes e faixa indicativa. ${confirm}`, 92);
+      return truncateText(`Oferta da ${partner}. ${confirm}`, 92);
     }
 
     function productBenefitTags(item, store, priceLabel) {
@@ -13801,7 +13838,7 @@
         const clean = truncateText(cleanCommercialText(value), 34);
         if (clean && !/revisar|pendente|rascunho|inserir link|foto preservada/i.test(clean) && !tags.some(item => normalize(item) === normalize(clean))) tags.push(clean);
       };
-      (Array.isArray(item?.specs) ? item.specs : []).slice(0, 4).forEach(add);
+      (Array.isArray(item?.specs) ? item.specs : []).slice(0, 2).forEach(add);
       const patterns = [
         /\b\d+\s*(?:GB|TB)\b/ig,
         /\b\d+\s*GB\s*RAM\b/ig,
@@ -13818,7 +13855,7 @@
       add(categoryProfile(item) === "geral" ? firstFilled(item, ["category", "categoria"]) : firstFilled(item, ["subcategoria", "category", "categoria"]));
       if (!hasReliablePrice(priceLabel)) add("Preço atualizado no parceiro");
       add(partnerName(item, store));
-      return tags.slice(0, 4);
+      return tags.slice(0, 2);
     }
 
     function renderProductCard(item, store) {
@@ -13827,26 +13864,22 @@
       const video = getProductVideo(item);
       const linkPlataforma = getProductLink(item);
       const partner = partnerName(item, store);
-      const actionLabel = commercialCtaLabel(item, store);
+      const actionLabel = isQuote ? "Solicitar orçamento" : "Ver oferta";
       const title = cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]));
       const description = commercialDescription(item, store);
       const priceRaw = firstFilled(item, ["price", "preco", "precoAtual"]);
       const price = displayPriceLabel(priceRaw);
       const previousPrice = firstFilled(item, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
       const ratingValue = firstFilled(item, ["avaliacao", "rating", "reviewRating", "nota"]);
-      const availabilityValue = cleanCommercialText(firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]));
-      const availability = availabilityValue && !/pendente|revis[aã]o|sob consulta/i.test(availabilityValue) ? availabilityValue : "Confirmar no site parceiro";
-      const lastCheck = dateLabel(firstFilled(item, ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"]));
       const benefitTags = productBenefitTags(item, store, priceRaw);
+      const fallbackAttr = media.fallbacks.length ? ' data-fallback-images="' + escapeAttr(JSON.stringify(media.fallbacks)) + '"' : '';
       const metaItems = [
-        "Loja parceira: " + partner,
-        ratingValue ? "Avaliação " + cleanCommercialText(ratingValue) : "",
-        availability,
-        lastCheck ? "Revisado em " + lastCheck : ""
+        "Loja: " + partner,
+        ratingValue ? "Avaliação " + cleanCommercialText(ratingValue) : ""
       ].filter(Boolean);
       return '<article class="product-card" data-status="pronto" data-publicacao="pronto">' +
         '<div class="product-media">' +
-          '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async" onerror="handleProductImageError(this)">' +
+          '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async"' + fallbackAttr + ' onerror="handleProductImageError(this)">' +
           '<span class="badge">' + escapeHtml(visibleBadgeLabel(item, store)) + '</span>' +
           (video.statusVideo !== "sem_video" ? '<span class="video-chip">Vídeo</span>' : '') +
           '<button class="favorite ' + (isFavorite(item.id) ? "active" : "") + '" onclick="toggleFavorite(\'' + item.id + '\')" aria-label="Favoritar produto">&hearts;</button>' +
@@ -13860,7 +13893,6 @@
           '<div class="price-line"><span><strong class="price">' + escapeHtml(price) + '</strong>' + (previousPrice && hasReliablePrice(priceRaw) ? '<span class="old-price"> ' + escapeHtml(previousPrice) + '</span>' : '') + '</span><span class="chip">' + escapeHtml(partner) + '</span></div>' +
           '<div class="product-actions">' +
             '<button class="btn btn-primary" data-link-plataforma="' + escapeAttr(linkPlataforma) + '" onclick="' + (isQuote ? 'requestQuote(\'' + item.id + '\')' : 'buyProduct(\'' + item.id + '\')') + '">' + actionLabel + '</button>' +
-            '<button class="btn" onclick="shareProduct(\'' + item.id + '\')">Compartilhar produto</button>' +
           '</div>' +
         '</div>' +
       '</article>';

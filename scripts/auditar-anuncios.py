@@ -34,7 +34,8 @@ def purchase_link(product: dict[str, Any]) -> str:
     ).strip()
 
 
-def product_image(product: dict[str, Any]) -> str:
+def product_image_candidates(product: dict[str, Any]) -> list[str]:
+    candidates: list[str] = []
     for field in (
         "fotoPrincipal",
         "imagemPrincipal",
@@ -48,19 +49,21 @@ def product_image(product: dict[str, Any]) -> str:
     ):
         value = product.get(field)
         if value:
-            return str(value).strip()
+            candidates.append(str(value).strip())
     for field in ("galeria", "fotosExtras", "images"):
         values = product.get(field)
         if isinstance(values, list):
             for value in values:
                 if value:
-                    return str(value).strip()
-    return str(
-        product.get("image")
-        or product.get("imagemPrincipal")
-        or product.get("imagem")
-        or ""
-    ).strip()
+                    candidates.append(str(value).strip())
+    return candidates
+
+
+def product_image(product: dict[str, Any]) -> str:
+    for value in product_image_candidates(product):
+        if value:
+            return value
+    return ""
 
 
 def is_active(product: dict[str, Any]) -> bool:
@@ -79,7 +82,22 @@ def public_link_is_usable(link: str) -> bool:
     return value.lower().startswith(("http://", "https://"))
 
 
-def is_public_offer(product: dict[str, Any]) -> bool:
+def public_image_is_usable(root: Path, image: str) -> bool:
+    return bool(image) and not image_is_placeholder(image) and image_exists(root, image)
+
+
+def public_product_image(root: Path, product: dict[str, Any]) -> str:
+    return next(
+        (
+            image
+            for image in product_image_candidates(product)
+            if public_image_is_usable(root, image)
+        ),
+        "",
+    )
+
+
+def is_public_offer(root: Path, product: dict[str, Any]) -> bool:
     status = normalize_text(
         next(
             (
@@ -102,7 +120,11 @@ def is_public_offer(product: dict[str, Any]) -> bool:
             "bloqueado",
         )
     )
-    return not blocked and public_link_is_usable(purchase_link(product))
+    return (
+        not blocked
+        and public_link_is_usable(purchase_link(product))
+        and bool(public_product_image(root, product))
+    )
 
 
 def quality_score(root: Path, product: dict[str, Any]) -> int:
@@ -275,7 +297,7 @@ def audit(root: Path, apply_fixes: bool = False) -> dict[str, Any]:
         write_json(products_path, products)
 
     active_products = [product for product in products if is_active(product)]
-    public_offers = [product for product in products if is_public_offer(product)]
+    public_offers = [product for product in products if is_public_offer(root, product)]
     report = {
         "executedAt": today_iso(),
         "appliedSafeFixes": apply_fixes,
@@ -326,7 +348,7 @@ def write_markdown(path: Path, report: dict[str, Any]) -> None:
         f"- Anúncios analisados: {totals['products']}",
         f"- Anúncios ativos: {totals['active']}",
         f"- Inativos/revisão: {totals['inactiveOrReview']}",
-        f"- Ofertas públicas por link válido: {totals['publicOffers']}",
+        f"- Ofertas públicas por link válido e foto válida: {totals['publicOffers']}",
         f"- Pendentes/bloqueados da vitrine: {totals['pendingOrBlocked']}",
         f"- Grupos duplicados: {totals['duplicateGroups']}",
         f"- Conflitos de imagem compartilhada: {totals['imageConflicts']}",
@@ -368,7 +390,7 @@ def json_summary(report: dict[str, Any]) -> str:
     totals = report["totals"]
     return (
         f"Analisados: {totals['products']} | ativos: {totals['active']} | "
-        f"publicos por link: {totals['publicOffers']} | "
+        f"publicos por link e foto: {totals['publicOffers']} | "
         f"problemas: {totals['issues']} | duplicados: {totals['duplicateGroups']} | "
         f"ativos sem foto: {report['acceptance']['activeWithoutPhoto']} | "
         f"ativos sem link: {report['acceptance']['activeWithoutLink']}"

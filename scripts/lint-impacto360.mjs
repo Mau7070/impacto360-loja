@@ -55,8 +55,9 @@ ok("categorias comerciais visiveis", html.includes("Categorias do shopping") && 
 ok("como funciona completo", html.includes("Como funciona") && html.includes("1. Seleção") && html.includes("4. Transparência"));
 ok("blocos de parceiros", html.includes("Top Amazon") && html.includes("Top Mercado Livre") && html.includes("Outras lojas parceiras"));
 ok("cards com ver oferta", html.includes("Ver oferta"));
-ok("cards ocultam pendencias tecnicas", html.includes("Confirmar no site parceiro") && html.includes("Conferir preço atualizado") && !html.includes('"Avaliação pendente de revisão"'));
-ok("cards com loja e afiliado", html.includes("Link de afiliado") && html.includes("Loja parceira:"));
+ok("cards ocultam pendencias tecnicas", html.includes("Conferir preço atualizado") && !html.includes('"Avaliação pendente de revisão"') && !html.includes("Compartilhar produto"));
+ok("cards exigem foto publica", html.includes("resolveProductImage(item).hasPhoto") && html.includes("card.remove()"));
+ok("cards com loja e afiliado", html.includes("Link de afiliado") && html.includes("Loja:"));
 
 const products = JSON.parse(read("dados/products.json"));
 const activeProducts = products.filter(product => String(product.status || "").toLowerCase() === "ativo");
@@ -68,13 +69,27 @@ const usableLink = value => {
   return true;
 };
 const linkFields = ["linkCompra", "linkAfiliado", "affiliateLink", "linkComissionado", "linkPlataforma", "link_original_afiliado", "linkOriginal", "urlProduto", "url"];
+const imageFields = ["fotoPrincipal", "imagemPrincipal", "imagem", "image", "imageUrl", "thumbnail", "foto", "productImage", "src"];
+const imageIsUsable = product => {
+  const listFields = ["galeria", "fotosExtras", "images"];
+  const candidates = [
+    ...imageFields.map(field => product[field]),
+    ...listFields.flatMap(field => Array.isArray(product[field]) ? product[field] : []),
+  ].map(value => String(value || "").trim());
+  return candidates.some(value => {
+    if (!value || /COLOCAR_|foto preservada|imagem pendente|placeholder quebrado|placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(value)) return false;
+    if (/^https?:\/\//i.test(value) || value.startsWith("data:")) return true;
+    return fs.existsSync(path.join(root, value.replace(/^\/+/, "")));
+  });
+};
 const publicProducts = products.filter(product => {
   const status = String(product.status || product.statusPublicacao || product.auditoriaPublicacao || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
-    && linkFields.some(field => usableLink(product[field]));
+    && linkFields.some(field => usableLink(product[field]))
+    && imageIsUsable(product);
 });
 ok("catalogo com produtos ativos", activeProducts.length > 0, `${activeProducts.length} ativo(s)`);
-ok("catalogo com produtos publicos por link", publicProducts.length >= 8, `${publicProducts.length} publico(s)`);
+ok("catalogo com produtos publicos por link e foto", publicProducts.length >= 8, `${publicProducts.length} publico(s)`);
 
 const sitemap = read("sitemap.xml");
 ok("sitemap tem paginas de produto", sitemap.includes("<loc>https://impacto360afiliado.com.br/produto/"));
@@ -83,6 +98,7 @@ ok("sitemap pacote tem paginas de produto", read("pacote-github-pages-pronto/sit
 const firstProductDir = path.join(root, "produto");
 const productDirs = exists("produto") ? fs.readdirSync(firstProductDir, { withFileTypes: true }).filter(item => item.isDirectory()) : [];
 ok("paginas individuais geradas", productDirs.length > 0, `${productDirs.length} pagina(s)`);
+ok("paginas individuais sem aliases extras", productDirs.length === publicProducts.length, `${productDirs.length} pagina(s), ${publicProducts.length} produto(s) publico(s)`);
 if (productDirs.length) {
   const sample = read(path.join("produto", productDirs[0].name, "index.html"));
   ok("pagina produto com json-ld", sample.includes('type="application/ld+json"') && sample.includes('"@type": "Product"'));

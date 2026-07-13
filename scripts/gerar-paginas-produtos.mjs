@@ -47,6 +47,20 @@ function isUsableLink(link) {
   return /^https?:\/\//i.test(value);
 }
 
+function publicImageExists(value) {
+  const source = String(value || "").trim().replace(/^\/+/, "");
+  if (!source) return false;
+  if (/^https?:\/\//i.test(source) || source.startsWith("data:")) return true;
+  return fs.existsSync(path.join(root, source));
+}
+
+function isPublishableImage(value) {
+  const source = String(value || "").trim();
+  return Boolean(source)
+    && !/foto preservada|imagem pendente|placeholder quebrado|placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(source)
+    && publicImageExists(source);
+}
+
 function getProductImage(product) {
   const gallery = Array.isArray(product?.galeria) ? product.galeria : [];
   const extras = Array.isArray(product?.fotosExtras) ? product.fotosExtras : [];
@@ -57,13 +71,14 @@ function getProductImage(product) {
     extras[0],
     images[0],
   ].map(value => String(value || "").trim());
-  return candidates.find(value => value && !/foto preservada|imagem pendente|placeholder quebrado|placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(value)) || "";
+  return candidates.find(isPublishableImage) || "";
 }
 
 function productIsPublishable(product) {
   const status = normalizeText(firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao"]));
   return !/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)
-    && isUsableLink(getProductLink(product));
+    && isUsableLink(getProductLink(product))
+    && Boolean(getProductImage(product));
 }
 
 function htmlEscape(value) {
@@ -127,7 +142,7 @@ function productUrl(product) {
 }
 
 function productPageSlugs(product) {
-  return [...new Set([productSlug(product), product.id].filter(Boolean).map(value => String(value)))];
+  return [productSlug(product)].filter(Boolean).map(value => String(value));
 }
 
 function ratingSchemaValue(value) {
@@ -258,19 +273,19 @@ function commercialDescription(product, store) {
   const title = cleanCommercialTitle(firstFilled(product, ["name", "nome", "title"]));
   const original = cleanCommercialText(firstFilled(product, ["descricaoCurta", "description", "descricao", "descricaoDetalhada", "fullDescription"]));
   if (original && original.length > 42 && !/apenas uma op[cç][aã]o|campos edit[aá]veis/i.test(original)) {
-    return truncateText(original, 260);
+    return truncateText(original, 150);
   }
   const partner = partnerName(product, store);
-  const confirm = "Confira no anúncio parceiro preço, frete, garantia, variações e condições de pagamento.";
+  const confirm = "Confira preço, frete e condições no parceiro.";
   const profile = categoryProfile(product);
-  if (profile === "smartphone") return truncateText(`${title} para comparar versão, armazenamento, conectividade e uso diário com compra direcionada pela ${partner}. ${confirm}`, 260);
-  if (profile === "casa") return truncateText(`${title} para equipar casa e cozinha com praticidade. ${confirm}`, 260);
-  if (profile === "moda") return truncateText(`${title} para conferir estilo, conforto, material, numeração e variações disponíveis no parceiro. ${confirm}`, 260);
-  if (profile === "ferramentas") return truncateText(`${title} para manutenção, oficina ou uso doméstico. Confirme potência, voltagem, acessórios e garantia no parceiro.`, 260);
-  if (profile === "cavalgada") return truncateText(`${title} para cavalgada, montaria, desfile ou rotina rural. Confirme material, medidas e compatibilidade no parceiro.`, 260);
-  if (profile === "escolar") return truncateText(`${title} para estudo, organização e rotina escolar. ${confirm}`, 260);
-  if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa, conteúdo da embalagem e condições de entrega no parceiro.`, 260);
-  return truncateText(`${title} disponível em loja parceira com link preservado. ${confirm}`, 260);
+  if (profile === "smartphone") return truncateText(`${title} com compra direcionada pela ${partner}. ${confirm}`, 150);
+  if (profile === "casa") return truncateText(`${title} para casa, cozinha ou rotina diária. ${confirm}`, 150);
+  if (profile === "moda") return truncateText(`${title} para conferir estilo, tamanho e variações. ${confirm}`, 150);
+  if (profile === "ferramentas") return truncateText(`${title} para conferir potência, voltagem e acessórios. ${confirm}`, 150);
+  if (profile === "cavalgada") return truncateText(`${title} para conferir material, medidas e compatibilidade. ${confirm}`, 150);
+  if (profile === "escolar") return truncateText(`${title} para estudo e organização. ${confirm}`, 150);
+  if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa e entrega. ${confirm}`, 150);
+  return truncateText(`${title} disponível em loja parceira. ${confirm}`, 150);
 }
 
 function productBenefitTags(product, store, priceLabel) {
@@ -281,7 +296,7 @@ function productBenefitTags(product, store, priceLabel) {
     const clean = truncateText(cleanCommercialText(value), 36);
     if (clean && !/revisar|pendente|rascunho|inserir link|foto preservada/i.test(clean) && !tags.some(item => normalizeText(item) === normalizeText(clean))) tags.push(clean);
   };
-  (Array.isArray(product?.specs) ? product.specs : []).slice(0, 4).forEach(add);
+  (Array.isArray(product?.specs) ? product.specs : []).slice(0, 2).forEach(add);
   const patterns = [
     /\b\d+\s*(?:GB|TB)\b/ig,
     /\b\d+\s*GB\s*RAM\b/ig,
@@ -298,10 +313,8 @@ function productBenefitTags(product, store, priceLabel) {
   add(categoryProfile(product) === "geral" ? firstFilled(product, ["category", "categoria"]) : firstFilled(product, ["subcategoria", "category", "categoria"]));
   if (!hasReliablePrice(priceLabel)) add("Preço atualizado no parceiro");
   add(partnerName(product, store));
-  return tags.slice(0, 4);
+  return tags.slice(0, 2);
 }
-
-const pagePlaceholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><rect x="210" y="260" width="780" height="620" rx="42" fill="#ffffff" stroke="#d9e4ef" stroke-width="10"/><circle cx="430" cy="455" r="72" fill="#e9f2fb"/><path d="M290 760l190-190 130 130 96-96 204 204v72H290z" fill="#dceaf6"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="960" font-size="46" font-weight="700">Foto em conferência</text><text x="600" y="1022" font-size="32">Veja detalhes no parceiro</text></g></svg>');
 
 function relatedProducts(product, products) {
   const category = normalizeText(firstFilled(product, ["category", "categoria", "subcategoria"]));
@@ -319,7 +332,7 @@ function renderRelatedProducts(product, products) {
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
         ${related.map(item => `<a class="related-card" href="/produto/${htmlEscape(productSlug(item))}/">
-          <img src="${htmlEscape(webPath(getProductImage(item)) || pagePlaceholderImage)}" alt="${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}">
+          <img src="${htmlEscape(webPath(getProductImage(item)))}" alt="${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}">
           <strong>${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}</strong>
           <span>${htmlEscape(displayPriceLabel(firstFilled(item, ["price", "preco", "precoAtual"])))}</span>
         </a>`).join("")}
@@ -334,7 +347,7 @@ function productPage(product, store, products) {
   const priceLabel = displayPriceLabel(rawPriceLabel);
   const price = numericPrice(rawPriceLabel);
   const realImage = webPath(getProductImage(product));
-  const image = realImage || pagePlaceholderImage;
+  const image = realImage;
   const link = getProductLink(product);
   const rating = firstFilled(product, ratingFields);
   const ratingValue = ratingSchemaValue(rating);
@@ -501,7 +514,7 @@ for (const base of outputRoots) {
 
 const aliasCount = products.reduce((total, product) => total + productPageSlugs(product).length, 0);
 console.log(`Paginas canonicas de produto geradas: ${products.length}`);
-console.log(`Arquivos de produto publicados, incluindo aliases por id: ${aliasCount}`);
+console.log(`Arquivos de produto publicados: ${aliasCount}`);
 for (const base of outputRoots) {
   console.log(`- ${path.relative(root, base) || "."}/produto`);
 }

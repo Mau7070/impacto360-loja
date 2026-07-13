@@ -7,8 +7,8 @@ Data: 2026-07-13
 - Anúncios analisados: 700
 - Anúncios ativos: 323
 - Inativos/revisão: 377
-- Ofertas públicas por link válido: 613
-- Pendentes/bloqueados da vitrine: 87
+- Ofertas públicas por link válido e foto válida: 375
+- Pendentes/bloqueados da vitrine: 325
 - Grupos duplicados: 5
 - Conflitos de imagem compartilhada: 0
 
