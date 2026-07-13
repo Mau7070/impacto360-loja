@@ -472,10 +472,14 @@
       background: rgba(255,255,255,.82);
       box-shadow: 0 18px 42px rgba(8,25,47,.08);
       overflow: hidden;
-      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      transition: box-shadow .22s ease, border-color .22s ease;
     }
-    .store-card:hover, .product-card:hover {
+    .store-card:hover {
       transform: translateY(-5px);
+      border-color: rgba(29,92,255,.24);
+      box-shadow: 0 24px 58px rgba(8,25,47,.13);
+    }
+    .product-card:hover {
       border-color: rgba(29,92,255,.24);
       box-shadow: 0 24px 58px rgba(8,25,47,.13);
     }
@@ -735,9 +739,8 @@
       background: #fff;
       filter: saturate(1.06) contrast(1.03);
       image-rendering: auto;
-      transition: transform .25s ease;
     }
-    .product-card:hover img { transform: scale(1.04); }
+    .product-card:hover img { transform: none; }
     .media-status {
       display: inline-flex;
       align-items: center;
@@ -787,7 +790,7 @@
     }
     .favorite.active { background: #ffe5ec; }
     .product-info { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
-    .product-info h3 { margin: 0; font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; }
+    .product-info h3 { margin: 0; font-size: 17px; line-height: 1.25; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .product-info p { margin: 0; color: var(--muted); line-height: 1.45; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     .specs { display: flex; gap: 6px; flex-wrap: wrap; }
     .specs span { border-radius: 999px; background: #f0f5fb; color: #40546d; padding: 6px 8px; font-size: 11px; font-weight: 800; }
@@ -806,6 +809,7 @@
     .affiliate-mini { background: #ecfdf6; color: #0d6b51; }
     .product-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .product-actions .btn { flex: 1 1 150px; justify-content: center; min-height: 48px; }
+    .product-actions .btn-primary { min-width: min(100%, 190px); }
     .product-card[data-publicacao="revisar"] .product-actions .btn-primary { background: #7c5300; }
 
     .partner-showcase {
@@ -12908,7 +12912,7 @@
     let viewMode = "grid";
     let currentStore = null;
     const REVIEW_MESSAGE = "Revisar antes de publicar.";
-    const placeholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="560" font-size="56" font-weight="700">Imagem em revisão</text><text x="600" y="632" font-size="34">Adicione foto real do produto</text></g></svg>');
+    const placeholderImage = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><rect width="1200" height="1200" fill="#f4f8fb"/><rect x="210" y="260" width="780" height="620" rx="42" fill="#ffffff" stroke="#d9e4ef" stroke-width="10"/><circle cx="430" cy="455" r="72" fill="#e9f2fb"/><path d="M290 760l190-190 130 130 96-96 204 204v72H290z" fill="#dceaf6"/><g fill="#607083" font-family="Arial, sans-serif" text-anchor="middle"><text x="600" y="960" font-size="46" font-weight="700">Foto em conferência</text><text x="600" y="1022" font-size="32">Veja detalhes no parceiro</text></g></svg>');
     window.ai360PlaceholderImage = placeholderImage;
     function alternateAssetSrc(value) {
       const source = String(value || "").trim();
@@ -13007,7 +13011,8 @@
       { label: "Materiais Escolares", icon: "ESC", description: "Cadernos, estojos, mochilas e materiais para estudo.", action: "store", value: "impacto-livraria", terms: ["escolar", "caderno", "lapis", "lápis", "estojo", "mochila", "caneta"] },
       { label: "Produtos para Cavalgada", icon: "EQ", description: "Busca dedicada a itens e acessórios de uso equestre.", action: "search", value: "cavalgada", terms: ["cavalgada", "cavalo", "equestre", "sela", "country"] },
       { label: "Ofertas do Dia", icon: "OF", description: "Atalhos para ofertas, promoções e oportunidades cadastradas.", action: "filter", value: "offers", terms: ["oferta", "promoção", "promocao", "desconto"] },
-      { label: "Mais Vendidos", icon: "TOP", description: "Produtos e lojas com maior volume de itens na vitrine.", action: "filter", value: "popular", terms: [] }
+      { label: "Mais Vendidos", icon: "TOP", description: "Produtos e lojas com maior volume de itens na vitrine.", action: "filter", value: "popular", terms: [] },
+      { label: "Serviços Digitais", icon: "DIG", description: "Atalhos para serviços criativos, acadêmicos e soluções sob orçamento.", action: "filter", value: "services", terms: ["serviço", "servico", "digital", "criativo", "academico", "acadêmico", "orçamento"] }
     ];
 
     window.handleStoreCoverError = function handleStoreCoverError(img) {
@@ -13042,27 +13047,33 @@
     function isValidImageSource(value) {
       const source = String(value || "").trim();
       if (!source || source.startsWith("COLOCAR_")) return false;
-      return !/placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(source);
+      return !/foto preservada|imagem pendente|placeholder quebrado|placeholder|sem[-_ ]?(foto|imagem)|no[-_ ]?image/i.test(source);
     }
 
     function resolveProductImage(produto) {
       const gallery = Array.isArray(produto?.galeria) ? produto.galeria : [];
       const extraPhotos = Array.isArray(produto?.fotosExtras) ? produto.fotosExtras : [];
+      const images = Array.isArray(produto?.images) ? produto.images : [];
       const candidates = [
         produto?.fotoPrincipal,
         produto?.imagemPrincipal,
-        produto?.image,
         produto?.imagem,
+        produto?.image,
+        produto?.imageUrl,
         gallery[0],
         extraPhotos[0],
-        produto?.thumbnail
+        produto?.thumbnail,
+        produto?.foto,
+        produto?.productImage,
+        produto?.src,
+        images[0]
       ].filter(isValidImageSource);
       const src = String(candidates[0] || "").trim();
       return {
         src: src || placeholderImage,
         hasPhoto: Boolean(src),
         status: src ? (produto?.statusImagem || "imagem_ok") : "imagem_manual_necessaria",
-        label: src ? "Foto preservada" : "Revisar foto"
+        label: src ? "Imagem do produto" : "Foto em conferência"
       };
     }
 
@@ -13242,10 +13253,10 @@
     }
 
     function productIsVisible(item) {
-      if (String(item.status || "").toLowerCase() !== "ativo") return false;
-      if (item.aprovadoParaPublicacao === false) return false;
+      const status = normalize(item.status || item.statusPublicacao || item.auditoriaPublicacao);
+      if (/rascunho|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
       if (!getProductLink(item)) return false;
-      return resolveProductImage(item).hasPhoto;
+      return true;
     }
 
     function storeProducts(storeId) {
@@ -13510,10 +13521,6 @@
         '</section>';
     }
 
-    function sourceText(item) {
-      return normalize([item?.source, item?.badge, getProductLink(item), item?.affiliateLink, item?.linkOriginal].join(" "));
-    }
-
     function productsForPartnerSource(sourceId) {
       const visible = products.filter(productIsVisible);
       if (sourceId === "amazon") return uniqueProducts(visible.filter(item => sourceText(item).includes("amazon"))).slice(0, 4);
@@ -13633,7 +13640,6 @@
     function renderStorePage(store) {
       const items = allStoreProducts(store.id);
       const readyItems = items.filter(productIsVisible);
-      const reviewItems = items.filter(item => !productIsVisible(item) || item.aprovadoParaPublicacao === false || item.status === "rascunho" || item.statusImagem === "imagem_manual_necessaria");
       const featured = readyItems.slice(0, 3);
       const chips = store.subcategories.map(item => '<button class="chip" onclick="quickSearch(\'' + escapeJs(item) + '\')">' + escapeHtml(item) + '</button>').join("");
       const cover = storeCoverImage(store);
@@ -13654,14 +13660,14 @@
             '</div>' +
           '</div>' +
         '</section>' +
-        '<section><div class="section-title"><div><h2>' + escapeHtml(store.section || "Destaques") + '</h2><p>Produtos e serviços desta loja com campos editáveis para links de afiliado ou orçamento.</p></div></div><div class="store-grid">' + featured.map(item => renderHighlight(item)).join("") + '</div></section>' +
-        '<section><div class="section-title"><div><h2>Mais procurados</h2><p>Itens prontos para compra com link de venda preservado.</p></div></div><div class="product-grid">' + (readyItems.length ? readyItems.map(item => renderProductCard(item, store)).join("") : '<div class="empty-state">Nenhum produto pronto para destaque nesta loja.</div>') + '</div></section>' +
-        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Área preparada para novos produtos, serviços e campanhas.</p></div></div><div class="product-grid">' + readyItems.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>' +
-        (reviewItems.length ? '<section><div class="section-title"><div><h2>Produtos pendentes de revisão</h2><p>Itens preservados com link, foto ou descrição aguardando aprovação manual.</p></div></div><div class="product-grid">' + reviewItems.map(item => renderProductCard(item, store)).join("") + '</div></section>' : '');
+        '<section><div class="section-title"><div><h2>' + escapeHtml(store.section || "Destaques") + '</h2><p>Produtos desta loja com link de compra preservado e leitura rápida para decidir.</p></div></div><div class="store-grid">' + featured.map(item => renderHighlight(item)).join("") + '</div></section>' +
+        '<section><div class="section-title"><div><h2>Mais procurados</h2><p>Ofertas com link afiliado utilizável, imagem estável e botão direto para o parceiro.</p></div></div><div class="product-grid">' + (readyItems.length ? readyItems.map(item => renderProductCard(item, store)).join("") : '<div class="empty-state">Nenhum produto com link de compra válido nesta loja agora.</div>') + '</div></section>' +
+        '<section><div class="section-title"><div><h2>Novidades e ofertas</h2><p>Mais opções da loja para conferir preço e condições no parceiro.</p></div></div><div class="product-grid">' + readyItems.slice().reverse().slice(0, 4).map(item => renderProductCard(item, store)).join("") + '</div></section>';
     }
 
     function renderHighlight(item) {
-      return '<article class="highlight-card store-card"><div class="store-card-body"><span class="chip">' + escapeHtml(item.badge) + '</span><h3>' + escapeHtml(item.name) + '</h3><p>' + escapeHtml(item.description) + '</p></div></article>';
+      const store = stores.find(store => store.id === item.storeId);
+      return '<article class="highlight-card store-card"><div class="store-card-body"><span class="chip">' + escapeHtml(visibleBadgeLabel(item, store)) + '</span><h3>' + escapeHtml(cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]))) + '</h3><p>' + escapeHtml(commercialDescription(item, store)) + '</p></div></article>';
     }
 
     function firstFilled(item, keys) {
@@ -13680,45 +13686,178 @@
       return date.toLocaleDateString("pt-BR", { timeZone: "UTC" });
     }
 
+    function cleanCommercialText(value) {
+      return String(value || "")
+        .replace(/https?:\/\/\S+/gi, "")
+        .replace(/\b(?:COLOCAR_LINK_AFILIADO_AQUI|COLOCAR_LINK_AQUI|Inserir link(?: de afiliado)?(?: antes de publicar)?|Foto preservada|imagem pendente|placeholder quebrado)\b/gi, "")
+        .replace(/\b(?:Avalia[cç][aã]o|Disponibilidade|Categoria|[UÚ]ltima verifica[cç][aã]o)\s+pendente(?:\s+de\s+revis[aã]o)?\b/gi, "")
+        .replace(/\bPendente de revis[aã]o\b/gi, "")
+        .replace(/\bRevisar antes de publicar\b/gi, "")
+        .replace(/\bSob consulta\b/gi, "")
+        .replace(/\bValor:\s*\./gi, "")
+        .replace(/\bLink preservado da loja parceira\.?/gi, "")
+        .replace(/\bselecionado para a vitrine(?: do Shopping Impacto360)?\.?/gi, "")
+        .replace(/\bProduto preparado para voc[eê] inserir seu link de afiliado[^.]*\.?/gi, "")
+        .replace(/\s+/g, " ")
+        .replace(/\s+([.,;:])/g, "$1")
+        .trim();
+    }
+
+    function cleanCommercialTitle(value) {
+      const title = cleanCommercialText(value)
+        .replace(/\b5g\b/gi, "5G")
+        .replace(/\b4g\b/gi, "4G")
+        .replace(/\b(\d+)\s*gb\b/gi, "$1GB")
+        .replace(/\b(\d+)\s*tb\b/gi, "$1TB")
+        .replace(/\bram\b/gi, "RAM")
+        .replace(/\bssd\b/gi, "SSD")
+        .replace(/\bnfc\b/gi, "NFC")
+        .replace(/\bwi[- ]?fi\b/gi, "Wi-Fi")
+        .replace(/\bdual sim\b/gi, "Dual SIM")
+        .replace(/\biphone\b/gi, "iPhone");
+      return title || "Produto Impacto360";
+    }
+
+    function truncateText(value, limit) {
+      const text = String(value || "").trim();
+      if (!limit || text.length <= limit) return text;
+      const sliced = text.slice(0, limit - 1).replace(/\s+\S*$/, "");
+      return (sliced || text.slice(0, limit - 1)).trim() + "…";
+    }
+
+    function hasReliablePrice(value) {
+      const text = normalize(value);
+      return Boolean(text) && !/sob consulta|consultar|preco pendente|preco nao validado|pendente/.test(text);
+    }
+
+    function displayPriceLabel(value) {
+      return hasReliablePrice(value) ? String(value).trim() : "Conferir preço atualizado";
+    }
+
+    function sourceText(item) {
+      return normalize([item?.source, item?.badge, getProductLink(item), item?.affiliateLink, item?.linkOriginal].join(" "));
+    }
+
+    function partnerName(item, store) {
+      const text = sourceText(item);
+      if (/amazon/.test(text)) return "Amazon";
+      if (/mercado livre|mercadolivre|meli\.la/.test(text)) return "Mercado Livre";
+      const source = cleanCommercialText(firstFilled(item, ["source"]));
+      if (source && !/revisar|pendente|oferta verificada/i.test(source)) return source;
+      return store?.commercialName || store?.name || "site parceiro";
+    }
+
+    function commercialCtaLabel(item, store) {
+      if (item.actionType === "quote") return "Solicitar orçamento";
+      const partner = partnerName(item, store);
+      if (partner === "Mercado Livre") return "Ver oferta no Mercado Livre";
+      if (partner === "Amazon") return "Ver oferta na Amazon";
+      return "Comprar no site parceiro";
+    }
+
+    function visibleBadgeLabel(item, store) {
+      const badge = cleanCommercialText(item?.badge);
+      if (badge && !/revisar|pendente|rascunho|duplicado/i.test(badge)) return badge;
+      const partner = partnerName(item, store);
+      return partner === "site parceiro" ? "Oferta parceira" : partner;
+    }
+
+    function categoryProfile(item) {
+      const text = normalize([item?.storeId, item?.category, item?.categoria, item?.subcategoria, item?.name, item?.description].join(" "));
+      if (/celular|smartphone|iphone|motorola|samsung|xiaomi|5g|mobile/.test(text)) return "smartphone";
+      if (/casa|cozinha|panela|forno|air fryer|utensilio|eletrodomestico/.test(text)) return "casa";
+      if (/calcado|tenis|sapato|sandalia|chinelo|bota|moda|camisa|vestido|bolsa/.test(text)) return "moda";
+      if (/ferramenta|furadeira|oficina|lanterna|auto|veiculo/.test(text)) return "ferramentas";
+      if (/cavalgada|cavalo|equestre|sela|country|arreio|cabecada/.test(text)) return "cavalgada";
+      if (/escolar|caderno|estojo|mochila|caneta|livraria/.test(text)) return "escolar";
+      if (/brinquedo|boneca|carrinho|infantil|dinossauro|robo|drone/.test(text)) return "brinquedos";
+      return "geral";
+    }
+
+    function commercialDescription(item, store) {
+      const title = cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]));
+      const original = cleanCommercialText(firstFilled(item, ["descricaoCurta", "description", "descricao", "descricaoDetalhada", "fullDescription"]));
+      if (original && original.length > 42 && !/apenas uma op[cç][aã]o|campos edit[aá]veis/i.test(original)) {
+        return truncateText(original, 210);
+      }
+      const partner = partnerName(item, store);
+      const confirm = "Confira no anúncio parceiro preço, frete, garantia, variações e condições de pagamento.";
+      const profile = categoryProfile(item);
+      if (profile === "smartphone") return truncateText(`${title} para comparar versão, armazenamento, conectividade e uso diário com compra direcionada pela ${partner}. ${confirm}`, 210);
+      if (profile === "casa") return truncateText(`${title} para equipar casa e cozinha com praticidade. ${confirm}`, 210);
+      if (profile === "moda") return truncateText(`${title} para conferir estilo, conforto, material, numeração e variações disponíveis no parceiro. ${confirm}`, 210);
+      if (profile === "ferramentas") return truncateText(`${title} para manutenção, oficina ou uso doméstico. Confirme potência, voltagem, acessórios e garantia no parceiro.`, 210);
+      if (profile === "cavalgada") return truncateText(`${title} para cavalgada, montaria, desfile ou rotina rural. Confirme material, medidas e compatibilidade no parceiro.`, 210);
+      if (profile === "escolar") return truncateText(`${title} para estudo, organização e rotina escolar. ${confirm}`, 210);
+      if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa, conteúdo da embalagem e condições de entrega no parceiro.`, 210);
+      return truncateText(`${title} disponível em loja parceira com link preservado. ${confirm}`, 210);
+    }
+
+    function productBenefitTags(item, store, priceLabel) {
+      const title = cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]));
+      const text = [title, item?.description, item?.descricaoCurta, ...(Array.isArray(item?.specs) ? item.specs : [])].join(" ");
+      const tags = [];
+      const add = value => {
+        const clean = truncateText(cleanCommercialText(value), 34);
+        if (clean && !/revisar|pendente|rascunho|inserir link|foto preservada/i.test(clean) && !tags.some(item => normalize(item) === normalize(clean))) tags.push(clean);
+      };
+      (Array.isArray(item?.specs) ? item.specs : []).slice(0, 4).forEach(add);
+      const patterns = [
+        /\b\d+\s*(?:GB|TB)\b/ig,
+        /\b\d+\s*GB\s*RAM\b/ig,
+        /\b5G\b/ig,
+        /\bNFC\b/ig,
+        /\bWi-Fi\b/ig,
+        /\b\d+\s*MP\b/ig,
+        /\b\d+\s*(?:mAh|L|W|V)\b/ig,
+        /\b(?:110V|127V|220V|bivolt)\b/ig
+      ];
+      for (const pattern of patterns) {
+        for (const match of text.matchAll(pattern)) add(match[0]);
+      }
+      add(categoryProfile(item) === "geral" ? firstFilled(item, ["category", "categoria"]) : firstFilled(item, ["subcategoria", "category", "categoria"]));
+      if (!hasReliablePrice(priceLabel)) add("Preço atualizado no parceiro");
+      add(partnerName(item, store));
+      return tags.slice(0, 4);
+    }
+
     function renderProductCard(item, store) {
       const isQuote = item.actionType === "quote";
-      const isExternalStore = item.actionType === "external-store" || item.type === "external-store";
-      const isMercadoLivre = item.source === "Mercado Livre";
       const media = getProductMedia(item);
       const video = getProductVideo(item);
       const linkPlataforma = getProductLink(item);
-      const semImagemValida = !media.principal || media.principal === placeholderImage;
-      const precisaRevisao = !linkPlataforma || semImagemValida || item.statusImagem === "imagem_manual_necessaria" || item.aprovadoParaPublicacao === false;
-      const actionLabel = isQuote ? "Solicitar orçamento" : "Ver oferta";
-      const sourceLabel = firstFilled(item, ["source", "badge"]) || store?.commercialName || "Loja parceira";
-      const price = firstFilled(item, ["price", "preco", "precoAtual"]) || "Consultar";
+      const partner = partnerName(item, store);
+      const actionLabel = commercialCtaLabel(item, store);
+      const title = cleanCommercialTitle(firstFilled(item, ["name", "nome", "title"]));
+      const description = commercialDescription(item, store);
+      const priceRaw = firstFilled(item, ["price", "preco", "precoAtual"]);
+      const price = displayPriceLabel(priceRaw);
       const previousPrice = firstFilled(item, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
       const ratingValue = firstFilled(item, ["avaliacao", "rating", "reviewRating", "nota"]);
-      const ratingLabel = ratingValue ? "Avaliação " + ratingValue : "Avaliação pendente de revisão";
-      const availability = firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]) || "Disponibilidade pendente de revisão";
+      const availabilityValue = cleanCommercialText(firstFilled(item, ["disponibilidade", "estoque", "statusDisponibilidade"]));
+      const availability = availabilityValue && !/pendente|revis[aã]o|sob consulta/i.test(availabilityValue) ? availabilityValue : "Confirmar no site parceiro";
       const lastCheck = dateLabel(firstFilled(item, ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"]));
+      const benefitTags = productBenefitTags(item, store, priceRaw);
       const metaItems = [
-        sourceLabel,
-        ratingLabel,
+        "Loja parceira: " + partner,
+        ratingValue ? "Avaliação " + cleanCommercialText(ratingValue) : "",
         availability,
-        lastCheck ? "Revisto em " + lastCheck : "",
-        precisaRevisao ? "Pendente de revisão" : ""
+        lastCheck ? "Revisado em " + lastCheck : ""
       ].filter(Boolean);
-      return '<article class="product-card" data-status="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '" data-publicacao="' + escapeAttr(precisaRevisao ? "revisar" : "pronto") + '">' +
+      return '<article class="product-card" data-status="pronto" data-publicacao="pronto">' +
         '<div class="product-media">' +
           '<img src="' + escapeAttr(media.principal) + '" alt="' + escapeAttr(media.alt) + '" loading="lazy" decoding="async" onerror="handleProductImageError(this)">' +
-          '<span class="badge">' + escapeHtml(item.badge) + '</span>' +
+          '<span class="badge">' + escapeHtml(visibleBadgeLabel(item, store)) + '</span>' +
           (video.statusVideo !== "sem_video" ? '<span class="video-chip">Vídeo</span>' : '') +
           '<button class="favorite ' + (isFavorite(item.id) ? "active" : "") + '" onclick="toggleFavorite(\'' + item.id + '\')" aria-label="Favoritar produto">&hearts;</button>' +
         '</div>' +
         '<div class="product-info">' +
-          '<h3>' + escapeHtml(item.name) + '</h3>' +
-          '<p>' + escapeHtml(item.description) + '</p>' +
-          '<div class="specs">' + (item.specs || []).map(spec => '<span>' + escapeHtml(spec) + '</span>').join("") + '</div>' +
+          '<h3>' + escapeHtml(title) + '</h3>' +
+          '<p>' + escapeHtml(description) + '</p>' +
+          '<div class="specs">' + benefitTags.map(spec => '<span>' + escapeHtml(spec) + '</span>').join("") + '</div>' +
           '<div class="product-meta">' + metaItems.map(meta => '<span>' + escapeHtml(meta) + '</span>').join("") + '</div>' +
-          '<span class="media-status ' + (precisaRevisao ? "review" : "") + '">' + escapeHtml(precisaRevisao ? "Revisar antes de publicar" : media.label) + '</span>' +
-          '<span class="affiliate-mini">Link de afiliado</span>' +
-          '<div class="price-line"><span><strong class="price">' + escapeHtml(price) + '</strong>' + (previousPrice ? '<span class="old-price"> ' + escapeHtml(previousPrice) + '</span>' : '') + '</span><span class="chip">' + escapeHtml(store?.commercialName || "Impacto 360") + '</span></div>' +
+          '<span class="affiliate-mini">Link de afiliado - sem custo adicional para você</span>' +
+          '<div class="price-line"><span><strong class="price">' + escapeHtml(price) + '</strong>' + (previousPrice && hasReliablePrice(priceRaw) ? '<span class="old-price"> ' + escapeHtml(previousPrice) + '</span>' : '') + '</span><span class="chip">' + escapeHtml(partner) + '</span></div>' +
           '<div class="product-actions">' +
             '<button class="btn btn-primary" data-link-plataforma="' + escapeAttr(linkPlataforma) + '" onclick="' + (isQuote ? 'requestQuote(\'' + item.id + '\')' : 'buyProduct(\'' + item.id + '\')') + '">' + actionLabel + '</button>' +
             '<button class="btn" onclick="shareProduct(\'' + item.id + '\')">Compartilhar produto</button>' +

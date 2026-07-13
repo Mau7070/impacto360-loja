@@ -1,4 +1,59 @@
-# Relatório de melhorias Impacto360 Afiliado
+# Relatorio de melhorias Impacto360 Afiliado
+
+## Atualizacao de 2026-07-13 - vitrine de anuncios
+
+Pedido atendido: corrigir degradacao da vitrine, melhorar anuncios, esconder pendencias tecnicas e preservar links de afiliado.
+
+O que foi realmente alterado nesta rodada:
+
+- O filtro publico da home deixou de depender apenas de `status: ativo` e passou a usar link utilizavel + bloqueio de rascunho, duplicado, inativo, oculto e bloqueado.
+- Produtos com `status: revisao_manual` e link utilizavel voltaram a aparecer como oferta publica.
+- Cards publicos passaram a exibir titulo comercial limpo, descricao util, destaques curtos, loja parceira, preco seguro, disponibilidade segura e CTA por parceiro.
+- Textos internos como `Foto preservada`, `Avaliacao pendente de revisao`, `Disponibilidade pendente de revisao`, `Pendente de revisao`, `Inserir link` e `COLOCAR_LINK_AFILIADO_AQUI` deixaram de ser renderizados no card publico.
+- `Sob consulta` deixou de aparecer como preco principal no card e nas paginas de produto; no lugar aparece `Conferir preco atualizado`.
+- A disponibilidade ausente ou pendente passou a aparecer como `Confirmar no site parceiro`.
+- O botao passou a ser contextual: `Ver oferta no Mercado Livre`, `Ver oferta na Amazon` ou `Comprar no site parceiro`.
+- O placeholder de imagem foi trocado por fallback estatico e comercial, sem loop de carregamento.
+- A animacao de escala/transform do produto no hover foi removida para evitar tremura visual.
+- As paginas individuais `/produto/[slug]/` foram regeneradas sem chips de status interno e com JSON-LD seguro.
+- Foi adicionada a categoria comercial `Servicos Digitais`.
+- O auditor de anuncios passou a reportar tambem `publicos por link`, alinhado ao criterio da vitrine.
+
+Metricas desta rodada:
+
+- Produtos no catalogo: 700.
+- Lojas cadastradas: 26.
+- Produtos ativos no criterio antigo: 323.
+- Ofertas publicas pelo novo criterio de link utilizavel: 613.
+- Pendentes/bloqueados da vitrine publica: 87.
+- Paginas canonicas de produto geradas: 613.
+- Arquivos de produto publicados com aliases por id: 1226.
+- URLs de produto no sitemap: 613.
+
+Arquivos principais alterados:
+
+- `index.html`, `impacto360.html`, `pacote-github-pages-pronto/index.html`.
+- `scripts/gerar-paginas-produtos.mjs`.
+- `scripts/lint-impacto360.mjs`.
+- `scripts/validar-impacto360.mjs`.
+- `scripts/auditar-anuncios.py`.
+- `produto/**/index.html`, `pacote-github-pages-pronto/produto/**/index.html`.
+- `sitemap.xml`, `pacote-github-pages-pronto/sitemap.xml`.
+- `RELATORIO_CORRECAO_TOTAL_IMPACTO360.md`.
+- `MODELO_IDEAL_SHOPPING_IMPACTO360.md`.
+- `dados/relatorio-auditoria-anuncios.json` e `dados/relatorio-auditoria-anuncios.md`.
+
+Validacoes:
+
+- `npm.cmd run gerar:produtos`: aprovado.
+- `npm.cmd run auditar:anuncios`: aprovado.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run test:seguranca`: aprovado.
+- `npm.cmd run build`: aprovado, com avisos nao bloqueantes do Vite sobre scripts externos sem `type="module"`.
+
+Backup local antes da edicao: `backups/2026-07-13-pre-vitrine-anuncios-shopping.zip`.
+
+---
 
 Data: 2026-07-10
 
