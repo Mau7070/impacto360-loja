@@ -1,5 +1,53 @@
 # Relatorio de melhorias Impacto360 Afiliado
 
+## Atualizacao de 2026-07-13 - fotos estaveis e loja mais leve
+
+Pedido atendido: corrigir fotos tremulas, reduzir descricoes para uma vitrine mais parecida com grandes marketplaces, remover publicacoes sem fotografia e fazer limpeza do que deixava a loja pesada.
+
+O que foi realmente alterado nesta rodada:
+
+- A home ficou mais compacta: cards com foto maior, titulo em 2 linhas, descricao curta, loja, preco e um unico botao `Ver oferta`.
+- Descricoes dos cards foram limitadas a textos curtos, com maximo validado de 91 caracteres na vitrine local.
+- Foram removidos do card publico o botao `Compartilhar produto`, excesso de chips e metadados que ocupavam area da foto.
+- A tremura visual foi atacada no CSS: cards e imagens de produto ficaram sem transform, filtro, transicao e hover com repintura forte.
+- Produtos sem foto publica deixaram de gerar pagina e deixaram de contar como oferta publica.
+- O card agora tenta imagens alternativas do proprio cadastro se a primeira foto falhar; se nenhuma imagem funcionar, o card sai da vitrine em vez de mostrar placeholder.
+- O gerador deixou de criar aliases extras por `id`, reduzindo diretorios publicados e deixando a loja mais leve.
+- O auditor e o lint passaram a considerar oferta publica somente quando houver link valido e foto valida.
+- Links de afiliado foram preservados; nao houve troca manual de URLs de compra.
+
+Metricas atuais:
+
+- Produtos no catalogo: 700.
+- Ofertas publicas com link valido e foto valida: 375.
+- Paginas canonicas de produto geradas: 375.
+- Arquivos de produto publicados: 375 na raiz e 375 no pacote GitHub Pages.
+- Sitemap atualizado com 375 URLs de produto.
+- Vitrine local validada no Chrome: 38 cards renderizados em desktop e mobile, 0 imagens quebradas, 0 placeholders e 0 botoes de compartilhamento.
+
+Arquivos principais alterados:
+
+- `index.html`, `impacto360.html`, `pacote-github-pages-pronto/index.html`.
+- `scripts/gerar-paginas-produtos.mjs`.
+- `scripts/lint-impacto360.mjs`.
+- `scripts/auditar-anuncios.py`.
+- `produto/**/index.html`, `pacote-github-pages-pronto/produto/**/index.html`.
+- `sitemap.xml`, `pacote-github-pages-pronto/sitemap.xml`.
+- `dados/relatorio-auditoria-anuncios.json` e `dados/relatorio-auditoria-anuncios.md`.
+
+Validacoes executadas:
+
+- `npm.cmd run gerar:produtos`: aprovado.
+- `npm.cmd run auditar:anuncios`: aprovado.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run test:seguranca`: aprovado.
+- `npm.cmd run build`: aprovado, com avisos nao bloqueantes do Vite sobre scripts externos sem `type="module"`.
+- Validacao local com Chrome em `http://127.0.0.1:4187/`: desktop e mobile aprovados para cards, imagens e estabilidade visual.
+
+Backup local antes da edicao: `backups/2026-07-13-0915-pre-limpeza-fotos-vitrine.zip`.
+
+---
+
 ## Atualizacao de 2026-07-13 - vitrine de anuncios
 
 Pedido atendido: corrigir degradacao da vitrine, melhorar anuncios, esconder pendencias tecnicas e preservar links de afiliado.
