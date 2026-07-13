@@ -323,6 +323,7 @@
       gap: 10px;
       margin-top: 18px;
     }
+    .floor-tabs { display: none !important; }
     .filter-chip {
       border: 1px solid rgba(255,255,255,.22);
       border-radius: 999px;
@@ -475,7 +476,7 @@
       transition: box-shadow .18s ease, border-color .18s ease;
     }
     .store-card:hover {
-      transform: translateY(-5px);
+      transform: none;
       border-color: rgba(29,92,255,.24);
       box-shadow: 0 24px 58px rgba(8,25,47,.13);
     }
@@ -487,6 +488,7 @@
       min-height: 272px;
       display: flex;
       flex-direction: column;
+      transition: none;
     }
     .store-banner {
       position: relative;
@@ -506,6 +508,9 @@
       object-fit: cover;
       object-position: center;
       filter: saturate(1.08) contrast(1.04);
+      transform: none !important;
+      transition: none !important;
+      backface-visibility: hidden;
     }
     .store-cover-img {
       position: absolute;
@@ -12881,32 +12886,32 @@
     const floors = [
   {
     "id": "terreo",
-    "label": "Térreo",
-    "title": "Térreo  -  Lojas Principais",
+    "label": "Lojas",
+    "title": "Lojas principais",
     "description": "Acesso rápido às lojas de maior procura e ao corredor de ofertas."
   },
   {
     "id": "primeiro-andar",
-    "label": "1º Andar",
-    "title": "1º Andar  -  Tecnologia e Entretenimento",
+    "label": "Tecnologia",
+    "title": "Tecnologia e Entretenimento",
     "description": "Tecnologia, games, eletrônicos, cursos e livraria em alas modernas."
   },
   {
     "id": "segundo-andar",
-    "label": "2º Andar",
-    "title": "2º Andar  -  Casa, Família e Bem-estar",
+    "label": "Casa e Bem-estar",
+    "title": "Casa, Família e Bem-estar",
     "description": "Cuidados pessoais, família, decoração, pet e itens de fé."
   },
   {
     "id": "terceiro-andar",
-    "label": "3º Andar",
-    "title": "3º Andar  -  Serviços Digitais",
+    "label": "Serviços",
+    "title": "Serviços Digitais",
     "description": "Serviços criativos, acadêmicos e materiais personalizados sob orçamento."
   },
   {
     "id": "ala-externa",
-    "label": "Ala Externa",
-    "title": "Ala Externa  -  Auto, Ferramentas e Esporte",
+    "label": "Auto e esporte",
+    "title": "Auto, Ferramentas e Esporte",
     "description": "Produtos para veículo, oficina, ferramentas e vida ativa."
   }
 ];
@@ -12970,12 +12975,12 @@
     };
 
     const coverAssets = {
-      moda: "public/images/capas-lojas/capa-moda.png",
-      brinquedos: "public/images/capas-lojas/capa-brinquedos.png",
-      eletronicos: "public/images/capas-lojas/capa-eletronicos.png",
-      casa: "public/images/capas-lojas/capa-casa-decoracao.png",
-      beleza: "public/images/capas-lojas/capa-beleza.png",
-      outros: "public/images/capas-lojas/capa-outros.png"
+      moda: "public/images/capas-lojas-2026/capa-impacto-moda.webp",
+      brinquedos: "public/images/capas-lojas-2026/capa-impacto-brinquedos.webp",
+      eletronicos: "public/images/capas-lojas-2026/capa-impacto-eletronicos.webp",
+      casa: "public/images/capas-lojas-2026/capa-impacto-casa.webp",
+      beleza: "public/images/capas-lojas-2026/capa-impacto-beauty-care.webp",
+      outros: "public/images/capas-lojas-2026/capa-lojas-parceiras.webp"
     };
 
     const coverProfiles = {
@@ -13048,6 +13053,11 @@
 
     window.handleStoreCoverError = function handleStoreCoverError(img) {
       if (tryAlternateImagePath(img)) return;
+      if (img && img.dataset.storeFallbackApplied !== "true") {
+        img.dataset.storeFallbackApplied = "true";
+        img.src = coverAssets.outros;
+        return;
+      }
       const holder = img?.closest(".has-cover");
       if (holder) holder.classList.remove("has-cover");
       if (img) img.remove();
@@ -13370,7 +13380,8 @@
     }
 
     function storeCoverImage(store) {
-      return coverProfiles[storeGroupId(store)]?.cover || coverAssets.outros;
+      const ownCover = firstFilled(store, ["coverImage", "capa", "cover", "image", "imagem"]);
+      return ownCover || coverProfiles[storeGroupId(store)]?.cover || coverAssets.outros;
     }
 
     function scoreTextForGroup(text, groupId) {
@@ -13472,8 +13483,7 @@
 
     function renderFloorTabs() {
       const holder = document.getElementById("floorTabs");
-      holder.innerHTML = '<button class="filter-chip active" data-floor="all" onclick="setFloor(\'all\')">Todos os andares</button>' +
-        floors.map(floor => '<button class="filter-chip" data-floor="' + floor.id + '" onclick="setFloor(\'' + floor.id + '\')">' + floor.label + '</button>').join("");
+      if (holder) holder.innerHTML = "";
     }
 
     function setFloor(floorId) {
@@ -13648,7 +13658,7 @@
       return '<article class="store-card has-cover" style="--store-gradient:' + escapeAttr(store.gradient) + '">' +
         '<div class="store-banner ' + (isLightStore(store) ? "light" : "") + '">' +
           '<img class="store-cover-img" src="' + escapeAttr(cover) + '" alt="" loading="lazy" decoding="async" onerror="handleStoreCoverError(this)">' +
-          '<div class="store-banner-content"><span class="store-icon">' + escapeHtml(store.icon) + '</span><span class="chip">' + escapeHtml(floors.find(f => f.id === store.floor)?.label || "") + '</span></div>' +
+          '<div class="store-banner-content"><span class="store-icon">' + escapeHtml(store.icon) + '</span></div>' +
         '</div>' +
         '<div class="store-card-body">' +
           '<h3>' + escapeHtml(store.name) + '</h3>' +

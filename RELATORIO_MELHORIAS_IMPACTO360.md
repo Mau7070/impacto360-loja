@@ -306,3 +306,16 @@ Validações executadas nesta rodada:
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
 - `produtos_pendentes.docx`: criado e verificado estruturalmente com 15 parágrafos, 1 tabela, 6 linhas e 0 textos com `?` residual.
+
+## 17. Correção das capas de loja e remoção dos andares - 2026-07-13
+
+Alterações realizadas nesta rodada:
+
+- Backup criado antes das mudanças: `backups/2026-07-13-1058-pre-correcao-capas-loja.zip`.
+- As capas de loja passaram a usar primeiro o campo `coverImage` de `dados/stores.json`.
+- O fallback das capas foi trocado de caminhos antigos `.png` para imagens reais `.webp` em `public/images/capas-lojas-2026`.
+- O hover dos cards de loja foi estabilizado para remover tremor visual nas capas.
+- As imagens de capa receberam `transform: none`, `transition: none` e fallback visual para evitar ícone de imagem quebrada.
+- Os controles visíveis de andares foram removidos: `Todos os andares`, `Térreo`, `1º Andar`, `2º Andar`, `3º Andar` e `Ala Externa`.
+- Os rótulos de andar dentro dos cards de loja foram removidos.
+- Os títulos das seções foram simplificados para categorias comerciais, sem termos de andar.
