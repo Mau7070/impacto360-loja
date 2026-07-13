@@ -66,5 +66,16 @@ Os tokens sao pontos locais do navegador do visitante:
 - Compartilhar shopping, loja ou produto: 8 tokens
 - Abrir oferta de compra: 10 tokens
 - Campanha social enviada: 6 tokens
+- Cadastro no grupo de detentores: 20 tokens
 
-Para transformar esses pontos em saldo real, cupom ou cashback, conecte um backend com login de cliente e banco de dados.
+O painel do cliente tambem exibe um formulario "Cadastrar para obter recompensa". O telefone com DDD e obrigatorio, e o cliente precisa autorizar o registro antes de salvar.
+
+O cadastro fica no grupo local:
+
+```text
+Grupo da Loja - Detentores de Tokens
+```
+
+No painel administrativo, esse grupo mostra quantas pessoas estao cadastradas, os telefones mascarados, saldo de tokens e botoes para exportar JSON ou CSV. Como o GitHub Pages e estatico, esse grupo e local ao navegador ate a loja ser conectada a um backend seguro.
+
+Para transformar esses pontos em saldo real, cupom ou cashback compartilhado entre todos os dispositivos, conecte um backend com login de cliente e banco de dados.

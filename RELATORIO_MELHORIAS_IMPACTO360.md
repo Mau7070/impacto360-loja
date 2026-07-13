@@ -305,6 +305,34 @@ Validações executadas nesta rodada:
 - `npm.cmd run lint`: aprovado.
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
+
+## 20. Ajuste da ferramenta de distribuicao de tokens - 2026-07-13
+
+O que foi implementado:
+
+- A ferramenta de tokens passou para a versao `20260713-1`.
+- O painel do cliente ficou mais claro, com regras de pontuacao visiveis: entrada, favorito, compartilhamento, clique em oferta e cadastro.
+- Foi criado o botao/formulario `Cadastrar para obter recompensa`.
+- O telefone com DDD passou a ser obrigatorio para cadastro de recompensa.
+- O cliente precisa aceitar a autorizacao antes de o telefone ser salvo.
+- O cadastro gera bonus unico de 20 tokens.
+- Foi criado o grupo local `Grupo da Loja - Detentores de Tokens`.
+- O painel administrativo mostra a contagem de detentores, lista recente com telefone mascarado, cidade e saldo.
+- O admin pode exportar detentores em JSON ou CSV.
+- A API local `window.__ai360TokenHolders` permite conferir o grupo e a contagem pelo console.
+
+Arquivos alterados:
+
+- `integracoes/impacto360-social-recompensas.js`.
+- `integracoes/impacto360-admin-robos.js`.
+- `pacote-github-pages-pronto/integracoes/impacto360-social-recompensas.js`.
+- `pacote-github-pages-pronto/integracoes/impacto360-admin-robos.js`.
+- `index.html`, `impacto360.html` e `pacote-github-pages-pronto/index.html` com cache-buster atualizado.
+- `CONFIGURAR-ROBO-SOCIAL-E-TOKENS.md`.
+
+Observacao importante:
+
+- Como o site publicado roda no GitHub Pages estatico, o grupo de detentores fica salvo no navegador/localStorage ate existir backend seguro. A exportacao administrativa ja ficou pronta para migracao ou consolidacao manual.
 - `produtos_pendentes.docx`: criado e verificado estruturalmente com 15 parágrafos, 1 tabela, 6 linhas e 0 textos com `?` residual.
 
 ## 17. Correção das capas de loja e remoção dos andares - 2026-07-13
