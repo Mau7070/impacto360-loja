@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-07-14T14:55:07.346Z",
+  "selectedFrom": "Mercado Livre - Central de Afiliados e Criadores em sessao logada",
+  "affiliateLinksGenerated": 12,
+  "productsPublished": 12,
+  "bannersPublished": 12,
+  "adsPublished": 12,
+  "policyNotes": [
+    "Produtos sensiveis ou de maior risco para anuncios foram evitados nesta primeira selecao.",
+    "Preco fixo nao foi anunciado porque o Mercado Livre pode alterar preco e estoque.",
+    "Links oficiais meli.la gerados no computador logado foram preservados como destino de compra."
+  ],
+  "offers": [
+    {
+      "id": "ml-afiliados-20260714-fone-usb-c-premium-microfone",
+      "title": "Fones De Ouvido USB-C Tipo C Com Microfone Integrado Som Estereo Alta Qualidade",
+      "affiliateLink": "https://meli.la/17grvSz",
+      "rating": "4.8",
+      "sold": "+10 mil vendidos",
+      "discount": "65% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-fone-usb-c-premium-microfone-21d72e34.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-faqueiro-tramontina-buzios-24-pecas",
+      "title": "Faqueiro Tramontina Buzios Cem Aco Inox Com Detalhe 24 Pecas",
+      "affiliateLink": "https://meli.la/2eY2XjT",
+      "rating": "4.7",
+      "sold": "+100 mil vendidos",
+      "discount": "23% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-faqueiro-tramontina-buzios-24-pecas-d622774a.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-parafusadeira-furadeira-2-baterias-kit",
+      "title": "Parafusadeira Furadeira Com 2 Baterias Maleta Kit Completo Led Eixo Flexivel",
+      "affiliateLink": "https://meli.la/239Rngc",
+      "rating": "4.7",
+      "sold": "+50 mil vendidos",
+      "discount": "59% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-parafusadeira-furadeira-2-baterias-kit-42154426.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-carregador-iphone-turbo-usb-c",
+      "title": "Carregador Compativel Com iPhone 8 X XR 11 12 13 14 Pro Max Turbo Fonte Tipo C",
+      "affiliateLink": "https://meli.la/1cKeBBQ",
+      "rating": "4.8",
+      "sold": "+100 mil vendidos",
+      "discount": "29% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-carregador-iphone-turbo-usb-c-6afaaf26.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-mala-bordo-expansivel-rodas-360",
+      "title": "Mala De Viagem Bordo Sweet Studio ABS Com Ziper Expansivel Resistente Rodas 360",
+      "affiliateLink": "https://meli.la/2P5pLLT",
+      "rating": "4.8",
+      "sold": "+500 vendidos",
+      "discount": "42% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-mala-bordo-expansivel-rodas-360-b40abe0c.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-air-fryer-elgin-quad-fry-42l",
+      "title": "Fritadeira Eletrica Air Fryer Quad Fry 4,2 L 1400w Preto Elgin",
+      "affiliateLink": "https://meli.la/2bjTrVf",
+      "rating": "4.9",
+      "sold": "+50 mil vendidos",
+      "discount": "43% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-air-fryer-elgin-quad-fry-42l-a02b29c9.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-camera-ip-a8-externa-wifi-hd",
+      "title": "Camera IP A8 App Icsee Infravermelho Prova D'agua Externa Wifi HD",
+      "affiliateLink": "https://meli.la/2Fmnep5",
+      "rating": "4.7",
+      "sold": "+100 mil vendidos",
+      "discount": "52% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-camera-ip-a8-externa-wifi-hd-ffa177af.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-lavadora-jato-portatil-2-baterias",
+      "title": "Lavadora Lava Jato Portatil Pressao 2 Baterias Com Maleta",
+      "affiliateLink": "https://meli.la/2PAAQXh",
+      "rating": "4.5",
+      "sold": "+100 mil vendidos",
+      "discount": "52% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-lavadora-jato-portatil-2-baterias-5d056293.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-lixeira-inteligente-sensor-16l",
+      "title": "Lixeira Inteligente Com Sensor 16L Branca Moderna Para Uso Residencial E Comercial",
+      "affiliateLink": "https://meli.la/1pj1XgT",
+      "rating": "4.8",
+      "sold": "+1 mil vendidos",
+      "discount": "46% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-lixeira-inteligente-sensor-16l-04dc9853.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-bicicleta-spinning-premium-liftness",
+      "title": "Bicicleta Spinning Premium Liftness Com Visor E Medidor De Pulso",
+      "affiliateLink": "https://meli.la/1TAVap6",
+      "rating": "4.8",
+      "sold": "+1 mil vendidos",
+      "discount": "36% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-bicicleta-spinning-premium-liftness-ec98875e.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-escada-aluminio-dobravel-3-degraus",
+      "title": "Escada De Aluminio Dobravel Compacta Com 3 Degraus Leve E Resistente",
+      "affiliateLink": "https://meli.la/2Vf9WoL",
+      "rating": "4.9",
+      "sold": "+50 mil vendidos",
+      "discount": "5% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-escada-aluminio-dobravel-3-degraus-5bb2f944.webp"
+    },
+    {
+      "id": "ml-afiliados-20260714-kit-2-jaquetas-corta-vento",
+      "title": "Kit 2 Jaquetas Corta Vento Impermeavel Liso Unissex",
+      "affiliateLink": "https://meli.la/2QyCRCZ",
+      "rating": "4.6",
+      "sold": "+1 mil vendidos",
+      "discount": "42% OFF",
+      "image": "public/images/anuncios/ml-afiliados-20260714-kit-2-jaquetas-corta-vento-183572af.webp"
+    }
+  ]
+}
