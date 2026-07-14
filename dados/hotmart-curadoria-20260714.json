@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-07-14T13:58:00-03:00",
+  "addedProducts": [
+    {
+      "id": "hotmart-20260714-novo-decreto-pregao-eletronico-509216",
+      "hotmartId": "509216",
+      "name": "Curso sobre o novo Decreto do Pregao Eletronico - Decreto 10.024/2019",
+      "storeId": "impacto-educa",
+      "link": "https://go.hotmart.com/N104413758S?dp=1",
+      "sourceType": "afiliacao_confirmada"
+    },
+    {
+      "id": "hotmart-20260714-pregao-srp-atualizacao-457150",
+      "hotmartId": "457150",
+      "name": "Curso sobre Pregao Eletronico e Sistema de Registro de Precos",
+      "storeId": "impacto-educa",
+      "link": "https://go.hotmart.com/J104413767N?dp=1",
+      "sourceType": "afiliacao_confirmada"
+    },
+    {
+      "id": "hotmart-20260714-sistema-registro-precos-456474",
+      "hotmartId": "456474",
+      "name": "Curso sobre Sistema de Registro de Precos",
+      "storeId": "impacto-educa",
+      "link": "https://go.hotmart.com/L104413771X?dp=1",
+      "sourceType": "afiliacao_confirmada"
+    },
+    {
+      "id": "hotmart-20260714-dominando-as-licitacoes-3980357",
+      "hotmartId": "3980357",
+      "name": "Dominando as Licitacoes",
+      "storeId": "impacto-educa",
+      "link": "https://go.hotmart.com/Y104428837Q?dp=1",
+      "sourceType": "afiliacao_confirmada"
+    },
+    {
+      "id": "hotmart-20260714-a-palavra-e-o-ser-7448602",
+      "hotmartId": "7448602",
+      "name": "A Palavra e o Ser",
+      "storeId": "impacto-fe",
+      "link": "https://go.hotmart.com/S105072773O?dp=1",
+      "sourceType": "produto_proprio"
+    },
+    {
+      "id": "hotmart-20260714-o-grande-arco-das-profecias-7454181",
+      "hotmartId": "7454181",
+      "name": "O Grande Arco das Profecias",
+      "storeId": "impacto-fe",
+      "link": "https://go.hotmart.com/S105087720G?dp=1",
+      "sourceType": "produto_proprio"
+    }
+  ],
+  "marketCandidatesNotPublished": [
+    {
+      "name": "Leadlovers | Mais Vendas, Menos Esforco",
+      "reason": "Produto quente, 150 graus, 4.3/5 com 1493 avaliacoes; comissao exibida como 'ver detalhes'.",
+      "status": "nao_publicado",
+      "actionNeeded": "Solicitar/confirmar afiliacao e obter Hotlink antes de anunciar."
+    },
+    {
+      "name": "Viva Sempre com Dinheiro",
+      "reason": "Produto quente, 150 graus, 4.9/5 com 118 avaliacoes e comissao alta exibida.",
+      "status": "nao_publicado",
+      "actionNeeded": "Area financeira exige revisao cuidadosa para Google Ads e afiliacao confirmada antes de publicar."
+    },
+    {
+      "name": "Acesso Vitalicio - Asimov Academy",
+      "reason": "Comissao alta exibida e tema educacional/tecnologia, mas avaliacao 3.6/5 com poucas avaliacoes.",
+      "status": "nao_publicado",
+      "actionNeeded": "Confirmar afiliacao, reputacao e Hotlink antes de entrar na loja."
+    }
+  ],
+  "decision": "Apenas produtos com Hotlink rastreavel confirmado foram publicados como ativos. Produtos do mercado sem afiliacao confirmada ficaram fora da loja ativa."
+}
