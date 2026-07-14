@@ -96,7 +96,7 @@
     writing = true;
     const items = activeAds();
     adIndex = Math.min(adIndex, Math.max(0, items.length - 1));
-    holder.innerHTML = '<section class="floor-block promo360-ads"><div class="floor-head"><div><h3>Anuncios variados</h3><p>Ofertas, campanhas, cupons e lojas parceiras.</p></div><span class="chip">' + items.length + ' campanhas ativas</span></div>' +
+    holder.innerHTML = '<section class="floor-block promo360-ads"><div class="floor-head"><div><h3>Ofertas em rotacao</h3></div></div>' +
       (items.length ? '<div class="promo360-adbox"><div class="promo360-adtrack">' + items.map(function (item, index) {
         return '<article class="promo360-ad ' + (index === adIndex ? "active" : "") + '"><a ' + attrs(item.link) + '><div class="promo360-admedia"><img src="' + esc(item.image) + '" alt="' + esc(item.title) + '" loading="lazy"></div><div class="promo360-adcopy"><small>DESTAQUE PROMOCIONAL</small><h3>' + text(item.title) + '</h3><p>' + text(item.description) + '</p><b>' + text(item.buttonLabel || "Ver oferta") + '</b></div></a></article>';
       }).join("") + '</div>' + controls(items.length) + '</div>' : '<div class="promo360-empty">Nenhuma campanha ativa no momento.</div>') + '</section>';
@@ -147,7 +147,45 @@
 
   function style() {
     const css = document.createElement("style");
-    css.textContent = '.promo360-panel{padding:0!important}.promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:32px;margin-right:32px}.promo360-panel>.filters{margin-bottom:28px}#promo360Hero,.promo360-adbox{position:relative;overflow:hidden}.promo360-track{position:relative;min-height:390px}.promo360-slide,.promo360-ad{position:absolute;inset:0;opacity:0;visibility:hidden;transition:.4s}.promo360-slide.active,.promo360-ad.active{opacity:1;visibility:visible}.promo360-slide>a{min-height:390px;display:grid;grid-template-columns:1.15fr .85fr;color:#fff;background:linear-gradient(135deg,#06152d,#12677d)}.promo360-copy,.promo360-adcopy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:38px}.promo360-copy h1{font-size:clamp(34px,5vw,64px);line-height:1;margin:12px 0}.promo360-copy b,.promo360-adcopy b{padding:13px 18px;border-radius:999px;background:#f3ce7b;color:#10213a}.promo360-media,.promo360-admedia{display:grid;place-items:center;padding:22px}.promo360-media img{width:100%;height:330px;object-fit:contain;background:#fff;border-radius:8px}.promo360-ads{padding:0!important;overflow:hidden}.promo360-ads>.floor-head{padding:20px 20px 0}.promo360-adtrack{position:relative;min-height:320px}.promo360-ad>a{min-height:320px;display:grid;grid-template-columns:.8fr 1.2fr;color:#fff;background:linear-gradient(135deg,#0b2850,#12677d)}.promo360-admedia img{width:100%;height:250px;object-fit:contain;background:#fff;border-radius:8px}.promo360-controls{position:absolute;z-index:4;right:16px;bottom:14px;display:flex;gap:7px}.promo360-controls button{width:42px;height:42px;border:0;border-radius:50%;background:#06152d;color:#fff;font-size:22px}.promo360-empty{padding:45px;text-align:center;background:#eef7ff;color:#607083}@media(max-width:760px){.promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:14px;margin-right:14px}.promo360-track{min-height:570px}.promo360-slide>a{min-height:570px;grid-template-columns:1fr;grid-template-rows:auto 230px}.promo360-copy{padding:25px 20px 10px}.promo360-media{padding:5px 20px 55px}.promo360-media img{height:210px}.promo360-adtrack,.promo360-ad>a{min-height:540px}.promo360-ad>a{grid-template-columns:1fr;grid-template-rows:250px auto}.promo360-admedia img{height:220px}.promo360-adcopy{padding:20px 20px 60px}}';
+    css.textContent = `
+      .promo360-panel{padding:0!important}
+      .promo360-panel .market-hero-banner{display:none!important}
+      .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:28px;margin-right:28px}
+      .promo360-panel>.filters{margin-bottom:24px}
+      #promo360Hero,.promo360-adbox{position:relative;overflow:hidden}
+      .promo360-track{position:relative;min-height:310px}
+      .promo360-slide,.promo360-ad{position:absolute;inset:0;opacity:0;visibility:hidden;transition:.4s}
+      .promo360-slide.active,.promo360-ad.active{opacity:1;visibility:visible}
+      .promo360-slide>a{min-height:310px;display:grid;grid-template-columns:minmax(0,1fr) 430px;color:#fff;background:linear-gradient(135deg,#06152d,#0d415b 58%,#12677d)}
+      .promo360-copy,.promo360-adcopy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 38px}
+      .promo360-copy small,.promo360-adcopy small{display:inline-flex;align-items:center;min-height:24px;border-radius:999px;padding:0 10px;background:rgba(255,255,255,.14);color:#ffe9a8;font-size:11px;font-weight:950}
+      .promo360-copy h1{max-width:680px;font-size:clamp(32px,3.35vw,50px);line-height:1.04;margin:12px 0 18px}
+      .promo360-copy p,.promo360-adcopy p{display:none}
+      .promo360-copy b,.promo360-adcopy b{padding:12px 17px;border-radius:999px;background:#f3ce7b;color:#10213a;font-weight:950}
+      .promo360-media,.promo360-admedia{display:grid;place-items:center;padding:20px}
+      .promo360-media img{width:100%;height:260px;object-fit:contain;background:#fff;border-radius:8px;padding:10px}
+      .promo360-ads{padding:0!important;overflow:hidden}
+      .promo360-ads>.floor-head{padding:18px 20px 0}
+      .promo360-adtrack{position:relative;min-height:280px}
+      .promo360-ad>a{min-height:280px;display:grid;grid-template-columns:360px 1fr;color:#fff;background:linear-gradient(135deg,#0b2850,#12677d)}
+      .promo360-admedia img{width:100%;height:225px;object-fit:contain;background:#fff;border-radius:8px;padding:8px}
+      .promo360-controls{position:absolute;z-index:4;right:16px;bottom:14px;display:flex;gap:7px}
+      .promo360-controls button{width:42px;height:42px;border:0;border-radius:50%;background:#06152d;color:#fff;font-size:22px}
+      .promo360-empty{padding:45px;text-align:center;background:#eef7ff;color:#607083}
+      @media(max-width:760px){
+        .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:14px;margin-right:14px}
+        .promo360-track{min-height:570px}
+        .promo360-slide>a{min-height:570px;grid-template-columns:1fr;grid-template-rows:auto 230px}
+        .promo360-copy{padding:25px 20px 10px}
+        .promo360-copy p{display:block!important}
+        .promo360-media{padding:5px 20px 55px}
+        .promo360-media img{height:210px}
+        .promo360-adtrack,.promo360-ad>a{min-height:540px}
+        .promo360-ad>a{grid-template-columns:1fr;grid-template-rows:250px auto}
+        .promo360-admedia img{height:220px}
+        .promo360-adcopy{padding:20px 20px 60px}
+        .promo360-adcopy p{display:block!important}
+      }`;
     document.head.appendChild(css);
   }
 
