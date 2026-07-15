@@ -1,15 +1,15 @@
 (function () {
   "use strict";
 
-  const VERSION = "20260713-1";
+  const VERSION = "20260715-1";
   const ADMIN_AUTH_KEY = "impacto360:sala-agentes:auth:v2";
   const ROBOT_KEY = "ai360:socialRobot:v1";
   const WALLET_KEY = "ai360:rewardWallet:v1";
   const HOLDER_GROUP_KEY = "ai360:tokenHolders:v1";
-  const HOLDER_GROUP_ID = "impacto360-token-holders";
-  const HOLDER_GROUP_NAME = "Grupo da Loja - Detentores de Tokens";
+  const HOLDER_GROUP_ID = "impacto360";
+  const HOLDER_GROUP_NAME = "impacto360";
   const DEFAULT_ENDPOINT = "http://localhost:3000/api/social/publish";
-  const HOLDER_CONSENT_TEXT = "Autorizo a Impacto360 Afiliado a registrar meu telefone e meu saldo de tokens para contato sobre recompensas. Posso pedir correcao ou remocao depois.";
+  const HOLDER_CONSENT_TEXT = "Autorizo a Impacto360 Afiliado a registrar meu nome, Zap/WhatsApp e saldo de tokens para contato sobre recompensas. Posso pedir correcao ou remocao depois.";
   const CHANNELS = ["whatsapp", "instagram", "facebook", "tiktok", "youtubeShorts"];
   const CHANNEL_LABELS = {
     whatsapp: "WhatsApp",
@@ -168,8 +168,17 @@
     return wallet;
   }
 
+  function isWalletRegistered(wallet) {
+    const group = loadHolderGroup();
+    return Boolean(findCurrentHolder(wallet, group));
+  }
+
   function awardTokens(action, amount, label, key) {
     const wallet = loadWallet();
+    if (action !== "registration" && !isWalletRegistered(wallet)) {
+      if (action !== "visit") showLocalToast("Cadastre nome e Zap/WhatsApp para liberar a contagem de tokens.");
+      return wallet;
+    }
     const rewardKey = key || `${action}:${todayKey()}`;
     if (wallet.earnedKeys.includes(rewardKey)) return wallet;
     wallet.balance += amount;
@@ -221,21 +230,23 @@
     const holderGroup = loadHolderGroup();
     const holder = findCurrentHolder(wallet, holderGroup);
     const holderCount = countActiveHolders(holderGroup);
+    const registered = Boolean(holder);
+    const visibleBalance = registered ? wallet.balance : 0;
     const button = widget.querySelector("[data-ai360-reward-toggle]");
     const panel = widget.querySelector("[data-ai360-reward-panel]");
     if (button) {
-      button.innerHTML = `<strong>${wallet.balance}</strong><span>Tokens</span>`;
+      button.innerHTML = `<strong>${visibleBalance}</strong><span>${registered ? "Tokens" : "Cadastro"}</span>`;
     }
     if (panel) {
       const last = wallet.history.slice(0, 4).map(item => `<li><b>+${item.amount}</b> ${escapeHtml(item.label)}</li>`).join("");
-      const registered = Boolean(holder);
       panel.innerHTML = `
         <h3>Recompensas ${escapeHtml(wallet.tokenName)}</h3>
-        <p>Ganhe tokens por acoes na loja e cadastre seu telefone para participar das recompensas.</p>
-        <div class="ai360-token-total"><strong>${wallet.balance}</strong><span>saldo de tokens</span></div>
+        <p>A distribuicao de tokens so e contabilizada depois do cadastro rapido com nome e Zap/WhatsApp.</p>
+        <div class="ai360-token-notice"><strong>Aviso de distribuicao</strong><span>Cadastre seus dados, acompanhe ofertas e use os tokens conforme as orientacoes gravadas da loja.</span></div>
+        <div class="ai360-token-total"><strong>${visibleBalance}</strong><span>${registered ? "saldo de tokens" : "cadastro necessario"}</span></div>
         <div class="ai360-holder-status ${registered ? "registered" : ""}">
           <strong>${registered ? "Cadastro ativo" : "Cadastro pendente"}</strong>
-          <span>${registered ? `Telefone final ${escapeHtml(maskPhone(holder.phoneDigits || holder.phone))}` : "Telefone obrigatorio para receber recompensa"}</span>
+          <span>${registered ? `Zap final ${escapeHtml(maskPhone(holder.phoneDigits || holder.phone))}` : "Nome e Zap/WhatsApp obrigatorios para liberar tokens"}</span>
         </div>
         <div class="ai360-reward-rules" aria-label="Como ganhar tokens">
           <span><b>+${REWARDS.visit}</b> entrar</span>
@@ -246,13 +257,10 @@
         </div>
         <form class="ai360-holder-form" data-ai360-holder-form>
           <label>Nome
-            <input name="name" value="${escapeAttr(holder?.name || "")}" placeholder="Seu nome" autocomplete="name">
+            <input name="name" value="${escapeAttr(holder?.name || "")}" placeholder="Seu nome" autocomplete="name" required>
           </label>
-          <label>Telefone obrigatorio
-            <input name="phone" value="${escapeAttr(holder?.phone || "")}" placeholder="DDD + telefone" inputmode="tel" autocomplete="tel" required>
-          </label>
-          <label>Cidade ou bairro
-            <input name="city" value="${escapeAttr(holder?.city || "")}" placeholder="Opcional" autocomplete="address-level2">
+          <label>Zap/WhatsApp obrigatorio
+            <input name="phone" value="${escapeAttr(holder?.phone || "")}" placeholder="DDD + WhatsApp" inputmode="tel" autocomplete="tel" required>
           </label>
           <label class="ai360-holder-consent">
             <input name="consent" type="checkbox" ${registered ? "checked" : ""} required>
@@ -260,7 +268,7 @@
           </label>
           <button type="submit">${registered ? "Atualizar cadastro" : "Cadastrar para obter recompensa"}</button>
         </form>
-        <small>Codigo: ${escapeHtml(wallet.referralCode)} - ${holderCount} detentor(es) neste grupo local.</small>
+        <small>Grupo ${escapeHtml(HOLDER_GROUP_NAME)} - codigo ${escapeHtml(wallet.referralCode)} - ${holderCount} cadastro(s) ativo(s).</small>
         <ul>${last || "<li>Nenhuma recompensa ainda.</li>"}</ul>
         <div class="ai360-robot-mini"><b>Robo social</b><span>${robot.active ? "ativo" : "pausado"} - ${robot.queue.length} na fila</span></div>
       `;
@@ -283,8 +291,8 @@
       const saved = JSON.parse(localStorage.getItem(HOLDER_GROUP_KEY) || "null");
       const group = Array.isArray(saved) ? { ...defaultHolderGroup(), holders: saved } : Object.assign(defaultHolderGroup(), saved || {});
       group.holders = Array.isArray(group.holders) ? group.holders : [];
-      group.groupId = group.groupId || HOLDER_GROUP_ID;
-      group.groupName = group.groupName || HOLDER_GROUP_NAME;
+      group.groupId = HOLDER_GROUP_ID;
+      group.groupName = HOLDER_GROUP_NAME;
       return group;
     } catch (error) {
       return defaultHolderGroup();
@@ -305,9 +313,15 @@
     if (!form) return;
     event.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
+    const holderName = trim(data.name);
+    if (holderName.length < 2) {
+      showLocalToast("Informe seu nome para liberar os tokens.");
+      form.querySelector('[name="name"]')?.focus();
+      return;
+    }
     const phoneDigits = cleanPhone(data.phone);
     if (!isValidPhone(phoneDigits)) {
-      showLocalToast("Informe telefone com DDD para liberar a recompensa.");
+      showLocalToast("Informe seu Zap/WhatsApp com DDD para liberar a recompensa.");
       form.querySelector('[name="phone"]')?.focus();
       return;
     }
@@ -330,8 +344,9 @@
       id: previous.id || `detentor-token-${Date.now()}-${Math.random().toString(16).slice(2, 7)}`,
       groupId: HOLDER_GROUP_ID,
       groupName: HOLDER_GROUP_NAME,
-      name: trim(data.name).slice(0, 120),
+      name: holderName.slice(0, 120),
       phone: trim(data.phone).slice(0, 40),
+      zap: trim(data.phone).slice(0, 40),
       phoneDigits,
       city: trim(data.city).slice(0, 120),
       referralCode: wallet.referralCode,
@@ -341,6 +356,9 @@
       status: "ativo",
       source: "widget-tokens-loja",
       phoneRequired: true,
+      zapRequired: true,
+      nameRequired: true,
+      contactGroupName: HOLDER_GROUP_NAME,
       consent: true,
       consentText: HOLDER_CONSENT_TEXT,
       consentAt: previous.consentAt || now,
@@ -361,7 +379,7 @@
     saveWallet(wallet);
     const awardedWallet = awardTokens("registration", REWARDS.registration, "Cadastro para recompensa", `registration:${holder.id}`);
     syncHolderWalletSnapshot(awardedWallet);
-    showLocalToast("Cadastro salvo no grupo de detentores.");
+    showLocalToast("Cadastro salvo no grupo impacto360.");
     renderRewardsWidget();
     renderAdminPanel();
   }
@@ -539,8 +557,8 @@
       <header class="ai360-social-head">
         <div>
           <span>ROBO SOCIAL 360</span>
-          <h2>Divulgacao automatica e tokens de recompensa</h2>
-          <p>Gera campanhas dos produtos, cria fila por rede social e envia por servidor seguro quando configurado.</p>
+          <h2>Area restrita: tokens e grupo impacto360</h2>
+          <p>Acompanha cadastros com nome e Zap/WhatsApp, libera tokens somente apos cadastro e mantem a fila de divulgacao.</p>
         </div>
         <strong class="${robot.active ? "on" : "off"}">${robot.active ? "Ativo" : "Pausado"}</strong>
       </header>
@@ -548,7 +566,7 @@
         <span><b>${ready}</b> campanhas prontas</span>
         <span><b>${sentToday}</b> envios hoje</span>
         <span><b>${wallet.balance}</b> tokens locais</span>
-        <span><b>${holderCount}</b> detentores</span>
+        <span><b>${holderCount}</b> grupo impacto360</span>
         <span><b>${robot.dailyLimit}</b> limite diario</span>
       </div>
       <div class="ai360-social-controls">
@@ -579,7 +597,7 @@
         <header>
           <div>
             <h3>${escapeHtml(holderGroup.groupName)}</h3>
-            <p>Grupo local da loja para clientes cadastrados no programa de recompensa. Telefone e autorizacao sao obrigatorios.</p>
+            <p>Ambiente restrito para acompanhar quem concluiu o cadastro. Nome, Zap/WhatsApp e autorizacao sao obrigatorios.</p>
           </div>
           <strong>${holderCount} pessoa(s)</strong>
         </header>
@@ -649,20 +667,20 @@
         <li>
           <strong>${escapeHtml(holder.name || "Cliente sem nome")}</strong>
           <span>${escapeHtml(maskPhone(holder.phoneDigits || holder.phone))}</span>
-          <span>${escapeHtml(holder.city || "-")}</span>
+          <span>${escapeHtml(holder.groupName || HOLDER_GROUP_NAME)}</span>
           <b>${Number(holder.walletBalance || 0)} tokens</b>
         </li>
       `).join("");
-    return rows || "<li><strong>Nenhum detentor cadastrado ainda.</strong><span>O formulario do cliente alimenta este grupo.</span></li>";
+    return rows || "<li><strong>Nenhum cadastro ainda.</strong><span>O formulario do cliente alimenta o grupo impacto360.</span></li>";
   }
 
   function holdersToCsv(holders) {
-    const header = ["id", "nome", "telefone", "cidade", "codigo", "tokens", "totalGanho", "status", "consentimentoEm", "atualizadoEm"];
+    const header = ["id", "nome", "whatsapp", "grupo", "codigo", "tokens", "totalGanho", "status", "consentimentoEm", "atualizadoEm"];
     const rows = (holders || []).map(holder => [
       holder.id,
       holder.name,
       holder.phone,
-      holder.city,
+      holder.groupName || HOLDER_GROUP_NAME,
       holder.referralCode,
       holder.walletBalance,
       holder.totalEarned,
@@ -958,6 +976,7 @@
       .ai360-rewards-widget>[data-ai360-reward-toggle] span{font-size:11px;text-transform:uppercase}
       .ai360-rewards-widget section{width:min(320px,calc(100vw - 24px));margin-bottom:8px;padding:14px;border:1px solid #dce8f7;border-radius:12px;background:#fff;box-shadow:0 20px 48px rgba(8,25,47,.22)}
       .ai360-rewards-widget h3{margin:0 0 5px;font-size:17px}.ai360-rewards-widget p{margin:0 0 10px;color:#56667a;font-size:13px}
+      .ai360-token-notice{display:grid;gap:3px;margin:8px 0;padding:9px;border:1px solid #bee7f2;border-radius:10px;background:#effbff;color:#0a4f66}.ai360-token-notice strong{font-size:12px;text-transform:uppercase}.ai360-token-notice span{font-size:12px;line-height:1.35}
       .ai360-token-total{display:flex;align-items:end;gap:8px;margin:8px 0;padding:10px;border-radius:10px;background:#eef8f7}.ai360-token-total strong{font-size:32px;line-height:1;color:#0e766e}.ai360-token-total span{font-size:11px;font-weight:900;text-transform:uppercase}
       .ai360-holder-status{display:grid;gap:2px;margin:8px 0;padding:9px;border:1px solid #f1d58f;border-radius:10px;background:#fff8df}.ai360-holder-status strong{font-size:13px}.ai360-holder-status span{font-size:12px;color:#725013}.ai360-holder-status.registered{border-color:#bdebdc;background:#eef8f7}.ai360-holder-status.registered span{color:#0c6b46}
       .ai360-reward-rules{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:10px 0}.ai360-reward-rules span{display:grid;gap:2px;place-items:center;min-height:42px;border:1px solid #e4edf6;border-radius:8px;background:#f7fbff;font-size:10px;font-weight:900;text-transform:uppercase;text-align:center}.ai360-reward-rules b{color:#1d5cff;font-size:13px}

@@ -2,7 +2,7 @@
   "use strict";
   const KEY = "ai360:marketingContent:v1";
   const AUTH = "impacto360:sala-agentes:auth:v2";
-  const PASSWORD = "Impacto360!Sala#J7K9-2026";
+  const PASSWORD = "Mau-997755666";
   let data = { settings: { bannerRotationMs: 6500, adRotationMs: 5200 }, banners: [], ads: [] };
   let editBanner = "";
   let editAd = "";
