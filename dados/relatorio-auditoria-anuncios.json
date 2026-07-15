@@ -2,15 +2,15 @@
   "executedAt": "2026-07-15",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 956,
+    "products": 971,
     "stores": 26,
-    "active": 555,
+    "active": 570,
     "inactiveOrReview": 401,
-    "publicOffers": 599,
+    "publicOffers": 614,
     "pendingOrBlocked": 357,
     "issues": 540,
     "duplicateGroups": 5,
-    "imageConflicts": 0,
+    "imageConflicts": 2,
     "storesCorrected": 0,
     "inactivatedForMissingData": 0,
     "duplicatesInactivated": 0
@@ -3526,7 +3526,34 @@
       ]
     }
   ],
-  "imageConflicts": [],
+  "imageConflicts": [
+    {
+      "image": "public/images/anuncios/philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937.webp",
+      "products": [
+        {
+          "id": "shopee-20260715-fornos-bancada-forno-eletrico-philco-pfe60i-60l-preto-inox-aa829837",
+          "title": "Forno Eletrico Philco PFE60I 60L Preto Inox"
+        },
+        {
+          "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937",
+          "title": "Philco PFE60I 60L 127V"
+        }
+      ]
+    },
+    {
+      "image": "public/images/anuncios/mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-inox-220-v-72b91b7b.webp",
+      "products": [
+        {
+          "id": "shopee-20260715-fornos-bancada-forno-eletrico-mondial-frn-52-b-grand-family-ii-52l-preto-inox-b868ef1b",
+          "title": "Forno Eletrico Mondial FRN-52-B Grand Family II 52L Preto Inox"
+        },
+        {
+          "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-72b91b7b",
+          "title": "Mondial Grand Family II 52L 220V"
+        }
+      ]
+    }
+  ],
   "acceptance": {
     "activeWithoutPhoto": 0,
     "activeWithoutLink": 0

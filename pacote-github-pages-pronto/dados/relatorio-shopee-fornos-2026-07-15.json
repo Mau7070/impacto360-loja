@@ -1,0 +1,572 @@
+{
+  "generatedAt": "2026-07-15T12:16:00-03:00",
+  "selectedFrom": "Shopee Brasil e painel Criadores e Afiliados Shopee em sessao Chrome logada",
+  "sourceFile": "importacoes/originais/2026-07-15-shopee-fornos/fornos-bancada-curados.json",
+  "productsPublished": 15,
+  "officialShopeeShortlinks": 15,
+  "store": "impacto-casa",
+  "category": "Casa e Cozinha",
+  "subcategoria": "Pequenos eletros",
+  "departamento": "Fornos de bancada",
+  "countsByBrand": {
+    "Philco": 3,
+    "Moob": 1,
+    "Best": 1,
+    "Amvox": 1,
+    "Mueller": 3,
+    "Fischer": 2,
+    "Nardelli": 2,
+    "Suggar": 1,
+    "Mondial": 1
+  },
+  "backupBeforeImport": "backups/2026-07-15-1216-pre-shopee-fornos",
+  "reclassifiedExistingProducts": [
+    {
+      "id": "importado-ml-nardelli-top-60-black-forno-eletrico-de-bancada-60-l-9a75ef71",
+      "title": "Nardelli Top 60 Black - Forno elétrico de bancada 60 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-philco-pfe60i-forno-eletrico-de-mesa-60-l-6fac8026",
+      "title": "Philco PFE60I - Forno elétrico de mesa 60 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-mondial-grand-family-ii-frn-52-b-forno-eletrico-52-l-06207e3e",
+      "title": "Mondial Grand Family II FRN-52-B - Forno elétrico 52 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-nardelli-top-40-easy-clean-forno-eletrico-40-l-1ccac7d4",
+      "title": "Nardelli Top 40 Easy Clean - Forno elétrico 40 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-oster-ofor455-forno-de-bancada-45-l-grafite-a54ee976",
+      "title": "Oster OFOR455 - Forno de bancada 45 L grafite",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-mueller-sonetto-forno-eletrico-de-bancada-44-l-ffa480d2",
+      "title": "Mueller Sonetto - Forno elétrico de bancada 44 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-britania-bfe36p-forno-de-bancada-36-l-161ecd70",
+      "title": "Britânia BFE36P - Forno de bancada 36 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-fischer-turbo-fast-air-convection-forno-de-bancada-80-l-ad53f5f1",
+      "title": "Fischer Turbo Fast Air Convection - Forno de bancada 80 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-dako-supreme-forno-eletrico-de-bancada-44-l-98eea937",
+      "title": "Dako Supreme - Forno elétrico de bancada 44 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-layr-crystal-inox-advanced-forno-eletrico-46-l-aaa25f40",
+      "title": "Layr Crystal Inox Advanced - Forno elétrico 46 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-nardelli-top-48-black-forno-eletrico-de-bancada-48-l-9037f1d1",
+      "title": "Nardelli Top 48 Black - Forno elétrico de bancada 48 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-suggar-fe4202pt-forno-eletrico-de-bancada-42-l-e602e38c",
+      "title": "Suggar FE4202PT - Forno elétrico de bancada 42 L",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-forno-eletrico-oster-45-l-grafite-110v-1b0eb778",
+      "title": "Forno Elétrico Oster 45 L Grafite - 110V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-fritadeira-philco-air-fryer-oven-12-l-pfr2200p-127v-71b03296",
+      "title": "Fritadeira Philco Air Fryer Oven 12 L PFR2200P - 127V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Eletrodomésticos"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-220-v-cba1afae",
+      "title": "Philco Forno Elétrico PFE60I Função Dourar - 220 V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-best-forno-eletrico-preto-e-branco-127-v-71ae3d20",
+      "title": "Best Forno Elétrico Preto e Branco - 127 V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-best-forno-eletrico-plus-com-espeto-giratorio-220-v-e0224229",
+      "title": "Best Forno Elétrico Plus com Espeto Giratório - 220 V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-80a51280",
+      "title": "Mondial Forno Elétrico Grand Family II FRN-52-B Preto/Inox - 127 V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-in-72b91b7b",
+      "title": "Mondial Grand Family II 52L 220V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-mondial-forno-eletrico-grand-family-ii-frn-52-w-branco-i-c22063e5",
+      "title": "Mondial Forno Elétrico Grand Family II FRN-52-W Branco/Inox - 127 V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-fogatti-forno-eletrico-top-40-127-v-971a5700",
+      "title": "Fogatti Top 40 127V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-amazon-suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3",
+      "title": "Suggar FE4201PT 42L 127V",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    },
+    {
+      "id": "importado-ml-fritadeira-air-fryer-oven-12l-mondial-afon-12l-bi-2000w-86637d2c",
+      "title": "Fritadeira Air Fryer Oven 12L Mondial AFON-12L-BI 2000W",
+      "from": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Eletrodomésticos"
+      },
+      "to": {
+        "storeId": "impacto-casa",
+        "category": "Casa e Cozinha",
+        "subcategoria": "Pequenos eletros",
+        "departamento": "Fornos de bancada"
+      }
+    }
+  ],
+  "policyNotes": [
+    "Itens de embutir, acessorios, pecas avulsas, usados e resultados esgotados sem alternativa ativa foram descartados.",
+    "Todas as fotos foram usadas apenas quando havia correspondencia de modelo, marca e capacidade.",
+    "Clientes devem conferir preco, estoque, frete, prazo, garantia e voltagem na Shopee antes da compra."
+  ],
+  "products": [
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-philco-pfe66bm-66l-1800w-preto-afe2c044",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Philco PFE66BM 66L 1800W Preto",
+      "brand": "Philco",
+      "price": "R$491,88 no Pix com cupom",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/AUsQzZSMQk",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-Philco-66-Litros-PFE66BM-1800W-Preto-i.822103155.58260226074",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-philco-pfe66bm-66l-1800w-preto-1febf2bf.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-philco-pfe52p-50l-preto-com-grill-127v-18de61f1",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Philco PFE52P 50L Preto com Grill 127V",
+      "brand": "Philco",
+      "price": "R$362,68",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/AKZ0nGSzlj",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Philco-PFE52P-50L-Preto-Com-Grill-Timer-Controle-De-Temperatura-Bancada-127V-i.680601528.22593940322",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-philco-pfe52p-50l-preto-com-grill-127v-5eedda42.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-philco-pfe60i-60l-preto-inox-aa829837",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Philco PFE60I 60L Preto Inox",
+      "brand": "Philco",
+      "price": "Preco na Shopee",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/9UztnjWASa",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Philco-PFE60I-60L-Preto-Inox-i.1060724397.22497493865",
+      "image": "public/images/anuncios/philco-forno-eletrico-pfe60i-funcao-dourar-127-v-7ac55937.webp"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-bancada-moob-50-litros-com-timer-e-luz-interna-127v-081b57c4",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Bancada Moob 50 Litros com Timer e Luz Interna 127V",
+      "brand": "Moob",
+      "price": "R$475,01 no Pix com cupom",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/9KgTbQWnnZ",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Bancada-Moob-50-Litros-Fun%C3%A7%C3%A3o-Timer-com-Luz-Interna-127V-i.680601528.23393496898",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-bancada-moob-50-litros-com-timer-e-luz-interna-127v-7235172a.png"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-best-50-litros-1800w-preto-5c7709a3",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Best 50 Litros 1800W Preto",
+      "brand": "Best",
+      "price": "R$356,15 no Pix com cupom",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/9pckCLUtmg",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-Best-50-Litros-1800W-Preto-i.822103155.21199234430",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-best-50-litros-1800w-preto-6ca610c8.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-amvox-afr-4500-inox-45-litros-b63f1ecf",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Amvox AFR 4500 Inox 45 Litros",
+      "brand": "Amvox",
+      "price": "Preco na Shopee",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/2LWjGa4sqw",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-45-Litros-Multifun%C3%A7%C3%A3o-Timer-Alarme-Amvox-AFR-4500-Inox-i.457321133.23592955520",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-amvox-afr-4500-inox-45-litros-09d45417.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-de-bancada-mueller-50-litros-com-grill-preto-fosco-mfb50f-30f745dc",
+      "storeId": "impacto-casa",
+      "title": "Forno de Bancada Mueller 50 Litros com Grill Preto Fosco MFB50F",
+      "brand": "Mueller",
+      "price": "R$873,91 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9St4FVz",
+      "productUrl": "https://shopee.com.br/Forno-de-Bancada-Mueller-50-litros-com-Grill-Preto-Fosco-MFB50F-i.423564393.58208834403",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-de-bancada-mueller-50-litros-com-grill-preto-fosco-mfb50f-bb219694.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-mueller-fratello-44-litros-preto-fosco-53388ff1",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Mueller Fratello 44 Litros Preto Fosco",
+      "brand": "Mueller",
+      "price": "R$609,99 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/1LeC4k8gsm",
+      "productUrl": "https://shopee.com.br/Forno-Eletrico-De-Bancada-Mueller-Fratello-44-Litros-Preto-Fosco-i.356640788.24644895079",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-mueller-fratello-44-litros-preto-fosco-1c38f81d.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-mueller-sapore-branco-44-litros-9af46855",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Mueller Sapore Branco 44 Litros",
+      "brand": "Mueller",
+      "price": "R$636,89 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/1VxcH383Xp",
+      "productUrl": "https://shopee.com.br/Forno-Eletrico-De-Bancada-Mueller-Sapore-Branco-44-Litros-i.356640788.27702246843",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-mueller-sapore-branco-44-litros-36a2a885.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-fischer-gourmet-grill-gii-branco-44l-127v-168ebf44",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Fischer Gourmet Grill GII Branco 44L 127V",
+      "brand": "Fischer",
+      "price": "Preco na Shopee",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/1gH2TM7QCs",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Fischer-Gourmet-Grill-GII-Bancada-Branco-44L-127V-9741-79181-i.1059412251.18199335460",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-fischer-gourmet-grill-gii-branco-44l-127v-27946e26.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-fischer-gourmet-grill-44l-preto-bancada-com-dourador-e-timer-aebcaff3",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Fischer Gourmet Grill 44L Preto Bancada com Dourador e Timer",
+      "brand": "Fischer",
+      "price": "R$731,08 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/9fJK04HjTj",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Fischer-Gourmet-Grill-44L-Preto-Bancada-com-Dourador-e-Timer-i.998597184.23499321852",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-fischer-gourmet-grill-44l-preto-bancada-com-dourador-e-timer-421f6d7c.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-nardelli-top-60-preto-1750w-60-litros-127v-d7ca3366",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico de Bancada Nardelli Top 60 Preto 1750W 60 Litros 127V",
+      "brand": "Nardelli",
+      "price": "R$425,00 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/qhvTppMP2",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-De-Bancada-Nardelli-Top-60-Preto-1750W-60-Litros-127V-i.1334945356.21899646981",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-de-bancada-nardelli-top-60-preto-1750w-60-litros-127v-78b86db5.webp"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-nardelli-smart-60l-preto-110v-03dcbed1",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Nardelli Smart 60L Preto 110V",
+      "brand": "Nardelli",
+      "price": "R$475,90",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/gOVHWpzk1",
+      "productUrl": "https://shopee.com.br/Forno-Eletrico-Nardelli-Smart-60l-Preto-110v-i.316880759.23399171915",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-nardelli-smart-60l-preto-110v-8317cc6c.webp"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-suggar-bancada-42-litros-preto-fe4201pt-fe4202pt-71feb404",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Suggar Bancada 42 Litros Preto FE4201PT FE4202PT",
+      "brand": "Suggar",
+      "price": "R$272,94 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/1BKlsRo5j8",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Suggar-Bancada-42-Litros-Preto-i.329742857.28398865106",
+      "image": "public/images/anuncios/shopee-fornos-bancada-forno-eletrico-suggar-bancada-42-litros-preto-fe4201pt-fe4202pt-a394d08b.jpg"
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-mondial-frn-52-b-grand-family-ii-52l-preto-inox-b868ef1b",
+      "storeId": "impacto-casa",
+      "title": "Forno Eletrico Mondial FRN-52-B Grand Family II 52L Preto Inox",
+      "brand": "Mondial",
+      "price": "R$474,31 no Pix",
+      "category": "Casa e Cozinha",
+      "subcategoria": "Pequenos eletros",
+      "departamento": "Fornos de bancada",
+      "affiliateLink": "https://s.shopee.com.br/111Lg8oj47",
+      "productUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Mondial-FRN-52-B-Grand-Family-II-52L-Preto-Inox-i.1060724397.21898276064",
+      "image": "public/images/anuncios/mondial-forno-eletrico-grand-family-ii-frn-52-b-preto-inox-220-v-72b91b7b.webp"
+    }
+  ]
+}
