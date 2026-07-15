@@ -409,7 +409,12 @@
       "Berços",
       "Livros infantis",
       "Jogos educativos",
-      "Presentes"
+      "Presentes",
+      "Festa infantil",
+      "Roupas de bebe",
+      "Alimentacao infantil",
+      "Seguranca bebe",
+      "Shopee infantil"
     ],
     "section": "Aprender brincando",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-kids.webp"
@@ -796,7 +801,10 @@
       "Blocos de montar",
       "Brinquedos a bateria",
       "Faz de conta",
-      "Robôs e dinossauros"
+      "Robôs e dinossauros",
+      "Brinquedos para bebe",
+      "Brinquedos sensoriais",
+      "Shopee brinquedos"
     ],
     "section": "Brincar, aprender e imaginar",
     "active": true,
