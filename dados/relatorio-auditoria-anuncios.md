@@ -4,13 +4,13 @@ Data: 2026-07-15
 
 ## Resumo
 
-- Anúncios analisados: 956
-- Anúncios ativos: 555
+- Anúncios analisados: 971
+- Anúncios ativos: 570
 - Inativos/revisão: 401
-- Ofertas públicas por link válido e foto válida: 599
+- Ofertas públicas por link válido e foto válida: 614
 - Pendentes/bloqueados da vitrine: 357
 - Grupos duplicados: 5
-- Conflitos de imagem compartilhada: 0
+- Conflitos de imagem compartilhada: 2
 
 ## Problemas encontrados
 
