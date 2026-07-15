@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-07-15T12:53:00-03:00",
+  "scope": "Loja IMPACTO CASA - produtos ativos",
+  "rules": [
+    "Nao remover produto quando a pagina de origem existe e o problema e apenas link de afiliado divergente ou malformado.",
+    "Remover somente itens inexistentes confirmados; nesta rodada nenhum produto ativo precisou ser removido."
+  ],
+  "summary": {
+    "productLinksCorrected": 3,
+    "bannerLinksCorrected": 2,
+    "removedProducts": 0
+  },
+  "productChanges": [
+    {
+      "id": "importado-ml-jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d",
+      "name": "Jogo de Panelas Mimo Style Premium 9 Peças Indução",
+      "action": "corrigido_link_mercado_livre",
+      "previous": "https://meli.la/1uLrkhD.",
+      "corrected": "https://meli.la/1uLrkhD",
+      "reason": "Removido ponto final que fazia o shortlink retornar 404."
+    },
+    {
+      "id": "importado-ml-jogo-de-panelas-panelux-magnific-inducao-aa37d6c5",
+      "name": "Jogo de Panelas Panelux Magnific Indução",
+      "action": "corrigido_link_mercado_livre",
+      "previous": "https://meli.la/14z7r5o.",
+      "corrected": "https://meli.la/14z7r5o",
+      "reason": "Removido ponto final que fazia o shortlink retornar 404."
+    },
+    {
+      "id": "importado-amazon-britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce",
+      "name": "Britânia BFE55P 52L 220V",
+      "action": "corrigido_link_amazon",
+      "previous": "https://link.amazon/B019MKKA8",
+      "previousFinalAsin": "B0CBL62176",
+      "corrected": "https://www.amazon.com.br/dp/B0CBL5C5D4?tag=910556142-20",
+      "source": "https://www.amazon.com.br/dp/B0CBL5C5D4",
+      "expectedAsin": "B0CBL5C5D4",
+      "reason": "O link anterior levava ao ASIN B0CBL62176 (Britania BFE55P 127V), diferente do produto cadastrado Britania BFE55P 52L 220V."
+    }
+  ],
+  "bannerChanges": [
+    {
+      "group": "ads",
+      "id": "ad-importado-ml-jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d",
+      "title": "Jogo de Panelas Mimo Style Premium 9 Peças Indução",
+      "action": "ja_corrigido",
+      "previous": "https://meli.la/1uLrkhD.",
+      "corrected": "https://meli.la/1uLrkhD"
+    },
+    {
+      "group": "ads",
+      "id": "ad-importado-ml-jogo-de-panelas-panelux-magnific-inducao-aa37d6c5",
+      "title": "Jogo de Panelas Panelux Magnific Indução",
+      "action": "ja_corrigido",
+      "previous": "https://meli.la/14z7r5o.",
+      "corrected": "https://meli.la/14z7r5o"
+    }
+  ]
+}
