@@ -1,14 +1,14 @@
 {
-  "executedAt": "2026-07-13",
+  "executedAt": "2026-07-15",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 700,
+    "products": 956,
     "stores": 26,
-    "active": 323,
-    "inactiveOrReview": 377,
-    "publicOffers": 375,
-    "pendingOrBlocked": 325,
-    "issues": 453,
+    "active": 555,
+    "inactiveOrReview": 401,
+    "publicOffers": 599,
+    "pendingOrBlocked": 357,
+    "issues": 540,
     "duplicateGroups": 5,
     "imageConflicts": 0,
     "storesCorrected": 0,
@@ -18,13 +18,813 @@
   "issueCounts": {
     "foto_arquivo_inexistente": 38,
     "link_nao_direto_ou_placeholder": 52,
-    "loja_categoria_incorreta": 58,
+    "loja_categoria_incorreta": 114,
     "sem_botao_compra": 1,
-    "sem_foto": 274,
+    "sem_foto": 305,
     "sem_link": 29,
     "titulo_generico_ou_incompleto": 1
   },
   "issues": {
+    "loja_categoria_incorreta": [
+      {
+        "id": "shopee-20260715-festa-infantil-kit-completo-marie-decoracao-festa-infantil-lembrancinhas-personalizadas-ef6fe76e",
+        "title": "Kit Completo MARIE Decoração Festa Infantil Lembrancinhas Personalizadas",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-frozen-um-bolinh-produto-nao-oficial-so-um-bolinho-decoracao-de-festa-fest-0435ae17",
+        "title": "Kit Festa Frozen Um Bolinh Produto Nao oficial - So um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-roblox-menina-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-m-3694a924",
+        "title": "Kit Festa Roblox Menina Só um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-jardim-encantado-personalizado-pegue-monte-lembrancinha-luxo-caixa-decorad-4b14fa04",
+        "title": "Kit Festa Jardim Encantado Personalizado Pegue Monte Lembrancinha Luxo Caixa Decorada Infantil Lindo",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-tema-chuva-de-amor-arco-iris-pastel-a-festa-perfeita-kit-pronto-fe-f51763bc",
+        "title": "Kit Só Um Bolinho Tema Chuva de amor - Arco Iris Pastel A Festa Perfeita! - Kit Pronto Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-simples-so-um-bolinho-montamos-em-qualquer-tema-ab4c92cf",
+        "title": "Kit Festa simples, só um bolinho - MONTAMOS EM QUALQUER TEMA",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-masha-e-o-urso-8-de-mesa-painel-decorativo-02778911",
+        "title": "Kit Festa Masha E O Urso - 8 De Mesa + Painel Decorativo",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-pool-party-menina-20-pecas-pegue-e-monte-decoracao-festa-infantil-7ed3d52b",
+        "title": "Kit Festa Pool Party menina 20 Peças Pegue e Monte | Decoração Festa Infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-bob-esponja-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-mes-e9aaefbd",
+        "title": "Kit Festa Bob Esponja Só um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-completo-vanellope-decoracao-festa-infantil-lembrancinhas-personalizadas-cf9b5103",
+        "title": "Kit Completo VANELLOPE Decoração Festa Infantil Lembrancinhas Personalizadas",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-tema-caminhao-carreta-scania-a-festa-perfeita-kit-pronto-festa-em--f99a0158",
+        "title": "Kit Só Um Bolinho Tema Caminhão Carreta Scania - A Festa Perfeita! - Kit Pronto Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-completo-capitao-america-decoracao-festa-infantil-lembrancinhas-personalizadas-a8622f53",
+        "title": "Kit Completo CAPITÃO AMÉRICA Decoração Festa Infantil Lembrancinhas Personalizadas",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-caixinhas-personalizadas-lembrancinha-de-festa-infantil-aniversario-turma-da-boi-e9a9faee",
+        "title": "Kit caixinhas personalizadas lembrancinha de festa infantil aniversário turma da boiadeirinha",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-universo-galaxia-formatura-abc-20-pecas-pegue-e-monte-decoracao-festa-infa-366889e8",
+        "title": "Kit Festa UNIVERSO / Galáxia Formatura ABC 20 Peças Pegue e Monte | Decoração Festa Infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-beyblade-kit-festa-em-casa-7faa928b",
+        "title": "Kit Só um Bolinho Personalizado Tema BeyBlade Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-completo-dinossauros-decoracao-festa-infantil-lembrancinhas-personalizadas-5c2e4c64",
+        "title": "Kit Completo DINOSSAUROS Decoração Festa Infantil Lembrancinhas Personalizadas",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-minnie-mouse-vermelha-caixas-personalizadas-pegueemonte-infantil-lembranci-e09e2a0c",
+        "title": "Kit Festa Minnie Mouse- Vermelha - Caixas Personalizadas PEGUEeMONTE Infantil Lembrancinha Decoração",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-tech-computadores"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-borboletas-kit-festa-em-casa-ae428875",
+        "title": "Kit Só um Bolinho Personalizado Borboletas Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-chaves-kit-festa-em-casa-979ef7b4",
+        "title": "Kit Só um Bolinho Personalizado - Chaves - Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-milk-e-sacolinhas-personalizadas-festa-infantil-99d89df6",
+        "title": "Kit Festa Milk e Sacolinhas Personalizadas Festa Infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-painel-de-decoracao-trio-cilindros-dos-rosa-emily-vick-lancamento-2026-ae02702f",
+        "title": "Kit Painel de Decoração + Trio Cilindros - Dos Rosa Emily Vick - Lançamento 2026",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-dos-rosas-ketellyn-ja-vai-montado-aniversario-decoracao-fazemos-qualquer-t-a0501a63",
+        "title": "Kit Festa Dos Rosas /Ketellyn /já vai montado /Aniversário Decoração /Fazemos qualquer tema de festa.",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-bolofofos-rosa-kit-festa-em-casa-e9231baf",
+        "title": "Kit Só um Bolinho Personalizado Tema Bolofofos Rosa Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-chapeuzinho-vermelho-2-kit-festa-em-casa-2c7aaefa",
+        "title": "Kit Só um Bolinho Personalizado - Chapeuzinho vermelho 2- Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-decoracao-aniversario-kit-festa-capivara-fofas-personalizado-7e64d8e9",
+        "title": "Decoração Aniversário - Kit Festa - Capivara Fofas Personalizado",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-so-um-bolinho-decoracao-patrulha-canina-a4e2a2bc",
+        "title": "Kit Festa Só um Bolinho Decoração - Patrulha Canina",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-festa-masha-e-urso-aniversario-marsha-e-urso-d4afe6b0",
+        "title": "Kit só um bolinho Festa MASHA E URSO - Aniversário MARSHA E URSO",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-festa-pegue-e-monte-bluey-e-bingo-rosa-lembrancinha-infantil-personalizada-papel-2ff1321e",
+        "title": "Kit Festa Pegue e Monte Bluey e Bingo Rosa Lembrancinha Infantil Personalizada Papelaria Envio Rápid",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-aniversario-infantil-doces-50-sacolinha-surpresa-fd0cf277",
+        "title": "Kit Aniversário Infantil Doces 50 Sacolinha Surpresa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-bela-e-a-fera-2-kit-festa-em-casa-89890b60",
+        "title": "Kit Só um Bolinho Personalizado Tema Bela e a Fera 2 Kit Festa em Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-sortido-4-pecas-moletom-roupa-de-bebe-menina-infantil-inverno-2-casacos-2-calcas-d0d4b7b7",
+        "title": "Kit Sortido 4 Peças Moletom Roupa De Bebê Menina Infantil Inverno - 2 Casacos + 2 Calças - Tamanhos 6 Meses a 24 Meses",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-conjunto-moletom-bebe-menina-escolha-seu-modelo-com-estampas-fofas-e-conforto-infant-7c4182a2",
+        "title": "Conjunto Moletom Bebe Menina Escolha Seu Modelo, com Estampas Fofas e Conforto Infantil Bebê Feminino Frio Inverno. l04",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-ziper-quentinho-confort-83219178",
+        "title": "Escolha Seu Macacão Bebe Menina Roupa Inverno Soft Peluciado Zíper Quentinho Confortável Capivara, Panda, Unicórnio L09",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-com-ziper-quentinho-con-a5d97e6e",
+        "title": "Escolha Seu Macacão Bebe Menina Roupa Inverno Soft Peluciado Com Zíper Quentinho Confortável Panda, Ursinho, Florido L09",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-conjunto-de-roupas-baby-girl-algodao-vermelho-top-com-puff-sleeves-e-shorts-xadrez-8a90726e",
+        "title": "Conjunto de Roupas Baby Girl Algodão Vermelho Top com Puff Sleeves e Shorts Xadrez",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-2-vestidos-jeans-com-manga-alca-infantil-menina-bebe-elastex-confortavel-fresco--14f03f32",
+        "title": "Kit 2 Vestidos Jeans Com Manga/Alça Infantil Menina Bebe Elastex Confortável Fresco Estilosa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-2-conjunto-moletom-infantil-menina-bebe-roupa-de-frio-inverno-agasalho-1-2-3-ano-614bc505",
+        "title": "Kit 2 Conjunto Moletom Infantil Menina Bebê Roupa de Frio Inverno Agasalho 1 2 3 anos Blusa Calça Feminino Flanelado",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-2-conjuntos-frio-moletom-menina-p-ao-3-sortidos-87554a22",
+        "title": "kit 2 conjuntos Frio moletom menina P ao 3 sortidos",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-2-pcs-set-vestidos-margaridas-para-meninas-infantis-verao-arco-bebe-praia-roupa-com--2721ac00",
+        "title": "2 Pçs/Set Vestidos Margaridas Para Meninas Infantis Verão Arco Bebê Praia Roupa Com Chapéu 0-3 Anos",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-ariele-com-tiara-p-ao-3-anos-roupa-100-algodao-infantil-e9655776",
+        "title": "Vestido Infantil Bebê Menina Ariele Com Tiara P ao 3 Anos Roupa 100% Algodão Infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-roupa-de-outono-para-meninas-de-0-a-3-anos-vestido-de-malha-com-capa-pequena-present-67ad26ce",
+        "title": "Roupa de Outono para Meninas de 0 a 3 Anos, Vestido de Malha com Capa Pequena, Presente de Aniversário",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-estampado-100-algodao-laura-tam-p-ao-3-anos-diversas-es-3181aa30",
+        "title": "Vestido Infantil Bebê Menina Estampado 100% Algodão Laura - Tam. P ao 3 anos | Diversas Estampas",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-6-pecas-de-roupa-femininas-infantil-sortidas-kit-com-3-conjuntos-roupinha-para-b-45200a83",
+        "title": "kit 6 peças de roupa femininas infantil sortidas - kit com 3 CONJUNTOS roupinha para bebê conjunto menina infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-100-algodao-rose-laura-tam-p-ao-3-anos-diversas-cores-ddc90f4e",
+        "title": "Vestido Infantil Bebê Menina 100% Algodão Rosê Laura - Tam. P ao 3 anos |Diversas Cores",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-3-macacao-com-ziper-menina-rn-ao-3-anos-estampas-sortidas-roupa-de-inverno-infan-c5b3d910",
+        "title": "Kit 3 Macacão Com Zíper Menina | RN ao 3 Anos | Estampas Sortidas Roupa de Inverno Infantil",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-menina-fresquinho-faixinha-de-cabelo-verao-cores-tam-p-m-g-1-2-e-3-b5e4035a",
+        "title": "Vestido Menina Fresquinho + Faixinha de Cabelo Verão Cores Tam P, M, G/ 1, 2 e 3",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-tipo-estilingue-borboleta-2025-para-bebes-meninas-de-festa-de-princesa-rosa--0755a7f4",
+        "title": "Vestido Tipo Estilingue Borboleta 2025 Para Bebês Meninas De Festa De Princesa Rosa 0-3 Anos Roupa De Convidados De Casa",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-bebe-menina-3-meses-a-3-anos-verde-estampado-borboleta-presente-festa-aniver-94a86139",
+        "title": "Vestido Bebê Menina 3 Meses a 3 Anos Verde Estampado Borboleta Presente Festa Aniversário Batizado",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-bebe-menina-faixinha-de-cabelo-verao-cores-natal-tam-p-m-g-1-2-e-3-bd1a7bd6",
+        "title": "Vestido Bebê Menina + Faixinha de Cabelo Verão Cores/Natal Tam P, M, G/ 1, 2 e 3",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-com-tiara-verde-festas-linda-tam-p-ao-3-anos-diversas-c-9dbc82f8",
+        "title": "Vestido Infantil Bebê Menina Com Tiara Verde Festas Linda - Tam. P ao 3 anos | Diversas Cores",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-vestido-de-manga-comprida-para-bebes-meninas-gaze-bordado-com-flores-rosa-de-0-a-3-a-c43ddf79",
+        "title": "Vestido De Manga Comprida Para Bebês Meninas Gaze Bordado Com Flores Rosa De 0 A 3 Anos",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-4-pecas-soft-conjunto-infantil-menina-inverno-2-conjuntos-sortidos-p-ao-g-1-a-3--44a5cf83",
+        "title": "Kit 4 Peças Soft conjunto Infantil Menina Inverno 2 Conjuntos Sortidos P ao G (1 a 3 Anos) Super Macio e Quentinho",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-4-pecas-moletom-conjunto-inverno-bebe-menina-feminino-infantil-sortidas-frio-con-59331b4c",
+        "title": "Kit 4 peças Moletom Conjunto Inverno Bebê Menina Feminino Infantil Sortidas Frio Confortável",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-kit-10-pecas-body-e-calca-de-ribana-longo-inverno-verao-rn-ao-3-anos-e5047ccc",
+        "title": "Kit 10 Peças Body e Calça de Ribana Longo Inverno / verão RN ao 3 anos",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "shopee-20260715-moda-bebe-macacao-bebe-pelucia-carneirinho-capuz-quentinho-inverno-roupa-bebe-0-a-3-anos-uniss-35bb06d7",
+        "title": "Macacão Bebê Pelúcia Carneirinho Capuz Quentinho Inverno Roupa Bebê 0 a 3 Anos Unissex Várias Cores",
+        "storeId": "impacto-kids",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "hotmart-20260714-o-grande-arco-das-profecias-7454181",
+        "title": "O Grande Arco das Profecias",
+        "storeId": "impacto-fe",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-01",
+        "title": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-02",
+        "title": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-08",
+        "title": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-10",
+        "title": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-14",
+        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "grife-prime",
+        "status": "rascunho",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-16",
+        "title": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-18",
+        "title": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-19",
+        "title": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-21",
+        "title": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-22",
+        "title": "Saia Midi De Couro Fenda Evangélica Social Luxo",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-23",
+        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
+        "storeId": "grife-prime",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-25",
+        "title": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "moda-feminina-docx-26",
+        "title": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
+        "storeId": "grife-prime",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
+        "title": "Castela Cinto Country Unissex preto com cavalo em bronze",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
+        "title": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
+        "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
+        "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
+        "title": "Bota Botina feminina texana country com zíper ou elástico",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
+        "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
+        "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
+        "title": "Bota Texana Country Masculina cano longo marrom 801",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
+        "title": "ROPER Bota Country Masculina Marrom",
+        "storeId": "impacto-montaria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-material-escolar-completo-com-mochila-cabo-de-aco-no-35064b30",
+        "title": "Kit Material Escolar Completo com Mochila Cabo de Aço Notebook",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-mochila-e-material-escolar-menino-infantil-completo-cb22d9bb",
+        "title": "Kit Mochila e Material Escolar Menino Infantil Completo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-bolsa-de-caneta-kuromi-roxa-de-12-capsulas-e05357fd",
+        "title": "Bolsa de Caneta Kuromi Roxa de 12 Cápsulas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-material-escolar-tema-futebol-com-bolsa-lona-9019f072",
+        "title": "Kit Material Escolar Tema Futebol com Bolsa Lona",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-de-estilo-novo-escolar-para-estudantes-bba98bc4",
+        "title": "Mochila de Estilo Novo Escolar para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-bolsa-grande-feminina-para-notebook-026efe70",
+        "title": "Mochila Escolar Bolsa Grande Feminina para Notebook",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-floresta-7d6388c1",
+        "title": "Mochila Escolar 42x30 cm Estilo Floresta",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-de-grande-capacidade-040d9862",
+        "title": "Mochila Escolar de Grande Capacidade",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-menino-menina-faculdade-trabalho-30l-1816e3b5",
+        "title": "Mochila Escolar Menino/Menina Faculdade Trabalho 30L",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-kit-de-mochila-escolar-para-rapaz-cf9652cf",
+        "title": "Kit de Mochila Escolar para Rapaz",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-simples-moderno-f8baa3d4",
+        "title": "Mochila Escolar 42x30 cm Estilo Simples Moderno",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-conjunto-de-mochila-escolar-para-estudantes-8b5a8ffc",
+        "title": "Conjunto de Mochila Escolar para Estudantes",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-infantil-com-dinossauros-7034ece2",
+        "title": "Mochila Escolar Infantil com Dinossauros",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "impacto-brinquedos"
+      },
+      {
+        "id": "importado-ml-mochila-escolar-para-novo-ano-escolar-13957ddb",
+        "title": "Mochila Escolar para Novo Ano Escolar",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-hawlander-mochila-escolar-infantil-para-meninas-87c3bb05",
+        "title": "Hawlander Mochila Escolar Infantil para Meninas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-bolsa-feminina-de-rodinhas-dog-lilas-33a819b5",
+        "title": "Mochila Bolsa Feminina de Rodinhas Dog - Lilás",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-bolsa-escolar-hello-kitty-com-lancheira-para-meninas-98cb2bbf",
+        "title": "Bolsa escolar Hello Kitty com lancheira para meninas",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-de-rodinhas-futebol-masculina-2774458f",
+        "title": "Mochila Infantil de Rodinhas Futebol Masculina",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-creche-lancheira-estojo-zoop-com-canetinhas-52c34250",
+        "title": "Kit Mochila Creche + Lancheira + Estojo ZOOP com Canetinhas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-flvge-caderno-cristao-para-estudos-3b1a349d",
+        "title": "FLVGE Caderno cristão para estudos",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-monster-jam-mini-mochila-com-lancheira-para-criancas-c69c6cd0",
+        "title": "Monster Jam Mini Mochila com Lancheira para Crianças",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-e-estojo-masculina-bolso-notebook-shock-pret-7adb1a84",
+        "title": "Kit Mochila e Estojo Masculina Bolso Notebook Shock - Preto",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-sanrio-mochila-infantil-kuromi-a7726b17",
+        "title": "SANRIO Mochila infantil Kuromi",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-escolar-infantil-cristiano-ronaldo-cr7-rodinhas-97a489ce",
+        "title": "Mochila Escolar Infantil Cristiano Ronaldo CR7 Rodinhas",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-escolar-emoji-lhama-grande-b9f22827",
+        "title": "Mochila Escolar Emoji Lhama Grande",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-capivara-rosa-03429b38",
+        "title": "Mochila Infantil Capivara Rosa",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-heritage-2-0-04aa4fc2",
+        "title": "Mochila Heritage 2.0",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-mochila-costas-lancheira-infantil-zoop-amarelo-328faa90",
+        "title": "Kit Mochila Costas + Lancheira Infantil ZOOP - Amarelo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-escolar-3-em-1-com-mochila-lancheira-termica-e-estoj-7b7272c8",
+        "title": "Kit escolar 3 em 1 com mochila, lancheira térmica e estojo",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-mochila-infantil-de-costas-creche-zoop-azul-marinho-55793e6e",
+        "title": "Mochila Infantil de Costas Creche ZOOP - Azul Marinho",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-get-trend-marvel-spiderman-kit-escolar-fcff5ba5",
+        "title": "Get Trend Marvel Spiderman Kit escolar",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-star-wars-mochila-baby-yoda-com-lancheira-8fc3c8d3",
+        "title": "STAR WARS Mochila Baby Yoda com lancheira",
+        "storeId": "impacto-livraria",
+        "status": "revisao_manual",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "importado-amazon-kit-canetas-esferograficas-diamante-cristal-colorido-3e33b12c",
+        "title": "Kit Canetas Esferográficas Diamante Cristal Colorido",
+        "storeId": "impacto-livraria",
+        "status": "ativo",
+        "lojaSugerida": "impacto-fe"
+      },
+      {
+        "id": "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
+        "title": "Chinelo Preto Infantil Dino Dinossauro",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual",
+        "lojaSugerida": "impacto-brinquedos"
+      }
+    ],
     "foto_arquivo_inexistente": [
       {
         "id": "telefone-mercado-livre-002",
@@ -659,591 +1459,13 @@
         "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao"
       }
     ],
-    "sem_link": [
-      {
-        "id": "servico-impacto-music-studio-01",
-        "title": "Letra personalizada simples",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-02",
-        "title": "Letra com cifra",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-03",
-        "title": "Jingle comercial",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-04",
-        "title": "Música para homenagem",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-05",
-        "title": "Música gospel autoral",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-06",
-        "title": "Música infantil personalizada",
-        "storeId": "impacto-kids",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-07",
-        "title": "Música para campanha",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-08",
-        "title": "Narração musical para vídeo",
-        "storeId": "impacto-pet",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-01",
-        "title": "Revisão acadêmica",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-02",
-        "title": "Formatação ABNT",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-03",
-        "title": "Organização de trabalho",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-04",
-        "title": "Criação de mapa mental",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-05",
-        "title": "Resumo comentado",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-06",
-        "title": "Questões com gabarito",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-07",
-        "title": "Slides para apresentação",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-08",
-        "title": "Orientação estrutural de TCC",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-01",
-        "title": "Convite digital",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-02",
-        "title": "Banner personalizado",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-03",
-        "title": "Currículo visual",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-04",
-        "title": "Apresentação profissional",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-05",
-        "title": "Catálogo simples",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-01",
-        "title": "Kit de posts",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-02",
-        "title": "Capa para vídeo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-03",
-        "title": "Roteiro curto",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-04",
-        "title": "Calendário editorial",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-05",
-        "title": "Ideias de conteúdo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "grife-prime",
-        "status": "rascunho"
-      }
-    ],
-    "loja_categoria_incorreta": [
-      {
-        "id": "servico-impacto-music-studio-05",
-        "title": "Música gospel autoral",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-01",
-        "title": "Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-02",
-        "title": "Vestido Longo Feminino De Manguinhas Multiuso De Luxo",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-08",
-        "title": "Short Saia Jeans Feminino Cintura Alta Com Lycra Stillger",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-10",
-        "title": "Saia Cetim Feminina Midi Brilho Moda Elegante Full",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-14",
-        "title": "Calças Femininas Hot Pants Flare Cintura Alta Empina Bumbum",
-        "storeId": "grife-prime",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "grife-prime",
-        "status": "rascunho",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-16",
-        "title": "Kit 3 Conjunto Academia Calça Legging E Top Roupa Feminina",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-18",
-        "title": "Calça Legging Fitness Com Saia E Bolso Moda Evangélica",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-19",
-        "title": "Vestido Godê Suede Scuba Com Cinto Moda Evangélica",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-21",
-        "title": "Vestido Longo Feminino Elegante Duna Com Fenda Lateral",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-22",
-        "title": "Saia Midi De Couro Fenda Evangélica Social Luxo",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-23",
-        "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
-        "storeId": "grife-prime",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-25",
-        "title": "Saia Feminina Midi Plissada Moda Perfeita Ocasiões Especiais",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "moda-feminina-docx-26",
-        "title": "Vestido Plus Size Midi Moda Elegante Casual Liso Com Fenda",
-        "storeId": "grife-prime",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "importado-amazon-castela-cinto-country-unissex-preto-com-cavalo-em-bronze-e6d5d68d",
-        "title": "Castela Cinto Country Unissex preto com cavalo em bronze",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-cinto-country-entalhado-fivela-cowboy-dr-rodeio-de735f3f",
-        "title": "Kit Cinto Country entalhado + fivela Cowboy Dr Rodeio",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-chapeu-country-cowboy-americano-barretos-com-bandinha-br-1308db98",
-        "title": "Chapéu Country Cowboy Americano Barretos com bandinha brilhante",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-camisa-country-masculina-bordada-bordo-rodeo-farm-57693445",
-        "title": "Camisa Country Masculina Bordada Bordô Rodeo Farm",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-bota-botina-feminina-texana-country-com-ziper-ou-elastic-8c50d8d0",
-        "title": "Bota Botina feminina texana country com zíper ou elástico",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-bota-feminina-texana-country-couro-legitimo-cano-alto-pa-bd10adac",
-        "title": "Bota Feminina Texana Country couro legítimo cano alto Paint Horse",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-bota-texana-feminina-country-cano-alto-premium-bico-quad-5159d7c6",
-        "title": "Bota Texana Feminina Country cano alto premium bico quadrado",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-bota-texana-country-masculina-cano-longo-marrom-801-4486efff",
-        "title": "Bota Texana Country Masculina cano longo marrom 801",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-roper-bota-country-masculina-marrom-87e4565b",
-        "title": "ROPER Bota Country Masculina Marrom",
-        "storeId": "impacto-montaria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-kit-material-escolar-completo-com-mochila-cabo-de-aco-no-35064b30",
-        "title": "Kit Material Escolar Completo com Mochila Cabo de Aço Notebook",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-kit-mochila-e-material-escolar-menino-infantil-completo-cb22d9bb",
-        "title": "Kit Mochila e Material Escolar Menino Infantil Completo",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-bolsa-de-caneta-kuromi-roxa-de-12-capsulas-e05357fd",
-        "title": "Bolsa de Caneta Kuromi Roxa de 12 Cápsulas",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-kit-material-escolar-tema-futebol-com-bolsa-lona-9019f072",
-        "title": "Kit Material Escolar Tema Futebol com Bolsa Lona",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-de-estilo-novo-escolar-para-estudantes-bba98bc4",
-        "title": "Mochila de Estilo Novo Escolar para Estudantes",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-bolsa-grande-feminina-para-notebook-026efe70",
-        "title": "Mochila Escolar Bolsa Grande Feminina para Notebook",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-floresta-7d6388c1",
-        "title": "Mochila Escolar 42x30 cm Estilo Floresta",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-de-grande-capacidade-040d9862",
-        "title": "Mochila Escolar de Grande Capacidade",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-menino-menina-faculdade-trabalho-30l-1816e3b5",
-        "title": "Mochila Escolar Menino/Menina Faculdade Trabalho 30L",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-kit-de-mochila-escolar-para-rapaz-cf9652cf",
-        "title": "Kit de Mochila Escolar para Rapaz",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-42x30-cm-estilo-simples-moderno-f8baa3d4",
-        "title": "Mochila Escolar 42x30 cm Estilo Simples Moderno",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-conjunto-de-mochila-escolar-para-estudantes-8b5a8ffc",
-        "title": "Conjunto de Mochila Escolar para Estudantes",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-infantil-com-dinossauros-7034ece2",
-        "title": "Mochila Escolar Infantil com Dinossauros",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "impacto-brinquedos"
-      },
-      {
-        "id": "importado-ml-mochila-escolar-para-novo-ano-escolar-13957ddb",
-        "title": "Mochila Escolar para Novo Ano Escolar",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-hawlander-mochila-escolar-infantil-para-meninas-87c3bb05",
-        "title": "Hawlander Mochila Escolar Infantil para Meninas",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-bolsa-feminina-de-rodinhas-dog-lilas-33a819b5",
-        "title": "Mochila Bolsa Feminina de Rodinhas Dog - Lilás",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-bolsa-escolar-hello-kitty-com-lancheira-para-meninas-98cb2bbf",
-        "title": "Bolsa escolar Hello Kitty com lancheira para meninas",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-infantil-de-rodinhas-futebol-masculina-2774458f",
-        "title": "Mochila Infantil de Rodinhas Futebol Masculina",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-mochila-creche-lancheira-estojo-zoop-com-canetinhas-52c34250",
-        "title": "Kit Mochila Creche + Lancheira + Estojo ZOOP com Canetinhas",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-flvge-caderno-cristao-para-estudos-3b1a349d",
-        "title": "FLVGE Caderno cristão para estudos",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "importado-amazon-monster-jam-mini-mochila-com-lancheira-para-criancas-c69c6cd0",
-        "title": "Monster Jam Mini Mochila com Lancheira para Crianças",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-mochila-e-estojo-masculina-bolso-notebook-shock-pret-7adb1a84",
-        "title": "Kit Mochila e Estojo Masculina Bolso Notebook Shock - Preto",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-sanrio-mochila-infantil-kuromi-a7726b17",
-        "title": "SANRIO Mochila infantil Kuromi",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-escolar-infantil-cristiano-ronaldo-cr7-rodinhas-97a489ce",
-        "title": "Mochila Escolar Infantil Cristiano Ronaldo CR7 Rodinhas",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-escolar-emoji-lhama-grande-b9f22827",
-        "title": "Mochila Escolar Emoji Lhama Grande",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-infantil-capivara-rosa-03429b38",
-        "title": "Mochila Infantil Capivara Rosa",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-heritage-2-0-04aa4fc2",
-        "title": "Mochila Heritage 2.0",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-mochila-costas-lancheira-infantil-zoop-amarelo-328faa90",
-        "title": "Kit Mochila Costas + Lancheira Infantil ZOOP - Amarelo",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-escolar-3-em-1-com-mochila-lancheira-termica-e-estoj-7b7272c8",
-        "title": "Kit escolar 3 em 1 com mochila, lancheira térmica e estojo",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-mochila-infantil-de-costas-creche-zoop-azul-marinho-55793e6e",
-        "title": "Mochila Infantil de Costas Creche ZOOP - Azul Marinho",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-get-trend-marvel-spiderman-kit-escolar-fcff5ba5",
-        "title": "Get Trend Marvel Spiderman Kit escolar",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-star-wars-mochila-baby-yoda-com-lancheira-8fc3c8d3",
-        "title": "STAR WARS Mochila Baby Yoda com lancheira",
-        "storeId": "impacto-livraria",
-        "status": "revisao_manual",
-        "lojaSugerida": "grife-prime"
-      },
-      {
-        "id": "importado-amazon-kit-canetas-esferograficas-diamante-cristal-colorido-3e33b12c",
-        "title": "Kit Canetas Esferográficas Diamante Cristal Colorido",
-        "storeId": "impacto-livraria",
-        "status": "ativo",
-        "lojaSugerida": "impacto-fe"
-      },
-      {
-        "id": "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
-        "title": "Chinelo Preto Infantil Dino Dinossauro",
-        "storeId": "impacto-calcados",
-        "status": "ativo",
-        "lojaSugerida": "impacto-brinquedos"
-      }
-    ],
     "sem_foto": [
+      {
+        "id": "loja-parceira-001",
+        "title": "Lista parceira Mercado Livre em revisão",
+        "storeId": "lojas-parceiras",
+        "status": "revisao_manual"
+      },
       {
         "id": "celular-ml-docx-002",
         "title": "Samsung Galaxy A06 128 GB",
@@ -1307,12 +1529,6 @@
       {
         "id": "celular-ml-docx-039",
         "title": "Motorola Edge 50 Ultra",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-085",
-        "title": "Apple iPhone 16",
         "storeId": "impacto-mobile",
         "status": "revisao_manual"
       },
@@ -2316,7 +2532,7 @@
         "id": "importado-amazon-philco-forno-eletrico-65l-pfe65-dupla-resistencia-127-v-cc45df70",
         "title": "Philco Forno Elétrico 65L PFE65 Dupla Resistência - 127 V",
         "storeId": "impacto-casa",
-        "status": "revisao_manual"
+        "status": "pendente_validacao"
       },
       {
         "id": "importado-amazon-philco-forno-eletrico-pfe60i-funcao-dourar-220-v-cba1afae",
@@ -2349,18 +2565,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-fogatti-forno-eletrico-top-40-127-v-971a5700",
-        "title": "Fogatti Forno Elétrico Top 40 - 127 V",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-philco-forno-eletrico-pfe44p-dupla-resistencia-220-v-d2b67e4b",
-        "title": "Philco Forno Elétrico PFE44P Dupla Resistência - 220 V",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-philco-forno-eletrico-50l-pfe52p-dupla-resistencia-127-v-12b177f6",
         "title": "Philco Forno Elétrico 50L PFE52P Dupla Resistência - 127 V",
         "storeId": "impacto-casa",
@@ -2369,18 +2573,6 @@
       {
         "id": "importado-amazon-philco-forno-eletrico-50l-pfe52b-dupla-resistencia-220-v-2b73f90e",
         "title": "Philco Forno Elétrico 50L PFE52B Dupla Resistência - 220 V",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-britania-forno-eletrico-bfe55p-dupla-resistencia-220-v-209b3bce",
-        "title": "Britânia Forno Elétrico BFE55P Dupla Resistência - 220 V",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-suggar-forno-eletrico-de-bancada-fe4201pt-127-v-02d8f2a3",
-        "title": "Suggar Forno Elétrico de Bancada FE4201PT - 127 V",
         "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
@@ -2649,20 +2841,14 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-chinelo-rider-feel-slide-masculino-preto-8d1886db",
-        "title": "Chinelo Rider Feel Slide Masculino Preto",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-chinelos-ortopedicos-masculinos-017fbb5d",
         "title": "Chinelos Ortopédicos Masculinos",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-pantufa-chinelo-capivara-antiderrapante-dd1ac783",
-        "title": "Pantufa Chinelo Capivara Antiderrapante",
+        "id": "importado-amazon-chinelo-preto-infantil-dino-dinossauro-957686b8",
+        "title": "Chinelo Preto Infantil Dino Dinossauro",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       },
@@ -2673,20 +2859,8 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-crocs-crocband-clog-infantil-ballerina-pink-88cfae13",
-        "title": "Crocs Crocband Clog Infantil Ballerina Pink",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-suiyfit-tenis-feminino-bico-largo-f0c332bd",
         "title": "Suiyfit Tênis Feminino Bico Largo",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-camper-tenis-masculino-de-couro-ariel-42fa3b00",
-        "title": "Camper Tênis Masculino de Couro Ariel",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       },
@@ -2699,12 +2873,6 @@
       {
         "id": "importado-amazon-planone-bota-de-chuva-curta-feminina-5d759f6d",
         "title": "Planone Bota de Chuva Curta Feminina",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-tenis-masculino-mormaii-urban-smash-6e646d43",
-        "title": "Tênis Masculino Mormaii Urban Smash",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       },
@@ -2871,12 +3039,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-ml-tenis-adidas-feminino-courtjam-control-3-original-032e3bc1",
-        "title": "Tenis Adidas Feminino Courtjam Control 3 Original",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-ml-tenis-fila-venture-tracer-2-masculino-confortavel-origin-e1dcc40e",
         "title": "Tenis FILA Venture Tracer 2 Masculino Confortavel Original",
         "storeId": "impacto-calcados",
@@ -2887,6 +3049,422 @@
         "title": "Tenis Adidas Unissex Grand Court Base 20 Simp Original",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-gel-dedicate-8-clay-saibro-original-1magnus-dd4671a2",
+        "title": "Tenis ASICS Gel Dedicate 8 Clay Saibro Original 1magnus",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-chinelo-rider-slide-street-original-lancamento-confortav-97708b91",
+        "title": "Chinelo Rider Slide Street Original Lancamento Confortavel",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-bota-masculina-democrata-grid-couro-preto-original-ba6a4081",
+        "title": "Bota Masculina Democrata Grid Couro Preto Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-conjunto-de-panelas-antiaderente-10-pecas-coffee-cappucc-52a94a5a",
+        "title": "Conjunto de Panelas Antiaderente 10 Peças Coffee Cappuccino Imperial",
+        "storeId": "impacto-casa",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-secador-de-cabelos-mondial-preto-2000w-scn-01-scn-16-a24e1413",
+        "title": "Secador de Cabelos Mondial Preto 2000W SCN-01/SCN-16",
+        "storeId": "impacto-ofertas",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-nike-sb-fokus-masculino-azuldourado-original-74947-e84dc2bd",
+        "title": "Tenis NIKE SB Fokus Masculino Azuldourado Original 749477",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-feminino-grand-court-base-30-original-03bc4156",
+        "title": "Tenis Adidas Feminino Grand Court Base 30 Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-nike-shox-nz-masculino-original-promocao-brinde-2f40df03",
+        "title": "Tenis NIKE Shox NZ Masculino Original Promocao Brinde",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-original-960418a7",
+        "title": "Tenis Adidas Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-superstar-foundation-vermelho-original-18cb841c",
+        "title": "Tenis Adidas Superstar Foundation Vermelho Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-space-diver-20-w-original-n42-a6997e1b",
+        "title": "Tenis Adidas Space Diver 20 W Original N42",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-olympikus-masculino-leve-confortavel-evasense-orig-e5c4f669",
+        "title": "Tenis Olympikus Masculino Leve Confortavel Evasense Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-nike-journey-run-masculino-0c630472",
+        "title": "Tenis NIKE Journey Run Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-fila-progress-lite-masculino-corrida-esporte-origi-17ce127e",
+        "title": "Tenis FILA Progress Lite Masculino Corrida Esporte Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-adidas-forest-grove-w-preto-azul-original-cg6123-e4ed44b8",
+        "title": "Tenis Adidas Forest Grove W Preto Azul Original Cg6123",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-fila-rise-up-masculino-casual-confortavel-original-e3243182",
+        "title": "Tenis FILA Rise Up Masculino Casual Confortavel Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-fila-34-original-energized-cage-flex-ot-pro-nr-34--6e33fd8c",
+        "title": "Tenis FILA 34 Original Energized Cage Flex Ot Pro Nr 34 Bras",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-mizuno-glow-3-feminino-original-corrida-caminhada-aa40e2c3",
+        "title": "Tenis Mizuno Glow 3 Feminino Original Corrida Caminhada",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-gel-sparta-midnight-pure-silver-original-0feaa18a",
+        "title": "Tenis ASICS Gel Sparta Midnight Pure Silver Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-mizuno-jet-8-masculino-corrida-original-confortave-2e6ead00",
+        "title": "Tenis Mizuno Jet 8 Masculino Corrida Original Confortavel",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-puma-xray-3-bdp-masculino-lancamento-original-99f9c58a",
+        "title": "Tenis PUMA Xray 3 Bdp Masculino Lancamento Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-gel-nagoya-st-masculino-original-5a6df9cb",
+        "title": "Tenis ASICS Gel Nagoya St Masculino Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-mizuno-space-5-masculino-confortavel-duravel-origi-5020ef58",
+        "title": "Tenis Mizuno Space 5 Masculino Confortavel Duravel Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-nimbus-25-original-e-novo-na-caixa-57782f00",
+        "title": "Tenis ASICS Nimbus 25 Original E Novo Na Caixa",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-gel-venture-11-masculino-original-nota-fisca-8b95a716",
+        "title": "Tenis ASICS Gel Venture 11 Masculino Original Nota Fiscal",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-puma-rsx-reinvention-masculino-preto-original-ef34226b",
+        "title": "Tenis PUMA Rsx Reinvention Masculino Preto Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-asics-gelsparta-2-feminino-preto-original-eb7620e1",
+        "title": "Tenis ASICS Gelsparta 2 Feminino Preto Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-mizuno-prophecy-15-original-couro-macio-frete-grat-79d98b97",
+        "title": "Tenis Mizuno Prophecy 15 Original Couro Macio Frete Gratis",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-tenis-new-balance-990v6-novo-original-usa-67454964",
+        "title": "Tenis New Balance 990v6 Novo Original Usa",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-sandalia-robusta-feminina-casual-confortavel-original-01b97941",
+        "title": "Sandalia Robusta Feminina Casual Confortavel Original",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-sapatenis-com-chinelo-polo-blu-original-masculino-3-pare-68a6866c",
+        "title": "Sapatenis Com Chinelo Polo Blu Original Masculino 3 Pares",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-sapato-social-masculino-pegada-100-couro-original-brinde-df73e533",
+        "title": "Sapato Social Masculino Pegada 100 Couro Original Brinde",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-ml-sapatenis-masculino-tenis-casual-conforto-original-premi-94f82b31",
+        "title": "Sapatenis Masculino Tenis Casual Conforto Original Premium",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-chinelo-charme-dupe-feminino-roxo-ce5431a8",
+        "title": "Chinelo Charme Dupé Feminino Roxo",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-pantufa-birken-slide-massageador-feminino-f4bde080",
+        "title": "Pantufa Birken Slide Massageador Feminino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-crocs-duet-plus-preto-grafite-94b4468e",
+        "title": "Crocs Duet Plus Preto/Grafite",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-crocs-swiftwater-river-sandal-infantil-975d5b26",
+        "title": "Crocs Swiftwater River Sandal Infantil",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-crocs-scooby-doo-infantil-b4c3e85e",
+        "title": "Crocs Scooby Doo Infantil",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-propet-fast-walker-masculino-preto-13f9784a",
+        "title": "Propét Fast Walker Masculino Preto",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      },
+      {
+        "id": "importado-amazon-propet-daybreak-tenis-masculino-68866d8d",
+        "title": "Propet Daybreak Tênis Masculino",
+        "storeId": "impacto-calcados",
+        "status": "revisao_manual"
+      }
+    ],
+    "sem_link": [
+      {
+        "id": "servico-impacto-music-studio-01",
+        "title": "Letra personalizada simples",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-02",
+        "title": "Letra com cifra",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-03",
+        "title": "Jingle comercial",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-04",
+        "title": "Música para homenagem",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-06",
+        "title": "Música infantil personalizada",
+        "storeId": "impacto-kids",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-07",
+        "title": "Música para campanha",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-music-studio-08",
+        "title": "Narração musical para vídeo",
+        "storeId": "impacto-pet",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-01",
+        "title": "Revisão acadêmica",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-02",
+        "title": "Formatação ABNT",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-03",
+        "title": "Organização de trabalho",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-04",
+        "title": "Criação de mapa mental",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-05",
+        "title": "Resumo comentado",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-06",
+        "title": "Questões com gabarito",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-07",
+        "title": "Slides para apresentação",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-academico-08",
+        "title": "Orientação estrutural de TCC",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-01",
+        "title": "Convite digital",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-02",
+        "title": "Banner personalizado",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-03",
+        "title": "Currículo visual",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-04",
+        "title": "Apresentação profissional",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-05",
+        "title": "Catálogo simples",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-personalizados-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-01",
+        "title": "Kit de posts",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-02",
+        "title": "Capa para vídeo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-03",
+        "title": "Roteiro curto",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-04",
+        "title": "Calendário editorial",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-05",
+        "title": "Ideias de conteúdo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "servico-impacto-criadores-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
+      },
+      {
+        "id": "moda-feminina-docx-15",
+        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
+        "storeId": "grife-prime",
+        "status": "rascunho"
       }
     ],
     "sem_botao_compra": [
@@ -2910,13 +3488,9 @@
     {
       "reason": "link",
       "key": "https://meli.la/1gutpms",
-      "keep": "loja-parceira-001",
+      "keep": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
       "duplicates": [
-        "mercado-livre-produto-019",
-        "mercado-livre-produto-020",
-        "mercado-livre-produto-023",
-        "mercado-livre-produto-029",
-        "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1"
+        "loja-parceira-001"
       ]
     },
     {

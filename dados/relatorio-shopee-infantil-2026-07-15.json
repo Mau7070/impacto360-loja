@@ -1,0 +1,1026 @@
+{
+  "generatedAt": "2026-07-15T11:15:00-03:00",
+  "selectedFrom": "Shopee Brasil e painel Criadores e Afiliados Shopee em sessao Chrome logada",
+  "sourceFile": "importacoes/originais/2026-07-15-shopee-infantil/shopee-produtos-infantis-curados.json",
+  "productsPublished": 100,
+  "officialShopeeShortlinks": 100,
+  "countsByBucket": {
+    "festa-infantil": 30,
+    "moda-bebe": 25,
+    "utensilios-bebe": 20,
+    "brinquedos-bebe": 15,
+    "seguranca-bebe": 10
+  },
+  "countsByStore": {
+    "impacto-kids": 85,
+    "impacto-brinquedos": 15
+  },
+  "backupBeforeImport": "backups/2026-07-15-1115-pre-shopee-infantil",
+  "policyNotes": [
+    "Balões, maquiagem, slime, armas, itens adultos e produtos pet foram removidos da curadoria.",
+    "Brinquedos de bebe foram filtrados para evitar itens magneticos, MDF e pecas pequenas obvias.",
+    "Clientes devem conferir preco, estoque, frete, variacoes, reputacao do vendedor, material e faixa etaria na Shopee antes da compra."
+  ],
+  "products": [
+    {
+      "id": "shopee-20260715-festa-infantil-kit-completo-marie-decoracao-festa-infantil-lembrancinhas-personalizadas-ef6fe76e",
+      "storeId": "impacto-kids",
+      "title": "Kit Completo MARIE Decoração Festa Infantil Lembrancinhas Personalizadas",
+      "price": "R$ 59,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/20tsntgM7t",
+      "productUrl": "https://shopee.com.br/Kit-Completo-MARIE-Decora%C3%A7%C3%A3o-Festa-Infantil-Lembrancinhas-Personalizadas-i.411194582.58263742487",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-completo-marie-decoracao-festa-infantil-lembrancinhas-personalizadas-b1592a96.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-frozen-um-bolinh-produto-nao-oficial-so-um-bolinho-decoracao-de-festa-fest-0435ae17",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Frozen Um Bolinh Produto Nao oficial - So um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+      "price": "R$ 37,04",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9OoeS70",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Frozen-Um-Bolinh-Produto-N%C3%A3o-OficialS%C3%B3-um-Bolinho-decora%C3%A7%C3%A3o-de-festa-festa-em-casa-anivers%C3%A1rio-M%C3%AAsvers%C3%A1rio-i.447376610.23499517956",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-frozen-um-bolinh-produto-nao-oficialso-um-bolinho-decoracao-de-festa-festa-3abe54ad.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-roblox-menina-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-m-3694a924",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Roblox Menina Só um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+      "price": "R$ 37,04",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCVf5Rz",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Roblox-Menina-S%C3%B3-um-Bolinho-decora%C3%A7%C3%A3o-de-festa-festa-em-casa-anivers%C3%A1rio-M%C3%AAsvers%C3%A1rio-i.447376610.58213743046",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-roblox-menina-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-m-c57406ff.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-jardim-encantado-personalizado-pegue-monte-lembrancinha-luxo-caixa-decorad-4b14fa04",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Jardim Encantado Personalizado Pegue Monte Lembrancinha Luxo Caixa Decorada Infantil Lindo",
+      "price": "R$ 17,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1VxcCyiG8q",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Jardim-Encantado-Personalizado-Pegue-Monte-Lembrancinha-Luxo-Caixa-Decorada-Infantil-Lindo-i.1785555975.23599416850",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-jardim-encantado-personalizado-pegue-monte-lembrancinha-luxo-caixa-decorad-f2218d9b.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-tema-chuva-de-amor-arco-iris-pastel-a-festa-perfeita-kit-pronto-fe-f51763bc",
+      "storeId": "impacto-kids",
+      "title": "Kit Só Um Bolinho Tema Chuva de amor - Arco Iris Pastel A Festa Perfeita! - Kit Pronto Festa em Casa",
+      "price": "R$ 39,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1LeC0fitTp",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-Um-Bolinho-Tema-Chuva-de-amor-Arco-Iris-Pastel-A-Festa-Perfeita!-Kit-Pronto-Festa-em-Casa-i.734845094.22494963533",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-tema-chuva-de-amor-arco-iris-pastel-a-festa-perfeita-kit-pronto-fe-b44363e6.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-simples-so-um-bolinho-montamos-em-qualquer-tema-ab4c92cf",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa simples, só um bolinho - MONTAMOS EM QUALQUER TEMA",
+      "price": "R$ 35,00",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1qaSbb8Lpv",
+      "productUrl": "https://shopee.com.br/Kit-Festa-simples-s%C3%B3-um-bolinho-MONTAMOS-EM-QUALQUER-TEMA-i.332126426.9717369415",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-simples-so-um-bolinho-montamos-em-qualquer-tema-3488d014.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-masha-e-o-urso-8-de-mesa-painel-decorativo-02778911",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Masha E O Urso - 8 De Mesa + Painel Decorativo",
+      "price": "R$ 64,80",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/gOVDSCnCi",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Masha-E-O-Urso-8-De-Mesa-Painel-Decorativo-i.649912472.13277607980",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-masha-e-o-urso-8-de-mesa-painel-decorativo-40372727.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-pool-party-menina-20-pecas-pegue-e-monte-decoracao-festa-infantil-7ed3d52b",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Pool Party menina 20 Peças Pegue e Monte | Decoração Festa Infantil",
+      "price": "R$ 49,50",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/qhvPlC9rl",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Pool-Party-menina-20-Pe%C3%A7as-Pegue-e-Monte-Decora%C3%A7%C3%A3o-Festa-Infantil-i.426021234.22995025646",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-pool-party-menina-20-pecas-pegue-e-monte-decoracao-festa-infantil-e167e680.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-bob-esponja-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-mes-e9aaefbd",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Bob Esponja Só um Bolinho decoração de festa, festa em casa, aniversário, Mêsversário",
+      "price": "R$ 37,04",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/111Lc4BWWo",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Bob-Esponja-S%C3%B3-um-Bolinho-decora%C3%A7%C3%A3o-de-festa-festa-em-casa-anivers%C3%A1rio-M%C3%AAsvers%C3%A1rio-i.447376610.23495021335",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-bob-esponja-so-um-bolinho-decoracao-de-festa-festa-em-casa-aniversario-mes-7705b7b1.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-completo-vanellope-decoracao-festa-infantil-lembrancinhas-personalizadas-cf9b5103",
+      "storeId": "impacto-kids",
+      "title": "Kit Completo VANELLOPE Decoração Festa Infantil Lembrancinhas Personalizadas",
+      "price": "R$ 59,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1BKloNAtBr",
+      "productUrl": "https://shopee.com.br/Kit-Completo-VANELLOPE-Decora%C3%A7%C3%A3o-Festa-Infantil-Lembrancinhas-Personalizadas-i.411194582.58263808295",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-completo-vanellope-decoracao-festa-infantil-lembrancinhas-personalizadas-cf469364.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-tema-caminhao-carreta-scania-a-festa-perfeita-kit-pronto-festa-em--f99a0158",
+      "storeId": "impacto-kids",
+      "title": "Kit Só Um Bolinho Tema Caminhão Carreta Scania - A Festa Perfeita! - Kit Pronto Festa em Casa",
+      "price": "R$ 39,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/20tsnucimA",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-Um-Bolinho-Tema-Caminh%C3%A3o-Carreta-Scania-A-Festa-Perfeita!-Kit-Pronto-Festa-em-Casa-i.734845094.22594886151",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-tema-caminhao-carreta-scania-a-festa-perfeita-kit-pronto-festa-em--3f727ffa.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-completo-capitao-america-decoracao-festa-infantil-lembrancinhas-personalizadas-a8622f53",
+      "storeId": "impacto-kids",
+      "title": "Kit Completo CAPITÃO AMÉRICA Decoração Festa Infantil Lembrancinhas Personalizadas",
+      "price": "R$ 53,91",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0Dc5RD",
+      "productUrl": "https://shopee.com.br/Kit-Completo-CAPIT%C3%83O-AM%C3%89RICA-Decora%C3%A7%C3%A3o-Festa-Infantil-Lembrancinhas-Personalizadas-i.411194582.58263745251",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-completo-capitao-america-decoracao-festa-infantil-lembrancinhas-personalizadas-782ab25d.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-caixinhas-personalizadas-lembrancinha-de-festa-infantil-aniversario-turma-da-boi-e9a9faee",
+      "storeId": "impacto-kids",
+      "title": "Kit caixinhas personalizadas lembrancinha de festa infantil aniversário turma da boiadeirinha",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1gH2PIdzS8",
+      "productUrl": "https://shopee.com.br/Kit-caixinhas-personalizadas-lembrancinha-de-festa-infantil-anivers%C3%A1rio-turma-da-boiadeirinha-i.399103391.42782089227",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-caixinhas-personalizadas-lembrancinha-de-festa-infantil-aniversario-turma-da-boi-1983326f.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-universo-galaxia-formatura-abc-20-pecas-pegue-e-monte-decoracao-festa-infa-366889e8",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa UNIVERSO / Galáxia Formatura ABC 20 Peças Pegue e Monte | Decoração Festa Infantil",
+      "price": "R$ 49,50",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1qaSbbdM7B",
+      "productUrl": "https://shopee.com.br/Kit-Festa-UNIVERSO-Gal%C3%A1xia-Formatura-ABC-20-Pe%C3%A7as-Pegue-e-Monte-Decora%C3%A7%C3%A3o-Festa-Infantil-i.426021234.58263800650",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-universo-galaxia-formatura-abc-20-pecas-pegue-e-monte-decoracao-festa-infa-b0aa69a7.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-beyblade-kit-festa-em-casa-7faa928b",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado Tema BeyBlade Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1LeC0gfG86",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Tema-BeyBlade-Kit-Festa-em-Casa-i.1541176455.58212642086",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-tema-beyblade-kit-festa-em-casa-758dd67c.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-completo-dinossauros-decoracao-festa-infantil-lembrancinhas-personalizadas-5c2e4c64",
+      "storeId": "impacto-kids",
+      "title": "Kit Completo DINOSSAUROS Decoração Festa Infantil Lembrancinhas Personalizadas",
+      "price": "R$ 53,91",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/4AyNNu3bLK",
+      "productUrl": "https://shopee.com.br/Kit-Completo-DINOSSAUROS-Decora%C3%A7%C3%A3o-Festa-Infantil-Lembrancinhas-Personalizadas-i.411194582.58263745340",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-completo-dinossauros-decoracao-festa-infantil-lembrancinhas-personalizadas-e5400344.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-minnie-mouse-vermelha-caixas-personalizadas-pegueemonte-infantil-lembranci-e09e2a0c",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Minnie Mouse- Vermelha - Caixas Personalizadas PEGUEeMONTE Infantil Lembrancinha Decoração",
+      "price": "R$ 30,28",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/40exBb4EgJ",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Minnie-Mouse-Vermelha-Caixas-Personalizadas-PEGUEeMONTE-Infantil-Lembrancinha-Decora%C3%A7%C3%A3o-i.554642151.22295064267",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-minnie-mouse-vermelha-caixas-personalizadas-pegueemonte-infantil-lembranci-8f23058f.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-borboletas-kit-festa-em-casa-ae428875",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado Borboletas Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/3qLWzI4s1I",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Borboletas-Kit-Festa-em-Casa-i.1541176455.58212644100",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-borboletas-kit-festa-em-casa-8d19103b.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-chaves-kit-festa-em-casa-979ef7b4",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado - Chaves - Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/3g26mz5VMH",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Chaves-Kit-Festa-em-Casa-i.1541176455.58262650488",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-chaves-kit-festa-em-casa-6d04ba1f.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-milk-e-sacolinhas-personalizadas-festa-infantil-99d89df6",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Milk e Sacolinhas Personalizadas Festa Infantil",
+      "price": "R$ 31,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/3Vigag68hG",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Milk-e-Sacolinhas-Personalizadas-Festa-Infantil-i.359134005.58212604244",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-milk-e-sacolinhas-personalizadas-festa-infantil-ffd826a5.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-painel-de-decoracao-trio-cilindros-dos-rosa-emily-vick-lancamento-2026-ae02702f",
+      "storeId": "impacto-kids",
+      "title": "Kit Painel de Decoração + Trio Cilindros - Dos Rosa Emily Vick - Lançamento 2026",
+      "price": "R$ 80,68",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCXZsaX",
+      "productUrl": "https://shopee.com.br/Kit-Painel-de-Decora%C3%A7%C3%A3o-Trio-Cilindros-Dos-Rosa-Emily-Vick-Lan%C3%A7amento-2026-i.466739360.58206215741",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-painel-de-decoracao-trio-cilindros-dos-rosa-emily-vick-lancamento-2026-aa029f46.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-dos-rosas-ketellyn-ja-vai-montado-aniversario-decoracao-fazemos-qualquer-t-a0501a63",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Dos Rosas /Ketellyn /já vai montado /Aniversário Decoração /Fazemos qualquer tema de festa.",
+      "price": "R$ 79,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0EaVvW",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Dos-Rosas-Ketellyn-j%C3%A1-vai-montado-Anivers%C3%A1rio-Decora%C3%A7%C3%A3o-Fazemos-qualquer-tema-de-festa.-i.426563365.58254573723",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-dos-rosas-ketellyn-ja-vai-montado-aniversario-decoracao-fazemos-qualquer-t-7ca9d3e4.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-bolofofos-rosa-kit-festa-em-casa-e9231baf",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado Tema Bolofofos Rosa Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/20tsnvb9GV",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Tema-Bolofofos-Rosa-Kit-Festa-em-Casa-i.1541176455.58262646900",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-tema-bolofofos-rosa-kit-festa-em-casa-e92b00c2.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-chapeuzinho-vermelho-2-kit-festa-em-casa-2c7aaefa",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado - Chapeuzinho vermelho 2- Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1qaSbcbmbU",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Chapeuzinho-vermelho-2-Kit-Festa-em-Casa-i.1541176455.23295057127",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-chapeuzinho-vermelho-2-kit-festa-em-casa-cb52fb43.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-decoracao-aniversario-kit-festa-capivara-fofas-personalizado-7e64d8e9",
+      "storeId": "impacto-kids",
+      "title": "Decoração Aniversário - Kit Festa - Capivara Fofas Personalizado",
+      "price": "R$ 33,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/1gH2PJcPwT",
+      "productUrl": "https://shopee.com.br/Decora%C3%A7%C3%A3o-Anivers%C3%A1rio-Kit-Festa-Capivara-Fofas-Personalizado-i.893381450.22094807651",
+      "image": "public/images/anuncios/shopee-festa-infantil-decoracao-aniversario-kit-festa-capivara-fofas-personalizado-f3506fe8.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-so-um-bolinho-decoracao-patrulha-canina-a4e2a2bc",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Só um Bolinho Decoração - Patrulha Canina",
+      "price": "R$ 38,92",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/AKZ0jFWzWo",
+      "productUrl": "https://shopee.com.br/Kit-Festa-S%C3%B3-um-Bolinho-Decora%C3%A7%C3%A3o-Patrulha-Canina-i.526664657.19597685688",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-so-um-bolinho-decoracao-patrulha-canina-0680ea5e.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-festa-masha-e-urso-aniversario-marsha-e-urso-d4afe6b0",
+      "storeId": "impacto-kids",
+      "title": "Kit só um bolinho Festa MASHA E URSO - Aniversário MARSHA E URSO",
+      "price": "R$ 19,90",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/AUsQvYWMBr",
+      "productUrl": "https://shopee.com.br/Kit-s%C3%B3-um-bolinho-Festa-MASHA-E-URSO-Anivers%C3%A1rio-MARSHA-E-URSO-i.1311076939.22199194569",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-festa-masha-e-urso-aniversario-marsha-e-urso-46d7aa08.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-festa-pegue-e-monte-bluey-e-bingo-rosa-lembrancinha-infantil-personalizada-papel-2ff1321e",
+      "storeId": "impacto-kids",
+      "title": "Kit Festa Pegue e Monte Bluey e Bingo Rosa Lembrancinha Infantil Personalizada Papelaria Envio Rápid",
+      "price": "R$ 24,00",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/80B5wxfsGO",
+      "productUrl": "https://shopee.com.br/Kit-Festa-Pegue-e-Monte-Bluey-e-Bingo-Rosa-Lembrancinha-Infantil-Personalizada-Papelaria-Envio-R%C3%A1pid-i.676564197.23993688359",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-festa-pegue-e-monte-bluey-e-bingo-rosa-lembrancinha-infantil-personalizada-papel-366f574b.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-aniversario-infantil-doces-50-sacolinha-surpresa-fd0cf277",
+      "storeId": "impacto-kids",
+      "title": "Kit Aniversário Infantil Doces 50 Sacolinha Surpresa",
+      "price": "R$ 128,00",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/8AUW9GfEvR",
+      "productUrl": "https://shopee.com.br/Kit-Anivers%C3%A1rio-Infantil-Doces-50-Sacolinha-Surpresa-i.1569267419.22794286640",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-aniversario-infantil-doces-50-sacolinha-surpresa-f11be33c.webp"
+    },
+    {
+      "id": "shopee-20260715-festa-infantil-kit-so-um-bolinho-personalizado-tema-bela-e-a-fera-2-kit-festa-em-casa-89890b60",
+      "storeId": "impacto-kids",
+      "title": "Kit Só um Bolinho Personalizado Tema Bela e a Fera 2 Kit Festa em Casa",
+      "price": "R$ 24,99",
+      "subcategoria": "Festa infantil",
+      "affiliateLink": "https://s.shopee.com.br/8KnwLZebaU",
+      "productUrl": "https://shopee.com.br/Kit-S%C3%B3-um-Bolinho-Personalizado-Tema-Bela-e-a-Fera-2-Kit-Festa-em-Casa-i.1541176455.58212646633",
+      "image": "public/images/anuncios/shopee-festa-infantil-kit-so-um-bolinho-personalizado-tema-bela-e-a-fera-2-kit-festa-em-casa-d69eb757.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-sortido-4-pecas-moletom-roupa-de-bebe-menina-infantil-inverno-2-casacos-2-calcas-d0d4b7b7",
+      "storeId": "impacto-kids",
+      "title": "Kit Sortido 4 Peças Moletom Roupa De Bebê Menina Infantil Inverno - 2 Casacos + 2 Calças - Tamanhos 6 Meses a 24 Meses",
+      "price": "R$ 49,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/70IYl8IsVM",
+      "productUrl": "https://shopee.com.br/Kit-Sortido-4-Pe%C3%A7as-Moletom-Roupa-De-Beb%C3%AA-Menina-Infantil-Inverno-2-Casacos-2-Cal%C3%A7as-Tamanhos-6-Meses-a-24-Meses-i.341167297.23997496332",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-sortido-4-pecas-moletom-roupa-de-bebe-menina-infantil-inverno-2-casacos-2-calcas-4333f36a.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-conjunto-moletom-bebe-menina-escolha-seu-modelo-com-estampas-fofas-e-conforto-infant-7c4182a2",
+      "storeId": "impacto-kids",
+      "title": "Conjunto Moletom Bebe Menina Escolha Seu Modelo, com Estampas Fofas e Conforto Infantil Bebê Feminino Frio Inverno. l04",
+      "price": "R$ 36,89",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/7AbyxRIFAP",
+      "productUrl": "https://shopee.com.br/Conjunto-Moletom-Bebe-Menina-Escolha-Seu-Modelo-com-Estampas-Fofas-e-Conforto-Infantil-Beb%C3%AA-Feminino-Frio-Inverno.-l04-i.341167297.23098766321",
+      "image": "public/images/anuncios/shopee-moda-bebe-conjunto-moletom-bebe-menina-escolha-seu-modelo-com-estampas-fofas-e-conforto-infant-4eee52a2.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-ziper-quentinho-confort-83219178",
+      "storeId": "impacto-kids",
+      "title": "Escolha Seu Macacão Bebe Menina Roupa Inverno Soft Peluciado Zíper Quentinho Confortável Capivara, Panda, Unicórnio L09",
+      "price": "R$ 37,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/6ffiMWK9BK",
+      "productUrl": "https://shopee.com.br/Escolha-Seu-Macac%C3%A3o-Bebe-Menina-Roupa-Inverno-Soft-Peluciado-Z%C3%ADper-Quentinho-Confort%C3%A1vel-Capivara-Panda-Unic%C3%B3rnio-L09-i.341167297.44278759056",
+      "image": "public/images/anuncios/shopee-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-ziper-quentinho-confort-36ee8541.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-com-ziper-quentinho-con-a5d97e6e",
+      "storeId": "impacto-kids",
+      "title": "Escolha Seu Macacão Bebe Menina Roupa Inverno Soft Peluciado Com Zíper Quentinho Confortável Panda, Ursinho, Florido L09",
+      "price": "R$ 37,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/6pz8YpJVqN",
+      "productUrl": "https://shopee.com.br/Escolha-Seu-Macac%C3%A3o-Bebe-Menina-Roupa-Inverno-Soft-Peluciado-Com-Z%C3%ADper-Quentinho-Confort%C3%A1vel-Panda-Ursinho-Florido-L09-i.341167297.52156184789",
+      "image": "public/images/anuncios/shopee-moda-bebe-escolha-seu-macacao-bebe-menina-roupa-inverno-soft-peluciado-com-ziper-quentinho-con-321ae26f.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-conjunto-de-roupas-baby-girl-algodao-vermelho-top-com-puff-sleeves-e-shorts-xadrez-8a90726e",
+      "storeId": "impacto-kids",
+      "title": "Conjunto de Roupas Baby Girl Algodão Vermelho Top com Puff Sleeves e Shorts Xadrez",
+      "price": "R$ 35,00",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/7fYFYMGL9Y",
+      "productUrl": "https://shopee.com.br/Conjunto-de-Roupas-Baby-Girl-Algod%C3%A3o-Vermelho-Top-com-Puff-Sleeves-e-Shorts-Xadrez-i.1006215031.28953598394",
+      "image": "public/images/anuncios/shopee-moda-bebe-conjunto-de-roupas-baby-girl-algodao-vermelho-top-com-puff-sleeves-e-shorts-xadrez-54312168.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-2-vestidos-jeans-com-manga-alca-infantil-menina-bebe-elastex-confortavel-fresco--14f03f32",
+      "storeId": "impacto-kids",
+      "title": "Kit 2 Vestidos Jeans Com Manga/Alça Infantil Menina Bebe Elastex Confortável Fresco Estilosa",
+      "price": "R$ 78,60",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/8fQmkCcrZb",
+      "productUrl": "https://shopee.com.br/Kit-2-Vestidos-Jeans-Com-Manga-Al%C3%A7a-Infantil-Menina-Bebe-Elastex-Confort%C3%A1vel-Fresco-Estilosa-i.1072771740.22093858177",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-2-vestidos-jeans-com-manga-alca-infantil-menina-bebe-elastex-confortavel-fresco--e4a026ab.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-2-conjunto-moletom-infantil-menina-bebe-roupa-de-frio-inverno-agasalho-1-2-3-ano-614bc505",
+      "storeId": "impacto-kids",
+      "title": "Kit 2 Conjunto Moletom Infantil Menina Bebê Roupa de Frio Inverno Agasalho 1 2 3 anos Blusa Calça Feminino Flanelado",
+      "price": "R$ 77,99",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/8V7MXtdUua",
+      "productUrl": "https://shopee.com.br/Kit-2-Conjunto-Moletom-Infantil-Menina-Beb%C3%AA-Roupa-de-Frio-Inverno-Agasalho-1-2-3-anos-Blusa-Cal%C3%A7a-Feminino-Flanelado-i.484742254.52963328436",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-2-conjunto-moletom-infantil-menina-bebe-roupa-de-frio-inverno-agasalho-1-2-3-ano-86fa7ebc.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-2-conjuntos-frio-moletom-menina-p-ao-3-sortidos-87554a22",
+      "storeId": "impacto-kids",
+      "title": "kit 2 conjuntos Frio moletom menina P ao 3 sortidos",
+      "price": "R$ 53,96",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/8KnwLae8FZ",
+      "productUrl": "https://shopee.com.br/kit-2-conjuntos-Frio-moletom-menina-P-ao-3-sortidos-i.392728377.58257795132",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-2-conjuntos-frio-moletom-menina-p-ao-3-sortidos-04f06a84.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-2-pcs-set-vestidos-margaridas-para-meninas-infantis-verao-arco-bebe-praia-roupa-com--2721ac00",
+      "storeId": "impacto-kids",
+      "title": "2 Pçs/Set Vestidos Margaridas Para Meninas Infantis Verão Arco Bebê Praia Roupa Com Chapéu 0-3 Anos",
+      "price": "R$ 48,50",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/8AUW9HelaY",
+      "productUrl": "https://shopee.com.br/2-P%C3%A7s-Set-Vestidos-Margaridas-Para-Meninas-Infantis-Ver%C3%A3o-Arco-Beb%C3%AA-Praia-Roupa-Com-Chap%C3%A9u-0-3-Anos-i.1006215031.25574860279",
+      "image": "public/images/anuncios/shopee-moda-bebe-2-pcs-set-vestidos-margaridas-para-meninas-infantis-verao-arco-bebe-praia-roupa-com--718d7f7c.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-ariele-com-tiara-p-ao-3-anos-roupa-100-algodao-infantil-e9655776",
+      "storeId": "impacto-kids",
+      "title": "Vestido Infantil Bebê Menina Ariele Com Tiara P ao 3 Anos Roupa 100% Algodão Infantil",
+      "price": "R$ 46,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/80B5wyfOvX",
+      "productUrl": "https://shopee.com.br/Vestido-Infantil-Beb%C3%AA-Menina-Ariele-Com-Tiara-P-ao-3-Anos-Roupa-100-Algod%C3%A3o-Infantil-i.1564860594.22999447766",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-infantil-bebe-menina-ariele-com-tiara-p-ao-3-anos-roupa-100-algodao-infantil-993fd049.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-roupa-de-outono-para-meninas-de-0-a-3-anos-vestido-de-malha-com-capa-pequena-present-67ad26ce",
+      "storeId": "impacto-kids",
+      "title": "Roupa de Outono para Meninas de 0 a 3 Anos, Vestido de Malha com Capa Pequena, Presente de Aniversário",
+      "price": "R$ 79,99",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0GVJ25",
+      "productUrl": "https://shopee.com.br/Roupa-de-Outono-para-Meninas-de-0-a-3-Anos-Vestido-de-Malha-com-Capa-Pequena-Presente-de-Anivers%C3%A1rio-i.983645094.29927135015",
+      "image": "public/images/anuncios/shopee-moda-bebe-roupa-de-outono-para-meninas-de-0-a-3-anos-vestido-de-malha-com-capa-pequena-present-1eec74f3.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-estampado-100-algodao-laura-tam-p-ao-3-anos-diversas-es-3181aa30",
+      "storeId": "impacto-kids",
+      "title": "Vestido Infantil Bebê Menina Estampado 100% Algodão Laura - Tam. P ao 3 anos | Diversas Estampas",
+      "price": "R$ 54,20",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCZUfh8",
+      "productUrl": "https://shopee.com.br/Vestido-Infantil-Beb%C3%AA-Menina-Estampado-100-Algod%C3%A3o-Laura-Tam.-P-ao-3-anos-Diversas-Estampas-i.615567163.58205116755",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-infantil-bebe-menina-estampado-100-algodao-laura-tam-p-ao-3-anos-diversas-es-b4a0bc95.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-6-pecas-de-roupa-femininas-infantil-sortidas-kit-com-3-conjuntos-roupinha-para-b-45200a83",
+      "storeId": "impacto-kids",
+      "title": "kit 6 peças de roupa femininas infantil sortidas - kit com 3 CONJUNTOS roupinha para bebê conjunto menina infantil",
+      "price": "R$ 69,00",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9OsU2MB",
+      "productUrl": "https://shopee.com.br/kit-6-pe%C3%A7as-de-roupa-femininas-infantil-sortidas-kit-com-3-CONJUNTOS-roupinha-para-beb%C3%AA-conjunto-menina-infantil-i.414379555.22491753599",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-6-pecas-de-roupa-femininas-infantil-sortidas-kit-com-3-conjuntos-roupinha-para-b-8d78972e.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-100-algodao-rose-laura-tam-p-ao-3-anos-diversas-cores-ddc90f4e",
+      "storeId": "impacto-kids",
+      "title": "Vestido Infantil Bebê Menina 100% Algodão Rosê Laura - Tam. P ao 3 anos |Diversas Cores",
+      "price": "R$ 48,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/18oQHdYQi",
+      "productUrl": "https://shopee.com.br/Vestido-Infantil-Beb%C3%AA-Menina-100-Algod%C3%A3o-Ros%C3%AA-Laura-Tam.-P-ao-3-anos-Diversas-Cores-i.615567163.23097836566",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-infantil-bebe-menina-100-algodao-rose-laura-tam-p-ao-3-anos-diversas-cores-ed8d67c7.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-3-macacao-com-ziper-menina-rn-ao-3-anos-estampas-sortidas-roupa-de-inverno-infan-c5b3d910",
+      "storeId": "impacto-kids",
+      "title": "Kit 3 Macacão Com Zíper Menina | RN ao 3 Anos | Estampas Sortidas Roupa de Inverno Infantil",
+      "price": "R$ 75,99",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/BSEcacv5l",
+      "productUrl": "https://shopee.com.br/Kit-3-Macac%C3%A3o-Com-Z%C3%ADper-Menina-RN-ao-3-Anos-Estampas-Sortidas-Roupa-de-Inverno-Infantil-i.1651156303.58205661800",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-3-macacao-com-ziper-menina-rn-ao-3-anos-estampas-sortidas-roupa-de-inverno-infan-222133fc.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-menina-fresquinho-faixinha-de-cabelo-verao-cores-tam-p-m-g-1-2-e-3-b5e4035a",
+      "storeId": "impacto-kids",
+      "title": "Vestido Menina Fresquinho + Faixinha de Cabelo Verão Cores Tam P, M, G/ 1, 2 e 3",
+      "price": "R$ 40,10",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/111Lc8098G",
+      "productUrl": "https://shopee.com.br/Vestido-Menina-Fresquinho-Faixinha-de-Cabelo-Ver%C3%A3o-Cores-Tam-P-M-G-1-2-e-3-i.1253561331.23798941735",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-menina-fresquinho-faixinha-de-cabelo-verao-cores-tam-p-m-g-1-2-e-3-e19db933.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-tipo-estilingue-borboleta-2025-para-bebes-meninas-de-festa-de-princesa-rosa--0755a7f4",
+      "storeId": "impacto-kids",
+      "title": "Vestido Tipo Estilingue Borboleta 2025 Para Bebês Meninas De Festa De Princesa Rosa 0-3 Anos Roupa De Convidados De Casa",
+      "price": "R$ 32,99",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/1BKloQzVnJ",
+      "productUrl": "https://shopee.com.br/Vestido-Tipo-Estilingue-Borboleta-2025-Para-Beb%C3%AAs-Meninas-De-Festa-De-Princesa-Rosa-0-3-Anos-Roupa-De-Convidados-De-Casa-i.1006215031.21484984717",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-tipo-estilingue-borboleta-2025-para-bebes-meninas-de-festa-de-princesa-rosa--de6c95bf.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-bebe-menina-3-meses-a-3-anos-verde-estampado-borboleta-presente-festa-aniver-94a86139",
+      "storeId": "impacto-kids",
+      "title": "Vestido Bebê Menina 3 Meses a 3 Anos Verde Estampado Borboleta Presente Festa Aniversário Batizado",
+      "price": "R$ 41,00",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/gOVDW1PoE",
+      "productUrl": "https://shopee.com.br/Vestido-Beb%C3%AA-Menina-3-Meses-a-3-Anos-Verde-Estampado-Borboleta-Presente-Festa-Anivers%C3%A1rio-Batizado-i.1583757289.49803917330",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-bebe-menina-3-meses-a-3-anos-verde-estampado-borboleta-presente-festa-aniver-f6f9fab5.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-bebe-menina-faixinha-de-cabelo-verao-cores-natal-tam-p-m-g-1-2-e-3-bd1a7bd6",
+      "storeId": "impacto-kids",
+      "title": "Vestido Bebê Menina + Faixinha de Cabelo Verão Cores/Natal Tam P, M, G/ 1, 2 e 3",
+      "price": "R$ 37,72",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/qhvPp0mTH",
+      "productUrl": "https://shopee.com.br/Vestido-Beb%C3%AA-Menina-Faixinha-de-Cabelo-Ver%C3%A3o-Cores-Natal-Tam-P-M-G-1-2-e-3-i.1103278358.44222472961",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-bebe-menina-faixinha-de-cabelo-verao-cores-natal-tam-p-m-g-1-2-e-3-d9a1b2fa.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-infantil-bebe-menina-com-tiara-verde-festas-linda-tam-p-ao-3-anos-diversas-c-9dbc82f8",
+      "storeId": "impacto-kids",
+      "title": "Vestido Infantil Bebê Menina Com Tiara Verde Festas Linda - Tam. P ao 3 anos | Diversas Cores",
+      "price": "R$ 48,72",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/1gH2PLxbmS",
+      "productUrl": "https://shopee.com.br/Vestido-Infantil-Beb%C3%AA-Menina-Com-Tiara-Verde-Festas-Linda-Tam.-P-ao-3-anos-Diversas-Cores-i.1522470880.22294555894",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-infantil-bebe-menina-com-tiara-verde-festas-linda-tam-p-ao-3-anos-diversas-c-3c6eb56c.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-vestido-de-manga-comprida-para-bebes-meninas-gaze-bordado-com-flores-rosa-de-0-a-3-a-c43ddf79",
+      "storeId": "impacto-kids",
+      "title": "Vestido De Manga Comprida Para Bebês Meninas Gaze Bordado Com Flores Rosa De 0 A 3 Anos",
+      "price": "R$ 50,79",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/W551DcPp9",
+      "productUrl": "https://shopee.com.br/Vestido-De-Manga-Comprida-Para-Beb%C3%AAs-Meninas-Gaze-Bordado-Com-Flores-Rosa-De-0-A-3-Anos-i.423928723.28334900109",
+      "image": "public/images/anuncios/shopee-moda-bebe-vestido-de-manga-comprida-para-bebes-meninas-gaze-bordado-com-flores-rosa-de-0-a-3-a-215c9ce8.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-4-pecas-soft-conjunto-infantil-menina-inverno-2-conjuntos-sortidos-p-ao-g-1-a-3--44a5cf83",
+      "storeId": "impacto-kids",
+      "title": "Kit 4 Peças Soft conjunto Infantil Menina Inverno 2 Conjuntos Sortidos P ao G (1 a 3 Anos) Super Macio e Quentinho",
+      "price": "R$ 67,93",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/20tsnyWhmS",
+      "productUrl": "https://shopee.com.br/Kit-4-Pe%C3%A7as-Soft-conjunto-Infantil-Menina-Inverno-2-Conjuntos-Sortidos-P-ao-G-(1-a-3-Anos)-Super-Macio-e-Quentinho-i.1690235305.23699363367",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-4-pecas-soft-conjunto-infantil-menina-inverno-2-conjuntos-sortidos-p-ao-g-1-a-3--e82a0274.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-4-pecas-moletom-conjunto-inverno-bebe-menina-feminino-infantil-sortidas-frio-con-59331b4c",
+      "storeId": "impacto-kids",
+      "title": "Kit 4 peças Moletom Conjunto Inverno Bebê Menina Feminino Infantil Sortidas Frio Confortável",
+      "price": "R$ 69,90",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0HW4RV",
+      "productUrl": "https://shopee.com.br/Kit-4-pe%C3%A7as-Moletom-Conjunto-Inverno-Beb%C3%AA-Menina-Feminino-Infantil-Sortidas-Frio-Confort%C3%A1vel-i.1625652323.58207309782",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-4-pecas-moletom-conjunto-inverno-bebe-menina-feminino-infantil-sortidas-frio-con-f761a396.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-kit-10-pecas-body-e-calca-de-ribana-longo-inverno-verao-rn-ao-3-anos-e5047ccc",
+      "storeId": "impacto-kids",
+      "title": "Kit 10 Peças Body e Calça de Ribana Longo Inverno / verão RN ao 3 anos",
+      "price": "R$ 127,30",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCaVR6Y",
+      "productUrl": "https://shopee.com.br/Kit-10-Pe%C3%A7as-Body-e-Cal%C3%A7a-de-Ribana-Longo-Inverno-ver%C3%A3o-RN-ao-3-anos-i.1048609935.23192399558",
+      "image": "public/images/anuncios/shopee-moda-bebe-kit-10-pecas-body-e-calca-de-ribana-longo-inverno-verao-rn-ao-3-anos-4aa17621.webp"
+    },
+    {
+      "id": "shopee-20260715-moda-bebe-macacao-bebe-pelucia-carneirinho-capuz-quentinho-inverno-roupa-bebe-0-a-3-anos-uniss-35bb06d7",
+      "storeId": "impacto-kids",
+      "title": "Macacão Bebê Pelúcia Carneirinho Capuz Quentinho Inverno Roupa Bebê 0 a 3 Anos Unissex Várias Cores",
+      "price": "R$ 49,84",
+      "subcategoria": "Roupas de bebe",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9OtUnlb",
+      "productUrl": "https://shopee.com.br/Macac%C3%A3o-Beb%C3%AA-Pel%C3%BAcia-Carneirinho-Capuz-Quentinho-Inverno-Roupa-Beb%C3%AA-0-a-3-Anos-Unissex-V%C3%A1rias-Cores-i.1674969612.58257718125",
+      "image": "public/images/anuncios/shopee-moda-bebe-macacao-bebe-pelucia-carneirinho-capuz-quentinho-inverno-roupa-bebe-0-a-3-anos-uniss-3065384e.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-6-8-pecas-de-silicone-para-alimentacao-de-bebes-979a92f7",
+      "storeId": "impacto-kids",
+      "title": "kit 6/8 peças de Silicone para alimentação de bebês",
+      "price": "R$ 36,99",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/7VEpM5gUqu",
+      "productUrl": "https://shopee.com.br/kit-6-8-pe%C3%A7as-de-Silicone-para-alimenta%C3%A7%C3%A3o-de-beb%C3%AAs-i.1284822095.18697732270",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-6-8-pecas-de-silicone-para-alimentacao-de-bebes-d7c593fe.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-alimentacao-infantil-em-silicone-8-pecas-prato-c-succao-tigela-babador-copo-talh-193c8a76",
+      "storeId": "impacto-kids",
+      "title": "Kit Alimentação Infantil em Silicone 8 Peças Prato c/ Sucção Tigela Babador Copo Talher Livre de BPA",
+      "price": "R$ 44,99",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/7KvP9mh8Bt",
+      "productUrl": "https://shopee.com.br/Kit-Alimenta%C3%A7%C3%A3o-Infantil-em-Silicone-8-Pe%C3%A7as-Prato-c-Suc%C3%A7%C3%A3o-Tigela-Babador-Copo-Talher-Livre-de-BPA-i.592429726.58263500370",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-alimentacao-infantil-em-silicone-8-pecas-prato-c-succao-tigela-babador-copo-talh-5f74eacb.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-6-8-10-pecas-de-talheres-de-silicone-para-bebes-criancas-talheres-silicone-com-m-d7c31860",
+      "storeId": "impacto-kids",
+      "title": "Kit 6/8/10 Peças de Talheres de Silicone para Bebês Crianças Talheres Silicone Com madeira ventosa",
+      "price": "R$ 35,99",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/7prfkhfEB0",
+      "productUrl": "https://shopee.com.br/Kit-6-8-10-Pe%C3%A7as-de-Talheres-de-Silicone-para-Beb%C3%AAs-Crian%C3%A7as-Talheres-Silicone-Com-madeira-ventosa-i.1284376448.24494619469",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-6-8-10-pecas-de-talheres-de-silicone-para-bebes-criancas-talheres-silicone-com-m-03c75f2c.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-refeicao-bebe-silicone-4-pecas-ventosa-livre-bpa-premium-30abe7ba",
+      "storeId": "impacto-kids",
+      "title": "Kit Refeição Bebê Silicone 4 Peças Ventosa Livre Bpa Premium",
+      "price": "R$ 14,98",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/7fYFYOfrVz",
+      "productUrl": "https://shopee.com.br/Kit-Refei%C3%A7%C3%A3o-Beb%C3%AA-Silicone-4-Pe%C3%A7as-Ventosa-Livre-Bpa-Premium-i.768591761.58213289157",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-refeicao-bebe-silicone-4-pecas-ventosa-livre-bpa-premium-8259d76c.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-k-it-infantil-alimentacao-mickey-ou-minnie-4-pecas-1conjunto-copo-1prato-tigela-e-2--66fa6300",
+      "storeId": "impacto-kids",
+      "title": "K it infantil alimentação Mickey ou Minnie 4 PEÇAS - 1conjunto copo, 1prato tigela, e 2 colheres Plasutil",
+      "price": "R$ 39,90",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/6pz8Yrj2Cq",
+      "productUrl": "https://shopee.com.br/K-it-infantil-alimenta%C3%A7%C3%A3o-Mickey-ou-Minnie-4-PE%C3%87AS-1conjunto-copo-1prato-tigela-e-2-colheres-Plasutil-i.421628821.58205825280",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-k-it-infantil-alimentacao-mickey-ou-minnie-4-pecas-1conjunto-copo-1prato-tigela-e-2--09e93c33.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-papinha-facil-alimentacao-do-bebe-livre-de-bpa-d1b0eeb7",
+      "storeId": "impacto-kids",
+      "title": "Kit Papinha Fácil Alimentação do Bebê Livre de BPA",
+      "price": "R$ 34,89",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/AUsQvbzjia",
+      "productUrl": "https://shopee.com.br/Kit-Papinha-F%C3%A1cil-Alimenta%C3%A7%C3%A3o-do-Beb%C3%AA-Livre-de-BPA-i.370030405.18397500823",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-papinha-facil-alimentacao-do-bebe-livre-de-bpa-aebe275e.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-introducao-alimentar-premium-bebe-completo-com-babador-de-silicone-b85d2f00",
+      "storeId": "impacto-kids",
+      "title": "Kit Introdução Alimentar Premium Bebê Completo Com Babador de Silicone",
+      "price": "R$ 78,20",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/AKZ0jJ0N3Z",
+      "productUrl": "https://shopee.com.br/Kit-Introdu%C3%A7%C3%A3o-Alimentar-Premium-Beb%C3%AA-Completo-Com-Babador-de-Silicone-i.1307843023.42981027594",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-introducao-alimentar-premium-bebe-completo-com-babador-de-silicone-28c56576.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-8-pecas-talheres-alimentacao-bebe-silicone-kit-talheres-infantil-com-ventosa-can-20c966bc",
+      "storeId": "impacto-kids",
+      "title": "kit 8 Peças Talheres alimentação bebê silicone kit Talheres Infantil Com Ventosa Canudo Colher Babador Garfo NOVO",
+      "price": "R$ 34,88",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/AAFaX010OY",
+      "productUrl": "https://shopee.com.br/kit-8-Pe%C3%A7as-Talheres-alimenta%C3%A7%C3%A3o-beb%C3%AA-silicone-kit-Talheres-Infantil-Com-Ventosa-Canudo-Colher-Babador-Garfo-NOVO-i.674234265.21397737584",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-8-pecas-talheres-alimentacao-bebe-silicone-kit-talheres-infantil-com-ventosa-can-2f4e8e41.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-introducao-alimentar-buba-prato-urisnho-com-divisoria-copo-com-alca-talheres-ter-4005b536",
+      "storeId": "impacto-kids",
+      "title": "Kit Introdução Alimentar Buba Prato Urisnho com Divisória Copo com Alça Talheres Termossensíveis Babador Gumy",
+      "price": "R$ 124,40",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/9zwAKh1djX",
+      "productUrl": "https://shopee.com.br/Kit-Introdu%C3%A7%C3%A3o-Alimentar-Buba-Prato-Urisnho-com-Divis%C3%B3ria-Copo-com-Al%C3%A7a-Talheres-Termossens%C3%ADveis-Babador-Gumy-i.374653611.19671954581",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-introducao-alimentar-buba-prato-urisnho-com-divisoria-copo-com-alca-talheres-ter-501210d5.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-completo-para-bebe-copo-330-ml-prato-com-ventosa-colher-de-silicone-d7d96ad1",
+      "storeId": "impacto-kids",
+      "title": "Kit completo para bebê: copo 330 ml + prato com ventosa + colher de Silicone",
+      "price": "R$ 39,59",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/9pck8O2H4W",
+      "productUrl": "https://shopee.com.br/Kit-completo-para-beb%C3%AA-copo-330-ml-prato-com-ventosa-colher-de-Silicone-i.1307843023.58251284533",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-completo-para-bebe-copo-330-ml-prato-com-ventosa-colher-de-silicone-f31e6559.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-talheres-bebe-silicone-8-pecas-kit-talheres-infantil-com-ventosa-canudo-colher-babad-e15ba965",
+      "storeId": "impacto-kids",
+      "title": "Talheres bebê silicone 8 Peças kit Talheres Infantil Com Ventosa Canudo Colher Babador Garfo Introdução Alimentar",
+      "price": "R$ 34,98",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/Lleow6HDI",
+      "productUrl": "https://shopee.com.br/Talheres-beb%C3%AA-silicone-8-Pe%C3%A7as-kit-Talheres-Infantil-Com-Ventosa-Canudo-Colher-Babador-Garfo-Introdu%C3%A7%C3%A3o-Alimentar-i.323192182.23193859297",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-talheres-bebe-silicone-8-pecas-kit-talheres-infantil-com-ventosa-canudo-colher-babad-dbbc7bca.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-refeicao-10-pratos-copos-com-tampa-infantil-colher-plastico-menina-menino-merend-0401633a",
+      "storeId": "impacto-kids",
+      "title": "kit refeição 10 pratos copos com tampa infantil colher Plástico menina menino merenda escola creche",
+      "price": "R$ 51,11",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/W551F5dsL",
+      "productUrl": "https://shopee.com.br/kit-refei%C3%A7%C3%A3o-10-pratos-copos-com-tampa-infantil-colher-Pl%C3%A1stico-menina-menino-merenda-escola-creche-i.411850609.58254359861",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-refeicao-10-pratos-copos-com-tampa-infantil-colher-plastico-menina-menino-merend-06d920e5.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-alimentacao-lully-4-pecas-751dbf8d",
+      "storeId": "impacto-kids",
+      "title": "Kit Alimentação Lully 4 Peças",
+      "price": "R$ 27,71",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/18oQK7XtG",
+      "productUrl": "https://shopee.com.br/Kit-Alimenta%C3%A7%C3%A3o-Lully-4-Pe%C3%A7as-i.1307843023.21598076638",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-alimentacao-lully-4-pecas-5decc42f.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-pecas-talheres-alimentacao-bebe-silicone-kit-talheres-infantil-com-ventosa-canud-6df73d9c",
+      "storeId": "impacto-kids",
+      "title": "kit Peças Talheres alimentação bebê silicone kit Talheres Infantil Com Ventosa Canudo Colher Babador Garfo",
+      "price": "R$ 38,90",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/BSEcd6uYJ",
+      "productUrl": "https://shopee.com.br/kit-Pe%C3%A7as-Talheres-alimenta%C3%A7%C3%A3o-beb%C3%AA-silicone-kit-Talheres-Infantil-Com-Ventosa-Canudo-Colher-Babador-Garfo-i.1734958341.58258546779",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-pecas-talheres-alimentacao-bebe-silicone-kit-talheres-infantil-com-ventosa-canud-3bb17a46.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-refeicao-corujinha-alimentacao-prato-talher-copo-bebe-infantil-crianca-040f7af2",
+      "storeId": "impacto-kids",
+      "title": "Kit Refeição Corujinha Alimentação Prato Talher Copo Bebê Infantil Criança",
+      "price": "R$ 44,45",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/50XUNVoVkG",
+      "productUrl": "https://shopee.com.br/Kit-Refei%C3%A7%C3%A3o-Corujinha-Alimenta%C3%A7%C3%A3o-Prato-Talher-Copo-Beb%C3%AA-Infantil-Crian%C3%A7a-i.411286939.42479347508",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-refeicao-corujinha-alimentacao-prato-talher-copo-bebe-infantil-crianca-e75e96a2.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-refeicao-prato-colher-e-copo-rosa-7017-kuka-7bede9c6",
+      "storeId": "impacto-kids",
+      "title": "Kit Refeição (prato,colher e copo) Rosa 7017 KUKA",
+      "price": "R$ 35,42",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/qhvPra8K0",
+      "productUrl": "https://shopee.com.br/Kit-Refei%C3%A7%C3%A3o-(prato-colher-e-copo)-Rosa-7017-KUKA-i.539996492.22194167463",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-refeicao-prato-colher-e-copo-rosa-7017-kuka-9182cdfc.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-refeicao-kuka-alimentacao-para-o-bebe-prato-com-ventosa-copo-antivazamento-colhe-a5a65bf2",
+      "storeId": "impacto-kids",
+      "title": "Kit Refeição Kuka Alimentação Para o Bebê Prato Com Ventosa + Copo Antivazamento + Colher Azul Rosa",
+      "price": "R$ 39,80",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/gOVDYalez",
+      "productUrl": "https://shopee.com.br/Kit-Refei%C3%A7%C3%A3o-Kuka-Alimenta%C3%A7%C3%A3o-Para-o-Beb%C3%AA-Prato-Com-Ventosa-Copo-Antivazamento-Colher-Azul-Rosa-i.886503690.22893972670",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-refeicao-kuka-alimentacao-para-o-bebe-prato-com-ventosa-copo-antivazamento-colhe-abe2d0b3.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-talheres-bebe-silicone-8-pecas-prato-com-ventosa-babador-colher-garfo-copo-infan-b5b22bb7",
+      "storeId": "impacto-kids",
+      "title": "Kit Talheres Bebê Silicone 8 Peças Prato com Ventosa Babador Colher Garfo Copo Infantil",
+      "price": "R$ 35,66",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/1BKloTYre6",
+      "productUrl": "https://shopee.com.br/Kit-Talheres-Beb%C3%AA-Silicone-8-Pe%C3%A7as-Prato-com-Ventosa-Babador-Colher-Garfo-Copo-Infantil-i.1687097058.58202274816",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-talheres-bebe-silicone-8-pecas-prato-com-ventosa-babador-colher-garfo-copo-infan-37a601f7.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-4-pecas-alimentacao-bebe-azul-introducao-alimentar-refeicao-garfo-colher-prato-c-1ca200d1",
+      "storeId": "impacto-kids",
+      "title": "Kit 4 Peças Alimentação Bebê Azul Introdução Alimentar Refeição Garfo Colher Prato Copo Transição",
+      "price": "R$ 17,11",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/111LcAZUz5",
+      "productUrl": "https://shopee.com.br/Kit-4-Pe%C3%A7as-Alimenta%C3%A7%C3%A3o-Beb%C3%AA-Azul-Introdu%C3%A7%C3%A3o-Alimentar-Refei%C3%A7%C3%A3o-Garfo-Colher-Prato-Copo-Transi%C3%A7%C3%A3o-i.1244338871.21999249102",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-4-pecas-alimentacao-bebe-azul-introducao-alimentar-refeicao-garfo-colher-prato-c-04666efb.webp"
+    },
+    {
+      "id": "shopee-20260715-utensilios-bebe-kit-8-pecas-talheres-do-bebe-conjunto-prato-de-jantar-de-silicone-para-bebes-com-tig-890295c5",
+      "storeId": "impacto-kids",
+      "title": "Kit 8 pecas Talheres do Bebê Conjunto Prato De Jantar De Silicone Para Bebês Com Tigela De ventosa Sippy Cup Bibs Colher",
+      "price": "R$ 35,33",
+      "subcategoria": "Alimentacao infantil",
+      "affiliateLink": "https://s.shopee.com.br/BSEcdcffw",
+      "productUrl": "https://shopee.com.br/Kit-8-pecas-Talheres-do-Beb%C3%AA-Conjunto-Prato-De-Jantar-De-Silicone-Para-Beb%C3%AAs-Com-Tigela-De-ventosa-Sippy-Cup-Bibs-Colher-i.748594490.20897735558",
+      "image": "public/images/anuncios/shopee-utensilios-bebe-kit-8-pecas-talheres-do-bebe-conjunto-prato-de-jantar-de-silicone-para-bebes-com-tig-5032d41f.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-livro-de-pano-silencioso-com-velcro-para-criancas-brinquedo-educativo-para-0-3-anos--829d04c4",
+      "storeId": "impacto-brinquedos",
+      "title": "Livro de pano silencioso com velcro para crianças, brinquedo educativo para 0-3 anos, pode ser mordido",
+      "price": "R$ 16,80",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/2g9ZbEsaZr",
+      "productUrl": "https://shopee.com.br/Livro-de-pano-silencioso-com-velcro-para-crian%C3%A7as-brinquedo-educativo-para-0-3-anos-pode-ser-mordido-i.919532827.58258779874",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-livro-de-pano-silencioso-com-velcro-para-criancas-brinquedo-educativo-para-0-3-anos--0a6621d3.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-brinquedo-acordeao-infantil-em-forma-de-lagarta-instrumento-musical-multifuncional-e-19feac0c",
+      "storeId": "impacto-brinquedos",
+      "title": "Brinquedo Acordeão Infantil em Forma de Lagarta, Instrumento Musical Multifuncional Educativo, Presente Interativo de",
+      "price": "R$ 85,04",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9OvtDuq",
+      "productUrl": "https://shopee.com.br/Brinquedo-Acorde%C3%A3o-Infantil-em-Forma-de-Lagarta-Instrumento-Musical-Multifuncional-Educativo-Presente-Interativo-de-i.1006215031.47963438176",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-brinquedo-acordeao-infantil-em-forma-de-lagarta-instrumento-musical-multifuncional-e-1153ad05.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-brinquedo-sensorial-bebe-infantil-montessori-kidino-cubo-de-atividades-educativo-6-e-49c95af4",
+      "storeId": "impacto-brinquedos",
+      "title": "Brinquedo Sensorial Bebe Infantil Montessori Kidino Cubo De Atividades Educativo 6 Em 1",
+      "price": "R$ 35,92",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCctrFp",
+      "productUrl": "https://shopee.com.br/Brinquedo-Sensorial-Bebe-Infantil-Montessori-Kidino-Cubo-De-Atividades-Educativo-6-Em-1-i.1020715502.18799209216",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-brinquedo-sensorial-bebe-infantil-montessori-kidino-cubo-de-atividades-educativo-6-e-4ba91a17.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-kit-brinquedo-caranguejo-fujao-pato-dancarino-musical-brinquedo-infantil-interativo--d1ea5ca8",
+      "storeId": "impacto-brinquedos",
+      "title": "KIT Brinquedo Caranguejo Fujão + Pato Dançarino Musical Brinquedo Infantil Interativo Sensorial",
+      "price": "R$ 41,09",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0JuUao",
+      "productUrl": "https://shopee.com.br/KIT-Brinquedo-Caranguejo-Fuj%C3%A3o-Pato-Dan%C3%A7arino-Musical-Brinquedo-Infantil-Interativo-Sensorial-i.452840283.58200920507",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-kit-brinquedo-caranguejo-fujao-pato-dancarino-musical-brinquedo-infantil-interativo--c892d9b6.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-xilofone-infantil-brinquedo-piano-musical-com-baqueta-de-plastico-montessori-educaci-ec11cc63",
+      "storeId": "impacto-brinquedos",
+      "title": "Xilofone Infantil Brinquedo Piano Musical Com Baqueta de Plástico Montessori Educacional e Didático",
+      "price": "R$ 24,80",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/20tso0v7vn",
+      "productUrl": "https://shopee.com.br/Xilofone-Infantil-Brinquedo-Piano-Musical-Com-Baqueta-de-Pl%C3%A1stico-Montessori-Educacional-e-Did%C3%A1tico-i.1222825208.18897929141",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-xilofone-infantil-brinquedo-piano-musical-com-baqueta-de-plastico-montessori-educaci-c4cf2756.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-xilofone-brinquedo-musical-bebe-infantil-educativo-575f601c",
+      "storeId": "impacto-brinquedos",
+      "title": "Xilofone Brinquedo Musical Bebê Infantil Educativo",
+      "price": "R$ 20,57",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/1LeC0nTdEE",
+      "productUrl": "https://shopee.com.br/Xilofone-Brinquedo-Musical-Beb%C3%AA-Infantil-Educativo-i.1502178100.58263003593",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-xilofone-brinquedo-musical-bebe-infantil-educativo-599c5421.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-volante-educativo-interativo-infantil-com-som-realista-brinquedo-de-crianca-sonoro-m-85d54bcf",
+      "storeId": "impacto-brinquedos",
+      "title": "Volante Educativo Interativo Infantil Com Som Realista Brinquedo De Criança Sonoro Musical Bebê",
+      "price": "R$ 31,99",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/1VxcD6SztH",
+      "productUrl": "https://shopee.com.br/Volante-Educativo-Interativo-Infantil-Com-Som-Realista-Brinquedo-De-Crian%C3%A7a-Sonoro-Musical-Beb%C3%AA-i.1571174221.22194467228",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-volante-educativo-interativo-infantil-com-som-realista-brinquedo-de-crianca-sonoro-m-39a62c64.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-kit-brinquedo-caranguejo-fujao-girafa-dancarino-musical-brinquedo-infantil-interativ-8a2e58f8",
+      "storeId": "impacto-brinquedos",
+      "title": "Kit Brinquedo Caranguejo Fujão + Girafa Dançarino Musical Brinquedo Infantil Interativo Sensorial",
+      "price": "R$ 38,78",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/111LcBUtuC",
+      "productUrl": "https://shopee.com.br/Kit-Brinquedo-Caranguejo-Fuj%C3%A3o-Girafa-Dan%C3%A7arino-Musical-Brinquedo-Infantil-Interativo-Sensorial-i.452840283.58209377025",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-kit-brinquedo-caranguejo-fujao-girafa-dancarino-musical-brinquedo-infantil-interativ-c38163ae.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-kit-2-brinquedos-educativos-para-bebes-e-criancas-18d68a04",
+      "storeId": "impacto-brinquedos",
+      "title": "Kit 2 Brinquedos Educativos Para Bebês e Crianças",
+      "price": "R$ 49,50",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/1BKloUUGZF",
+      "productUrl": "https://shopee.com.br/Kit-2-Brinquedos-Educativos-Para-Beb%C3%AAs-e-Crian%C3%A7as-i.1307843023.23698351013",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-kit-2-brinquedos-educativos-para-bebes-e-criancas-cdf0ec29.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-brinquedo-trenzinho-transparente-anda-com-son-e-luz-educativo-didatico-crianca-infan-76321256",
+      "storeId": "impacto-brinquedos",
+      "title": "Brinquedo Trenzinho Transparente Anda Com Son E Luz Educativo Didático Criança Infantil Trem Bebe Plástico",
+      "price": "R$ 35,75",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/gOVDZWAaA",
+      "productUrl": "https://shopee.com.br/Brinquedo-Trenzinho-Transparente-Anda-Com-Son-E-Luz-Educativo-Did%C3%A1tico-Crian%C3%A7a-Infantil-Trem-Bebe-Pl%C3%A1stico-i.946726264.19497470016",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-brinquedo-trenzinho-transparente-anda-com-son-e-luz-educativo-didatico-crianca-infan-a68c60d5.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-elefante-musical-interativo-bebe-com-gravacao-de-voz-brinquedo-sensorial-educativo-q-b856cb43",
+      "storeId": "impacto-brinquedos",
+      "title": "Elefante Musical Interativo Bebê com Gravação de Voz Brinquedo Sensorial Educativo que Mexe as Orelhas e Toca Músicas",
+      "price": "R$ 113,91",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/4qE4BEgdYK",
+      "productUrl": "https://shopee.com.br/Elefante-Musical-Interativo-Beb%C3%AA-com-Grava%C3%A7%C3%A3o-de-Voz-Brinquedo-Sensorial-Educativo-que-Mexe-as-Orelhas-e-Toca-M%C3%BAsicas-i.1592831479.45808914338",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-elefante-musical-interativo-bebe-com-gravacao-de-voz-brinquedo-sensorial-educativo-q-d89e6695.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-tablet-interativo-infantil-para-criancas-e-bebes-com-som-e-musicas-educativo-desenvo-f1455efe",
+      "storeId": "impacto-brinquedos",
+      "title": "Tablet Interativo Infantil Para Crianças e Bebês Com Som e Músicas Educativo Desenvolvimento Português Inglês",
+      "price": "R$ 55,77",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/4fudyvhGtJ",
+      "productUrl": "https://shopee.com.br/Tablet-Interativo-Infantil-Para-Crian%C3%A7as-e-Beb%C3%AAs-Com-Som-e-M%C3%BAsicas-Educativo-Desenvolvimento-Portugu%C3%AAs-Ingl%C3%AAs-i.770296472.23392620789",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-tablet-interativo-infantil-para-criancas-e-bebes-com-som-e-musicas-educativo-desenvo-70c11ab8.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-celular-infantil-dinossauro-com-luz-som-pilhas-telefone-musical-interativo-brinquedo-c70ddf25",
+      "storeId": "impacto-brinquedos",
+      "title": "Celular Infantil Dinossauro com Luz Som Pilhas Telefone Musical Interativo Brinquedo Educativo Bebê",
+      "price": "R$ 16,90",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/5AquZqfMsQ",
+      "productUrl": "https://shopee.com.br/Celular-Infantil-Dinossauro-com-Luz-Som-Pilhas-Telefone-Musical-Interativo-Brinquedo-Educativo-Beb%C3%AA-i.1723475081.58209473149",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-celular-infantil-dinossauro-com-luz-som-pilhas-telefone-musical-interativo-brinquedo-be456f47.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-cubo-sensorial-montessori-para-bebes-brinquedo-educativo-interativo-com-estimulo-mot-d1af6fc7",
+      "storeId": "impacto-brinquedos",
+      "title": "Cubo Sensorial Montessori para Bebês Brinquedo Educativo Interativo com Estímulo Motor e Coordenação Sensorial",
+      "price": "R$ 39,99",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/50XUNXg0DP",
+      "productUrl": "https://shopee.com.br/Cubo-Sensorial-Montessori-para-Beb%C3%AAs-Brinquedo-Educativo-Interativo-com-Est%C3%ADmulo-Motor-e-Coordena%C3%A7%C3%A3o-Sensorial-i.1592831479.50008445189",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-cubo-sensorial-montessori-para-bebes-brinquedo-educativo-interativo-com-estimulo-mot-f893ceff.webp"
+    },
+    {
+      "id": "shopee-20260715-brinquedos-bebe-kit-3-brinquedo-sensorial-para-bebe-ventosa-adesiva-gira-spinner-atividade-educativa-207c34c3",
+      "storeId": "impacto-brinquedos",
+      "title": "Kit 3 Brinquedo Sensorial para Bebê - Ventosa Adesiva Gira Spinner Atividade Educativa",
+      "price": "R$ 36,49",
+      "subcategoria": "Brinquedos para bebe",
+      "affiliateLink": "https://s.shopee.com.br/5VTkySe6CW",
+      "productUrl": "https://shopee.com.br/Kit-3-Brinquedo-Sensorial-para-Beb%C3%AA-Ventosa-Adesiva-Gira-Spinner-Atividade-Educativa-i.1027415014.23698661494",
+      "image": "public/images/anuncios/shopee-brinquedos-bebe-kit-3-brinquedo-sensorial-para-bebe-ventosa-adesiva-gira-spinner-atividade-educativa-08e03674.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-10-pecas-protetoras-de-tomada-bebe-e-crianca-branca-c-chave-8699ddb8",
+      "storeId": "impacto-kids",
+      "title": "Kit 10 Peças Protetoras de Tomada Bebê e Criança Branca c/ Chave",
+      "price": "R$ 15,90",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/gOVDaMy0B",
+      "productUrl": "https://shopee.com.br/Kit-10-Pe%C3%A7as-Protetoras-de-Tomada-Beb%C3%AA-e-Crian%C3%A7a-Branca-c-Chave-i.332981798.15246156300",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-10-pecas-protetoras-de-tomada-bebe-e-crianca-branca-c-chave-1f705c13.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-almofada-de-banho-bebe-recem-nascido-infantil-anatomica-banheira-seguranca-boia-five-c0d35a23",
+      "storeId": "impacto-kids",
+      "title": "Almofada de Banho Bebê Recém Nascido Infantil Anatômica Banheira Segurança Boia Fivela Ajustável",
+      "price": "R$ 39,45",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/W551HNbLA",
+      "productUrl": "https://shopee.com.br/Almofada-de-Banho-Beb%C3%AA-Rec%C3%A9m-Nascido-Infantil-Anat%C3%B4mica-Banheira-Seguran%C3%A7a-Boia-Fivela-Ajust%C3%A1vel-i.332981798.19076915307",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-almofada-de-banho-bebe-recem-nascido-infantil-anatomica-banheira-seguranca-boia-five-3bd58211.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-protetores-de-tomada-infantil-anti-choque-seguranca-bebe-padrao-brasileiro-c9e1964f",
+      "storeId": "impacto-kids",
+      "title": "Kit Protetores de Tomada Infantil Anti Choque Segurança Bebê Padrão Brasileiro",
+      "price": "R$ 12,00",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/LleoyOEg9",
+      "productUrl": "https://shopee.com.br/Kit-Protetores-de-Tomada-Infantil-Anti-Choque-Seguran%C3%A7a-Beb%C3%AA-Padr%C3%A3o-Brasileiro-i.1055459739.58207064582",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-protetores-de-tomada-infantil-anti-choque-seguranca-bebe-padrao-brasileiro-a40c275e.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-seguranca-bebe-18-pecas-10-protetores-tomada-4-travas-gaveta-4-protetores-de-qui-897f2b68",
+      "storeId": "impacto-kids",
+      "title": "Kit Segurança Bebê 18 Peças - 10 Protetores Tomada + 4 Travas Gaveta + 4 Protetores de Quina",
+      "price": "R$ 9,89",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/BSEcfOs18",
+      "productUrl": "https://shopee.com.br/Kit-Seguran%C3%A7a-Beb%C3%AA-18-Pe%C3%A7as-10-Protetores-Tomada-4-Travas-Gaveta-4-Protetores-de-Quina-i.1616877445.54654621131",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-seguranca-bebe-18-pecas-10-protetores-tomada-4-travas-gaveta-4-protetores-de-qui-0a164ccf.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-seguranca-bebe-33-pecas-25-protetores-tomada-4-travas-gaveta-4-protetores-de-qui-faa356db",
+      "storeId": "impacto-kids",
+      "title": "Kit Segurança Bebê 33 Peças - 25 Protetores Tomada + 4 Travas Gaveta + 4 Protetores de Quina",
+      "price": "R$ 9,99",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/18oQMPVM7",
+      "productUrl": "https://shopee.com.br/Kit-Seguran%C3%A7a-Beb%C3%AA-33-Pe%C3%A7as-25-Protetores-Tomada-4-Travas-Gaveta-4-Protetores-de-Quina-i.1616877445.47054701698",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-seguranca-bebe-33-pecas-25-protetores-tomada-4-travas-gaveta-4-protetores-de-qui-9626cc0f.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-10-protetor-tomada-seguranca-contra-choque-2-chave-bebe-infantil-transparente-12c2c4aa",
+      "storeId": "impacto-kids",
+      "title": "Kit 10 Protetor Tomada Segurança Contra Choque + 2 Chave Bebe Infantil TRANSPARENTE",
+      "price": "R$ 16,90",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/2BDJ0Llqca",
+      "productUrl": "https://shopee.com.br/Kit-10-Protetor-Tomada-Seguran%C3%A7a-Contra-Choque-2-Chave-Bebe-Infantil-TRANSPARENTE-i.1413406484.18898113839",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-10-protetor-tomada-seguranca-contra-choque-2-chave-bebe-infantil-transparente-264a56e8.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-protecao-seguranca-bebe-crianca-5-trava-de-gaveta-15-protetor-de-tomada-4-protet-bb33d2c1",
+      "storeId": "impacto-kids",
+      "title": "Kit Proteção Segurança Bebê Criança * 5 trava de gaveta 15 Protetor de tomada 4 protetor de quina",
+      "price": "R$ 49,90",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/20tso2mTxZ",
+      "productUrl": "https://shopee.com.br/Kit-Prote%C3%A7%C3%A3o-Seguran%C3%A7a-Beb%C3%AA-Crian%C3%A7a-*-5-trava-de-gaveta-15-Protetor-de-tomada-4-protetor-de-quina-i.295916992.23391263322",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-protecao-seguranca-bebe-crianca-5-trava-de-gaveta-15-protetor-de-tomada-4-protet-0cb8fb16.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-protetores-de-tomadas-chavinhas-seguranca-bebe-crianca-antichoque-70c8cf18",
+      "storeId": "impacto-kids",
+      "title": "Kit Protetores de Tomadas chavinhas Segurança Bebê Criança Antichoque",
+      "price": "R$ 10,20",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/2Vq9OxkZwg",
+      "productUrl": "https://shopee.com.br/Kit-Protetores-de-Tomadas-chavinhas-Seguran%C3%A7a-Beb%C3%AA-Crian%C3%A7a-Antichoque-i.472695171.10570557622",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-protetores-de-tomadas-chavinhas-seguranca-bebe-crianca-antichoque-fcb29bee.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-10-protetor-tomada-seguranca-contra-choque-2-chave-bebe-infantil-branco-4257b4bc",
+      "storeId": "impacto-kids",
+      "title": "Kit 10 Protetor Tomada Segurança Contra Choque + 2 Chave Bebe Infantil BRANCO",
+      "price": "R$ 16,90",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/2LWjCelDHf",
+      "productUrl": "https://shopee.com.br/Kit-10-Protetor-Tomada-Seguran%C3%A7a-Contra-Choque-2-Chave-Bebe-Infantil-BRANCO-i.1413406484.18499701201",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-10-protetor-tomada-seguranca-contra-choque-2-chave-bebe-infantil-branco-1fef0f61.webp"
+    },
+    {
+      "id": "shopee-20260715-seguranca-bebe-kit-10-travas-de-gavetas-bebe-e-10-protetores-de-tomada-4-chaves-antichoque-bee44b16",
+      "storeId": "impacto-kids",
+      "title": "Kit 10 Travas de Gavetas Bebê e 10 Protetores de Tomada 4 Chaves Antichoque",
+      "price": "R$ 32,90",
+      "subcategoria": "Seguranca bebe",
+      "affiliateLink": "https://s.shopee.com.br/1VxcD7oNyW",
+      "productUrl": "https://shopee.com.br/Kit-10-Travas-de-Gavetas-Beb%C3%AA-e-10-Protetores-de-Tomada-4-Chaves-Antichoque-i.604171108.13954984412",
+      "image": "public/images/anuncios/shopee-seguranca-bebe-kit-10-travas-de-gavetas-bebe-e-10-protetores-de-tomada-4-chaves-antichoque-99a4d1de.webp"
+    }
+  ]
+}
