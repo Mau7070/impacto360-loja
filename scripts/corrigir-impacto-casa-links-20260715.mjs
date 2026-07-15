@@ -131,9 +131,7 @@ function correctProducts(products) {
   for (const correction of mlCorrections) {
     const product = byId.get(correction.id);
     if (!product) throw new Error(`Produto nao encontrado: ${correction.id}`);
-    for (const field of linkFields) {
-      if (product[field] === correction.previous) product[field] = correction.corrected;
-    }
+    for (const field of linkFields) product[field] = correction.corrected;
     if (product.validacaoOnline?.requestedUrl === correction.previous) {
       product.validacaoOnline.requestedUrl = correction.corrected;
     }
