@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-07-15T13:14:00-03:00",
+  "scope": "Loja IMPACTO CASA - produtos ativos apos correcao de fornos",
+  "total": 67,
+  "summary": {
+    "ok": 67,
+    "retiradosDaVitrineNestaRodada": 4
+  },
+  "failures": [],
+  "notes": [
+    "Produtos esgotados ou com link Shopee inexistente foram retirados da publicacao, mas preservados no catalogo para auditoria.",
+    "Novo link de afiliado para alternativas deve ser gerado no painel Shopee antes de republicar."
+  ]
+}

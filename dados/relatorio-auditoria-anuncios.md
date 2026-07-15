@@ -5,8 +5,8 @@ Data: 2026-07-15
 ## Resumo
 
 - Anúncios analisados: 971
-- Anúncios ativos: 570
-- Inativos/revisão: 401
+- Anúncios ativos: 566
+- Inativos/revisão: 405
 - Ofertas públicas por link válido e foto válida: 614
 - Pendentes/bloqueados da vitrine: 357
 - Grupos duplicados: 5

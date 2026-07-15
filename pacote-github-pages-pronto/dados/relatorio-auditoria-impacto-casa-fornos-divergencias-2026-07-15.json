@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-07-15T13:14:00-03:00",
+  "scope": "Loja IMPACTO CASA - fornos Shopee",
+  "rules": [
+    "Nao apagar dados do catalogo; tirar da vitrine quando o produto esta esgotado ou o link Shopee nao existe.",
+    "Manter o link original e a evidencia para auditoria.",
+    "Alternativas sem shortlink oficial ficam registradas, mas nao sao publicadas como afiliado."
+  ],
+  "summary": {
+    "auditedShopeeOvens": 15,
+    "removedFromPublicStore": 4,
+    "outOfStock": 2,
+    "nonexistentOrUnconfirmed": 2,
+    "publicImpactoCasaBefore": 71,
+    "publicImpactoCasaAfter": 67,
+    "publicShopeeOvensAfter": 11
+  },
+  "changed": [
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-philco-pfe66bm-66l-1800w-preto-afe2c044",
+      "name": "Forno Eletrico de Bancada Philco PFE66BM 66L 1800W Preto",
+      "slug": "forno-eletrico-de-bancada-philco-pfe66bm-66l-1800w-preto",
+      "status": "esgotado",
+      "reason": "Pagina Shopee indexada com marcador esgotado para o Philco PFE66BM 66L.",
+      "before": {
+        "status": "revisao_manual",
+        "statusAnuncio": "esgotado",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false,
+        "linkCompra": "https://s.shopee.com.br/AUsQzZSMQk",
+        "affiliateLink": "https://s.shopee.com.br/AUsQzZSMQk"
+      },
+      "after": {
+        "status": "revisao_manual",
+        "statusAnuncio": "esgotado",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false
+      },
+      "originalShopeeUrl": "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-Philco-66-Litros-PFE66BM-1800W-Preto-i.822103155.58260226074",
+      "suggestedAlternatives": []
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-amvox-afr-4500-inox-45-litros-b63f1ecf",
+      "name": "Forno Eletrico de Bancada Amvox AFR 4500 Inox 45 Litros",
+      "slug": "forno-eletrico-de-bancada-amvox-afr-4500-inox-45-litros",
+      "status": "esgotado",
+      "reason": "Produto Amvox AFR 4500 foi conferido como esgotado na pagina Shopee informada pelo usuario.",
+      "before": {
+        "status": "revisao_manual",
+        "statusAnuncio": "esgotado",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false,
+        "linkCompra": "https://s.shopee.com.br/2LWjGa4sqw",
+        "affiliateLink": "https://s.shopee.com.br/2LWjGa4sqw"
+      },
+      "after": {
+        "status": "revisao_manual",
+        "statusAnuncio": "esgotado",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false
+      },
+      "originalShopeeUrl": "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-45-Litros-Multifun%C3%A7%C3%A3o-Timer-Alarme-Amvox-AFR-4500-Inox-i.457321133.23592955520",
+      "suggestedAlternatives": [
+        "https://shopee.com.br/Forno-El%C3%A9trico-de-Bancada-45-Litros-Multifun%C3%A7%C3%A3o-Timer-Alarme-Amvox-AFR-4500-Inox-i.971971307.22997457448",
+        "https://shopee.com.br/Forno-De-Bancada-El%C3%A9trico-Amvox-Afr-4500-45l-Preto-220v-i.600306931.14381462136"
+      ]
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-de-bancada-mueller-fratello-44-litros-preto-fosco-53388ff1",
+      "name": "Forno Eletrico de Bancada Mueller Fratello 44 Litros Preto Fosco",
+      "slug": "forno-eletrico-de-bancada-mueller-fratello-44-litros-preto-fosco",
+      "status": "inexistente",
+      "reason": "Link Shopee cadastrado para Mueller Fratello nao foi confirmado como pagina de produto ativa e foi reportado como inexistente.",
+      "before": {
+        "status": "revisao_manual",
+        "statusAnuncio": "inexistente",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false,
+        "linkCompra": "https://s.shopee.com.br/1LeC4k8gsm",
+        "affiliateLink": "https://s.shopee.com.br/1LeC4k8gsm"
+      },
+      "after": {
+        "status": "revisao_manual",
+        "statusAnuncio": "inexistente",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false
+      },
+      "originalShopeeUrl": "https://shopee.com.br/Forno-Eletrico-De-Bancada-Mueller-Fratello-44-Litros-Preto-Fosco-i.356640788.24644895079",
+      "suggestedAlternatives": [
+        "https://shopee.com.br/Forno-El%C3%A9trico-De-Bancada-Fratello-44-Litros-Mueller-i.1602357191.23494402462",
+        "https://shopee.com.br/Forno-El%C3%A9trico-Mueller-Fratello-44-Litros-60.1250.005-Preto-Fosco-127v-i.1215229492.23193717349",
+        "https://shopee.com.br/Forno-El%C3%A9trico-Mueller-Fratello-44-Litros-60.1250.005-Preto-Fosco-220v-i.1215229492.22198032194"
+      ]
+    },
+    {
+      "id": "shopee-20260715-fornos-bancada-forno-eletrico-suggar-bancada-42-litros-preto-fe4201pt-fe4202pt-71feb404",
+      "name": "Forno Eletrico Suggar Bancada 42 Litros Preto FE4201PT FE4202PT",
+      "slug": "forno-eletrico-suggar-bancada-42-litros-preto-fe4201pt-fe4202pt",
+      "status": "inexistente",
+      "reason": "Link Shopee cadastrado para Suggar 42L nao foi confirmado como pagina de produto ativa e foi reportado como inexistente.",
+      "before": {
+        "status": "revisao_manual",
+        "statusAnuncio": "inexistente",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false,
+        "linkCompra": "https://s.shopee.com.br/1BKlsRo5j8",
+        "affiliateLink": "https://s.shopee.com.br/1BKlsRo5j8"
+      },
+      "after": {
+        "status": "revisao_manual",
+        "statusAnuncio": "inexistente",
+        "aprovadoParaPublicacao": false,
+        "publicar": false,
+        "publicarNaHome": false
+      },
+      "originalShopeeUrl": "https://shopee.com.br/Forno-El%C3%A9trico-Suggar-Bancada-42-Litros-Preto-i.329742857.28398865106",
+      "suggestedAlternatives": [
+        "https://shopee.com.br/Forno-El%C3%A9trico-Suggar-42-Litros-Preto-FE4201PT-FE4202PT-i.1009975506.22796086777"
+      ]
+    }
+  ]
+}
