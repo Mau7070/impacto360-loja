@@ -1433,12 +1433,13 @@
       "image": "public/images/anuncios/jogo-de-panelas-mimo-style-premium-9-pecas-inducao-22b4057d.webp",
       "title": "Jogo de Panelas Mimo Style Premium 9 Peças Indução",
       "description": "Casa e Cozinha em Casa e Cozinha. Valor: R$ 283,72. Link preservado da loja parceira.",
-      "link": "https://meli.la/1uLrkhD.",
+      "link": "https://meli.la/1uLrkhD",
       "active": true,
       "buttonLabel": "Comprar no Mercado Livre",
       "startDate": "2026-07-08",
       "endDate": "",
-      "priority": 99
+      "priority": 99,
+      "auditNote": "Link corrigido em 2026-07-15: Removido ponto final que fazia o shortlink retornar 404."
     },
     {
       "id": "ad-importado-ml-jogo-de-panelas-pacific-antiaderente-premium-77cc94d9",
@@ -1457,12 +1458,13 @@
       "image": "public/images/anuncios/jogo-de-panelas-panelux-magnific-inducao-aa37d6c5.webp",
       "title": "Jogo de Panelas Panelux Magnific Indução",
       "description": "Casa e Cozinha em Casa e Cozinha. Valor: R$ 395,49. Link preservado da loja parceira.",
-      "link": "https://meli.la/14z7r5o.",
+      "link": "https://meli.la/14z7r5o",
       "active": true,
       "buttonLabel": "Comprar no Mercado Livre",
       "startDate": "2026-07-08",
       "endDate": "",
-      "priority": 101
+      "priority": 101,
+      "auditNote": "Link corrigido em 2026-07-15: Removido ponto final que fazia o shortlink retornar 404."
     },
     {
       "id": "ad-importado-ml-jogo-de-panelas-premium-antiaderente-titanium-inducao-23dc3cbb",
