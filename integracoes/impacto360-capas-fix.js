@@ -118,6 +118,11 @@
     });
 
     document.querySelectorAll(".store-hero").forEach(hero => {
+      if (hero.classList.contains("store-hero-compact")) {
+        hero.classList.remove("ai360-store-hero-cover");
+        hero.querySelectorAll(".ai360-store-hero-img").forEach(img => img.remove());
+        return;
+      }
       const store = findStore(hero.querySelector("h1")?.textContent);
       const src = storeCover(store);
       if (!src) return;
@@ -182,6 +187,8 @@
       .ai360-cover-ready .store-banner:after,.ai360-store-hero-cover:after,.ai360-store-intro-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,21,45,.08),rgba(6,21,45,.80));pointer-events:none}
       .ai360-cover-ready .store-banner>*:not(.ai360-store-cover-img){position:relative;z-index:2;margin:16px}
       .ai360-store-hero-cover{position:relative;overflow:hidden;min-height:clamp(330px,42vw,520px);display:flex;align-items:flex-end;color:#fff!important}
+      .store-hero.store-hero-compact.ai360-store-hero-cover{min-height:auto!important;display:grid!important;align-items:stretch!important;color:inherit!important}
+      .store-hero.store-hero-compact .ai360-store-hero-img{display:none!important}
       .ai360-store-hero-cover>*:not(.ai360-store-hero-img){position:relative;z-index:2}
       .ai360-store-hero-cover:after{z-index:1;background:linear-gradient(90deg,rgba(6,21,45,.88),rgba(6,21,45,.30),rgba(6,21,45,.78))}
       .ai360-store-intro{border-color:rgba(29,92,255,.18);background:linear-gradient(180deg,#fff,#f6fbff)}

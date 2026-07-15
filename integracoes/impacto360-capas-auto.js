@@ -233,7 +233,13 @@
 
   function addStoreHeroCover() {
     const hero = document.querySelector(".store-hero");
-    if (!hero || hero.querySelector(".ai360-store-hero-img")) return;
+    if (!hero) return;
+    if (hero.classList.contains("store-hero-compact")) {
+      hero.classList.remove("ai360-store-hero-cover");
+      hero.querySelectorAll(".ai360-store-hero-img").forEach(img => img.remove());
+      return;
+    }
+    if (hero.querySelector(".ai360-store-hero-img")) return;
     const store = findStoreByTitle(hero.querySelector("h1")?.textContent);
     const src = coverForStore(store);
     if (!src) return;
@@ -299,6 +305,8 @@
       .ai360-cover-ready .store-banner::after,.ai360-store-hero-cover::after,.ai360-category-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,21,45,.12),rgba(6,21,45,.78));pointer-events:none}
       .ai360-cover-ready .store-banner>*:not(.ai360-store-cover-img){position:relative;z-index:2;margin:16px}
       .ai360-store-hero-cover{position:relative;overflow:hidden;min-height:clamp(330px,42vw,520px);display:flex;align-items:flex-end;color:#fff!important}
+      .store-hero.store-hero-compact.ai360-store-hero-cover{min-height:auto!important;display:grid!important;align-items:stretch!important;color:inherit!important}
+      .store-hero.store-hero-compact .ai360-store-hero-img{display:none!important}
       .ai360-store-hero-cover>*:not(.ai360-store-hero-img){position:relative;z-index:2}
       .ai360-store-hero-cover::after{z-index:1;background:linear-gradient(90deg,rgba(6,21,45,.86),rgba(6,21,45,.30),rgba(6,21,45,.78))}
       .ai360-opening-covers{border-color:rgba(29,92,255,.20);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(246,251,255,.98))}

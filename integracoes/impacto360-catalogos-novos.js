@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "20260701-catalogos-v1";
+  var VERSION = "20260715-catalogos-mix-v2";
   var STYLE_ID = "impacto360CatalogosNovosStyle";
   var CATALOGS = [
     {
@@ -41,6 +41,96 @@
 
   function item(name, price, image, link) {
     return { name: name, price: price, image: image, link: link };
+  }
+
+  function slug(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 90);
+  }
+
+  function catalogProductId(catalog, product, index) {
+    return "catalogo-" + catalog.id + "-" + String(index + 1).padStart(2, "0") + "-" + slug(product.name);
+  }
+
+  function catalogProduct(catalog, product, index) {
+    var isLaundry = catalog.id === "maquinas-lavar-quente";
+    var source = catalog.storeName || "Impacto360";
+    return {
+      id: catalogProductId(catalog, product, index),
+      storeId: catalog.storeId,
+      name: product.name,
+      nome: product.name,
+      title: product.name,
+      slug: slug(product.name),
+      category: isLaundry ? "Casa e Cozinha" : "Eletronicos",
+      categoria: isLaundry ? "Casa e Cozinha" : "Eletronicos",
+      subcategoria: isLaundry ? "Lava e seca" : catalog.label,
+      departamento: isLaundry ? "Lavanderia" : catalog.title,
+      badge: isLaundry ? "Mercado Livre lava e seca" : "Mercado Livre " + catalog.label,
+      source: "Mercado Livre",
+      origem: source + " - catalogo novo",
+      plataformaOrigem: "Mercado Livre",
+      price: product.price,
+      preco: product.price,
+      description: product.name + " selecionado para a vitrine " + source + ". Confira preco, estoque, frete, garantia e condicoes diretamente no anuncio antes da compra.",
+      descricaoCurta: product.name + " selecionado para a vitrine " + source + ". Confira preco, estoque, frete, garantia e condicoes diretamente no anuncio antes da compra.",
+      fullDescription: catalog.description,
+      descricaoDetalhada: catalog.description,
+      image: product.image,
+      imagemPrincipal: product.image,
+      fotoPrincipal: product.image,
+      imagem: product.image,
+      galeria: [product.image],
+      fotosExtras: [product.image],
+      linkCompra: product.link,
+      linkAfiliado: product.link,
+      affiliateLink: product.link,
+      linkComissionado: product.link,
+      linkPlataforma: product.link,
+      linkOriginal: product.link,
+      urlProduto: product.link,
+      aprovadoParaPublicacao: true,
+      status: "pronto",
+      statusPublicacao: "pronto",
+      auditoriaPublicacao: "aprovado",
+      actionType: "offer",
+      specs: isLaundry ? ["Lava e seca", "Agua quente", "Loja: Mercado Livre"] : [catalog.label, "Loja: Mercado Livre"]
+    };
+  }
+
+  function catalogProductsForStore(storeId) {
+    return CATALOGS
+      .filter(function (catalog) { return !storeId || catalog.storeId === storeId; })
+      .flatMap(function (catalog) {
+        return catalog.items.map(function (product, index) {
+          return catalogProduct(catalog, product, index);
+        });
+      });
+  }
+
+  function registerCatalogProducts(storeId) {
+    if (typeof window.__impacto360GetProducts !== "function" || typeof window.__impacto360AddManualProduct !== "function") return false;
+    var products = window.__impacto360GetProducts() || [];
+    var ids = new Set(products.map(function (product) { return String(product && product.id || ""); }));
+    var changed = false;
+    catalogProductsForStore(storeId).forEach(function (product) {
+      if (ids.has(product.id)) return;
+      window.__impacto360AddManualProduct(product);
+      ids.add(product.id);
+      changed = true;
+    });
+    return changed;
+  }
+
+  function removeStoreCatalogSections() {
+    document.querySelectorAll(".catalog-store-section, [id^='catalogStore-']").forEach(function (section) {
+      section.remove();
+    });
   }
 
   function escapeHtml(value) {
@@ -128,19 +218,9 @@
 
   function injectStoreCatalog(catalog) {
     installStyle();
-    var storePage = document.getElementById("storePage") || document.querySelector("[data-store-page]") || document.querySelector("main") || document.body;
-    var id = "catalogStore-" + catalog.id;
-    var existing = document.getElementById(id);
-    if (existing) existing.remove();
-    var section = document.createElement("section");
-    section.id = id;
-    section.className = "catalog-store-section";
-    section.innerHTML = '<div class="catalog-store-section__head"><h2>' + escapeHtml(catalog.title) + '</h2><span>' + catalog.items.length + ' ofertas</span></div>' +
-      '<div class="catalog-product-grid">' + catalog.items.map(productCardMarkup).join("") + '</div>';
-    var target = storePage.querySelector(".store-products, .products-grid, #storeProducts, [data-store-products]") || storePage.firstElementChild;
-    if (target && target.parentNode) target.parentNode.insertBefore(section, target);
-    else storePage.appendChild(section);
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    registerCatalogProducts(catalog.storeId);
+    removeStoreCatalogSections();
+    if (typeof window.__impacto360RefreshShopping === "function") window.__impacto360RefreshShopping();
   }
 
   function catalogById(id) {
@@ -150,9 +230,9 @@
   function openCatalog(id) {
     var catalog = catalogById(id);
     window.__impacto360PendingCatalog = catalog.id;
+    registerCatalogProducts(catalog.storeId);
     if (typeof window.openStore === "function") window.openStore(catalog.storeId);
     window.setTimeout(function () { injectStoreCatalog(catalog); }, 180);
-    window.setTimeout(function () { injectStoreCatalog(catalog); }, 700);
   }
 
   function bindClicks() {
@@ -170,9 +250,11 @@
     if (typeof original !== "function") return;
     window.__impacto360CatalogOpenStoreWrapped = true;
     window.openStore = function (storeId) {
+      registerCatalogProducts(storeId);
       var result = original.apply(this, arguments);
       var pending = window.__impacto360PendingCatalog;
       var catalog = CATALOGS.filter(function (entry) { return entry.id === pending || entry.storeId === storeId; })[0];
+      removeStoreCatalogSections();
       if (catalog) window.setTimeout(function () { injectStoreCatalog(catalog); }, 220);
       return result;
     };
@@ -180,6 +262,9 @@
 
   function boot() {
     installStyle();
+    var changed = registerCatalogProducts();
+    removeStoreCatalogSections();
+    if (changed && typeof window.__impacto360RefreshShopping === "function") window.__impacto360RefreshShopping();
     renderHomeCatalogs();
     bindClicks();
     wrapOpenStore();
