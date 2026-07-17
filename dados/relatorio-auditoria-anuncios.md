@@ -1,13 +1,13 @@
 # Relatório de auditoria de anúncios
 
-Data: 2026-07-15
+Data: 2026-07-17
 
 ## Resumo
 
-- Anúncios analisados: 971
-- Anúncios ativos: 566
+- Anúncios analisados: 1011
+- Anúncios ativos: 606
 - Inativos/revisão: 405
-- Ofertas públicas por link válido e foto válida: 614
+- Ofertas públicas por link válido e foto válida: 654
 - Pendentes/bloqueados da vitrine: 357
 - Grupos duplicados: 5
 - Conflitos de imagem compartilhada: 2

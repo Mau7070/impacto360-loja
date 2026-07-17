@@ -1,12 +1,12 @@
 {
-  "executedAt": "2026-07-15",
+  "executedAt": "2026-07-17",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 971,
+    "products": 1011,
     "stores": 26,
-    "active": 566,
+    "active": 606,
     "inactiveOrReview": 405,
-    "publicOffers": 614,
+    "publicOffers": 654,
     "pendingOrBlocked": 357,
     "issues": 540,
     "duplicateGroups": 5,
