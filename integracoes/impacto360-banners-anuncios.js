@@ -6,7 +6,7 @@
   const script = document.createElement("script");
   script.src = route === "/admin/banners-anuncios"
     ? "integracoes/impacto360-banners-admin.js"
-    : "integracoes/impacto360-banners-public.js?v=20260715-layout-v2";
+    : "integracoes/impacto360-banners-public.js?v=20260717-diversidade-v1";
   script.defer = true;
   document.head.appendChild(script);
   if (route !== "/admin/banners-anuncios") {

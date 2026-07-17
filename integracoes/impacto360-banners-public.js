@@ -48,24 +48,80 @@
   }
 
   function banners() {
-    return data.banners.filter(function (item) {
+    const items = data.banners.filter(function (item) {
       return item.active && item.image && safe(item.link);
     }).sort(function (a, b) { return Number(a.order) - Number(b.order); });
+    return diversifyRotation(items, 36);
   }
 
   function activeAds() {
     const now = new Date();
-    return data.ads.filter(function (item) {
+    const items = data.ads.filter(function (item) {
       const start = parseDate(item.startDate, false);
       const end = parseDate(item.endDate, true);
       return item.active && item.image && item.title && safe(item.link) && (!start || start <= now) && (!end || end >= now);
     }).sort(function (a, b) { return Number(a.priority) - Number(b.priority); });
+    return diversifyRotation(items, 140);
   }
 
   function parseDate(value, end) {
     if (!value) return null;
     const result = new Date(value + (String(value).length === 10 ? (end ? "T23:59:59.999" : "T00:00:00") : ""));
     return Number.isNaN(result.getTime()) ? null : result;
+  }
+
+  function normalize(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  }
+
+  function rotationKey(item) {
+    const text = normalize([item.category, item.storeId, item.source, item.rotationGroup, item.title, item.description].join(" "));
+    if (/notebook gamer|pc gamer|rtx|geforce/.test(text)) return "games-computadores";
+    if (/controle|controller|dualsense|xbox|playstation|gamepad/.test(text)) return "games-controles";
+    if (/monitor gamer|monitor/.test(text)) return "games-monitores";
+    if (/mouse|teclado|headset|ssd|mousepad|cadeira gamer/.test(text)) return "games-acessorios";
+    if (/celular|smartphone|iphone|samsung|motorola|xiaomi/.test(text)) return "tecnologia-celular";
+    if (/casa|cozinha|forno|panela|air fryer|liquidificador|cafeteira/.test(text)) return "casa-cozinha";
+    if (/brinquedo|boneca|carrinho|infantil|bebe|baby/.test(text)) return "brinquedos";
+    if (/moda|calcado|tenis|sapato|sandalia|bota|camisa|vestido|bolsa/.test(text)) return "moda";
+    if (/ferramenta|auto|oficina|lavadora|escada/.test(text)) return "ferramentas";
+    return normalize(item.storeId || item.source || "outros") || "outros";
+  }
+
+  function diversifyRotation(items, maxItems) {
+    const buckets = new Map();
+    items.forEach(function (item, index) {
+      const key = rotationKey(item);
+      if (!buckets.has(key)) buckets.set(key, { key, firstIndex: index, cursor: 0, items: [] });
+      buckets.get(key).items.push(item);
+    });
+    const ordered = Array.from(buckets.values()).sort(function (a, b) {
+      return a.firstIndex - b.firstIndex;
+    });
+    const mixed = [];
+    let lastKey = "";
+    let added = true;
+    while (added && mixed.length < maxItems) {
+      added = false;
+      ordered.forEach(function (bucket) {
+        if (mixed.length >= maxItems || bucket.cursor >= bucket.items.length) return;
+        if (ordered.length > 1 && bucket.key === lastKey) return;
+        mixed.push(bucket.items[bucket.cursor]);
+        bucket.cursor += 1;
+        lastKey = bucket.key;
+        added = true;
+      });
+      if (!added) {
+        const next = ordered.find(function (bucket) { return bucket.cursor < bucket.items.length; });
+        if (next) {
+          mixed.push(next.items[next.cursor]);
+          next.cursor += 1;
+          lastKey = next.key;
+          added = true;
+        }
+      }
+    }
+    return mixed;
   }
 
   function hero() {
