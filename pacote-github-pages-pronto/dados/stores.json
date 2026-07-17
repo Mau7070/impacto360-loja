@@ -61,9 +61,16 @@
       "Processadores",
       "Memória RAM",
       "Cadeiras gamer",
-      "Mesas gamer"
+      "Mesas gamer",
+      "Notebooks gamer Amazon",
+      "PCs gamer Amazon",
+      "Mouses gamer",
+      "Teclados gamer",
+      "Monitores gamer",
+      "SSDs gamer",
+      "Mousepad"
     ],
-    "section": "Monte seu setup",
+    "section": "Computadores gamer e setup de alto desempenho",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-tech-computadores.webp"
   },
   {
@@ -269,7 +276,9 @@
       "Dispositivos inteligentes",
       "Smart TV",
       "Fones",
-      "Acessorios de audio"
+      "Acessorios de audio",
+      "Headsets gamer",
+      "Audio gamer Amazon"
     ],
     "section": "Tecnologia invisível no dia a dia",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-eletronicos.webp"
@@ -285,7 +294,7 @@
     "icon": "GAME",
     "color": "#5b6cff",
     "gradient": "linear-gradient(135deg,#10142c,#1c3568 46%,#ebf6ff)",
-    "description": "Games, consoles, acessórios, gift cards e setup gamer completo.",
+    "description": "Games, consoles, acessórios, componentes e setup gamer completo com curadoria Amazon e parceiros.",
     "subcategories": [
       "Consoles",
       "Jogos",
@@ -302,7 +311,10 @@
       "Mouse gamer",
       "Mousepad",
       "Headset gamer",
-      "Iluminacao RGB"
+      "Iluminacao RGB",
+      "SSDs gamer",
+      "Setup gamer Amazon",
+      "Ofertas Amazon Games"
     ],
     "section": "Setup gamer completo",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-games.webp"
