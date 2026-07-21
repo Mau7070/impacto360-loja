@@ -497,3 +497,40 @@ Validações executadas nesta rodada:
 - `npm.cmd run lint`: aprovado.
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts externos sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
+
+## 22. Gerador de link direto por produto - 2026-07-21
+
+Pedido atendido:
+
+- Criar na loja um gerador de link para cada produto, permitindo acesso direto sem alterar o link de afiliado.
+
+Alterações realizadas:
+
+- Cada card de produto da home e das lojas internas passou a exibir `Link direto`, apontando para a página interna `/produto/.../`.
+- Cada card também ganhou o botão `Copiar link`, que copia a URL direta do produto na Impacto360.
+- O botão principal `Ver oferta` foi preservado para continuar usando o link de afiliado original do marketplace/parceiro.
+- O compartilhamento de produto agora usa a URL direta da loja, em vez de anexar somente o link do parceiro.
+- As páginas individuais de produto passaram a exibir `Copiar link direto` e o endereço direto da própria loja.
+- As páginas estáticas de produto e o sitemap foram regenerados para 606 produtos publicáveis.
+
+Arquivos alterados nesta rodada:
+
+- `index.html`
+- `impacto360.html`
+- `pacote-github-pages-pronto/index.html`
+- `scripts/gerar-paginas-produtos.mjs`
+- `produto/*/index.html`
+- `pacote-github-pages-pronto/produto/*/index.html`
+- `sitemap.xml`
+- `pacote-github-pages-pronto/sitemap.xml`
+
+Backup criado antes das mudanças:
+
+- `backups/links-diretos-produtos-20260721-122648`
+
+Validações executadas nesta rodada:
+
+- `npm.cmd run gerar:produtos`: aprovado, com 606 páginas canônicas.
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts externos sem `type="module"`.
+- `npm.cmd run test:seguranca`: aprovado.

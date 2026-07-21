@@ -50,8 +50,13 @@
     .chip { border:1px solid var(--line); border-radius:999px; padding:8px 10px; background:#fff; color:var(--muted); font-weight:800; font-size:.84rem; }
     .specs { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0; }
     .specs span { border-radius:999px; background:#eef5ff; color:#315178; padding:8px 10px; font-size:.84rem; font-weight:850; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border-radius:8px; background:linear-gradient(135deg, var(--blue), #0d3fb9); color:#fff; font-weight:950; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:linear-gradient(135deg, var(--blue), #0d3fb9); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
+    .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
+    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
+    .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
     .related { margin-top:34px; }
     .related h2 { margin:0 0 14px; font-size:1.5rem; }
     .related-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:14px; }
@@ -78,12 +83,16 @@
         <strong class="price">Preço no anúncio</strong>
         <div class="meta">
           <span class="chip">Loja parceira: Amazon</span>
-          
+
           <span class="chip">Confirmar no site parceiro</span>
           <span class="chip">Educacao</span>
           <span class="chip">Revisado em 09/07/2026</span>
         </div>
-        <a class="btn" href="https://link.amazon/B0b3cGqnL" target="_blank" rel="noopener noreferrer sponsored">Ver oferta na Amazon</a>
+        <div class="actions">
+          <a class="btn" href="https://link.amazon/B0b3cGqnL" target="_blank" rel="noopener noreferrer sponsored">Ver oferta na Amazon</a>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+        </div>
+        <div class="direct-link">Link direto da loja: https://impacto360afiliado.com.br/produto/caderno-universitario-plus-1-materia-profissoes-teologia/</div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
@@ -110,5 +119,35 @@
       </div>
     </section>
   </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>
+    const directProductUrl = "https://impacto360afiliado.com.br/produto/caderno-universitario-plus-1-materia-profissoes-teologia/";
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+    function fallbackCopy(text) {
+      const area = document.createElement("textarea");
+      area.value = text;
+      area.style.position = "fixed";
+      area.style.left = "-9999px";
+      document.body.appendChild(area);
+      area.focus();
+      area.select();
+      try { document.execCommand("copy"); } catch (error) {}
+      document.body.removeChild(area);
+      showToast("Link direto pronto para compartilhar");
+    }
+    function copyDirectProductLink() {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+      } else {
+        fallbackCopy(directProductUrl);
+      }
+    }
+  </script>
 </body>
 </html>
