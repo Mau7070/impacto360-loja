@@ -301,13 +301,13 @@
     style.id = "ai360CoverStyle";
     style.textContent = `
       .ai360-cover-ready .store-banner{position:relative;min-height:154px;overflow:hidden;padding:0!important;color:#fff!important}
-      .ai360-store-cover-img,.ai360-store-hero-img,.ai360-category-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.08) contrast(1.04)}
+      .ai360-store-cover-img,.ai360-store-hero-img,.ai360-store-hero-cover .store-hero-image,.ai360-category-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.08) contrast(1.04)}
       .ai360-cover-ready .store-banner::after,.ai360-store-hero-cover::after,.ai360-category-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,21,45,.12),rgba(6,21,45,.78));pointer-events:none}
       .ai360-cover-ready .store-banner>*:not(.ai360-store-cover-img){position:relative;z-index:2;margin:16px}
-      .ai360-store-hero-cover{position:relative;overflow:hidden;min-height:clamp(330px,42vw,520px);display:flex;align-items:flex-end;color:#fff!important}
+      .ai360-store-hero-cover{position:relative;overflow:hidden;min-height:clamp(168px,22vw,240px);display:flex;align-items:flex-end;color:#fff!important}
       .store-hero.store-hero-compact.ai360-store-hero-cover{min-height:auto!important;display:grid!important;align-items:stretch!important;color:inherit!important}
       .store-hero.store-hero-compact .ai360-store-hero-img{display:none!important}
-      .ai360-store-hero-cover>*:not(.ai360-store-hero-img){position:relative;z-index:2}
+      .ai360-store-hero-cover>.store-hero-content{position:relative;z-index:2}
       .ai360-store-hero-cover::after{z-index:1;background:linear-gradient(90deg,rgba(6,21,45,.86),rgba(6,21,45,.30),rgba(6,21,45,.78))}
       .ai360-opening-covers{border-color:rgba(29,92,255,.20);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(246,251,255,.98))}
       .ai360-category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:14px;margin:0 0 18px}

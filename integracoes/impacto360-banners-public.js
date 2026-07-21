@@ -204,22 +204,22 @@
   function style() {
     const css = document.createElement("style");
     css.textContent = `
-      .promo360-panel{padding:0!important}
+      .promo360-panel{padding:18px 22px 20px!important}
       .promo360-panel .market-hero-banner{display:none!important}
-      .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:28px;margin-right:28px}
-      .promo360-panel>.filters{margin-bottom:24px}
+      .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:0;margin-right:0}
+      .promo360-panel>.filters{margin-bottom:10px}
       #promo360Hero,.promo360-adbox{position:relative;overflow:hidden}
-      .promo360-track{position:relative;min-height:310px}
-      .promo360-slide,.promo360-ad{position:absolute;inset:0;opacity:0;visibility:hidden;transition:.4s}
+      .promo360-track{position:relative;min-height:168px}
+      .promo360-slide,.promo360-ad{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .18s ease}
       .promo360-slide.active,.promo360-ad.active{opacity:1;visibility:visible}
-      .promo360-slide>a{min-height:310px;display:grid;grid-template-columns:minmax(0,1fr) 430px;color:#fff;background:linear-gradient(135deg,#06152d,#0d415b 58%,#12677d)}
-      .promo360-copy,.promo360-adcopy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 38px}
+      .promo360-slide>a{min-height:168px;display:grid;grid-template-columns:minmax(0,1fr) 220px;color:#fff;background:linear-gradient(135deg,#06152d,#0d415b 58%,#12677d)}
+      .promo360-copy,.promo360-adcopy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:18px 20px}
       .promo360-copy small,.promo360-adcopy small{display:inline-flex;align-items:center;min-height:24px;border-radius:999px;padding:0 10px;background:rgba(255,255,255,.14);color:#ffe9a8;font-size:11px;font-weight:950}
-      .promo360-copy h1{max-width:680px;font-size:clamp(32px,3.35vw,50px);line-height:1.04;margin:12px 0 18px}
+      .promo360-copy h1{max-width:620px;font-size:clamp(22px,2.35vw,32px);line-height:1.08;margin:8px 0 12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
       .promo360-copy p,.promo360-adcopy p{display:none}
       .promo360-copy b,.promo360-adcopy b{padding:12px 17px;border-radius:999px;background:#f3ce7b;color:#10213a;font-weight:950}
-      .promo360-media,.promo360-admedia{display:grid;place-items:center;padding:20px}
-      .promo360-media img{width:100%;height:260px;object-fit:contain;background:#fff;border-radius:8px;padding:10px}
+      .promo360-media,.promo360-admedia{display:grid;place-items:center;padding:12px}
+      .promo360-media img{width:100%;height:144px;object-fit:contain;background:#fff;border-radius:8px;padding:8px}
       .promo360-ads{padding:0!important;overflow:hidden}
       .promo360-ads>.floor-head{padding:18px 20px 0}
       .promo360-adtrack{position:relative;min-height:280px}
@@ -229,18 +229,21 @@
       .promo360-controls button{width:42px;height:42px;border:0;border-radius:50%;background:#06152d;color:#fff;font-size:22px}
       .promo360-empty{padding:45px;text-align:center;background:#eef7ff;color:#607083}
       @media(max-width:760px){
-        .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:14px;margin-right:14px}
-        .promo360-track{min-height:570px}
-        .promo360-slide>a{min-height:570px;grid-template-columns:1fr;grid-template-rows:auto 230px}
-        .promo360-copy{padding:25px 20px 10px}
-        .promo360-copy p{display:block!important}
-        .promo360-media{padding:5px 20px 55px}
-        .promo360-media img{height:210px}
-        .promo360-adtrack,.promo360-ad>a{min-height:540px}
-        .promo360-ad>a{grid-template-columns:1fr;grid-template-rows:250px auto}
-        .promo360-admedia img{height:220px}
-        .promo360-adcopy{padding:20px 20px 60px}
-        .promo360-adcopy p{display:block!important}
+        .promo360-panel{padding:10px!important}
+        .promo360-panel>.search-row,.promo360-panel>.floor-tabs,.promo360-panel>.filters{margin-left:0;margin-right:0}
+        .promo360-track{min-height:136px}
+        .promo360-slide>a{min-height:136px;grid-template-columns:minmax(0,1fr) 112px;grid-template-rows:none}
+        .promo360-copy{padding:12px 8px 12px 14px}
+        .promo360-copy h1{font-size:17px;max-height:40px}
+        .promo360-copy p{display:none!important}
+        .promo360-copy b{padding:8px 11px;font-size:12px}
+        .promo360-media{padding:8px}
+        .promo360-media img{height:118px}
+        .promo360-adtrack,.promo360-ad>a{min-height:260px}
+        .promo360-ad>a{grid-template-columns:145px 1fr;grid-template-rows:none}
+        .promo360-admedia img{height:150px}
+        .promo360-adcopy{padding:14px 14px 48px}
+        .promo360-adcopy p{display:none!important}
       }`;
     document.head.appendChild(css);
   }
@@ -249,7 +252,7 @@
     if (window.__ai360StoreCoverFixLoader) return;
     window.__ai360StoreCoverFixLoader = true;
     const script = document.createElement("script");
-    script.src = "integracoes/impacto360-capas-fix.js?v=20260715-layout-v2";
+    script.src = "integracoes/impacto360-capas-fix.js?v=20260721-ux-compacto-v1";
     script.defer = true;
     document.head.appendChild(script);
   }

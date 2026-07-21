@@ -449,3 +449,51 @@ Validações executadas:
 - `npm.cmd run lint`: aprovado.
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
+
+## 21. Ajuste de experiência de comprador, abertura e lojas internas - 2026-07-21
+
+Reclamação analisada:
+
+- A abertura da loja ocupava espaço demais antes dos produtos.
+- O banner inicial podia mostrar imagens grandes demais.
+- Ao entrar em uma loja, a capa e os textos atrasavam a chegada até a grade de produtos.
+
+Auditoria feita como comprador:
+
+- Site público medido no desktop antes da alteração: primeiro produto aparecia por volta de 1.550 px de rolagem.
+- Prévia local após a alteração: primeiro produto da home apareceu por volta de 636 px.
+- Loja interna `impacto-mobile` na prévia local: a capa caiu de mais de 1.100 px para cerca de 353 px, com o primeiro card de produto por volta de 562 px.
+
+Alterações realizadas:
+
+- Abertura da home ficou mais curta, com título menor e texto comercial reduzido.
+- O banner fixo de três imagens foi escondido para não esticar a primeira dobra.
+- Os filtros longos da abertura foram ocultados; a navegação principal e os botões diretos continuam disponíveis.
+- Cards de loja passaram a limitar descrição a duas linhas.
+- Ao abrir uma loja, a seção textual de destaques antes da grade foi removida.
+- A loja interna agora entra direto na seção `Produtos da loja`.
+- Cards da grade interna ficaram mais enxutos, sem descrição longa, specs e aviso de afiliado repetitivo.
+- Scripts `impacto360-banners-public.js`, `impacto360-capas-auto.js` e `impacto360-capas-fix.js` foram compactados para não reabrirem banners/capas gigantes depois do carregamento.
+- Cache-busters dos scripts de banner e capa foram atualizados para `20260721-ux-compacto-v1`.
+
+Arquivos alterados nesta rodada:
+
+- `index.html`
+- `impacto360.html`
+- `pacote-github-pages-pronto/index.html`
+- `integracoes/impacto360-banners-anuncios.js`
+- `integracoes/impacto360-banners-public.js`
+- `integracoes/impacto360-capas-auto.js`
+- `integracoes/impacto360-capas-fix.js`
+- `integracoes/impacto360-admin-robos.js`
+- `pacote-github-pages-pronto/integracoes/impacto360-admin-robos.js`
+
+Backup criado antes das mudanças:
+
+- `backups/ux-compacto-20260721-113225`
+
+Validações executadas nesta rodada:
+
+- `npm.cmd run lint`: aprovado.
+- `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts externos sem `type="module"`.
+- `npm.cmd run test:seguranca`: aprovado.
