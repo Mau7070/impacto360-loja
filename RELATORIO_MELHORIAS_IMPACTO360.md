@@ -534,3 +534,11 @@ Validações executadas nesta rodada:
 - `npm.cmd run lint`: aprovado.
 - `npm.cmd run build`: aprovado; apenas avisos legados não bloqueantes do Vite sobre scripts externos sem `type="module"`.
 - `npm.cmd run test:seguranca`: aprovado.
+## Importacao Amazon Cama e Quarto - 2026-07-21
+
+- Corrigido o pedido de importacao com seguranca: 50 produtos Amazon de cama/quarto foram publicados com foto local, preco, avaliacao e link Amazon Associados.
+- Tag Amazon usada nos links: `910556142-20`.
+- Rodizio atualizado: 12 banners e 50 anuncios no grupo `amazon-cama-quarto-20260721`.
+- Mercado Livre: 50 candidatos publicos foram coletados, mas ficaram pendentes porque nao havia link oficial `meli.la` da conta.
+- Shopee: ficou pendente porque a pagina de busca e o painel de afiliados pediram login/verificacao para gerar shortlinks oficiais.
+- Relatorio tecnico: `dados/relatorio-importacao-cama-quarto-20260721.md`.

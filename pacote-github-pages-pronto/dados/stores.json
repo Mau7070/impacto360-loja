@@ -84,7 +84,7 @@
     "icon": "CASA",
     "color": "#23a58f",
     "gradient": "linear-gradient(135deg,#fffaf2,#ffffff 45%,#e4f7ee)",
-    "description": "Ambiente claro, elegante e aconchegante para casa, cozinha e organização.",
+    "description": "Casa, cozinha, organizacao e cama/banho com ofertas selecionadas.",
     "subcategories": [
       "Móveis",
       "Decoração",
@@ -102,9 +102,16 @@
       "Organizacao",
       "Fornos de bancada",
       "Fornos eletricos",
-      "Shopee Casa e Cozinha"
+      "Shopee Casa e Cozinha",
+      "Cama e banho",
+      "Jogos de cama",
+      "Lencois",
+      "Cobertores e edredons",
+      "Colchas",
+      "Protetores de colchao",
+      "Fronhas e travesseiros"
     ],
-    "section": "Casa, cozinha e utilidades",
+    "section": "Cama, casa e organizacao",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-casa.webp"
   },
   {

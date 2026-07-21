@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-07-21T16:11:36.842Z",
+  "requested": {
+    "amazon": 50,
+    "mercadoLivre": 50,
+    "shopee": 50
+  },
+  "published": {
+    "amazon": 50,
+    "mercadoLivre": 0,
+    "shopee": 0
+  },
+  "mercadoLivre": {
+    "status": "pendente_link_afiliado_oficial",
+    "reason": "Foram encontrados 50 candidatos publicos, mas os links visiveis nao sao meli.la gerados no painel de afiliados da loja.",
+    "requiredAction": "Gerar ou exportar 50 links oficiais meli.la para estes produtos antes de publicar.",
+    "candidateFile": "dados/mercado-livre-cama-candidatos-publicos-20260721.json",
+    "candidateCount": 50
+  },
+  "shopee": {
+    "status": "pendente_login_ou_shortlink_oficial",
+    "reason": "A busca da Shopee redirecionou para verificacao/login e o painel de afiliados tambem pede login para gerar links.",
+    "requiredAction": "Entrar no painel Shopee Afiliados e gerar/exportar shortlinks oficiais s.shopee.com.br."
+  }
+}
