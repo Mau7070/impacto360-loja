@@ -542,3 +542,14 @@ Validações executadas nesta rodada:
 - Mercado Livre: 50 candidatos publicos foram coletados, mas ficaram pendentes porque nao havia link oficial `meli.la` da conta.
 - Shopee: ficou pendente porque a pagina de busca e o painel de afiliados pediram login/verificacao para gerar shortlinks oficiais.
 - Relatorio tecnico: `dados/relatorio-importacao-cama-quarto-20260721.md`.
+
+## Importacao Mercado Livre e Shopee Cama e Quarto - 2026-07-22
+
+- Backup criado antes da escrita: backups/20260722T114554-pre-importacao-ml-shopee-cama
+- Produtos Mercado Livre publicados: 50
+- Produtos Shopee publicados: 50
+- Anuncios rotativos adicionados: 100
+- Banners rotativos adicionados: 16
+- Grupo de rotacao: marketplaces-cama-quarto-20260722
+- Links Mercado Livre aceitos somente com formato oficial meli.la.
+- Links Shopee aceitos somente com formato oficial s.shopee.com.br.
