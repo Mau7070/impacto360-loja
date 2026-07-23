@@ -16,11 +16,15 @@ pnpm-debug.log*
 
 # Builds e caches locais
 dist/*.map
+dist/assets/index-*.css
+dist/assets/index-*.js
+dist/images/
 .cache/
 .vite/
 .next/
 out/
 coverage/
+backups/
 
 # Arquivos compactados e temporários
 *.zip
