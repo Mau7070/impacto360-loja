@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "lint": "node scripts/lint-impacto360.mjs",
+    "storefront:build": "node scripts/gerar-storefront-excelencia.mjs",
+    "storefront:test": "node scripts/testar-storefront-excelencia.mjs",
+    "lint": "npm run storefront:test",
     "build": "vite build",
     "preview": "vite preview",
     "gerar:produtos": "node scripts/gerar-paginas-produtos.mjs",
@@ -13,8 +15,8 @@
     "corrigir:imagens": "python scripts/corrigir-imagens-anuncios.py --root . --apply",
     "importar:anuncios": "python scripts/importar-anuncios.py --root .",
     "robo:social": "node scripts/servidor-robo-social.mjs",
-    "test:seguranca": "node scripts/validar-impacto360.mjs",
-    "test:mobile": "node scripts/validar-impacto360.mjs"
+    "test:seguranca": "npm run storefront:test",
+    "test:mobile": "npm run storefront:test"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",

@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecionando | Impacto 360</title>
+  <meta name="robots" content="noindex,follow">
+  <title>Redirecionando | Impacto360 Afiliado</title>
   <script>
     (function () {
       var path = location.pathname || "/";
       var search = location.search || "";
       var hash = location.hash || "";
-      var adminIndex = path.indexOf("/admin/");
-      if (adminIndex >= 0) {
-        var basePath = path.slice(0, adminIndex) || "";
-        var adminRoute = path.slice(adminIndex);
-        location.replace(basePath + "/?route=" + encodeURIComponent(adminRoute) + search.replace("?", "&") + hash);
-      } else {
-        location.replace("/");
-      }
+      var params = new URLSearchParams(search);
+      params.set("route", path);
+      location.replace("/?" + params.toString() + hash);
     })();
   </script>
 </head>
 <body>
-  <p>Redirecionando para o Shopping Impacto 360...</p>
+  <p>Redirecionando para a Impacto360 Afiliado…</p>
 </body>
 </html>
