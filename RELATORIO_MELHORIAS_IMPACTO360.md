@@ -553,3 +553,12 @@ Validações executadas nesta rodada:
 - Grupo de rotacao: marketplaces-cama-quarto-20260722
 - Links Mercado Livre aceitos somente com formato oficial meli.la.
 - Links Shopee aceitos somente com formato oficial s.shopee.com.br.
+
+## Importacao de 100 produtos de academia - 2026-07-24
+
+- Amazon: 33
+- Mercado Livre: 34
+- Shopee: 33
+- Nota minima: 4,5.
+- Links, comissoes, precos e imagens verificados antes da publicacao.
+- Backup: backups/20260724T124904-pre-importacao-academia-100

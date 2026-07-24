@@ -754,7 +754,7 @@
     "icon": "RUN",
     "color": "#1593d2",
     "gradient": "linear-gradient(135deg,#eaf9ff,#ffffff 48%,#e8ffe8)",
-    "description": "Academia, aventura, esportes, camping, pesca e acessórios para vida ativa.",
+    "description": "Equipamentos, acessorios, vestuario e itens para academia com curadoria por avaliacao e comissao.",
     "subcategories": [
       "Academia",
       "Musculação",
@@ -766,9 +766,20 @@
       "Lutas",
       "Mochilas",
       "Garrafas",
-      "Acessórios esportivos"
+      "Acessórios esportivos",
+      "Academia em casa",
+      "Musculacao",
+      "Treino funcional",
+      "Yoga e Pilates",
+      "Cardio e corrida",
+      "Vestuario fitness",
+      "Acessorios de treino",
+      "Hidratacao",
+      "Amazon academia",
+      "Mercado Livre academia",
+      "Shopee academia"
     ],
-    "section": "Movimente sua rotina",
+    "section": "Academia, treino e vida ativa",
     "coverImage": "public/images/capas-lojas-2026/capa-impacto-sport.webp"
   },
   {
