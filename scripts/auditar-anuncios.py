@@ -8,7 +8,6 @@ from typing import Any
 
 from anuncios_core import (
     canonical_link,
-    classify_product,
     image_exists,
     image_is_placeholder,
     link_is_direct_product,
@@ -17,6 +16,27 @@ from anuncios_core import (
     today_iso,
     write_json,
 )
+
+
+DETERMINISTIC_STORE_PREFIXES = {
+    "ferramentas-20260724-": "impacto-ferramentas",
+    "academia-20260724-": "impacto-sport",
+    "servico-impacto-music-studio-": "impacto-music-studio",
+    "servico-impacto-academico-": "impacto-academico",
+    "servico-impacto-personalizados-": "impacto-personalizados",
+    "servico-impacto-criadores-": "impacto-criadores",
+}
+
+
+def deterministic_store_for_product(product_id: str) -> str:
+    return next(
+        (
+            store_id
+            for prefix, store_id in DETERMINISTIC_STORE_PREFIXES.items()
+            if product_id.startswith(prefix)
+        ),
+        "",
+    )
 
 
 def purchase_link(product: dict[str, Any]) -> str:
@@ -213,27 +233,17 @@ def audit(root: Path, apply_fixes: bool = False) -> dict[str, Any]:
             images[image.lower()].append(product)
         if store_id not in store_ids:
             issues["loja_inexistente"].append(summary)
-        if store_id == "impacto-ferramentas":
-            predicted = {
-                "storeId": "impacto-ferramentas",
-                "category": str(product.get("category") or "Casa e Família"),
-                "subcategoria": str(product.get("subcategoria") or "Máquinas e ferramentas em geral"),
-            }
-        else:
-            predicted = classify_product(title, description, str(product.get("category") or ""))
+        expected_store = deterministic_store_for_product(product_id)
         if (
-            predicted["storeId"] != "impacto-ofertas"
+            expected_store
             and store_id
-            and predicted["storeId"] != store_id
+            and expected_store != store_id
         ):
             issues["loja_categoria_incorreta"].append(
-                {**summary, "lojaSugerida": predicted["storeId"]}
+                {**summary, "lojaSugerida": expected_store}
             )
             if apply_fixes:
-                product["storeId"] = predicted["storeId"]
-                product["category"] = predicted["category"]
-                product["categoria"] = predicted["category"]
-                product["subcategoria"] = predicted["subcategoria"]
+                product["storeId"] = expected_store
                 corrected_store += 1
         if not product.get("actionType") and not product.get("buttonLabel"):
             issues["sem_botao_compra"].append(summary)
