@@ -2,26 +2,23 @@
   "executedAt": "2026-07-24",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 1461,
+    "products": 1337,
     "stores": 26,
-    "active": 1056,
-    "inactiveOrReview": 405,
-    "publicOffers": 1104,
-    "pendingOrBlocked": 357,
-    "issues": 426,
-    "duplicateGroups": 6,
+    "active": 1048,
+    "inactiveOrReview": 289,
+    "publicOffers": 1088,
+    "pendingOrBlocked": 249,
+    "issues": 276,
+    "duplicateGroups": 4,
     "imageConflicts": 2,
     "storesCorrected": 0,
     "inactivatedForMissingData": 0,
     "duplicatesInactivated": 0
   },
   "issueCounts": {
-    "foto_arquivo_inexistente": 38,
-    "link_nao_direto_ou_placeholder": 52,
-    "sem_botao_compra": 1,
-    "sem_foto": 305,
-    "sem_link": 29,
-    "titulo_generico_ou_incompleto": 1
+    "foto_arquivo_inexistente": 32,
+    "sem_foto": 216,
+    "sem_link": 28
   },
   "issues": {
     "foto_arquivo_inexistente": [
@@ -31,41 +28,6 @@
         "storeId": "impacto-mobile",
         "status": "revisao_manual",
         "image": "public/produtos-impacto360/telefone-mercado-livre-002/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-003",
-        "title": "Samsung Galaxy S25 FE 5G 128GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-003/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-006",
-        "title": "Samsung Galaxy A16 5G 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-006/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-007",
-        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-007/imagem-01.webp"
-      },
-      {
-        "id": "telefone-mercado-livre-009",
-        "title": "Xiaomi Redmi 14C 256GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-009/imagem-01.png"
-      },
-      {
-        "id": "telefone-mercado-livre-010",
-        "title": "Apple iPhone 14 128GB Estelar",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/telefone-mercado-livre-010/imagem-01.webp"
       },
       {
         "id": "mercado-livre-produto-012",
@@ -80,13 +42,6 @@
         "storeId": "impacto-tech-computadores",
         "status": "duplicado",
         "image": "public/produtos-impacto360/mercado-livre-produto-032/imagem-01.webp"
-      },
-      {
-        "id": "loja-parceira-002",
-        "title": "Teclado E Mouse Sem Fio Dell Km3322w Preto",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual",
-        "image": "public/produtos-impacto360/loja-parceira-002/imagem-01.webp"
       },
       {
         "id": "mercado-livre-produto-035",
@@ -292,402 +247,182 @@
         "image": "public/produtos-impacto360/servico-impacto-criadores-06/imagem-01.webp"
       }
     ],
-    "link_nao_direto_ou_placeholder": [
+    "sem_link": [
       {
-        "id": "telefone-mercado-livre-003",
-        "title": "Samsung Galaxy S25 FE 5G 128GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+        "id": "servico-impacto-music-studio-01",
+        "title": "Letra personalizada simples",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "telefone-mercado-livre-007",
-        "title": "Samsung Galaxy A26 5G 256GB 8GB RAM",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+        "id": "servico-impacto-music-studio-02",
+        "title": "Letra com cifra",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "telefone-mercado-livre-009",
-        "title": "Xiaomi Redmi 14C 256GB",
-        "storeId": "impacto-mobile",
-        "status": "rascunho",
-        "link": "COLOCAR_LINK_AFILIADO_AQUI"
+        "id": "servico-impacto-music-studio-03",
+        "title": "Jingle comercial",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "telefone-mercado-livre-010",
-        "title": "Apple iPhone 14 128GB Estelar",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-music-studio-04",
+        "title": "Música para homenagem",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "loja-parceira-002",
-        "title": "Teclado E Mouse Sem Fio Dell Km3322w Preto",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/dell#from=share_eshop"
+        "id": "servico-impacto-music-studio-05",
+        "title": "Música gospel autoral",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-039",
-        "title": "Motorola Edge 50 Ultra",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/motorola#from=share_eshop"
+        "id": "servico-impacto-music-studio-06",
+        "title": "Música infantil personalizada",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-071",
-        "title": "Apple iPhone 11",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-music-studio-07",
+        "title": "Música para campanha",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-072",
-        "title": "Apple iPhone XR",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-music-studio-08",
+        "title": "Narração musical para vídeo",
+        "storeId": "impacto-music-studio",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-073",
-        "title": "Apple iPhone XS",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-01",
+        "title": "Revisão acadêmica",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-074",
-        "title": "Apple iPhone 12",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-02",
+        "title": "Formatação ABNT",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-075",
-        "title": "Apple iPhone 12 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-03",
+        "title": "Organização de trabalho",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-076",
-        "title": "Apple iPhone 13",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-04",
+        "title": "Criação de mapa mental",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-077",
-        "title": "Apple iPhone 13 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-05",
+        "title": "Resumo comentado",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-079",
-        "title": "Apple iPhone 14 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-06",
+        "title": "Questões com gabarito",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-080",
-        "title": "Apple iPhone 14 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-07",
+        "title": "Slides para apresentação",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-081",
-        "title": "Apple iPhone 15",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-academico-08",
+        "title": "Orientação estrutural de TCC",
+        "storeId": "impacto-academico",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-082",
-        "title": "Apple iPhone 15 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-personalizados-01",
+        "title": "Convite digital",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-083",
-        "title": "Apple iPhone 15 Pro",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-personalizados-02",
+        "title": "Banner personalizado",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "celular-ml-docx-087",
-        "title": "Apple iPhone 16 Plus",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual",
-        "link": "https://www.mercadolivre.com.br/loja/apple#from=share_eshop"
+        "id": "servico-impacto-personalizados-03",
+        "title": "Currículo visual",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "cozinha-ml-docx-18",
-        "title": "Jogo 12 Utensílios de Cozinha Silicone Preto Cabo Madeira",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-12-utensilios-cozinha-silicone-preto-cabo-madeira-mercado-livre"
+        "id": "servico-impacto-personalizados-04",
+        "title": "Apresentação profissional",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-smart-tv-43-roku-tv-ptv43va4regb-271bdb80",
-        "title": "Smart TV 43” Roku TV PTV43VA4REGB",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/philco-ptv43va4regb"
+        "id": "servico-impacto-personalizados-05",
+        "title": "Catálogo simples",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-almeida-com-harpa-crista-sbb-60270582",
-        "title": "Bíblia Almeida com Harpa Cristã SBB",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-almeida-com-harpa-crista-sbb"
+        "id": "servico-impacto-personalizados-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-personalizados",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-com-harpa-crista-feminina-floral-5c5ac2da",
-        "title": "Bíblia com Harpa Cristã Feminina Floral",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-com-harpa-crista-feminina-floral"
+        "id": "servico-impacto-criadores-01",
+        "title": "Kit de posts",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-com-harpa-crista-capa-branca-c4e41a8d",
-        "title": "Bíblia com Harpa Cristã Capa Branca",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-com-harpa-crista-capa-branca"
+        "id": "servico-impacto-criadores-02",
+        "title": "Capa para vídeo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-sagrada-letra-jumbo-capa-dura-add52269",
-        "title": "Bíblia Sagrada Letra Jumbo Capa Dura",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-letra-jumbo-capa-dura"
+        "id": "servico-impacto-criadores-03",
+        "title": "Roteiro curto",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-de-estudo-pentecostal-com-harpa-f7af9b37",
-        "title": "Bíblia de Estudo Pentecostal com Harpa",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-pentecostal-com-harpa"
+        "id": "servico-impacto-criadores-04",
+        "title": "Calendário editorial",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-biblia-sagrada-com-harpa-crista-com-ziper-1f9275c9",
-        "title": "Bíblia Sagrada com Harpa Cristã com Zíper",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-com-harpa-crista-ziper"
+        "id": "servico-impacto-criadores-05",
+        "title": "Ideias de conteúdo",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       },
       {
-        "id": "importado-ml-harpa-crista-cpad-com-musica-7c8a318c",
-        "title": "Harpa Cristã CPAD com Música",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/harpa-crista-cpad-com-musica"
-      },
-      {
-        "id": "importado-ml-harpa-crista-capa-luxo-57c3b50c",
-        "title": "Harpa Cristã Capa Luxo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/harpa-crista-capa-luxo"
-      },
-      {
-        "id": "importado-ml-harpa-crista-pequena-de-bolso-d8ac775f",
-        "title": "Harpa Cristã Pequena de Bolso",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/harpa-crista-pequena-bolso"
-      },
-      {
-        "id": "importado-ml-novo-testamento-com-salmos-e-proverbios-0539a43b",
-        "title": "Novo Testamento com Salmos e Provérbios",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/novo-testamento-com-salmos-e-proverbios"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-da-mulher-377fc782",
-        "title": "Bíblia de Estudo da Mulher",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-da-mulher"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-aplicacao-pessoal-2eeedbbb",
-        "title": "Bíblia de Estudo Aplicação Pessoal",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-aplicacao-pessoal"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-nvi-1e75b745",
-        "title": "Bíblia de Estudo NVI",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-de-estudo-nvi"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-thompson-a2eac4c0",
-        "title": "Bíblia de Estudo Thompson",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-thompson-estudo"
-      },
-      {
-        "id": "importado-ml-biblia-king-james-de-estudo-372b64b7",
-        "title": "Bíblia King James de Estudo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-king-james-estudo"
-      },
-      {
-        "id": "importado-ml-biblia-sagrada-almeida-revista-e-corrigida-f0cbc36d",
-        "title": "Bíblia Sagrada Almeida Revista e Corrigida",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/biblia-sagrada-almeida-revista-e-corrigida"
-      },
-      {
-        "id": "importado-ml-livro-historia-do-cristianismo-paul-johnson-cbdc0606",
-        "title": "Livro História do Cristianismo - Paul Johnson",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-historia-do-cristianismo-paul-johnson"
-      },
-      {
-        "id": "importado-ml-livro-historia-da-igreja-crista-c69ca94c",
-        "title": "Livro História da Igreja Cristã",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-historia-da-igreja-crista"
-      },
-      {
-        "id": "importado-ml-livro-historia-eclesiastica-eusebio-de-cesareia-08a7dea4",
-        "title": "Livro História Eclesiástica - Eusébio de Cesareia",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-historia-eclesiastica-eusebio-de-cesareia"
-      },
-      {
-        "id": "importado-ml-livro-historia-dos-hebreus-flavio-josefo-bfa8712d",
-        "title": "Livro História dos Hebreus - Flávio Josefo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-historia-dos-hebreus-flavio-josefo"
-      },
-      {
-        "id": "importado-ml-livro-antiguidades-judaicas-flavio-josefo-f045c113",
-        "title": "Livro Antiguidades Judaicas - Flávio Josefo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-antiguidades-judaicas-flavio-josefo"
-      },
-      {
-        "id": "importado-ml-comentario-biblico-matthew-henry-b167cf0b",
-        "title": "Comentário Bíblico Matthew Henry",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-comentario-biblico-matthew-henry"
-      },
-      {
-        "id": "importado-ml-manual-biblico-halley-c12061f7",
-        "title": "Manual Bíblico Halley",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-manual-biblico-halley"
-      },
-      {
-        "id": "importado-ml-teologia-sistematica-wayne-grudem-5a6cd026",
-        "title": "Teologia Sistemática - Wayne Grudem",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-teologia-sistematica-wayne-grudem"
-      },
-      {
-        "id": "importado-ml-o-peregrino-john-bunyan-7e1b21cc",
-        "title": "O Peregrino - John Bunyan",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-o-peregrino-john-bunyan"
-      },
-      {
-        "id": "importado-ml-cristianismo-puro-e-simples-c-s-lewis-272a7516",
-        "title": "Cristianismo Puro e Simples - C. S. Lewis",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/livro-cristianismo-puro-e-simples-c-s-lewis"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
-        "title": "Jogo de Panelas Pacific Cerâmica Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-ceramica-inducao"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
-        "title": "Jogo de Panelas Pacific Indução 20 Peças",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-inducao-20-pecas"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
-        "title": "Jogo de Panelas Pacific Premium Rose Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-pacific-premium-rose-inducao"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
-        "title": "Jogo de Panelas Roichen Premium Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-roichen-premium-inducao"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
-        "title": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual",
-        "link": "https://lista.mercadolivre.com.br/jogo-de-panelas-antiaderente-ceramica-premium-inducao"
+        "id": "servico-impacto-criadores-06",
+        "title": "Arte para redes sociais",
+        "storeId": "impacto-criadores",
+        "status": "rascunho"
       }
     ],
     "sem_foto": [
-      {
-        "id": "loja-parceira-001",
-        "title": "Lista parceira Mercado Livre em revisão",
-        "storeId": "lojas-parceiras",
-        "status": "revisao_manual"
-      },
       {
         "id": "celular-ml-docx-002",
         "title": "Samsung Galaxy A06 128 GB",
         "storeId": "impacto-mobile",
         "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-008",
-        "title": "Samsung Galaxy A55 5G 256 GB",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-010",
-        "title": "Samsung Galaxy A25 5G",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-012",
-        "title": "Samsung Galaxy A16 5G",
-        "storeId": "impacto-mobile",
-        "status": "duplicado"
       },
       {
         "id": "celular-ml-docx-015",
@@ -696,40 +431,10 @@
         "status": "revisao_manual"
       },
       {
-        "id": "celular-ml-docx-016",
-        "title": "Samsung Galaxy S21 FE 5G",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-017",
-        "title": "Samsung Galaxy S23 FE",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-018",
-        "title": "Samsung Galaxy S24 FE",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
         "id": "celular-ml-docx-027",
         "title": "Motorola Moto G05 SE",
         "storeId": "impacto-mobile",
         "status": "duplicado"
-      },
-      {
-        "id": "celular-ml-docx-031",
-        "title": "Motorola Moto G24 Power",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "celular-ml-docx-039",
-        "title": "Motorola Edge 50 Ultra",
-        "storeId": "impacto-mobile",
-        "status": "revisao_manual"
       },
       {
         "id": "moda-feminina-docx-13",
@@ -744,21 +449,9 @@
         "status": "revisao_manual"
       },
       {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "grife-prime",
-        "status": "rascunho"
-      },
-      {
         "id": "moda-feminina-docx-23",
         "title": "Vestido Midi Moda Evangélica Gola Alta E Redonda Manga 3/4",
         "storeId": "grife-prime",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "cozinha-ml-docx-05",
-        "title": "Kit 12 Utensílios de Cozinha em Silicone com Escumadeira",
-        "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
       {
@@ -768,45 +461,9 @@
         "status": "revisao_manual"
       },
       {
-        "id": "cozinha-ml-docx-11",
-        "title": "Kit 12 Utensílios Silicone Cabo Madeira Ponte Lar",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "cozinha-ml-docx-18",
-        "title": "Jogo 12 Utensílios de Cozinha Silicone Preto Cabo Madeira",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "cozinha-ml-docx-24",
-        "title": "Mini Processador Elétrico Alimentos Recarregável Triturador",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "cozinha-ml-docx-25",
-        "title": "Processador Elétrico Portátil com Aço Inoxidável Recarregável",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "cozinha-ml-docx-29",
-        "title": "Moedor Elétrico Recarregável USB para Sal e Pimenta Prata",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
         "id": "cozinha-ml-docx-30",
         "title": "Balança de Cozinha Digital Recarregável USB de 5 kg",
         "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-presente-menino-ferrorama-trem-trenzinho-brinquedo-som-e-ad5f5975",
-        "title": "Presente Menino Ferrorama Trem Trenzinho Brinquedo Som E Luz",
-        "storeId": "impacto-brinquedos",
         "status": "revisao_manual"
       },
       {
@@ -822,26 +479,8 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-ml-smart-tv-43-uhd-ai-ua75-fc00c7a0",
-        "title": "Smart TV 43” UHD AI UA75",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-ml-smart-tv-50-uhd-ai-ua75-06a19d6e",
         "title": "Smart TV 50” UHD AI UA75",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-smart-tv-55-uhd-ai-ua75-d231a077",
-        "title": "Smart TV 55” UHD AI UA75",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-smart-tv-43-4k-google-tv-43p755-3ec62fb0",
-        "title": "Smart TV 43” 4K Google TV 43P755",
         "storeId": "impacto-eletronicos",
         "status": "revisao_manual"
       },
@@ -860,12 +499,6 @@
       {
         "id": "importado-ml-smart-tv-55-4k-google-tv-55s61-1416f0dc",
         "title": "Smart TV 55” 4K Google TV 55S61",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-smart-tv-43-roku-tv-ptv43va4regb-271bdb80",
-        "title": "Smart TV 43” Roku TV PTV43VA4REGB",
         "storeId": "impacto-eletronicos",
         "status": "revisao_manual"
       },
@@ -926,12 +559,6 @@
       {
         "id": "importado-ml-trator-rc-de-2-4ghz-com-controle-remoto-recarregavel-far-21eafc37",
         "title": "Trator RC de 2.4GHz com Controle Remoto Recarregável Farm",
-        "storeId": "impacto-brinquedos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-trator-brinquedo-infantil-recarregavel-carregadeira-esca-879e2475",
-        "title": "Trator Brinquedo Infantil Recarregável Carregadeira Escavadeira Leader",
         "storeId": "impacto-brinquedos",
         "status": "revisao_manual"
       },
@@ -1068,230 +695,8 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-ml-biblia-almeida-com-harpa-crista-sbb-60270582",
-        "title": "Bíblia Almeida com Harpa Cristã SBB",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-com-harpa-crista-feminina-floral-5c5ac2da",
-        "title": "Bíblia com Harpa Cristã Feminina Floral",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-com-harpa-crista-capa-branca-c4e41a8d",
-        "title": "Bíblia com Harpa Cristã Capa Branca",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-sagrada-letra-jumbo-capa-dura-add52269",
-        "title": "Bíblia Sagrada Letra Jumbo Capa Dura",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-pentecostal-com-harpa-f7af9b37",
-        "title": "Bíblia de Estudo Pentecostal com Harpa",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-sagrada-com-harpa-crista-com-ziper-1f9275c9",
-        "title": "Bíblia Sagrada com Harpa Cristã com Zíper",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-harpa-crista-cpad-com-musica-7c8a318c",
-        "title": "Harpa Cristã CPAD com Música",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-harpa-crista-capa-luxo-57c3b50c",
-        "title": "Harpa Cristã Capa Luxo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-harpa-crista-pequena-de-bolso-d8ac775f",
-        "title": "Harpa Cristã Pequena de Bolso",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-novo-testamento-com-salmos-e-proverbios-0539a43b",
-        "title": "Novo Testamento com Salmos e Provérbios",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-da-mulher-377fc782",
-        "title": "Bíblia de Estudo da Mulher",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-aplicacao-pessoal-2eeedbbb",
-        "title": "Bíblia de Estudo Aplicação Pessoal",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-nvi-1e75b745",
-        "title": "Bíblia de Estudo NVI",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-de-estudo-thompson-a2eac4c0",
-        "title": "Bíblia de Estudo Thompson",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-king-james-de-estudo-372b64b7",
-        "title": "Bíblia King James de Estudo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-biblia-sagrada-almeida-revista-e-corrigida-f0cbc36d",
-        "title": "Bíblia Sagrada Almeida Revista e Corrigida",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-livro-historia-do-cristianismo-paul-johnson-cbdc0606",
-        "title": "Livro História do Cristianismo - Paul Johnson",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-livro-historia-da-igreja-crista-c69ca94c",
-        "title": "Livro História da Igreja Cristã",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-livro-historia-eclesiastica-eusebio-de-cesareia-08a7dea4",
-        "title": "Livro História Eclesiástica - Eusébio de Cesareia",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-livro-historia-dos-hebreus-flavio-josefo-bfa8712d",
-        "title": "Livro História dos Hebreus - Flávio Josefo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-livro-antiguidades-judaicas-flavio-josefo-f045c113",
-        "title": "Livro Antiguidades Judaicas - Flávio Josefo",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-comentario-biblico-matthew-henry-b167cf0b",
-        "title": "Comentário Bíblico Matthew Henry",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-manual-biblico-halley-c12061f7",
-        "title": "Manual Bíblico Halley",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-teologia-sistematica-wayne-grudem-5a6cd026",
-        "title": "Teologia Sistemática - Wayne Grudem",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-o-peregrino-john-bunyan-7e1b21cc",
-        "title": "O Peregrino - John Bunyan",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-cristianismo-puro-e-simples-c-s-lewis-272a7516",
-        "title": "Cristianismo Puro e Simples - C. S. Lewis",
-        "storeId": "impacto-fe",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-ceramica-inducao-1d5c3736",
-        "title": "Jogo de Panelas Pacific Cerâmica Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-granito-titanium-6ad7841a",
-        "title": "Jogo de Panelas Pacific Granito Titanium",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-rosa-ceramica-54eafabf",
-        "title": "Jogo de Panelas Pacific Rosa Cerâmica",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-inducao-20-pecas-21f3f688",
-        "title": "Jogo de Panelas Pacific Indução 20 Peças",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-pacific-premium-rose-inducao-489338fa",
-        "title": "Jogo de Panelas Pacific Premium Rose Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-ml-jogo-de-panelas-tramontina-paris-antiaderente-f8d431ac",
         "title": "Jogo de Panelas Tramontina Paris Antiaderente",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-panelux-premium-antiaderente-8657d377",
-        "title": "Jogo de Panelas Panelux Premium Antiaderente",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-oster-marble-edition-0ba2f429",
-        "title": "Jogo de Panelas Oster Marble Edition",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-oster-bioceramic-c195dc72",
-        "title": "Jogo de Panelas Oster Bioceramic",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-euro-home-ceramic-premium-845bb5e4",
-        "title": "Jogo de Panelas Euro Home Ceramic Premium",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-roichen-premium-inducao-4f831fb8",
-        "title": "Jogo de Panelas Roichen Premium Indução",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-jogo-de-panelas-antiaderente-ceramica-premium-inducao-b366760d",
-        "title": "Jogo de Panelas Antiaderente Cerâmica Premium Indução",
         "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
@@ -1422,12 +827,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-bosch-gsr-1000-smart-com-acessorios-163b6d4d",
-        "title": "Bosch GSR 1000 Smart com acessórios",
-        "storeId": "impacto-ferramentas",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-mondial-liquidificador-turbo-power-8df5d041",
         "title": "Mondial Liquidificador Turbo Power",
         "storeId": "impacto-casa",
@@ -1440,21 +839,9 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-echo-spot-com-alexa-7ec62b3f",
-        "title": "Echo Spot com Alexa",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-ssd-kingston-nv3-1tb-m-2-2280-nvme-gen4-desempenho-e-efi-7f74a4f5",
         "title": "SSD 1TB",
         "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-fone-de-ouvido-bluetooth-60082827",
-        "title": "Fone de ouvido Bluetooth",
-        "storeId": "impacto-eletronicos",
         "status": "revisao_manual"
       },
       {
@@ -1464,45 +851,15 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-liquidificador-fe3b690f",
-        "title": "Liquidificador",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-kit-de-chave-de-fenda-b41fac3e",
-        "title": "Kit de chave de fenda",
-        "storeId": "impacto-ferramentas",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-aparador-de-pelos-philips-all-in-one-16-em-1-serie-9000--8b755906",
         "title": "Aparador de Pelos Philips All-in-One 16 em 1 Série 9000 | Máquina para Rosto, Cabelo e Corpo | Barbeador Elétrico Multigroom à prova d'água | MG9532/15",
         "storeId": "impacto-beauty-care",
         "status": "revisao_manual"
       },
       {
-        "id": "importado-amazon-mouse-sem-fio-60d95b7b",
-        "title": "Mouse sem fio",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-amazon-soundcore-projetor-portatil-da-anker-netflix-4k-oficial--7bb727e2",
         "title": "Mini projetor portátil",
         "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-smart-tv-1b443a57",
-        "title": "Smart TV",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-short-masculino-d918c4b3",
-        "title": "Short masculino",
-        "storeId": "grife-prime",
         "status": "revisao_manual"
       },
       {
@@ -1515,108 +872,6 @@
         "id": "importado-amazon-capa-de-chuva-impermeavel-com-capuz-para-motoboy-e-motoc-459f1b5b",
         "title": "Capa de chuva para motociclista",
         "storeId": "impacto-auto",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-monitor-para-bebes-baba-eletronica-b3329280",
-        "title": "Monitor para bebês / babá eletrônica",
-        "storeId": "impacto-kids",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-azeite-de-oliva-6f89abfc",
-        "title": "Azeite de oliva",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-tapete-higienico-para-pets-98a9c175",
-        "title": "Tapete higiênico para pets",
-        "storeId": "impacto-pet",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-estojo-escolar-4181ca81",
-        "title": "Estojo escolar",
-        "storeId": "impacto-ofertas",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-piscina-inflavel-3fb5a757",
-        "title": "Piscina inflável",
-        "storeId": "impacto-ofertas",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-jogo-de-lencol-queen-1a9228b1",
-        "title": "Jogo de lençol queen",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-garrafa-termica-9619258c",
-        "title": "Garrafa térmica",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-camera-de-seguranca-wi-fi-2f99a47e",
-        "title": "Câmera de segurança Wi-Fi",
-        "storeId": "impacto-eletronicos",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-ventilador-de-mesa-7355d113",
-        "title": "Ventilador de mesa",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-regua-de-extensao-eletrica-d82344d1",
-        "title": "Régua de extensão elétrica",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-jogo-de-talheres-c5857c4c",
-        "title": "Jogo de talheres",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-impressora-multifuncional-cc166385",
-        "title": "Impressora multifuncional",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-smartwatch-relogio-digital-04969c95",
-        "title": "Smartwatch / relógio digital",
-        "storeId": "impacto-ofertas",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-livros-de-autoajuda-e50fddd8",
-        "title": "Livros de autoajuda",
-        "storeId": "impacto-ofertas",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-medidor-de-pressao-arterial-e75cf547",
-        "title": "Medidor de pressão arterial",
-        "storeId": "impacto-tech-computadores",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-air-fryer-7c2877c2",
-        "title": "Air fryer",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-jogo-de-panelas-tramontina-solar-fundo-triplo-4-pecas-1b443440",
-        "title": "Jogo de Panelas Tramontina Solar Fundo Triplo 4 peças",
-        "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
       {
@@ -1635,12 +890,6 @@
         "id": "importado-amazon-blender-ultra-power-1000-oster-com-2-copos-127v-e35aad9e",
         "title": "Blender Ultra Power 1000 Oster com 2 Copos - 127V",
         "storeId": "impacto-ofertas",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-panela-de-pressao-eletrica-electrolux-pcc20-6-l-127v-e01f6a2e",
-        "title": "Panela de Pressão Elétrica Electrolux PCC20 6 L - 127V",
-        "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
       {
@@ -1664,12 +913,6 @@
       {
         "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-110v-bb6fdf2a",
         "title": "Philips Walita Airfryer Forno Série 5000 12 L - 110V",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-amazon-philips-walita-airfryer-forno-serie-5000-12-l-220v-1a395bdd",
-        "title": "Philips Walita Airfryer Forno Série 5000 12 L - 220V",
         "storeId": "impacto-casa",
         "status": "revisao_manual"
       },
@@ -2310,12 +1553,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-ml-tenis-adidas-space-diver-20-w-original-n42-a6997e1b",
-        "title": "Tenis Adidas Space Diver 20 W Original N42",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-ml-tenis-olympikus-masculino-leve-confortavel-evasense-orig-e5c4f669",
         "title": "Tenis Olympikus Masculino Leve Confortavel Evasense Original",
         "storeId": "impacto-calcados",
@@ -2388,12 +1625,6 @@
         "status": "revisao_manual"
       },
       {
-        "id": "importado-ml-tenis-asics-nimbus-25-original-e-novo-na-caixa-57782f00",
-        "title": "Tenis ASICS Nimbus 25 Original E Novo Na Caixa",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
         "id": "importado-ml-tenis-asics-gel-venture-11-masculino-original-nota-fisca-8b95a716",
         "title": "Tenis ASICS Gel Venture 11 Masculino Original Nota Fiscal",
         "storeId": "impacto-calcados",
@@ -2414,12 +1645,6 @@
       {
         "id": "importado-ml-tenis-mizuno-prophecy-15-original-couro-macio-frete-grat-79d98b97",
         "title": "Tenis Mizuno Prophecy 15 Original Couro Macio Frete Gratis",
-        "storeId": "impacto-calcados",
-        "status": "revisao_manual"
-      },
-      {
-        "id": "importado-ml-tenis-new-balance-990v6-novo-original-usa-67454964",
-        "title": "Tenis New Balance 990v6 Novo Original Usa",
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       },
@@ -2489,217 +1714,9 @@
         "storeId": "impacto-calcados",
         "status": "revisao_manual"
       }
-    ],
-    "sem_link": [
-      {
-        "id": "servico-impacto-music-studio-01",
-        "title": "Letra personalizada simples",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-02",
-        "title": "Letra com cifra",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-03",
-        "title": "Jingle comercial",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-04",
-        "title": "Música para homenagem",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-05",
-        "title": "Música gospel autoral",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-06",
-        "title": "Música infantil personalizada",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-07",
-        "title": "Música para campanha",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-music-studio-08",
-        "title": "Narração musical para vídeo",
-        "storeId": "impacto-music-studio",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-01",
-        "title": "Revisão acadêmica",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-02",
-        "title": "Formatação ABNT",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-03",
-        "title": "Organização de trabalho",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-04",
-        "title": "Criação de mapa mental",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-05",
-        "title": "Resumo comentado",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-06",
-        "title": "Questões com gabarito",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-07",
-        "title": "Slides para apresentação",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-academico-08",
-        "title": "Orientação estrutural de TCC",
-        "storeId": "impacto-academico",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-01",
-        "title": "Convite digital",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-02",
-        "title": "Banner personalizado",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-03",
-        "title": "Currículo visual",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-04",
-        "title": "Apresentação profissional",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-05",
-        "title": "Catálogo simples",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-personalizados-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-personalizados",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-01",
-        "title": "Kit de posts",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-02",
-        "title": "Capa para vídeo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-03",
-        "title": "Roteiro curto",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-04",
-        "title": "Calendário editorial",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-05",
-        "title": "Ideias de conteúdo",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "servico-impacto-criadores-06",
-        "title": "Arte para redes sociais",
-        "storeId": "impacto-criadores",
-        "status": "rascunho"
-      },
-      {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "grife-prime",
-        "status": "rascunho"
-      }
-    ],
-    "sem_botao_compra": [
-      {
-        "id": "moda-feminina-docx-15",
-        "title": "Calça Feminina Plus Size Pantalona Cintura Alta Wide Leg",
-        "storeId": "grife-prime",
-        "status": "rascunho"
-      }
-    ],
-    "titulo_generico_ou_incompleto": [
-      {
-        "id": "importado-amazon-liquidificador-fe3b690f",
-        "title": "Liquidificador",
-        "storeId": "impacto-casa",
-        "status": "revisao_manual"
-      }
     ]
   },
   "duplicates": [
-    {
-      "reason": "link",
-      "key": "https://meli.la/1gutpms",
-      "keep": "importado-ml-philco-pfe65-forno-eletrico-65-l-952547e1",
-      "duplicates": [
-        "loja-parceira-001"
-      ]
-    },
-    {
-      "reason": "link",
-      "key": "https://meli.la/2f5pdk6",
-      "keep": "celular-ml-docx-008",
-      "duplicates": [
-        "celular-ml-docx-012"
-      ]
-    },
     {
       "reason": "link",
       "key": "https://meli.la/1lyr9kk",

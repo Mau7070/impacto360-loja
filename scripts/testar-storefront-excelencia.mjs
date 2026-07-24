@@ -88,12 +88,22 @@ check("catalogo sem links duplicados", new Set(catalog.map(product => product.li
 check("catalogo sem objetos convertidos em texto", !catalog.some(product => JSON.stringify(product).includes("[object Object]")));
 check("todos os produtos projetados existem na origem", catalog.every(product => sourceById.has(product.id)));
 check("links de afiliado preservados", catalog.every(product => sourceLinks(sourceById.get(product.id)).includes(product.link)));
+check("catalogo nao publica paginas genericas de marketplace", !catalog.some(product => (
+  /mercadolivre\.com\.br\/(?:loja|ofertas)\//i.test(product.link)
+  || /lista\.mercadolivre\.com\.br/i.test(product.link)
+  || /google\.[^/]+\/search/i.test(product.link)
+)));
 check("nenhum campo mestre sensivel alterado", catalog.every(product => !("observacoesInternas" in product) && !("legendaWhatsApp" in product)));
 check("busca ignora acentos", app.includes('.normalize("NFD")') && app.includes("/[\\u0300-\\u036f]/g"));
 check("busca tolera pequenos erros", app.includes("levenshtein") && app.includes("fuzzyTokenMatch"));
+check("busca trata sinonimos e palavras de ligacao", app.includes("SEARCH_ALIASES") && app.includes("SEARCH_STOPWORDS"));
 check("sugestoes com debounce", app.includes("280") && app.includes('role="option"'));
 check("navegacao de sugestoes por teclado", app.includes('"ArrowDown"') && app.includes('"ArrowUp"') && app.includes('"Escape"'));
 check("filtros principais", ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "oferta"].every(filter => app.includes(`data-filter="${filter}"`)));
+check("filtros exibem contagens auditaveis", app.includes("countValues") && app.includes("priceCounts") && app.includes("ratingCounts"));
+check("filtro inclui produtos sem preco cadastrado", app.includes('["sem-preco", "Preço no parceiro"]'));
+check("limpar filtros preserva o termo pesquisado", app.includes("clearSearchFiltersHref") && app.includes('clean.searchParams.delete(key)'));
+check("marcas genericas e marketplaces ocultados", app.includes("validBrand") && app.includes("informacao nao especificada"));
 check("categorias e lojas paginadas", app.includes("data-collection-load-more") && app.includes("visibleProducts = products.slice(0, state.visibleLimit)"));
 check("ordenacao sem ranking inventado", app.includes("Mais relevantes") && app.includes("Menor preço") && app.includes("Melhor avaliados") && !app.includes("Mais procurados"));
 check("favoritos locais preservados", app.includes("impacto360Favorites") && app.includes("localStorage"));

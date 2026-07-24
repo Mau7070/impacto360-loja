@@ -4,22 +4,19 @@ Data: 2026-07-24
 
 ## Resumo
 
-- Anúncios analisados: 1461
-- Anúncios ativos: 1056
-- Inativos/revisão: 405
-- Ofertas públicas por link válido e foto válida: 1104
-- Pendentes/bloqueados da vitrine: 357
-- Grupos duplicados: 6
+- Anúncios analisados: 1337
+- Anúncios ativos: 1048
+- Inativos/revisão: 289
+- Ofertas públicas por link válido e foto válida: 1088
+- Pendentes/bloqueados da vitrine: 249
+- Grupos duplicados: 4
 - Conflitos de imagem compartilhada: 2
 
 ## Problemas encontrados
 
-- foto arquivo inexistente: 38
-- link nao direto ou placeholder: 52
-- sem botao compra: 1
-- sem foto: 305
-- sem link: 29
-- titulo generico ou incompleto: 1
+- foto arquivo inexistente: 32
+- sem foto: 216
+- sem link: 28
 
 ## Critérios de publicação
 

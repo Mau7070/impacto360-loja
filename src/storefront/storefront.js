@@ -296,12 +296,36 @@ function normalize(value) {
     .trim();
 }
 
+const SEARCH_STOPWORDS = new Set([
+  "a", "as", "com", "da", "das", "de", "do", "dos", "e", "em",
+  "na", "nas", "no", "nos", "o", "os", "para", "por", "um", "uma",
+]);
+
+const SEARCH_ALIASES = new Map([
+  ["celular", ["smartphone", "telefone"]],
+  ["smartphone", ["celular", "telefone"]],
+  ["telefone", ["celular", "smartphone"]],
+  ["televisao", ["tv"]],
+  ["tv", ["televisao"]],
+  ["laptop", ["notebook"]],
+  ["notebook", ["laptop"]],
+]);
+
 function searchTokens(value) {
   return normalize(value)
     .split(" ")
     .filter(Boolean)
     .map(token => token.length > 4 && token.endsWith("es") ? token.slice(0, -2) : token)
-    .map(token => token.length > 3 && token.endsWith("s") ? token.slice(0, -1) : token);
+    .map(token => token.length > 3 && token.endsWith("s") ? token.slice(0, -1) : token)
+    .filter(token => !SEARCH_STOPWORDS.has(token));
+}
+
+function searchAlternatives(token) {
+  return [token, ...(SEARCH_ALIASES.get(token) || [])];
+}
+
+function textMatchesSearchToken(haystack, token) {
+  return searchAlternatives(token).some(candidate => haystack.includes(candidate));
 }
 
 function levenshtein(a, b) {
@@ -356,6 +380,15 @@ function partnerName(product) {
   return text(product.partner) || text(storeFor(product)?.name) || "Loja parceira";
 }
 
+function validBrand(value) {
+  const brand = text(value);
+  const normalized = normalize(brand);
+  if (!normalized || brand.length > 80) return "";
+  if (/^(amazon|mercado livre|shopee|hotmart|loja parceira)$/.test(normalized)) return "";
+  if (/informacao nao especificada|nao informad[ao]|sem marca|marca generica|generico/.test(normalized)) return "";
+  return brand;
+}
+
 function money(value, fallback = "") {
   if (Number.isFinite(value) && value > 0) {
     return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
@@ -365,9 +398,9 @@ function money(value, fallback = "") {
 
 function priceRange(value) {
   if (!Number.isFinite(value)) return "sem-preco";
-  if (value < 100) return "ate-100";
-  if (value < 500) return "100-500";
-  if (value < 1000) return "500-1000";
+  if (value <= 100) return "ate-100";
+  if (value <= 500) return "100-500";
+  if (value <= 1000) return "500-1000";
   return "acima-1000";
 }
 
@@ -473,27 +506,27 @@ function searchScore(product, query) {
 
   let matched = 0;
   for (const token of queryWords) {
-    if (name.includes(token)) {
+    if (textMatchesSearchToken(name, token)) {
       score += 36;
       matched += 1;
       continue;
     }
-    if (brandModel.includes(token)) {
+    if (textMatchesSearchToken(brandModel, token)) {
       score += 25;
       matched += 1;
       continue;
     }
-    if (category.includes(token) || tags.includes(token)) {
+    if (textMatchesSearchToken(category, token) || textMatchesSearchToken(tags, token)) {
       score += 16;
       matched += 1;
       continue;
     }
-    if (description.includes(token)) {
+    if (textMatchesSearchToken(description, token)) {
       score += 7;
       matched += 1;
       continue;
     }
-    if (allWords.some(word => fuzzyTokenMatch(token, word))) {
+    if (allWords.some(word => searchAlternatives(token).some(candidate => fuzzyTokenMatch(candidate, word)))) {
       score += 5;
       matched += 1;
     }
@@ -932,7 +965,7 @@ function renderSearch(routeUrl) {
   if (selectedCategory) ranked = ranked.filter(item => categoryForProduct(item.product)?.slug === selectedCategory);
   if (selectedStore) ranked = ranked.filter(item => item.product.storeId === selectedStore);
   if (selectedPartner) ranked = ranked.filter(item => normalize(partnerName(item.product)) === normalize(selectedPartner));
-  if (selectedBrand) ranked = ranked.filter(item => normalize(item.product.brand) === normalize(selectedBrand));
+  if (selectedBrand) ranked = ranked.filter(item => normalize(validBrand(item.product.brand)) === normalize(selectedBrand));
   if (selectedPrice) ranked = ranked.filter(item => priceRange(item.product.priceValue) === selectedPrice);
   if (selectedRating) ranked = ranked.filter(item => Number(item.product.rating || 0) >= selectedRating);
 
@@ -954,16 +987,31 @@ function renderSearch(routeUrl) {
     robots: "noindex,follow",
   });
   const products = ranked.slice(0, state.visibleLimit).map(item => item.product);
-  const categories = uniqueValues(state.products.map(product => categoryForProduct(product)?.slug).filter(Boolean));
-  const stores = state.stores.filter(store => state.products.some(product => product.storeId === store.id));
-  const partners = uniqueValues(state.products.map(partnerName)).sort((a, b) => a.localeCompare(b, "pt-BR"));
-  const brands = uniqueValues(state.products.map(product => text(product.brand)).filter(Boolean)).sort((a, b) => a.localeCompare(b, "pt-BR")).slice(0, 120);
+  const categoryCounts = countValues(state.products.map(product => categoryForProduct(product)?.slug).filter(Boolean));
+  const storeCounts = countValues(state.products.map(product => product.storeId).filter(Boolean));
+  const partnerCounts = countValues(state.products.map(partnerName));
+  const brandCounts = countValues(state.products.map(product => validBrand(product.brand)).filter(Boolean));
+  const priceCounts = countValues(state.products.map(product => priceRange(product.priceValue)));
+  const categories = [...categoryCounts.keys()];
+  const stores = state.stores.filter(store => storeCounts.has(store.id));
+  const partners = [...partnerCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  const brands = [...brandCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  const clearHref = clearSearchFiltersHref(routeUrl);
 
   appRoot().innerHTML = `
     ${pageHero(title, description, [["Início", "/"], ["Busca", ""]])}
     <section class="section">
       <div class="shell results-layout">
-        ${searchFilters({ selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice, selectedRating, offerOnly, categories, stores, partners, brands })}
+        ${searchFilters({
+          selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice, selectedRating,
+          offerOnly, categories, stores, partners, brands, categoryCounts, storeCounts, partnerCounts,
+          brandCounts, priceCounts, clearHref,
+          offerCount: state.products.filter(product => product.offer).length,
+          ratingCounts: new Map([
+            [4, state.products.filter(product => Number(product.rating || 0) >= 4).length],
+            [3, state.products.filter(product => Number(product.rating || 0) >= 3).length],
+          ]),
+        })}
         <div>
           <div class="results-toolbar">
             <p><strong>${ranked.length}</strong> ${ranked.length === 1 ? "produto" : "produtos"}</p>
@@ -993,6 +1041,8 @@ function searchFilters(options) {
   const {
     selectedCategory, selectedStore, selectedPartner, selectedBrand,
     selectedPrice, selectedRating, offerOnly, categories, stores, partners, brands,
+    categoryCounts, storeCounts, partnerCounts, brandCounts, priceCounts,
+    ratingCounts, offerCount, clearHref,
   } = options;
   return `
     <aside class="filters" data-filters aria-label="Filtros de busca">
@@ -1003,7 +1053,7 @@ function searchFilters(options) {
           <option value="">Todas</option>
           ${categories.map(slug => {
             const category = categoryDefinitions.find(item => item.slug === slug);
-            return category ? `<option value="${slug}" ${selectedCategory === slug ? "selected" : ""}>${escapeHtml(category.label)}</option>` : "";
+            return category ? `<option value="${slug}" ${selectedCategory === slug ? "selected" : ""}>${escapeHtml(category.label)} (${categoryCounts.get(slug) || 0})</option>` : "";
           }).join("")}
         </select>
       </div>
@@ -1011,21 +1061,21 @@ function searchFilters(options) {
         <label for="filterStore">Loja interna</label>
         <select id="filterStore" data-filter="loja">
           <option value="">Todas</option>
-          ${stores.map(store => `<option value="${escapeAttr(store.id)}" ${selectedStore === store.id ? "selected" : ""}>${escapeHtml(store.name)}</option>`).join("")}
+          ${stores.map(store => `<option value="${escapeAttr(store.id)}" ${selectedStore === store.id ? "selected" : ""}>${escapeHtml(store.name)} (${storeCounts.get(store.id) || 0})</option>`).join("")}
         </select>
       </div>
       <div class="filter-field">
         <label for="filterPartner">Loja parceira</label>
         <select id="filterPartner" data-filter="parceiro">
           <option value="">Todas</option>
-          ${partners.map(partner => `<option value="${escapeAttr(partner)}" ${selectedPartner === partner ? "selected" : ""}>${escapeHtml(partner)}</option>`).join("")}
+          ${partners.map(partner => `<option value="${escapeAttr(partner)}" ${selectedPartner === partner ? "selected" : ""}>${escapeHtml(partner)} (${partnerCounts.get(partner) || 0})</option>`).join("")}
         </select>
       </div>
       <div class="filter-field">
         <label for="filterBrand">Marca</label>
         <select id="filterBrand" data-filter="marca">
           <option value="">Todas</option>
-          ${brands.map(brand => `<option value="${escapeAttr(brand)}" ${selectedBrand === brand ? "selected" : ""}>${escapeHtml(brand)}</option>`).join("")}
+          ${brands.map(brand => `<option value="${escapeAttr(brand)}" ${selectedBrand === brand ? "selected" : ""}>${escapeHtml(brand)} (${brandCounts.get(brand) || 0})</option>`).join("")}
         </select>
       </div>
       <div class="filter-field">
@@ -1037,19 +1087,20 @@ function searchFilters(options) {
             ["100-500", "R$ 100 a R$ 500"],
             ["500-1000", "R$ 500 a R$ 1.000"],
             ["acima-1000", "Acima de R$ 1.000"],
-          ].map(([value, label]) => `<option value="${value}" ${selectedPrice === value ? "selected" : ""}>${label}</option>`).join("")}
+            ["sem-preco", "Preço no parceiro"],
+          ].map(([value, label]) => `<option value="${value}" ${selectedPrice === value ? "selected" : ""}>${label}${value ? ` (${priceCounts.get(value) || 0})` : ""}</option>`).join("")}
         </select>
       </div>
       <div class="filter-field">
         <label for="filterRating">Avaliação</label>
         <select id="filterRating" data-filter="avaliacao">
           <option value="">Todas</option>
-          <option value="4" ${selectedRating === 4 ? "selected" : ""}>4 estrelas ou mais</option>
-          <option value="3" ${selectedRating === 3 ? "selected" : ""}>3 estrelas ou mais</option>
+          <option value="4" ${selectedRating === 4 ? "selected" : ""}>4 estrelas ou mais (${ratingCounts.get(4) || 0})</option>
+          <option value="3" ${selectedRating === 3 ? "selected" : ""}>3 estrelas ou mais (${ratingCounts.get(3) || 0})</option>
         </select>
       </div>
-      <label class="filter-check"><input type="checkbox" data-filter="oferta" value="1" ${offerOnly ? "checked" : ""}> Somente ofertas</label>
-      <a class="btn btn-secondary" href="/buscar/" data-route="/buscar/">Limpar filtros</a>
+      <label class="filter-check"><input type="checkbox" data-filter="oferta" value="1" ${offerOnly ? "checked" : ""}> Somente ofertas (${offerCount})</label>
+      <a class="btn btn-secondary" href="${escapeAttr(clearHref)}" data-route="${escapeAttr(clearHref)}">Limpar filtros</a>
     </aside>`;
 }
 
@@ -1065,6 +1116,21 @@ function recentSearchesBlock() {
 
 function uniqueValues(values) {
   return [...new Set(values)];
+}
+
+function countValues(values) {
+  const counts = new Map();
+  for (const value of values) counts.set(value, (counts.get(value) || 0) + 1);
+  return counts;
+}
+
+function clearSearchFiltersHref(sourceUrl) {
+  const clean = new URL(sourceUrl.href);
+  for (const key of ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "oferta"]) {
+    clean.searchParams.delete(key);
+  }
+  const query = clean.searchParams.toString();
+  return `${clean.pathname}${query ? `?${query}` : ""}`;
 }
 
 function pageHero(title, description, crumbs) {
