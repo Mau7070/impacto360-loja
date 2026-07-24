@@ -21,7 +21,7 @@ function text(value) {
 function first(item, fields) {
   for (const field of fields) {
     const value = item?.[field];
-    if (value !== undefined && value !== null && text(value)) return value;
+    if (["string", "number", "boolean"].includes(typeof value) && text(value)) return value;
   }
   return "";
 }
@@ -57,7 +57,11 @@ function usableLink(value) {
   const link = text(value);
   if (!/^https?:\/\//i.test(link)) return false;
   if (/COLOCAR_|placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(link)) return false;
-  if (/mercadolivre\.com\.br\/loja\//i.test(link) || /lista\.mercadolivre\.com\.br/i.test(link)) return false;
+  if (
+    /mercadolivre\.com\.br\/(?:loja|ofertas)\//i.test(link)
+    || /lista\.mercadolivre\.com\.br/i.test(link)
+    || /google\.[^/]+\/search/i.test(link)
+  ) return false;
   return true;
 }
 
@@ -149,7 +153,9 @@ function compactProduct(product, generatedSlug) {
   const slug = generatedSlug || slugify(name || product.id);
   const priceRaw = first(product, ["price", "preco", "precoPromocional", "precoAtual"]);
   const previousRaw = first(product, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
-  const partner = text(first(product, ["source", "origem", "plataformaOrigem", "lojaParceira"]))
+  const partner = text(first(product, ["origem", "plataformaOrigem", "lojaParceira"]))
+    || text(product?.source?.platform)
+    || text(product?.source?.name)
     || text(product?.marketplace?.platform);
   const rating = Number.parseFloat(String(first(product, ["rating", "nota", "reviewRating", "avaliacao"])).replace(",", "."));
   return {

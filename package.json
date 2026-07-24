@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "storefront:build": "node scripts/gerar-storefront-excelencia.mjs",
-    "storefront:test": "node scripts/testar-storefront-excelencia.mjs",
+    "storefront:test": "node scripts/testar-storefront-excelencia.mjs && node scripts/testar-busca-filtros.mjs",
+    "storefront:test-search": "node scripts/testar-busca-filtros.mjs",
     "lint": "npm run storefront:test",
     "build": "vite build",
     "preview": "vite preview",
