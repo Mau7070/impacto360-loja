@@ -1,0 +1,750 @@
+{
+  "generatedAt": "2026-07-24T15:40:44.867Z",
+  "applied": true,
+  "totals": {
+    "products": 1461,
+    "stores": 26,
+    "publicProducts": 1052,
+    "invalidStoreReferences": 0,
+    "productRecordsOrganized": 28,
+    "storesWithActiveFlagCorrected": 13
+  },
+  "toolBatch": {
+    "total": 200,
+    "correctStore": 200,
+    "wrongStore": []
+  },
+  "sportBatch": {
+    "total": 100,
+    "correctStore": 100,
+    "wrongStore": []
+  },
+  "productChanges": [
+    {
+      "id": "servico-impacto-music-studio-01",
+      "name": "Letra personalizada simples",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-02",
+      "name": "Letra com cifra",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-03",
+      "name": "Jingle comercial",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-04",
+      "name": "Música para homenagem",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-05",
+      "name": "Música gospel autoral",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-06",
+      "name": "Música infantil personalizada",
+      "before": {
+        "storeId": "impacto-kids",
+        "category": "Infantil",
+        "categoria": "Infantil",
+        "subcategoria": "Infantil"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-07",
+      "name": "Música para campanha",
+      "before": {
+        "storeId": "impacto-music-studio",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-music-studio-08",
+      "name": "Narração musical para vídeo",
+      "before": {
+        "storeId": "impacto-pet",
+        "category": "Pet",
+        "categoria": "Pet",
+        "subcategoria": "Pet"
+      },
+      "after": {
+        "storeId": "impacto-music-studio",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Produção musical"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-01",
+      "name": "Revisão acadêmica",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-02",
+      "name": "Formatação ABNT",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-03",
+      "name": "Organização de trabalho",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-04",
+      "name": "Criação de mapa mental",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-05",
+      "name": "Resumo comentado",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-06",
+      "name": "Questões com gabarito",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-07",
+      "name": "Slides para apresentação",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-academico-08",
+      "name": "Orientação estrutural de TCC",
+      "before": {
+        "storeId": "impacto-academico",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-academico",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Apoio acadêmico"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-01",
+      "name": "Convite digital",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-02",
+      "name": "Banner personalizado",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-03",
+      "name": "Currículo visual",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-04",
+      "name": "Apresentação profissional",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-05",
+      "name": "Catálogo simples",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-personalizados-06",
+      "name": "Arte para redes sociais",
+      "before": {
+        "storeId": "impacto-personalizados",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-personalizados",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Design personalizado"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-01",
+      "name": "Kit de posts",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-02",
+      "name": "Capa para vídeo",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-03",
+      "name": "Roteiro curto",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-04",
+      "name": "Calendário editorial",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-05",
+      "name": "Ideias de conteúdo",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    },
+    {
+      "id": "servico-impacto-criadores-06",
+      "name": "Arte para redes sociais",
+      "before": {
+        "storeId": "impacto-criadores",
+        "category": "Ofertas gerais",
+        "categoria": "Ofertas gerais",
+        "subcategoria": "Mercado Livre"
+      },
+      "after": {
+        "storeId": "impacto-criadores",
+        "category": "Serviços Digitais",
+        "categoria": "Serviços Digitais",
+        "subcategoria": "Conteúdo para criadores"
+      }
+    }
+  ],
+  "storeChanges": [
+    {
+      "id": "impacto-mobile",
+      "name": "IMPACTO MOBILE",
+      "before": false,
+      "after": true,
+      "publicProducts": 38
+    },
+    {
+      "id": "impacto-tech-computadores",
+      "name": "IMPACTO TECH COMPUTADORES",
+      "before": false,
+      "after": true,
+      "publicProducts": 58
+    },
+    {
+      "id": "impacto-casa",
+      "name": "IMPACTO CASA",
+      "before": false,
+      "after": true,
+      "publicProducts": 217
+    },
+    {
+      "id": "impacto-moda",
+      "name": "IMPACTO MODA",
+      "before": false,
+      "after": true,
+      "publicProducts": 2
+    },
+    {
+      "id": "impacto-calcados",
+      "name": "IMPACTO CALÇADOS",
+      "before": false,
+      "after": true,
+      "publicProducts": 82
+    },
+    {
+      "id": "impacto-ofertas",
+      "name": "IMPACTO OFERTAS",
+      "before": false,
+      "after": true,
+      "publicProducts": 31
+    },
+    {
+      "id": "impacto-eletronicos",
+      "name": "IMPACTO ELETRÔNICOS",
+      "before": false,
+      "after": true,
+      "publicProducts": 19
+    },
+    {
+      "id": "impacto-games",
+      "name": "IMPACTO GAMES",
+      "before": false,
+      "after": true,
+      "publicProducts": 8
+    },
+    {
+      "id": "impacto-educa",
+      "name": "IMPACTO EDUCA",
+      "before": false,
+      "after": true,
+      "publicProducts": 4
+    },
+    {
+      "id": "impacto-livraria",
+      "name": "IMPACTO LIVRARIA",
+      "before": false,
+      "after": true,
+      "publicProducts": 67
+    },
+    {
+      "id": "impacto-kids",
+      "name": "IMPACTO KIDS",
+      "before": false,
+      "after": true,
+      "publicProducts": 86
+    },
+    {
+      "id": "impacto-fe",
+      "name": "IMPACTO FÉ",
+      "before": false,
+      "after": true,
+      "publicProducts": 6
+    },
+    {
+      "id": "impacto-sport",
+      "name": "IMPACTO SPORT",
+      "before": false,
+      "after": true,
+      "publicProducts": 101
+    }
+  ],
+  "invalidStoreReferences": [],
+  "productsByStore": {
+    "impacto-mobile": {
+      "name": "IMPACTO MOBILE",
+      "total": 73,
+      "public": 38,
+      "active": true,
+      "categoryEnvironment": "Celulares e Tecnologia"
+    },
+    "impacto-tech-computadores": {
+      "name": "IMPACTO TECH COMPUTADORES",
+      "total": 69,
+      "public": 58,
+      "active": true,
+      "categoryEnvironment": "Celulares e Tecnologia"
+    },
+    "impacto-casa": {
+      "name": "IMPACTO CASA",
+      "total": 338,
+      "public": 217,
+      "active": true,
+      "categoryEnvironment": "Casa e Cozinha ou Eletrodomésticos"
+    },
+    "impacto-moda": {
+      "name": "IMPACTO MODA",
+      "total": 2,
+      "public": 2,
+      "active": true,
+      "categoryEnvironment": "Moda e Calçados"
+    },
+    "grife-prime": {
+      "name": "GRIFE PRIME",
+      "total": 30,
+      "public": 25,
+      "active": true,
+      "categoryEnvironment": "Moda e Calçados"
+    },
+    "impacto-calcados": {
+      "name": "IMPACTO CALÇADOS",
+      "total": 158,
+      "public": 82,
+      "active": true,
+      "categoryEnvironment": "Moda e Calçados"
+    },
+    "impacto-ofertas": {
+      "name": "IMPACTO OFERTAS",
+      "total": 48,
+      "public": 31,
+      "active": true,
+      "categoryEnvironment": "Ofertas e Parceiros"
+    },
+    "lojas-parceiras": {
+      "name": "LOJAS PARCEIRAS MERCADO LIVRE",
+      "total": 1,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Ofertas e Parceiros"
+    },
+    "impacto-eletronicos": {
+      "name": "IMPACTO ELETRÔNICOS",
+      "total": 43,
+      "public": 19,
+      "active": true,
+      "categoryEnvironment": "Celulares e Tecnologia"
+    },
+    "impacto-games": {
+      "name": "IMPACTO GAMES",
+      "total": 8,
+      "public": 8,
+      "active": true,
+      "categoryEnvironment": "Games e Setup"
+    },
+    "impacto-educa": {
+      "name": "IMPACTO EDUCA",
+      "total": 4,
+      "public": 4,
+      "active": true,
+      "categoryEnvironment": "Cursos e Educação"
+    },
+    "impacto-livraria": {
+      "name": "IMPACTO LIVRARIA",
+      "total": 97,
+      "public": 67,
+      "active": true,
+      "categoryEnvironment": "Livros, Papelaria e Fé"
+    },
+    "impacto-beauty-care": {
+      "name": "IMPACTO BEAUTY & CARE",
+      "total": 2,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Beleza e Cuidados"
+    },
+    "impacto-kids": {
+      "name": "IMPACTO KIDS",
+      "total": 87,
+      "public": 86,
+      "active": true,
+      "categoryEnvironment": "Brinquedos e Escolar"
+    },
+    "impacto-pet": {
+      "name": "IMPACTO PET",
+      "total": 1,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Pets"
+    },
+    "impacto-decor": {
+      "name": "IMPACTO DECOR",
+      "total": 0,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Casa e Cozinha"
+    },
+    "impacto-fe": {
+      "name": "IMPACTO FÉ",
+      "total": 32,
+      "public": 6,
+      "active": true,
+      "categoryEnvironment": "Livros, Papelaria e Fé"
+    },
+    "impacto-music-studio": {
+      "name": "IMPACTO MUSIC STUDIO",
+      "total": 8,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Serviços Digitais"
+    },
+    "impacto-academico": {
+      "name": "IMPACTO ACADÊMICO",
+      "total": 8,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Serviços Digitais"
+    },
+    "impacto-personalizados": {
+      "name": "IMPACTO PERSONALIZADOS",
+      "total": 6,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Serviços Digitais"
+    },
+    "impacto-criadores": {
+      "name": "IMPACTO CRIADORES",
+      "total": 6,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Serviços Digitais"
+    },
+    "impacto-auto": {
+      "name": "IMPACTO AUTO",
+      "total": 1,
+      "public": 0,
+      "active": false,
+      "categoryEnvironment": "Auto e Moto"
+    },
+    "impacto-ferramentas": {
+      "name": "IMPACTO FERRAMENTAS",
+      "total": 218,
+      "public": 213,
+      "active": true,
+      "categoryEnvironment": "Ferramentas"
+    },
+    "impacto-sport": {
+      "name": "IMPACTO SPORT",
+      "total": 101,
+      "public": 101,
+      "active": true,
+      "categoryEnvironment": "Esporte e Fitness"
+    },
+    "impacto-montaria": {
+      "name": "IMPACTO MONTARIA",
+      "total": 25,
+      "public": 25,
+      "active": true,
+      "categoryEnvironment": "Montaria e Cavalgada"
+    },
+    "impacto-brinquedos": {
+      "name": "IMPACTO BRINQUEDOS",
+      "total": 95,
+      "public": 70,
+      "active": true,
+      "categoryEnvironment": "Brinquedos e Escolar"
+    }
+  }
+}

@@ -16,7 +16,6 @@ Data: 2026-07-24
 
 - foto arquivo inexistente: 38
 - link nao direto ou placeholder: 52
-- loja categoria incorreta: 133
 - sem botao compra: 1
 - sem foto: 305
 - sem link: 29

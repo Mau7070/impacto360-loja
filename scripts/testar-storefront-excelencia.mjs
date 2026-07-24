@@ -77,6 +77,8 @@ check("hero comercial correto", app.includes("Ofertas selecionadas nas melhores 
 check("hero principal disponivel antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("<h1>Ofertas selecionadas nas melhores lojas</h1>"));
 check("rodape protegido contra salto de layout inicial", css.includes("html:not(.storefront-ready) .site-footer") && app.includes('classList.add("storefront-ready")'));
 check("oito categorias iniciais", app.includes("categoryDefinitions") && app.match(/slug: "/g)?.length >= 8);
+check("categorias priorizam a loja correta", app.includes("storeCategoryById") && app.includes('["impacto-ferramentas", "ferramentas"]') && app.includes("categorySlugForProduct(product)"));
+check("ferramentas acessiveis no menu principal", html.includes('href="/categoria/ferramentas/"') && html.includes(">Ferramentas</a>"));
 check("oito lojas na home", app.includes("homeStoreIds") && app.includes("impacto-brinquedos"));
 check("26 lojas preservadas", stores.length === 26, `${stores.length} lojas`);
 check("catalogo publico reduzido", catalog.length > 0 && catalog.length < sourceProducts.length, `${catalog.length}/${sourceProducts.length}`);
@@ -122,7 +124,7 @@ const routes = [
   "lojas/index.html",
   "buscar/index.html",
   ...stores.map(store => `loja/${store.id}/index.html`),
-  ..."celulares-e-tecnologia casa-e-cozinha eletrodomesticos games-e-setup moda-e-calcados ferramentas brinquedos-e-escolar montaria-e-cavalgada"
+  ..."celulares-e-tecnologia casa-e-cozinha eletrodomesticos games-e-setup esporte-e-fitness moda-e-calcados ferramentas brinquedos-e-escolar livros-papelaria-e-fe montaria-e-cavalgada auto-e-moto beleza-e-cuidados pets cursos-e-educacao servicos-digitais ofertas-e-parceiros"
     .split(" ")
     .map(slug => `categoria/${slug}/index.html`),
 ];

@@ -49,6 +49,13 @@ const categoryDefinitions = [
     terms: ["game", "gamer", "setup", "console", "playstation", "xbox", "controle", "headset", "rtx", "geforce"],
   },
   {
+    slug: "esporte-e-fitness",
+    label: "Esporte e Fitness",
+    description: "Academia, musculação, corrida, yoga e treino funcional.",
+    icon: "heart",
+    terms: ["academia", "fitness", "musculacao", "halter", "anilha", "treino", "corrida", "yoga", "pilates", "bicicleta ergometrica"],
+  },
+  {
     slug: "moda-e-calcados",
     label: "Moda e Calçados",
     description: "Roupas, tênis, bolsas e acessórios para o dia a dia.",
@@ -70,13 +77,91 @@ const categoryDefinitions = [
     terms: ["brinquedo", "boneca", "carrinho", "infantil", "educativo", "escolar", "mochila", "caderno", "estojo", "lapis"],
   },
   {
+    slug: "livros-papelaria-e-fe",
+    label: "Livros, Papelaria e Fé",
+    description: "Livros, material escolar, leitura digital e produtos religiosos.",
+    icon: "grid",
+    terms: ["livro", "livraria", "papelaria", "material escolar", "caderno", "kindle", "biblia", "devocional", "harpa"],
+  },
+  {
     slug: "montaria-e-cavalgada",
     label: "Montaria e Cavalgada",
     description: "Itens e acessórios para o universo equestre.",
     icon: "horse",
     terms: ["montaria", "cavalgada", "cavalo", "equestre", "sela", "country", "chapeu cowboy"],
   },
+  {
+    slug: "auto-e-moto",
+    label: "Auto e Moto",
+    description: "Acessórios, cuidados e soluções para veículos.",
+    icon: "tool",
+    terms: ["automotivo", "carro", "moto", "motociclista", "veiculo", "pneu"],
+  },
+  {
+    slug: "beleza-e-cuidados",
+    label: "Beleza e Cuidados",
+    description: "Autocuidado, cosméticos, perfumaria e higiene pessoal.",
+    icon: "spark",
+    terms: ["beleza", "perfume", "cosmetico", "shampoo", "barbeador", "aparador", "escova secadora"],
+  },
+  {
+    slug: "pets",
+    label: "Pets",
+    description: "Produtos para cuidado, conforto e diversão dos animais.",
+    icon: "heart",
+    terms: ["pet", "cachorro", "gato", "racao", "coleira", "caminha pet"],
+  },
+  {
+    slug: "cursos-e-educacao",
+    label: "Cursos e Educação",
+    description: "Cursos, treinamentos e conteúdos para aprendizado.",
+    icon: "grid",
+    terms: ["curso", "treinamento", "aula", "licitacao", "pregao", "educacao"],
+  },
+  {
+    slug: "servicos-digitais",
+    label: "Serviços Digitais",
+    description: "Música, criação, personalizados e apoio acadêmico.",
+    icon: "spark",
+    terms: ["servico", "personalizado", "jingle", "musica", "design", "academico", "criacao"],
+  },
+  {
+    slug: "ofertas-e-parceiros",
+    label: "Ofertas e Parceiros",
+    description: "Seleções variadas, oportunidades e vitrines parceiras.",
+    icon: "tag",
+    terms: ["oferta", "promocao", "parceiro"],
+  },
 ];
+
+const storeCategoryById = new Map([
+  ["impacto-mobile", "celulares-e-tecnologia"],
+  ["impacto-tech-computadores", "celulares-e-tecnologia"],
+  ["impacto-eletronicos", "celulares-e-tecnologia"],
+  ["impacto-games", "games-e-setup"],
+  ["impacto-casa", "casa-e-cozinha"],
+  ["impacto-decor", "casa-e-cozinha"],
+  ["impacto-sport", "esporte-e-fitness"],
+  ["impacto-moda", "moda-e-calcados"],
+  ["grife-prime", "moda-e-calcados"],
+  ["impacto-calcados", "moda-e-calcados"],
+  ["impacto-ferramentas", "ferramentas"],
+  ["impacto-brinquedos", "brinquedos-e-escolar"],
+  ["impacto-kids", "brinquedos-e-escolar"],
+  ["impacto-livraria", "livros-papelaria-e-fe"],
+  ["impacto-fe", "livros-papelaria-e-fe"],
+  ["impacto-montaria", "montaria-e-cavalgada"],
+  ["impacto-auto", "auto-e-moto"],
+  ["impacto-beauty-care", "beleza-e-cuidados"],
+  ["impacto-pet", "pets"],
+  ["impacto-educa", "cursos-e-educacao"],
+  ["impacto-music-studio", "servicos-digitais"],
+  ["impacto-academico", "servicos-digitais"],
+  ["impacto-personalizados", "servicos-digitais"],
+  ["impacto-criadores", "servicos-digitais"],
+  ["impacto-ofertas", "ofertas-e-parceiros"],
+  ["lojas-parceiras", "ofertas-e-parceiros"],
+]);
 
 const aisleDefinitions = [
   {
@@ -149,6 +234,10 @@ const serviceStoreIds = [
 ];
 
 const departmentShelves = [
+  ["esporte-e-fitness", "Esporte e Fitness", "Academia, corrida e treino funcional"],
+  ["livros-papelaria-e-fe", "Livros, Papelaria e Fé", "Leitura, estudo e inspiração"],
+  ["cursos-e-educacao", "Cursos e Educação", "Aprendizado e desenvolvimento"],
+  ["ofertas-e-parceiros", "Ofertas e Parceiros", "Oportunidades de diferentes lojas"],
   ["celulares-e-tecnologia", "Tecnologia", "Celulares, computadores e eletrônicos"],
   ["casa-e-cozinha", "Casa e Cozinha", "Soluções úteis para sua rotina"],
   ["moda-e-calcados", "Moda e Calçados", "Roupas, tênis e acessórios"],
@@ -330,11 +419,24 @@ function categoryMatches(product, category) {
   return category.terms.some(term => haystack.includes(normalize(term)));
 }
 
+function categorySlugForProduct(product) {
+  if (product.storeId === "impacto-casa") {
+    const subcategory = normalize(product.subcategory || product.subcategoria || "");
+    if (/(eletrodomestico|eletroportatil|pequenos eletros)/.test(subcategory)) {
+      return "eletrodomesticos";
+    }
+  }
+  return storeCategoryById.get(product.storeId)
+    || categoryDefinitions.find(category => categoryMatches(product, category))?.slug
+    || "";
+}
+
 function categoryForProduct(product) {
   if (product._categorySlug !== undefined) {
     return categoryDefinitions.find(category => category.slug === product._categorySlug) || null;
   }
-  const category = categoryDefinitions.find(item => categoryMatches(product, item)) || null;
+  const slug = categorySlugForProduct(product);
+  const category = categoryDefinitions.find(item => item.slug === slug) || null;
   if (product._search) product._categorySlug = category?.slug || "";
   return category;
 }
@@ -1386,7 +1488,7 @@ async function loadData() {
       product.brand, product.model, ...(product.tags || []), product.storeId,
       state.storeById.get(product.storeId)?.name, partnerName(product),
     ].join(" "));
-    product._categorySlug = categoryDefinitions.find(category => categoryMatches(product, category))?.slug || "";
+    product._categorySlug = categorySlugForProduct(product);
   });
   window.__impacto360GetProducts = () => state.products;
   window.__impacto360GetStores = () => state.stores;
