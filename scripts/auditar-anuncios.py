@@ -213,7 +213,14 @@ def audit(root: Path, apply_fixes: bool = False) -> dict[str, Any]:
             images[image.lower()].append(product)
         if store_id not in store_ids:
             issues["loja_inexistente"].append(summary)
-        predicted = classify_product(title, description, str(product.get("category") or ""))
+        if store_id == "impacto-ferramentas":
+            predicted = {
+                "storeId": "impacto-ferramentas",
+                "category": str(product.get("category") or "Casa e Família"),
+                "subcategoria": str(product.get("subcategoria") or "Máquinas e ferramentas em geral"),
+            }
+        else:
+            predicted = classify_product(title, description, str(product.get("category") or ""))
         if (
             predicted["storeId"] != "impacto-ofertas"
             and store_id

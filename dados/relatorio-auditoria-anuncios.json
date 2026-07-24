@@ -1,15 +1,15 @@
 {
-  "executedAt": "2026-07-17",
+  "executedAt": "2026-07-24",
   "appliedSafeFixes": false,
   "totals": {
-    "products": 1011,
+    "products": 1461,
     "stores": 26,
-    "active": 606,
+    "active": 1056,
     "inactiveOrReview": 405,
-    "publicOffers": 654,
+    "publicOffers": 1104,
     "pendingOrBlocked": 357,
-    "issues": 540,
-    "duplicateGroups": 5,
+    "issues": 559,
+    "duplicateGroups": 6,
     "imageConflicts": 2,
     "storesCorrected": 0,
     "inactivatedForMissingData": 0,
@@ -18,7 +18,7 @@
   "issueCounts": {
     "foto_arquivo_inexistente": 38,
     "link_nao_direto_ou_placeholder": 52,
-    "loja_categoria_incorreta": 114,
+    "loja_categoria_incorreta": 133,
     "sem_botao_compra": 1,
     "sem_foto": 305,
     "sem_link": 29,
@@ -26,6 +26,139 @@
   },
   "issues": {
     "loja_categoria_incorreta": [
+      {
+        "id": "academia-20260724-amazon-b0ddrlzsqg",
+        "title": "Caneleira 8kg Peso Musculação Kit Funcional Completo O Par - Tornozeleira Academia",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-amazon-b0d4g4dcml",
+        "title": "Par Tornozeleira Caneleira 1kg De Peso Para Academia Treino Funcional Fitness e Musculação",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-0e27768dbfba",
+        "title": "Tênis Kappa Pulse Unissex Academia Caminhada",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-calcados"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-7be57d1436d7",
+        "title": "Tênis Feminino Olimp Vili Ace Academia Caminhada Treino Eva Preto Golden 36 Br",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-calcados"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-a173e18e562b",
+        "title": "1000ml Garrafa Térmica Isolada A Vácuo Squeeze Aço Inox 304 para Água Gelada Esporte",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-ffb4bf4a678f",
+        "title": "Caneleira Peso 3 Kg Par Won Treine Em Casa Academia Crossfit Fitness Treino Funcional",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-acf2b31aa447",
+        "title": "Tênis Fitness Academia Feminino Esportivo Caminhada Corrida",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-calcados"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-2a5850b592af",
+        "title": "Par Caneleira Tornozeleira de Peso 2 kg WON Preto Fitness Academia Musculação Treine em Casa",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-9d2b7e955ddd",
+        "title": "Kit 8 Placa Tatame Tapete Eva Borracha 10mm Piso Academia Preto",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-casa"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-bbf02bd5d2f4",
+        "title": "Bolsa Térmica Lancheira Marmita 12L Média Cerveja Comida Bebidas Academia Trabalho Escola",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "academia-20260724-mercado-livre-9fd01c369b22",
+        "title": "Conjunto Academia Top Calça Legging Fitness Roupa Kit Bolso Azul/areia Liso G 40/42",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "academia-20260724-shopee-e1b843c9bb06",
+        "title": "Par de Caneleira Peso 1kg Azul Treinar Perna Casa Academia Tornozeleira Funcional Cross",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-shopee-4667c32c408a",
+        "title": "Kit 3 Caneleira Peso Para Perna 1kg ao 3kg CrossFitness Funcional Tornozeleira Academia",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-shopee-2e099c847386",
+        "title": "Par Caneleira Tornozeleira de Peso 0,5 1, 2, 3, 4, 5, 8KG Profissional WON Academia",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-shopee-09cef6a8d9b2",
+        "title": "Kit Par Caneleiras Peso 0,5kg + 1kg + 2kg Tornozeleira de Peso Treino em Casa Funcional",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "academia-20260724-shopee-1f00020879ff",
+        "title": "Mochila Futebol Bag Hurley Sacola Chuteira Esportiva Academia Passeio Bolsa Reforçada",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "academia-20260724-shopee-bad01f38f4b5",
+        "title": "Mochila Reforçada Cavalera Mao Costa Transversal Multiuso Viagem Esportes",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "grife-prime"
+      },
+      {
+        "id": "academia-20260724-shopee-f8a89f6f85bb",
+        "title": "Kit Par Caneleiras Peso 1kg + 2kg Tornozeleira de Peso Treino em Casa Funcional Academia",
+        "storeId": "impacto-sport",
+        "status": "ativo",
+        "lojaSugerida": "impacto-montaria"
+      },
+      {
+        "id": "shopee-cama-20260722-51d3b0eed6",
+        "title": "Cobertor Galaxy Queen Manta Ultrasoft Alto Relevo Degradê Super Macia - Gold -",
+        "storeId": "impacto-casa",
+        "status": "ativo",
+        "lojaSugerida": "impacto-mobile"
+      },
       {
         "id": "shopee-20260715-festa-infantil-kit-completo-marie-decoracao-festa-infantil-lembrancinhas-personalizadas-ef6fe76e",
         "title": "Kit Completo MARIE Decoração Festa Infantil Lembrancinhas Personalizadas",
@@ -3515,6 +3648,14 @@
       "keep": "celular-ml-docx-088",
       "duplicates": [
         "celular-ml-docx-089"
+      ]
+    },
+    {
+      "reason": "titulo",
+      "key": "edredom sherpa cobertor e coberdrom casal queen grosso pele de carneiro dupla f",
+      "keep": "ml-cama-20260722-26b198f72a",
+      "duplicates": [
+        "ml-cama-20260722-6a37386735"
       ]
     },
     {
