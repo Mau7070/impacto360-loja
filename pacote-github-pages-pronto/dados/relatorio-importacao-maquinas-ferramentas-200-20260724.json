@@ -1,0 +1,2022 @@
+{
+  "generatedAt": "2026-07-24T14:41:26.153Z",
+  "backupDir": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-24\\qu\\work\\impacto360-ferramentas\\backups\\20260724T144124-pre-importacao-maquinas-ferramentas-200",
+  "rotationGroup": "maquinas-ferramentas-200-20260724",
+  "counts": {
+    "amazon": 85,
+    "mercado-livre": 85,
+    "shopee": 30
+  },
+  "bannerStats": {
+    "banners": 15,
+    "ads": 200
+  },
+  "thresholds": {
+    "rating": 4.5,
+    "amazonCommission": 8,
+    "mercadoLivreCommission": 12,
+    "shopeeCommission": 15
+  },
+  "products": [
+    {
+      "id": "ferramentas-20260724-amazon-b07jq9g1bd",
+      "source": "Amazon",
+      "title": "Bosch Furadeira de Impacto GSB 550 RE 550W 127V com 3 Brocas",
+      "rating": 5,
+      "commissionRate": 8,
+      "price": "R$ 349,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07jq9g1bd.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07JQ9G1BD?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0cfym9l5w",
+      "source": "Amazon",
+      "title": "DEWALT Dcs334B 20V Serra De Vaivém Sem Fio Sem Escova (Somente Ferramenta)",
+      "rating": 5,
+      "commissionRate": 8,
+      "price": "R$ 1.427,17",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0cfym9l5w.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0CFYM9L5W?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00r0z7tfm",
+      "source": "Amazon",
+      "title": "Bosch Trena Laser GLM 40 alcance 40m com bolsa protetora",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 284,04",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00r0z7tfm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00R0Z7TFM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076krb8lp",
+      "source": "Amazon",
+      "title": "Bosch Martelete Perfurador GBH 2-24 D 820W 220V com maleta",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 809,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076krb8lp.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076KRB8LP?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0c4z6gf7j",
+      "source": "Amazon",
+      "title": "Bosch Furadeira de Impacto GSB 13 RE-M - 750W 220V, em maleta",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 355,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0c4z6gf7j.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0C4Z6GF7J?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0c51c4ztz",
+      "source": "Amazon",
+      "title": "Bosch Furadeira de Impacto GSB 13 RE-M - 750W 127V, em maleta",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 398,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0c51c4ztz.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0C51C4ZTZ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0ck37ypss",
+      "source": "Amazon",
+      "title": "Klein Tools 55569 Bolsa de ferramentas com zíper de pé com mosquetões, fundo reforçado",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 243,47",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0ck37ypss.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0CK37YPSS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bbwg45c4",
+      "source": "Amazon",
+      "title": "Bosch Furadeira de Impacto GSB 16 RE 850W 127V, em maleta",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 566,25",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bbwg45c4.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BBWG45C4?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09tplnbq2",
+      "source": "Amazon",
+      "title": "Klein Tools Kit De Ferramentas Multifuncional Para Cabo De Dados 80072",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 821,80",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09tplnbq2.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09TPLNBQ2?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0877ywtk5",
+      "source": "Amazon",
+      "title": "Bosch Kit Parafusadeira GSR 120-LI e Chave de Impacto GDR 120-LI, 12V com 2 baterias, 1",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 872,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0877ywtk5.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0877YWTK5?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0b9yt2rqr",
+      "source": "Amazon",
+      "title": "CRAFTSMAN V20 RP Serra tico-tico-tico sem fio, 3 configurações orbitais, até 3.200 SPM",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 1.200,35",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0b9yt2rqr.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0B9YT2RQR?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0ccq95fxs",
+      "source": "Amazon",
+      "title": "Bosch Serra tico tico GST 750 220V + 1 lâmina",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 417,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0ccq95fxs.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0CCQ95FXS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0df84jkvf",
+      "source": "Amazon",
+      "title": "DEWALT Esmerilhadeira Angular Sem Fio 20V Max* Xr De 4-1/2-5 Pol. (Somente Ferramenta) (Dcg410B)",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 1.777,63",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0df84jkvf.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0DF84JKVF?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076l251tv",
+      "source": "Amazon",
+      "title": "MAKITA SERRA MARMORE 125MM (5 POL) 1450W 110V 4100NH2Z",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 438,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076l251tv.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076L251TV?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bmktcpdy",
+      "source": "Amazon",
+      "title": "Milwaukee Ferramenta Elétrica M18 Fuel 4-1/2\" / 5\" Variável",
+      "rating": 4.9,
+      "commissionRate": 8,
+      "price": "R$ 1.855,39",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bmktcpdy.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BMKTCPDY?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00et5vmtu",
+      "source": "Amazon",
+      "title": "DEWALT Kit de furadeira/parafusadeira sem fio 20V Max, compacto, 13 mm (DCD771C2), amarelo",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.029,13",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00et5vmtu.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00ET5VMTU?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09v1sm8qb",
+      "source": "Amazon",
+      "title": "WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 125,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09v1sm8qb.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09V1SM8QB?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000oq21ca",
+      "source": "Amazon",
+      "title": "IRWIN Alicate Descascador para Fios Auto Ajustável 8 Polegadas 2078300",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 149,89",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b000oq21ca.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B000OQ21CA?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i8mymt2",
+      "source": "Amazon",
+      "title": "Wera - Conjunto Bits e Soquetes Tool Check Plus - Milimétrica",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 934,26",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00i8mymt2.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00I8MYMT2?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07vbb55x5",
+      "source": "Amazon",
+      "title": "Dewalt Multi Ferramenta Oscilante, Ideal para Cortes em Parafusos e Madeira, Sem Bateria e Sem",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.201,03",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07vbb55x5.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07VBB55X5?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00cby2eio",
+      "source": "Amazon",
+      "title": "Dewalt Caixa Organizadora para Ferramentas com Fecho Metálico e Caixa Profunda, Modelo DWST17806",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 320,57",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00cby2eio.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00CBY2EIO?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b085b253md",
+      "source": "Amazon",
+      "title": "DEWALT Kit de ferramentas oscilantes 20V MAX XR, 3 velocidades, com lâminas, bateria e",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.387,56",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b085b253md.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B085B253MD?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07b2xb9d4",
+      "source": "Amazon",
+      "title": "Vonder, Parafusadeira e Furadeira 12 V",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 183,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07b2xb9d4.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07B2XB9D4?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00qeboe0q",
+      "source": "Amazon",
+      "title": "Multiferramenta Cortadora 18V SEM Bateria DTM51RZ Makita",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.279,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00qeboe0q.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00QEBOE0Q?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08xqwldkp",
+      "source": "Amazon",
+      "title": "Bosch Furadeira Parafusadeira GSR 1000 Smart, Com Acessórios, 12 Volts",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 366,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08xqwldkp.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08XQWLDKP?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07457bxjw",
+      "source": "Amazon",
+      "title": "DEWALT Esmerilhadeira de 4 1/2 Pol. - 5 Pol. (114mm -127mm) Ion-Litio 20V MAX* 9000 RPM",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.499,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07457bxjw.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07457BXJW?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00080dpnq",
+      "source": "Amazon",
+      "title": "Cortador e descascador de fios Klein Tools 11055, azul/amarelo",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 130,46",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00080dpnq.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00080DPNQ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b082btt92h",
+      "source": "Amazon",
+      "title": "Dewalt DCS369B ATOMIC 20V MAX sem fio com uma mão serra recicladora (ferramenta somente)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.448,96",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b082btt92h.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B082BTT92H?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b007nvssfs",
+      "source": "Amazon",
+      "title": "DEWALT Serra de Jig Max 20V, somente ferramenta (DCS331B)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.363,89",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b007nvssfs.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B007NVSSFS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i8n282o",
+      "source": "Amazon",
+      "title": "Ferramentas Knipex, 86 03 125, 5 polegadas | ferramentas manuais de bicicleta",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 389,63",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00i8n282o.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00I8N282O?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00u0p0ghm",
+      "source": "Amazon",
+      "title": "Dewalt Kit De Ferramentas Mecânicas De Dewalt E Conjunto De Soquete, 108 Peças (Dwmt73801)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 961,72",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00u0p0ghm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00U0P0GHM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00bhgjhmi",
+      "source": "Amazon",
+      "title": "Dremel 710-08 Kit de acessórios rotativos para todos os fins, 160 peças, 710-08, Kit de",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 267,94",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00bhgjhmi.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00BHGJHMI?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076hr7vd4",
+      "source": "Amazon",
+      "title": "Bosch Parafusadeira e furadeira GSR 7-14 E 400W 127V com cabo de 4m",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 355,95",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076hr7vd4.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076HR7VD4?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0dbvzqkgt",
+      "source": "Amazon",
+      "title": "Bolsa para Ferramentas com 8 Bolsos – Compacta, Resistente e Ideal para Uso Profissional e",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 65,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0dbvzqkgt.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0DBVZQKGT?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00ti7hzy0",
+      "source": "Amazon",
+      "title": "DEWALT Conjunto de chaves de fenda com chaves de porca, 71 peças (DWMT73808)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 268,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00ti7hzy0.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00TI7HZY0?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00sou6lr4",
+      "source": "Amazon",
+      "title": "DEWALT Kit multiferramentas oscilantes 20V MAX XR, velocidade variável (DCS356D1)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.121,60",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00sou6lr4.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00SOU6LR4?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076vykzh8",
+      "source": "Amazon",
+      "title": "Furadeira De Impacto 1/2 C/ Maleta Bosch G12 127v",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 471,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076vykzh8.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076VYKZH8?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00g9cl83q",
+      "source": "Amazon",
+      "title": "Kit de chaves de fenda DEWALT Impact Ready FlextorQ DWA2T35IR, 35 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 253,86",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00g9cl83q.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00G9CL83Q?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i3pogxq",
+      "source": "Amazon",
+      "title": "Milwaukee Chave de Impacto Hexagonal de Íon de Lítio 2656-20 M18 18 V 1/4 polegada com 1.500",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 514,38",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00i3pogxq.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00I3POGXQ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b085dvbdhz",
+      "source": "Amazon",
+      "title": "Makita E-01666 Impact XPS 35 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 183,19",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b085dvbdhz.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B085DVBDHZ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00odn0s70",
+      "source": "Amazon",
+      "title": "DEWALT Serra Sabre Compacta 20V MAX* Ion-Litio Sem Bateria e Sem Carregador DCS387B",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.289,38",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00odn0s70.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00ODN0S70?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08vn7cstj",
+      "source": "Amazon",
+      "title": "MILWAUKEE'S Milwaukee 2962-20 M18 18V Combustível 1/2\" Chave De Impacto De Torque Com Anel De",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 2.166,60",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08vn7cstj.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08VN7CSTJ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000bk7aos",
+      "source": "Amazon",
+      "title": "Wera Conjunto de ferramentas compacto \"Kraftform 50.8 cm com bolsa, SL/PH/PZ, 7 peças, prata",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 327,37",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b000bk7aos.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B000BK7AOS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07h7dq3dk",
+      "source": "Amazon",
+      "title": "M18 Ferramenta de serra de combustível com cabo em D",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.660,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07h7dq3dk.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07H7DQ3DK?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09tb998j3",
+      "source": "Amazon",
+      "title": "Vonder, Parafusadeira/Furadeira A Bateria, 12 V, Fonte de Carregamento",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 130,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09tb998j3.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09TB998J3?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07mzb4nyj",
+      "source": "Amazon",
+      "title": "Neiko 02447A Conjunto de Soquetes de Impacto Master Drive de 1,27 cm, Sortimento de Soquetes",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 570,77",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07mzb4nyj.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07MZB4NYJ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076klz3rm",
+      "source": "Amazon",
+      "title": "Bosch Parafusadeira Furadeira a bateria GSR 1000 Smart 12V com 10 bits e maleta",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 399,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076klz3rm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076KLZ3RM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076s9ybmh",
+      "source": "Amazon",
+      "title": "DEWALT Retificadeira 1 ½ Pol. 38mm 20V Max li-ion Sem Bateria e Sem Carregador DCG426B",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.189,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076s9ybmh.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076S9YBMH?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0001p0cc0",
+      "source": "Amazon",
+      "title": "Knipex 70 06 180 cortador diagonal cromado 18 cm/testado em VDE",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 389,06",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0001p0cc0.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0001P0CC0?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b088w1vy9q",
+      "source": "Amazon",
+      "title": "Bosch Parafusadeira Furadeira Impacto GSB 18V-50 18V Brushless com 2 baterias, 1 carregador e",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 935,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b088w1vy9q.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B088W1VY9Q?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08vvx6pwj",
+      "source": "Amazon",
+      "title": "Kit de Ferramentas para Fiação, 2 Peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 365,29",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08vvx6pwj.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08VVX6PWJ?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09rx4r3tr",
+      "source": "Amazon",
+      "title": "Milwaukee 2880-20 M18 FUEL Rebarbadora de íon de lítio sem escova, 12,7 cm, sem fio, com",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.468,75",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09rx4r3tr.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09RX4R3TR?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08h1znbj2",
+      "source": "Amazon",
+      "title": "SKIL Chave de fenda de pistola recarregável 4V sem fio com conjunto de 42 peças, carregador USB",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 330,17",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08h1znbj2.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08H1ZNBJ2?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07jk4z4wp",
+      "source": "Amazon",
+      "title": "Bosch Furadeira de Impacto GSB 450 RE 450W 220V",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 255,21",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07jk4z4wp.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07JK4Z4WP?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0c3tgrllm",
+      "source": "Amazon",
+      "title": "DEWALT 20V MAX Furadeira e Parafusadeira Sem Fio, 1,27 cm, 2 Velocidades, Bateria XR 2.0 Ah e",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.024,73",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0c3tgrllm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0C3TGRLLM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00ti5etmi",
+      "source": "Amazon",
+      "title": "Kit de soquetes resistentes de 1/4\" DeWalt DWMT73811, 20 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 221,88",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00ti5etmi.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00TI5ETMI?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000mkg08e",
+      "source": "Amazon",
+      "title": "Klein Tools Ferramenta de toque 626, 6 em 1, cabo acolchoado",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 310,39",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b000mkg08e.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B000MKG08E?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bbjpcmqm",
+      "source": "Amazon",
+      "title": "Sparta Maleta de ferramentas kit com 165 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 99,75",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bbjpcmqm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BBJPCMQM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00ti6qazg",
+      "source": "Amazon",
+      "title": "DEWALT Conjunto de soquete de acionamento, SAE/Metric, unidade de 3/8 polegadas, 17 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 171,62",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00ti6qazg.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00TI6QAZG?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07dqb7qkd",
+      "source": "Amazon",
+      "title": "BLACK+DECKER Furadeira e Parafusadeira 3/8\" LD12S e 13 Acessórios 12V",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 269,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07dqb7qkd.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07DQB7QKD?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07tvg85n3",
+      "source": "Amazon",
+      "title": "DEWALT XTREME 12V MAX* Kit de perfuração/driver sem fio, 3/8 polegadas (DCD701F2)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.379,98",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07tvg85n3.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07TVG85N3?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07jq9g9rs",
+      "source": "Amazon",
+      "title": "Bosch Tupia GKF 550 550w 127V com 2 pinças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 454,07",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07jq9g9rs.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07JQ9G9RS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bs77vg1x",
+      "source": "Amazon",
+      "title": "Bosch Furadeira Parafusadeira Impacto 18V GSB185LI-1B Sem Fio, 1 bateria e maleta",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 771,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bs77vg1x.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BS77VG1X?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bpd1c7s2",
+      "source": "Amazon",
+      "title": "Chave de impacto Milwaukee sextavada sem fio 3453-20 12V 1/4” (ferramenta descoberta)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 820,35",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bpd1c7s2.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BPD1C7S2?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bv17vlyg",
+      "source": "Amazon",
+      "title": "DEWALT Chave De Impacto 20 V Máx., 1/4\", Bateria E Carregador Incluídos (Dcf787D1)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.018,30",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0bv17vlyg.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0BV17VLYG?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b088v99qgg",
+      "source": "Amazon",
+      "title": "Klein Tools Conjunto de ferramentas de chave de fenda isolada 94130 1000 V com pontas Phillips",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 724,46",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b088v99qgg.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B088V99QGG?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0925826m2",
+      "source": "Amazon",
+      "title": "Klein Tools Testador de cabos VDV526-200, testador de cabos Ethernet LAN Scout Jr. 2 para cabos",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 459,72",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0925826m2.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0925826M2?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07p4zts48",
+      "source": "Amazon",
+      "title": "Milwaukee Furadeira M12 12V 3/8 polegadas (2407-20) (somente ferramenta desencapada - bateria",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 830,19",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07p4zts48.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07P4ZTS48?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09qrcryjf",
+      "source": "Amazon",
+      "title": "Bosch Esmerilhadeira GWS 700, 710W 127V, Azul",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 288,78",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09qrcryjf.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09QRCRYJF?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09qrqqy4s",
+      "source": "Amazon",
+      "title": "Bosch Esmerilhadeira GWS 700, 710W 220V",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 269,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b09qrqqy4s.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B09QRQQY4S?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08j2dn6hc",
+      "source": "Amazon",
+      "title": "Klein Tools VDV427-300 Ferramenta de Punchdown Impacto com Lâmina 66/110 - Conexões CAT",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 169,80",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08j2dn6hc.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08J2DN6HC?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000byej02",
+      "source": "Amazon",
+      "title": "Milwaukee Acessório Em Angulo Reto 1/4\" Bit 49-22-8510",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 625,52",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b000byej02.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B000BYEJ02?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000lgbzde",
+      "source": "Amazon",
+      "title": "Serra de alta tensão LENOX Tools 12132HT50, 30 cm, azul",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 232,81",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b000lgbzde.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B000LGBZDE?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07rcnhv62",
+      "source": "Amazon",
+      "title": "CRAFTSMAN CMHT81714 20,32 cm (8\") TIRAS, CORTADOR, CRIMPER",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 144,43",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07rcnhv62.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07RCNHV62?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00tody7yo",
+      "source": "Amazon",
+      "title": "Dremel EZ725 Kit de armazenamento de acessórios multiuso, 70 peças",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 431,05",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00tody7yo.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B00TODY7YO?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b002qb1adw",
+      "source": "Amazon",
+      "title": "MAKITA FURADEIRA DE IMPACTO 13MM (1/2 POL) 760W 220V HP1640",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 419,80",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b002qb1adw.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B002QB1ADW?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08wg2hc81",
+      "source": "Amazon",
+      "title": "Serra de serra sem fio sem escovas Milwaukee 2821-20 M18 Fuel 18 V",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.909,02",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08wg2hc81.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08WG2HC81?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076yfhnjx",
+      "source": "Amazon",
+      "title": "Bosch Serra Mármore GDC 151 TITAN 1500W 220V com 1 disco, kit refrigeração e maleta",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 529,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076yfhnjx.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B076YFHNJX?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0090iha7y",
+      "source": "Amazon",
+      "title": "DEWALT DWA1790IR 3-Piece IMPACT READY Step Drill Bit Set",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 492,70",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0090iha7y.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0090IHA7Y?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0cnddk92r",
+      "source": "Amazon",
+      "title": "Klein Tools Chave de impacto 32910, conjunto de soquete de impacto SAE 7 em 1 com alça, soquete",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 264,03",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0cnddk92r.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0CNDDK92R?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08vw84w2g",
+      "source": "Amazon",
+      "title": "Klein Tools Conjunto de ferramentas 80019, kit de ferramentas de chave de fenda e chave de",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 406,30",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08vw84w2g.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08VW84W2G?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07gsh1k97",
+      "source": "Amazon",
+      "title": "Bosch Serra Circular GKS 150 1500W 220V com 1 disco e guia",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 699,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07gsh1k97.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07GSH1K97?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0d18syvjl",
+      "source": "Amazon",
+      "title": "Klein Tools Chave de impacto 32934, conjunto de soquetes de impacto SAE 9 em 1, 4 soquetes flip",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 318,95",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0d18syvjl.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B0D18SYVJL?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08gh53pnm",
+      "source": "Amazon",
+      "title": "NEIKO 02434A Conjunto de soquetes de impacto padrão e profundo de 9,5 mm (3/8 polegada)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 237,91",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b08gh53pnm.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B08GH53PNM?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07txn17ns",
+      "source": "Amazon",
+      "title": "DEWALT XTREME 12V MAX* Chave de fenda sem fio, baterias de 1/4 pol, 2-Ah (DCF601F2)",
+      "rating": 4.8,
+      "commissionRate": 8,
+      "price": "R$ 1.714,57",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07txn17ns.jpg",
+      "affiliateLink": "https://www.amazon.com.br/dp/B07TXN17NS?tag=910556142-20"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4708816427-7c646f2d",
+      "source": "Mercado Livre",
+      "title": "Compressor de Ar Portátil Digital BHCASES 80W USB-C para Carro Moto Bike Preto",
+      "rating": 4.8,
+      "commissionRate": 66,
+      "price": "R$ 71",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4708816427-7c646f2d.webp",
+      "affiliateLink": "https://meli.la/1wYjUG9"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6823283528-14383463",
+      "source": "Mercado Livre",
+      "title": "Bomba Elétrica Portátil Digital Para Encher Pneu De Carro Moto Bicicleta Inflador Automotivo",
+      "rating": 4.8,
+      "commissionRate": 62,
+      "price": "R$ 180,49",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6823283528-14383463.webp",
+      "affiliateLink": "https://meli.la/154YAab"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4716282936-9b4455c9",
+      "source": "Mercado Livre",
+      "title": "Calibrador Compressor Pneu Digital Carro Bike Moto Sem Fio Cinza-escuro 127/220v",
+      "rating": 4.8,
+      "commissionRate": 27,
+      "price": "R$ 61,11",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4716282936-9b4455c9.webp",
+      "affiliateLink": "https://meli.la/1tD2jB8"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6007008796-5083aeb1",
+      "source": "Mercado Livre",
+      "title": "Paquímetro Digital De Alta Precisão Ferramenta De Medição Profissional 150mm (6 Polegadas) + 2",
+      "rating": 4.8,
+      "commissionRate": 22,
+      "price": "R$ 25,65",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6007008796-5083aeb1.webp",
+      "affiliateLink": "https://meli.la/1EoHywJ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5360733834-992a8462",
+      "source": "Mercado Livre",
+      "title": "Klm Kit Sds Plus Martelete Ponteiro E Talhadeiras Jogo 3 Peças 20mm E 40mm Profissional",
+      "rating": 4.8,
+      "commissionRate": 20,
+      "price": "R$ 30",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5360733834-992a8462.webp",
+      "affiliateLink": "https://meli.la/1kWPBuR"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4419922077-dbda199d",
+      "source": "Mercado Livre",
+      "title": "Lavadora De Alta Pressão C/ Jato Vap Regulável Hlx1600 Tekna Cor Amarelo Frequência 60Hz",
+      "rating": 4.8,
+      "commissionRate": 20,
+      "price": "R$ 315,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4419922077-dbda199d.webp",
+      "affiliateLink": "https://meli.la/18cAg87"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3368477333-833b702c",
+      "source": "Mercado Livre",
+      "title": "Filtro Regulador Ar Compressor 1/4 Com Manometro E Suporte",
+      "rating": 4.7,
+      "commissionRate": 20,
+      "price": "R$ 34",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3368477333-833b702c.webp",
+      "affiliateLink": "https://meli.la/2tGqdJN"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4216019291-f7641e9b",
+      "source": "Mercado Livre",
+      "title": "Tesoura Elétrica Aitoolzo Sem Fio Tecidos Papelão Couro 127/220v Laranja",
+      "rating": 4.9,
+      "commissionRate": 20,
+      "price": "R$ 187,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4216019291-f7641e9b.webp",
+      "affiliateLink": "https://meli.la/2QrQxEN"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4794280851-cea3661a",
+      "source": "Mercado Livre",
+      "title": "Martelete Demolidor 5,4 Kg 900w M8600b Sextavado Makita Mt",
+      "rating": 4.8,
+      "commissionRate": 20,
+      "price": "R$ 1.235",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4794280851-cea3661a.webp",
+      "affiliateLink": "https://meli.la/2mHPG7y"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5117688186-61973ec8",
+      "source": "Mercado Livre",
+      "title": "Lavadora De Alta Pressão Lav1300 Libras Vonder 1.300lbf",
+      "rating": 4.8,
+      "commissionRate": 19,
+      "price": "R$ 269,92",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5117688186-61973ec8.webp",
+      "affiliateLink": "https://meli.la/2a39wat"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6018852368-89261072",
+      "source": "Mercado Livre",
+      "title": "Moto Serra Elétrica 12 Polegadas Portátil 2 Baterias Vermelho 110/127/220v",
+      "rating": 4.7,
+      "commissionRate": 19,
+      "price": "R$ 362",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6018852368-89261072.webp",
+      "affiliateLink": "https://meli.la/1RshbKM"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3927983235-0bf39599",
+      "source": "Mercado Livre",
+      "title": "Kit Engate Rápido Pneumático 1/4 Acessórios Compressor Mangueira Ar Comprimido Alta Vazão",
+      "rating": 4.7,
+      "commissionRate": 18,
+      "price": "R$ 65,31",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3927983235-0bf39599.webp",
+      "affiliateLink": "https://meli.la/1M6MimJ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb1842823248-e88c623c",
+      "source": "Mercado Livre",
+      "title": "Pressostato Compressor De Ar Automático 125-175 Libras 1 Via",
+      "rating": 4.7,
+      "commissionRate": 18,
+      "price": "R$ 46,51",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb1842823248-e88c623c.webp",
+      "affiliateLink": "https://meli.la/1WYsUX3"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5365784650-70d44eae",
+      "source": "Mercado Livre",
+      "title": "Maquina Inversora Solda Mig 160a 3 Em 1 Tig Lift Acessórios Amarelo 220v",
+      "rating": 4.8,
+      "commissionRate": 17,
+      "price": "R$ 503,10",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5365784650-70d44eae.webp",
+      "affiliateLink": "https://meli.la/1pGwWMV"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5337108432-6067bf00",
+      "source": "Mercado Livre",
+      "title": "Plaina Elétrica Manual Profissional 1500w 2 Lâminas Dobevi",
+      "rating": 4.8,
+      "commissionRate": 17,
+      "price": "R$ 279,44",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5337108432-6067bf00.webp",
+      "affiliateLink": "https://meli.la/21Zp9p3"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5205413158-2807131e",
+      "source": "Mercado Livre",
+      "title": "Carrinho Vermelho Esteira 150kg Para Mecanicas Com Encosto",
+      "rating": 4.9,
+      "commissionRate": 17,
+      "price": "R$ 169,88",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5205413158-2807131e.webp",
+      "affiliateLink": "https://meli.la/2zrs3ok"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb1987691537-ec2e470a",
+      "source": "Mercado Livre",
+      "title": "Torques Armador 14 Berg Corneta Ferramentas Ref-5648514",
+      "rating": 4.8,
+      "commissionRate": 17,
+      "price": "R$ 57",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb1987691537-ec2e470a.webp",
+      "affiliateLink": "https://meli.la/2ZUj2Lz"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5745919794-e5420f15",
+      "source": "Mercado Livre",
+      "title": "Auxiliar Partida Portátil Veicular Compressor Ar Emergência",
+      "rating": 4.8,
+      "commissionRate": 17,
+      "price": "R$ 179,40",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5745919794-e5420f15.webp",
+      "affiliateLink": "https://meli.la/1hQAPsb"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4542818811-1310563a",
+      "source": "Mercado Livre",
+      "title": "Kit Jogo Chave De Fenda E Philips 12 Peças Ferramenta Imantada Profissional S Siqueira",
+      "rating": 5,
+      "commissionRate": 17,
+      "price": "R$ 71,94",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4542818811-1310563a.webp",
+      "affiliateLink": "https://meli.la/1yaLMgw"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb7086896722-7cf63a02",
+      "source": "Mercado Livre",
+      "title": "Kit de Ferramentas 120 Peças Furadeira Parafusadeira Impacto 21V 35Nm Mandril 10mm 2 Baterias",
+      "rating": 5,
+      "commissionRate": 17,
+      "price": "R$ 280,20",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb7086896722-7cf63a02.webp",
+      "affiliateLink": "https://meli.la/1Ekupa7"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6948468140-9061a878",
+      "source": "Mercado Livre",
+      "title": "Martelo Demolidor Hanabi 45j 110 V Rompedor Pesado Cor Azul Martelete Rompedor Demolidor 1240w",
+      "rating": 4.8,
+      "commissionRate": 17,
+      "price": "R$ 779,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6948468140-9061a878.webp",
+      "affiliateLink": "https://meli.la/2Hi1qGK"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4560195257-507ab124",
+      "source": "Mercado Livre",
+      "title": "Lavadora De Alta Pressão Profissional Lava Jato Sq-011 Preto 127/220v",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 159,60",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4560195257-507ab124.webp",
+      "affiliateLink": "https://meli.la/129A3US"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4786967488-fb5ff3a1",
+      "source": "Mercado Livre",
+      "title": "Jogo Kit Caixa Ferramentas 129 Pçs Estojo Plastico Maleta Preto",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 99,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4786967488-fb5ff3a1.webp",
+      "affiliateLink": "https://meli.la/13h7SJm"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3399471171-26427cd7",
+      "source": "Mercado Livre",
+      "title": "Kit Completo Aerografia Mini Compressor Ar + Aerógrafo 0,3mm",
+      "rating": 4.7,
+      "commissionRate": 16,
+      "price": "R$ 377,61",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3399471171-26427cd7.webp",
+      "affiliateLink": "https://meli.la/2PeQn8w"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5433775144-3e4ae8ed",
+      "source": "Mercado Livre",
+      "title": "5m Mangueira Para Lavadora Alta Pressão Wap Ousada Plus 2200 Preto",
+      "rating": 4.8,
+      "commissionRate": 16,
+      "price": "R$ 62,15",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5433775144-3e4ae8ed.webp",
+      "affiliateLink": "https://meli.la/1GHPUcc"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4907162813-4d6382ae",
+      "source": "Mercado Livre",
+      "title": "Calibrador Compressor Pneu Digital Bomba Ar Auxiliar Partida",
+      "rating": 4.8,
+      "commissionRate": 16,
+      "price": "R$ 186",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4907162813-4d6382ae.webp",
+      "affiliateLink": "https://meli.la/2xbYv8g"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3402020623-7fb56dd2",
+      "source": "Mercado Livre",
+      "title": "Serra Circular Elétrica 185mm 1000w Frequência 60Hz Pró Euro",
+      "rating": 4.5,
+      "commissionRate": 16,
+      "price": "R$ 241,43",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3402020623-7fb56dd2.webp",
+      "affiliateLink": "https://meli.la/1hAbirz"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4113345367-af8f5123",
+      "source": "Mercado Livre",
+      "title": "Caixa Anel Oring Ar Condicionado Automotivo 265 Peças 18 Mod",
+      "rating": 4.9,
+      "commissionRate": 16,
+      "price": "R$ 33,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4113345367-af8f5123.webp",
+      "affiliateLink": "https://meli.la/17somNn"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3829147477-4b0c91ac",
+      "source": "Mercado Livre",
+      "title": "Máquina Solda 150a Flex Mig Mma Tig Lift Bivolt + Arame 1kg",
+      "rating": 4.8,
+      "commissionRate": 16,
+      "price": "R$ 674,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3829147477-4b0c91ac.webp",
+      "affiliateLink": "https://meli.la/1CuNmWU"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5932934872-ad22a9a3",
+      "source": "Mercado Livre",
+      "title": "Kit Chave Precisão Profissional 115 Peças Magnético Manutenção Celular Notebook Jogo Compacta",
+      "rating": 4.7,
+      "commissionRate": 13,
+      "price": "R$ 33,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5932934872-ad22a9a3.webp",
+      "affiliateLink": "https://meli.la/1S92u9z"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3771505959-f6de90fd",
+      "source": "Mercado Livre",
+      "title": "Parafusadeira E Furadeira Impacto The Black Tools Tb-21pw 3/8 Cor Amarelo Frequência 50/60 Hz",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 140,60",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3771505959-f6de90fd.webp",
+      "affiliateLink": "https://meli.la/2JNaU6d"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb2793858589-1df04feb",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão WAP Ousada Plus 2200 1500W de Potência 1750 PSI",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 467,41",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb2793858589-1df04feb.webp",
+      "affiliateLink": "https://meli.la/1qsi1s3"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb2794432256-0fe5f586",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão Wap Ousada Plus 2200 1500W 1750 PSI",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 560,40",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb2794432256-0fe5f586.webp",
+      "affiliateLink": "https://meli.la/1DTJu3D"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3809978646-333ef77b",
+      "source": "Mercado Livre",
+      "title": "Kit Parafusadeira Furadeira 2 Bat. Lct204 Makita",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 951,80",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3809978646-333ef77b.webp",
+      "affiliateLink": "https://meli.la/17LWAfp"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5769944586-c5650288",
+      "source": "Mercado Livre",
+      "title": "Parafusadeira Furadeira De Impacto Profissional Sem Fio 2 Baterias 21v Com Maleta Tb-21yx The",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 199,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5769944586-c5650288.webp",
+      "affiliateLink": "https://meli.la/1vZ2KH6"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6970209096-97793781",
+      "source": "Mercado Livre",
+      "title": "Serra Circular Para Madeira 7.1/4pol 1600w - Hs7010 Makita Cor Azul-turquesa",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 760",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6970209096-97793781.webp",
+      "affiliateLink": "https://meli.la/2F92W7P"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3551603209-6002bc2e",
+      "source": "Mercado Livre",
+      "title": "Lavadora De Alta Pressão Vonder 1400w Lav 1600 Amarelo 127 V",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 329,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3551603209-6002bc2e.webp",
+      "affiliateLink": "https://meli.la/1pMXaGZ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5041791014-0322a3c9",
+      "source": "Mercado Livre",
+      "title": "Esmerilhadeira Lixadeira Angular Bte750 4.1/2 750w Com Discos 4.1/2 The Black Tools",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 132,05",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5041791014-0322a3c9.webp",
+      "affiliateLink": "https://meli.la/2RieSAG"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3552674321-9b3ada9c",
+      "source": "Mercado Livre",
+      "title": "Máquina Inversora De Solda Portatil Mma Eletrodo MI150D 120A The Black Tools",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 207,95",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3552674321-9b3ada9c.webp",
+      "affiliateLink": "https://meli.la/1ikvCjS"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5599132594-860e89b5",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão Compacta WAP WL 1800 1400W 1500PSI 360L/h 220V",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 299",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5599132594-860e89b5.webp",
+      "affiliateLink": "https://meli.la/23op2aE"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4167180457-cdde6556",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão Compacta WAP WL 1800 1400W 1500PSI 360L/h 127V",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 299",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4167180457-cdde6556.webp",
+      "affiliateLink": "https://meli.la/27sA9kt"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb2175051990-6b174a8b",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão Kärcher K5 motor a indução 2.100 PSI/Libras 360 L/h 1.900 W com lança",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 978,35",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb2175051990-6b174a8b.webp",
+      "affiliateLink": "https://meli.la/1D1ULqh"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3782376983-ec9e302f",
+      "source": "Mercado Livre",
+      "title": "Parafusadeira Furadeira De Impacto Profissional 21v Tb21pw Com Kit Brocas E Buchas 300 Peças",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 189,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3782376983-ec9e302f.webp",
+      "affiliateLink": "https://meli.la/1SDZ49L"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5257939264-738979fc",
+      "source": "Mercado Livre",
+      "title": "Parafusadeira E Furadeira De Impacto 3/8 The Black Tools Tb21-pz Com 2 Baterias E Acessorios",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 144,22",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5257939264-738979fc.webp",
+      "affiliateLink": "https://meli.la/2rYC1gu"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb1981433920-14039b0c",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão WAP Premier 2600 1800W 2000 PSI com Aplicador de Detergente",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 689",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb1981433920-14039b0c.webp",
+      "affiliateLink": "https://meli.la/1WD1KPs"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4674539315-f27f328d",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão WAP Líder 2200 1750W de Potência 1800PSI com Aplicador de Detergente",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 699,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4674539315-f27f328d.webp",
+      "affiliateLink": "https://meli.la/1e9yz4m"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6481260930-28bc584d",
+      "source": "Mercado Livre",
+      "title": "Kit Chaves Ferramentas Jogo Fenda Philips Catraca Soquete Allen 46 Peças Com Maleta Completa",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 29",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6481260930-28bc584d.webp",
+      "affiliateLink": "https://meli.la/1i1E18t"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4024727869-d5ec70aa",
+      "source": "Mercado Livre",
+      "title": "Kit Ferramentas C/ Maleta 178 Pçs Gedore Oficina Mecânica",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 990,75",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4024727869-d5ec70aa.webp",
+      "affiliateLink": "https://meli.la/2HnAfnc"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3969177191-2aeb86a8",
+      "source": "Mercado Livre",
+      "title": "Bico Contato 0.8mm M6x25 Tocha Mig V8 Tork Boxer Com 10 Un",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 19,20",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3969177191-2aeb86a8.webp",
+      "affiliateLink": "https://meli.la/2muQtDt"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6567992156-3021ff82",
+      "source": "Mercado Livre",
+      "title": "Grampeador Tapeceiro Manual Madeira Estofado Profissional Aço Tapeçaria Alta Pressão Com 1000",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 38,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6567992156-3021ff82.webp",
+      "affiliateLink": "https://meli.la/2PMcuBx"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5701841518-c026107f",
+      "source": "Mercado Livre",
+      "title": "A Pistola De Pintura Hvlp 1.4l 600w Com 4 Bicos Tpp150",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 184,30",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5701841518-c026107f.webp",
+      "affiliateLink": "https://meli.la/25HaHr2"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5140907886-75f8b97d",
+      "source": "Mercado Livre",
+      "title": "Lixadeira Teto E Parede Telescópica Profissional Com Led E Saco Coletor The Black Tools Btl750",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 659,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5140907886-75f8b97d.webp",
+      "affiliateLink": "https://meli.la/1kLJ1Z5"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3536894691-5dd4945c",
+      "source": "Mercado Livre",
+      "title": "Plaina Elétrica Manual Para Madeira Bfp780 The Black Tools 780w 16500rpm",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 254,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3536894691-5dd4945c.webp",
+      "affiliateLink": "https://meli.la/24X8H6r"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3608314547-eb2afe18",
+      "source": "Mercado Livre",
+      "title": "Serra Circular Profissional The Black Tools BTC1000 7.1/4 Pol. 185mm 1100w 60hz Com Disco",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 274,48",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3608314547-eb2afe18.webp",
+      "affiliateLink": "https://meli.la/28z1PPB"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5760302776-314aa908",
+      "source": "Mercado Livre",
+      "title": "Jogo Soquetes Catracas Ferramentas Kit Chave 216 Peças Completa Oficina Master Maleta Tkf216",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 549,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5760302776-314aa908.webp",
+      "affiliateLink": "https://meli.la/1nWShvf"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3902868166-37f70641",
+      "source": "Mercado Livre",
+      "title": "Lavadora De Alta Pressão Kärcher K2 Plus Car 1740psi 1400w Canhão de Espuma Kärcher Lança de",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 524,47",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3902868166-37f70641.webp",
+      "affiliateLink": "https://meli.la/2r9A2UD"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5235271694-31aaca5b",
+      "source": "Mercado Livre",
+      "title": "Soprador De Folhas The Black Tools Tcb21b A Bateria Aspirador Elétrico Com Saco Coletor Cor",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 169,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5235271694-31aaca5b.webp",
+      "affiliateLink": "https://meli.la/1GC1YGD"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5781221970-50df22e1",
+      "source": "Mercado Livre",
+      "title": "Martelo De Prego Profissional Tipo Unha Cabeça Em Aço Cabo Fibra Emborrachado Resistente",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 18,43",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5781221970-50df22e1.webp",
+      "affiliateLink": "https://meli.la/2QFa2qT"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5339180622-2bf060bd",
+      "source": "Mercado Livre",
+      "title": "Kit De Ferramentas 169 Peças + Parafusadeira Furadeira 12v",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 236,45",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5339180622-2bf060bd.webp",
+      "affiliateLink": "https://meli.la/2h2p1iX"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4464180115-b0bebbc5",
+      "source": "Mercado Livre",
+      "title": "Carregador 21v 1a Bivolt Parafusadeira Bateria Litio P4",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 27",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4464180115-b0bebbc5.webp",
+      "affiliateLink": "https://meli.la/19pixnw"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5575872334-8fe99942",
+      "source": "Mercado Livre",
+      "title": "Mangueira Para Compressor Bomba De Ar Portátil Rosca M6 Preto",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 39,77",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5575872334-8fe99942.webp",
+      "affiliateLink": "https://meli.la/33d2Lo1"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5661583120-f0c22eef",
+      "source": "Mercado Livre",
+      "title": "Pressostato Cebolinha 1/4 120160psi Compressor Suspensão Ar",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 62,46",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5661583120-f0c22eef.webp",
+      "affiliateLink": "https://meli.la/1TTqQkZ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4615590745-93b2f0ba",
+      "source": "Mercado Livre",
+      "title": "Lavadora de Alta Pressão Jato Compacta Philco PLP2200 1300W 1300 PSI/Libras 312L/h Lança",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 289,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4615590745-93b2f0ba.webp",
+      "affiliateLink": "https://meli.la/33AKgj1"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6428496646-6cdbe178",
+      "source": "Mercado Livre",
+      "title": "Esmerilhadeira Angular 850w GWS-850 Azul Bosch Mais 3 discos",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 456,39",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6428496646-6cdbe178.webp",
+      "affiliateLink": "https://meli.la/1qwqX3p"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4212932415-d0b26353",
+      "source": "Mercado Livre",
+      "title": "Serra Tico Tico Einhell TC-JS 60 E 400W Velocidade Variável",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 100,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4212932415-d0b26353.webp",
+      "affiliateLink": "https://meli.la/2T85LB4"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6568769272-5e9e9595",
+      "source": "Mercado Livre",
+      "title": "Tesoura Para Corte De Perfil Drywall E Chapas De Metal Preto Preto",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 34,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6568769272-5e9e9595.webp",
+      "affiliateLink": "https://meli.la/2cUYhJJ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4070591569-01991c4c",
+      "source": "Mercado Livre",
+      "title": "Cortadora De Metais Policorte Gco 230 2300w Com Disco Cor Azul",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 1.575",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4070591569-01991c4c.webp",
+      "affiliateLink": "https://meli.la/224KfFj"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3846051607-0cb67f38",
+      "source": "Mercado Livre",
+      "title": "Máquina Inversora Solda Top Arc 200a Start Cor Amarelo Frequência 50Hz - 60Hz",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 245,22",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3846051607-0cb67f38.webp",
+      "affiliateLink": "https://meli.la/2tNfDmp"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5369953710-ed4924b2",
+      "source": "Mercado Livre",
+      "title": "Máquina De Solda Inversora Mig 160a Sem Gás 3 Em 1 Tig Lift Eletrodo Easymig Start Com Máscara",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 581,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5369953710-ed4924b2.webp",
+      "affiliateLink": "https://meli.la/18zSt5X"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3892146035-120b9d7a",
+      "source": "Mercado Livre",
+      "title": "Maquina Assentar Pisos Porcelanatos Elétrica Com Ventosa Até 50kg A Bateria 21v Ttm21b The",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 288",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3892146035-120b9d7a.webp",
+      "affiliateLink": "https://meli.la/2pfeCd3"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3374495979-aad4de2d",
+      "source": "Mercado Livre",
+      "title": "Carrinho Ferramentas Forte P/ Mecânico Oficina Aberto 120kg Preto",
+      "rating": 4.7,
+      "commissionRate": 12,
+      "price": "R$ 406,60",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3374495979-aad4de2d.webp",
+      "affiliateLink": "https://meli.la/1vfBe5k"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb3862510815-60098dc9",
+      "source": "Mercado Livre",
+      "title": "Serra Sabre Elétrica Portátil Profissional A Bateria 21v 110v/220v",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 227,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb3862510815-60098dc9.webp",
+      "affiliateLink": "https://meli.la/2UdRPcZ"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5792348860-a969b63d",
+      "source": "Mercado Livre",
+      "title": "Kit 100 Lâminas De 18mm Profissional Para Estilete Largo",
+      "rating": 4.6,
+      "commissionRate": 12,
+      "price": "R$ 56,02",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5792348860-a969b63d.webp",
+      "affiliateLink": "https://meli.la/17wf4gR"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4094802487-dbbdeb8a",
+      "source": "Mercado Livre",
+      "title": "Compressor Premium Suspensão A Ar 480c - 300psi",
+      "rating": 5,
+      "commissionRate": 12,
+      "price": "R$ 571,74",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4094802487-dbbdeb8a.webp",
+      "affiliateLink": "https://meli.la/13842Dn"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4268179735-29245b2e",
+      "source": "Mercado Livre",
+      "title": "Jogo De Ferramentas 169 Peças E Furadeira Parafusadeira 21v",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 279,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4268179735-29245b2e.webp",
+      "affiliateLink": "https://meli.la/1Ui3BqC"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4311034829-1fdbbc38",
+      "source": "Mercado Livre",
+      "title": "Compressor De Ar Direto Elétrico Pintura 1/2 Hp Bivolt Amarelo 127/220v 60hz",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 539,55",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4311034829-1fdbbc38.webp",
+      "affiliateLink": "https://meli.la/2ynDkqT"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6130724098-2ccdc443",
+      "source": "Mercado Livre",
+      "title": "Furadeira Parafusadeira Sem Fio A Bateria Gpb12vd 12v 3/8 10mm Com Maleta E Acessórios Gradiente",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 101,27",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6130724098-2ccdc443.webp",
+      "affiliateLink": "https://meli.la/1SfV7Ld"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6293596640-57575b26",
+      "source": "Mercado Livre",
+      "title": "Kit Martelete Rompedor + Parafusadeira À Bateria 21v Amarelo 110v/220v 50/60hz",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 474,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6293596640-57575b26.webp",
+      "affiliateLink": "https://meli.la/2gYygUF"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4050264139-b9a2214e",
+      "source": "Mercado Livre",
+      "title": "Compressor De Ar Direto 1/2 Hp Bivolt + Kit Pintura Amarelo 127/220v 60hz",
+      "rating": 5,
+      "commissionRate": 12,
+      "price": "R$ 514,73",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4050264139-b9a2214e.webp",
+      "affiliateLink": "https://meli.la/28XmxGz"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4072919145-6923bc99",
+      "source": "Mercado Livre",
+      "title": "Maquina Inversora Solda Fusion Arc 170a Bivolt + Acessórios Amarelo 127/220v",
+      "rating": 5,
+      "commissionRate": 12,
+      "price": "R$ 368,50",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4072919145-6923bc99.webp",
+      "affiliateLink": "https://meli.la/1rAgG3n"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6420490020-a0fc3e6c",
+      "source": "Mercado Livre",
+      "title": "Lixadeira Esmerilhadeira Profissional 4.1/2 Com Jogo 40 Pçs Amarelo 220v 60hz",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 170,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb6420490020-a0fc3e6c.webp",
+      "affiliateLink": "https://meli.la/2oZV3nF"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb5908287206-4d3de2c3",
+      "source": "Mercado Livre",
+      "title": "Furadeira Parafusadeira Sem Fio 3/8 Maleta + Kit Ferramentas",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 226,10",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb5908287206-4d3de2c3.webp",
+      "affiliateLink": "https://meli.la/2sQiL8R"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4560115247-3fd99cc8",
+      "source": "Mercado Livre",
+      "title": "Martelete Perfurador Rompedor 68v Com 2 Baterias Maleta Azul 127/220v 50 Hz/60 Hz",
+      "rating": 4.9,
+      "commissionRate": 12,
+      "price": "R$ 418,76",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4560115247-3fd99cc8.webp",
+      "affiliateLink": "https://meli.la/1Y9Eeq4"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4690296193-38fd6494",
+      "source": "Mercado Livre",
+      "title": "Mini Esmerilhadeira Lixadeira Angular 12v 660w 2 Baterias Amarelo 110v/220v 50/60hz",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 149,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb4690296193-38fd6494.webp",
+      "affiliateLink": "https://meli.la/25NoRi7"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb7075902546-9829ea6a",
+      "source": "Mercado Livre",
+      "title": "Compressor Ar 9l 110v 220v 3400rpm 1000w Profissional Amarelo 220v 60",
+      "rating": 4.8,
+      "commissionRate": 12,
+      "price": "R$ 689,54",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-mercado-livre-mlb7075902546-9829ea6a.webp",
+      "affiliateLink": "https://meli.la/1ztEcaZ"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22597320196-95a241cb",
+      "source": "Shopee",
+      "title": "Politriz e Esmirilhadeira Lixadeira eletrica portatil a bateria",
+      "rating": 5,
+      "commissionRate": 33,
+      "price": "R$ 314,10",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22597320196-95a241cb.webp",
+      "affiliateLink": "https://s.shopee.com.br/2BDXMYk92V"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-21699559831-7843a542",
+      "source": "Shopee",
+      "title": "Alicate CAT7 EZ Para Crimpagem de Cabo RJ45 / RJ11/12 profissional FRM-ACN702 EXBOM",
+      "rating": 4.9,
+      "commissionRate": 33,
+      "price": "R$ 51,75",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-21699559831-7843a542.webp",
+      "affiliateLink": "https://s.shopee.com.br/2g9nxUGTc1"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-11290569493-fe56e8ad",
+      "source": "Shopee",
+      "title": "Kit Terminal Ilhós Tubular 500 Peças 1,5 2,5 4 6mm Fio Cabo Elétrico Crimpagem",
+      "rating": 4.8,
+      "commissionRate": 33,
+      "price": "R$ 37,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-11290569493-fe56e8ad.webp",
+      "affiliateLink": "https://s.shopee.com.br/4LI1wYaWug"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-21455455470-590d15d8",
+      "source": "Shopee",
+      "title": "Mini Parafusadeira sem Fio Recarregável USB com Maleta 49 peças MQL-PFU49A EXBOM",
+      "rating": 4.8,
+      "commissionRate": 33,
+      "price": "R$ 59,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-21455455470-590d15d8.webp",
+      "affiliateLink": "https://s.shopee.com.br/AKZF5af36t"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-20499188318-9ef519d5",
+      "source": "Shopee",
+      "title": "Motosserra Elétrica Sem Fio Recarregável 6 polegada corte 15cm com 2 baterias 10000ma EXBOM",
+      "rating": 4.8,
+      "commissionRate": 33,
+      "price": "R$ 269,91",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-20499188318-9ef519d5.webp",
+      "affiliateLink": "https://s.shopee.com.br/20u7AHfi12"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22094378251-0039923a",
+      "source": "Shopee",
+      "title": "Foxlux Bomba D´agua Periferica 1/2 Cv 370w X 64.03 Cor Laranja Fase elétrica 220V",
+      "rating": 4.9,
+      "commissionRate": 31,
+      "price": "R$ 185,40",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22094378251-0039923a.webp",
+      "affiliateLink": "https://s.shopee.com.br/AAFotIb18L"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23798229434-957ac58d",
+      "source": "Shopee",
+      "title": "KIT BICO DE ALTA PRESSÃO COM ENGATE RÁPIDO E ADAPTADOR - FORCE LINE",
+      "rating": 4.6,
+      "commissionRate": 31,
+      "price": "R$ 28,41",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23798229434-957ac58d.webp",
+      "affiliateLink": "https://s.shopee.com.br/5Ar8w7tVhd"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22599380159-12a0506d",
+      "source": "Shopee",
+      "title": "Cinto Duplo Preto Solze Porta Parafusadeira Ferramentas + Multiuso",
+      "rating": 5,
+      "commissionRate": 28,
+      "price": "R$ 139,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22599380159-12a0506d.webp",
+      "affiliateLink": "https://s.shopee.com.br/3g2L9NPkyL"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22499171953-d32ac0ee",
+      "source": "Shopee",
+      "title": "Kit Pistola E Lança Para Lavadora Alta Pressão Multimarcas Powerwash Ews10 Uws10 Reposição",
+      "rating": 5,
+      "commissionRate": 28,
+      "price": "R$ 104,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22499171953-d32ac0ee.webp",
+      "affiliateLink": "https://s.shopee.com.br/9zwOh1WRb0"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-58207367744-2349c32e",
+      "source": "Shopee",
+      "title": "Martelete de impacto Rompedor Com 2 Baterias Perfurador Brushless 4 Em 1 Profissional Sem Fio",
+      "rating": 5,
+      "commissionRate": 28,
+      "price": "R$ 651,00",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-58207367744-2349c32e.webp",
+      "affiliateLink": "https://s.shopee.com.br/3g2L9OPDPZ"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-20797417922-f04ba5da",
+      "source": "Shopee",
+      "title": "Cinto Duplo Solze Verde Militar para ferramentas. Bolsa Multiuso + Coldre para parafusadeira +",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 118,91",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-20797417922-f04ba5da.webp",
+      "affiliateLink": "https://s.shopee.com.br/5fnPX4i8Z1"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22397663388-77540f29",
+      "source": "Shopee",
+      "title": "Engate Rápido c/ Espigão e Filtro para Lavadora Alta Pressão WAP",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 19,84",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22397663388-77540f29.webp",
+      "affiliateLink": "https://s.shopee.com.br/7VF3iS5onB"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23594340040-8338f55a",
+      "source": "Shopee",
+      "title": "Bomba D Agua Periférica 1/2 Cv 370w 60hz Monofásica Foxlux - 127W",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 175,10",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23594340040-8338f55a.webp",
+      "affiliateLink": "https://s.shopee.com.br/40fBY24ZtC"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22699146351-6697bb24",
+      "source": "Shopee",
+      "title": "Adaptador para Parafusadeira Encaixe 1/4 Angular Magnético Profissional",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 16,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22699146351-6697bb24.webp",
+      "affiliateLink": "https://s.shopee.com.br/3qLlLjbFMp"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23394297832-cbbae0d7",
+      "source": "Shopee",
+      "title": "Coletor de pó para Furadeira/Parafusadeira",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 14,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23394297832-cbbae0d7.webp",
+      "affiliateLink": "https://s.shopee.com.br/6pzMvFozGs"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22398321556-d83482b6",
+      "source": "Shopee",
+      "title": "Caneta Detectora De Tensão Com Alerta Sonoro 90V-1000V Teste Voltagem",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 18,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22398321556-d83482b6.webp",
+      "affiliateLink": "https://s.shopee.com.br/3B64YWXkBJ"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22197931739-73c78313",
+      "source": "Shopee",
+      "title": "Serra Circular Sem Fio 1200W Recarregável Com Motor Brushless 6 Polegadas 8 Discos MQL-SC1206",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 559,20",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22197931739-73c78313.webp",
+      "affiliateLink": "https://s.shopee.com.br/8AUkVikkEM"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-53955114848-87ec8eac",
+      "source": "Shopee",
+      "title": "Lixa 180 280 600 1200 2500 d'água kit 1 2 ou 3 folhas cada Grão Polimento Licha água Plásticos",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 25,71",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-53955114848-87ec8eac.webp",
+      "affiliateLink": "https://s.shopee.com.br/4qEIXbSETL"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-21899384773-167f8002",
+      "source": "Shopee",
+      "title": "Furadeira e Parafusadeira Sem Fio Recarregável 36V com 2 Baterias e Maleta MQL-PFX5600 EXBOM",
+      "rating": 4.9,
+      "commissionRate": 28,
+      "price": "R$ 229,50",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-21899384773-167f8002.webp",
+      "affiliateLink": "https://s.shopee.com.br/5Ar8wEGWTL"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23091201244-70d04fb1",
+      "source": "Shopee",
+      "title": "Aplicador de detergente lavadora de alta pressão electrolux",
+      "rating": 4.8,
+      "commissionRate": 28,
+      "price": "R$ 37,27",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23091201244-70d04fb1.webp",
+      "affiliateLink": "https://s.shopee.com.br/1gHGlnzsl1"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-45405300503-b6ab8026",
+      "source": "Shopee",
+      "title": "Lixa 180 400 1200 2000 3000 kit 1 2 ou 3 folhas de cada Grão Polimento Farol Licha Plásticos",
+      "rating": 4.8,
+      "commissionRate": 28,
+      "price": "R$ 27,96",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-45405300503-b6ab8026.webp",
+      "affiliateLink": "https://s.shopee.com.br/7VF3iX8Ksy"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22197450683-69514cbf",
+      "source": "Shopee",
+      "title": "Kit Ferro de Solda Exbom 60W Ajustável + 5 Pontas Suporte Profissional Eletrônica ajusta",
+      "rating": 4.7,
+      "commissionRate": 28,
+      "price": "R$ 49,90",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22197450683-69514cbf.webp",
+      "affiliateLink": "https://s.shopee.com.br/BSSz44uhs"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23692510990-8a4634d0",
+      "source": "Shopee",
+      "title": "Estojo Solze para ferramentas acolchoado, em lona reforçada, badisco, apmerímetro , multimetro.",
+      "rating": 4.7,
+      "commissionRate": 28,
+      "price": "R$ 72,93",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23692510990-8a4634d0.webp",
+      "affiliateLink": "https://s.shopee.com.br/6pzMvKATCH"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23899147716-fdbce435",
+      "source": "Shopee",
+      "title": "Bits Impacto Ponteiras Magnética Adaptador de soquete P/ Parafusadeira e furadeira",
+      "rating": 4.9,
+      "commissionRate": 25,
+      "price": "R$ 78,99",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23899147716-fdbce435.webp",
+      "affiliateLink": "https://s.shopee.com.br/3LPUktoC0k"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-21299385249-2b9d8588",
+      "source": "Shopee",
+      "title": "Kit Chaves De Precisão Magnético Profissional 152 Em 1 Com Estojo E Ventosa PRO-CKS152 EXBOM",
+      "rating": 5,
+      "commissionRate": 23,
+      "price": "R$ 98,10",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-21299385249-2b9d8588.webp",
+      "affiliateLink": "https://s.shopee.com.br/30meMItJrx"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-18799904113-efde24b4",
+      "source": "Shopee",
+      "title": "Parafusadeira Bivolt Furadeira Impacto 2 Bateria 21v Sem Fio",
+      "rating": 5,
+      "commissionRate": 23,
+      "price": "R$ 224,93",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-18799904113-efde24b4.webp",
+      "affiliateLink": "https://s.shopee.com.br/9pcyVGrRTO"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-58260090352-0a50e6b7",
+      "source": "Shopee",
+      "title": "Chave De Impacto 48v Brushless Portatil Sem Fio 2 Soquete",
+      "rating": 5,
+      "commissionRate": 23,
+      "price": "R$ 186,89",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-58260090352-0a50e6b7.webp",
+      "affiliateLink": "https://s.shopee.com.br/6pzMvmL9qg"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23194391407-3b4d7201",
+      "source": "Shopee",
+      "title": "Chave De Impacto Potente Catraca 1/2 Parafusadeira Furadeira",
+      "rating": 5,
+      "commissionRate": 23,
+      "price": "R$ 712,43",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23194391407-3b4d7201.webp",
+      "affiliateLink": "https://s.shopee.com.br/4VbS9UqB2f"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-23198377321-a636d2ec",
+      "source": "Shopee",
+      "title": "Kit Disco Diamantado e Serra Circular C/4 Peças 110 x 20mm Para Serra Mármore",
+      "rating": 4.9,
+      "commissionRate": 23,
+      "price": "R$ 38,64",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-23198377321-a636d2ec.webp",
+      "affiliateLink": "https://s.shopee.com.br/6pzMvncLvb"
+    },
+    {
+      "id": "ferramentas-20260724-shopee-22998659730-546a612d",
+      "source": "Shopee",
+      "title": "Kit Boinas Polimento Automotivo 5″ Corte + Refino + Lustro Compatível Politriz Rotativa",
+      "rating": 4.9,
+      "commissionRate": 23,
+      "price": "R$ 125,91",
+      "image": "public/images/anuncios/ferramentas-20260724/ferramentas-20260724-shopee-22998659730-546a612d.webp",
+      "affiliateLink": "https://s.shopee.com.br/4LI1xD7rud"
+    }
+  ]
+}

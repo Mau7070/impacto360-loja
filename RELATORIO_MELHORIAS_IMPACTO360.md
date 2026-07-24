@@ -562,3 +562,12 @@ Validações executadas nesta rodada:
 - Nota minima: 4,5.
 - Links, comissoes, precos e imagens verificados antes da publicacao.
 - Backup: backups/20260724T124904-pre-importacao-academia-100
+
+## Importacao de 200 maquinas e ferramentas - 2026-07-24
+
+- Amazon: 85
+- Mercado Livre: 85
+- Shopee: 30
+- Nota minima: 4,5.
+- Links, comissoes, precos e imagens verificados antes da importacao.
+- Backup: backups/20260724T144124-pre-importacao-maquinas-ferramentas-200
