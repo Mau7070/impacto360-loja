@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const siteUrl = "https://impacto360afiliado.com.br";
 const outputRoots = [root, path.join(root, "pacote-github-pages-pronto")];
+const priceValidityDays = Math.max(1, Number(process.env.IMPACTO360_PRICE_VALIDITY_DAYS || 7));
 
 const linkFields = [
   "linkCompra",
@@ -20,7 +21,11 @@ const linkFields = [
 const imageFields = ["fotoPrincipal", "imagemPrincipal", "imagem", "image", "imageUrl", "thumbnail", "foto", "productImage", "src"];
 const ratingFields = ["avaliacao", "rating", "reviewRating", "nota"];
 const availabilityFields = ["disponibilidade", "estoque", "statusDisponibilidade"];
-const lastCheckFields = ["ultimaVerificacao", "ultimaRevisao", "lastChecked", "dataUltimaVerificacao"];
+const lastCheckFields = [
+  "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
+  "ultimaVerificacao", "ultimaRevisao", "lastChecked",
+  "dataUltimaVerificacao", "atualizadoEm", "updatedAt",
+];
 let productSlugById = new Map();
 
 function readJson(file) {
@@ -75,9 +80,9 @@ function getProductImage(product) {
 }
 
 function productIsPublishable(product) {
-  const status = normalizeText(firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao"]));
-  if (/rascunho|revisao|pendente|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
-  if (product?.aprovadoParaPublicacao === false) return false;
+  const status = normalizeText(firstFilled(product, ["status", "statusPublicacao", "auditoriaPublicacao", "statusAnuncio"]));
+  if (/rascunho|revisao|pendente|duplicado|inativo|quarentena|excluido|removido|oculto|bloqueado/.test(status)) return false;
+  if (product?.aprovadoParaPublicacao === false || product?.publicar === false) return false;
   return isUsableLink(getProductLink(product))
     && Boolean(getProductImage(product));
 }
@@ -106,6 +111,42 @@ function numericPrice(value) {
   const raw = String(value || "").replace(/[^\d,.-]/g, "").replace(/\./g, "").replace(",", ".");
   const number = Number(raw);
   return Number.isFinite(number) && number > 0 ? number.toFixed(2) : "";
+}
+
+function deduplicatePublishableProducts(products) {
+  const ids = new Set();
+  const links = new Set();
+  return products.filter(product => {
+    const id = String(product.id || "").trim();
+    const link = getProductLink(product).replace(/#.*$/, "").toLowerCase();
+    if (!id || ids.has(id) || !link || links.has(link)) return false;
+    ids.add(id);
+    links.add(link);
+    return true;
+  });
+}
+
+function priceFreshness(product) {
+  const rawDate = firstFilled(product, lastCheckFields);
+  const checkedAt = rawDate ? new Date(rawDate) : null;
+  if (!checkedAt || Number.isNaN(checkedAt.getTime())) {
+    return { current: false, checkedAt: "", validUntil: "" };
+  }
+  const validUntil = new Date(checkedAt.getTime() + priceValidityDays * 86_400_000);
+  return {
+    current: validUntil.getTime() >= Date.now(),
+    checkedAt: checkedAt.toISOString(),
+    validUntil: validUntil.toISOString(),
+  };
+}
+
+function validSchemaBrand(value) {
+  const brand = String(value || "").trim();
+  const normalized = normalizeText(brand);
+  if (!normalized || brand.length > 80) return "";
+  if (/^(amazon|mercado livre|shopee|hotmart|loja parceira)$/.test(normalized)) return "";
+  if (/nao informad|sem marca|generico|informacao nao especificada/.test(normalized)) return "";
+  return brand;
 }
 
 function normalizeText(value) {
@@ -332,11 +373,16 @@ function renderRelatedProducts(product, products) {
   return `<section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        ${related.map(item => `<a class="related-card" href="/produto/${htmlEscape(productSlug(item))}/">
+        ${related.map(item => {
+          const relatedPrice = priceFreshness(item).current
+            ? displayPriceLabel(firstFilled(item, ["price", "preco", "precoAtual"]))
+            : "Consulte o preço no parceiro";
+          return `<a class="related-card" href="/produto/${htmlEscape(productSlug(item))}/">
           <img src="${htmlEscape(webPath(getProductImage(item)))}" alt="${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}">
           <strong>${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}</strong>
-          <span>${htmlEscape(displayPriceLabel(firstFilled(item, ["price", "preco", "precoAtual"])))}</span>
-        </a>`).join("")}
+          <span>${htmlEscape(relatedPrice)}</span>
+        </a>`;
+        }).join("")}
       </div>
     </section>`;
 }
@@ -345,8 +391,9 @@ function productPage(product, store, products) {
   const title = cleanCommercialTitle(firstFilled(product, ["name", "nome"]) || "Produto Impacto360");
   const description = commercialDescription(product, store);
   const rawPriceLabel = firstFilled(product, ["price", "preco", "precoAtual"]);
-  const priceLabel = displayPriceLabel(rawPriceLabel);
-  const price = numericPrice(rawPriceLabel);
+  const priceAudit = priceFreshness(product);
+  const priceLabel = priceAudit.current ? displayPriceLabel(rawPriceLabel) : "Consulte o preço no parceiro";
+  const price = priceAudit.current ? numericPrice(rawPriceLabel) : "";
   const realImage = webPath(getProductImage(product));
   const image = realImage;
   const link = getProductLink(product);
@@ -369,22 +416,26 @@ function productPage(product, store, products) {
     "@type": "Product",
     name: title,
     description,
-    brand: firstFilled(product, ["brand", "marca"]) || storeName,
     category,
     url: productUrl(product),
-    offers: {
+  };
+  const schemaBrand = validSchemaBrand(firstFilled(product, ["brand", "marca"]));
+  if (schemaBrand) schema.brand = { "@type": "Brand", name: schemaBrand };
+  if (realImage) schema.image = realImage;
+  if (price) {
+    schema.offers = {
       "@type": "Offer",
       url: link,
+      price,
       priceCurrency: "BRL",
       seller: {
         "@type": "Organization",
         name: storeName,
       },
-    },
-  };
-  if (realImage) schema.image = realImage;
-  if (price) schema.offers.price = price;
-  if (schemaAvailabilityUrl) schema.offers.availability = schemaAvailabilityUrl;
+    };
+    if (schemaAvailabilityUrl) schema.offers.availability = schemaAvailabilityUrl;
+    if (priceAudit.validUntil) schema.offers.priceValidUntil = priceAudit.validUntil.slice(0, 10);
+  }
   if (ratingValue && reviewCount) {
     schema.aggregateRating = {
       "@type": "AggregateRating",
@@ -529,8 +580,18 @@ function writeProductPages(base, products, storesById) {
 }
 
 function writeSitemap(base, products) {
+  const categorySlugs = [
+    "celulares-e-tecnologia", "casa-e-cozinha", "eletrodomesticos",
+    "games-e-setup", "esporte-e-fitness", "moda-e-calcados", "ferramentas",
+    "brinquedos-e-escolar", "livros-papelaria-e-fe", "montaria-e-cavalgada",
+    "auto-e-moto", "beleza-e-cuidados", "pets", "cursos-e-educacao",
+    "servicos-digitais", "ofertas-e-parceiros",
+  ];
   const urls = [
     { loc: `${siteUrl}/`, priority: "1.0" },
+    { loc: `${siteUrl}/lojas/`, priority: "0.8" },
+    ...stores.map(store => ({ loc: `${siteUrl}/loja/${encodeURIComponent(store.id)}/`, priority: "0.7" })),
+    ...categorySlugs.map(slug => ({ loc: `${siteUrl}/categoria/${slug}/`, priority: "0.8" })),
     ...products.map(product => ({ loc: productUrl(product), priority: "0.7" })),
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -546,7 +607,9 @@ ${urls.map(item => `  <url>
 
 const stores = readJson("dados/stores.json");
 const storesById = new Map(stores.map(store => [store.id, store]));
-const products = readJson("dados/products.json").filter(productIsPublishable);
+const products = deduplicatePublishableProducts(
+  readJson("dados/products.json").filter(productIsPublishable),
+);
 buildProductSlugs(products);
 
 for (const base of outputRoots) {

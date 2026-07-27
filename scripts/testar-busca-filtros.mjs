@@ -106,10 +106,26 @@ check("filtro de marca Bosch funciona", evaluate(`
 check("produtos de ferramentas estao categorizados", evaluate(`
   state.products.filter(product => categoryForProduct(product)?.slug === "ferramentas").length > 0
 `));
+check("188 produtos publicos em Casa e Cozinha", evaluate(`
+  state.products.filter(product => categoryForProduct(product)?.slug === "casa-e-cozinha").length === 188
+`));
+check("200 ferramentas recentes no ambiente correto", evaluate(`
+  state.products.filter(product => /^ferramentas-20260724-/.test(product.id)).length === 200
+  && state.products.filter(product => /^ferramentas-20260724-/.test(product.id))
+    .every(product => categoryForProduct(product)?.slug === "ferramentas")
+`));
+
+const availabilityCounts = evaluate(`
+  [...countValues(state.products.map(availabilityFilter)).entries()]
+`);
+check(
+  "filtro de disponibilidade cobre todo o catalogo",
+  availabilityCounts.reduce((sum, [, value]) => sum + value, 0) === catalog.length,
+);
 
 const clearHref = evaluate(`
   clearSearchFiltersHref(new URL(
-    "https://impacto360afiliado.com.br/buscar/?q=furadeira&categoria=ferramentas&loja=impacto-ferramentas&parceiro=Amazon&marca=Bosch&preco=100-500&avaliacao=4&oferta=1&ordem=menor-preco&favoritos=1"
+    "https://impacto360afiliado.com.br/buscar/?q=furadeira&categoria=ferramentas&loja=impacto-ferramentas&parceiro=Amazon&marca=Bosch&preco=100-500&avaliacao=4&disponibilidade=consultar&oferta=1&ordem=menor-preco&favoritos=1"
   ))
 `);
 check(
