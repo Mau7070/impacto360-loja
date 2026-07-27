@@ -71,7 +71,8 @@ check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !h
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("setInterval("));
 check("sem linguagem tecnica antiga", !html.includes("VITRINE EM ROTACAO") && !app.includes("produtos prontos") && !app.includes("Mais Vendidos"));
-check("integracoes administrativas isoladas da loja publica", html.includes("loadAdminOnlyInAdminArea") && html.includes('startsWith("/admin/")'));
+check("integracoes administrativas removidas da loja publica", !html.includes("impacto360-admin-robos.js") && !html.includes("loadAdminOnlyInAdminArea"));
+check("stubs administrativos sem credencial embarcada", !read("integracoes/impacto360-admin-robos.js").includes("type=\"password\"") && !read("integracoes/impacto360-banners-admin.js").includes("type=\"password\""));
 check("medicao de anuncios nao bloqueia o conteudo inicial", html.includes("loadMeasurementWithoutBlockingContent") && !html.includes('<script async src="https://www.googletagmanager.com'));
 check("hero comercial correto", app.includes("Ofertas selecionadas nas melhores lojas") && app.includes("Ver ofertas de hoje"));
 check("hero principal disponivel antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("<h1>Ofertas selecionadas nas melhores lojas</h1>"));
@@ -100,12 +101,14 @@ check("busca trata sinonimos e palavras de ligacao", app.includes("SEARCH_ALIASE
 check("sugestoes com debounce", app.includes("280") && app.includes('role="option"'));
 check("navegacao de sugestoes por teclado", app.includes('"ArrowDown"') && app.includes('"ArrowUp"') && app.includes('"Escape"'));
 check("filtros principais", ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "oferta"].every(filter => app.includes(`data-filter="${filter}"`)));
+check("filtro de disponibilidade", app.includes('data-filter="disponibilidade"') && app.includes("availabilityFilter"));
 check("filtros exibem contagens auditaveis", app.includes("countValues") && app.includes("priceCounts") && app.includes("ratingCounts"));
 check("filtro inclui produtos sem preco cadastrado", app.includes('["sem-preco", "Preço no parceiro"]'));
 check("limpar filtros preserva o termo pesquisado", app.includes("clearSearchFiltersHref") && app.includes('clean.searchParams.delete(key)'));
 check("marcas genericas e marketplaces ocultados", app.includes("validBrand") && app.includes("informacao nao especificada"));
 check("categorias e lojas paginadas", app.includes("data-collection-load-more") && app.includes("visibleProducts = products.slice(0, state.visibleLimit)"));
 check("ordenacao sem ranking inventado", app.includes("Mais relevantes") && app.includes("Menor preço") && app.includes("Melhor avaliados") && !app.includes("Mais procurados"));
+check("ordenacao alfabetica disponivel", app.includes('["nome", "Nome"]'));
 check("favoritos locais preservados", app.includes("impacto360Favorites") && app.includes("localStorage"));
 check("historico local com limpeza", app.includes("impacto360SearchHistory") && app.includes("clearSearchHistory"));
 check("pesquisa marcada noindex", app.includes('robots: "noindex,follow"'));
@@ -114,9 +117,14 @@ check("skip link e rotulos acessiveis", html.includes("Pular para o conteúdo pr
 check("foco visivel", css.includes(":focus-visible") && css.includes("--color-focus: #2563EB"));
 check("movimento reduzido respeitado", css.includes("prefers-reduced-motion"));
 check("CTA de produto consistente", app.includes('class="btn ${actionClass}"') && css.includes(".btn-offer"));
+check("CTA identifica link afiliado", app.includes('data-affiliate-link="${escapeAttr(product.link)}"'));
+check("preco antigo nao cria linha vazia", !app.includes('previousPrice ? escapeHtml(previousPrice) : "&nbsp;"'));
+check("preco nao verificado usa consulta no parceiro", app.includes("Consulte o preço no parceiro"));
 check("CTA laranja com contraste reforcado", css.includes("--color-accent-active: #C2410C") && css.includes("--color-accent-contrast: #9A3412"));
 check("imagens de produto quadradas", css.includes(".product-media") && css.includes("aspect-ratio: 1"));
 check("imagens de produto carregadas sob demanda", app.includes('data-src="${escapeAttr(image)}"') && app.includes("IntersectionObserver") && app.includes('rootMargin: "400px 0px"'));
+check("vitrines mobile sem carrossel horizontal", !css.includes("grid-auto-columns: 76vw") && app.includes("activeCategories"));
+check("filtros mobile com sobreposicao e foco", css.includes(".filter-backdrop") && app.includes("focusableElements") && app.includes('event.key === "Escape"'));
 check("selecao diversa sem ordenacao quadratica", app.includes("bucketsByKey") && !app.includes("source.sort("));
 check("indice fuzzy calculado somente quando necessario", app.includes("(product._words = searchTokens("));
 
@@ -126,6 +134,8 @@ for (const relative of [
   "assets/storefront-excellence.css",
   "assets/storefront-excellence.js",
   "dados/catalogo-publico.json",
+  "integracoes/impacto360-admin-robos.js",
+  "integracoes/impacto360-banners-admin.js",
 ]) {
   check(`pacote sincronizado ${relative}`, exists(relative, packageRoot) && hash(relative) === hash(relative, packageRoot));
 }

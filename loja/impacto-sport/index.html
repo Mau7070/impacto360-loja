@@ -107,6 +107,7 @@
         <a href="/#como-comprar" data-route="/#como-comprar">Como comprar</a>
       </div>
     </nav>
+    <button class="menu-overlay" type="button" data-menu-overlay aria-label="Fechar menu" tabindex="-1"></button>
   </header>
 
   <main id="conteudo" tabindex="-1">
@@ -172,16 +173,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20260723-1"></script>
-  <script>
-    (function loadAdminOnlyInAdminArea() {
-      const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
-      if (!routedPath.startsWith("/admin/")) return;
-      const script = document.createElement("script");
-      script.src = "/integracoes/impacto360-admin-robos.js?v=20260723-1";
-      script.defer = true;
-      document.body.appendChild(script);
-    })();
-  </script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20260727-1"></script>
 </body>
 </html>

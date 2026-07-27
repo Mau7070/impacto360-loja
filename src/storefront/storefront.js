@@ -1,7 +1,7 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260723-2";
-const STORES_URL = "/dados/stores.json?v=20260723-2";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260727-1";
+const STORES_URL = "/dados/stores.json?v=20260727-1";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const PAGE_SIZE = 24;
@@ -17,6 +17,8 @@ const state = {
   searchTimer: null,
   routeRenderId: 0,
   imageObserver: null,
+  filterReturnFocus: null,
+  menuReturnFocus: null,
 };
 
 const categoryDefinitions = [
@@ -393,7 +395,28 @@ function money(value, fallback = "") {
   if (Number.isFinite(value) && value > 0) {
     return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
   }
-  return text(fallback) || "Ver preço no parceiro";
+  return text(fallback) || "Consulte o preço no parceiro";
+}
+
+function dateLabel(value) {
+  const raw = text(value);
+  if (!raw) return "";
+  const date = new Date(raw);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleDateString("pt-BR", { timeZone: "UTC" });
+}
+
+function availabilityLabel(product) {
+  const value = text(product.availability);
+  if (!value || /conferir|consultar|parceiro/i.test(value)) return "Consulte a disponibilidade";
+  return value;
+}
+
+function availabilityFilter(product) {
+  const value = normalize(product.availability);
+  if (/indisponivel|esgotado|fora de estoque|sem estoque/.test(value)) return "indisponivel";
+  if (/disponivel|em estoque|pronta entrega|ultima unidade|ultimas unidades/.test(value)) return "disponivel";
+  return "consultar";
 }
 
 function priceRange(value) {
@@ -583,9 +606,10 @@ function productCard(product, index = 0, eagerCount = 0) {
   const actionClass = quote ? "btn-service" : "btn-offer";
   const currentPrice = money(product.priceValue, product.price);
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
+  const updatedAt = dateLabel(product.priceUpdatedAt || product.updatedAt);
   const rating = product.rating
     ? `<span aria-label="Avaliação ${product.rating.toFixed(1)} de 5">★ ${product.rating.toFixed(1).replace(".", ",")}</span>`
-    : '<span class="rating-empty" aria-hidden="true">Sem avaliação</span>';
+    : "";
   const image = assetUrl(product.image);
   const eager = index < eagerCount;
   return `
@@ -615,9 +639,13 @@ function productCard(product, index = 0, eagerCount = 0) {
       <div class="product-body">
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
         <h3><a href="${escapeAttr(internalPath)}">${escapeHtml(product.name)}</a></h3>
-        <div class="rating">${rating}</div>
+        <div class="product-facts">
+          <span>${escapeHtml(availabilityLabel(product))}</span>
+          ${rating ? `<span class="rating">${rating}</span>` : ""}
+          ${updatedAt ? `<span>Preço verificado em ${escapeHtml(updatedAt)}</span>` : ""}
+        </div>
         <div class="price-block">
-          <span class="old-price">${previousPrice ? escapeHtml(previousPrice) : "&nbsp;"}</span>
+          ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
           <strong class="current-price">${escapeHtml(currentPrice)}</strong>
         </div>
         <a
@@ -625,7 +653,7 @@ function productCard(product, index = 0, eagerCount = 0) {
           href="${escapeAttr(product.link)}"
           target="_blank"
           rel="noopener noreferrer sponsored"
-          data-affiliate-link
+          data-affiliate-link="${escapeAttr(product.link)}"
           data-link-plataforma="${escapeAttr(product.link)}"
           data-product-name="${escapeAttr(product.name)}"
         >${actionLabel}</a>
@@ -715,11 +743,12 @@ function renderHome() {
     ...state.products.filter(product => product.featured),
     ...state.products.filter(product => product.offer),
     ...state.products,
-  ], 4);
-  const discovery = diverseProducts(state.products.filter(product => !featured.some(item => item.id === product.id)), 4);
+  ], 8);
+  const discovery = diverseProducts(state.products.filter(product => !featured.some(item => item.id === product.id)), 8);
   const heroProducts = featured.slice(0, 4);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean);
   const services = serviceStoreIds.map(id => state.storeById.get(id)).filter(Boolean);
+  const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0);
   const heroProductMarkup = heroProducts.map(product => `
     <span class="hero-product">
       <img src="${LAZY_IMAGE_PLACEHOLDER}" data-hero-src="${escapeAttr(assetUrl(product.image))}" alt="" loading="lazy" decoding="async">
@@ -757,17 +786,17 @@ function renderHome() {
         </a>`).join("")}
     </div>
 
-    <section class="section section-white">
-      <div class="shell">
-        ${sectionHeader("Navegação rápida", "Compre por categoria", "Escolha o que procura e encontre produtos de diferentes lojas em um só lugar.", "/lojas/", "Ver todas as lojas")}
-        <div class="category-grid">${categoryDefinitions.map(categoryCard).join("")}</div>
-      </div>
-    </section>
-
     <section class="section section-soft">
       <div class="shell">
         ${sectionHeader("Curadoria Impacto360", "Ofertas em destaque", "Produtos selecionados e atualizados com frequência.", "/buscar/?oferta=1", "Ver todas as ofertas")}
-        ${productGrid(featured)}
+        ${productGrid(featured, "product-grid", 2)}
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="shell">
+        ${sectionHeader("Navegação rápida", "Compre por categoria", "Mostramos somente categorias que têm produtos disponíveis.", "/lojas/", "Ver todas as lojas")}
+        <div class="category-grid">${activeCategories.map(categoryCard).join("")}</div>
       </div>
     </section>
 
@@ -876,9 +905,97 @@ function renderAllStores(routeUrl) {
     </section>`;
 }
 
-function renderCategory(category) {
-  const products = categoryProducts(category);
+function collectionOptions(products) {
+  const categoryCounts = countValues(products.map(product => categoryForProduct(product)?.slug).filter(Boolean));
+  const storeCounts = countValues(products.map(product => product.storeId).filter(Boolean));
+  const partnerCounts = countValues(products.map(partnerName));
+  const brandCounts = countValues(products.map(product => validBrand(product.brand)).filter(Boolean));
+  const priceCounts = countValues(products.map(product => priceRange(product.priceValue)));
+  const availabilityCounts = countValues(products.map(availabilityFilter));
+  return {
+    categories: [...categoryCounts.keys()],
+    stores: state.stores.filter(store => storeCounts.has(store.id)),
+    partners: [...partnerCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR")),
+    brands: [...brandCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR")),
+    categoryCounts,
+    storeCounts,
+    partnerCounts,
+    brandCounts,
+    priceCounts,
+    availabilityCounts,
+    offerCount: products.filter(product => product.offer).length,
+    ratingCounts: new Map([
+      [4, products.filter(product => Number(product.rating || 0) >= 4).length],
+      [3, products.filter(product => Number(product.rating || 0) >= 3).length],
+    ]),
+  };
+}
+
+function sortProducts(products, sort) {
+  if (sort === "nome") products.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  if (sort === "menor-preco") products.sort((a, b) => (a.priceValue ?? Infinity) - (b.priceValue ?? Infinity));
+  if (sort === "maior-preco") products.sort((a, b) => (b.priceValue ?? -1) - (a.priceValue ?? -1));
+  if (sort === "recentes") products.sort((a, b) => text(b.publishedAt || b.updatedAt).localeCompare(text(a.publishedAt || a.updatedAt)));
+  if (sort === "melhor-avaliados") products.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  return products;
+}
+
+function filteredCollection(sourceProducts, currentUrl) {
+  const selectedCategory = currentUrl.searchParams.get("categoria") || "";
+  const selectedStore = currentUrl.searchParams.get("loja") || "";
+  const selectedPartner = currentUrl.searchParams.get("parceiro") || "";
+  const selectedBrand = currentUrl.searchParams.get("marca") || "";
+  const selectedPrice = currentUrl.searchParams.get("preco") || "";
+  const selectedRating = Number(currentUrl.searchParams.get("avaliacao") || 0);
+  const selectedAvailability = currentUrl.searchParams.get("disponibilidade") || "";
+  const offerOnly = currentUrl.searchParams.get("oferta") === "1";
+  const sort = currentUrl.searchParams.get("ordem") || "relevancia";
+  let products = [...sourceProducts];
+  if (selectedCategory) products = products.filter(product => categoryForProduct(product)?.slug === selectedCategory);
+  if (selectedStore) products = products.filter(product => product.storeId === selectedStore);
+  if (selectedPartner) products = products.filter(product => normalize(partnerName(product)) === normalize(selectedPartner));
+  if (selectedBrand) products = products.filter(product => normalize(validBrand(product.brand)) === normalize(selectedBrand));
+  if (selectedPrice) products = products.filter(product => priceRange(product.priceValue) === selectedPrice);
+  if (selectedRating) products = products.filter(product => Number(product.rating || 0) >= selectedRating);
+  if (selectedAvailability) products = products.filter(product => availabilityFilter(product) === selectedAvailability);
+  if (offerOnly) products = products.filter(product => product.offer);
+  sortProducts(products, sort);
+  return {
+    products,
+    sort,
+    selectedCategory,
+    selectedStore,
+    selectedPartner,
+    selectedBrand,
+    selectedPrice,
+    selectedRating,
+    selectedAvailability,
+    offerOnly,
+  };
+}
+
+function collectionSortSelect(sort) {
+  return `<label>
+    <span class="sr-only">Ordenar resultados</span>
+    <select class="sort-select" data-sort>
+      ${[
+        ["relevancia", "Mais relevantes"],
+        ["nome", "Nome"],
+        ["menor-preco", "Menor preço"],
+        ["maior-preco", "Maior preço"],
+        ["recentes", "Mais recentes"],
+        ["melhor-avaliados", "Melhor avaliados"],
+      ].map(([value, label]) => `<option value="${value}" ${sort === value ? "selected" : ""}>${label}</option>`).join("")}
+    </select>
+  </label>`;
+}
+
+function renderCategory(category, currentUrl = routeUrl()) {
+  const sourceProducts = categoryProducts(category);
+  const collection = filteredCollection(sourceProducts, currentUrl);
+  const products = collection.products;
   const visibleProducts = products.slice(0, state.visibleLimit);
+  const options = collectionOptions(sourceProducts);
   setMeta({
     title: `${category.label} | Impacto360 Afiliado`,
     description: `Encontre produtos de ${category.label.toLowerCase()} selecionados em lojas parceiras da Impacto360.`,
@@ -888,17 +1005,31 @@ function renderCategory(category) {
   appRoot().innerHTML = `
     ${pageHero(category.label, category.description, [["Início", "/"], ["Categorias", "/#categorias"], [category.label, ""]])}
     <section class="section">
-      <div class="shell">
-        <div class="results-toolbar"><p><strong>${products.length}</strong> ${products.length === 1 ? "produto encontrado" : "produtos encontrados"}</p></div>
-        ${products.length ? productGrid(diverseProducts(visibleProducts, visibleProducts.length)) : emptyState(category.label)}
+      <div class="shell results-layout">
+        ${searchFilters({
+          ...collection, ...options, clearHref: clearSearchFiltersHref(currentUrl),
+          showCategory: false, showStore: true,
+        })}
+        <div>
+        <h2 class="sr-only">Produtos de ${escapeHtml(category.label)}</h2>
+        <div class="results-toolbar">
+          <p><strong>${products.length}</strong> ${products.length === 1 ? "produto encontrado" : "produtos encontrados"}</p>
+          <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-toggle>Filtros</button>
+          ${collectionSortSelect(collection.sort)}
+        </div>
+        ${products.length ? productGrid(diverseProducts(visibleProducts, visibleProducts.length), "product-grid", 2) : emptyState(category.label)}
         ${products.length > visibleProducts.length ? `<div class="load-more"><button class="btn btn-secondary" type="button" data-collection-load-more>Carregar mais produtos</button></div>` : ""}
+        </div>
       </div>
     </section>`;
 }
 
-function renderStore(store) {
-  const products = state.products.filter(product => product.storeId === store.id);
+function renderStore(store, currentUrl = routeUrl()) {
+  const sourceProducts = state.products.filter(product => product.storeId === store.id);
+  const collection = filteredCollection(sourceProducts, currentUrl);
+  const products = collection.products;
   const visibleProducts = products.slice(0, state.visibleLimit);
+  const options = collectionOptions(sourceProducts);
   setMeta({
     title: `${store.name} | Impacto360 Afiliado`,
     description: text(store.description).slice(0, 155) || `Conheça a loja ${store.name} na Impacto360 Afiliado.`,
@@ -921,10 +1052,21 @@ function renderStore(store) {
       </div>
     </section>
     <section class="section">
-      <div class="shell">
+      <div class="shell results-layout">
+        ${searchFilters({
+          ...collection, ...options, clearHref: clearSearchFiltersHref(currentUrl),
+          showCategory: true, showStore: false,
+        })}
+        <div>
         ${sectionHeader("Vitrine da loja", "Produtos disponíveis", `${products.length} ${products.length === 1 ? "opção selecionada" : "opções selecionadas"} com compra no parceiro.`)}
-        ${products.length ? productGrid(visibleProducts) : emptyState(store.name)}
+        <div class="results-toolbar">
+          <p><strong>${products.length}</strong> ${products.length === 1 ? "produto" : "produtos"}</p>
+          <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-toggle>Filtros</button>
+          ${collectionSortSelect(collection.sort)}
+        </div>
+        ${products.length ? productGrid(visibleProducts, "product-grid", 2) : emptyState(store.name)}
         ${products.length > visibleProducts.length ? `<div class="load-more"><button class="btn btn-secondary" type="button" data-collection-load-more>Carregar mais produtos</button></div>` : ""}
+        </div>
       </div>
     </section>`;
 }
@@ -955,6 +1097,7 @@ function renderSearch(routeUrl) {
   const selectedBrand = routeUrl.searchParams.get("marca") || "";
   const selectedPrice = routeUrl.searchParams.get("preco") || "";
   const selectedRating = Number(routeUrl.searchParams.get("avaliacao") || 0);
+  const selectedAvailability = routeUrl.searchParams.get("disponibilidade") || "";
   const sort = routeUrl.searchParams.get("ordem") || "relevancia";
   const favorites = favoriteSet();
 
@@ -968,7 +1111,9 @@ function renderSearch(routeUrl) {
   if (selectedBrand) ranked = ranked.filter(item => normalize(validBrand(item.product.brand)) === normalize(selectedBrand));
   if (selectedPrice) ranked = ranked.filter(item => priceRange(item.product.priceValue) === selectedPrice);
   if (selectedRating) ranked = ranked.filter(item => Number(item.product.rating || 0) >= selectedRating);
+  if (selectedAvailability) ranked = ranked.filter(item => availabilityFilter(item.product) === selectedAvailability);
 
+  if (sort === "nome") ranked.sort((a, b) => a.product.name.localeCompare(b.product.name, "pt-BR"));
   if (sort === "menor-preco") ranked.sort((a, b) => (a.product.priceValue ?? Infinity) - (b.product.priceValue ?? Infinity));
   if (sort === "maior-preco") ranked.sort((a, b) => (b.product.priceValue ?? -1) - (a.product.priceValue ?? -1));
   if (sort === "recentes") ranked.sort((a, b) => text(b.product.publishedAt || b.product.updatedAt).localeCompare(text(a.product.publishedAt || a.product.updatedAt)));
@@ -992,6 +1137,7 @@ function renderSearch(routeUrl) {
   const partnerCounts = countValues(state.products.map(partnerName));
   const brandCounts = countValues(state.products.map(product => validBrand(product.brand)).filter(Boolean));
   const priceCounts = countValues(state.products.map(product => priceRange(product.priceValue)));
+  const availabilityCounts = countValues(state.products.map(availabilityFilter));
   const categories = [...categoryCounts.keys()];
   const stores = state.stores.filter(store => storeCounts.has(store.id));
   const partners = [...partnerCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
@@ -1003,9 +1149,9 @@ function renderSearch(routeUrl) {
     <section class="section">
       <div class="shell results-layout">
         ${searchFilters({
-          selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice, selectedRating,
+          selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice, selectedRating, selectedAvailability,
           offerOnly, categories, stores, partners, brands, categoryCounts, storeCounts, partnerCounts,
-          brandCounts, priceCounts, clearHref,
+          brandCounts, priceCounts, availabilityCounts, clearHref, showCategory: true, showStore: true,
           offerCount: state.products.filter(product => product.offer).length,
           ratingCounts: new Map([
             [4, state.products.filter(product => Number(product.rating || 0) >= 4).length],
@@ -1013,6 +1159,7 @@ function renderSearch(routeUrl) {
           ]),
         })}
         <div>
+          <h2 class="sr-only">Produtos encontrados</h2>
           <div class="results-toolbar">
             <p><strong>${ranked.length}</strong> ${ranked.length === 1 ? "produto" : "produtos"}</p>
             <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-toggle>Filtros</button>
@@ -1021,6 +1168,7 @@ function renderSearch(routeUrl) {
               <select class="sort-select" data-sort>
                 ${[
                   ["relevancia", "Mais relevantes"],
+                  ["nome", "Nome"],
                   ["menor-preco", "Menor preço"],
                   ["maior-preco", "Maior preço"],
                   ["recentes", "Mais recentes"],
@@ -1029,7 +1177,7 @@ function renderSearch(routeUrl) {
               </select>
             </label>
           </div>
-          ${ranked.length ? productGrid(products) : emptyState(query || title)}
+          ${ranked.length ? productGrid(products, "product-grid", 2) : emptyState(query || title)}
           ${ranked.length > products.length ? `<div class="load-more"><button class="btn btn-secondary" type="button" data-load-more>Carregar mais produtos</button></div>` : ""}
           ${!query && !favoritesOnly ? recentSearchesBlock() : ""}
         </div>
@@ -1040,13 +1188,16 @@ function renderSearch(routeUrl) {
 function searchFilters(options) {
   const {
     selectedCategory, selectedStore, selectedPartner, selectedBrand,
-    selectedPrice, selectedRating, offerOnly, categories, stores, partners, brands,
+    selectedPrice, selectedRating, selectedAvailability, offerOnly, categories, stores, partners, brands,
     categoryCounts, storeCounts, partnerCounts, brandCounts, priceCounts,
-    ratingCounts, offerCount, clearHref,
+    availabilityCounts, ratingCounts, offerCount, clearHref,
+    showCategory = true, showStore = true,
   } = options;
   return `
-    <aside class="filters" data-filters aria-label="Filtros de busca">
+    <button class="filter-backdrop" type="button" data-filter-close aria-label="Fechar filtros" tabindex="-1"></button>
+    <aside class="filters" data-filters aria-label="Filtros de busca" aria-hidden="false">
       <div class="results-toolbar"><h2>Filtrar resultados</h2><button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-close>Fechar</button></div>
+      ${showCategory ? `
       <div class="filter-field">
         <label for="filterCategory">Categoria</label>
         <select id="filterCategory" data-filter="categoria">
@@ -1056,14 +1207,15 @@ function searchFilters(options) {
             return category ? `<option value="${slug}" ${selectedCategory === slug ? "selected" : ""}>${escapeHtml(category.label)} (${categoryCounts.get(slug) || 0})</option>` : "";
           }).join("")}
         </select>
-      </div>
+      </div>` : ""}
+      ${showStore ? `
       <div class="filter-field">
         <label for="filterStore">Loja interna</label>
         <select id="filterStore" data-filter="loja">
           <option value="">Todas</option>
           ${stores.map(store => `<option value="${escapeAttr(store.id)}" ${selectedStore === store.id ? "selected" : ""}>${escapeHtml(store.name)} (${storeCounts.get(store.id) || 0})</option>`).join("")}
         </select>
-      </div>
+      </div>` : ""}
       <div class="filter-field">
         <label for="filterPartner">Loja parceira</label>
         <select id="filterPartner" data-filter="parceiro">
@@ -1099,6 +1251,17 @@ function searchFilters(options) {
           <option value="3" ${selectedRating === 3 ? "selected" : ""}>3 estrelas ou mais (${ratingCounts.get(3) || 0})</option>
         </select>
       </div>
+      <div class="filter-field">
+        <label for="filterAvailability">Disponibilidade</label>
+        <select id="filterAvailability" data-filter="disponibilidade">
+          ${[
+            ["", "Todas"],
+            ["disponivel", "Disponível"],
+            ["consultar", "Consultar no parceiro"],
+            ["indisponivel", "Indisponível"],
+          ].map(([value, label]) => `<option value="${value}" ${selectedAvailability === value ? "selected" : ""}>${label}${value ? ` (${availabilityCounts.get(value) || 0})` : ""}</option>`).join("")}
+        </select>
+      </div>
       <label class="filter-check"><input type="checkbox" data-filter="oferta" value="1" ${offerOnly ? "checked" : ""}> Somente ofertas (${offerCount})</label>
       <a class="btn btn-secondary" href="${escapeAttr(clearHref)}" data-route="${escapeAttr(clearHref)}">Limpar filtros</a>
     </aside>`;
@@ -1126,7 +1289,7 @@ function countValues(values) {
 
 function clearSearchFiltersHref(sourceUrl) {
   const clean = new URL(sourceUrl.href);
-  for (const key of ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "oferta"]) {
+  for (const key of ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "disponibilidade", "oferta"]) {
     clean.searchParams.delete(key);
   }
   const query = clean.searchParams.toString();
@@ -1283,7 +1446,40 @@ function scrollToHash() {
   requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView({ block: "start" }));
 }
 
+function focusableElements(container) {
+  if (!container) return [];
+  return [...container.querySelectorAll('a[href],button:not([disabled]),select:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])')]
+    .filter(element => !element.hidden && element.getAttribute("aria-hidden") !== "true");
+}
+
+function setInteractiveVisibility(element, hidden) {
+  if (!element) return;
+  element.setAttribute("aria-hidden", hidden ? "true" : "false");
+  element.toggleAttribute("inert", hidden);
+}
+
+function openFilters() {
+  const panel = document.querySelector("[data-filters]");
+  if (!panel) return;
+  state.filterReturnFocus = document.activeElement;
+  panel.classList.add("open");
+  setInteractiveVisibility(panel, false);
+  document.body.classList.add("filters-open");
+  requestAnimationFrame(() => panel.querySelector("[data-filter-close]")?.focus());
+}
+
+function closeFilters({ restoreFocus = true } = {}) {
+  const panel = document.querySelector("[data-filters]");
+  panel?.classList.remove("open");
+  if (panel) setInteractiveVisibility(panel, window.matchMedia("(max-width: 760px)").matches);
+  document.body.classList.remove("filters-open");
+  if (restoreFocus && state.filterReturnFocus instanceof HTMLElement) state.filterReturnFocus.focus();
+  state.filterReturnFocus = null;
+}
+
 function bindDynamicControls() {
+  const filterPanel = document.querySelector("[data-filters]");
+  if (filterPanel) setInteractiveVisibility(filterPanel, window.matchMedia("(max-width: 760px)").matches);
   document.querySelector("[data-sort]")?.addEventListener("change", event => updateSearchParam("ordem", event.target.value));
   document.querySelector("[data-load-more]")?.addEventListener("click", () => {
     state.visibleLimit += PAGE_SIZE;
@@ -1310,8 +1506,8 @@ function bindDynamicControls() {
     const value = event.target.type === "checkbox" ? (event.target.checked ? "1" : "") : event.target.value;
     updateSearchParam(event.target.dataset.filter, value);
   }));
-  document.querySelector("[data-filter-toggle]")?.addEventListener("click", () => document.querySelector("[data-filters]")?.classList.add("open"));
-  document.querySelector("[data-filter-close]")?.addEventListener("click", () => document.querySelector("[data-filters]")?.classList.remove("open"));
+  document.querySelector("[data-filter-toggle]")?.addEventListener("click", openFilters);
+  document.querySelectorAll("[data-filter-close]").forEach(button => button.addEventListener("click", () => closeFilters()));
   document.querySelector("[data-clear-history]")?.addEventListener("click", clearSearchHistory);
 }
 
@@ -1344,11 +1540,14 @@ function showToast(message) {
   showToast.timer = setTimeout(() => { toast.hidden = true; }, 3000);
 }
 
-function closeMenu() {
+function closeMenu({ restoreFocus = false } = {}) {
   document.body.classList.remove("menu-open");
   const button = document.querySelector("[data-menu-toggle]");
   button?.setAttribute("aria-expanded", "false");
   button?.setAttribute("aria-label", "Abrir menu de navegação");
+  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
+  if (restoreFocus && state.menuReturnFocus instanceof HTMLElement) state.menuReturnFocus.focus();
+  state.menuReturnFocus = null;
 }
 
 function toggleMenu() {
@@ -1357,6 +1556,12 @@ function toggleMenu() {
   const button = document.querySelector("[data-menu-toggle]");
   button?.setAttribute("aria-expanded", String(open));
   button?.setAttribute("aria-label", open ? "Fechar menu de navegação" : "Abrir menu de navegação");
+  const nav = document.querySelector("[data-main-nav]");
+  setInteractiveVisibility(nav, !open && window.matchMedia("(max-width: 760px)").matches);
+  if (open) {
+    state.menuReturnFocus = button;
+    requestAnimationFrame(() => focusableElements(nav)[0]?.focus());
+  }
 }
 
 function highlightMatch(label, query) {
@@ -1535,6 +1740,36 @@ function setupGlobalEvents() {
   }, true);
 
   document.querySelector("[data-menu-toggle]")?.addEventListener("click", toggleMenu);
+  document.querySelector("[data-menu-overlay]")?.addEventListener("click", () => closeMenu({ restoreFocus: true }));
+  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      if (document.querySelector("[data-filters].open")) {
+        event.preventDefault();
+        closeFilters();
+        return;
+      }
+      if (document.body.classList.contains("menu-open")) {
+        event.preventDefault();
+        closeMenu({ restoreFocus: true });
+      }
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const activePanel = document.querySelector("[data-filters].open")
+      || (document.body.classList.contains("menu-open") ? document.querySelector("[data-main-nav]") : null);
+    const focusable = focusableElements(activePanel);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
   window.addEventListener("popstate", () => renderRoute({ focus: true }));
 }
 
@@ -1562,7 +1797,23 @@ async function loadData() {
 
 async function boot() {
   const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
-  if (routedPath.startsWith("/admin/")) return;
+  if (routedPath.startsWith("/admin/")) {
+    setMeta({
+      title: `Área administrativa indisponível | ${SITE_NAME}`,
+      description: "A administração do catálogo não é exposta no site público.",
+      canonical: "/",
+      robots: "noindex,nofollow",
+    });
+    appRoot().setAttribute("aria-busy", "false");
+    document.documentElement.classList.add("storefront-ready");
+    appRoot().innerHTML = `
+      <section class="section"><div class="shell"><div class="empty-state">
+        <h1>Área administrativa não disponível no site público</h1>
+        <p>Os relatórios de saúde e auditoria ficam em ambiente privado.</p>
+        <a class="btn btn-primary" href="/">Voltar à loja</a>
+      </div></div></section>`;
+    return;
+  }
   setupGlobalEvents();
   try {
     await loadData();

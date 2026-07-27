@@ -5,6 +5,12 @@ const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
 const sourceRoot = path.join(root, "src", "storefront");
 const siteUrl = "https://impacto360afiliado.com.br";
+const priceValidityDays = Math.max(1, Number(process.env.IMPACTO360_PRICE_VALIDITY_DAYS || 7));
+const priceDateFields = [
+  "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
+  "dataUltimaVerificacao", "ultimaVerificacao", "atualizadoEm",
+  "ultimaRevisao", "updatedAt",
+];
 
 const read = relative => fs.readFileSync(path.join(root, relative), "utf8");
 const readJson = relative => JSON.parse(read(relative));
@@ -91,7 +97,7 @@ function imageOf(product) {
 
 function publishable(product) {
   const status = normalize(first(product, ["status", "statusPublicacao", "auditoriaPublicacao", "statusAnuncio"]));
-  if (/rascunho|revisao|pendente|duplicado|inativo|excluido|removido|oculto|bloqueado/.test(status)) return false;
+  if (/rascunho|revisao|pendente|duplicado|inativo|quarentena|excluido|removido|oculto|bloqueado/.test(status)) return false;
   if (product?.aprovadoParaPublicacao === false || product?.publicar === false) return false;
   return Boolean(linkOf(product) && imageOf(product));
 }
@@ -101,6 +107,22 @@ function priceValue(value) {
   if (!raw || /conferir|consultar|site parceiro|indispon/i.test(raw)) return null;
   const number = Number(raw.replace(/[^\d,.-]/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", "."));
   return Number.isFinite(number) && number > 0 ? number : null;
+}
+
+function priceFreshness(product) {
+  const rawDate = first(product, priceDateFields);
+  const date = rawDate ? new Date(rawDate) : null;
+  if (!date || Number.isNaN(date.getTime())) {
+    return { current: false, status: "unverified", updatedAt: "", validUntil: "" };
+  }
+  const validUntil = new Date(date.getTime() + priceValidityDays * 86_400_000);
+  const current = validUntil.getTime() >= Date.now();
+  return {
+    current,
+    status: current ? "current" : "expired",
+    updatedAt: date.toISOString(),
+    validUntil: validUntil.toISOString(),
+  };
 }
 
 function list(value) {
@@ -153,6 +175,9 @@ function compactProduct(product, generatedSlug) {
   const slug = generatedSlug || slugify(name || product.id);
   const priceRaw = first(product, ["price", "preco", "precoPromocional", "precoAtual"]);
   const previousRaw = first(product, ["precoAnterior", "oldPrice", "priceBefore", "precoOriginal"]);
+  const priceAudit = priceFreshness(product);
+  const publicPriceRaw = priceAudit.current ? priceRaw : "";
+  const publicPreviousRaw = priceAudit.current ? previousRaw : "";
   const partner = text(first(product, ["origem", "plataformaOrigem", "lojaParceira"]))
     || text(product?.source?.platform)
     || text(product?.source?.name)
@@ -170,17 +195,21 @@ function compactProduct(product, generatedSlug) {
     tags: specs,
     image: imageOf(product),
     link: linkOf(product),
-    price: text(priceRaw),
-    priceValue: priceValue(priceRaw),
-    previousPrice: text(previousRaw),
-    previousPriceValue: priceValue(previousRaw),
+    price: text(publicPriceRaw),
+    priceValue: priceValue(publicPriceRaw),
+    previousPrice: text(publicPreviousRaw),
+    previousPriceValue: priceValue(publicPreviousRaw),
+    priceStatus: priceAudit.status,
+    priceUpdatedAt: priceAudit.updatedAt,
+    priceValidUntil: priceAudit.validUntil,
+    priceValidityDays,
     partner,
     rating: Number.isFinite(rating) && rating > 0 && rating <= 5 ? rating : null,
     availability: text(first(product, ["disponibilidade", "availability", "estoque"])),
     badge: text(first(product, ["badge", "selo", "etiqueta"])),
     actionType: text(product.actionType),
     offer: Boolean(
-      priceValue(previousRaw) && priceValue(priceRaw) && priceValue(previousRaw) > priceValue(priceRaw)
+      priceValue(publicPreviousRaw) && priceValue(publicPriceRaw) && priceValue(publicPreviousRaw) > priceValue(publicPriceRaw)
       || /oferta|promo|desconto/i.test([product.badge, product.storeId, category].join(" "))
     ),
     featured: product?.destaqueHome === true || product?.publicarNaHome === true,
@@ -316,6 +345,7 @@ for (const relative of [
   ".nojekyll",
   "integracoes/impacto360-google-ads.js",
   "integracoes/impacto360-admin-robos.js",
+  "integracoes/impacto360-banners-admin.js",
 ]) copyStatic(relative);
 
 updateSitemap([...commercialRoutes, ...categoryRoutes].map(item => item.route));
@@ -327,4 +357,5 @@ console.log(JSON.stringify({
   catalogBytes: fs.statSync(path.join(root, "dados", "catalogo-publico.json")).size,
   htmlBytes: fs.statSync(path.join(root, "index.html")).size,
   routes: commercialRoutes.length + categoryRoutes.length,
+  priceValidityDays,
 }, null, 2));

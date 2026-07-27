@@ -60,6 +60,8 @@ const concurrency = Math.max(1, Number(option("--concurrency") || 4));
 const timeoutMs = Math.max(5_000, Number(option("--timeout-ms") || 22_000));
 const requestDelayMs = Math.max(0, Number(option("--delay-ms") || 180));
 const maxProducts = Math.max(0, Number(option("--max-products") || 0));
+const categoryFilter = normalize(option("--category") || "");
+const publicOnly = argv.includes("--public-only");
 const reportDate = option("--date") || new Date().toISOString().slice(0, 10).replaceAll("-", "");
 const cachePath = path.resolve(
   option("--cache")
@@ -67,8 +69,10 @@ const cachePath = path.resolve(
 );
 
 const productsPath = path.join(root, "dados", "products.json");
-const reportJsonPath = path.join(root, "dados", `relatorio-auditoria-completa-produtos-${reportDate}.json`);
-const reportMarkdownPath = path.join(root, "dados", `relatorio-auditoria-completa-produtos-${reportDate}.md`);
+const publicCatalogPath = path.join(root, "dados", "catalogo-publico.json");
+const reportDir = path.resolve(option("--report-dir") || path.join(root, "backups", `auditoria-online-${reportDate}`));
+const reportJsonPath = path.join(reportDir, `relatorio-auditoria-completa-produtos-${reportDate}.json`);
+const reportMarkdownPath = path.join(reportDir, `relatorio-auditoria-completa-produtos-${reportDate}.md`);
 
 function readJson(file, fallback) {
   try {
@@ -97,6 +101,18 @@ function normalize(value) {
     .replace(/[^a-z0-9]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function auditCategory(product) {
+  const storeId = normalize(product?.storeId);
+  const subcategory = normalize(product?.subcategoria || product?.subcategory);
+  if (storeId === "impacto casa") {
+    if (/eletrodomestico|eletroportatil|pequenos eletros/.test(subcategory)) return "eletrodomesticos";
+    return "casa e cozinha";
+  }
+  if (storeId === "impacto decor") return "casa e cozinha";
+  if (storeId === "impacto ferramentas") return "ferramentas";
+  return normalize(product?.category || product?.categoria || product?.departamento);
 }
 
 function tokens(value) {
@@ -603,7 +619,14 @@ function summarizeProduct(product) {
 }
 
 const allProducts = readJson(productsPath, []);
-const products = maxProducts ? allProducts.slice(0, maxProducts) : allProducts;
+const publicIds = new Set(readJson(publicCatalogPath, []).map(product => text(product.id)));
+const scopedProducts = categoryFilter
+  ? allProducts.filter(product => auditCategory(product) === categoryFilter)
+  : allProducts;
+const eligibleProducts = publicOnly
+  ? scopedProducts.filter(product => publicIds.has(text(product.id)))
+  : scopedProducts;
+const products = maxProducts ? eligibleProducts.slice(0, maxProducts) : eligibleProducts;
 const cache = readJson(cachePath, {});
 const productInputs = products.map(product => {
   const primary = primaryLink(product);
@@ -659,6 +682,8 @@ console.log(JSON.stringify({
   timeoutMs,
   requestDelayMs,
   applyChanges,
+  categoryFilter,
+  publicOnly,
   cachePath,
 }, null, 2));
 
@@ -690,13 +715,13 @@ const decisions = productInputs.map(input => {
     decision = "keep_service";
     reason = "servico_interno_por_orcamento_sem_link_externo";
   } else if (!input.primary) {
-    decision = "delete_confirmed";
+    decision = "quarantine_confirmed";
     reason = "produto_sem_link_de_compra";
   } else if (!input.primaryStructure.valid) {
-    decision = "delete_confirmed";
+    decision = "quarantine_confirmed";
     reason = input.primaryStructure.reason;
   } else if (primaryResult?.state === "confirmed_invalid") {
-    decision = "delete_confirmed";
+    decision = "quarantine_confirmed";
     reason = primaryResult.reason;
   } else if (
     primaryResult?.state === "accessible"
@@ -705,14 +730,14 @@ const decisions = productInputs.map(input => {
     && /pagina_generica|busca_ou_loja/.test(finalStructure.reason)
   ) {
     if (!input.identity || assessment.confirmedMismatch) {
-      decision = "delete_confirmed";
+      decision = "quarantine_confirmed";
       reason = "atalho_redirecionou_para_pagina_generica";
     } else {
       decision = "manual_review";
       reason = "atalho_generico_com_identidade_direta_nao_conclusiva";
     }
   } else if (assessment.confirmedMismatch) {
-    decision = "delete_confirmed";
+    decision = "quarantine_confirmed";
     reason = assessment.reason;
   } else if (assessment.state === "uncertain") {
     decision = "manual_review";
@@ -758,7 +783,7 @@ const decisions = productInputs.map(input => {
 const decisionById = new Map(decisions.map(decision => [decision.id, decision]));
 const productGroups = new Map();
 for (const decision of decisions) {
-  if (!decision.productKey || decision.decision === "delete_confirmed") continue;
+  if (!decision.productKey || decision.decision === "quarantine_confirmed") continue;
   if (!productGroups.has(decision.productKey)) productGroups.set(decision.productKey, []);
   productGroups.get(decision.productKey).push(decision);
 }
@@ -774,7 +799,7 @@ for (const [productKey, grouped] of productGroups) {
   for (const duplicate of productsInGroup.slice(1)) {
     const sameIdentity = similarity(keeper.decision.name, duplicate.decision.name).safe;
     if (!sameIdentity) continue;
-    duplicate.decision.decision = "delete_confirmed";
+    duplicate.decision.decision = "quarantine_confirmed";
     duplicate.decision.reason = "produto_duplicado_mesma_identidade_externa";
     duplicate.decision.duplicateOf = keeper.decision.id;
     duplicateRemovals.push({
@@ -785,16 +810,30 @@ for (const [productKey, grouped] of productGroups) {
   }
 }
 
-const deleteIds = new Set(
-  decisions.filter(decision => decision.decision === "delete_confirmed").map(decision => decision.id),
+const quarantineIds = new Set(
+  decisions.filter(decision => decision.decision === "quarantine_confirmed").map(decision => decision.id),
 );
 const reviewIds = new Set(
   decisions.filter(decision => decision.decision === "manual_review").map(decision => decision.id),
 );
-const remainingProducts = allProducts
-  .filter(product => !deleteIds.has(text(product.id)))
+const auditedProducts = allProducts
   .map(product => {
-    if (!reviewIds.has(text(product.id))) return product;
+    const id = text(product.id);
+    if (quarantineIds.has(id)) {
+      return {
+        ...product,
+        status: "quarentena",
+        aprovadoParaPublicacao: false,
+        publicar: false,
+        revisaoOnline: {
+          data: new Date().toISOString().slice(0, 10),
+          motivo: decisionById.get(id)?.reason || "invalidade_confirmada",
+          statusAnterior: text(product.status),
+          reversivel: true,
+        },
+      };
+    }
+    if (!reviewIds.has(id)) return product;
     return {
       ...product,
       status: "revisao_manual",
@@ -831,7 +870,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   applied: applyChanges,
   criteria: {
-    deleteOnlyWhen: [
+    quarantineOnlyWhen: [
       "produto sem link de compra e sem excecao de servico interno",
       "link estruturalmente de busca, loja, placeholder ou URL invalida",
       "HTTP 404/410 ou pagina explicitamente removida/finalizada",
@@ -847,8 +886,9 @@ const report = {
   totals: {
     analyzedProducts: products.length,
     originalProducts: allProducts.length,
-    remainingProducts: remainingProducts.length,
-    confirmedDeletions: deleteIds.size,
+    remainingProducts: allProducts.length,
+    confirmedQuarantines: quarantineIds.size,
+    permanentDeletions: 0,
     movedToManualReview: reviewIds.size,
     uniqueUrls: urls.length,
     newNetworkChecks: pendingUrls.length,
@@ -857,8 +897,8 @@ const report = {
   decisionCounts,
   platformCounts,
   onlineStates,
-  duplicateRemovals,
-  deleted: decisions.filter(decision => decision.decision === "delete_confirmed"),
+  duplicateQuarantines: duplicateRemovals,
+  quarantined: decisions.filter(decision => decision.decision === "quarantine_confirmed"),
   movedToManualReview: decisions.filter(decision => decision.decision === "manual_review"),
   inconclusivePreserved: decisions.filter(decision => decision.decision === "keep_inconclusive"),
   servicesPreserved: decisions.filter(decision => decision.decision === "keep_service"),
@@ -877,7 +917,8 @@ function markdown(reportData) {
     `- Produtos analisados: ${totals.analyzedProducts}.`,
     `- Produtos antes da auditoria: ${totals.originalProducts}.`,
     `- Produtos após a auditoria: ${totals.remainingProducts}.`,
-    `- Exclusões confirmadas: ${totals.confirmedDeletions}.`,
+    `- Quarentenas confirmadas e reversíveis: ${totals.confirmedQuarantines}.`,
+    `- Exclusões permanentes: ${totals.permanentDeletions}.`,
     `- Movidos para revisão manual: ${totals.movedToManualReview}.`,
     `- URLs únicas verificadas: ${totals.uniqueUrls}.`,
     "",
@@ -885,11 +926,11 @@ function markdown(reportData) {
     "",
     ...Object.entries(reportData.decisionCounts).map(([key, value]) => `- ${key}: ${value}.`),
     "",
-    "## Exclusões com evidência",
+    "## Quarentenas com evidência",
     "",
     "| ID | Produto | Motivo | Link | Destino/título observado |",
     "|---|---|---|---|---|",
-    ...reportData.deleted.map(item => (
+    ...reportData.quarantined.map(item => (
       `| ${item.id} | ${item.name.replaceAll("|", "\\|")} | ${item.reason} | ${item.link || "-"} | ${(item.identityAssessment?.pageTitle || item.primaryCheck?.finalUrl || "-").replaceAll("|", "\\|")} |`
     )),
     "",
@@ -897,14 +938,14 @@ function markdown(reportData) {
     "",
     ...reportData.movedToManualReview.map(item => `- ${item.id}: ${item.reason}.`),
     "",
-    "Bloqueios automáticos, CAPTCHA, HTTP 403/429, timeout e falhas temporárias não foram usados como motivo de exclusão.",
+    "Bloqueios automáticos, CAPTCHA, HTTP 403/429, timeout e falhas temporárias não foram usados como motivo de quarentena. Nenhum produto foi apagado permanentemente.",
     "",
   ];
   return lines.join("\n");
 }
 
 if (applyChanges) {
-  writeJsonAtomic(productsPath, remainingProducts);
+  writeJsonAtomic(productsPath, auditedProducts);
 }
 writeJsonAtomic(reportJsonPath, report);
 fs.writeFileSync(reportMarkdownPath, markdown(report), "utf8");
