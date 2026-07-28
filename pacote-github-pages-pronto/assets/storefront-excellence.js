@@ -1,9 +1,23 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260727-1";
-const STORES_URL = "/dados/stores.json?v=20260727-1";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260728-4";
+const STORES_URL = "/dados/stores.json?v=20260728-4";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
+const VIEW_HISTORY_KEY = "impacto360ViewHistory";
+const ALERTS_KEY = "impacto360PriceAlerts";
+const CONSENT_KEY = "impacto360Consent";
+const ACCESSIBILITY_KEY = "impacto360Accessibility";
+const THEME_KEY = "impacto360Theme";
+const CONSENT_VERSION = 1;
+const ALLOWED_AFFILIATE_DOMAINS = new Set([
+  "amazon.com.br",
+  "link.amazon",
+  "amzn.to",
+  "meli.la",
+  "s.shopee.com.br",
+  "go.hotmart.com",
+]);
 const PAGE_SIZE = 24;
 const LAZY_IMAGE_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'/%3E";
 
@@ -19,6 +33,8 @@ const state = {
   imageObserver: null,
   filterReturnFocus: null,
   menuReturnFocus: null,
+  installPrompt: null,
+  speechRecognition: null,
 };
 
 const categoryDefinitions = [
@@ -296,6 +312,51 @@ function normalize(value) {
     .replace(/[-_/]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function readStorage(key, fallback) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || "null");
+    return value ?? fallback;
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function writeStorage(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+function storedIdSet(key) {
+  const values = readStorage(key, []);
+  return new Set(Array.isArray(values) ? values.map(String) : []);
+}
+
+function isAllowedAffiliateUrl(value) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "https:") return false;
+    const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+    return [...ALLOWED_AFFILIATE_DOMAINS].some(domain => hostname === domain || hostname.endsWith(`.${domain}`));
+  } catch (error) {
+    return false;
+  }
+}
+
+function recordViewedProduct(productId) {
+  const history = readStorage(VIEW_HISTORY_KEY, []);
+  const next = [String(productId), ...(Array.isArray(history) ? history.map(String) : []).filter(id => id !== String(productId))].slice(0, 40);
+  writeStorage(VIEW_HISTORY_KEY, next);
+}
+
+function selectedProducts(key) {
+  const ids = storedIdSet(key);
+  return state.products.filter(product => ids.has(String(product.id)));
 }
 
 const SEARCH_STOPWORDS = new Set([
@@ -598,6 +659,7 @@ function productPath(product) {
 
 function productCard(product, index = 0, eagerCount = 0) {
   const favorites = favoriteSet();
+  const alerts = storedIdSet(ALERTS_KEY);
   const discount = discountPercent(product);
   const badge = discount ? `${discount}% OFF` : text(product.badge) || (product.offer ? "Oferta selecionada" : "Produto selecionado");
   const internalPath = productPath(product);
@@ -615,7 +677,7 @@ function productCard(product, index = 0, eagerCount = 0) {
   return `
     <article class="product-card" data-product-id="${escapeAttr(product.id)}">
       <div class="product-media">
-        <a href="${escapeAttr(internalPath)}" aria-label="Ver detalhes de ${escapeAttr(product.name)}">
+        <a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}" aria-label="Ver detalhes de ${escapeAttr(product.name)}">
           <img
             src="${escapeAttr(eager ? image : LAZY_IMAGE_PLACEHOLDER)}"
             ${eager ? "" : `data-src="${escapeAttr(image)}"`}
@@ -638,7 +700,7 @@ function productCard(product, index = 0, eagerCount = 0) {
       </div>
       <div class="product-body">
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
-        <h3><a href="${escapeAttr(internalPath)}">${escapeHtml(product.name)}</a></h3>
+        <h3><a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}">${escapeHtml(product.name)}</a></h3>
         <div class="product-facts">
           <span>${escapeHtml(availabilityLabel(product))}</span>
           ${rating ? `<span class="rating">${rating}</span>` : ""}
@@ -650,13 +712,19 @@ function productCard(product, index = 0, eagerCount = 0) {
         </div>
         <a
           class="btn ${actionClass}"
-          href="${escapeAttr(product.link)}"
+          href="${escapeAttr(isAllowedAffiliateUrl(product.link) ? product.link : "#")}"
           target="_blank"
           rel="noopener noreferrer sponsored"
           data-affiliate-link="${escapeAttr(product.link)}"
           data-link-plataforma="${escapeAttr(product.link)}"
           data-product-name="${escapeAttr(product.name)}"
         >${actionLabel}</a>
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-alert="${escapeAttr(product.id)}"
+          aria-pressed="${alerts.has(String(product.id))}"
+        >${alerts.has(String(product.id)) ? "Acompanhando" : "Acompanhar preço"}</button>
       </div>
     </article>`;
 }
@@ -1309,6 +1377,230 @@ function pageHero(title, description, crumbs) {
     </section>`;
 }
 
+const contentPages = {
+  "/como-comprar/": {
+    title: "Como comprar",
+    description: "Encontre, confira e conclua sua compra com segurança no site oficial da loja parceira.",
+    robots: "index,follow,max-image-preview:large",
+    content: `
+      <article class="content-card">
+        <h2>A Impacto360 ajuda você a descobrir</h2>
+        <ol class="feature-list">
+          <li>Pesquise por produto, categoria, marca ou loja.</li>
+          <li>Confira a origem da oferta e quando a informação foi verificada.</li>
+          <li>Use “Ver oferta” para abrir o ambiente oficial do parceiro.</li>
+          <li>Confirme preço, estoque, frete, pagamento, garantia e entrega antes de comprar.</li>
+        </ol>
+      </article>
+      <article class="content-card">
+        <h2>A compra não acontece na Impacto360</h2>
+        <p>Não recebemos pagamentos, não armazenamos dados de cartão e não intermediamos entrega ou garantia. Essas etapas pertencem exclusivamente à loja parceira.</p>
+      </article>`,
+  },
+  "/transparencia-de-afiliados/": {
+    title: "Transparência de afiliados",
+    description: "Entenda como os links de afiliado sustentam a curadoria da Impacto360.",
+    robots: "index,follow,max-image-preview:large",
+    content: `
+      <article class="content-card">
+        <h2>Como a Impacto360 é remunerada</h2>
+        <p>Alguns links são links de afiliado. Quando uma compra elegível é concluída no parceiro, a Impacto360 pode receber uma comissão, sem custo adicional para você.</p>
+        <p>A comissão não altera o preço exibido pelo parceiro e não autoriza a Impacto360 a processar pagamentos.</p>
+      </article>
+      <article class="content-card">
+        <h2>Compromissos de curadoria</h2>
+        <ul class="feature-list">
+          <li>Não inventar preço, estoque, avaliação ou especificação.</li>
+          <li>Sinalizar quando o preço precisa ser confirmado no parceiro.</li>
+          <li>Bloquear links ou imagens quando houver divergência sensível.</li>
+          <li>Usar apenas integrações e fontes permitidas pelos parceiros.</li>
+        </ul>
+      </article>`,
+  },
+  "/privacidade/": {
+    title: "Política de privacidade",
+    description: "Saiba quais dados são usados e controle suas preferências na Impacto360.",
+    robots: "index,follow",
+    content: `
+      <article class="content-card">
+        <h2>Dados mínimos e controle local</h2>
+        <p>Favoritos, histórico de pesquisa, itens visualizados, tema e acessibilidade são armazenados no seu navegador. Nesta versão, esses dados não criam uma conta e não são sincronizados com um servidor.</p>
+        <p>Você pode exportar ou apagar essas preferências na página <a href="/perfil/" data-route="/perfil/">Perfil e dados</a>.</p>
+      </article>
+      <article class="content-card">
+        <h2>Medição e publicidade</h2>
+        <p>Integrações opcionais só são carregadas depois da sua autorização. Você pode mudar a decisão a qualquer momento nas preferências de cookies.</p>
+        <p>Dúvidas podem ser enviadas para <a href="mailto:contato@impacto360afiliado.com">contato@impacto360afiliado.com</a>.</p>
+      </article>`,
+  },
+  "/cookies/": {
+    title: "Preferências de cookies",
+    description: "Escolha quais finalidades opcionais podem ser usadas neste navegador.",
+    robots: "index,follow",
+    content: `
+      <article class="content-card">
+        <h2>Você decide</h2>
+        <p>O armazenamento necessário mantém favoritos, histórico, tema, acessibilidade e sua própria decisão de consentimento. Medição e publicidade permanecem desligadas até sua autorização.</p>
+        <button class="btn btn-primary" type="button" data-cookie-settings>Revisar preferências</button>
+      </article>`,
+  },
+  "/termos/": {
+    title: "Termos de uso",
+    description: "Condições para utilizar a curadoria e os links da Impacto360 Afiliado.",
+    robots: "index,follow",
+    content: `
+      <article class="content-card">
+        <h2>Uso da vitrine</h2>
+        <p>A Impacto360 organiza informações para facilitar a descoberta. Preços e disponibilidade podem mudar; a informação definitiva é sempre a apresentada pelo parceiro no momento da compra.</p>
+        <p>O uso automatizado abusivo, a tentativa de contornar controles e a reutilização não autorizada do catálogo podem ser restringidos.</p>
+      </article>
+      <article class="content-card">
+        <h2>Responsabilidade do parceiro</h2>
+        <p>Pagamento, entrega, troca, garantia, atendimento e tratamento de dados durante a compra são realizados pelo parceiro escolhido.</p>
+      </article>`,
+  },
+  "/acessibilidade/": {
+    title: "Acessibilidade",
+    description: "Ajuste leitura, contraste e movimentos de acordo com sua preferência.",
+    robots: "index,follow",
+    content: `
+      <article class="content-card">
+        <h2>Recursos disponíveis</h2>
+        <ul class="feature-list">
+          <li>Navegação por teclado e foco visível.</li>
+          <li>Texto ampliado, alto contraste e redução de movimentos.</li>
+          <li>Busca textual como alternativa permanente a voz e imagem.</li>
+          <li>Leitura em voz alta quando o navegador oferece síntese de fala.</li>
+        </ul>
+        <button class="btn btn-primary" type="button" data-accessibility-open>Abrir central de acessibilidade</button>
+      </article>`,
+  },
+};
+
+function renderContentPage(path) {
+  const page = contentPages[path];
+  if (!page) return renderNotFound();
+  setMeta({
+    title: `${page.title} | ${SITE_NAME}`,
+    description: page.description,
+    canonical: path,
+    robots: page.robots,
+  });
+  appRoot().innerHTML = `
+    ${pageHero(page.title, page.description, [["Início", "/"], [page.title, ""]])}
+    <section class="section"><div class="shell content-page">${page.content}</div></section>`;
+}
+
+function renderSavedCollection({ title, description, products, emptyLabel, canonical }) {
+  setMeta({
+    title: `${title} | ${SITE_NAME}`,
+    description,
+    canonical,
+    robots: "noindex,follow",
+  });
+  appRoot().innerHTML = `
+    ${pageHero(title, description, [["Início", "/"], [title, ""]])}
+    <section class="section"><div class="shell">
+      ${products.length ? productGrid(products) : emptyState(emptyLabel)}
+    </div></section>`;
+}
+
+function renderFavorites() {
+  renderSavedCollection({
+    title: "Favoritos",
+    description: "Produtos salvos somente neste navegador.",
+    products: selectedProducts(FAVORITES_KEY),
+    emptyLabel: "seus favoritos",
+    canonical: "/favoritos/",
+  });
+}
+
+function renderHistory() {
+  const ids = readStorage(VIEW_HISTORY_KEY, []);
+  const byId = new Map(state.products.map(product => [String(product.id), product]));
+  const products = (Array.isArray(ids) ? ids : []).map(id => byId.get(String(id))).filter(Boolean);
+  renderSavedCollection({
+    title: "Histórico de visualização",
+    description: "Itens abertos recentemente neste navegador.",
+    products,
+    emptyLabel: "seu histórico",
+    canonical: "/historico/",
+  });
+}
+
+function renderAlerts() {
+  renderSavedCollection({
+    title: "Acompanhamento de preço",
+    description: "Lista local de produtos que você deseja acompanhar. Notificações automáticas ainda não estão ativas.",
+    products: selectedProducts(ALERTS_KEY),
+    emptyLabel: "seu acompanhamento de preço",
+    canonical: "/alertas/",
+  });
+}
+
+function renderProfile() {
+  setMeta({
+    title: `Perfil e dados | ${SITE_NAME}`,
+    description: "Controle preferências e dados mantidos neste navegador.",
+    canonical: "/perfil/",
+    robots: "noindex,follow",
+  });
+  appRoot().innerHTML = `
+    ${pageHero("Perfil e dados", "Use a Impacto360 como visitante e mantenha o controle das informações locais.", [["Início", "/"], ["Perfil e dados", ""]])}
+    <section class="section"><div class="shell content-page">
+      <article class="content-card">
+        <h2>Modo visitante</h2>
+        <p>Não há conta conectada. Favoritos, histórico e preferências permanecem neste dispositivo.</p>
+        <div class="account-actions">
+          <button class="btn btn-secondary" type="button" data-export-profile>Exportar meus dados</button>
+          <button class="btn btn-secondary" type="button" data-clear-profile>Apagar dados locais</button>
+          <a class="btn btn-primary" href="/favoritos/" data-route="/favoritos/">Ver favoritos</a>
+        </div>
+      </article>
+      <article class="content-card">
+        <h2>Sincronização opcional</h2>
+        <p>Login por link de e-mail e passkeys dependem de um backend seguro. Permanecem indisponíveis até essa fundação estar pronta; nenhuma credencial é solicitada nesta versão.</p>
+      </article>
+    </div></section>`;
+}
+
+function renderInstall() {
+  setMeta({
+    title: `Instalar aplicativo | ${SITE_NAME}`,
+    description: "Instale a Impacto360 como aplicativo quando o navegador oferecer suporte.",
+    canonical: "/instalar/",
+    robots: "index,follow",
+  });
+  appRoot().innerHTML = `
+    ${pageHero("Instale a Impacto360", "Acesse mais rápido pela tela inicial e mantenha preferências locais.", [["Início", "/"], ["Instalar", ""]])}
+    <section class="section"><div class="shell content-page">
+      <article class="content-card">
+        <h2>Aplicativo web instalável</h2>
+        <p>Em navegadores compatíveis, use o botão abaixo. No iPhone ou iPad, abra o menu Compartilhar e escolha “Adicionar à Tela de Início”.</p>
+        <button class="btn btn-primary" type="button" data-install-app>Instalar quando disponível</button>
+        <p class="form-status" role="status" data-install-status></p>
+      </article>
+    </div></section>`;
+}
+
+function renderImageSearchPage() {
+  setMeta({
+    title: `Busca por imagem | ${SITE_NAME}`,
+    description: "Use uma imagem e uma descrição textual para iniciar uma pesquisa acessível.",
+    canonical: "/buscar/imagem/",
+    robots: "noindex,follow",
+  });
+  appRoot().innerHTML = `
+    ${pageHero("Busca por imagem", "Uma experiência assistida, com alternativa textual obrigatória para evitar correspondências incorretas.", [["Início", "/"], ["Busca por imagem", ""]])}
+    <section class="section"><div class="shell content-page">
+      <article class="content-card">
+        <h2>Pesquisar com fotografia</h2>
+        <p>A análise visual automática ainda depende de um serviço seguro e revisado. A imagem não é enviada nesta versão; você pode usar a descrição para pesquisar o catálogo agora.</p>
+        <button class="btn btn-primary" type="button" data-image-search-open>Selecionar imagem</button>
+      </article>
+    </div></section>`;
+}
+
 function routeUrl() {
   const current = new URL(location.href);
   const routedPath = current.searchParams.get("route");
@@ -1383,9 +1675,30 @@ function renderRoute({ focus = false } = {}) {
   closeMenu();
   updateNavigation(path);
 
+  const normalizedPath = path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`;
   if (homeRoute) renderHome();
   else if (path === "/lojas" || path === "/lojas/") renderAllStores(url);
   else if (path === "/buscar" || path === "/buscar/") renderSearch(url);
+  else if (normalizedPath === "/ofertas/") {
+    const offersUrl = new URL("/buscar/", location.origin);
+    offersUrl.searchParams.set("oferta", "1");
+    renderSearch(offersUrl);
+    setMeta({
+      title: `Ofertas selecionadas | ${SITE_NAME}`,
+      description: "Ofertas com preço verificado dentro da validade definida; confirme as condições no parceiro.",
+      canonical: "/ofertas/",
+      robots: "index,follow,max-image-preview:large",
+    });
+  }
+  else if (normalizedPath === "/favoritos/") renderFavorites();
+  else if (normalizedPath === "/historico/") renderHistory();
+  else if (normalizedPath === "/alertas/") renderAlerts();
+  else if (normalizedPath === "/perfil/") renderProfile();
+  else if (normalizedPath === "/instalar/") renderInstall();
+  else if (normalizedPath === "/buscar/imagem/") renderImageSearchPage();
+  else if (normalizedPath === "/politica-de-privacidade/") renderContentPage("/privacidade/");
+  else if (normalizedPath === "/termos-de-uso/") renderContentPage("/termos/");
+  else if (contentPages[normalizedPath]) renderContentPage(normalizedPath);
   else if (path.startsWith("/categoria/")) {
     const slug = decodeURIComponent(path.split("/").filter(Boolean)[1] || "");
     const category = categoryDefinitions.find(item => item.slug === slug);
@@ -1429,7 +1742,7 @@ function navigate(href, { replace = false } = {}) {
 }
 
 function updateNavigation(path) {
-  document.querySelectorAll("[data-main-nav] a").forEach(link => {
+  document.querySelectorAll("[data-main-nav] a, .bottom-nav a").forEach(link => {
     const target = new URL(link.href, location.origin).pathname;
     const active = target === "/" ? path === "/" : path.startsWith(target);
     active ? link.setAttribute("aria-current", "page") : link.removeAttribute("aria-current");
@@ -1538,6 +1851,251 @@ function showToast(message) {
   toast.hidden = false;
   clearTimeout(showToast.timer);
   showToast.timer = setTimeout(() => { toast.hidden = true; }, 3000);
+}
+
+function toggleAlert(productId) {
+  const alerts = storedIdSet(ALERTS_KEY);
+  const id = String(productId);
+  const added = !alerts.has(id);
+  added ? alerts.add(id) : alerts.delete(id);
+  writeStorage(ALERTS_KEY, [...alerts]);
+  document.querySelectorAll(`[data-alert="${CSS.escape(id)}"]`).forEach(button => {
+    button.setAttribute("aria-pressed", String(added));
+    button.textContent = added ? "Acompanhando" : "Acompanhar preço";
+  });
+  showToast(added
+    ? "Produto salvo para acompanhamento local. Notificações ainda não estão ativas."
+    : "Produto removido do acompanhamento.");
+  if (currentRoutePath().replace(/\/+$/, "") === "/alertas") renderRoute();
+}
+
+function currentConsent() {
+  const consent = readStorage(CONSENT_KEY, null);
+  return consent?.version === CONSENT_VERSION ? consent : null;
+}
+
+function loadScriptOnce(src, id) {
+  if (document.getElementById(id)) return;
+  const script = document.createElement("script");
+  script.id = id;
+  script.async = true;
+  script.src = src;
+  document.head.appendChild(script);
+}
+
+function applyConsent(consent) {
+  if (!consent) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+  window.gtag("consent", "update", {
+    analytics_storage: consent.analytics ? "granted" : "denied",
+    ad_storage: consent.marketing ? "granted" : "denied",
+    ad_user_data: consent.marketing ? "granted" : "denied",
+    ad_personalization: consent.marketing ? "granted" : "denied",
+  });
+  if (consent.analytics || consent.marketing) {
+    window.gtag("js", new Date());
+    window.gtag("config", "AW-17933727169");
+    loadScriptOnce("https://www.googletagmanager.com/gtag/js?id=AW-17933727169", "impacto360Measurement");
+  }
+  if (consent.marketing) {
+    loadScriptOnce("/integracoes/impacto360-google-ads.js?v=20260728-4", "impacto360AdsIntegration");
+  }
+}
+
+function saveConsent({ analytics = false, marketing = false }) {
+  const consent = {
+    version: CONSENT_VERSION,
+    necessary: true,
+    analytics: Boolean(analytics),
+    marketing: Boolean(marketing),
+    updatedAt: new Date().toISOString(),
+  };
+  writeStorage(CONSENT_KEY, consent);
+  const banner = document.querySelector("[data-cookie-banner]");
+  if (banner) banner.hidden = true;
+  applyConsent(consent);
+  showToast("Preferências de privacidade salvas.");
+}
+
+function openCookieSettings() {
+  const dialog = document.querySelector("[data-cookie-dialog]");
+  const consent = currentConsent();
+  const form = dialog?.querySelector("[data-cookie-form]");
+  if (!dialog || !form) return;
+  form.elements.analytics.checked = Boolean(consent?.analytics);
+  form.elements.marketing.checked = Boolean(consent?.marketing);
+  dialog.showModal();
+}
+
+function initializeConsent() {
+  const consent = currentConsent();
+  const banner = document.querySelector("[data-cookie-banner]");
+  if (consent) {
+    applyConsent(consent);
+    if (banner) banner.hidden = true;
+  } else if (banner) {
+    banner.hidden = false;
+  }
+}
+
+function accessibilitySettings() {
+  const settings = readStorage(ACCESSIBILITY_KEY, {});
+  return settings && typeof settings === "object" ? settings : {};
+}
+
+function applyAccessibility(settings) {
+  document.documentElement.dataset.textSize = settings.largeText ? "large" : "normal";
+  document.documentElement.dataset.contrast = settings.contrast ? "high" : "normal";
+  document.documentElement.dataset.reduceMotion = settings.reducedMotion ? "true" : "false";
+}
+
+function openAccessibilitySettings() {
+  const dialog = document.querySelector("[data-accessibility-dialog]");
+  const form = dialog?.querySelector("[data-accessibility-form]");
+  if (!dialog || !form) return;
+  const settings = accessibilitySettings();
+  form.elements.largeText.checked = Boolean(settings.largeText);
+  form.elements.contrast.checked = Boolean(settings.contrast);
+  form.elements.reducedMotion.checked = Boolean(settings.reducedMotion);
+  dialog.showModal();
+}
+
+function toggleTheme() {
+  const current = document.documentElement.dataset.theme || "light";
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem(THEME_KEY, next);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "dark" ? "#071B2F" : "#12355B");
+  showToast(`Modo ${next === "dark" ? "escuro" : "claro"} ativado.`);
+}
+
+function readMainContent() {
+  if (!("speechSynthesis" in window)) {
+    showToast("A leitura em voz alta não é suportada neste navegador.");
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const content = text(document.getElementById("conteudo")?.innerText).slice(0, 8000);
+  if (!content) return;
+  const utterance = new SpeechSynthesisUtterance(content);
+  utterance.lang = "pt-BR";
+  window.speechSynthesis.speak(utterance);
+  showToast("Leitura iniciada. Use a central de acessibilidade para interromper.");
+}
+
+function startVoiceSearch() {
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    showToast("Busca por voz indisponível. Digite sua pesquisa no campo de busca.");
+    document.querySelector("[data-search-input]")?.focus();
+    return;
+  }
+  state.speechRecognition?.abort();
+  const recognition = new Recognition();
+  state.speechRecognition = recognition;
+  recognition.lang = "pt-BR";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+  recognition.onstart = () => showToast("Ouvindo. Diga o produto que procura.");
+  recognition.onerror = () => showToast("Não foi possível reconhecer a voz. Use a busca por texto.");
+  recognition.onresult = event => {
+    const query = text(event.results?.[0]?.[0]?.transcript);
+    if (!query) return;
+    const input = document.querySelector("[data-search-input]");
+    if (input) input.value = query;
+    saveSearch(query);
+    navigate(`/buscar/?q=${encodeURIComponent(query)}`);
+  };
+  recognition.start();
+}
+
+function openImageSearch() {
+  document.querySelector("[data-image-search-dialog]")?.showModal();
+}
+
+function previewSelectedImage(input) {
+  const file = input.files?.[0];
+  const preview = document.querySelector("[data-image-preview]");
+  const status = document.querySelector("[data-image-status]");
+  if (!file || !preview || !status) return;
+  if (file.size > 8 * 1024 * 1024) {
+    input.value = "";
+    preview.hidden = true;
+    status.textContent = "A imagem deve ter no máximo 8 MB.";
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = () => {
+    preview.src = String(reader.result);
+    preview.hidden = false;
+    status.textContent = "Imagem pronta. Ela não foi enviada; descreva o produto para pesquisar.";
+  };
+  reader.readAsDataURL(file);
+}
+
+function exportLocalProfile() {
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    favorites: readStorage(FAVORITES_KEY, []),
+    searches: readStorage(SEARCH_HISTORY_KEY, []),
+    viewedProducts: readStorage(VIEW_HISTORY_KEY, []),
+    watchedPrices: readStorage(ALERTS_KEY, []),
+    accessibility: accessibilitySettings(),
+    theme: localStorage.getItem(THEME_KEY) || "system",
+    consent: currentConsent(),
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `impacto360-dados-${new Date().toISOString().slice(0, 10)}.json`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+  showToast("Arquivo com dados locais preparado.");
+}
+
+function clearLocalProfile() {
+  const approved = window.confirm("Apagar favoritos, históricos, acompanhamento de preço e preferências deste navegador?");
+  if (!approved) return;
+  for (const key of [FAVORITES_KEY, SEARCH_HISTORY_KEY, VIEW_HISTORY_KEY, ALERTS_KEY, ACCESSIBILITY_KEY, THEME_KEY, CONSENT_KEY]) {
+    localStorage.removeItem(key);
+  }
+  document.documentElement.dataset.theme = "light";
+  applyAccessibility({});
+  initializeConsent();
+  showToast("Dados locais apagados.");
+  renderRoute();
+}
+
+async function installApp() {
+  const status = document.querySelector("[data-install-status]");
+  if (!state.installPrompt) {
+    if (status) status.textContent = "Use a opção de instalação ou “Adicionar à Tela de Início” no menu do navegador.";
+    return;
+  }
+  state.installPrompt.prompt();
+  const choice = await state.installPrompt.userChoice;
+  if (status) status.textContent = choice.outcome === "accepted" ? "Instalação aceita." : "Instalação cancelada.";
+  state.installPrompt = null;
+}
+
+function updateOnlineStatus() {
+  const offline = !navigator.onLine;
+  const banner = document.querySelector("[data-offline-banner]");
+  if (banner) banner.hidden = !offline;
+  document.documentElement.classList.toggle("is-offline", offline);
+}
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") return;
+  navigator.serviceWorker.register("/sw.js").catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {
@@ -1707,6 +2265,61 @@ function setupGlobalEvents() {
   });
 
   document.addEventListener("click", event => {
+    const productInternal = event.target.closest("[data-product-internal]");
+    if (productInternal) recordViewedProduct(productInternal.dataset.productInternal);
+
+    const affiliateLink = event.target.closest("[data-affiliate-link]");
+    if (affiliateLink && !isAllowedAffiliateUrl(affiliateLink.dataset.affiliateLink || affiliateLink.href)) {
+      event.preventDefault();
+      showToast("Link bloqueado porque o destino não pertence à lista de parceiros permitidos.");
+      return;
+    }
+
+    if (event.target.closest("[data-theme-toggle]")) {
+      toggleTheme();
+      return;
+    }
+    if (event.target.closest("[data-accessibility-open]")) {
+      openAccessibilitySettings();
+      return;
+    }
+    if (event.target.closest("[data-voice-search]")) {
+      startVoiceSearch();
+      return;
+    }
+    if (event.target.closest("[data-image-search-open]")) {
+      openImageSearch();
+      return;
+    }
+    if (event.target.closest("[data-cookie-settings]")) {
+      openCookieSettings();
+      return;
+    }
+    if (event.target.closest("[data-cookie-reject]")) {
+      saveConsent({ analytics: false, marketing: false });
+      return;
+    }
+    if (event.target.closest("[data-cookie-accept]")) {
+      saveConsent({ analytics: true, marketing: true });
+      return;
+    }
+    if (event.target.closest("[data-read-page]")) {
+      readMainContent();
+      return;
+    }
+    if (event.target.closest("[data-export-profile]")) {
+      exportLocalProfile();
+      return;
+    }
+    if (event.target.closest("[data-clear-profile]")) {
+      clearLocalProfile();
+      return;
+    }
+    if (event.target.closest("[data-install-app]")) {
+      installApp();
+      return;
+    }
+
     const routeLink = event.target.closest("[data-route]");
     if (routeLink && !event.ctrlKey && !event.metaKey && !event.shiftKey && routeLink.origin === location.origin) {
       event.preventDefault();
@@ -1717,6 +2330,12 @@ function setupGlobalEvents() {
     if (favorite) {
       event.preventDefault();
       toggleFavorite(favorite.dataset.favorite);
+      return;
+    }
+    const alert = event.target.closest("[data-alert]");
+    if (alert) {
+      event.preventDefault();
+      toggleAlert(alert.dataset.alert);
       return;
     }
     const suggestion = event.target.closest("[data-suggestion-index]");
@@ -1741,6 +2360,50 @@ function setupGlobalEvents() {
 
   document.querySelector("[data-menu-toggle]")?.addEventListener("click", toggleMenu);
   document.querySelector("[data-menu-overlay]")?.addEventListener("click", () => closeMenu({ restoreFocus: true }));
+  document.querySelector("[data-image-file]")?.addEventListener("change", event => previewSelectedImage(event.target));
+
+  document.querySelector("[data-cookie-form]")?.addEventListener("submit", event => {
+    if (event.submitter?.value === "cancel") return;
+    event.preventDefault();
+    const form = event.currentTarget;
+    saveConsent({
+      analytics: form.elements.analytics.checked,
+      marketing: form.elements.marketing.checked,
+    });
+    form.closest("dialog")?.close();
+  });
+
+  document.querySelector("[data-accessibility-form]")?.addEventListener("submit", event => {
+    if (event.submitter?.value === "cancel") return;
+    event.preventDefault();
+    const form = event.currentTarget;
+    const settings = {
+      largeText: form.elements.largeText.checked,
+      contrast: form.elements.contrast.checked,
+      reducedMotion: form.elements.reducedMotion.checked,
+    };
+    writeStorage(ACCESSIBILITY_KEY, settings);
+    applyAccessibility(settings);
+    form.closest("dialog")?.close();
+    showToast("Preferências de acessibilidade aplicadas.");
+  });
+
+  document.querySelector("[data-image-search-form]")?.addEventListener("submit", event => {
+    if (event.submitter?.value === "cancel") return;
+    event.preventDefault();
+    const query = text(event.currentTarget.elements.description.value);
+    if (!query) return;
+    event.currentTarget.closest("dialog")?.close();
+    saveSearch(query);
+    navigate(`/buscar/?q=${encodeURIComponent(query)}`);
+  });
+
+  window.addEventListener("beforeinstallprompt", event => {
+    event.preventDefault();
+    state.installPrompt = event;
+  });
+  window.addEventListener("online", updateOnlineStatus);
+  window.addEventListener("offline", updateOnlineStatus);
   setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
@@ -1815,6 +2478,10 @@ async function boot() {
     return;
   }
   setupGlobalEvents();
+  initializeConsent();
+  applyAccessibility(accessibilitySettings());
+  updateOnlineStatus();
+  registerServiceWorker();
   try {
     await loadData();
     renderRoute();

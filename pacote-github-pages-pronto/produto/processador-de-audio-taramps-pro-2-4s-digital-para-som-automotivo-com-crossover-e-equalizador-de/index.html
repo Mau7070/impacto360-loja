@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Processador de Áudio Taramps PRO 2.4S Digital para Som Automotivo com Crossover e Equalizador de 15 Bandas | Impacto360 Afiliado</title>
   <meta name="description" content="Produto físico selecionado em 2026-07-28 no Mercado Livre para a vitrine impacto-auto. Link de afiliado gerado oficialmente. Preço, estoque, frete,…">
+  <meta name="theme-color" content="#12355B">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
   <link rel="canonical" href="https://impacto360afiliado.com.br/produto/processador-de-audio-taramps-pro-2-4s-digital-para-som-automotivo-com-crossover-e-equalizador-de/">
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta property="og:type" content="product">
   <meta property="og:title" content="Processador de Áudio Taramps PRO 2.4S Digital para Som Automotivo com Crossover e Equalizador de 15 Bandas">
   <meta property="og:description" content="Produto físico selecionado em 2026-07-28 no Mercado Livre para a vitrine impacto-auto. Link de afiliado gerado oficialmente. Preço, estoque, frete,…">
@@ -69,7 +73,16 @@
     .related-card img { width:100%; aspect-ratio:1/1; object-fit:contain; background:#fff; }
     .related-card strong { font-size:.95rem; line-height:1.3; }
     .related-card span { color:var(--muted); font-weight:900; }
+    :focus-visible { outline:3px solid #2563eb; outline-offset:3px; }
+    @media (prefers-color-scheme:dark) {
+      :root { color-scheme:dark; --ink:#f3f7fb; --muted:#c0cfdd; --line:#294258; --blue:#7db7ff; }
+      body { background:#07121e; }
+      .media, .panel, .related-card, .chip { background:#0e2032; }
+      .media img, .related-card img { background:#fff; }
+      .btn.secondary { background:#13283d; color:#f3f7fb; }
+    }
     @media (max-width:760px) { .product { grid-template-columns:1fr; } .top { align-items:flex-start; flex-direction:column; } }
+    @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition-duration:.01ms!important; } }
   </style>
 </head>
 <body>
@@ -95,6 +108,7 @@
         </div>
         <div class="actions">
           <a class="btn" href="https://meli.la/2BBhN4M" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
+          <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
           <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
         </div>
         <div class="direct-link">Link direto da loja: https://impacto360afiliado.com.br/produto/processador-de-audio-taramps-pro-2-4s-digital-para-som-automotivo-com-crossover-e-equalizador-de/</div>
@@ -127,6 +141,13 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
     const directProductUrl = "https://impacto360afiliado.com.br/produto/processador-de-audio-taramps-pro-2-4s-digital-para-som-automotivo-com-crossover-e-equalizador-de/";
+    const directProductTitle = "Processador de Áudio Taramps PRO 2.4S Digital para Som Automotivo com Crossover e Equalizador de 15 Bandas";
+    try {
+      const key = "impacto360ViewHistory";
+      const values = JSON.parse(localStorage.getItem(key) || "[]");
+      const productId = "ml-completar-20260728-mlb51663424-70a21026b0";
+      localStorage.setItem(key, JSON.stringify([productId, ...values.filter(id => String(id) !== productId)].slice(0, 40)));
+    } catch (error) {}
     function showToast(message) {
       const toast = document.getElementById("toast");
       toast.textContent = message;
@@ -151,6 +172,13 @@
         navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
+      }
+    }
+    function shareProduct() {
+      if (navigator.share) {
+        navigator.share({ title: directProductTitle, url: directProductUrl }).catch(() => {});
+      } else {
+        copyDirectProductLink();
       }
     }
   </script>

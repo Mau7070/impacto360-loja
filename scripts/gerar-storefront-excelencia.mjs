@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -11,6 +12,9 @@ const priceDateFields = [
   "dataUltimaVerificacao", "ultimaVerificacao", "atualizadoEm",
   "ultimaRevisao", "updatedAt",
 ];
+const allowedAffiliateDomains = new Set([
+  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
+]);
 
 const read = relative => fs.readFileSync(path.join(root, relative), "utf8");
 const readJson = relative => JSON.parse(read(relative));
@@ -22,6 +26,15 @@ const write = (file, contents) => {
 
 function text(value) {
   return String(value ?? "").trim();
+}
+
+function html(value) {
+  return text(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function first(item, fields) {
@@ -61,14 +74,19 @@ const imageFields = [
 
 function usableLink(value) {
   const link = text(value);
-  if (!/^https?:\/\//i.test(link)) return false;
+  if (!/^https:\/\//i.test(link)) return false;
   if (/COLOCAR_|placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(link)) return false;
   if (
     /mercadolivre\.com\.br\/(?:loja|ofertas)\//i.test(link)
     || /lista\.mercadolivre\.com\.br/i.test(link)
     || /google\.[^/]+\/search/i.test(link)
   ) return false;
-  return true;
+  try {
+    const hostname = new URL(link).hostname.toLowerCase().replace(/^www\./, "");
+    return [...allowedAffiliateDomains].some(domain => hostname === domain || hostname.endsWith(`.${domain}`));
+  } catch (error) {
+    return false;
+  }
 }
 
 function linkOf(product) {
@@ -231,16 +249,28 @@ function deduplicate(products) {
   });
 }
 
-function routeDocument(template, route, title, description, robots = "index,follow,max-image-preview:large") {
-  const canonical = siteUrl + route;
+function routeDocument(template, route, title, description, robots = "index,follow,max-image-preview:large", canonicalRoute = route) {
+  const canonical = siteUrl + canonicalRoute;
+  const heading = html(title.split(" | ")[0]);
+  const safeTitle = html(title);
+  const safeDescription = html(description);
+  const fallback = `
+      <section class="page-hero route-fallback">
+        <div class="shell">
+          <nav class="breadcrumbs" aria-label="Navegação estrutural"><a href="/">Início</a><span>›</span><span>${heading}</span></nav>
+          <h1>${heading}</h1>
+          <p>${safeDescription}</p>
+        </div>
+      </section>`;
   return template
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
-    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${safeTitle}</title>`)
+    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${safeDescription}">`)
     .replace(/<meta name="robots" content="[^"]*">/, `<meta name="robots" content="${robots}">`)
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`)
-    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`)
-    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`)
-    .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`);
+    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${safeTitle}">`)
+    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${safeDescription}">`)
+    .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`)
+    .replace("      <!-- ROUTE_FALLBACK -->", fallback.trim());
 }
 
 function copyStatic(relative) {
@@ -268,15 +298,28 @@ function updateSitemap(routes) {
 const stores = readJson("dados/stores.json");
 const publishableProducts = readJson("dados/products.json").filter(publishable);
 const productSlugs = buildProductSlugs(publishableProducts);
-const compactProducts = deduplicate(
+const deduplicatedProducts = deduplicate(
   publishableProducts.map(product => compactProduct(product, productSlugs.get(product.id))),
 );
+const integrityResult = quarantineIncompatibleSharedImages(deduplicatedProducts);
+const compactProducts = integrityResult.accepted;
 const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8");
 const fallback404 = fs.readFileSync(path.join(sourceRoot, "404.template.html"), "utf8");
 const css = fs.readFileSync(path.join(sourceRoot, "storefront.css"), "utf8");
 const js = fs.readFileSync(path.join(sourceRoot, "storefront.js"), "utf8");
 
 write(path.join(root, "dados", "catalogo-publico.json"), `${JSON.stringify(compactProducts)}\n`);
+write(
+  path.join(root, "dados", "relatorio-integridade-publicacao.json"),
+  `${JSON.stringify({
+    generatedAt: new Date().toISOString(),
+    sourceProducts: publishableProducts.length,
+    deduplicatedProducts: deduplicatedProducts.length,
+    publishedProducts: compactProducts.length,
+    blockedProducts: integrityResult.blockedIds,
+    imageConflicts: integrityResult.conflicts,
+  }, null, 2)}\n`,
+);
 write(path.join(root, "assets", "storefront-excellence.css"), css);
 write(path.join(root, "assets", "storefront-excellence.js"), js);
 write(path.join(root, "index.html"), template);
@@ -285,6 +328,10 @@ write(path.join(root, "404.html"), fallback404);
 
 ensureDir(packageRoot);
 write(path.join(packageRoot, "dados", "catalogo-publico.json"), `${JSON.stringify(compactProducts)}\n`);
+write(
+  path.join(packageRoot, "dados", "relatorio-integridade-publicacao.json"),
+  read("dados/relatorio-integridade-publicacao.json"),
+);
 write(path.join(packageRoot, "assets", "storefront-excellence.css"), css);
 write(path.join(packageRoot, "assets", "storefront-excellence.js"), js);
 write(path.join(packageRoot, "index.html"), template);
@@ -300,6 +347,90 @@ const commercialRoutes = [
     route: "/buscar/",
     title: "Buscar produtos | Impacto360 Afiliado",
     description: "Pesquise produtos, marcas, categorias e lojas no catálogo da Impacto360.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/ofertas/",
+    title: "Ofertas selecionadas | Impacto360 Afiliado",
+    description: "Ofertas com preço verificado dentro da validade definida; confirme preço, estoque e frete no parceiro.",
+  },
+  {
+    route: "/buscar/imagem/",
+    title: "Busca por imagem | Impacto360 Afiliado",
+    description: "Use uma imagem e uma descrição textual para iniciar uma pesquisa acessível.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/favoritos/",
+    title: "Favoritos | Impacto360 Afiliado",
+    description: "Produtos salvos somente neste navegador.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/alertas/",
+    title: "Acompanhamento de preço | Impacto360 Afiliado",
+    description: "Produtos que você escolheu acompanhar localmente.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/historico/",
+    title: "Histórico de visualização | Impacto360 Afiliado",
+    description: "Itens visualizados recentemente neste navegador.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/perfil/",
+    title: "Perfil e dados | Impacto360 Afiliado",
+    description: "Controle preferências e dados mantidos neste navegador.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/acessibilidade/",
+    title: "Acessibilidade | Impacto360 Afiliado",
+    description: "Ajuste leitura, contraste e movimentos de acordo com sua preferência.",
+  },
+  {
+    route: "/como-comprar/",
+    title: "Como comprar | Impacto360 Afiliado",
+    description: "Encontre, confira e conclua sua compra no site oficial da loja parceira.",
+  },
+  {
+    route: "/transparencia-de-afiliados/",
+    title: "Transparência de afiliados | Impacto360 Afiliado",
+    description: "Entenda como os links de afiliado sustentam a curadoria da Impacto360.",
+  },
+  {
+    route: "/privacidade/",
+    title: "Política de privacidade | Impacto360 Afiliado",
+    description: "Saiba quais dados são usados e controle suas preferências na Impacto360.",
+  },
+  {
+    route: "/cookies/",
+    title: "Preferências de cookies | Impacto360 Afiliado",
+    description: "Escolha quais finalidades opcionais podem ser usadas neste navegador.",
+  },
+  {
+    route: "/termos/",
+    title: "Termos de uso | Impacto360 Afiliado",
+    description: "Condições para utilizar a curadoria e os links da Impacto360 Afiliado.",
+  },
+  {
+    route: "/instalar/",
+    title: "Instalar aplicativo | Impacto360 Afiliado",
+    description: "Instale a Impacto360 como aplicativo quando o navegador oferecer suporte.",
+  },
+  {
+    route: "/politica-de-privacidade/",
+    canonical: "/privacidade/",
+    title: "Política de privacidade | Impacto360 Afiliado",
+    description: "Saiba quais dados são usados e controle suas preferências na Impacto360.",
+    robots: "noindex,follow",
+  },
+  {
+    route: "/termos-de-uso/",
+    canonical: "/termos/",
+    title: "Termos de uso | Impacto360 Afiliado",
+    description: "Condições para utilizar a curadoria e os links da Impacto360 Afiliado.",
     robots: "noindex,follow",
   },
   ...stores.map(store => ({
@@ -333,14 +464,17 @@ const categoryRoutes = [
 }));
 
 for (const route of [...commercialRoutes, ...categoryRoutes]) {
-  const page = routeDocument(template, route.route, route.title, route.description, route.robots);
+  const page = routeDocument(template, route.route, route.title, route.description, route.robots, route.canonical);
   write(path.join(root, route.route.replace(/^\/|\/$/g, ""), "index.html"), page);
   write(path.join(packageRoot, route.route.replace(/^\/|\/$/g, ""), "index.html"), page);
 }
 
 for (const relative of [
   "dados/stores.json",
+  "dados/relatorio-integridade-publicacao.json",
   "favicon.svg",
+  "manifest.webmanifest",
+  "sw.js",
   "CNAME",
   ".nojekyll",
   "integracoes/impacto360-google-ads.js",
@@ -348,7 +482,11 @@ for (const relative of [
   "integracoes/impacto360-banners-admin.js",
 ]) copyStatic(relative);
 
-updateSitemap([...commercialRoutes, ...categoryRoutes].map(item => item.route));
+updateSitemap(
+  [...commercialRoutes, ...categoryRoutes]
+    .filter(item => !String(item.robots || "").startsWith("noindex"))
+    .map(item => item.route),
+);
 
 console.log(JSON.stringify({
   productsSource: readJson("dados/products.json").length,
@@ -358,4 +496,5 @@ console.log(JSON.stringify({
   htmlBytes: fs.statSync(path.join(root, "index.html")).size,
   routes: commercialRoutes.length + categoryRoutes.length,
   priceValidityDays,
+  productsBlockedByImageIntegrity: integrityResult.blockedIds.length,
 }, null, 2));

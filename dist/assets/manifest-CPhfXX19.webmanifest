@@ -1,0 +1,38 @@
+{
+  "name": "Impacto360 Afiliado",
+  "short_name": "Impacto360",
+  "description": "Descubra produtos e conclua a compra no site oficial da loja parceira.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F6F8",
+  "theme_color": "#12355B",
+  "lang": "pt-BR",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Buscar produtos",
+      "short_name": "Buscar",
+      "url": "/buscar/"
+    },
+    {
+      "name": "Ver favoritos",
+      "short_name": "Favoritos",
+      "url": "/favoritos/"
+    },
+    {
+      "name": "Ofertas selecionadas",
+      "short_name": "Ofertas",
+      "url": "/ofertas/"
+    }
+  ]
+}

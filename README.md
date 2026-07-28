@@ -19,10 +19,28 @@ npm run dev
 3. Gere a versão de publicação:
 
 ```bash
-npm run build
+npm run storefront:build
+npm run gerar:produtos
 ```
 
-A pasta final do Vite é `dist`.
+4. Execute as barreiras de qualidade:
+
+```bash
+npm run storefront:test
+```
+
+Os arquivos estáticos são gerados na raiz e sincronizados em `pacote-github-pages-pronto/`.
+
+## Experiência pública
+
+- site responsivo com navegação inferior no celular;
+- PWA instalável com cache controlado;
+- busca tolerante a erros, voz quando suportada e fluxo assistido por imagem;
+- favoritos, histórico e acompanhamento de preço armazenados localmente;
+- modo claro/escuro e central de acessibilidade;
+- consentimento granular antes de medição ou publicidade;
+- páginas de privacidade, cookies, termos e transparência com resposta HTTP 200;
+- allowlist de parceiros e quarentena automática de imagens incompatíveis.
 
 ## Publicação
 
@@ -47,6 +65,7 @@ Os principais dados editáveis ficam em:
 - `src/data/products.json`, quando usar a versão React/Vite
 
 Preserve sempre os campos `affiliateLink` e `linkOriginal` quando forem links de afiliado.
+Antes de qualquer alteração no catálogo, crie um backup datado. Itens duvidosos devem permanecer fora da publicação até revisão humana.
 
 ## Onde editar links de afiliado
 
@@ -61,6 +80,12 @@ Troque apenas o valor do campo de link, sem remover parâmetros de rastreamento:
 - Não envie `.env` para o GitHub.
 - Não coloque tokens, senhas ou chaves no front-end.
 - Use `.env.example` apenas como modelo sem credenciais reais.
+- Nunca use variáveis `VITE_*` para senhas ou outros segredos.
+- O arquivo `dados/relatorio-integridade-publicacao.json` registra bloqueios automáticos do gerador.
+
+## Relatório da evolução premium
+
+Consulte `RELATORIO_IMPLEMENTACAO_PREMIUM_2026-07-28.md` para escopo, validações e limitações conhecidas.
 
 ## Limpeza segura
 
