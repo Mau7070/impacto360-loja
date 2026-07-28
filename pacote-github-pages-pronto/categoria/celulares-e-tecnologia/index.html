@@ -6,6 +6,9 @@
   <title>Celulares e Tecnologia | Impacto360 Afiliado</title>
   <meta name="description" content="Encontre produtos de celulares e tecnologia selecionados em lojas parceiras da Impacto360.">
   <meta name="theme-color" content="#12355B">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://pagead2.googlesyndication.com; connect-src 'self' https://www.google-analytics.com https://www.googleadservices.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://impacto360afiliado.com.br/categoria/celulares-e-tecnologia/">
   <meta property="og:type" content="website">
@@ -16,37 +19,52 @@
   <meta property="og:url" content="https://impacto360afiliado.com.br/categoria/celulares-e-tecnologia/">
   <meta property="og:image" content="https://impacto360afiliado.com.br/public/fachada-shopping-premium-referencia.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20260723-1">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20260728-4">
   <script>
-    (function markInitialRoute() {
+    (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
       if (["/", "/index.html", "/impacto360.html"].includes(routedPath)) {
         document.documentElement.classList.add("initial-home-route");
       }
-    })();
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "AW-17933727169");
-    (function loadMeasurementWithoutBlockingContent() {
-      let loaded = false;
-      function load() {
-        if (loaded) return;
-        loaded = true;
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id=AW-17933727169";
-        document.head.appendChild(script);
+      try {
+        const settings = JSON.parse(localStorage.getItem("impacto360Accessibility") || "{}");
+        const theme = localStorage.getItem("impacto360Theme") || "system";
+        const dark = theme === "dark" || (theme === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        if (settings.contrast) document.documentElement.dataset.contrast = "high";
+        if (settings.largeText) document.documentElement.dataset.textSize = "large";
+        if (settings.reducedMotion) document.documentElement.dataset.reduceMotion = "true";
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
       }
-      ["pointerdown", "keydown", "touchstart"].forEach(eventName => {
-        window.addEventListener(eventName, load, { once: true, passive: true });
-      });
-      window.addEventListener("load", () => window.setTimeout(load, 8000), { once: true });
     })();
   </script>
-  <script defer src="/integracoes/impacto360-google-ads.js?v=20260723-1"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://impacto360afiliado.com.br/#organization",
+          "name": "Impacto360 Afiliado",
+          "url": "https://impacto360afiliado.com.br/"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://impacto360afiliado.com.br/#website",
+          "url": "https://impacto360afiliado.com.br/",
+          "name": "Impacto360 Afiliado",
+          "publisher": {"@id": "https://impacto360afiliado.com.br/#organization"},
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://impacto360afiliado.com.br/buscar/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
@@ -74,6 +92,14 @@
           aria-haspopup="listbox"
           data-search-input
         >
+        <div class="search-tools" aria-label="Outras formas de pesquisar">
+          <button type="button" class="search-tool" data-voice-search aria-label="Pesquisar por voz" title="Pesquisar por voz">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Zm-7 9a7 7 0 0 0 14 0M12 19v3m-4 0h8"/></svg>
+          </button>
+          <button type="button" class="search-tool" data-image-search-open aria-label="Pesquisar usando uma imagem" title="Pesquisar usando uma imagem">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h3l1-2h8l1 2h3v15H4V5Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
+          </button>
+        </div>
         <button type="submit" class="search-submit">Buscar</button>
         <div class="search-suggestions" id="searchSuggestions" role="listbox" hidden data-search-suggestions></div>
       </form>
@@ -87,6 +113,14 @@
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>
           <span>Favoritos</span>
         </a>
+        <button type="button" data-theme-toggle aria-label="Alternar modo claro e escuro">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/></svg>
+          <span>Tema</span>
+        </button>
+        <button type="button" data-accessibility-open aria-label="Abrir central de acessibilidade">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a2 2 0 1 0 0 .01M5 8h14M12 8v13m-5-8 5-5 5 5m-8 8 3-6 3 6"/></svg>
+          <span>Acessibilidade</span>
+        </button>
         <button class="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mainNav" data-menu-toggle>
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           <span>Menu</span>
@@ -104,7 +138,7 @@
         <a href="/categoria/moda-e-calcados/" data-route="/categoria/moda-e-calcados/">Moda</a>
         <a href="/categoria/brinquedos-e-escolar/" data-route="/categoria/brinquedos-e-escolar/">Brinquedos</a>
         <a href="/lojas/" data-route="/lojas/">Todas as lojas</a>
-        <a href="/#como-comprar" data-route="/#como-comprar">Como comprar</a>
+        <a href="/como-comprar/" data-route="/como-comprar/">Como comprar</a>
       </div>
     </nav>
     <button class="menu-overlay" type="button" data-menu-overlay aria-label="Fechar menu" tabindex="-1"></button>
@@ -112,6 +146,13 @@
 
   <main id="conteudo" tabindex="-1">
     <div id="appRoot" class="app-root" aria-live="polite" aria-busy="true">
+<section class="page-hero route-fallback">
+        <div class="shell">
+          <nav class="breadcrumbs" aria-label="Navegação estrutural"><a href="/">Início</a><span>›</span><span>Celulares e Tecnologia</span></nav>
+          <h1>Celulares e Tecnologia</h1>
+          <p>Encontre produtos de celulares e tecnologia selecionados em lojas parceiras da Impacto360.</p>
+        </div>
+      </section>
       <section class="hero initial-home-hero" data-initial-home-hero>
         <div class="shell hero-grid">
           <div>
@@ -150,15 +191,17 @@
         <h2>Shopping</h2>
         <a href="/lojas/" data-route="/lojas/">Todas as lojas</a>
         <a href="/buscar/" data-route="/buscar/">Buscar produtos</a>
-        <a href="/buscar/?oferta=1" data-route="/buscar/?oferta=1">Ofertas</a>
-        <a href="/buscar/?favoritos=1" data-route="/buscar/?favoritos=1">Favoritos</a>
+        <a href="/ofertas/" data-route="/ofertas/">Ofertas</a>
+        <a href="/favoritos/" data-route="/favoritos/">Favoritos</a>
       </section>
       <section>
         <h2>Transparência</h2>
-        <a href="/#como-comprar" data-route="/#como-comprar">Como comprar</a>
+        <a href="/como-comprar/" data-route="/como-comprar/">Como comprar</a>
+        <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Transparência de afiliados</a>
         <a href="mailto:contato@impacto360afiliado.com">Contato</a>
-        <a href="/politica-de-privacidade/">Política de privacidade</a>
-        <a href="/termos-de-uso/">Termos de uso</a>
+        <a href="/privacidade/" data-route="/privacidade/">Política de privacidade</a>
+        <a href="/cookies/" data-route="/cookies/">Preferências de cookies</a>
+        <a href="/termos/" data-route="/termos/">Termos de uso</a>
       </section>
       <section>
         <h2>Atendimento</h2>
@@ -172,7 +215,75 @@
     </div>
   </footer>
 
+  <nav class="bottom-nav" aria-label="Navegação principal no celular">
+    <a href="/" data-route="/"><span aria-hidden="true">⌂</span><small>Início</small></a>
+    <a href="/buscar/" data-route="/buscar/"><span aria-hidden="true">⌕</span><small>Buscar</small></a>
+    <a href="/ofertas/" data-route="/ofertas/"><span aria-hidden="true">%</span><small>Ofertas</small></a>
+    <a href="/favoritos/" data-route="/favoritos/"><span aria-hidden="true">♡</span><small>Favoritos</small></a>
+    <a href="/perfil/" data-route="/perfil/"><span aria-hidden="true">◉</span><small>Perfil</small></a>
+  </nav>
+
+  <aside class="offline-banner" role="status" data-offline-banner hidden>
+    Você está offline. Informações salvas podem estar desatualizadas; confirme tudo no parceiro.
+  </aside>
+
+  <section class="cookie-banner" aria-labelledby="cookieTitle" data-cookie-banner hidden>
+    <div>
+      <strong id="cookieTitle">Sua privacidade, suas escolhas</strong>
+      <p>Usamos armazenamento necessário para favoritos e preferências. Medição e publicidade só carregam com sua autorização.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary" type="button" data-cookie-reject>Somente necessários</button>
+      <button class="btn btn-secondary" type="button" data-cookie-settings>Ajustar</button>
+      <button class="btn btn-primary" type="button" data-cookie-accept>Aceitar opcionais</button>
+    </div>
+  </section>
+
+  <dialog class="app-dialog" data-cookie-dialog aria-labelledby="cookieDialogTitle">
+    <form method="dialog" data-cookie-form>
+      <div class="dialog-heading">
+        <div><span class="section-kicker">Privacidade</span><h2 id="cookieDialogTitle">Preferências de cookies</h2></div>
+        <button class="icon-button" value="cancel" aria-label="Fechar preferências">×</button>
+      </div>
+      <p>Cookies necessários permanecem ativos para segurança, navegação e preferências locais.</p>
+      <label class="setting-row"><span><strong>Medição</strong><small>Ajuda a entender o uso do site sem criar métricas fictícias.</small></span><input type="checkbox" name="analytics"></label>
+      <label class="setting-row"><span><strong>Publicidade</strong><small>Permite carregar integrações opcionais de anúncios.</small></span><input type="checkbox" name="marketing"></label>
+      <div class="dialog-actions"><button class="btn btn-primary" value="save">Salvar preferências</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="app-dialog" data-accessibility-dialog aria-labelledby="accessibilityTitle">
+    <form method="dialog" data-accessibility-form>
+      <div class="dialog-heading">
+        <div><span class="section-kicker">Acesso para todos</span><h2 id="accessibilityTitle">Central de acessibilidade</h2></div>
+        <button class="icon-button" value="cancel" aria-label="Fechar central de acessibilidade">×</button>
+      </div>
+      <label class="setting-row"><span><strong>Texto ampliado</strong><small>Aumenta o tamanho base sem ocultar conteúdo.</small></span><input type="checkbox" name="largeText"></label>
+      <label class="setting-row"><span><strong>Alto contraste</strong><small>Reforça bordas, textos e foco.</small></span><input type="checkbox" name="contrast"></label>
+      <label class="setting-row"><span><strong>Reduzir movimentos</strong><small>Minimiza transições e animações.</small></span><input type="checkbox" name="reducedMotion"></label>
+      <div class="dialog-actions">
+        <button class="btn btn-secondary" type="button" data-read-page>Ouvir conteúdo principal</button>
+        <button class="btn btn-primary" value="save">Aplicar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="app-dialog" data-image-search-dialog aria-labelledby="imageSearchTitle">
+    <form method="dialog" data-image-search-form>
+      <div class="dialog-heading">
+        <div><span class="section-kicker">Busca assistida</span><h2 id="imageSearchTitle">Pesquisar com uma imagem</h2></div>
+        <button class="icon-button" value="cancel" aria-label="Fechar busca por imagem">×</button>
+      </div>
+      <p>A imagem permanece neste dispositivo. Nesta versão, descreva também o item para garantir uma alternativa acessível e evitar correspondências incorretas.</p>
+      <label class="upload-field">Selecionar fotografia ou imagem<input type="file" accept="image/jpeg,image/png,image/webp" data-image-file></label>
+      <img class="image-preview" data-image-preview alt="Prévia da imagem selecionada" hidden>
+      <label class="text-field">Descrição do produto<input type="search" name="description" required placeholder="Ex.: furadeira azul Bosch"></label>
+      <p class="form-status" role="status" data-image-status></p>
+      <div class="dialog-actions"><button class="btn btn-primary" value="search">Pesquisar pela descrição</button></div>
+    </form>
+  </dialog>
+
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20260727-1"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20260728-4"></script>
 </body>
 </html>

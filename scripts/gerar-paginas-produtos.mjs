@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
 
 const root = process.cwd();
 const siteUrl = "https://impacto360afiliado.com.br";
@@ -26,6 +27,9 @@ const lastCheckFields = [
   "ultimaVerificacao", "ultimaRevisao", "lastChecked",
   "dataUltimaVerificacao", "atualizadoEm", "updatedAt",
 ];
+const allowedAffiliateDomains = new Set([
+  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
+]);
 let productSlugById = new Map();
 
 function readJson(file) {
@@ -49,7 +53,13 @@ function isUsableLink(link) {
   if (!value || value === "COLOCAR_LINK_AQUI" || value.startsWith("COLOCAR_")) return false;
   if (/placeholder|sem[-_ ]?(foto|imagem)|URL_|LINK_/i.test(value)) return false;
   if (/mercadolivre\.com\.br\/loja\//i.test(value) || /lista\.mercadolivre\.com\.br/i.test(value)) return false;
-  return /^https?:\/\//i.test(value);
+  if (!/^https:\/\//i.test(value)) return false;
+  try {
+    const hostname = new URL(value).hostname.toLowerCase().replace(/^www\./, "");
+    return [...allowedAffiliateDomains].some(domain => hostname === domain || hostname.endsWith(`.${domain}`));
+  } catch (error) {
+    return false;
+  }
 }
 
 function publicImageExists(value) {
@@ -411,6 +421,8 @@ function productPage(product, store, products) {
   const benefitTags = productBenefitTags(product, store, rawPriceLabel);
   const directUrl = productUrl(product);
   const directUrlJson = JSON.stringify(directUrl);
+  const productIdJson = JSON.stringify(String(product.id));
+  const shareTitleJson = JSON.stringify(title);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -452,7 +464,11 @@ function productPage(product, store, products) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${htmlEscape(title)} | Impacto360 Afiliado</title>
   <meta name="description" content="${htmlEscape(description.slice(0, 155))}">
+  <meta name="theme-color" content="#12355B">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
   <link rel="canonical" href="${htmlEscape(productUrl(product))}">
+  <link rel="manifest" href="/manifest.webmanifest">
   <meta property="og:type" content="product">
   <meta property="og:title" content="${htmlEscape(title)}">
   <meta property="og:description" content="${htmlEscape(description.slice(0, 200))}">
@@ -493,7 +509,16 @@ function productPage(product, store, products) {
     .related-card img { width:100%; aspect-ratio:1/1; object-fit:contain; background:#fff; }
     .related-card strong { font-size:.95rem; line-height:1.3; }
     .related-card span { color:var(--muted); font-weight:900; }
+    :focus-visible { outline:3px solid #2563eb; outline-offset:3px; }
+    @media (prefers-color-scheme:dark) {
+      :root { color-scheme:dark; --ink:#f3f7fb; --muted:#c0cfdd; --line:#294258; --blue:#7db7ff; }
+      body { background:#07121e; }
+      .media, .panel, .related-card, .chip { background:#0e2032; }
+      .media img, .related-card img { background:#fff; }
+      .btn.secondary { background:#13283d; color:#f3f7fb; }
+    }
     @media (max-width:760px) { .product { grid-template-columns:1fr; } .top { align-items:flex-start; flex-direction:column; } }
+    @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition-duration:.01ms!important; } }
   </style>
 </head>
 <body>
@@ -519,6 +544,7 @@ function productPage(product, store, products) {
         </div>
         <div class="actions">
           <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">${htmlEscape(ctaLabel)}</a>
+          <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
           <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
         </div>
         <div class="direct-link">Link direto da loja: ${htmlEscape(directUrl)}</div>
@@ -530,6 +556,13 @@ function productPage(product, store, products) {
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
     const directProductUrl = ${directUrlJson};
+    const directProductTitle = ${shareTitleJson};
+    try {
+      const key = "impacto360ViewHistory";
+      const values = JSON.parse(localStorage.getItem(key) || "[]");
+      const productId = ${productIdJson};
+      localStorage.setItem(key, JSON.stringify([productId, ...values.filter(id => String(id) !== productId)].slice(0, 40)));
+    } catch (error) {}
     function showToast(message) {
       const toast = document.getElementById("toast");
       toast.textContent = message;
@@ -554,6 +587,13 @@ function productPage(product, store, products) {
         navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
+      }
+    }
+    function shareProduct() {
+      if (navigator.share) {
+        navigator.share({ title: directProductTitle, url: directProductUrl }).catch(() => {});
+      } else {
+        copyDirectProductLink();
       }
     }
   </script>
@@ -587,9 +627,20 @@ function writeSitemap(base, products) {
     "auto-e-moto", "beleza-e-cuidados", "pets", "cursos-e-educacao",
     "servicos-digitais", "ofertas-e-parceiros",
   ];
+  const staticRoutes = [
+    "ofertas",
+    "acessibilidade",
+    "como-comprar",
+    "transparencia-de-afiliados",
+    "privacidade",
+    "cookies",
+    "termos",
+    "instalar",
+  ];
   const urls = [
     { loc: `${siteUrl}/`, priority: "1.0" },
     { loc: `${siteUrl}/lojas/`, priority: "0.8" },
+    ...staticRoutes.map(route => ({ loc: `${siteUrl}/${route}/`, priority: "0.6" })),
     ...stores.map(store => ({ loc: `${siteUrl}/loja/${encodeURIComponent(store.id)}/`, priority: "0.7" })),
     ...categorySlugs.map(slug => ({ loc: `${siteUrl}/categoria/${slug}/`, priority: "0.8" })),
     ...products.map(product => ({ loc: productUrl(product), priority: "0.7" })),
@@ -607,9 +658,19 @@ ${urls.map(item => `  <url>
 
 const stores = readJson("dados/stores.json");
 const storesById = new Map(stores.map(store => [store.id, store]));
-const products = deduplicatePublishableProducts(
+const deduplicatedProducts = deduplicatePublishableProducts(
   readJson("dados/products.json").filter(productIsPublishable),
 );
+const integrityResult = quarantineIncompatibleSharedImages(
+  deduplicatedProducts.map(product => ({
+    ...product,
+    image: getProductImage(product),
+    name: firstFilled(product, ["name", "nome", "title"]),
+    model: firstFilled(product, ["model", "modelo"]),
+  })),
+);
+const allowedIds = new Set(integrityResult.accepted.map(product => String(product.id)));
+const products = deduplicatedProducts.filter(product => allowedIds.has(String(product.id)));
 buildProductSlugs(products);
 
 for (const base of outputRoots) {

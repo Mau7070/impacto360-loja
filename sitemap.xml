@@ -9,6 +9,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://impacto360afiliado.com.br/ofertas/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/acessibilidade/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/como-comprar/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/transparencia-de-afiliados/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/privacidade/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/cookies/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/termos/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://impacto360afiliado.com.br/instalar/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://impacto360afiliado.com.br/loja/impacto-mobile/</loc>
     <priority>0.7</priority>
   </url>
@@ -9469,10 +9501,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://impacto360afiliado.com.br/produto/chuveiro-ducha-lorenzetti-loren-shower-eletronico-branco-6800w-220v/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://impacto360afiliado.com.br/produto/smart-tv-stick-v10-4k-android-10-wifi-5g-3-geracao-copa-2026-preto/</loc>
     <priority>0.7</priority>
   </url>
@@ -9714,10 +9742,6 @@
   </url>
   <url>
     <loc>https://impacto360afiliado.com.br/produto/whey-fort-3w-neutro-900g-vitafor/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://impacto360afiliado.com.br/produto/chuveiro-ducha-lorenzetti-loren-shower-ultra-branco-7500w-220v/</loc>
     <priority>0.7</priority>
   </url>
   <url>

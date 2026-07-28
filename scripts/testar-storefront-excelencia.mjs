@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import zlib from "node:zlib";
+import { findIncompatibleSharedImages } from "./catalog-integrity.mjs";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -52,8 +53,11 @@ const required = [
   "assets/storefront-excellence.css",
   "assets/storefront-excellence.js",
   "dados/catalogo-publico.json",
+  "dados/relatorio-integridade-publicacao.json",
   "dados/products.json",
   "dados/stores.json",
+  "manifest.webmanifest",
+  "sw.js",
 ];
 
 for (const file of required) check(`arquivo ${file}`, exists(file));
@@ -74,7 +78,14 @@ check("carrossel automatico antigo removido", !html.includes("impacto360-banners
 check("sem linguagem tecnica antiga", !html.includes("VITRINE EM ROTACAO") && !app.includes("produtos prontos") && !app.includes("Mais Vendidos"));
 check("integracoes administrativas removidas da loja publica", !html.includes("impacto360-admin-robos.js") && !html.includes("loadAdminOnlyInAdminArea"));
 check("stubs administrativos sem credencial embarcada", !read("integracoes/impacto360-admin-robos.js").includes("type=\"password\"") && !read("integracoes/impacto360-banners-admin.js").includes("type=\"password\""));
-check("medicao de anuncios nao bloqueia o conteudo inicial", html.includes("loadMeasurementWithoutBlockingContent") && !html.includes('<script async src="https://www.googletagmanager.com'));
+check(
+  "medicao e anuncios dependem de consentimento",
+  !html.includes('<script async src="https://www.googletagmanager.com')
+  && !html.includes('<script defer src="/integracoes/impacto360-google-ads.js')
+  && app.includes("impacto360Consent")
+  && app.includes("applyConsent")
+  && app.includes("consent.marketing"),
+);
 check("hero comercial correto", app.includes("Ofertas selecionadas nas melhores lojas") && app.includes("Ver ofertas de hoje"));
 check("hero principal disponivel antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("<h1>Ofertas selecionadas nas melhores lojas</h1>"));
 check("rodape protegido contra salto de layout inicial", css.includes("html:not(.storefront-ready) .site-footer") && app.includes('classList.add("storefront-ready")'));
@@ -93,6 +104,12 @@ check(
 );
 check("catalogo sem IDs duplicados", new Set(catalog.map(product => product.id)).size === catalog.length);
 check("catalogo sem links duplicados", new Set(catalog.map(product => product.link.toLowerCase().replace(/#.*$/, ""))).size === catalog.length);
+const incompatibleSharedImages = findIncompatibleSharedImages(catalog);
+check(
+  "catalogo sem imagens compartilhadas por variacoes incompatíveis",
+  incompatibleSharedImages.length === 0,
+  `${incompatibleSharedImages.length} conflito(s)`,
+);
 check("catalogo sem objetos convertidos em texto", !catalog.some(product => JSON.stringify(product).includes("[object Object]")));
 check("todos os produtos projetados existem na origem", catalog.every(product => sourceById.has(product.id)));
 check("links de afiliado preservados", catalog.every(product => sourceLinks(sourceById.get(product.id)).includes(product.link)));
@@ -123,8 +140,14 @@ check("rotas preservadas pelo 404", fallback404.includes('params.set("route", pa
 check("skip link e rotulos acessiveis", html.includes("Pular para o conteúdo principal") && html.includes('aria-autocomplete="list"') && html.includes('role="combobox"') && html.includes('role="search"'));
 check("foco visivel", css.includes(":focus-visible") && css.includes("--color-focus: #2563EB"));
 check("movimento reduzido respeitado", css.includes("prefers-reduced-motion"));
+check("central de acessibilidade e modo escuro", html.includes("data-accessibility-dialog") && app.includes("applyAccessibility") && css.includes(':root[data-theme="dark"]'));
+check("elementos hidden permanecem visualmente ocultos", css.includes("[hidden]") && css.includes("display: none !important"));
+check("busca por voz possui alternativa textual", html.includes("data-voice-search") && app.includes("Busca por voz indisponível") && app.includes("data-search-input"));
+check("busca por imagem nao envia arquivo nesta versao", html.includes("data-image-search-dialog") && app.includes("Ela não foi enviada"));
+check("navegacao inferior mobile", html.includes('class="bottom-nav"') && css.includes(".bottom-nav"));
 check("CTA de produto consistente", app.includes('class="btn ${actionClass}"') && css.includes(".btn-offer"));
 check("CTA identifica link afiliado", app.includes('data-affiliate-link="${escapeAttr(product.link)}"'));
+check("links afiliados validados por allowlist", app.includes("ALLOWED_AFFILIATE_DOMAINS") && app.includes("isAllowedAffiliateUrl"));
 check("preco antigo nao cria linha vazia", !app.includes('previousPrice ? escapeHtml(previousPrice) : "&nbsp;"'));
 check("preco nao verificado usa consulta no parceiro", app.includes("Consulte o preço no parceiro"));
 check("CTA laranja com contraste reforcado", css.includes("--color-accent-active: #C2410C") && css.includes("--color-accent-contrast: #9A3412"));
@@ -141,6 +164,9 @@ for (const relative of [
   "assets/storefront-excellence.css",
   "assets/storefront-excellence.js",
   "dados/catalogo-publico.json",
+  "dados/relatorio-integridade-publicacao.json",
+  "manifest.webmanifest",
+  "sw.js",
   "integracoes/impacto360-admin-robos.js",
   "integracoes/impacto360-banners-admin.js",
 ]) {
@@ -150,6 +176,9 @@ for (const relative of [
 const routes = [
   "lojas/index.html",
   "buscar/index.html",
+  ..."ofertas buscar/imagem favoritos alertas historico perfil acessibilidade como-comprar transparencia-de-afiliados privacidade cookies termos instalar politica-de-privacidade termos-de-uso"
+    .split(" ")
+    .map(route => `${route}/index.html`),
   ...stores.map(store => `loja/${store.id}/index.html`),
   ..."celulares-e-tecnologia casa-e-cozinha eletrodomesticos games-e-setup esporte-e-fitness moda-e-calcados ferramentas brinquedos-e-escolar livros-papelaria-e-fe montaria-e-cavalgada auto-e-moto beleza-e-cuidados pets cursos-e-educacao servicos-digitais ofertas-e-parceiros"
     .split(" ")
@@ -157,10 +186,17 @@ const routes = [
 ];
 check("todas as rotas estaticas geradas", routes.every(route => exists(route)), `${routes.filter(route => exists(route)).length}/${routes.length}`);
 check("rota de busca tem noindex", read("buscar/index.html").includes('content="noindex,follow"'));
+check("rotas legais respondem com HTML estatico", ["privacidade", "cookies", "termos"].every(route => exists(`${route}/index.html`)));
+check("rotas legais possuem H1 antes do JavaScript", ["privacidade", "cookies", "termos"].every(route => read(`${route}/index.html`).includes('class="page-hero route-fallback"')));
+check(
+  "rotas legais antigas preservam compatibilidade",
+  read("politica-de-privacidade/index.html").includes('href="https://impacto360afiliado.com.br/privacidade/"')
+  && read("termos-de-uso/index.html").includes('href="https://impacto360afiliado.com.br/termos/"'),
+);
 check("rotas de loja indexaveis", read(`loja/${stores[0].id}/index.html`).includes('content="index,follow,max-image-preview:large"'));
 check("sitemap inclui lojas e categorias", read("sitemap.xml").includes("<loc>https://impacto360afiliado.com.br/lojas/</loc>") && read("sitemap.xml").includes("/categoria/celulares-e-tecnologia/"));
 
-for (const script of ["src/storefront/storefront.js", "scripts/gerar-storefront-excelencia.mjs"]) {
+for (const script of ["src/storefront/storefront.js", "scripts/gerar-storefront-excelencia.mjs", "scripts/catalog-integrity.mjs", "sw.js"]) {
   const result = spawnSync(process.execPath, ["--check", script], { cwd: root, encoding: "utf8" });
   check(`sintaxe ${script}`, result.status === 0, result.stderr.trim());
 }

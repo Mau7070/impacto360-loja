@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-07-28T15:39:14.756Z",
+  "sourceProducts": 2508,
+  "deduplicatedProducts": 2491,
+  "publishedProducts": 2489,
+  "blockedProducts": [
+    "ml-completar-20260728-mlb19765518-62604aa439",
+    "ml-completar-20260728-mlb19590092-c87d6fef5d"
+  ],
+  "imageConflicts": [
+    {
+      "image": "https://http2.mlstatic.com/d_q_np_2x_896908-mla101388142032_122025-ab.webp",
+      "dimensions": {
+        "wattage": [
+          "6800",
+          "7500"
+        ]
+      },
+      "products": [
+        {
+          "id": "ml-completar-20260728-mlb19765518-62604aa439",
+          "name": "Chuveiro Ducha Lorenzetti Loren Shower Eletrônico Branco 6800w 220V",
+          "signals": {
+            "voltage": [
+              "220"
+            ],
+            "wattage": [
+              "6800"
+            ],
+            "capacity": []
+          }
+        },
+        {
+          "id": "ml-completar-20260728-mlb19590092-c87d6fef5d",
+          "name": "Chuveiro Ducha Lorenzetti Loren Shower Ultra Branco 7500W 220V",
+          "signals": {
+            "voltage": [
+              "220"
+            ],
+            "wattage": [
+              "7500"
+            ],
+            "capacity": []
+          }
+        }
+      ]
+    }
+  ]
+}
