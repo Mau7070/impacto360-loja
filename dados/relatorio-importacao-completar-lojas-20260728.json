@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-07-28T13:31:31.173Z",
+  "backupRequired": true,
+  "sourceProducts": 1965,
+  "eligibleCandidates": 1965,
+  "imported": 1464,
+  "preservedExisting": 1337,
+  "mergedTotal": 2801,
+  "duplicatesRejected": 0,
+  "unassignedEligible": 501,
+  "assignmentCount": {
+    "grife-prime": 29,
+    "impacto-academico": 31,
+    "impacto-auto": 100,
+    "impacto-beauty-care": 100,
+    "impacto-brinquedos": 30,
+    "impacto-calcados": 21,
+    "impacto-criadores": 95,
+    "impacto-decor": 76,
+    "impacto-educa": 96,
+    "impacto-eletronicos": 46,
+    "impacto-fe": 94,
+    "impacto-games": 67,
+    "impacto-kids": 14,
+    "impacto-livraria": 33,
+    "impacto-mobile": 41,
+    "impacto-moda": 98,
+    "impacto-montaria": 58,
+    "impacto-music-studio": 71,
+    "impacto-ofertas": 69,
+    "impacto-personalizados": 83,
+    "impacto-pet": 100,
+    "impacto-tech-computadores": 12,
+    "lojas-parceiras": 100
+  },
+  "finalCounts": {
+    "impacto-mobile": 76,
+    "impacto-tech-computadores": 70,
+    "impacto-casa": 215,
+    "impacto-moda": 100,
+    "grife-prime": 54,
+    "impacto-calcados": 100,
+    "impacto-ofertas": 100,
+    "lojas-parceiras": 100,
+    "impacto-eletronicos": 65,
+    "impacto-games": 75,
+    "impacto-educa": 100,
+    "impacto-livraria": 100,
+    "impacto-beauty-care": 100,
+    "impacto-kids": 100,
+    "impacto-pet": 100,
+    "impacto-decor": 76,
+    "impacto-fe": 100,
+    "impacto-music-studio": 71,
+    "impacto-academico": 31,
+    "impacto-personalizados": 83,
+    "impacto-criadores": 95,
+    "impacto-auto": 100,
+    "impacto-ferramentas": 213,
+    "impacto-sport": 101,
+    "impacto-montaria": 83,
+    "impacto-brinquedos": 100
+  },
+  "belowMinimum": [
+    {
+      "storeId": "impacto-mobile",
+      "count": 76,
+      "missing": 24
+    },
+    {
+      "storeId": "impacto-tech-computadores",
+      "count": 70,
+      "missing": 30
+    },
+    {
+      "storeId": "grife-prime",
+      "count": 54,
+      "missing": 46
+    },
+    {
+      "storeId": "impacto-eletronicos",
+      "count": 65,
+      "missing": 35
+    },
+    {
+      "storeId": "impacto-games",
+      "count": 75,
+      "missing": 25
+    },
+    {
+      "storeId": "impacto-decor",
+      "count": 76,
+      "missing": 24
+    },
+    {
+      "storeId": "impacto-music-studio",
+      "count": 71,
+      "missing": 29
+    },
+    {
+      "storeId": "impacto-academico",
+      "count": 31,
+      "missing": 69
+    },
+    {
+      "storeId": "impacto-personalizados",
+      "count": 83,
+      "missing": 17
+    },
+    {
+      "storeId": "impacto-criadores",
+      "count": 95,
+      "missing": 5
+    },
+    {
+      "storeId": "impacto-montaria",
+      "count": 83,
+      "missing": 17
+    }
+  ],
+  "publication": "nao_publicado"
+}

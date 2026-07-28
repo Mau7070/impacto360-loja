@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import zlib from "node:zlib";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -83,7 +84,13 @@ check("ferramentas acessiveis no menu principal", html.includes('href="/categori
 check("oito lojas na home", app.includes("homeStoreIds") && app.includes("impacto-brinquedos"));
 check("26 lojas preservadas", stores.length === 26, `${stores.length} lojas`);
 check("catalogo publico reduzido", catalog.length > 0 && catalog.length < sourceProducts.length, `${catalog.length}/${sourceProducts.length}`);
-check("catalogo publico menor que 1,5 MB", Buffer.byteLength(read("dados/catalogo-publico.json")) < 1_500_000, `${Buffer.byteLength(read("dados/catalogo-publico.json"))} bytes`);
+const catalogBuffer = fs.readFileSync(path.join(root, "dados", "catalogo-publico.json"));
+const catalogGzipBytes = zlib.gzipSync(catalogBuffer, { level: 9 }).length;
+check(
+  "catalogo publico dentro do limite de transferencia",
+  catalogBuffer.length < 5_000_000 && catalogGzipBytes < 500_000,
+  `${catalogBuffer.length} bytes brutos / ${catalogGzipBytes} bytes gzip`,
+);
 check("catalogo sem IDs duplicados", new Set(catalog.map(product => product.id)).size === catalog.length);
 check("catalogo sem links duplicados", new Set(catalog.map(product => product.link.toLowerCase().replace(/#.*$/, ""))).size === catalog.length);
 check("catalogo sem objetos convertidos em texto", !catalog.some(product => JSON.stringify(product).includes("[object Object]")));

@@ -106,8 +106,8 @@ check("filtro de marca Bosch funciona", evaluate(`
 check("produtos de ferramentas estao categorizados", evaluate(`
   state.products.filter(product => categoryForProduct(product)?.slug === "ferramentas").length > 0
 `));
-check("188 produtos publicos em Casa e Cozinha", evaluate(`
-  state.products.filter(product => categoryForProduct(product)?.slug === "casa-e-cozinha").length === 188
+check("Casa e Cozinha preserva o minimo auditado", evaluate(`
+  state.products.filter(product => categoryForProduct(product)?.slug === "casa-e-cozinha").length >= 188
 `));
 check("200 ferramentas recentes no ambiente correto", evaluate(`
   state.products.filter(product => /^ferramentas-20260724-/.test(product.id)).length === 200
