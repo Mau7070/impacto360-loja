@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://impacto360afiliado.com.br/">
   <meta property="og:image" content="https://impacto360afiliado.com.br/public/fachada-shopping-premium-referencia.png">
   <link rel="icon" href="/assets/favicon-Bg8bUEo4.svg" type="image/svg+xml">
-  <link rel="manifest" href="/assets/manifest-CPhfXX19.webmanifest">
+  <link rel="manifest" href="/assets/manifest-BKV3DlHY.webmanifest">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -64,8 +64,8 @@
       ]
     }
   </script>
-  <script type="module" crossorigin src="/assets/index-C8UzbWQO.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-tZ7QvQWo.css">
+  <script type="module" crossorigin src="/assets/index-B0N9eWCY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-uisyRS1N.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
@@ -79,7 +79,6 @@
 
       <form class="global-search" role="search" data-search-form autocomplete="off">
         <label class="sr-only" for="globalSearchInput">Buscar produtos, categorias ou lojas</label>
-        <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
         <input
           id="globalSearchInput"
           type="search"
@@ -101,7 +100,10 @@
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h3l1-2h8l1 2h3v15H4V5Zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/></svg>
           </button>
         </div>
-        <button type="submit" class="search-submit">Buscar</button>
+        <button type="submit" class="search-submit" aria-label="Buscar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+          <span class="search-submit-label">Buscar</span>
+        </button>
         <div class="search-suggestions" id="searchSuggestions" role="listbox" hidden data-search-suggestions></div>
       </form>
 
@@ -140,10 +142,32 @@
         <a href="/categoria/brinquedos-e-escolar/" data-route="/categoria/brinquedos-e-escolar/">Brinquedos</a>
         <a href="/lojas/" data-route="/lojas/">Todas as lojas</a>
         <a href="/como-comprar/" data-route="/como-comprar/">Como comprar</a>
+        <div class="mobile-menu-tools" aria-label="Preferências de visualização">
+          <button type="button" data-theme-toggle>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/></svg>
+            Tema
+          </button>
+          <button type="button" data-accessibility-open>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a2 2 0 1 0 0 .01M5 8h14M12 8v13m-5-8 5-5 5 5m-8 8 3-6 3 6"/></svg>
+            Acessibilidade
+          </button>
+        </div>
       </div>
     </nav>
     <button class="menu-overlay" type="button" data-menu-overlay aria-label="Fechar menu" tabindex="-1"></button>
   </header>
+
+  <section class="cookie-banner" aria-labelledby="cookieTitle" data-cookie-banner hidden>
+    <div>
+      <strong id="cookieTitle">Sua privacidade, suas escolhas</strong>
+      <p>Usamos armazenamento necessário para favoritos e preferências. Medição e publicidade só carregam com sua autorização.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary" type="button" data-cookie-reject>Somente necessários</button>
+      <button class="cookie-settings-link" type="button" data-cookie-settings>Ajustar</button>
+      <button class="btn btn-primary" type="button" data-cookie-accept>Aceitar opcionais</button>
+    </div>
+  </section>
 
   <main id="conteudo" tabindex="-1">
     <div id="appRoot" class="app-root" aria-live="polite" aria-busy="true">
@@ -163,11 +187,19 @@
           <div class="hero-products" aria-hidden="true"></div>
         </div>
       </section>
-      <section class="loading-state initial-route-loading shell" aria-label="Carregando ofertas">
-        <div class="loading-line wide"></div>
-        <div class="loading-line"></div>
-        <div class="loading-grid">
-          <span></span><span></span><span></span><span></span>
+      <section class="loading-state initial-route-loading" aria-label="Carregando ofertas">
+        <div class="home-skeleton shell" aria-hidden="true">
+          <div class="hero-skeleton">
+            <div>
+              <div class="loading-line wide"></div>
+              <div class="loading-line"></div>
+              <div class="loading-button"></div>
+            </div>
+            <div class="loading-media"></div>
+          </div>
+          <div class="loading-grid">
+            <span></span><span></span><span></span><span></span>
+          </div>
         </div>
       </section>
     </div>
@@ -222,18 +254,6 @@
     Você está offline. Informações salvas podem estar desatualizadas; confirme tudo no parceiro.
   </aside>
 
-  <section class="cookie-banner" aria-labelledby="cookieTitle" data-cookie-banner hidden>
-    <div>
-      <strong id="cookieTitle">Sua privacidade, suas escolhas</strong>
-      <p>Usamos armazenamento necessário para favoritos e preferências. Medição e publicidade só carregam com sua autorização.</p>
-    </div>
-    <div class="cookie-actions">
-      <button class="btn btn-secondary" type="button" data-cookie-reject>Somente necessários</button>
-      <button class="btn btn-secondary" type="button" data-cookie-settings>Ajustar</button>
-      <button class="btn btn-primary" type="button" data-cookie-accept>Aceitar opcionais</button>
-    </div>
-  </section>
-
   <dialog class="app-dialog" data-cookie-dialog aria-labelledby="cookieDialogTitle">
     <form method="dialog" data-cookie-form>
       <div class="dialog-heading">
@@ -278,6 +298,6 @@
     </form>
   </dialog>
 
-  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
 </body>
 </html>

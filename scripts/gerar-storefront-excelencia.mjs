@@ -303,12 +303,36 @@ const deduplicatedProducts = deduplicate(
 );
 const integrityResult = quarantineIncompatibleSharedImages(deduplicatedProducts);
 const compactProducts = integrityResult.accepted;
+const revalidationQueue = compactProducts
+  .filter(product => product.priceStatus !== "current")
+  .map(product => ({
+    id: product.id,
+    name: product.name,
+    storeId: product.storeId,
+    status: product.priceStatus,
+    priceUpdatedAt: product.priceUpdatedAt,
+    priceValidUntil: product.priceValidUntil,
+    priority: "high",
+  }));
 const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8");
 const fallback404 = fs.readFileSync(path.join(sourceRoot, "404.template.html"), "utf8");
 const css = fs.readFileSync(path.join(sourceRoot, "storefront.css"), "utf8");
 const js = fs.readFileSync(path.join(sourceRoot, "storefront.js"), "utf8");
 
 write(path.join(root, "dados", "catalogo-publico.json"), `${JSON.stringify(compactProducts)}\n`);
+write(
+  path.join(root, "dados", "fila-revalidacao-precos.json"),
+  `${JSON.stringify({
+    generatedAt: new Date().toISOString(),
+    policy: {
+      priceValidityDays,
+      ordering: "expired and unverified prices first",
+      publishRule: "never expose an expired discount as current",
+    },
+    pending: revalidationQueue.length,
+    items: revalidationQueue,
+  }, null, 2)}\n`,
+);
 write(
   path.join(root, "dados", "relatorio-integridade-publicacao.json"),
   `${JSON.stringify({
@@ -328,6 +352,10 @@ write(path.join(root, "404.html"), fallback404);
 
 ensureDir(packageRoot);
 write(path.join(packageRoot, "dados", "catalogo-publico.json"), `${JSON.stringify(compactProducts)}\n`);
+write(
+  path.join(packageRoot, "dados", "fila-revalidacao-precos.json"),
+  read("dados/fila-revalidacao-precos.json"),
+);
 write(
   path.join(packageRoot, "dados", "relatorio-integridade-publicacao.json"),
   read("dados/relatorio-integridade-publicacao.json"),
