@@ -53,6 +53,7 @@ const required = [
   "assets/storefront-excellence.css",
   "assets/storefront-excellence.js",
   "dados/catalogo-publico.json",
+  "dados/fila-revalidacao-precos.json",
   "dados/relatorio-integridade-publicacao.json",
   "dados/products.json",
   "dados/stores.json",
@@ -67,6 +68,7 @@ const app = read("assets/storefront-excellence.js");
 const css = read("assets/storefront-excellence.css");
 const fallback404 = read("404.html");
 const catalog = JSON.parse(read("dados/catalogo-publico.json"));
+const priceRevalidationQueue = JSON.parse(read("dados/fila-revalidacao-precos.json"));
 const sourceProducts = JSON.parse(read("dados/products.json"));
 const stores = JSON.parse(read("dados/stores.json"));
 const sourceById = new Map(sourceProducts.map(product => [String(product.id), product]));
@@ -124,7 +126,8 @@ check("busca tolera pequenos erros", app.includes("levenshtein") && app.includes
 check("busca trata sinonimos e palavras de ligacao", app.includes("SEARCH_ALIASES") && app.includes("SEARCH_STOPWORDS"));
 check("sugestoes com debounce", app.includes("280") && app.includes('role="option"'));
 check("navegacao de sugestoes por teclado", app.includes('"ArrowDown"') && app.includes('"ArrowUp"') && app.includes('"Escape"'));
-check("filtros principais", ["categoria", "loja", "parceiro", "marca", "preco", "avaliacao", "oferta"].every(filter => app.includes(`data-filter="${filter}"`)));
+check("filtros principais", ["categoria", "loja", "parceiro", "preco", "avaliacao", "oferta"].every(filter => app.includes(`data-filter="${filter}"`)) && app.includes("data-brand-search"));
+check("marca pesquisavel sugere depois de duas letras e limita dez opcoes", app.includes("query.length < 2") && app.includes(".slice(0, 10)") && app.includes("data-brand-suggestions"));
 check("filtro de disponibilidade", app.includes('data-filter="disponibilidade"') && app.includes("availabilityFilter"));
 check("filtros exibem contagens auditaveis", app.includes("countValues") && app.includes("priceCounts") && app.includes("ratingCounts"));
 check("filtro inclui produtos sem preco cadastrado", app.includes('["sem-preco", "Preço no parceiro"]'));
@@ -145,6 +148,16 @@ check("elementos hidden permanecem visualmente ocultos", css.includes("[hidden]"
 check("busca por voz possui alternativa textual", html.includes("data-voice-search") && app.includes("Busca por voz indisponível") && app.includes("data-search-input"));
 check("busca por imagem nao envia arquivo nesta versao", html.includes("data-image-search-dialog") && app.includes("Ela não foi enviada"));
 check("navegacao inferior mobile", html.includes('class="bottom-nav"') && css.includes(".bottom-nav"));
+check("tema e acessibilidade disponiveis no menu movel e perfil", html.includes("mobile-menu-tools") && app.includes("Alternar tema") && app.includes("Abrir acessibilidade"));
+check("home compacta com limites definidos", app.includes("], 8);") && app.includes(".slice(0, 4)") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
+check("cards moveis simplificados em uma coluna ou lista", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
+check("ofertas antigas sinalizadas e sem desconto vencido", app.includes("priceFreshness(product).current") && app.includes("Informação antiga"));
+check(
+  "revalidacao automatica prioriza precos vencidos e nao verificados",
+  priceRevalidationQueue.pending === priceRevalidationQueue.items.length
+    && priceRevalidationQueue.items.every(item => item.priority === "high" && item.status !== "current"),
+);
+check("cookies compactos com ajuste secundario", html.includes("cookie-settings-link") && css.includes("grid-template-columns: 1fr 1fr"));
 check("CTA de produto consistente", app.includes('class="btn ${actionClass}"') && css.includes(".btn-offer"));
 check("CTA identifica link afiliado", app.includes('data-affiliate-link="${escapeAttr(product.link)}"'));
 check("links afiliados validados por allowlist", app.includes("ALLOWED_AFFILIATE_DOMAINS") && app.includes("isAllowedAffiliateUrl"));
@@ -164,6 +177,7 @@ for (const relative of [
   "assets/storefront-excellence.css",
   "assets/storefront-excellence.js",
   "dados/catalogo-publico.json",
+  "dados/fila-revalidacao-precos.json",
   "dados/relatorio-integridade-publicacao.json",
   "manifest.webmanifest",
   "sw.js",

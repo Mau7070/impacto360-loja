@@ -1,7 +1,7 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260728-4";
-const STORES_URL = "/dados/stores.json?v=20260728-4";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260729-preview";
+const STORES_URL = "/dados/stores.json?v=20260729-preview";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const VIEW_HISTORY_KEY = "impacto360ViewHistory";
@@ -10,6 +10,7 @@ const CONSENT_KEY = "impacto360Consent";
 const ACCESSIBILITY_KEY = "impacto360Accessibility";
 const THEME_KEY = "impacto360Theme";
 const CONSENT_VERSION = 1;
+const PRICE_VALIDITY_DAYS = 7;
 const ALLOWED_AFFILIATE_DOMAINS = new Set([
   "amazon.com.br",
   "link.amazon",
@@ -32,6 +33,7 @@ const state = {
   routeRenderId: 0,
   imageObserver: null,
   filterReturnFocus: null,
+  filterBrands: [],
   menuReturnFocus: null,
   installPrompt: null,
   speechRecognition: null,
@@ -489,7 +491,8 @@ function priceRange(value) {
 }
 
 function validDiscount(product) {
-  return Number.isFinite(product.previousPriceValue)
+  return priceFreshness(product).current
+    && Number.isFinite(product.previousPriceValue)
     && Number.isFinite(product.priceValue)
     && product.previousPriceValue > product.priceValue;
 }
@@ -497,6 +500,17 @@ function validDiscount(product) {
 function discountPercent(product) {
   if (!validDiscount(product)) return 0;
   return Math.round((1 - product.priceValue / product.previousPriceValue) * 100);
+}
+
+function priceFreshness(product) {
+  const raw = text(product.priceUpdatedAt || product.updatedAt);
+  const checkedAt = raw ? new Date(raw) : null;
+  if (!checkedAt || Number.isNaN(checkedAt.getTime())) {
+    return { current: false, stale: false, checkedAt: "" };
+  }
+  const ageMs = Date.now() - checkedAt.getTime();
+  const current = ageMs >= 0 && ageMs <= PRICE_VALIDITY_DAYS * 24 * 60 * 60 * 1000;
+  return { current, stale: !current, checkedAt: dateLabel(raw) };
 }
 
 function favoriteSet() {
@@ -660,15 +674,23 @@ function productPath(product) {
 function productCard(product, index = 0, eagerCount = 0) {
   const favorites = favoriteSet();
   const alerts = storedIdSet(ALERTS_KEY);
+  const freshness = priceFreshness(product);
   const discount = discountPercent(product);
-  const badge = discount ? `${discount}% OFF` : text(product.badge) || (product.offer ? "Oferta selecionada" : "Produto selecionado");
+  const verifiedBadge = /oferta verificada/i.test(text(product.badge));
+  const badge = discount
+    ? `${discount}% OFF`
+    : freshness.stale
+      ? "Informação antiga"
+      : verifiedBadge && freshness.current
+        ? "Oferta verificada"
+        : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
   const internalPath = productPath(product);
   const quote = product.actionType === "quote";
   const actionLabel = quote ? "Solicitar orçamento" : "Ver oferta";
   const actionClass = quote ? "btn-service" : "btn-offer";
   const currentPrice = money(product.priceValue, product.price);
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
-  const updatedAt = dateLabel(product.priceUpdatedAt || product.updatedAt);
+  const updatedAt = freshness.checkedAt;
   const rating = product.rating
     ? `<span aria-label="Avaliação ${product.rating.toFixed(1)} de 5">★ ${product.rating.toFixed(1).replace(".", ",")}</span>`
     : "";
@@ -701,10 +723,10 @@ function productCard(product, index = 0, eagerCount = 0) {
       <div class="product-body">
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
         <h3><a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}">${escapeHtml(product.name)}</a></h3>
+        ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
         <div class="product-facts">
           <span>${escapeHtml(availabilityLabel(product))}</span>
-          ${rating ? `<span class="rating">${rating}</span>` : ""}
-          ${updatedAt ? `<span>Preço verificado em ${escapeHtml(updatedAt)}</span>` : ""}
+          ${updatedAt ? `<span class="${freshness.stale ? "product-stale" : ""}">${freshness.stale ? "Informação antiga" : "Preço verificado"} em ${escapeHtml(updatedAt)}</span>` : ""}
         </div>
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
@@ -812,14 +834,12 @@ function renderHome() {
     ...state.products.filter(product => product.offer),
     ...state.products,
   ], 8);
-  const discovery = diverseProducts(state.products.filter(product => !featured.some(item => item.id === product.id)), 8);
   const heroProducts = featured.slice(0, 4);
-  const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean);
-  const services = serviceStoreIds.map(id => state.storeById.get(id)).filter(Boolean);
-  const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0);
-  const heroProductMarkup = heroProducts.map(product => `
+  const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
+  const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
+  const heroProductMarkup = heroProducts.map((product, index) => `
     <span class="hero-product">
-      <img src="${LAZY_IMAGE_PLACEHOLDER}" data-hero-src="${escapeAttr(assetUrl(product.image))}" alt="" loading="lazy" decoding="async">
+      <img src="${escapeAttr(assetUrl(product.image))}" alt="" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" ${index === 0 ? 'fetchpriority="high"' : ""}>
     </span>`).join("");
   const heroMarkup = `
     <section class="hero" data-initial-home-hero>
@@ -863,34 +883,8 @@ function renderHome() {
 
     <section class="section section-white">
       <div class="shell">
-        ${sectionHeader("Navegação rápida", "Compre por categoria", "Mostramos somente categorias que têm produtos disponíveis.", "/lojas/", "Ver todas as lojas")}
+        ${sectionHeader("Navegação rápida", "Compre por categoria", "Oito caminhos diretos para encontrar o que você procura.", "/buscar/", "Ver todas as categorias")}
         <div class="category-grid">${activeCategories.map(categoryCard).join("")}</div>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="shell">
-        ${sectionHeader("Descoberta", "Seleções para você", "Uma vitrine diversa sem simular ranking de vendas ou popularidade.", "/buscar/", "Explorar catálogo")}
-        ${productGrid(discovery, "product-rail")}
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        ${sectionHeader("Departamentos", "Produtos por departamento", "Prateleiras organizadas para comparar opções sem misturar categorias.")}
-        ${departmentShelves.slice(0, 4).map(([slug, title, description]) => {
-          const category = categoryDefinitions.find(item => item.slug === slug);
-          const products = diverseProducts(categoryProducts(category), 4);
-          if (!products.length) return "";
-          return `
-            <section class="shelf" aria-labelledby="shelf-${slug}">
-              <div class="shelf-header">
-                <div><h3 id="shelf-${slug}">${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></div>
-                <a class="text-link" href="/categoria/${slug}/" data-route="/categoria/${slug}/">Ver todos</a>
-              </div>
-              ${productGrid(products, "product-rail")}
-            </section>`;
-        }).join("")}
       </div>
     </section>
 
@@ -898,20 +892,6 @@ function renderHome() {
       <div class="shell">
         ${sectionHeader("Shopping virtual", "Lojas do Shopping", "Entre nas lojas principais ou conheça todos os departamentos da Impacto360.", "/lojas/", `Ver todas as ${state.stores.length} lojas`)}
         <div class="store-grid">${homeStores.map(storeCard).join("")}</div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="shell">
-        ${sectionHeader("Navegue com clareza", "Explore as alas do shopping", "Entre em um departamento e conheça as lojas especializadas.")}
-        <div class="aisle-grid">${aisleDefinitions.slice(0, 6).map(aisleCard).join("")}</div>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="shell">
-        ${sectionHeader("Soluções sob medida", "Serviços da Impacto360", "Serviços criativos e digitais com atendimento direto.")}
-        <div class="service-grid">${services.map(serviceCard).join("")}</div>
       </div>
     </section>
 
@@ -1211,6 +1191,11 @@ function renderSearch(routeUrl) {
   const partners = [...partnerCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
   const brands = [...brandCounts.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
   const clearHref = clearSearchFiltersHref(routeUrl);
+  const activeFilterCount = [
+    selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice,
+    selectedRating, selectedAvailability, offerOnly,
+  ].filter(Boolean).length;
+  state.filterBrands = brands.map(brand => ({ brand, count: brandCounts.get(brand) || 0 }));
 
   appRoot().innerHTML = `
     ${pageHero(title, description, [["Início", "/"], ["Busca", ""]])}
@@ -1220,6 +1205,7 @@ function renderSearch(routeUrl) {
           selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice, selectedRating, selectedAvailability,
           offerOnly, categories, stores, partners, brands, categoryCounts, storeCounts, partnerCounts,
           brandCounts, priceCounts, availabilityCounts, clearHref, showCategory: true, showStore: true,
+          activeFilterCount,
           offerCount: state.products.filter(product => product.offer).length,
           ratingCounts: new Map([
             [4, state.products.filter(product => Number(product.rating || 0) >= 4).length],
@@ -1230,7 +1216,9 @@ function renderSearch(routeUrl) {
           <h2 class="sr-only">Produtos encontrados</h2>
           <div class="results-toolbar">
             <p><strong>${ranked.length}</strong> ${ranked.length === 1 ? "produto" : "produtos"}</p>
-            <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-toggle>Filtros</button>
+            <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-toggle>
+              Filtros ${activeFilterCount ? `<span class="filter-count">${activeFilterCount}</span>` : ""}
+            </button>
             <label>
               <span class="sr-only">Ordenar resultados</span>
               <select class="sort-select" data-sort>
@@ -1258,13 +1246,22 @@ function searchFilters(options) {
     selectedCategory, selectedStore, selectedPartner, selectedBrand,
     selectedPrice, selectedRating, selectedAvailability, offerOnly, categories, stores, partners, brands,
     categoryCounts, storeCounts, partnerCounts, brandCounts, priceCounts,
-    availabilityCounts, ratingCounts, offerCount, clearHref,
+    availabilityCounts, ratingCounts, offerCount, clearHref, activeFilterCount = 0,
     showCategory = true, showStore = true,
   } = options;
+  const effectiveFilterCount = activeFilterCount || [
+    selectedCategory, selectedStore, selectedPartner, selectedBrand, selectedPrice,
+    selectedRating, selectedAvailability, offerOnly,
+  ].filter(Boolean).length;
+  state.filterBrands = brands.map(brand => ({ brand, count: brandCounts.get(brand) || 0 }));
   return `
     <button class="filter-backdrop" type="button" data-filter-close aria-label="Fechar filtros" tabindex="-1"></button>
     <aside class="filters" data-filters aria-label="Filtros de busca" aria-hidden="false">
-      <div class="results-toolbar"><h2>Filtrar resultados</h2><button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-close>Fechar</button></div>
+      <div class="filters-summary">
+        <h2>Filtrar resultados</h2>
+        ${effectiveFilterCount ? `<span class="filter-count" aria-label="${effectiveFilterCount} filtros ativos">${effectiveFilterCount}</span>` : ""}
+        <button class="btn btn-secondary mobile-filter-toggle" type="button" data-filter-close>Fechar</button>
+      </div>
       ${showCategory ? `
       <div class="filter-field">
         <label for="filterCategory">Categoria</label>
@@ -1291,12 +1288,10 @@ function searchFilters(options) {
           ${partners.map(partner => `<option value="${escapeAttr(partner)}" ${selectedPartner === partner ? "selected" : ""}>${escapeHtml(partner)} (${partnerCounts.get(partner) || 0})</option>`).join("")}
         </select>
       </div>
-      <div class="filter-field">
+      <div class="filter-field brand-suggest">
         <label for="filterBrand">Marca</label>
-        <select id="filterBrand" data-filter="marca">
-          <option value="">Todas</option>
-          ${brands.map(brand => `<option value="${escapeAttr(brand)}" ${selectedBrand === brand ? "selected" : ""}>${escapeHtml(brand)} (${brandCounts.get(brand) || 0})</option>`).join("")}
-        </select>
+        <input id="filterBrand" type="search" value="${escapeAttr(selectedBrand)}" placeholder="Digite ao menos 2 letras" autocomplete="off" aria-controls="brandSuggestions" aria-expanded="false" data-brand-search>
+        <div class="brand-suggestions" id="brandSuggestions" role="listbox" data-brand-suggestions hidden></div>
       </div>
       <div class="filter-field">
         <label for="filterPrice">Faixa de preço</label>
@@ -1331,7 +1326,7 @@ function searchFilters(options) {
         </select>
       </div>
       <label class="filter-check"><input type="checkbox" data-filter="oferta" value="1" ${offerOnly ? "checked" : ""}> Somente ofertas (${offerCount})</label>
-      <a class="btn btn-secondary" href="${escapeAttr(clearHref)}" data-route="${escapeAttr(clearHref)}">Limpar filtros</a>
+      <a class="btn btn-secondary" href="${escapeAttr(clearHref)}" data-route="${escapeAttr(clearHref)}">Limpar${effectiveFilterCount ? ` ${effectiveFilterCount} filtros` : " filtros"}</a>
     </aside>`;
 }
 
@@ -1491,7 +1486,16 @@ function renderContentPage(path) {
     <section class="section"><div class="shell content-page">${page.content}</div></section>`;
 }
 
-function renderSavedCollection({ title, description, products, emptyLabel, canonical }) {
+function favoritesEmptyState() {
+  return `
+    <div class="empty-state">
+      <h2>Você ainda não salvou nenhum favorito.</h2>
+      <p>Use o coração nos cards para reunir aqui os produtos que deseja comparar depois.</p>
+      <a class="btn btn-offer" href="/buscar/" data-route="/buscar/">Explorar produtos</a>
+    </div>`;
+}
+
+function renderSavedCollection({ title, description, products, emptyLabel, canonical, emptyMarkup = "" }) {
   setMeta({
     title: `${title} | ${SITE_NAME}`,
     description,
@@ -1501,7 +1505,7 @@ function renderSavedCollection({ title, description, products, emptyLabel, canon
   appRoot().innerHTML = `
     ${pageHero(title, description, [["Início", "/"], [title, ""]])}
     <section class="section"><div class="shell">
-      ${products.length ? productGrid(products) : emptyState(emptyLabel)}
+      ${products.length ? productGrid(products) : emptyMarkup || emptyState(emptyLabel)}
     </div></section>`;
 }
 
@@ -1512,6 +1516,7 @@ function renderFavorites() {
     products: selectedProducts(FAVORITES_KEY),
     emptyLabel: "seus favoritos",
     canonical: "/favoritos/",
+    emptyMarkup: favoritesEmptyState(),
   });
 }
 
@@ -1558,8 +1563,13 @@ function renderProfile() {
         </div>
       </article>
       <article class="content-card">
-        <h2>Sincronização opcional</h2>
-        <p>Login por link de e-mail e passkeys dependem de um backend seguro. Permanecem indisponíveis até essa fundação estar pronta; nenhuma credencial é solicitada nesta versão.</p>
+        <h2>Visual e acessibilidade</h2>
+        <p>Escolha como deseja navegar neste dispositivo. As preferências podem ser alteradas a qualquer momento.</p>
+        <div class="account-actions">
+          <button class="btn btn-secondary" type="button" data-theme-toggle>Alternar tema</button>
+          <button class="btn btn-secondary" type="button" data-accessibility-open>Abrir acessibilidade</button>
+          <a class="btn btn-secondary" href="/cookies/" data-route="/cookies/">Preferências de cookies</a>
+        </div>
       </article>
     </div></section>`;
 }
@@ -1790,6 +1800,26 @@ function closeFilters({ restoreFocus = true } = {}) {
   state.filterReturnFocus = null;
 }
 
+function renderBrandFilterSuggestions(input) {
+  const holder = document.querySelector("[data-brand-suggestions]");
+  if (!input || !holder) return;
+  const query = normalize(input.value);
+  if (query.length < 2) {
+    holder.hidden = true;
+    holder.innerHTML = "";
+    input.setAttribute("aria-expanded", "false");
+    return;
+  }
+  const matches = state.filterBrands
+    .filter(item => normalize(item.brand).includes(query))
+    .slice(0, 10);
+  holder.innerHTML = matches.length
+    ? matches.map(item => `<button type="button" role="option" data-brand-option="${escapeAttr(item.brand)}">${escapeHtml(item.brand)} (${item.count})</button>`).join("")
+    : `<span class="form-status">Nenhuma marca encontrada.</span>`;
+  holder.hidden = false;
+  input.setAttribute("aria-expanded", "true");
+}
+
 function bindDynamicControls() {
   const filterPanel = document.querySelector("[data-filters]");
   if (filterPanel) setInteractiveVisibility(filterPanel, window.matchMedia("(max-width: 760px)").matches);
@@ -1819,6 +1849,25 @@ function bindDynamicControls() {
     const value = event.target.type === "checkbox" ? (event.target.checked ? "1" : "") : event.target.value;
     updateSearchParam(event.target.dataset.filter, value);
   }));
+  const brandInput = document.querySelector("[data-brand-search]");
+  brandInput?.addEventListener("input", event => renderBrandFilterSuggestions(event.currentTarget));
+  brandInput?.addEventListener("search", event => {
+    if (!text(event.currentTarget.value)) updateSearchParam("marca", "");
+  });
+  brandInput?.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      const holder = document.querySelector("[data-brand-suggestions]");
+      if (holder) holder.hidden = true;
+      event.currentTarget.setAttribute("aria-expanded", "false");
+    }
+    if (event.key === "Enter") {
+      const option = document.querySelector("[data-brand-suggestions] [data-brand-option]");
+      if (option) {
+        event.preventDefault();
+        updateSearchParam("marca", option.dataset.brandOption || "");
+      }
+    }
+  });
   document.querySelector("[data-filter-toggle]")?.addEventListener("click", openFilters);
   document.querySelectorAll("[data-filter-close]").forEach(button => button.addEventListener("click", () => closeFilters()));
   document.querySelector("[data-clear-history]")?.addEventListener("click", clearSearchHistory);
@@ -1920,6 +1969,7 @@ function saveConsent({ analytics = false, marketing = false }) {
   writeStorage(CONSENT_KEY, consent);
   const banner = document.querySelector("[data-cookie-banner]");
   if (banner) banner.hidden = true;
+  document.body.classList.remove("consent-visible");
   applyConsent(consent);
   showToast("Preferências de privacidade salvas.");
 }
@@ -1940,8 +1990,10 @@ function initializeConsent() {
   if (consent) {
     applyConsent(consent);
     if (banner) banner.hidden = true;
+    document.body.classList.remove("consent-visible");
   } else if (banner) {
     banner.hidden = false;
+    document.body.classList.add("consent-visible");
   }
 }
 
@@ -2317,6 +2369,11 @@ function setupGlobalEvents() {
     }
     if (event.target.closest("[data-install-app]")) {
       installApp();
+      return;
+    }
+    const brandOption = event.target.closest("[data-brand-option]");
+    if (brandOption) {
+      updateSearchParam("marca", brandOption.dataset.brandOption || "");
       return;
     }
 
