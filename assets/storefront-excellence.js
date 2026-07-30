@@ -20,6 +20,8 @@ const ALLOWED_AFFILIATE_DOMAINS = new Set([
   "go.hotmart.com",
 ]);
 const PAGE_SIZE = 24;
+const HOME_ROTATION_SIZE = 8;
+const HOME_ROTATION_INTERVAL = 8000;
 const LAZY_IMAGE_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'/%3E";
 
 const state = {
@@ -37,6 +39,15 @@ const state = {
   menuReturnFocus: null,
   installPrompt: null,
   speechRecognition: null,
+  homeRotationTimer: null,
+  homeRotationSwapTimer: null,
+  homeRotationResizeTimer: null,
+  homeRotationResizeObserver: null,
+  homeRotationViewportWidth: 0,
+  homeRotationIndex: 0,
+  homeRotationPool: [],
+  homeRotationUserPaused: false,
+  homeRotationInteractionPaused: false,
 };
 
 const categoryDefinitions = [
@@ -751,8 +762,8 @@ function productCard(product, index = 0, eagerCount = 0) {
     </article>`;
 }
 
-function productGrid(products, className = "product-grid", eagerCount = 0) {
-  return `<div class="${className}">${products.map((product, index) => productCard(product, index, eagerCount)).join("")}</div>`;
+function productGrid(products, className = "product-grid", eagerCount = 0, attributes = "") {
+  return `<div class="${className}"${attributes ? ` ${attributes}` : ""}>${products.map((product, index) => productCard(product, index, eagerCount)).join("")}</div>`;
 }
 
 function storePath(store) {
@@ -822,6 +833,148 @@ function sectionHeader(kicker, title, description, link = "", linkLabel = "") {
     </div>`;
 }
 
+function homeRotationProducts() {
+  return diverseProducts([
+    ...state.products.filter(product => product.featured),
+    ...state.products.filter(product => product.offer),
+    ...state.products,
+  ], state.products.length);
+}
+
+function homeRotationBatch(pool, start = 0) {
+  if (!pool.length) return [];
+  return Array.from(
+    { length: Math.min(HOME_ROTATION_SIZE, pool.length) },
+    (_, offset) => pool[(start + offset) % pool.length],
+  );
+}
+
+function homeRotationReduced() {
+  return document.documentElement.dataset.reduceMotion === "true"
+    || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function clearHomeRotation({ reset = true } = {}) {
+  clearInterval(state.homeRotationTimer);
+  clearTimeout(state.homeRotationSwapTimer);
+  clearTimeout(state.homeRotationResizeTimer);
+  state.homeRotationResizeObserver?.disconnect();
+  state.homeRotationTimer = null;
+  state.homeRotationSwapTimer = null;
+  state.homeRotationResizeTimer = null;
+  state.homeRotationResizeObserver = null;
+  state.homeRotationViewportWidth = 0;
+  if (!reset) return;
+  state.homeRotationIndex = 0;
+  state.homeRotationPool = [];
+  state.homeRotationUserPaused = false;
+  state.homeRotationInteractionPaused = false;
+}
+
+function updateHomeRotationControl() {
+  const button = document.querySelector("[data-home-rotation-toggle]");
+  const status = document.querySelector("[data-home-rotation-status]");
+  if (!button || !status) return;
+  const total = state.homeRotationPool.length || state.products.length;
+  const reduced = homeRotationReduced();
+  const page = total ? Math.floor(state.homeRotationIndex / HOME_ROTATION_SIZE) + 1 : 0;
+  const pages = total ? Math.ceil(total / HOME_ROTATION_SIZE) : 0;
+  if (reduced) {
+    button.textContent = "Mostrar outros produtos";
+    button.setAttribute("aria-pressed", "false");
+    status.textContent = `Rodízio manual por acessibilidade · ${total} produtos`;
+    return;
+  }
+  button.textContent = state.homeRotationUserPaused ? "Continuar rodízio" : "Pausar rodízio";
+  button.setAttribute("aria-pressed", String(state.homeRotationUserPaused));
+  status.textContent = state.homeRotationInteractionPaused
+    ? "Rodízio pausado durante sua interação"
+    : state.homeRotationUserPaused
+      ? `Rodízio pausado · seleção ${page} de ${pages}`
+      : `Novos produtos a cada 8 segundos · seleção ${page} de ${pages}`;
+}
+
+function rotateHomeProducts({ force = false } = {}) {
+  const grid = document.querySelector("[data-home-product-grid]");
+  if (!grid || !state.homeRotationPool.length) return;
+  if (!force && (
+    document.hidden
+    || homeRotationReduced()
+    || state.homeRotationUserPaused
+    || state.homeRotationInteractionPaused
+  )) return;
+  state.homeRotationIndex = (state.homeRotationIndex + HOME_ROTATION_SIZE) % state.homeRotationPool.length;
+  const products = homeRotationBatch(state.homeRotationPool, state.homeRotationIndex);
+  grid.style.minHeight = `${Math.ceil(grid.getBoundingClientRect().height)}px`;
+  grid.classList.add("is-rotating");
+  clearTimeout(state.homeRotationSwapTimer);
+  state.homeRotationSwapTimer = setTimeout(() => {
+    if (!grid.isConnected) return;
+    grid.innerHTML = products.map((product, index) => productCard(product, index, 2)).join("");
+    grid.dataset.rotationStart = String(state.homeRotationIndex);
+    grid.classList.remove("is-rotating");
+    setupDeferredImages();
+    updateHomeRotationControl();
+  }, 160);
+}
+
+function syncHomeRotation() {
+  clearInterval(state.homeRotationTimer);
+  state.homeRotationTimer = null;
+  const grid = document.querySelector("[data-home-product-grid]");
+  if (!grid || document.hidden || homeRotationReduced()) {
+    updateHomeRotationControl();
+    return;
+  }
+  state.homeRotationTimer = setInterval(() => rotateHomeProducts(), HOME_ROTATION_INTERVAL);
+  updateHomeRotationControl();
+}
+
+function startHomeRotation() {
+  const grid = document.querySelector("[data-home-product-grid]");
+  const button = document.querySelector("[data-home-rotation-toggle]");
+  if (!grid || !button) return;
+  state.homeRotationPool = homeRotationProducts();
+  state.homeRotationIndex = Number(grid.dataset.rotationStart || 0);
+  state.homeRotationUserPaused = false;
+  state.homeRotationInteractionPaused = false;
+  state.homeRotationViewportWidth = window.innerWidth;
+  if ("ResizeObserver" in window) {
+    state.homeRotationResizeObserver = new ResizeObserver(() => {
+      if (window.innerWidth === state.homeRotationViewportWidth) return;
+      state.homeRotationViewportWidth = window.innerWidth;
+      grid.style.removeProperty("min-height");
+    });
+    state.homeRotationResizeObserver.observe(document.documentElement);
+  }
+  grid.addEventListener("mouseenter", () => {
+    state.homeRotationInteractionPaused = true;
+    updateHomeRotationControl();
+  });
+  grid.addEventListener("mouseleave", () => {
+    state.homeRotationInteractionPaused = false;
+    updateHomeRotationControl();
+  });
+  grid.addEventListener("focusin", () => {
+    state.homeRotationInteractionPaused = true;
+    updateHomeRotationControl();
+  });
+  grid.addEventListener("focusout", event => {
+    if (grid.contains(event.relatedTarget)) return;
+    state.homeRotationInteractionPaused = false;
+    updateHomeRotationControl();
+  });
+  button.addEventListener("click", () => {
+    if (homeRotationReduced()) {
+      rotateHomeProducts({ force: true });
+      return;
+    }
+    state.homeRotationUserPaused = !state.homeRotationUserPaused;
+    updateHomeRotationControl();
+  });
+  syncHomeRotation();
+}
+
 function renderHome() {
   setMeta({
     title: "Impacto360 Afiliado | Ofertas selecionadas em um shopping virtual",
@@ -829,11 +982,8 @@ function renderHome() {
     canonical: "/",
     robots: "index,follow,max-image-preview:large",
   });
-  const featured = diverseProducts([
-    ...state.products.filter(product => product.featured),
-    ...state.products.filter(product => product.offer),
-    ...state.products,
-  ], 8);
+  const rotationPool = homeRotationProducts();
+  const featured = homeRotationBatch(rotationPool);
   const heroProducts = featured.slice(0, 4);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
@@ -878,39 +1028,69 @@ function renderHome() {
       <div class="shell">
         <nav class="mobile-home-access" aria-label="Acesso rápido à vitrine">
           <a href="#produtos" aria-current="page">Produtos</a>
-          <a href="#categorias">Categorias</a>
-          <a href="#lojas">Lojas</a>
+          <a href="#categorias" data-home-disclosure-target="categorias">Categorias</a>
+          <a href="#lojas" data-home-disclosure-target="lojas">Lojas</a>
         </nav>
         ${sectionHeader("Curadoria Impacto360", "Ofertas em destaque", "Produtos selecionados e atualizados com frequência.", "/buscar/?oferta=1", "Ver todas")}
-        ${productGrid(featured, "product-grid", 2)}
-      </div>
-    </section>
-
-    <section class="section section-white home-categories" id="categorias">
-      <div class="shell">
-        ${sectionHeader("Navegação rápida", "Compre por categoria", "Oito caminhos diretos para encontrar o que você procura.", "/buscar/", "Ver todas")}
-        <div class="category-grid">${activeCategories.map(categoryCard).join("")}</div>
-      </div>
-    </section>
-
-    <section class="section section-white home-stores" id="lojas">
-      <div class="shell">
-        ${sectionHeader("Shopping virtual", "Lojas do Shopping", "Entre nas lojas principais ou conheça todos os departamentos da Impacto360.", "/lojas/", "Ver todas")}
-        <div class="store-grid">${homeStores.map(storeCard).join("")}</div>
-      </div>
-    </section>
-
-    <section class="section" id="como-comprar">
-      <div class="shell">
-        ${sectionHeader("Compra transparente", "Como comprar pela Impacto360", "O processo é simples e a transação acontece no ambiente oficial da loja parceira.")}
-        <div class="how-grid">
-          ${[
-            ["1", "Encontre", "Pesquise produtos, categorias ou lojas."],
-            ["2", "Compare", "Consulte as opções selecionadas na vitrine."],
-            ["3", "Compre no parceiro", "Finalize pagamento, entrega e garantia no site oficial."],
-          ].map(([number, title, copy]) => `<article class="how-card"><span class="how-number">${number}</span><h3>${title}</h3><p>${copy}</p></article>`).join("")}
+        <div class="home-rotation-toolbar">
+          <span data-home-rotation-status>Novos produtos a cada 8 segundos · ${rotationPool.length} produtos no rodízio</span>
+          <button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="false">Pausar rodízio</button>
         </div>
-        <p class="affiliate-note">A Impacto360 pode receber comissão quando você utiliza os links indicados, sem custo adicional para você.</p>
+        ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Produtos em rodízio"')}
+      </div>
+    </section>
+
+    <section class="section section-white home-disclosure-section home-categories">
+      <div class="shell">
+        <details class="home-disclosure" id="categorias" data-home-disclosure>
+          <summary>
+            <span class="home-disclosure-icon">${icon("grid")}</span>
+            <span><strong>Compre por categoria</strong><small>Clique para abrir as categorias</small></span>
+            <span class="home-disclosure-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="home-disclosure-panel">
+            <div class="category-grid home-category-grid">${activeCategories.map(categoryCard).join("")}</div>
+            <a class="text-link home-disclosure-link" href="/buscar/" data-route="/buscar/">Ver todas as categorias</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section section-white home-disclosure-section home-stores">
+      <div class="shell">
+        <details class="home-disclosure" id="lojas" data-home-disclosure>
+          <summary>
+            <span class="home-disclosure-icon">${icon("home")}</span>
+            <span><strong>Lojas do Shopping</strong><small>Clique para abrir as lojas</small></span>
+            <span class="home-disclosure-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="home-disclosure-panel">
+            <div class="store-grid home-store-grid">${homeStores.map(storeCard).join("")}</div>
+            <a class="text-link home-disclosure-link" href="/lojas/" data-route="/lojas/">Ver todas as ${state.stores.length} lojas</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section home-disclosure-section home-how-section" id="como-comprar">
+      <div class="shell">
+        <details class="home-disclosure" data-home-disclosure>
+          <summary>
+            <span class="home-disclosure-icon">${icon("spark")}</span>
+            <span><strong>Compra transparente</strong><small>Clique para entender como funciona</small></span>
+            <span class="home-disclosure-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="home-disclosure-panel">
+            <div class="how-grid home-how-grid">
+              ${[
+                ["1", "Encontre", "Pesquise produtos, categorias ou lojas."],
+                ["2", "Compare", "Consulte as opções selecionadas na vitrine."],
+                ["3", "Compre no parceiro", "Finalize pagamento, entrega e garantia no site oficial."],
+                ["✓", "Sem custo adicional", "A Impacto360 pode receber comissão quando você usa os links indicados."],
+              ].map(([number, title, copy]) => `<article class="how-card"><span class="how-number">${number}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join("")}
+            </div>
+          </div>
+        </details>
       </div>
     </section>`;
   const root = appRoot();
@@ -1680,6 +1860,7 @@ function setupDeferredImages() {
 }
 
 function renderRoute({ focus = false } = {}) {
+  clearHomeRotation();
   const url = routeUrl();
   const path = url.pathname.replace(/\/+/g, "/");
   const homeRoute = path === "/" || path === "/index.html" || path === "/impacto360.html";
@@ -1731,6 +1912,7 @@ function renderRoute({ focus = false } = {}) {
   syncHeaderSearch(url.searchParams.get("q") || "");
   bindDynamicControls();
   setupDeferredImages();
+  if (homeRoute) startHomeRotation();
   if (focus) {
     window.scrollTo({ top: 0, behavior: "auto" });
     document.getElementById("conteudo")?.focus({ preventScroll: true });
@@ -1771,7 +1953,11 @@ function syncHeaderSearch(value) {
 
 function scrollToHash() {
   if (!location.hash) return;
-  requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView({ block: "start" }));
+  requestAnimationFrame(() => {
+    const target = document.querySelector(location.hash);
+    if (target instanceof HTMLDetailsElement) target.open = true;
+    target?.scrollIntoView({ block: "start" });
+  });
 }
 
 function focusableElements(container) {
@@ -1876,6 +2062,14 @@ function bindDynamicControls() {
   document.querySelector("[data-filter-toggle]")?.addEventListener("click", openFilters);
   document.querySelectorAll("[data-filter-close]").forEach(button => button.addEventListener("click", () => closeFilters()));
   document.querySelector("[data-clear-history]")?.addEventListener("click", clearSearchHistory);
+  document.querySelectorAll("[data-home-disclosure]").forEach(disclosure => {
+    disclosure.addEventListener("toggle", () => {
+      if (!disclosure.open) return;
+      document.querySelectorAll("[data-home-disclosure]").forEach(other => {
+        if (other !== disclosure) other.open = false;
+      });
+    });
+  });
 }
 
 function updateSearchParam(name, value) {
@@ -2011,6 +2205,7 @@ function applyAccessibility(settings) {
   document.documentElement.dataset.textSize = settings.largeText ? "large" : "normal";
   document.documentElement.dataset.contrast = settings.contrast ? "high" : "normal";
   document.documentElement.dataset.reduceMotion = settings.reducedMotion ? "true" : "false";
+  syncHomeRotation();
 }
 
 function openAccessibilitySettings() {
@@ -2332,6 +2527,21 @@ function setupGlobalEvents() {
       return;
     }
 
+    const disclosureTarget = event.target.closest("[data-home-disclosure-target]");
+    if (disclosureTarget) {
+      event.preventDefault();
+      const disclosure = document.getElementById(disclosureTarget.dataset.homeDisclosureTarget || "");
+      if (disclosure instanceof HTMLDetailsElement) {
+        disclosure.open = true;
+        disclosure.scrollIntoView({
+          block: "start",
+          behavior: homeRotationReduced() ? "auto" : "smooth",
+        });
+        requestAnimationFrame(() => disclosure.querySelector("summary")?.focus({ preventScroll: true }));
+      }
+      return;
+    }
+
     if (event.target.closest("[data-theme-toggle]")) {
       toggleTheme();
       return;
@@ -2466,6 +2676,14 @@ function setupGlobalEvents() {
   });
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
+  window.addEventListener("resize", () => {
+    clearTimeout(state.homeRotationResizeTimer);
+    state.homeRotationResizeTimer = setTimeout(() => {
+      document.querySelector("[data-home-product-grid]")?.style.removeProperty("min-height");
+    }, 180);
+  });
+  document.addEventListener("visibilitychange", syncHomeRotation);
+  window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener?.("change", syncHomeRotation);
   setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {

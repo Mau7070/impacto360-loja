@@ -76,7 +76,7 @@ const sourceById = new Map(sourceProducts.map(product => [String(product.id), pr
 check("HTML inicial enxuto", Buffer.byteLength(html) < 25_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
-check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("setInterval("));
+check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
 check("sem linguagem tecnica antiga", !html.includes("VITRINE EM ROTACAO") && !app.includes("produtos prontos") && !app.includes("Mais Vendidos"));
 check("integracoes administrativas removidas da loja publica", !html.includes("impacto360-admin-robos.js") && !html.includes("loadAdminOnlyInAdminArea"));
 check("stubs administrativos sem credencial embarcada", !read("integracoes/impacto360-admin-robos.js").includes("type=\"password\"") && !read("integracoes/impacto360-banners-admin.js").includes("type=\"password\""));
@@ -149,9 +149,13 @@ check("busca por voz possui alternativa textual", html.includes("data-voice-sear
 check("busca por imagem nao envia arquivo nesta versao", html.includes("data-image-search-dialog") && app.includes("Ela não foi enviada"));
 check("navegacao inferior mobile", html.includes('class="bottom-nav"') && css.includes(".bottom-nav"));
 check("tema e acessibilidade disponiveis no menu movel e perfil", html.includes("mobile-menu-tools") && app.includes("Alternar tema") && app.includes("Abrir acessibilidade"));
-check("home compacta com limites definidos", app.includes("], 8);") && app.includes(".slice(0, 4)") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
+check("home compacta com limites definidos", app.includes("HOME_ROTATION_SIZE = 8") && app.includes(".slice(0, 4)") && app.includes(".slice(0, 8)") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
 check("cards moveis simplificados em duas colunas permanentes", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))") && !css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
 check("home mobile prioriza produtos e oferece acesso compacto", app.includes('class="section section-soft home-products" id="produtos"') && app.includes('class="mobile-home-access"') && css.includes(".initial-home-route .promo-shortcuts"));
+check("categorias lojas e compra transparente usam paineis compactos", app.includes('class="home-disclosure" id="categorias"') && app.includes('class="home-disclosure" id="lojas"') && app.includes('class="how-grid home-how-grid"') && css.includes(".home-disclosure summary"));
+check("paineis compactos usam duas colunas responsivas", css.includes(".home-category-grid,") && css.includes(".home-store-grid,") && css.includes(".home-how-grid") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))"));
+check("rodizio permanente percorre catalogo completo", app.includes("HOME_ROTATION_INTERVAL = 8000") && app.includes("HOME_ROTATION_SIZE = 8") && app.includes("state.products.length") && app.includes("setInterval(() => rotateHomeProducts()"));
+check("rodizio pausa para interacao e movimento reduzido", app.includes("homeRotationInteractionPaused") && app.includes("homeRotationReduced()") && app.includes('data-home-rotation-toggle'));
 check("ofertas antigas sinalizadas e sem desconto vencido", app.includes("priceFreshness(product).current") && app.includes("Informação antiga"));
 check(
   "revalidacao automatica prioriza precos vencidos e nao verificados",
