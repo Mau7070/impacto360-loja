@@ -25,6 +25,7 @@ dist/images/
 out/
 coverage/
 backups/
+saida-redes-sociais/
 
 # Arquivos compactados e temporários
 *.zip

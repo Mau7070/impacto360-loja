@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-07-30T00:00:00.000Z",
+  "rules": {
+    "blockWhenVideoAndTitleConflict": true,
+    "doNotForceAffiliateMatch": true
+  },
+  "reviews": [
+    {
+      "videoNumber": 601,
+      "videoSha256": "43efe482a58cde9675487a2eca44e651be0087dde5c096fd2a556b1c1e1afeac",
+      "sourceTitle": "Mini Processador de Alimentos Triturador Alho Eletrico Sem Fio USB Knup KP-UD103",
+      "visualProduct": "Mini processador azul CHIGO, recipiente transparente e duas lâminas",
+      "decision": "bloqueado",
+      "reason": "O vídeo mostra claramente a marca CHIGO em um aparelho azul, mas o título e o anúncio de origem indicam Knup KP-UD103. O candidato do catálogo e o anúncio do Mercado Livre também são Knup branco; portanto, o vínculo é inseguro.",
+      "evidence": [
+        "dados/social-videos-20260730/amostras/video-0601-contato.jpg",
+        "https://www.mercadolivre.com.br/mini-processador-eletrico-knup-sem-fio-capacidade-250ml-aco-inoxidavel/p/MLB42133639"
+      ],
+      "reviewedAt": "2026-07-30T00:00:00.000Z"
+    },
+    {
+      "videoNumber": 1206,
+      "videoSha256": "9d90b586b89254ba90721e0117bd2d626fb413c58c0cba61e4228feae55a576b",
+      "sourceTitle": "Carro Audi TT RS Elétrico 12V Branco Bel Brink",
+      "visualProduct": "Carrinho infantil elétrico verde, carroceria e emblemas incompatíveis com o Audi TT RS branco do anúncio",
+      "decision": "bloqueado",
+      "reason": "O produto da Amazon está disponível e aceita link de associado, mas o vídeo mostra um carrinho verde de outro desenho. Publicar esse vídeo com o anúncio branco da Bel Brink induziria o usuário a uma correspondência visual incorreta.",
+      "evidence": [
+        "dados/social-videos-20260730/amostras/video-1206-contato.jpg",
+        "https://www.amazon.com.br/dp/B07YL9WVDD"
+      ],
+      "reviewedAt": "2026-07-30T00:00:00.000Z"
+    }
+  ]
+}
