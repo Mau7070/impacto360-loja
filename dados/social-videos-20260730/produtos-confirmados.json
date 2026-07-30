@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-07-30T15:55:00-03:00",
+  "rules": {
+    "requiresOfficialAffiliateLink": true,
+    "requiresVisualEquivalence": true,
+    "doesNotCopyUnconfirmedDiscounts": true,
+    "keepsRemovedSourceProductsAsEvidenceOnly": true
+  },
+  "items": [
+    {
+      "videoNumber": 2,
+      "videoSha256": "c35a764622a2eb49d979db1d2889e45dc45b6df3bece2aefd221db9336669e76",
+      "sourceTitle": "Cortador De Unha Elétrico USB Aparador Adulto Crianças Clipper Automático",
+      "sourceProductUrl": "https://shopee.com.br/product/477428067/21065674994",
+      "sourceProductStatus": "removido",
+      "catalogProductId": "shopee-video-0002-aparador-unhas-eletrico-56264093125",
+      "slug": "aparador-eletrico-2-em-1-para-unhas-recarregavel-por-usb",
+      "title": "Aparador Elétrico 2 em 1 para Unhas Recarregável por USB",
+      "storeId": "impacto-beauty-care",
+      "category": "Beleza e Cuidados",
+      "subcategory": "Cuidados pessoais",
+      "marketplace": "Shopee",
+      "affiliateItemId": "56264093125",
+      "directProductUrl": "https://shopee.com.br/product/1006215031/56264093125",
+      "affiliateLink": "https://s.shopee.com.br/8KoKG1kjvv",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "56264093125",
+      "image": "public/images/anuncios/shopee-video-0002-aparador-unhas-eletrico.webp",
+      "imageSource": "https://down-bs-br.img.susercontent.com/sg-11134201-825a5-mr46fnyhpszk96.webp",
+      "priceAtReview": "R$ 50,32",
+      "salesAtReview": "582 vendidos",
+      "commissionAtReview": "9% estimada para redes sociais",
+      "reviewedAt": "2026-07-30",
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "O vídeo mostra um aparador elétrico oval com corpo rosa e lâmina protegida. O anúncio afiliado contém a variante rosa e o mesmo conjunto funcional de aparador USB com proteção anti-respingo."
+      }
+    },
+    {
+      "videoNumber": 3,
+      "videoSha256": "15990a12d5ca30a277a978b955e1cfba665d7221d329efcd3408883877d3a31f",
+      "sourceTitle": "mini modelo, De Aço Inoxidável Preto Pulverizador Conjunto Sanitário",
+      "sourceProductUrl": "https://shopee.com.br/product/971794612/16193823218",
+      "sourceProductStatus": "removido",
+      "catalogProductId": "shopee-video-0003-ducha-higienica-preta-58256884392",
+      "slug": "ducha-higienica-preta-com-valvula-dupla-e-mangueira-inox",
+      "title": "Ducha Higiênica Preta com Válvula Dupla e Mangueira Inox",
+      "storeId": "impacto-casa",
+      "category": "Casa e Família",
+      "subcategory": "Cama, mesa e banho",
+      "marketplace": "Shopee",
+      "affiliateItemId": "58256884392",
+      "directProductUrl": "https://shopee.com.br/product/524035706/58256884392",
+      "affiliateLink": "https://s.shopee.com.br/20uGjaegxA",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "58256884392",
+      "image": "public/images/anuncios/shopee-video-0003-ducha-higienica-preta.webp",
+      "imageSource": "https://down-aka-br.img.susercontent.com/sg-11134201-82631-mls45oqeqe4jb4.webp",
+      "priceAtReview": "R$ 69,90",
+      "salesAtReview": "1 vendido",
+      "commissionAtReview": "3% estimada para redes sociais",
+      "reviewedAt": "2026-07-30",
+      "catalogDescription": "Kit sanitário preto com ducha higiênica, mangueira flexível de aço inox e válvula de controle duplo com uma entrada e duas saídas.",
+      "specs": [
+        "Ducha higiênica preta",
+        "Mangueira flexível de aço inox com 1,5 m",
+        "Válvula com dois controles independentes",
+        "Uma entrada e duas saídas"
+      ],
+      "benefits": [
+        "Conjunto funcionalmente equivalente ao demonstrado no vídeo.",
+        "Permite controlar separadamente as duas saídas de água.",
+        "Link curto oficial gerado no painel autenticado."
+      ],
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "O anúncio original do vídeo foi removido. O vídeo mostra uma ducha sanitária preta com mangueira e válvula de dois controles lado a lado; a oferta escolhida apresenta o mesmo conjunto, acabamento e configuração funcional."
+      }
+    },
+    {
+      "videoNumber": 4,
+      "videoSha256": "44390ea646fc38e3792182eddebe454b7457a9b06da397b370367b383f44729d",
+      "sourceTitle": "Deck de Madeira com Base Plástica (Madeira de Pinus)",
+      "sourceProductUrl": "https://shopee.com.br/product/405548515/23516200440",
+      "sourceProductStatus": "ativo",
+      "catalogProductId": "shopee-video-0004-deck-madeira-pinus-23516200440",
+      "slug": "deck-de-madeira-de-pinus-com-base-plastica",
+      "title": "Deck de Madeira de Pinus com Base Plástica",
+      "storeId": "impacto-casa",
+      "category": "Casa e Família",
+      "subcategory": "Jardim",
+      "marketplace": "Shopee",
+      "affiliateItemId": "23516200440",
+      "directProductUrl": "https://shopee.com.br/product/405548515/23516200440",
+      "affiliateLink": "https://s.shopee.com.br/1Vy08nzE1H",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "23516200440",
+      "image": "public/images/anuncios/shopee-video-0004-deck-madeira-pinus.webp",
+      "imageSource": "https://down-aka-br.img.susercontent.com/br-11134201-23010-1l4ay0lf04lvac.webp",
+      "priceAtReview": "R$ 21,90",
+      "salesAtReview": "2 mil+ vendidos",
+      "commissionAtReview": "9% estimada para redes sociais",
+      "reviewedAt": "2026-07-30",
+      "catalogDescription": "Placa modular de madeira de pinus com base plástica de encaixe para compor pisos em varandas, jardins e outras áreas adequadas.",
+      "specs": [
+        "Madeira de pinus",
+        "Base plástica de encaixe",
+        "Formato modular",
+        "Oferta original do vídeo"
+      ],
+      "benefits": [
+        "Instalação modular por encaixe.",
+        "Produto e anúncio correspondem diretamente ao vídeo.",
+        "Link curto oficial gerado no painel autenticado."
+      ],
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "A oferta original permanece ativa e corresponde ao vídeo: ripas de madeira de pinus montadas sobre base plástica modular de encaixe."
+      }
+    }
+  ]
+}
