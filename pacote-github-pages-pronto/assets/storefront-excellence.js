@@ -874,23 +874,28 @@ function renderHome() {
         </a>`).join("")}
     </div>
 
-    <section class="section section-soft">
+    <section class="section section-soft home-products" id="produtos">
       <div class="shell">
-        ${sectionHeader("Curadoria Impacto360", "Ofertas em destaque", "Produtos selecionados e atualizados com frequência.", "/buscar/?oferta=1", "Ver todas as ofertas")}
+        <nav class="mobile-home-access" aria-label="Acesso rápido à vitrine">
+          <a href="#produtos" aria-current="page">Produtos</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#lojas">Lojas</a>
+        </nav>
+        ${sectionHeader("Curadoria Impacto360", "Ofertas em destaque", "Produtos selecionados e atualizados com frequência.", "/buscar/?oferta=1", "Ver todas")}
         ${productGrid(featured, "product-grid", 2)}
       </div>
     </section>
 
-    <section class="section section-white">
+    <section class="section section-white home-categories" id="categorias">
       <div class="shell">
-        ${sectionHeader("Navegação rápida", "Compre por categoria", "Oito caminhos diretos para encontrar o que você procura.", "/buscar/", "Ver todas as categorias")}
+        ${sectionHeader("Navegação rápida", "Compre por categoria", "Oito caminhos diretos para encontrar o que você procura.", "/buscar/", "Ver todas")}
         <div class="category-grid">${activeCategories.map(categoryCard).join("")}</div>
       </div>
     </section>
 
-    <section class="section section-white">
+    <section class="section section-white home-stores" id="lojas">
       <div class="shell">
-        ${sectionHeader("Shopping virtual", "Lojas do Shopping", "Entre nas lojas principais ou conheça todos os departamentos da Impacto360.", "/lojas/", `Ver todas as ${state.stores.length} lojas`)}
+        ${sectionHeader("Shopping virtual", "Lojas do Shopping", "Entre nas lojas principais ou conheça todos os departamentos da Impacto360.", "/lojas/", "Ver todas")}
         <div class="store-grid">${homeStores.map(storeCard).join("")}</div>
       </div>
     </section>

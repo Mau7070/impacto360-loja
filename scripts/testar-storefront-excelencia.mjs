@@ -150,7 +150,8 @@ check("busca por imagem nao envia arquivo nesta versao", html.includes("data-ima
 check("navegacao inferior mobile", html.includes('class="bottom-nav"') && css.includes(".bottom-nav"));
 check("tema e acessibilidade disponiveis no menu movel e perfil", html.includes("mobile-menu-tools") && app.includes("Alternar tema") && app.includes("Abrir acessibilidade"));
 check("home compacta com limites definidos", app.includes("], 8);") && app.includes(".slice(0, 4)") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
-check("cards moveis simplificados em uma coluna ou lista", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
+check("cards moveis simplificados em duas colunas permanentes", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))") && !css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
+check("home mobile prioriza produtos e oferece acesso compacto", app.includes('class="section section-soft home-products" id="produtos"') && app.includes('class="mobile-home-access"') && css.includes(".initial-home-route .promo-shortcuts"));
 check("ofertas antigas sinalizadas e sem desconto vencido", app.includes("priceFreshness(product).current") && app.includes("Informação antiga"));
 check(
   "revalidacao automatica prioriza precos vencidos e nao verificados",
