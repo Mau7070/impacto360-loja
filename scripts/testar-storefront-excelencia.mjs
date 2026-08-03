@@ -156,7 +156,14 @@ check("categorias lojas e compra transparente usam paineis compactos", app.inclu
 check("paineis compactos usam duas colunas responsivas", css.includes(".home-category-grid,") && css.includes(".home-store-grid,") && css.includes(".home-how-grid") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))"));
 check("rodizio permanente percorre catalogo completo", app.includes("HOME_ROTATION_INTERVAL = 8000") && app.includes("HOME_ROTATION_SIZE = 8") && app.includes("state.products.length") && app.includes("setInterval(() => rotateHomeProducts()"));
 check("rodizio pausa para interacao e movimento reduzido", app.includes("homeRotationInteractionPaused") && app.includes("homeRotationReduced()") && app.includes('data-home-rotation-toggle'));
-check("ofertas antigas sinalizadas e sem desconto vencido", app.includes("priceFreshness(product).current") && app.includes("Informação antiga"));
+check(
+  "informacoes comerciais antigas removidas da vitrine",
+  app.includes("priceFreshness(product).current")
+  && !app.includes("Informação antiga")
+  && catalog.every(product => product.rating == null)
+  && catalog.every(product => product.priceStatus === "current" || !product.availability)
+  && catalog.every(product => !/(?:\b(?:nota|avalia[cç][aã]o)\s*:?s*\d|\b\d(?:[.,]\d)?\s*estrelas?\b|\b[\d.,]+\s*(?:mil)?\+?\s*vendidos?\b)/i.test(product.description || "")),
+);
 check(
   "revalidacao automatica prioriza precos vencidos e nao verificados",
   priceRevalidationQueue.pending === priceRevalidationQueue.items.length

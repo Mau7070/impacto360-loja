@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
+import { cleanLegacyCommercialText } from "./commercial-data.mjs";
 
 const root = process.cwd();
 const siteUrl = "https://impacto360afiliado.com.br";
@@ -241,7 +242,7 @@ function dateLabel(value) {
 }
 
 function cleanCommercialText(value) {
-  return String(value || "")
+  return cleanLegacyCommercialText(String(value || "")
     .replace(/https?:\/\/\S+/gi, "")
     .replace(/\b(?:COLOCAR_LINK_AFILIADO_AQUI|COLOCAR_LINK_AQUI|Inserir link(?: de afiliado)?(?: antes de publicar)?|Foto preservada|imagem pendente|placeholder quebrado)\b/gi, "")
     .replace(/\b(?:Avalia[cç][aã]o|Disponibilidade|Categoria|[UÚ]ltima verifica[cç][aã]o)\s+pendente(?:\s+de\s+revis[aã]o)?\b/gi, "")
@@ -253,7 +254,7 @@ function cleanCommercialText(value) {
     .replace(/\bProduto preparado para voc[eê] inserir seu link de afiliado[^.]*\.?/gi, "")
     .replace(/\s+/g, " ")
     .replace(/\s+([.,;:])/g, "$1")
-    .trim();
+    .trim());
 }
 
 function cleanCommercialTitle(value) {
@@ -336,7 +337,7 @@ function commercialDescription(product, store) {
   if (profile === "cavalgada") return truncateText(`${title} para conferir material, medidas e compatibilidade. ${confirm}`, 150);
   if (profile === "escolar") return truncateText(`${title} para estudo e organização. ${confirm}`, 150);
   if (profile === "brinquedos") return truncateText(`${title} para conferir detalhes, faixa indicativa e entrega. ${confirm}`, 150);
-  return truncateText(`${title} disponível em loja parceira. ${confirm}`, 150);
+  return truncateText(`${title} com compra concluída no site parceiro. ${confirm}`, 150);
 }
 
 function productBenefitTags(product, store, priceLabel) {
@@ -362,7 +363,6 @@ function productBenefitTags(product, store, priceLabel) {
     for (const match of text.matchAll(pattern)) add(match[0]);
   }
   add(categoryProfile(product) === "geral" ? firstFilled(product, ["category", "categoria"]) : firstFilled(product, ["subcategoria", "category", "categoria"]));
-  if (!hasReliablePrice(priceLabel)) add("Preço atualizado no parceiro");
   add(partnerName(product, store));
   return tags.slice(0, 2);
 }
@@ -411,20 +411,16 @@ function productPage(product, store, products) {
   const realImage = webPath(getProductImage(product));
   const image = realImage;
   const link = getProductLink(product);
-  const rating = firstFilled(product, ratingFields);
-  const ratingValue = ratingSchemaValue(rating);
-  const reviewCount = reviewCountValue(product);
+  const rating = "";
+  const ratingValue = "";
+  const reviewCount = "";
   const rawAvailability = firstFilled(product, availabilityFields);
   const availability = cleanCommercialText(rawAvailability);
-  const displayAvailability = availability && !/pendente|revis[aã]o|sob consulta/i.test(availability) ? availability : "Confirmar no site parceiro";
+  const displayAvailability = priceAudit.current && availability && !/pendente|revis[aã]o|sob consulta/i.test(availability) ? availability : "";
   const schemaAvailabilityUrl = schemaAvailability(availability);
   const category = firstFilled(product, ["category", "categoria", "subcategoria"]);
   const lastCheck = dateLabel(firstFilled(product, lastCheckFields));
-  const freshnessLabel = lastCheck
-    ? priceAudit.current
-      ? `Revisado em ${lastCheck}`
-      : `Informação antiga — revisada em ${lastCheck}`
-    : "";
+  const freshnessLabel = lastCheck && priceAudit.current ? `Revisado em ${lastCheck}` : "";
   const storeName = partnerName(product, store);
   const ctaLabel = commercialCtaLabel(product, store);
   const benefitTags = productBenefitTags(product, store, rawPriceLabel);
@@ -582,9 +578,9 @@ function productPage(product, store, products) {
         <div class="meta">
           <span class="chip">${htmlEscape("Loja parceira: " + storeName)}</span>
           ${rating ? `<span class="chip">${htmlEscape(`Avaliação ${cleanCommercialText(rating)}`)}</span>` : ""}
-          <span class="chip">${htmlEscape(displayAvailability)}</span>
+          ${displayAvailability ? `<span class="chip">${htmlEscape(displayAvailability)}</span>` : ""}
           ${category ? `<span class="chip">${htmlEscape(category)}</span>` : ""}
-          ${freshnessLabel ? `<span class="chip ${priceAudit.current ? "" : "stale"}">${htmlEscape(freshnessLabel)}</span>` : ""}
+          ${freshnessLabel ? `<span class="chip">${htmlEscape(freshnessLabel)}</span>` : ""}
         </div>
         <div class="actions">
           <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">${htmlEscape(ctaLabel)}</a>

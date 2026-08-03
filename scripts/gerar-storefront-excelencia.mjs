@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
+import { cleanLegacyBadge, cleanLegacyCommercialText, hasLegacyCommercialClaim } from "./commercial-data.mjs";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -174,7 +175,7 @@ function buildProductSlugs(products) {
 
 function compactProduct(product, generatedSlug) {
   const name = text(first(product, ["name", "nome", "title"]));
-  const description = text(first(product, ["descricaoCurta", "description", "descricao", "textoCatalogo"])).replace(/\s+/g, " ").slice(0, 360);
+  const description = cleanLegacyCommercialText(first(product, ["descricaoCurta", "description", "descricao", "textoCatalogo"])).slice(0, 360);
   const category = text(first(product, ["category", "categoria", "departamento"]));
   const subcategory = text(first(product, ["subcategoria", "subcategory", "tipoProduto"]));
   const brand = text(first(product, ["brand", "marca", "fabricante"]));
@@ -185,7 +186,7 @@ function compactProduct(product, generatedSlug) {
     ...list(product?.palavrasChave),
     ...list(product?.specs),
     ...list(product?.beneficios),
-  ].slice(0, 16);
+  ].filter(item => !hasLegacyCommercialClaim(item)).slice(0, 16);
   // The same deterministic route rule used by gerar-paginas-produtos.mjs.
   // Legacy `product.slug` values are not trusted because older imports could
   // contain truncated or misencoded slugs even when the generated page is valid.
@@ -199,7 +200,6 @@ function compactProduct(product, generatedSlug) {
     || text(product?.source?.platform)
     || text(product?.source?.name)
     || text(product?.marketplace?.platform);
-  const rating = Number.parseFloat(String(first(product, ["rating", "nota", "reviewRating", "avaliacao"])).replace(",", "."));
   return {
     id: text(product.id),
     storeId: text(product.storeId),
@@ -221,9 +221,9 @@ function compactProduct(product, generatedSlug) {
     priceValidUntil: priceAudit.validUntil,
     priceValidityDays,
     partner,
-    rating: Number.isFinite(rating) && rating > 0 && rating <= 5 ? rating : null,
-    availability: text(first(product, ["disponibilidade", "availability", "estoque"])),
-    badge: text(first(product, ["badge", "selo", "etiqueta"])),
+    rating: null,
+    availability: priceAudit.current ? text(first(product, ["disponibilidade", "availability", "estoque"])) : "",
+    badge: cleanLegacyBadge(first(product, ["badge", "selo", "etiqueta"])),
     actionType: text(product.actionType),
     offer: Boolean(
       priceValue(publicPreviousRaw) && priceValue(publicPriceRaw) && priceValue(publicPreviousRaw) > priceValue(publicPriceRaw)
