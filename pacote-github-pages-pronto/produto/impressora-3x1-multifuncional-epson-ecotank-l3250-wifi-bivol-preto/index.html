@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://meli.la/2tZYZ7H" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/impressora-3x1-multifuncional-epson-ecotank-l3250-wifi-bivol-preto/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/6651d8e4d7/">Impacto360 — Impressora 3x1 Multifuncional Epson Ecotank L3250 Wi-Fi Bivol Preto</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/kit-2-cabos-p10-mono-para-p10-mono-10-metros-audio-profissional-som-guitarra-violao-baixo-teclad/">
+        <a class="related-card" href="/p/4ae0b9294c/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_859076-MLA100064462901_122025-E.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 2 Cabos P10 Mono para P10 Mono 10 Metros Áudio Profissional Som Guitarra Violão Baixo Teclado Amplificador Pedal Instrumento Musical Blindado Resistente Plug Reforçado Qualidade Eletrolon</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-3-cabos-p10-mono-de-1-metro-para-violao-guitarra-baixo-teclado-amplificador-pedal-instrument/">
+        </a><a class="related-card" href="/p/8a42d74620/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_675513-MLA99452122032_112025-E.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 3 Cabos P10 Mono De 1 Metro Para Violão Guitarra Baixo Teclado Amplificador Pedal Instrumento Musical Blindado Resistente Plug Reforçado Eletrolon Qualidade Premium</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/cabo-p10-mono-para-p10-90-eletrolon-1-metro-profissional-audio-som-guitarra-violao-baixo-teclado/">
+        </a><a class="related-card" href="/p/9f854d772a/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_922116-MLA114060154997_072026-E.webp" alt="" loading="lazy" decoding="async">
           <strong>Cabo P10 Mono para P10 90° Eletrolon 1 Metro Profissional Áudio Som Guitarra Violão Baixo Teclado Amplificador Pedal Instrumento Musical Blindado Resistente Plug Reforçado Premium Eletrolon</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-2-cabos-p10-mono-para-p10-mono-1-metro-profissional-audio-som-guitarra-violao-baixo-teclado-/">
+        </a><a class="related-card" href="/p/2196abfc55/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_624685-MLA99505806824_112025-E.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 2 Cabos P10 Mono Para P10 Mono 1 Metro Profissional Áudio Som Guitarra Violão Baixo Teclado Amplificador Pedal Instrumento Musical Blindado Resistente Plug Reforçado Premium Eletrolon</strong>
           <span>Consulte o preço no parceiro</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/impressora-3x1-multifuncional-epson-ecotank-l3250-wifi-bivol-preto/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/6651d8e4d7/";
     const directProductTitle = "Impressora 3x1 Multifuncional Epson Ecotank L3250 Wi-Fi Bivol Preto";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

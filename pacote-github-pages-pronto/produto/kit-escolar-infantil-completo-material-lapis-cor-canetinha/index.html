@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://meli.la/2pXt4VD" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/kit-escolar-infantil-completo-material-lapis-cor-canetinha/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/2fc53bd166/">Impacto360 — Kit Escolar Infantil Completo Material Lápis Cor Canetinha</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/curso-sobre-o-novo-decreto-do-pregao-eletronico/">
+        <a class="related-card" href="/p/e390d251a4/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/hotmart-curso-novo-decreto-pregao-eletronico-509216.gif" alt="" loading="lazy" decoding="async">
           <strong>Curso sobre o novo Decreto do Pregao Eletronico</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/pregao-eletronico-e-sistema-de-registro-de-precos/">
+        </a><a class="related-card" href="/p/71e5ff81cc/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/hotmart-pregao-eletronico-srp-atualizacao-457150.jpg" alt="" loading="lazy" decoding="async">
           <strong>Pregao Eletronico e Sistema de Registro de Precos</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/curso-sobre-sistema-de-registro-de-precos/">
+        </a><a class="related-card" href="/p/09d9e8999d/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/hotmart-curso-sistema-registro-precos-456474.jpg" alt="" loading="lazy" decoding="async">
           <strong>Curso sobre Sistema de Registro de Precos</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/dominando-as-licitacoes/">
+        </a><a class="related-card" href="/p/7d22287d1f/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/hotmart-dominando-as-licitacoes-3980357.jpg" alt="" loading="lazy" decoding="async">
           <strong>Dominando as Licitacoes</strong>
           <span>Consulte o preço no parceiro</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/kit-escolar-infantil-completo-material-lapis-cor-canetinha/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/2fc53bd166/";
     const directProductTitle = "Kit Escolar Infantil Completo Material Lápis Cor Canetinha";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

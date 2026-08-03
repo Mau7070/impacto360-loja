@@ -2,6 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
 import { cleanLegacyCommercialText } from "./commercial-data.mjs";
+import {
+  assertUniqueProductShortCodes,
+  productLinkLabel,
+  productShortCode,
+  productShortPath,
+  productShortUrl,
+} from "./product-short-links.mjs";
 
 const root = process.cwd();
 const siteUrl = "https://impacto360afiliado.com.br";
@@ -191,6 +198,10 @@ function productSlug(product) {
 
 function productUrl(product) {
   return `${siteUrl}/produto/${encodeURIComponent(productSlug(product))}/`;
+}
+
+function shortProductUrl(product) {
+  return productShortUrl(product, siteUrl);
 }
 
 function productPageSlugs(product) {
@@ -386,7 +397,7 @@ function renderRelatedProducts(product, products) {
           const relatedPrice = priceFreshness(item).current
             ? displayPriceLabel(firstFilled(item, ["price", "preco", "precoAtual"]))
             : "Consulte o preço no parceiro";
-          return `<a class="related-card" href="/produto/${htmlEscape(productSlug(item))}/">
+          return `<a class="related-card" href="${htmlEscape(productShortPath(item))}">
           <img src="${htmlEscape(webPath(getProductImage(item)))}" alt="" loading="lazy" decoding="async">
           <strong>${htmlEscape(cleanCommercialTitle(firstFilled(item, ["name", "nome"]) || "Produto relacionado"))}</strong>
           <span>${htmlEscape(relatedPrice)}</span>
@@ -424,7 +435,8 @@ function productPage(product, store, products) {
   const storeName = partnerName(product, store);
   const ctaLabel = commercialCtaLabel(product, store);
   const benefitTags = productBenefitTags(product, store, rawPriceLabel);
-  const directUrl = productUrl(product);
+  const directUrl = shortProductUrl(product);
+  const directLinkLabel = productLinkLabel({ name: title });
   const directUrlJson = JSON.stringify(directUrl);
   const productIdJson = JSON.stringify(String(product.id));
   const shareTitleJson = JSON.stringify(title);
@@ -514,7 +526,9 @@ function productPage(product, store, products) {
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -536,6 +550,7 @@ function productPage(product, store, products) {
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -585,9 +600,9 @@ function productPage(product, store, products) {
         <div class="actions">
           <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">${htmlEscape(ctaLabel)}</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: ${htmlEscape(directUrl)}</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="${htmlEscape(directUrl)}">${htmlEscape(directLinkLabel)}</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
@@ -626,11 +641,11 @@ function productPage(product, store, products) {
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }
@@ -649,19 +664,25 @@ function productPage(product, store, products) {
 }
 
 function cleanGeneratedPages(base) {
-  const dir = path.join(base, "produto");
-  fs.rmSync(dir, { recursive: true, force: true });
-  fs.mkdirSync(dir, { recursive: true });
+  for (const route of ["produto", "p"]) {
+    const dir = path.join(base, route);
+    fs.rmSync(dir, { recursive: true, force: true });
+    fs.mkdirSync(dir, { recursive: true });
+  }
 }
 
 function writeProductPages(base, products, storesById) {
   cleanGeneratedPages(base);
   for (const product of products) {
+    const page = productPage(product, storesById.get(product.storeId), products).replace(/[ \t]+$/gm, "");
     for (const slug of productPageSlugs(product)) {
       const dir = path.join(base, "produto", slug);
       fs.mkdirSync(dir, { recursive: true });
-      fs.writeFileSync(path.join(dir, "index.html"), productPage(product, storesById.get(product.storeId), products).replace(/[ \t]+$/gm, ""), "utf8");
+      fs.writeFileSync(path.join(dir, "index.html"), page, "utf8");
     }
+    const shortDir = path.join(base, "p", productShortCode(product));
+    fs.mkdirSync(shortDir, { recursive: true });
+    fs.writeFileSync(path.join(shortDir, "index.html"), page, "utf8");
   }
 }
 
@@ -718,6 +739,7 @@ const integrityResult = quarantineIncompatibleSharedImages(
 const allowedIds = new Set(integrityResult.accepted.map(product => String(product.id)));
 const products = deduplicatedProducts.filter(product => allowedIds.has(String(product.id)));
 buildProductSlugs(products);
+assertUniqueProductShortCodes(products);
 
 for (const base of outputRoots) {
   writeProductPages(base, products, storesById);
@@ -727,6 +749,8 @@ for (const base of outputRoots) {
 const aliasCount = products.reduce((total, product) => total + productPageSlugs(product).length, 0);
 console.log(`Paginas canonicas de produto geradas: ${products.length}`);
 console.log(`Arquivos de produto publicados: ${aliasCount}`);
+console.log(`Links curtos publicados: ${products.length}`);
 for (const base of outputRoots) {
   console.log(`- ${path.relative(root, base) || "."}/produto`);
+  console.log(`- ${path.relative(root, base) || "."}/p`);
 }

@@ -1,10 +1,10 @@
-const CACHE_NAME = "impacto360-shell-20260803-commercial-clean-2";
+const CACHE_NAME = "impacto360-shell-20260803-short-links-3";
 const SHELL_FILES = [
   "/",
   "/index.html",
-  "/assets/storefront-excellence.css?v=20260803-commercial-clean-2",
-  "/assets/storefront-excellence.js?v=20260803-commercial-clean-2",
-  "/dados/stores.json?v=20260803-commercial-clean-2",
+  "/assets/storefront-excellence.css?v=20260803-short-links-3",
+  "/assets/storefront-excellence.js?v=20260803-short-links-3",
+  "/dados/stores.json?v=20260803-short-links-3",
   "/manifest.webmanifest",
   "/favicon.svg"
 ];

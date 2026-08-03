@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://meli.la/1WWu5Wz" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/bicicleta-spinning-com-roda-de-inercia-de-13kg-wct-fitness-cor-preto/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/5d63917eed/">Impacto360 — Bicicleta Spinning Com Roda De Inércia De 13kg Wct Fitness Cor Preto</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/wd40-spray-multiusos-desengripa-lubrifica-300ml-azul/">
+        <a class="related-card" href="/p/ae680e12e1/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_617617-MLB79044878885_092024-AB--wd40-spray-multiusos-desengripa-lubrifica-300ml.webp" alt="" loading="lazy" decoding="async">
           <strong>Wd40 Spray Multiusos Desengripa Lubrifica 300ml Azul</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/whey-protein-concentrado-1kg-growth-supplements-milkshake-de-chocolate/">
+        </a><a class="related-card" href="/p/0e98d72ab3/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_803453-MLA98778415369_112025-AB.webp" alt="" loading="lazy" decoding="async">
           <strong>Whey Protein Concentrado 1kg Growth Supplements - Milkshake de Chocolate</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/whey-protein-concentrado-1kg-growth-supplements-morango/">
+        </a><a class="related-card" href="/p/cbbdff3dcb/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_691940-MLA98296888734_112025-AB.webp" alt="" loading="lazy" decoding="async">
           <strong>Whey Protein Concentrado 1kg Growth Supplements - Morango</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-10-potes-hermeticos-vidro-640ml-starhouse-marmita-forno-micro-ondas-airfryer-com-4-travas-de/">
+        </a><a class="related-card" href="/p/f3eb7af8cb/">
           <img src="https://http2.mlstatic.com/D_Q_NP_2X_942823-MLA113526261849_062026-AB.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 10 Potes Herméticos Vidro 640ml Starhouse Marmita Forno Micro-ondas Airfryer com 4 travas de super vedação</strong>
           <span>Consulte o preço no parceiro</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/bicicleta-spinning-com-roda-de-inercia-de-13kg-wct-fitness-cor-preto/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/5d63917eed/";
     const directProductTitle = "Bicicleta Spinning Com Roda De Inércia De 13kg Wct Fitness Cor Preto";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

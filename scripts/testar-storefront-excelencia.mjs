@@ -4,6 +4,7 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import zlib from "node:zlib";
 import { findIncompatibleSharedImages } from "./catalog-integrity.mjs";
+import { productShortCode } from "./product-short-links.mjs";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -106,6 +107,10 @@ check(
 );
 check("catalogo sem IDs duplicados", new Set(catalog.map(product => product.id)).size === catalog.length);
 check("catalogo sem links duplicados", new Set(catalog.map(product => product.link.toLowerCase().replace(/#.*$/, ""))).size === catalog.length);
+check("links curtos unicos", new Set(catalog.map(product => product.shortPath)).size === catalog.length);
+check("links curtos em formato estavel", catalog.every(product => product.shortPath === `/p/${productShortCode(product)}/`));
+check("URLs curtas usam o dominio da loja", catalog.every(product => product.shortUrl === `https://impacto360afiliado.com.br${product.shortPath}`));
+check("URLs curtas sao menores que as canonicas", catalog.every(product => product.shortUrl.length < `https://impacto360afiliado.com.br/produto/${product.slug}/`.length));
 const incompatibleSharedImages = findIncompatibleSharedImages(catalog);
 check(
   "catalogo sem imagens compartilhadas por variacoes incompatíveis",
@@ -222,7 +227,7 @@ check(
 check("rotas de loja indexaveis", read(`loja/${stores[0].id}/index.html`).includes('content="index,follow,max-image-preview:large"'));
 check("sitemap inclui lojas e categorias", read("sitemap.xml").includes("<loc>https://impacto360afiliado.com.br/lojas/</loc>") && read("sitemap.xml").includes("/categoria/celulares-e-tecnologia/"));
 
-for (const script of ["src/storefront/storefront.js", "scripts/gerar-storefront-excelencia.mjs", "scripts/catalog-integrity.mjs", "sw.js"]) {
+for (const script of ["src/storefront/storefront.js", "scripts/gerar-storefront-excelencia.mjs", "scripts/gerar-paginas-produtos.mjs", "scripts/atualizar-links-curtos-agenda.mjs", "scripts/product-short-links.mjs", "scripts/catalog-integrity.mjs", "sw.js"]) {
   const result = spawnSync(process.execPath, ["--check", script], { cwd: root, encoding: "utf8" });
   check(`sintaxe ${script}`, result.status === 0, result.stderr.trim());
 }
@@ -244,6 +249,16 @@ check("imagens locais do catalogo existem", localMissingImages.length === 0, `${
 
 const missingProductPages = catalog.filter(product => !exists(path.join("produto", product.slug, "index.html")));
 check("paginas internas existem para todo o catalogo", missingProductPages.length === 0, `${missingProductPages.length} ausentes`);
+
+const missingShortPages = catalog.filter(product => !exists(path.join(product.shortPath.replace(/^\/+|\/+$/g, ""), "index.html")));
+check("links curtos existem para todo o catalogo", missingShortPages.length === 0, `${missingShortPages.length} ausentes`);
+const missingPackageShortPages = catalog.filter(product => !exists(path.join(product.shortPath.replace(/^\/+|\/+$/g, ""), "index.html"), packageRoot));
+check("links curtos sincronizados no pacote", missingPackageShortPages.length === 0, `${missingPackageShortPages.length} ausentes`);
+const sampleShortPage = catalog.length ? read(path.join(catalog[0].shortPath.replace(/^\/+|\/+$/g, ""), "index.html")) : "";
+check("pagina exibe link curto clicavel", sampleShortPage.includes(`href="${catalog[0]?.shortUrl || ""}"`) && sampleShortPage.includes("Impacto360 —"));
+check("pagina curta preserva canonical", sampleShortPage.includes(`<link rel="canonical" href="https://impacto360afiliado.com.br/produto/${catalog[0]?.slug || ""}/">`));
+check("pagina curta preserva link afiliado", sampleShortPage.includes(`href="${catalog[0]?.link || ""}"`));
+check("cards usam os links curtos", app.includes("product.shortPath ||"));
 
 const failed = checks.filter(item => !item.pass);
 for (const item of checks) {

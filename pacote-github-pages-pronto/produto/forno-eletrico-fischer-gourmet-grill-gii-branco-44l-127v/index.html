@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://s.shopee.com.br/1gH2TM7QCs" target="_blank" rel="noopener noreferrer sponsored">Comprar no site parceiro</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/forno-eletrico-fischer-gourmet-grill-gii-branco-44l-127v/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/66385757bb/">Impacto360 — Forno Eletrico Fischer Gourmet Grill GII Branco 44L 127V</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/kit-20-cobertor-mantas-microfibra-casal-manta-macia-diversa/">
+        <a class="related-card" href="/p/87531901b8/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/marketplaces-cama-20260722/ml-cama-20260722-98b361ec45.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 20 Cobertor Mantas Microfibra Casal Manta Macia Diversa</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-colcha-queen-jogo-3-pecas-dohler-piquet-100-algodao/">
+        </a><a class="related-card" href="/p/2d5bad431c/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/marketplaces-cama-20260722/ml-cama-20260722-c0b406cf00.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit Colcha Queen Jogo 3 Peças Döhler Piquet 100% Algodão</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/protetor-de-colchao-queen-buddemeyer-maison-algodao-branco/">
+        </a><a class="related-card" href="/p/5cec79bd97/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/marketplaces-cama-20260722/ml-cama-20260722-e5394aede4.webp" alt="" loading="lazy" decoding="async">
           <strong>Protetor De Colchão Queen Buddemeyer Maison Algodão Branco</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-cobre-leito-turin-casal-queen-completo-10-pecas-vilela-enxovais-cor-marfim/">
+        </a><a class="related-card" href="/p/c500713249/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/marketplaces-cama-20260722/ml-cama-20260722-431908bd27.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit Cobre Leito Turin Casal Queen Completo 10 Peças Vilela Enxovais Cor Marfim</strong>
           <span>Consulte o preço no parceiro</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/forno-eletrico-fischer-gourmet-grill-gii-branco-44l-127v/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/66385757bb/";
     const directProductTitle = "Forno Eletrico Fischer Gourmet Grill GII Branco 44L 127V";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://meli.la/1GHPUcc" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/5m-mangueira-para-lavadora-alta-pressao-wap-ousada-plus-2200-preto/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/5cf78fa5e9/">Impacto360 — 5m Mangueira Para Lavadora Alta Pressão Wap Ousada Plus 2200 Preto</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/bosch-furadeira-de-impacto-gsb-550-re-550w-127v-com-3-brocas/">
+        <a class="related-card" href="/p/437f17ff05/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b07jq9g1bd.jpg" alt="" loading="lazy" decoding="async">
           <strong>Bosch Furadeira de Impacto GSB 550 RE 550W 127V com 3 Brocas</strong>
           <span>R$ 309,88</span>
-        </a><a class="related-card" href="/produto/dewalt-dcs334b-20v-serra-de-vaivem-sem-fio-sem-escova-somente-ferramenta/">
+        </a><a class="related-card" href="/p/5f2b07c641/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b0cfym9l5w.jpg" alt="" loading="lazy" decoding="async">
           <strong>DEWALT Dcs334B 20V Serra De Vaivém Sem Fio Sem Escova (Somente Ferramenta)</strong>
           <span>R$ 1.444,04</span>
-        </a><a class="related-card" href="/produto/bosch-trena-laser-glm-40-alcance-40m-com-bolsa-protetora/">
+        </a><a class="related-card" href="/p/6e33115a9e/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b00r0z7tfm.jpg" alt="" loading="lazy" decoding="async">
           <strong>Bosch Trena Laser GLM 40 alcance 40m com bolsa protetora</strong>
           <span>R$ 349,00</span>
-        </a><a class="related-card" href="/produto/bosch-martelete-perfurador-gbh-2-24-d-820w-220v-com-maleta/">
+        </a><a class="related-card" href="/p/d15cff2527/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ferramentas-20260724/ferramentas-20260724-amazon-b076krb8lp.jpg" alt="" loading="lazy" decoding="async">
           <strong>Bosch Martelete Perfurador GBH 2-24 D 820W 220V com maleta</strong>
           <span>R$ 679,00</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/5m-mangueira-para-lavadora-alta-pressao-wap-ousada-plus-2200-preto/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/5cf78fa5e9/";
     const directProductTitle = "5m Mangueira Para Lavadora Alta Pressão Wap Ousada Plus 2200 Preto";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

@@ -62,7 +62,9 @@
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border:0; border-radius:8px; background:var(--orange); color:#fff; font-weight:950; font-family:inherit; cursor:pointer; }
     .btn:hover { background:var(--orange-hover); }
     .btn.secondary { background:#f7fafc; color:#10213a; border:1px solid var(--line); }
-    .direct-link { margin-top:10px; color:var(--muted); font-size:.88rem; font-weight:750; overflow-wrap:anywhere; }
+    .direct-link { margin-top:12px; display:grid; gap:4px; color:var(--muted); font-size:.88rem; font-weight:750; }
+    .direct-link a { color:#164e81; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+    .direct-link a:hover { color:#c2410c; }
     .notice { margin-top:16px; padding:12px; border-radius:8px; background:#fff8e7; color:#66501c; border:1px solid rgba(243,206,123,.55); }
     .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px); opacity:0; pointer-events:none; background:#08192f; color:#fff; padding:11px 14px; border-radius:999px; font-weight:900; transition:opacity .2s ease, transform .2s ease; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -84,6 +86,7 @@
       .media, .panel, .related-card, .chip { background:#0e2032; }
       .media img, .related-card img { background:#fff; }
       .btn.secondary { background:#13283d; color:#f3f7fb; }
+      .direct-link a { color:#f3f7fb; }
       .eyebrow { color:#c0cfdd; }
       .chip.stale { background:#3a2b12; color:#ffd49a; }
     }
@@ -133,28 +136,28 @@
         <div class="actions">
           <a class="btn" href="https://meli.la/1cucMKe" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre</a>
           <button class="btn secondary" type="button" onclick="shareProduct()">Compartilhar</button>
-          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link direto</button>
+          <button class="btn secondary" type="button" onclick="copyDirectProductLink()">Copiar link curto</button>
         </div>
-        <div class="direct-link">Link desta página: https://impacto360afiliado.com.br/produto/bolsa-feminina-casual-alca-transversal-moderna-anti-furto-cor-preto/</div>
+        <div class="direct-link"><span>Link curto para publicar:</span><a href="https://impacto360afiliado.com.br/p/b61218e4f6/">Impacto360 — Bolsa Feminina Casual Alça Transversal Moderna Anti Furto Cor Preto</a></div>
         <div class="notice">A Impacto360 Afiliado pode receber comissão por compras feitas por este link, sem custo adicional para você. Preço, entrega, garantia e disponibilidade devem ser confirmados no site parceiro.</div>
       </article>
     </section>
     <section class="related">
       <h2>Produtos relacionados</h2>
       <div class="related-grid">
-        <a class="related-card" href="/produto/mala-de-viagem-bordo-sweet-studio-abs-com-ziper-expansivel-resistente-rodas-360/">
+        <a class="related-card" href="/p/1886452d87/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ml-afiliados-20260714-mala-bordo-expansivel-rodas-360-b40abe0c.webp" alt="" loading="lazy" decoding="async">
           <strong>Mala De Viagem Bordo Sweet Studio ABS Com Ziper Expansivel Resistente Rodas 360</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/kit-2-jaquetas-corta-vento-impermeavel-liso-unissex/">
+        </a><a class="related-card" href="/p/81d05e3a58/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/ml-afiliados-20260714-kit-2-jaquetas-corta-vento-183572af.webp" alt="" loading="lazy" decoding="async">
           <strong>Kit 2 Jaquetas Corta Vento Impermeavel Liso Unissex</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/calca-cargo-feminina-wide-leg-cintura-alta-jeans-stillger/">
+        </a><a class="related-card" href="/p/1af71b760d/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/calca-cargo-feminina-wide-leg-cintura-alta-jeans-stillger-3838ccc9.webp" alt="" loading="lazy" decoding="async">
           <strong>Calça Cargo Feminina Wide Leg Cintura Alta Jeans Stillger</strong>
           <span>Consulte o preço no parceiro</span>
-        </a><a class="related-card" href="/produto/vestido-longo-feminino-de-manguinhas-multiuso-de-luxo/">
+        </a><a class="related-card" href="/p/f461f3bc84/">
           <img src="https://impacto360afiliado.com.br/public/images/anuncios/vestido-longo-feminino-de-manguinhas-multiuso-de-luxo-41d3eba3.webp" alt="" loading="lazy" decoding="async">
           <strong>Vestido Longo Feminino De Manguinhas Multiuso De Luxo</strong>
           <span>Consulte o preço no parceiro</span>
@@ -170,7 +173,7 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
-    const directProductUrl = "https://impacto360afiliado.com.br/produto/bolsa-feminina-casual-alca-transversal-moderna-anti-furto-cor-preto/";
+    const directProductUrl = "https://impacto360afiliado.com.br/p/b61218e4f6/";
     const directProductTitle = "Bolsa Feminina Casual Alça Transversal Moderna Anti Furto Cor Preto";
     try {
       const key = "impacto360ViewHistory";
@@ -195,11 +198,11 @@
       area.select();
       try { document.execCommand("copy"); } catch (error) {}
       document.body.removeChild(area);
-      showToast("Link direto pronto para compartilhar");
+      showToast("Link curto pronto para compartilhar");
     }
     function copyDirectProductLink() {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link direto copiado")).catch(() => fallbackCopy(directProductUrl));
+        navigator.clipboard.writeText(directProductUrl).then(() => showToast("Link curto copiado")).catch(() => fallbackCopy(directProductUrl));
       } else {
         fallbackCopy(directProductUrl);
       }

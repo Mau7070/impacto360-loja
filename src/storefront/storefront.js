@@ -1,7 +1,7 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-commercial-clean-2";
-const STORES_URL = "/dados/stores.json?v=20260803-commercial-clean-2";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-short-links-3";
+const STORES_URL = "/dados/stores.json?v=20260803-short-links-3";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const VIEW_HISTORY_KEY = "impacto360ViewHistory";
@@ -679,7 +679,7 @@ function diverseProducts(products, limit = 8) {
 }
 
 function productPath(product) {
-  return `/produto/${encodeURIComponent(product.slug || product.id)}/`;
+  return product.shortPath || `/produto/${encodeURIComponent(product.slug || product.id)}/`;
 }
 
 function productCard(product, index = 0, eagerCount = 0) {
