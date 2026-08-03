@@ -1,7 +1,7 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-prices-1";
-const STORES_URL = "/dados/stores.json?v=20260729-preview";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-commercial-clean-2";
+const STORES_URL = "/dados/stores.json?v=20260803-commercial-clean-2";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const VIEW_HISTORY_KEY = "impacto360ViewHistory";
@@ -514,7 +514,7 @@ function discountPercent(product) {
 }
 
 function priceFreshness(product) {
-  const raw = text(product.priceUpdatedAt || product.updatedAt);
+  const raw = text(product.priceUpdatedAt);
   const checkedAt = raw ? new Date(raw) : null;
   if (!checkedAt || Number.isNaN(checkedAt.getTime())) {
     return { current: false, stale: false, checkedAt: "" };
@@ -690,9 +690,7 @@ function productCard(product, index = 0, eagerCount = 0) {
   const verifiedBadge = /oferta verificada/i.test(text(product.badge));
   const badge = discount
     ? `${discount}% OFF`
-    : freshness.stale
-      ? "Informação antiga"
-      : verifiedBadge && freshness.current
+    : verifiedBadge && freshness.current
         ? "Oferta verificada"
         : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
   const internalPath = productPath(product);
@@ -701,7 +699,7 @@ function productCard(product, index = 0, eagerCount = 0) {
   const actionClass = quote ? "btn-service" : "btn-offer";
   const currentPrice = money(product.priceValue, product.price);
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
-  const updatedAt = freshness.checkedAt;
+  const updatedAt = freshness.current ? freshness.checkedAt : "";
   const rating = product.rating
     ? `<span aria-label="Avaliação ${product.rating.toFixed(1)} de 5">★ ${product.rating.toFixed(1).replace(".", ",")}</span>`
     : "";
@@ -735,10 +733,10 @@ function productCard(product, index = 0, eagerCount = 0) {
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
         <h3><a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}">${escapeHtml(product.name)}</a></h3>
         ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
-        <div class="product-facts">
-          <span>${escapeHtml(availabilityLabel(product))}</span>
-          ${updatedAt ? `<span class="${freshness.stale ? "product-stale" : ""}">${freshness.stale ? "Informação antiga" : "Preço verificado"} em ${escapeHtml(updatedAt)}</span>` : ""}
-        </div>
+        ${freshness.current ? `<div class="product-facts">
+          ${product.availability ? `<span>${escapeHtml(availabilityLabel(product))}</span>` : ""}
+          ${updatedAt ? `<span>Preço verificado em ${escapeHtml(updatedAt)}</span>` : ""}
+        </div>` : ""}
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
           <strong class="current-price">${escapeHtml(currentPrice)}</strong>

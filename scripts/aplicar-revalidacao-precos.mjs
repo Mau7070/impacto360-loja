@@ -1,6 +1,13 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import {
+  availabilityFields,
+  cleanLegacyBadge,
+  cleanLegacyCommercialText,
+  ratingFields,
+  reviewCountFields,
+} from "./commercial-data.mjs";
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -161,16 +168,27 @@ const updated = products.map(product => {
   next.statusPreco = status;
   next.disponibilidade = verified
     ? cleanAvailability(result.availability, result.platform)
-    : "Confira disponibilidade no parceiro";
+    : "";
+
+  for (const field of ratingFields) {
+    if (field in next) next[field] = null;
+  }
+  for (const field of reviewCountFields) {
+    if (field in next) next[field] = null;
+  }
+  for (const field of availabilityFields) {
+    if (!verified && field in next) next[field] = "";
+    if (verified && field !== "disponibilidade" && field in next) next[field] = null;
+  }
 
   for (const field of visibleTextFields) {
-    next[field] = replaceOldPrice(next[field], oldPrice, replacement);
+    next[field] = cleanLegacyCommercialText(replaceOldPrice(next[field], oldPrice, replacement));
   }
   if (Array.isArray(next.beneficios)) {
     next.beneficios = next.beneficios.map(item => replaceOldPrice(item, oldPrice, replacement));
   }
   for (const field of ["badge", "selo", "etiqueta"]) {
-    if (typeof next[field] === "string" && /\b\d{1,3}\s*%|oferta verificada/i.test(next[field])) next[field] = "";
+    if (field in next) next[field] = cleanLegacyBadge(next[field]);
   }
 
   if (next.marketplace && typeof next.marketplace === "object") {
