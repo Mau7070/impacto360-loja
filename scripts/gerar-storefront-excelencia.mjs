@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { quarantineIncompatibleSharedImages } from "./catalog-integrity.mjs";
 import { cleanLegacyBadge, cleanLegacyCommercialText, hasLegacyCommercialClaim } from "./commercial-data.mjs";
+import { assertUniqueProductShortCodes, productShortPath, productShortUrl } from "./product-short-links.mjs";
 
 const root = process.cwd();
 const packageRoot = path.join(root, "pacote-github-pages-pronto");
@@ -233,6 +234,8 @@ function compactProduct(product, generatedSlug) {
     publishedAt: text(first(product, ["publicadoEm", "createdAt", "dataPublicacao"])),
     updatedAt: text(first(product, ["atualizadoEm", "ultimaRevisao", "updatedAt"])),
     slug,
+    shortPath: productShortPath(product),
+    shortUrl: productShortUrl(product, siteUrl),
   };
 }
 
@@ -302,6 +305,7 @@ const deduplicatedProducts = deduplicate(
 );
 const integrityResult = quarantineIncompatibleSharedImages(deduplicatedProducts);
 const compactProducts = integrityResult.accepted;
+assertUniqueProductShortCodes(compactProducts);
 const revalidationQueue = compactProducts
   .filter(product => product.priceStatus !== "current")
   .map(product => ({

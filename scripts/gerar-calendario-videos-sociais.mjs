@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { productLinkLabel, productShortUrl } from "./product-short-links.mjs";
 
 const root = process.cwd();
 const sourceDir = path.join(root, "dados", "social-videos-20260730");
@@ -56,8 +57,8 @@ const schedule = candidates.map((item, index) => {
   const slot = (index % postsPerDay) + 1;
   const date = addUtcDays(startDate, dayOffset);
   const searchLink = `${siteUrl}/buscar/?q=${encodeURIComponent(item.title)}`;
-  const productLink = item.catalogProductSlug
-    ? `${siteUrl}/produto/${encodeURIComponent(item.catalogProductSlug)}/`
+  const productLink = item.catalogProductId
+    ? productShortUrl(item.catalogProductId, siteUrl)
     : searchLink;
   const affiliateLink = item.affiliateLink || "";
   const approved = item.matchStatus === "pronto" && Boolean(affiliateLink);
@@ -79,6 +80,7 @@ const schedule = candidates.map((item, index) => {
     affiliateMarketplace: item.marketplace || "",
     affiliateLink,
     storeLink: approved ? productLink : "",
+    linkLabel: approved ? productLinkLabel({ name: item.title }) : "",
     publicationStatus: approved
       ? "pronto_para_preparar"
       : "aguardando_revisao_visual_e_link_afiliado",
