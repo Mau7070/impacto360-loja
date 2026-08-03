@@ -9,8 +9,7 @@ const siteUrl = "https://impacto360afiliado.com.br";
 const priceValidityDays = Math.max(1, Number(process.env.IMPACTO360_PRICE_VALIDITY_DAYS || 7));
 const priceDateFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
-  "dataUltimaVerificacao", "ultimaVerificacao", "atualizadoEm",
-  "ultimaRevisao", "updatedAt",
+  "dataUltimaVerificacao", "ultimaVerificacao", "lastChecked",
 ];
 const allowedAffiliateDomains = new Set([
   "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
