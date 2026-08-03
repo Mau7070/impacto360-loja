@@ -1,6 +1,6 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260729-preview";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-prices-1";
 const STORES_URL = "/dados/stores.json?v=20260729-preview";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
