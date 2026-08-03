@@ -26,8 +26,7 @@ const imageFields = [
 ];
 const priceDateFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
-  "dataUltimaVerificacao", "ultimaVerificacao", "atualizadoEm",
-  "ultimaRevisao", "updatedAt",
+  "dataUltimaVerificacao", "ultimaVerificacao", "lastChecked",
 ];
 const storeCategoryById = new Map([
   ["impacto-mobile", "celulares-e-tecnologia"],

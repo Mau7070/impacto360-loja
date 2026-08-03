@@ -24,8 +24,7 @@ const ratingFields = ["avaliacao", "rating", "reviewRating", "nota"];
 const availabilityFields = ["disponibilidade", "estoque", "statusDisponibilidade"];
 const lastCheckFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
-  "ultimaVerificacao", "ultimaRevisao", "lastChecked",
-  "dataUltimaVerificacao", "atualizadoEm", "updatedAt",
+  "ultimaVerificacao", "lastChecked", "dataUltimaVerificacao",
 ];
 const allowedAffiliateDomains = new Set([
   "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
