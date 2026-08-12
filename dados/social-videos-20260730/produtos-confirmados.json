@@ -117,6 +117,47 @@
         "status": "equivalente_confirmado",
         "notes": "A oferta original permanece ativa e corresponde ao vídeo: ripas de madeira de pinus montadas sobre base plástica modular de encaixe."
       }
+    },
+    {
+      "videoNumber": 1914,
+      "videoSha256": "35e6d24059e265843ce5c0e3510fcd03c7a8950a159f963b7a3c4e0750a6e1d8",
+      "sourceTitle": "Escova Elétrica de Limpeza 5 em 1 Sem Fio para Cozinha e Banheiro",
+      "sourceProductUrl": "https://shopee.com.br/product/756344105/22716924356",
+      "sourceProductStatus": "substituído_por_equivalente_confirmado",
+      "catalogProductId": "shopee-video-1914-escova-eletrica-5-em-1-23897609967",
+      "slug": "escova-eletrica-de-limpeza-5-em-1-sem-fio",
+      "title": "Escova Elétrica de Limpeza 5 em 1 Sem Fio",
+      "storeId": "impacto-casa",
+      "category": "Casa e Família",
+      "subcategory": "Organização e limpeza",
+      "marketplace": "Shopee",
+      "affiliateItemId": "23897609967",
+      "directProductUrl": "https://shopee.com.br/product/1093669416/23897609967",
+      "affiliateLink": "https://s.shopee.com.br/1BLUGpd30r",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "23897609967",
+      "image": "public/images/anuncios/shopee-video-1914-escova-eletrica-5-em-1.webp",
+      "imageSource": "https://down-bs-br.img.susercontent.com/sg-11134201-7rd4i-lx4tdm0ajsli6f.webp",
+      "priceAtReview": "R$ 49,99",
+      "salesAtReview": "6 vendas",
+      "commissionAtReview": "11% exibida no painel de afiliados",
+      "reviewedAt": "2026-08-12",
+      "catalogDescription": "Escova elétrica portátil e sem fio com cabeças intercambiáveis para limpeza de superfícies da cozinha, do banheiro e de outros ambientes.",
+      "specs": [
+        "Funcionamento sem fio",
+        "Conjunto 5 em 1",
+        "Cabeças de limpeza intercambiáveis",
+        "Uso multiuso em cozinha e banheiro"
+      ],
+      "benefits": [
+        "Formato, empunhadura e cabeça circular equivalentes aos demonstrados no vídeo.",
+        "Imagem obtida da oferta afiliada confirmada.",
+        "Link curto oficial gerado no painel autenticado da Shopee."
+      ],
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "O vídeo mostra uma escova elétrica branca de empunhadura lateral, com cabeça circular e acessórios de limpeza. A oferta afiliada apresenta o mesmo formato, a mesma disposição da empunhadura e o conjunto funcional 5 em 1."
+      }
     }
   ]
 }

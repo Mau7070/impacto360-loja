@@ -1,12 +1,183 @@
 {
-  "generatedAt": "2026-08-03T11:35:45.312Z",
+  "generatedAt": "2026-08-12T11:35:14.171Z",
   "policy": {
     "priceValidityDays": 7,
     "ordering": "expired and unverified prices first",
     "publishRule": "never expose an expired discount as current"
   },
-  "pending": 2447,
+  "pending": 2492,
   "items": [
+    {
+      "id": "ferramentas-20260724-amazon-b07jq9g1bd",
+      "name": "Bosch Furadeira de Impacto GSB 550 RE 550W 127V com 3 Brocas",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:16.537Z",
+      "priceValidUntil": "2026-08-10T11:27:16.537Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0cfym9l5w",
+      "name": "DEWALT Dcs334B 20V Serra De Vaivém Sem Fio Sem Escova (Somente Ferramenta)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:15.018Z",
+      "priceValidUntil": "2026-08-10T11:27:15.018Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00r0z7tfm",
+      "name": "Bosch Trena Laser GLM 40 alcance 40m com bolsa protetora",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:16.353Z",
+      "priceValidUntil": "2026-08-10T11:27:16.353Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076krb8lp",
+      "name": "Bosch Martelete Perfurador GBH 2-24 D 820W 220V com maleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:16.626Z",
+      "priceValidUntil": "2026-08-10T11:27:16.626Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0c4z6gf7j",
+      "name": "Bosch Furadeira de Impacto GSB 13 RE-M - 750W 220V, em maleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.954Z",
+      "priceValidUntil": "2026-08-10T11:27:56.954Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0c51c4ztz",
+      "name": "Bosch Furadeira de Impacto GSB 13 RE-M - 750W 127V, em maleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.966Z",
+      "priceValidUntil": "2026-08-10T11:27:56.966Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0ck37ypss",
+      "name": "Klein Tools 55569 Bolsa de ferramentas com zíper de pé com mosquetões, fundo reforçado",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:55.797Z",
+      "priceValidUntil": "2026-08-10T11:27:55.797Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bbwg45c4",
+      "name": "Bosch Furadeira de Impacto GSB 16 RE 850W 127V, em maleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.798Z",
+      "priceValidUntil": "2026-08-10T11:27:56.798Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09tplnbq2",
+      "name": "Klein Tools Kit De Ferramentas Multifuncional Para Cabo De Dados 80072",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.786Z",
+      "priceValidUntil": "2026-08-10T11:27:56.786Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0877ywtk5",
+      "name": "Bosch Kit Parafusadeira GSR 120-LI e Chave de Impacto GDR 120-LI, 12V com 2 baterias, 1",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.957Z",
+      "priceValidUntil": "2026-08-10T11:27:56.957Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0b9yt2rqr",
+      "name": "CRAFTSMAN V20 RP Serra tico-tico-tico sem fio, 3 configurações orbitais, até 3.200 SPM",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.956Z",
+      "priceValidUntil": "2026-08-10T11:27:56.956Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0ccq95fxs",
+      "name": "Bosch Serra tico tico GST 750 220V + 1 lâmina",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:56.962Z",
+      "priceValidUntil": "2026-08-10T11:27:56.962Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0df84jkvf",
+      "name": "DEWALT Esmerilhadeira Angular Sem Fio 20V Max* Xr De 4-1/2-5 Pol. (Somente Ferramenta) (Dcg410B)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:02.022Z",
+      "priceValidUntil": "2026-08-10T11:28:02.022Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076l251tv",
+      "name": "MAKITA SERRA MARMORE 125MM (5 POL) 1450W 110V 4100NH2Z",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:02.793Z",
+      "priceValidUntil": "2026-08-10T11:28:02.793Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0bmktcpdy",
+      "name": "Milwaukee Ferramenta Elétrica M18 Fuel 4-1/2\" / 5\" Variável",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:01.897Z",
+      "priceValidUntil": "2026-08-10T11:28:01.897Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00et5vmtu",
+      "name": "DEWALT Kit de furadeira/parafusadeira sem fio 20V Max, compacto, 13 mm (DCD771C2), amarelo",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:02.735Z",
+      "priceValidUntil": "2026-08-10T11:28:02.735Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09v1sm8qb",
+      "name": "WAP Parafusadeira e Furadeira à Bateria 12V BPF-12K3, Kit de 13 Acessórios e Maleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:03.186Z",
+      "priceValidUntil": "2026-08-10T11:28:03.186Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000oq21ca",
+      "name": "IRWIN Alicate Descascador para Fios Auto Ajustável 8 Polegadas 2078300",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:02.749Z",
+      "priceValidUntil": "2026-08-10T11:28:02.749Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i8mymt2",
+      "name": "Wera - Conjunto Bits e Soquetes Tool Check Plus - Milimétrica",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:02.277Z",
+      "priceValidUntil": "2026-08-10T11:28:02.277Z",
+      "priority": "high"
+    },
     {
       "id": "ferramentas-20260724-amazon-b07vbb55x5",
       "name": "Dewalt Multi Ferramenta Oscilante, Ideal para Cortes em Parafusos e Madeira, Sem Bateria e Sem",
@@ -26,6 +197,42 @@
       "priority": "high"
     },
     {
+      "id": "ferramentas-20260724-amazon-b085b253md",
+      "name": "DEWALT Kit de ferramentas oscilantes 20V MAX XR, 3 velocidades, com lâminas, bateria e",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:07.583Z",
+      "priceValidUntil": "2026-08-10T11:28:07.583Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07b2xb9d4",
+      "name": "Vonder, Parafusadeira e Furadeira 12 V",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:08.487Z",
+      "priceValidUntil": "2026-08-10T11:28:08.487Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00qeboe0q",
+      "name": "Multiferramenta Cortadora 18V SEM Bateria DTM51RZ Makita",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:07.983Z",
+      "priceValidUntil": "2026-08-10T11:28:07.983Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08xqwldkp",
+      "name": "Bosch Furadeira Parafusadeira GSR 1000 Smart, Com Acessórios, 12 Volts",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:09.125Z",
+      "priceValidUntil": "2026-08-10T11:28:09.125Z",
+      "priority": "high"
+    },
+    {
       "id": "ferramentas-20260724-amazon-b07457bxjw",
       "name": "DEWALT Esmerilhadeira de 4 1/2 Pol. - 5 Pol. (114mm -127mm) Ion-Litio 20V MAX* 9000 RPM",
       "storeId": "impacto-ferramentas",
@@ -35,12 +242,165 @@
       "priority": "high"
     },
     {
+      "id": "ferramentas-20260724-amazon-b00080dpnq",
+      "name": "Cortador e descascador de fios Klein Tools 11055, azul/amarelo",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:08.603Z",
+      "priceValidUntil": "2026-08-10T11:28:08.603Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b082btt92h",
+      "name": "Dewalt DCS369B ATOMIC 20V MAX sem fio com uma mão serra recicladora (ferramenta somente)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:08.031Z",
+      "priceValidUntil": "2026-08-10T11:28:08.031Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b007nvssfs",
+      "name": "DEWALT Serra de Jig Max 20V, somente ferramenta (DCS331B)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:16.883Z",
+      "priceValidUntil": "2026-08-10T11:28:16.883Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i8n282o",
+      "name": "Ferramentas Knipex, 86 03 125, 5 polegadas | ferramentas manuais de bicicleta",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:17.238Z",
+      "priceValidUntil": "2026-08-10T11:28:17.238Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00u0p0ghm",
+      "name": "Dewalt Kit De Ferramentas Mecânicas De Dewalt E Conjunto De Soquete, 108 Peças (Dwmt73801)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:15.577Z",
+      "priceValidUntil": "2026-08-10T11:28:15.577Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00bhgjhmi",
+      "name": "Dremel 710-08 Kit de acessórios rotativos para todos os fins, 160 peças, 710-08, Kit de",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:15.586Z",
+      "priceValidUntil": "2026-08-10T11:28:15.586Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076hr7vd4",
+      "name": "Bosch Parafusadeira e furadeira GSR 7-14 E 400W 127V com cabo de 4m",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:16.811Z",
+      "priceValidUntil": "2026-08-10T11:28:16.811Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b0dbvzqkgt",
+      "name": "Bolsa para Ferramentas com 8 Bolsos – Compacta, Resistente e Ideal para Uso Profissional e",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:17.315Z",
+      "priceValidUntil": "2026-08-10T11:28:17.315Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00ti7hzy0",
+      "name": "DEWALT Conjunto de chaves de fenda com chaves de porca, 71 peças (DWMT73808)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:16.762Z",
+      "priceValidUntil": "2026-08-10T11:28:16.762Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00sou6lr4",
+      "name": "DEWALT Kit multiferramentas oscilantes 20V MAX XR, velocidade variável (DCS356D1)",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:15.683Z",
+      "priceValidUntil": "2026-08-10T11:28:15.683Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b076vykzh8",
+      "name": "Furadeira De Impacto 1/2 C/ Maleta Bosch G12 127v",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:24.491Z",
+      "priceValidUntil": "2026-08-10T11:28:24.491Z",
+      "priority": "high"
+    },
+    {
       "id": "ferramentas-20260724-amazon-b00g9cl83q",
       "name": "Kit de chaves de fenda DEWALT Impact Ready FlextorQ DWA2T35IR, 35 peças",
       "storeId": "impacto-ferramentas",
       "status": "unverified",
       "priceUpdatedAt": "",
       "priceValidUntil": "",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00i3pogxq",
+      "name": "Milwaukee Chave de Impacto Hexagonal de Íon de Lítio 2656-20 M18 18 V 1/4 polegada com 1.500",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:24.172Z",
+      "priceValidUntil": "2026-08-10T11:28:24.172Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b085dvbdhz",
+      "name": "Makita E-01666 Impact XPS 35 peças",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:24.187Z",
+      "priceValidUntil": "2026-08-10T11:28:24.187Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b00odn0s70",
+      "name": "DEWALT Serra Sabre Compacta 20V MAX* Ion-Litio Sem Bateria e Sem Carregador DCS387B",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:24.183Z",
+      "priceValidUntil": "2026-08-10T11:28:24.183Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b08vn7cstj",
+      "name": "MILWAUKEE'S Milwaukee 2962-20 M18 18V Combustível 1/2\" Chave De Impacto De Torque Com Anel De",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:27.003Z",
+      "priceValidUntil": "2026-08-10T11:28:27.003Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b000bk7aos",
+      "name": "Wera Conjunto de ferramentas compacto \"Kraftform 50.8 cm com bolsa, SL/PH/PZ, 7 peças, prata",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:27.347Z",
+      "priceValidUntil": "2026-08-10T11:28:27.347Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b07h7dq3dk",
+      "name": "M18 Ferramenta de serra de combustível com cabo em D",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:25.714Z",
+      "priceValidUntil": "2026-08-10T11:28:25.714Z",
       "priority": "high"
     },
     {
@@ -104,6 +464,15 @@
       "status": "unverified",
       "priceUpdatedAt": "",
       "priceValidUntil": "",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-amazon-b09rx4r3tr",
+      "name": "Milwaukee 2880-20 M18 FUEL Rebarbadora de íon de lítio sem escova, 12,7 cm, sem fio, com",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:28:39.317Z",
+      "priceValidUntil": "2026-08-10T11:28:39.317Z",
       "priority": "high"
     },
     {
@@ -401,6 +770,42 @@
       "status": "unverified",
       "priceUpdatedAt": "",
       "priceValidUntil": "",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4708816427-7c646f2d",
+      "name": "Compressor de Ar Portátil Digital BHCASES 80W USB-C para Carro Moto Bike Preto",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:20.222Z",
+      "priceValidUntil": "2026-08-10T11:27:20.222Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6823283528-14383463",
+      "name": "Bomba Elétrica Portátil Digital Para Encher Pneu De Carro Moto Bicicleta Inflador Automotivo",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:20.768Z",
+      "priceValidUntil": "2026-08-10T11:27:20.768Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb4716282936-9b4455c9",
+      "name": "Calibrador Compressor Pneu Digital Carro Bike Moto Sem Fio Cinza-escuro 127/220v",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:20.228Z",
+      "priceValidUntil": "2026-08-10T11:27:20.228Z",
+      "priority": "high"
+    },
+    {
+      "id": "ferramentas-20260724-mercado-livre-mlb6007008796-5083aeb1",
+      "name": "Paquímetro Digital De Alta Precisão Ferramenta De Medição Profissional 150mm (6 Polegadas) + 2",
+      "storeId": "impacto-ferramentas",
+      "status": "expired",
+      "priceUpdatedAt": "2026-08-03T11:27:20.744Z",
+      "priceValidUntil": "2026-08-10T11:27:20.744Z",
       "priority": "high"
     },
     {

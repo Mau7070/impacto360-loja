@@ -189,7 +189,21 @@ function buildProduct(item) {
       sourceTitle: item.sourceTitle,
       matchStatus: item.visualMatch.status
     },
-    observacoesInternas: "Importação auditável de vídeo em 2026-07-30. Não substituir o link curto sem nova geração no painel oficial.",
+    precoAtualizadoEm: item.reviewedAt,
+    priceUpdatedAt: item.reviewedAt,
+    ultimaVerificacaoPreco: item.reviewedAt,
+    dataUltimaVerificacao: item.reviewedAt,
+    priceStatus: "current",
+    statusPreco: "confirmado_no_painel_afiliado",
+    auditoriaPreco: {
+      status: "confirmado_no_painel_afiliado",
+      verificadoEm: item.reviewedAt,
+      fonte: `${item.marketplace} Afiliados`,
+      tituloConferido: true,
+      precoAnteriorRemovido: true,
+      motivo: "Preço atual conferido no painel oficial; nenhum preço anterior foi publicado."
+    },
+    observacoesInternas: `Importação auditável de vídeo em ${item.reviewedAt}. Não substituir o link curto sem nova geração no painel oficial.`,
     ...linkFields
   };
 }

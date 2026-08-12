@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-03T11:35:45.320Z",
-  "sourceProducts": 2511,
-  "deduplicatedProducts": 2494,
-  "publishedProducts": 2492,
+  "generatedAt": "2026-08-12T11:35:14.177Z",
+  "sourceProducts": 2512,
+  "deduplicatedProducts": 2495,
+  "publishedProducts": 2493,
   "blockedProducts": [
     "ml-completar-20260728-mlb19765518-62604aa439",
     "ml-completar-20260728-mlb19590092-c87d6fef5d"
