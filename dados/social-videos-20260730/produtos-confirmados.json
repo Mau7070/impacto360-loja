@@ -158,6 +158,88 @@
         "status": "equivalente_confirmado",
         "notes": "O vídeo mostra uma escova elétrica branca de empunhadura lateral, com cabeça circular e acessórios de limpeza. A oferta afiliada apresenta o mesmo formato, a mesma disposição da empunhadura e o conjunto funcional 5 em 1."
       }
+    },
+    {
+      "videoNumber": 1508,
+      "videoSha256": "a3592db47f7d7afb8cb26697290fe0609d25179c7fc3c898f22ad65359c06258",
+      "sourceTitle": "Bolsa De Cintura Pacotes De Sacos De Desporto Para Corrida Caminhada Viagem",
+      "sourceProductUrl": "https://shopee.com.br/product/503103146/15003677477",
+      "sourceProductStatus": "ativo_no_feed_oficial_diario",
+      "catalogProductId": "shopee-video-1508-bolsa-cintura-corrida-15003677477",
+      "slug": "bolsa-de-cintura-para-corrida-e-caminhada",
+      "title": "Bolsa de Cintura para Corrida e Caminhada",
+      "storeId": "impacto-sport",
+      "category": "Esportes e Lazer",
+      "subcategory": "Corrida e caminhada",
+      "marketplace": "Shopee",
+      "affiliateItemId": "15003677477",
+      "directProductUrl": "https://shopee.com.br/product/503103146/15003677477",
+      "affiliateLink": "https://s.shopee.com.br/7VFXs6lEzV",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "15003677477",
+      "image": "public/images/anuncios/shopee-video-1508-bolsa-cintura-corrida.webp",
+      "imageSource": "https://cf.shopee.com.br/file/sg-11134201-81zv2-mmvg67d11lhkfd",
+      "priceAtReview": "R$ 11,53",
+      "salesAtReview": "",
+      "commissionAtReview": "Confirmar no painel da Shopee",
+      "reviewedAt": "2026-08-12",
+      "catalogDescription": "Bolsa de cintura ajustável e refletiva para transportar celular, chaves e pequenos objetos durante corrida, caminhada ou viagem.",
+      "specs": [
+        "Cinto ajustável",
+        "Faixa refletiva",
+        "Saída para fone de ouvido",
+        "Compartimentos para pequenos objetos"
+      ],
+      "benefits": [
+        "Produto original localizado pelo mesmo ID no feed oficial diário da Shopee.",
+        "Imagem obtida diretamente do anúncio confirmado.",
+        "Link curto oficial gerado no painel autenticado da Shopee."
+      ],
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "Correspondência exata pelo item ID 15003677477, pelo título original e pela foto oficial do produto no feed diário da Shopee."
+      }
+    },
+    {
+      "videoNumber": 181,
+      "videoSha256": "2865515cdde4d2dba97d343774fbb455aa09567dc9ef105964f9c0a9563d687e",
+      "sourceTitle": "Aparelho Movedor Móveis Fácil Levantador Materiais Pesados Kit 5 Peças Sliders",
+      "sourceProductUrl": "https://shopee.com.br/product/375602651/10904529903",
+      "sourceProductStatus": "substituído_por_equivalente_confirmado",
+      "catalogProductId": "shopee-video-0181-movedor-moveis-3049427430",
+      "slug": "kit-movedor-de-moveis-pesados-5-pecas",
+      "title": "Kit Movedor de Móveis Pesados com 5 Peças",
+      "storeId": "impacto-casa",
+      "category": "Casa e Família",
+      "subcategory": "Organização e mudança",
+      "marketplace": "Shopee",
+      "affiliateItemId": "3049427430",
+      "directProductUrl": "https://shopee.com.br/product/299222557/3049427430",
+      "affiliateLink": "https://s.shopee.com.br/8fRVGp1rKV",
+      "affiliateTrackingVerified": true,
+      "affiliateResolvedItemId": "3049427430",
+      "image": "public/images/anuncios/shopee-video-0181-movedor-moveis.webp",
+      "imageSource": "https://cf.shopee.com.br/file/502ef2e1cbd20de4d82bc309049e9b58",
+      "priceAtReview": "R$ 28,89",
+      "salesAtReview": "",
+      "commissionAtReview": "Confirmar no painel da Shopee",
+      "reviewedAt": "2026-08-12",
+      "catalogDescription": "Conjunto com alavanca elevadora e quatro bases deslizantes para auxiliar no deslocamento de móveis e eletrodomésticos pesados.",
+      "specs": [
+        "Kit com 5 peças",
+        "Uma alavanca elevadora",
+        "Quatro bases deslizantes",
+        "Uso em móveis e eletrodomésticos"
+      ],
+      "benefits": [
+        "Mecanismo e conjunto conferidos no vídeo.",
+        "A cor pode variar conforme a opção disponível no parceiro.",
+        "Link curto oficial gerado no painel autenticado da Shopee."
+      ],
+      "visualMatch": {
+        "status": "equivalente_confirmado",
+        "notes": "O vídeo mostra a mesma alavanca e quatro bases deslizantes do anúncio. A variante do vídeo é amarela e a imagem do anúncio é vermelha; o conjunto e a função são equivalentes."
+      }
     }
   ]
 }
