@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T14:05:17.216Z",
+  "generatedAt": "2026-08-24T14:11:47.902Z",
   "startDate": "2026-08-25",
   "endDate": "2026-09-13",
   "timezone": "America/Sao_Paulo",
@@ -10,6 +10,8 @@
     "noPricesInCaptions": true,
     "noAffiliateUrlInCaptions": true,
     "disclosure": "A Impacto360 pode receber comissão pela indicação, sem custo adicional.",
+    "nativeMusicOnly": true,
+    "clickableStoreLinkRequired": true,
     "finalSubmissionRequiresActionTimeConfirmation": true
   },
   "slots": [
@@ -24,6 +26,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/multi-estacao-de-musculacao-academia-completa-cor-do-estofamento-cinza-vinho/",
       "affiliateAuditUrl": "https://meli.la/29oaj64",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\01-mlb23557714.mp4",
+      "videoSha256": "622685d2ce2ba7c29d2511dd8a314a89936b721c22cbc03b62eb89976e21cc01",
       "networks": [
         "instagram",
         "facebook",
@@ -34,6 +37,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/multi-estacao-de-musculacao-academia-completa-cor-do-estofamento-cinza-vinho/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Multi Estação De Musculação Academia Completa Cor do estofamento Cinza/Vinho\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/multi-estacao-de-musculacao-academia-completa-cor-do-estofamento-cinza-vinho/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Multi Estação De Musculação Academia Completa Cor do estofamento Cinza/Vinho\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/multi-estacao-de-musculacao-academia-completa-cor-do-estofamento-cinza-vinho/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -57,6 +67,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-academia-podiumfit-me200-65kg/",
       "affiliateAuditUrl": "https://meli.la/2yfkRG8",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\02-mlb26462436.mp4",
+      "videoSha256": "4174e033c98bb1b2aa39f22401f88c2e6b0cce67a88abe81aa354ac53334263a",
       "networks": [
         "instagram",
         "facebook",
@@ -67,6 +78,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-academia-podiumfit-me200-65kg/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação De Musculação Academia Podiumfit Me200 65kg\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-academia-podiumfit-me200-65kg/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação De Musculação Academia Podiumfit Me200 65kg\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-academia-podiumfit-me200-65kg/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -90,6 +108,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-45kg-completa-academia-treino-wct-fitness/",
       "affiliateAuditUrl": "https://meli.la/1z7chpE",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\03-mlb24423814.mp4",
+      "videoSha256": "3181cf88bfb1fea24039c1dd19cb517a5e0f9934df6a3634657b9e47420ef8cf",
       "networks": [
         "instagram",
         "facebook",
@@ -100,6 +119,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-45kg-completa-academia-treino-wct-fitness/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação Musculação 45Kg Completa Academia Treino WCT Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-45kg-completa-academia-treino-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação Musculação 45Kg Completa Academia Treino WCT Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-45kg-completa-academia-treino-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -123,6 +149,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-de-45kg-mbx-fitness-academia-ginastica-braco-perna-cor-preto/",
       "affiliateAuditUrl": "https://meli.la/19wLHNR",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\04-mlb61263214.mp4",
+      "videoSha256": "49a881e10646ff954204093fd92254745cab7eb13f045c87bcf05dd204645bff",
       "networks": [
         "instagram",
         "facebook",
@@ -133,6 +160,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-de-45kg-mbx-fitness-academia-ginastica-braco-perna-cor-preto/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação De Musculação De 45kg Mbx Fitness Academia Ginástica Braço Perna Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-de-45kg-mbx-fitness-academia-ginastica-braco-perna-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação De Musculação De 45kg Mbx Fitness Academia Ginástica Braço Perna Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-de-45kg-mbx-fitness-academia-ginastica-braco-perna-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -156,6 +190,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/banco-musculacao-para-academia-regulavel-120cm-300kg-fortshape-equipamentos-fitness/",
       "affiliateAuditUrl": "https://meli.la/2WBNfnM",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\05-mlb60052470.mp4",
+      "videoSha256": "c7b650fe14b5a90b803b3a2d02ff65833874ce82181e4aae660fc8ee8862f675",
       "networks": [
         "instagram",
         "facebook",
@@ -166,6 +201,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/banco-musculacao-para-academia-regulavel-120cm-300kg-fortshape-equipamentos-fitness/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Banco Musculação Para Academia Regulável 120cm 300kg Fortshape Equipamentos Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-musculacao-para-academia-regulavel-120cm-300kg-fortshape-equipamentos-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Banco Musculação Para Academia Regulável 120cm 300kg Fortshape Equipamentos Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-musculacao-para-academia-regulavel-120cm-300kg-fortshape-equipamentos-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -189,6 +231,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/banco-regulavel-3-em-1-para-exercicios-academia-declinado-up/",
       "affiliateAuditUrl": "https://meli.la/1HceBYp",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\06-mlb46208152.mp4",
+      "videoSha256": "0f05ddb31ba39e56c4274a03cfeeeeae1fabe76514adabd44604c14bd9ba0729",
       "networks": [
         "instagram",
         "facebook",
@@ -199,6 +242,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/banco-regulavel-3-em-1-para-exercicios-academia-declinado-up/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Banco Regulável 3 Em 1 Para Exercícios Academia Declinado Up\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-regulavel-3-em-1-para-exercicios-academia-declinado-up/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Banco Regulável 3 Em 1 Para Exercícios Academia Declinado Up\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-regulavel-3-em-1-para-exercicios-academia-declinado-up/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -222,6 +272,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/banco-academia-regulavel-supino-musculacao-reclinavel-livre-cor-preto-com-listras-vermelhas/",
       "affiliateAuditUrl": "https://meli.la/2TmoHF1",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\07-mlb52065666.mp4",
+      "videoSha256": "ff05687cbb0b4c3b5ab8c779059325c9c5dae32de7b4180a8e943c08c8e00b5e",
       "networks": [
         "instagram",
         "facebook",
@@ -232,6 +283,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/banco-academia-regulavel-supino-musculacao-reclinavel-livre-cor-preto-com-listras-vermelhas/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Banco Academia Regulável Supino Musculação Reclinável Livre Cor Preto Com Listras Vermelhas\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-academia-regulavel-supino-musculacao-reclinavel-livre-cor-preto-com-listras-vermelhas/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Banco Academia Regulável Supino Musculação Reclinável Livre Cor Preto Com Listras Vermelhas\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-academia-regulavel-supino-musculacao-reclinavel-livre-cor-preto-com-listras-vermelhas/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -255,6 +313,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/banco-de-supino-aparelho-de-musculacao-academia-em-casa-ginastica-wct-fitness/",
       "affiliateAuditUrl": "https://meli.la/1dhgfdd",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\08-mlb23566572.mp4",
+      "videoSha256": "cec0080187a1379c514129b7aa24810f4e56b41b9fc6b24afc1a10b285eb76e2",
       "networks": [
         "instagram",
         "facebook",
@@ -265,6 +324,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/banco-de-supino-aparelho-de-musculacao-academia-em-casa-ginastica-wct-fitness/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Banco De Supino Aparelho de Musculação Academia Em Casa Ginástica Wct Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-de-supino-aparelho-de-musculacao-academia-em-casa-ginastica-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Banco De Supino Aparelho de Musculação Academia Em Casa Ginástica Wct Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-de-supino-aparelho-de-musculacao-academia-em-casa-ginastica-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -288,6 +354,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/banco-musculacao-fitness-treino-academia-1-metro-250kg/",
       "affiliateAuditUrl": "https://meli.la/1ygRn3b",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\09-mlb73130697.mp4",
+      "videoSha256": "8b07a629723dcf9f40b88bfa1c171aaa343a5b71a680e41f2996b677f362cb7c",
       "networks": [
         "instagram",
         "facebook",
@@ -298,6 +365,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/banco-musculacao-fitness-treino-academia-1-metro-250kg/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Banco Musculação Fitness Treino Academia 1 Metro 250kg\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-musculacao-fitness-treino-academia-1-metro-250kg/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Banco Musculação Fitness Treino Academia 1 Metro 250kg\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/banco-musculacao-fitness-treino-academia-1-metro-250kg/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -321,6 +395,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm-cor-prateado/",
       "affiliateAuditUrl": "https://meli.la/2TjQhc5",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\10-mlb28814147.mp4",
+      "videoSha256": "57c26cb519d814da50e2a30925bb96959cd8e8146e25344c1b6fb0dd0622eca7",
       "networks": [
         "instagram",
         "facebook",
@@ -331,6 +406,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm-cor-prateado/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Barra Fixa De Porta Para Exercícios Ajustável 63 A 96 Cm Cor Prateado\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm-cor-prateado/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Barra Fixa De Porta Para Exercícios Ajustável 63 A 96 Cm Cor Prateado\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm-cor-prateado/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -354,6 +436,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm/",
       "affiliateAuditUrl": "https://meli.la/1k1wATy",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\11-mlb28014788.mp4",
+      "videoSha256": "625383616eabab36ab15f9809c59972d2f175273f37581b8ac7f9de12249938a",
       "networks": [
         "instagram",
         "facebook",
@@ -364,6 +447,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Barra Fixa De Porta Para Exercícios Ajustável 63 A 96 Cm\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Barra Fixa De Porta Para Exercícios Ajustável 63 A 96 Cm\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-porta-para-exercicios-ajustavel-63-a-96-cm/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -387,6 +477,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/barra-porta-fixa-exercicio-flexao-malhar-treino-musculacao-cor-prata/",
       "affiliateAuditUrl": "https://meli.la/2SpMjJ8",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\12-mlb32081318.mp4",
+      "videoSha256": "b4575d8ddf738ef71dfca31c90a6265db6539c9af2c499a7c4396630a19a37d2",
       "networks": [
         "instagram",
         "facebook",
@@ -397,6 +488,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/barra-porta-fixa-exercicio-flexao-malhar-treino-musculacao-cor-prata/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Barra Porta Fixa Exercício Flexão Malhar Treino Musculação Cor Prata\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-porta-fixa-exercicio-flexao-malhar-treino-musculacao-cor-prata/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Barra Porta Fixa Exercício Flexão Malhar Treino Musculação Cor Prata\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-porta-fixa-exercicio-flexao-malhar-treino-musculacao-cor-prata/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -420,6 +518,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-parede-para-musculacao-e-crossfit-cor-preto/",
       "affiliateAuditUrl": "https://meli.la/15KX735",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\13-mlb46208681.mp4",
+      "videoSha256": "ae4f0d7de5efe2616010df65e80fc9374f16c5146493ce0bec70e4fd81a813f3",
       "networks": [
         "instagram",
         "facebook",
@@ -430,6 +529,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/barra-fixa-de-parede-para-musculacao-e-crossfit-cor-preto/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Barra Fixa de Parede para Musculação e Crossfit Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-parede-para-musculacao-e-crossfit-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Barra Fixa de Parede para Musculação e Crossfit Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/barra-fixa-de-parede-para-musculacao-e-crossfit-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -453,6 +559,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/anilha-bumper-crossfit-10kg-olimpica-emborrachada-touch-and-go/",
       "affiliateAuditUrl": "https://meli.la/2dEEg5k",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\14-mlb58555511.mp4",
+      "videoSha256": "3ff1e15b5aaeffde197ee3daa18b9e17a0a2077a112416362003ddefe9f27dd7",
       "networks": [
         "instagram",
         "facebook",
@@ -463,6 +570,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/anilha-bumper-crossfit-10kg-olimpica-emborrachada-touch-and-go/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Anilha Bumper Crossfit 10kg Olímpica Emborrachada Touch and Go\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/anilha-bumper-crossfit-10kg-olimpica-emborrachada-touch-and-go/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Anilha Bumper Crossfit 10kg Olímpica Emborrachada Touch and Go\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/anilha-bumper-crossfit-10kg-olimpica-emborrachada-touch-and-go/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -486,6 +600,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-carga-de-peso-ate-45kg-preto/",
       "affiliateAuditUrl": "https://meli.la/2s55Biz",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\15-mlb27633447.mp4",
+      "videoSha256": "2d3d1eeabe747c2db839801d99642514557f9f01404c386f82544a6a61e1e607",
       "networks": [
         "instagram",
         "facebook",
@@ -496,6 +611,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-carga-de-peso-ate-45kg-preto/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação Musculação Carga De Peso Até 45kg Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-carga-de-peso-ate-45kg-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação Musculação Carga De Peso Até 45kg Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-carga-de-peso-ate-45kg-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -519,6 +641,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-supino-com-voador-academia-residencial-completa-wct-fitness/",
       "affiliateAuditUrl": "https://meli.la/1d1ZqGs",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\16-mlb23758234.mp4",
+      "videoSha256": "0b3014641907015eb0dece9ff530fab1bdbcf215ed189fd48e16b5c2de436b44",
       "networks": [
         "instagram",
         "facebook",
@@ -529,6 +652,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-supino-com-voador-academia-residencial-completa-wct-fitness/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação Musculação Supino com Voador Academia Residencial Completa WCT Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-supino-com-voador-academia-residencial-completa-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação Musculação Supino com Voador Academia Residencial Completa WCT Fitness\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-supino-com-voador-academia-residencial-completa-wct-fitness/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -552,6 +682,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-completa-com-66kg-aparelho-ginastica-preto-academia/",
       "affiliateAuditUrl": "https://meli.la/2FSqecd",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\17-mlb27071946.mp4",
+      "videoSha256": "41f2ba571b93ea08d2f2ae37b986867e9df5749b40eb889877630ffae2b103d4",
       "networks": [
         "instagram",
         "facebook",
@@ -562,6 +693,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-completa-com-66kg-aparelho-ginastica-preto-academia/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação De Musculação Completa Com 66kg Aparelho Ginastica Preto Academia\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-completa-com-66kg-aparelho-ginastica-preto-academia/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação De Musculação Completa Com 66kg Aparelho Ginastica Preto Academia\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-completa-com-66kg-aparelho-ginastica-preto-academia/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -585,6 +723,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-bonafit-45kg-preta-aparelho-academia-ginastica/",
       "affiliateAuditUrl": "https://meli.la/2gKpJx9",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\18-mlb26901811.mp4",
+      "videoSha256": "41f2ba571b93ea08d2f2ae37b986867e9df5749b40eb889877630ffae2b103d4",
       "networks": [
         "instagram",
         "facebook",
@@ -595,6 +734,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-de-musculacao-bonafit-45kg-preta-aparelho-academia-ginastica/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação De Musculação Bonafit 45kg Preta Aparelho Academia Ginastica\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-bonafit-45kg-preta-aparelho-academia-ginastica/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação De Musculação Bonafit 45kg Preta Aparelho Academia Ginastica\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-de-musculacao-bonafit-45kg-preta-aparelho-academia-ginastica/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -618,6 +764,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-mbx-45kg-carga-efetiva-90kg-academia-braco-perna/",
       "affiliateAuditUrl": "https://meli.la/2hoLpCs",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\19-mlb76529192.mp4",
+      "videoSha256": "49a881e10646ff954204093fd92254745cab7eb13f045c87bcf05dd204645bff",
       "networks": [
         "instagram",
         "facebook",
@@ -628,6 +775,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-mbx-45kg-carga-efetiva-90kg-academia-braco-perna/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação Musculação MBX 45kg Carga Efetiva 90kg Academia Braço Perna\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-mbx-45kg-carga-efetiva-90kg-academia-braco-perna/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação Musculação MBX 45kg Carga Efetiva 90kg Academia Braço Perna\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-mbx-45kg-carga-efetiva-90kg-academia-braco-perna/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
@@ -651,6 +805,7 @@
       "storeUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-academia-completa-dsrsshop-100kg-estofamento-e-estrutura-cor-preto/",
       "affiliateAuditUrl": "https://meli.la/28sAEBZ",
       "videoFile": "C:\\Users\\PMNB\\Documents\\Codex\\2026-07-28\\files-mentioned-by-the-user-atue\\work\\impacto360-academia-20260824\\dados\\campanha-academia-20260825-a-0913\\videos\\20-mlb36108753.mp4",
+      "videoSha256": "45165c3aeef8f870743f270fda0f16f1d8f52b56f427a2680938ea462204dd4a",
       "networks": [
         "instagram",
         "facebook",
@@ -661,6 +816,13 @@
         "threads",
         "whatsapp"
       ],
+      "instagramStoryStickerUrl": "https://impacto360afiliado.com.br/produto/estacao-musculacao-academia-completa-dsrsshop-100kg-estofamento-e-estrutura-cor-preto/",
+      "instagramStoryStickerLabel": "Ver produto",
+      "nativeAudio": {
+        "required": true,
+        "source": "biblioteca oficial da própria plataforma",
+        "selection": "áudio musical em tendência compatível com uso comercial"
+      },
       "captions": {
         "instagram": "Estação Musculação Academia Completa DSRSshop 100kg Estofamento e Estrutura Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-academia-completa-dsrsshop-100kg-estofamento-e-estrutura-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",
         "facebook": "Estação Musculação Academia Completa DSRSshop 100kg Estofamento e Estrutura Cor Preto\n\nVeja os detalhes na Impacto360: https://impacto360afiliado.com.br/produto/estacao-musculacao-academia-completa-dsrsshop-100kg-estofamento-e-estrutura-cor-preto/\n\nA Impacto360 pode receber comissão pela indicação, sem custo adicional.\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre",

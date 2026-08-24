@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
+import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
 
 const root = process.cwd();
@@ -38,10 +39,13 @@ for (let index = 0; index < report.imported.length; index += 1) {
   const date = day.toISOString().slice(0, 10);
   const storeUrl = `https://impacto360afiliado.com.br/produto/${slugify(product.title)}/`;
   const baseCaption = `${product.title}\n\nVeja os detalhes na Impacto360: ${storeUrl}\n\n${notice}`;
+  const videoSha256 = crypto.createHash("sha256").update(fs.readFileSync(videoFile)).digest("hex");
   slots.push({
     slotId: `academia-ml-${date}-1800`, date, time: "18:00", timezone: "America/Sao_Paulo",
     productId: product.id, externalId: product.externalId, title: product.title,
-    storeUrl, affiliateAuditUrl: product.affiliateUrl, videoFile, networks,
+    storeUrl, affiliateAuditUrl: product.affiliateUrl, videoFile, videoSha256, networks,
+    instagramStoryStickerUrl: storeUrl, instagramStoryStickerLabel: "Ver produto",
+    nativeAudio: { required: true, source: "biblioteca oficial da própria plataforma", selection: "áudio musical em tendência compatível com uso comercial" },
     captions: Object.fromEntries(networks.map(network => [network, `${baseCaption}\n\n#Impacto360 #Academia #Fitness #Treino #MercadoLivre`])),
     status: "pronto_para_agendar",
   });
@@ -54,6 +58,8 @@ const agenda = {
     linkedinExcluded: "Produtos físicos não serão publicados no LinkedIn; preferência registrada para livros e cursos.",
     noPricesInCaptions: true, noAffiliateUrlInCaptions: true,
     disclosure: notice,
+    nativeMusicOnly: true,
+    clickableStoreLinkRequired: true,
     finalSubmissionRequiresActionTimeConfirmation: true,
   },
   slots,
