@@ -37,7 +37,8 @@ for (let index = 0; index < report.imported.length; index += 1) {
   const day = new Date("2026-08-25T12:00:00-03:00");
   day.setDate(day.getDate() + index);
   const date = day.toISOString().slice(0, 10);
-  const storeUrl = `https://impacto360afiliado.com.br/produto/${slugify(product.title)}/`;
+  const route = `/produto/${slugify(product.title)}/`;
+  const storeUrl = `https://impacto360afiliado.com.br/?route=${encodeURIComponent(route)}`;
   const baseCaption = `${product.title}\n\nVeja os detalhes na Impacto360: ${storeUrl}\n\n${notice}`;
   const videoSha256 = crypto.createHash("sha256").update(fs.readFileSync(videoFile)).digest("hex");
   slots.push({
