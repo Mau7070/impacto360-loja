@@ -1901,6 +1901,10 @@ function renderRoute({ focus = false } = {}) {
     const id = decodeURIComponent(path.split("/").filter(Boolean)[1] || "");
     const store = state.storeById.get(id);
     store ? renderStore(store) : renderNotFound();
+  } else if (path.startsWith("/produto/")) {
+    const slug = decodeURIComponent(path.split("/").filter(Boolean)[1] || "");
+    const product = state.products.find(item => item.slug === slug || item.id === slug);
+    product ? renderProduct(product) : renderNotFound();
   } else {
     renderNotFound();
   }
@@ -1927,6 +1931,36 @@ function renderNotFound() {
   appRoot().innerHTML = `
     ${pageHero("Página não encontrada", "O endereço pode ter mudado ou não estar mais disponível.", [["Início", "/"], ["Página não encontrada", ""]])}
     <section class="section"><div class="shell">${emptyState("esta página")}</div></section>`;
+}
+
+function renderProduct(product) {
+  const category = categoryForProduct(product);
+  const store = storeFor(product);
+  const canonical = productPath(product);
+  setMeta({
+    title: `${product.name} | ${SITE_NAME}`,
+    description: text(product.description) || `Confira ${product.name} na Impacto360.`,
+    canonical,
+    robots: "index,follow,max-image-preview:large",
+    image: assetUrl(product.image),
+  });
+  appRoot().innerHTML = `
+    ${pageHero(product.name, "Confira as informações atuais e acesse a oferta no parceiro.", [
+      ["Início", "/"],
+      ...(category ? [[category.name, `/categoria/${category.slug}/`]] : []),
+      [product.name, ""],
+    ])}
+    <section class="section product-detail-section">
+      <div class="shell">
+        ${productGrid([product], "product-grid product-detail-grid", 1)}
+        <aside class="transparency-card" aria-label="Compra transparente">
+          <h2>Compra transparente</h2>
+          <p>A Impacto360 pode receber comissão pela indicação, sem custo adicional.</p>
+          <p>Preço, frete, estoque e condições devem ser confirmados no Mercado Livre antes da compra.</p>
+          ${store ? `<a href="${escapeAttr(storePath(store))}" data-route="${escapeAttr(storePath(store))}">Conhecer ${escapeHtml(store.name)}</a>` : ""}
+        </aside>
+      </div>
+    </section>`;
 }
 
 function navigate(href, { replace = false } = {}) {
