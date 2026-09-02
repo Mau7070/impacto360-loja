@@ -26,6 +26,7 @@ out/
 coverage/
 backups/
 saida-redes-sociais/
+tools/
 
 # Arquivos compactados e temporários
 *.zip

@@ -1,0 +1,510 @@
+{
+  "generatedAt": "2026-09-02T09:00:00-03:00",
+  "timezone": "America/Sao_Paulo",
+  "source": "Mercado Livre - Central de Afiliados",
+  "policy": {
+    "exactProductMediaMatch": true,
+    "pricesPublished": false,
+    "priceNotice": "Preço, estoque e frete devem ser confirmados no parceiro.",
+    "socialLinks": "Cada publicação usa a página curta do produto na Impacto360."
+  },
+  "imported": [
+    {
+      "sourceCode": "MLB50719512",
+      "id": "ml-setembro-20260902-mlb50719512",
+      "name": "Bicicleta Spinning LTX Fit LT311S Preto 100kg Aço Carbono + Squeeze"
+    },
+    {
+      "sourceCode": "MLB64094334",
+      "id": "ml-setembro-20260902-mlb64094334",
+      "name": "Bicicleta Ergométrica Spinning Redfin X11-RDF-AL com Roda de Inércia 6kg e Display LCD"
+    },
+    {
+      "sourceCode": "MLB42978348",
+      "id": "ml-setembro-20260902-mlb42978348",
+      "name": "Bicicleta Ergométrica Bike Spinning 6kg Sensação Inércia Fitness Sevenfit"
+    },
+    {
+      "sourceCode": "MLB66517451",
+      "id": "ml-setembro-20260902-mlb66517451",
+      "name": "Bicicleta Ergométrica Spinning Profissional Inércia 15kg App"
+    },
+    {
+      "sourceCode": "MLB65560106",
+      "id": "ml-setembro-20260902-mlb65560106",
+      "name": "Samsung Galaxy S26 5G 256GB 12GB RAM Preto"
+    },
+    {
+      "sourceCode": "MLB65503970",
+      "id": "ml-setembro-20260902-mlb65503970",
+      "name": "Samsung Galaxy S26 Ultra 5G 512GB 12GB RAM Azul"
+    },
+    {
+      "sourceCode": "MLBU3835065730",
+      "id": "ml-setembro-20260902-mlbu3835065730",
+      "name": "Xiaomi Redmi Note 15 256GB 8GB RAM Lançamento 2026 Preto"
+    },
+    {
+      "sourceCode": "MLB1055308835",
+      "id": "ml-setembro-20260902-mlb1055308835",
+      "name": "iPhone 17 256GB Lavanda - Distribuidor Autorizado"
+    },
+    {
+      "sourceCode": "MLB1066130043",
+      "id": "ml-setembro-20260902-mlb1066130043",
+      "name": "iPhone 17e 256GB Rosa-pálido - Distribuidor Autorizado"
+    },
+    {
+      "sourceCode": "MLB1055308632",
+      "id": "ml-setembro-20260902-mlb1055308632",
+      "name": "iPhone 17 Pro Max 256GB Azul-profundo - Distribuidor Autorizado"
+    },
+    {
+      "sourceCode": "MLB65041663",
+      "id": "ml-setembro-20260902-mlb65041663",
+      "name": "Motorola Moto G17 4G 256GB Azul"
+    },
+    {
+      "sourceCode": "MLB65304414",
+      "id": "ml-setembro-20260902-mlb65304414",
+      "name": "Motorola Edge 70 5G 256GB Verde-escuro"
+    },
+    {
+      "sourceCode": "MLB67267597",
+      "id": "ml-setembro-20260902-mlb67267597",
+      "name": "Smart TV Philco 50 P50VIK 4K UHD LED Roku"
+    },
+    {
+      "sourceCode": "MLB58378317",
+      "id": "ml-setembro-20260902-mlb58378317",
+      "name": "Smart TV Samsung 55 Crystal 4K UHD Tizen"
+    },
+    {
+      "sourceCode": "MLB48808732",
+      "id": "ml-setembro-20260902-mlb48808732",
+      "name": "Smart TV TCL 55 QLED Mini LED 4K C6K 144Hz"
+    },
+    {
+      "sourceCode": "MLB76002662",
+      "id": "ml-setembro-20260902-mlb76002662",
+      "name": "Samsung Smart TV 55 MiniLED 4K M75H 2026"
+    },
+    {
+      "sourceCode": "MLB53610161",
+      "id": "ml-setembro-20260902-mlb53610161",
+      "name": "Smart TV LG UHD AI UA75 65 polegadas"
+    },
+    {
+      "sourceCode": "MLB75850285",
+      "id": "ml-setembro-20260902-mlb75850285",
+      "name": "Smart TV LG QNED Evo AI QNED70 65 4K UHD 2026"
+    },
+    {
+      "sourceCode": "MLB75910822",
+      "id": "ml-setembro-20260902-mlb75910822",
+      "name": "Samsung Smart TV 65 MiniLED 4K M75H 2026"
+    },
+    {
+      "sourceCode": "MLB63335388",
+      "id": "ml-setembro-20260902-mlb63335388",
+      "name": "Aspirador Inteligente Xiaomi Robot Vacuum 5 Pro"
+    },
+    {
+      "sourceCode": "MLB48959123",
+      "id": "ml-setembro-20260902-mlb48959123",
+      "name": "Projetor HY320 Davely Smart TV Android WiFi 6 Full HD"
+    },
+    {
+      "sourceCode": "MLB46016994",
+      "id": "ml-setembro-20260902-mlb46016994",
+      "name": "Fritadeira Air Fryer Philco PAF16A 4 em 1 Digital 16L"
+    },
+    {
+      "sourceCode": "MLB44202830",
+      "id": "ml-setembro-20260902-mlb44202830",
+      "name": "Fone Bluetooth JBL Tune 520BT Azul"
+    },
+    {
+      "sourceCode": "MLB52053098",
+      "id": "ml-setembro-20260902-mlb52053098",
+      "name": "Samsung Galaxy Watch 8 40mm BT GPS"
+    },
+    {
+      "sourceCode": "MLB67488397",
+      "id": "ml-setembro-20260902-mlb67488397",
+      "name": "Máquina de Gelo Elgin Easy Ice 12kg"
+    },
+    {
+      "sourceCode": "MLB24233730",
+      "id": "ml-setembro-20260902-mlb24233730",
+      "name": "Cafeteira Nescafé Dolce Gusto Genio S Basic Grafite 110V"
+    },
+    {
+      "sourceCode": "MLB57468821",
+      "id": "ml-setembro-20260902-mlb57468821",
+      "name": "Compressor Portátil Car Air Pump Digital"
+    }
+  ],
+  "reused": [
+    {
+      "sourceCode": "MLB53201474",
+      "id": "ml-completar-20260728-mlb53201474-7ae584faf9",
+      "name": "Smart TV LG UHD AI UA75 50 polegadas HDR10 Pro Processador α7 AI Ger8 webOS 25"
+    },
+    {
+      "sourceCode": "MLBU605239077",
+      "id": "ml-afiliados-20260714-lavadora-jato-portatil-2-baterias",
+      "name": "Lavadora Lava Jato Portatil Pressao 2 Baterias Com Maleta"
+    }
+  ],
+  "products": [
+    {
+      "position": 1,
+      "date": "2026-09-02",
+      "productId": "ml-setembro-20260902-mlb50719512",
+      "title": "Bicicleta Spinning LTX Fit LT311S Preto 100kg Aço Carbono + Squeeze",
+      "category": "Bicicletas e Fitness",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb50719512.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/bicicleta-spinning-ltx-fit-lt311s-preto-100kg-aco-carbono-squeeze/p/MLB50719512?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6945468118&sid=affiliates",
+      "affiliateLink": "https://meli.la/1pZL7Fh",
+      "storeUrl": "https://impacto360afiliado.com.br/p/89ef2f08c3/"
+    },
+    {
+      "position": 2,
+      "date": "2026-09-03",
+      "productId": "ml-setembro-20260902-mlb64094334",
+      "title": "Bicicleta Ergométrica Spinning Redfin X11-RDF-AL com Roda de Inércia 6kg e Display LCD",
+      "category": "Bicicletas e Fitness",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb64094334.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/bicicleta-ergometrica-spinning-redfin-x11-rdf-al-com-roda-de-inercia-6kg-e-display-lcd/p/MLB64094334?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6128424108&sid=affiliates",
+      "affiliateLink": "https://meli.la/1igptdr",
+      "storeUrl": "https://impacto360afiliado.com.br/p/5526fbba84/"
+    },
+    {
+      "position": 3,
+      "date": "2026-09-04",
+      "productId": "ml-setembro-20260902-mlb42978348",
+      "title": "Bicicleta Ergométrica Bike Spinning 6kg Sensação Inércia Fitness Sevenfit",
+      "category": "Bicicletas e Fitness",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb42978348.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/bicicleta-ergometrica-bike-spinning-6kg-sensacao-inercia-fitness-preto-e-vermelho-sevenfit-para-cardio-e-musculacao/p/MLB42978348?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5298166742&sid=affiliates",
+      "affiliateLink": "https://meli.la/1RfkCs5",
+      "storeUrl": "https://impacto360afiliado.com.br/p/b35930af30/"
+    },
+    {
+      "position": 4,
+      "date": "2026-09-05",
+      "productId": "ml-setembro-20260902-mlb66517451",
+      "title": "Bicicleta Ergométrica Spinning Profissional Inércia 15kg App",
+      "category": "Bicicletas e Fitness",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb66517451.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/bicicleta-ergometrica-spinning-profissional-inercia-15kg-app/p/MLB66517451?pdp_filters=item_id%3AMLB4966240217&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4966240217&sid=affiliates",
+      "affiliateLink": "https://meli.la/1K9aNao",
+      "storeUrl": "https://impacto360afiliado.com.br/p/b8a443fbb0/"
+    },
+    {
+      "position": 5,
+      "date": "2026-09-06",
+      "productId": "ml-setembro-20260902-mlb65560106",
+      "title": "Samsung Galaxy S26 5G 256GB 12GB RAM Preto",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb65560106.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/celular-samsung-galaxy-s26-5g-256gb-12gb-ram-galaxy-ai-camera-tripla-de-501210-tela-de-63-preto/p/MLB65560106?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6501275666&sid=affiliates",
+      "affiliateLink": "https://meli.la/15FBdL2",
+      "storeUrl": "https://impacto360afiliado.com.br/p/c4d3af64cc/"
+    },
+    {
+      "position": 6,
+      "date": "2026-09-07",
+      "productId": "ml-setembro-20260902-mlb65503970",
+      "title": "Samsung Galaxy S26 Ultra 5G 512GB 12GB RAM Azul",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb65503970.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/celular-samsung-galaxy-s26-ultra-5g-512gb-12gb-ram-camera-quadrupla-tela-grande-de-69-azul/p/MLB65503970?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6286067554&sid=affiliates",
+      "affiliateLink": "https://meli.la/1wTQ8Jp",
+      "storeUrl": "https://impacto360afiliado.com.br/p/482d340578/"
+    },
+    {
+      "position": 7,
+      "date": "2026-09-08",
+      "productId": "ml-setembro-20260902-mlbu3835065730",
+      "title": "Xiaomi Redmi Note 15 256GB 8GB RAM Lançamento 2026 Preto",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlbu3835065730.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/celular-xiaomi-redmi-note-15-256gb-8gb-ram-lancamento-2026/up/MLBU3835065730?pdp_filters=item_id%3AMLB6423107590&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6423107590&sid=affiliates",
+      "affiliateLink": "https://meli.la/2Ajms1J",
+      "storeUrl": "https://impacto360afiliado.com.br/p/72589efd76/"
+    },
+    {
+      "position": 8,
+      "date": "2026-09-09",
+      "productId": "ml-setembro-20260902-mlb1055308835",
+      "title": "iPhone 17 256GB Lavanda - Distribuidor Autorizado",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb1055308835.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/iphone-17-de-256gb-lavanda-distribuidor-autorizado/p/MLB1055308835?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4564236093&sid=affiliates",
+      "affiliateLink": "https://meli.la/1XVFZLg",
+      "storeUrl": "https://impacto360afiliado.com.br/p/64df8644a7/"
+    },
+    {
+      "position": 9,
+      "date": "2026-09-10",
+      "productId": "ml-setembro-20260902-mlb1066130043",
+      "title": "iPhone 17e 256GB Rosa-pálido - Distribuidor Autorizado",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb1066130043.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/iphone-17e-256gb-rosa-palido-distribuidor-autorizado/p/MLB1066130043?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6844711882&sid=affiliates",
+      "affiliateLink": "https://meli.la/1nKTkt8",
+      "storeUrl": "https://impacto360afiliado.com.br/p/5271685ea7/"
+    },
+    {
+      "position": 10,
+      "date": "2026-09-11",
+      "productId": "ml-setembro-20260902-mlb1055308632",
+      "title": "iPhone 17 Pro Max 256GB Azul-profundo - Distribuidor Autorizado",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb1055308632.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/iphone-17-pro-max-256gb-azul-profundo-distribuidor-autorizado/p/MLB1055308632?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4200164803&sid=affiliates",
+      "affiliateLink": "https://meli.la/1x1doob",
+      "storeUrl": "https://impacto360afiliado.com.br/p/d0d2b7776c/"
+    },
+    {
+      "position": 11,
+      "date": "2026-09-12",
+      "productId": "ml-setembro-20260902-mlb65041663",
+      "title": "Motorola Moto G17 4G 256GB Azul",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb65041663.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smartphone-motorola-moto-g17-4g-256gb-12gb-4gb-ram-8gb-ram-boost-camera-50mp-sony-lytia-600-tela-fhd-60hz-bateria-5200-mah-azul/p/MLB65041663?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6420523862&sid=affiliates",
+      "affiliateLink": "https://meli.la/33ECdTJ",
+      "storeUrl": "https://impacto360afiliado.com.br/p/02a2f4f6ee/"
+    },
+    {
+      "position": 12,
+      "date": "2026-09-13",
+      "productId": "ml-setembro-20260902-mlb65304414",
+      "title": "Motorola Edge 70 5G 256GB Verde-escuro",
+      "category": "Celulares",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb65304414.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smartphone-motorola-edge-70-5g-256gb-24gb-8gb-ram16gb-ram-boost-ultrafino-3-cameras-50mp-tela-15k-extreme-amoled-120hz-verde-escuro/p/MLB65304414?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6415036138&sid=affiliates",
+      "affiliateLink": "https://meli.la/1KvgkMu",
+      "storeUrl": "https://impacto360afiliado.com.br/p/7b504ef1b9/"
+    },
+    {
+      "position": 13,
+      "date": "2026-09-14",
+      "productId": "ml-setembro-20260902-mlb67267597",
+      "title": "Smart TV Philco 50 P50VIK 4K UHD LED Roku",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb67267597.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-philco-50-p50vik-4k-uhd-led-roku-dolby-audio-wi-fi-hdr10-110220v/p/MLB67267597?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6539025322&sid=affiliates",
+      "affiliateLink": "https://meli.la/2BemDEY",
+      "storeUrl": "https://impacto360afiliado.com.br/p/707ff969f5/"
+    },
+    {
+      "position": 14,
+      "date": "2026-09-15",
+      "productId": "ml-completar-20260728-mlb53201474-7ae584faf9",
+      "title": "Smart TV LG UHD AI UA75 50 polegadas HDR10 Pro Processador α7 AI Ger8 webOS 25",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "reutilizado",
+      "image": "https://http2.mlstatic.com/D_Q_NP_2X_884169-MLA106908124660_022026-AB.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-lg-uhd-ai-ua75-50-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25/p/MLB53201474?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4503595721&sid=affiliates",
+      "affiliateLink": "https://meli.la/1Xca1tE",
+      "storeUrl": "https://impacto360afiliado.com.br/p/ad51993cf3/"
+    },
+    {
+      "position": 15,
+      "date": "2026-09-16",
+      "productId": "ml-setembro-20260902-mlb58378317",
+      "title": "Smart TV Samsung 55 Crystal 4K UHD Tizen",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb58378317.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-samsung-led-55-lh55befh4ggxzd-led-crystal-processor-4k-uhd-tizen-110v220v/p/MLB58378317?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5988456694&sid=affiliates",
+      "affiliateLink": "https://meli.la/2gfFaVz",
+      "storeUrl": "https://impacto360afiliado.com.br/p/53f83d2c27/"
+    },
+    {
+      "position": 16,
+      "date": "2026-09-17",
+      "productId": "ml-setembro-20260902-mlb48808732",
+      "title": "Smart TV TCL 55 QLED Mini LED 4K C6K 144Hz",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb48808732.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-tcl-55-polegadas-qled-mini-led-4k-c6k-wifi-bluetooth-google-tv-4-hdmi-144hz-hdr10-55c6k/p/MLB48808732?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6713012362&sid=affiliates",
+      "affiliateLink": "https://meli.la/2gZbMqa",
+      "storeUrl": "https://impacto360afiliado.com.br/p/e4a7ec902f/"
+    },
+    {
+      "position": 17,
+      "date": "2026-09-18",
+      "productId": "ml-setembro-20260902-mlb76002662",
+      "title": "Samsung Smart TV 55 MiniLED 4K M75H 2026",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb76002662.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/samsung-smart-tv-55-miniled-4k-m75h-2026-vision-ai-companion-modo-futebol-xbox-cloud/p/MLB76002662?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5115685447&sid=affiliates",
+      "affiliateLink": "https://meli.la/1tYQjuV",
+      "storeUrl": "https://impacto360afiliado.com.br/p/2fba4a3b45/"
+    },
+    {
+      "position": 18,
+      "date": "2026-09-19",
+      "productId": "ml-setembro-20260902-mlb53610161",
+      "title": "Smart TV LG UHD AI UA75 65 polegadas",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb53610161.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-lg-uhd-ai-ua75-65-polegadas-hdr10-pro-processador-7-ai-ger8-webos-25/p/MLB53610161?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4179239349&sid=affiliates",
+      "affiliateLink": "https://meli.la/28aNBAL",
+      "storeUrl": "https://impacto360afiliado.com.br/p/18d2f2db5c/"
+    },
+    {
+      "position": 19,
+      "date": "2026-09-20",
+      "productId": "ml-setembro-20260902-mlb75850285",
+      "title": "Smart TV LG QNED Evo AI QNED70 65 4K UHD 2026",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb75850285.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smart-tv-lg-qned-evo-ai-qned70-65-65qned70bsa-2026-4k-uhd/p/MLB75850285?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7141842408&sid=affiliates",
+      "affiliateLink": "https://meli.la/2J4BTwZ",
+      "storeUrl": "https://impacto360afiliado.com.br/p/757eef000b/"
+    },
+    {
+      "position": 20,
+      "date": "2026-09-21",
+      "productId": "ml-setembro-20260902-mlb75910822",
+      "title": "Samsung Smart TV 65 MiniLED 4K M75H 2026",
+      "category": "TVs 50 a 70 polegadas",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb75910822.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/samsung-smart-tv-65-miniled-4k-m75h-2026-vision-ai-companion-modo-futebol-xbox-cloud/p/MLB75910822?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4969583335&sid=affiliates",
+      "affiliateLink": "https://meli.la/1q3rjLf",
+      "storeUrl": "https://impacto360afiliado.com.br/p/995a626b60/"
+    },
+    {
+      "position": 21,
+      "date": "2026-09-22",
+      "productId": "ml-setembro-20260902-mlb63335388",
+      "title": "Aspirador Inteligente Xiaomi Robot Vacuum 5 Pro",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb63335388.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/aspirador-inteligente-xiaomi-robot-vacuum-5-pro-ov21gl-110v-branco/p/MLB63335388?pdp_filters=item_id%3AMLB5139454525&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5139454525&sid=affiliates",
+      "affiliateLink": "https://meli.la/1dx1W9X",
+      "storeUrl": "https://impacto360afiliado.com.br/p/82851771e1/"
+    },
+    {
+      "position": 22,
+      "date": "2026-09-23",
+      "productId": "ml-setembro-20260902-mlb48959123",
+      "title": "Projetor HY320 Davely Smart TV Android WiFi 6 Full HD",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb48959123.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/projetor-hy320-davely-smart-tv-android-wifi-6-390-ansi-lumens-full-hd-suporte-4k-hdmi-bluetooth-85-200-polegadas-alto-falante-com-controle-remoto-bivolt-portatil-mini/p/MLB48959123?pdp_filters=item_id%3AMLB4510325461&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4510325461&sid=affiliates",
+      "affiliateLink": "https://meli.la/2F54M4X",
+      "storeUrl": "https://impacto360afiliado.com.br/p/68a3aea06f/"
+    },
+    {
+      "position": 23,
+      "date": "2026-09-24",
+      "productId": "ml-setembro-20260902-mlb46016994",
+      "title": "Fritadeira Air Fryer Philco PAF16A 4 em 1 Digital 16L",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb46016994.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/fritadeira-air-fryer-philco-paf16a-4-em-1-painel-digital-16l-preto/p/MLB46016994?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5496611588&sid=affiliates",
+      "affiliateLink": "https://meli.la/23k7zwJ",
+      "storeUrl": "https://impacto360afiliado.com.br/p/d9e3c04430/"
+    },
+    {
+      "position": 24,
+      "date": "2026-09-25",
+      "productId": "ml-setembro-20260902-mlb44202830",
+      "title": "Fone Bluetooth JBL Tune 520BT Azul",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb44202830.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/fone-de-ouvido-bluetooth-jbl-tune-520bt-azul-headphone-sem-fio-com-microfone-ate-57h-de-bateria-bluetooth-53/p/MLB44202830?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3963749597&sid=affiliates",
+      "affiliateLink": "https://meli.la/2xaBJp3",
+      "storeUrl": "https://impacto360afiliado.com.br/p/e99d851f1f/"
+    },
+    {
+      "position": 25,
+      "date": "2026-09-26",
+      "productId": "ml-setembro-20260902-mlb52053098",
+      "title": "Samsung Galaxy Watch 8 40mm BT GPS",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb52053098.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/smartwatch-samsung-galaxy-watch-8-40mm-bt-gps-branco-com-pulseira-milanes-cinza-escuro/p/MLB52053098?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4133682685&sid=affiliates",
+      "affiliateLink": "https://meli.la/2ZeSP3T",
+      "storeUrl": "https://impacto360afiliado.com.br/p/5362ff79c3/"
+    },
+    {
+      "position": 26,
+      "date": "2026-09-27",
+      "productId": "ml-setembro-20260902-mlb67488397",
+      "title": "Máquina de Gelo Elgin Easy Ice 12kg",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb67488397.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/maquina-de-gelo-easy-ice-12kg-com-painel-de-led-branca-elgin-branco/p/MLB67488397?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7296000872&sid=affiliates",
+      "affiliateLink": "https://meli.la/22j9fFX",
+      "storeUrl": "https://impacto360afiliado.com.br/p/862c36f61c/"
+    },
+    {
+      "position": 27,
+      "date": "2026-09-28",
+      "productId": "ml-setembro-20260902-mlb24233730",
+      "title": "Cafeteira Nescafé Dolce Gusto Genio S Basic Grafite 110V",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb24233730.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/cafeteira-nescafe-dolce-gusto-genio-s-basic-grafite-110v/p/MLB24233730?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5514510754&sid=affiliates",
+      "affiliateLink": "https://meli.la/2MaujFg",
+      "storeUrl": "https://impacto360afiliado.com.br/p/e7b170a6dd/"
+    },
+    {
+      "position": 28,
+      "date": "2026-09-29",
+      "productId": "ml-afiliados-20260714-lavadora-jato-portatil-2-baterias",
+      "title": "Lavadora Lava Jato Portatil Pressao 2 Baterias Com Maleta",
+      "category": "Produtos Virais",
+      "catalogAction": "reutilizado",
+      "image": "public/images/anuncios/ml-afiliados-20260714-lavadora-jato-portatil-2-baterias-5d056293.webp",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/lavadora-lava-jato-portatil-pressao-2-baterias--maleta/up/MLBU605239077?pdp_filters=item_id%3AMLB3621404839&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB3621404839&sid=affiliates",
+      "affiliateLink": "https://meli.la/2PAAQXh",
+      "storeUrl": "https://impacto360afiliado.com.br/p/8ce8ace9c9/"
+    },
+    {
+      "position": 29,
+      "date": "2026-09-30",
+      "productId": "ml-setembro-20260902-mlb57468821",
+      "title": "Compressor Portátil Car Air Pump Digital",
+      "category": "Produtos Virais",
+      "catalogAction": "importado",
+      "image": "public/images/anuncios/campanha-setembro-2026/ml-setembro-20260902-mlb57468821.jpg",
+      "sourceProductUrl": "https://www.mercadolivre.com.br/compressor-portatil-car-air-pump-digital-com-visor-para-carro-moto-bike-calibrador-de-pneu-multifuncional/p/MLB57468821?pdp_filters=item_id%3AMLB4690712449&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4690712449&sid=affiliates",
+      "affiliateLink": "https://meli.la/1obUbbb",
+      "storeUrl": "https://impacto360afiliado.com.br/p/8ea5d7ef95/"
+    }
+  ]
+}
