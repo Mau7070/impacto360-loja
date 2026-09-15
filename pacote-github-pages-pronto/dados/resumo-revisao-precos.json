@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-09-14T17:58:58.179Z",
+  "totalRecords": 2854,
+  "publicProducts": 2542,
+  "pricesConfirmed": 0,
+  "oldPricesArchived": 45,
+  "affiliateLinksPreserved": true,
+  "collection": {
+    "publicProducts": 2542,
+    "results": 2542,
+    "attempted": 409,
+    "confirmed": 0,
+    "pendingNotConsulted": 2133,
+    "byStatus": {
+      "blocked": 20,
+      "pending_domain_blocked": 2133,
+      "no_price": 384,
+      "http_error": 5
+    }
+  },
+  "note": "Revisão concluída com preços pendentes. Ausência de confirmação não significa produto indisponível."
+}

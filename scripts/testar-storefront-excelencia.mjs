@@ -89,8 +89,10 @@ check(
   && app.includes("applyConsent")
   && app.includes("consent.marketing"),
 );
-check("hero comercial correto", app.includes("Ofertas selecionadas nas melhores lojas") && app.includes("Ver ofertas de hoje"));
-check("hero principal disponivel antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("<h1>Ofertas selecionadas nas melhores lojas</h1>"));
+check("hero moderno com divulgação de afiliados", app.includes("Seu próximo achado") && app.includes("Somos uma vitrine de afiliados") && !app.includes("Ver ofertas de hoje"));
+check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("Seu próximo achado começa aqui.") && html.includes('id="marketplaces"'));
+const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
+check("quatro atalhos gerais identificados corretamente", marketplaces.length === 4 && marketplaces.every(item => html.includes(`href="${item.url.replaceAll("&", "&amp;")}"`)) && app.includes("Acesso sem vínculo de afiliado"));
 check("rodape protegido contra salto de layout inicial", css.includes("html:not(.storefront-ready) .site-footer") && app.includes('classList.add("storefront-ready")'));
 check("oito categorias iniciais", app.includes("categoryDefinitions") && app.match(/slug: "/g)?.length >= 8);
 check("categorias priorizam a loja correta", app.includes("storeCategoryById") && app.includes('["impacto-ferramentas", "ferramentas"]') && app.includes("categorySlugForProduct(product)"));

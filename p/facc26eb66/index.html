@@ -121,7 +121,7 @@
         <h1>Regata Feminina Poliamida Premium Forrada Alça Larga Moda</h1>
         <p>Parte superior versátil, fácil de combinar e boa para giro de catálogo; indicada para looks de trabalho, casual, social ou verão. Tendencia: alta…</p>
         <div class="specs"><span>blusas e camisas</span><span>moda feminina</span></div>
-        <strong class="price">Consulte o preço no parceiro</strong>
+        <strong class="price" data-price-valid-until="">Consulte o preço no parceiro</strong>
         <div class="meta">
           <span class="chip">Loja parceira: Mercado Livre</span>
 
@@ -169,6 +169,23 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
+    // Cached product pages must stop showing an expired price without a rebuild.
+    function refreshPriceValidity() {
+      const price = document.querySelector("[data-price-valid-until]");
+      const expiry = Date.parse(price?.dataset.priceValidUntil || "");
+      if (!price || (Number.isFinite(expiry) && expiry >= Date.now())) return;
+      price.textContent = "Consulte o preço no parceiro";
+      document.querySelectorAll("[data-price-dependent]").forEach(element => element.remove());
+      const schemaElement = document.querySelector('script[type="application/ld+json"]');
+      try {
+        const schema = JSON.parse(schemaElement.textContent);
+        delete schema.offers;
+        schemaElement.textContent = JSON.stringify(schema);
+      } catch (error) {}
+    }
+    refreshPriceValidity();
+    setInterval(refreshPriceValidity, 60_000);
+    document.addEventListener("visibilitychange", refreshPriceValidity);
     const directProductUrl = "https://impacto360afiliado.com.br/p/facc26eb66/";
     const directProductTitle = "Regata Feminina Poliamida Premium Forrada Alça Larga Moda";
     try {

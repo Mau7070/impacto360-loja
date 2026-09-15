@@ -1,0 +1,32 @@
+{
+  "marketplaces": [
+    {
+      "id": "mercado-livre",
+      "name": "Mercado Livre",
+      "url": "https://www.mercadolivre.com.br/social/md20251208121946",
+      "type": "affiliate",
+      "description": "Explore nosso perfil de afiliado."
+    },
+    {
+      "id": "shopee",
+      "name": "Shopee",
+      "url": "https://shopee.com.br/",
+      "type": "official",
+      "description": "Explore as categorias da Shopee."
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "url": "https://www.amazon.com.br/?tag=910556142-20",
+      "type": "affiliate",
+      "description": "Acesse a Amazon pelo nosso link de afiliado."
+    },
+    {
+      "id": "hotmart",
+      "name": "Hotmart",
+      "url": "https://hotmart.com/pt-br/marketplace",
+      "type": "official",
+      "description": "Descubra cursos e produtos digitais."
+    }
+  ]
+}

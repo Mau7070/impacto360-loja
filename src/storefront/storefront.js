@@ -1,7 +1,8 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260803-short-links-3";
-const STORES_URL = "/dados/stores.json?v=20260803-short-links-3";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260914-modernizacao-1";
+const STORES_URL = "/dados/stores.json?v=20260914-modernizacao-1";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260914-modernizacao-1";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const VIEW_HISTORY_KEY = "impacto360ViewHistory";
@@ -27,6 +28,7 @@ const LAZY_IMAGE_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 const state = {
   products: [],
   stores: [],
+  marketplaces: [],
   storeById: new Map(),
   visibleLimit: PAGE_SIZE,
   suggestionIndex: -1,
@@ -46,7 +48,7 @@ const state = {
   homeRotationViewportWidth: 0,
   homeRotationIndex: 0,
   homeRotationPool: [],
-  homeRotationUserPaused: false,
+  homeRotationUserPaused: true,
   homeRotationInteractionPaused: false,
 };
 
@@ -359,6 +361,53 @@ function isAllowedAffiliateUrl(value) {
   } catch (error) {
     return false;
   }
+}
+
+const marketplaceDefinitions = [
+  { id: "mercado-livre", name: "Mercado Livre", initials: "ML", icon: "bag", url: "https://www.mercadolivre.com.br/", domains: ["mercadolivre.com.br", "mercadolivre.com", "meli.la"] },
+  { id: "shopee", name: "Shopee", initials: "S", icon: "bag", url: "https://shopee.com.br/", domains: ["shopee.com.br"] },
+  { id: "amazon", name: "Amazon", initials: "a", icon: "bag", url: "https://www.amazon.com.br/", domains: ["amazon.com.br", "amzn.to", "link.amazon"] },
+  { id: "hotmart", name: "Hotmart", initials: "h", icon: "spark", url: "https://hotmart.com/pt-br/marketplace", domains: ["hotmart.com"] },
+];
+
+function homeMarketplaces() {
+  return marketplaceDefinitions.map(definition => {
+    const configured = state.marketplaces.find(item => item?.id === definition.id || normalize(item?.name) === normalize(definition.name));
+    let valid = false;
+    try {
+      const url = new URL(configured?.url);
+      valid = url.protocol === "https:" && !url.username && !url.password
+        && definition.domains.some(domain => url.hostname === domain || url.hostname.endsWith(`.${domain}`));
+    } catch {}
+    return {
+      ...definition,
+      url: valid ? configured.url : definition.url,
+      type: valid && configured.type === "affiliate" ? "affiliate" : "official",
+      description: valid && text(configured.description) ? text(configured.description) : "Acesso geral à plataforma",
+    };
+  });
+}
+
+function marketplaceShortcuts() {
+  return `
+    <section class="marketplace-section" id="marketplaces" aria-labelledby="marketplace-title">
+      <div class="shell">
+        <div class="marketplace-heading">
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div>
+          <p>Abra a plataforma e encontre o que precisa.</p>
+        </div>
+        <div class="marketplace-grid">
+          ${homeMarketplaces().map(marketplace => `
+            <a class="marketplace-card marketplace-${marketplace.id}" href="${escapeAttr(marketplace.url)}" target="_blank" rel="noopener noreferrer${marketplace.type === "affiliate" ? " sponsored" : ""}" aria-label="Abrir ${escapeAttr(marketplace.name)} em nova aba — ${marketplace.type === "affiliate" ? "link de afiliado" : "acesso sem vínculo de afiliado"}">
+              <span class="marketplace-mark" aria-hidden="true">${escapeHtml(marketplace.initials)}</span>
+              <span class="marketplace-copy"><strong>${escapeHtml(marketplace.name)}</strong><span>${escapeHtml(marketplace.description)}</span></span>
+              <span class="marketplace-arrow" aria-hidden="true">↗</span>
+              <small class="marketplace-link-kind">${marketplace.type === "affiliate" ? "Link de afiliado" : "Acesso sem vínculo de afiliado"}</small>
+            </a>`).join("")}
+        </div>
+        <p class="marketplace-note">Nos produtos selecionados, os botões de compra usam nossos links de afiliado. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
+      </div>
+    </section>`;
 }
 
 function recordViewedProduct(productId) {
@@ -695,9 +744,9 @@ function productCard(product, index = 0, eagerCount = 0) {
         : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
   const internalPath = productPath(product);
   const quote = product.actionType === "quote";
-  const actionLabel = quote ? "Solicitar orçamento" : "Ver oferta";
+  const actionLabel = quote ? "Solicitar orçamento" : "Ver no parceiro ↗";
   const actionClass = quote ? "btn-service" : "btn-offer";
-  const currentPrice = money(product.priceValue, product.price);
+  const currentPrice = quote ? money(product.priceValue, product.price) : freshness.current ? money(product.priceValue, product.price) : "Consulte o preço";
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
   const updatedAt = freshness.current ? freshness.checkedAt : "";
   const rating = product.rating
@@ -739,7 +788,8 @@ function productCard(product, index = 0, eagerCount = 0) {
         </div>` : ""}
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
-          <strong class="current-price">${escapeHtml(currentPrice)}</strong>
+          <strong class="current-price${!quote && !freshness.current ? " price-to-check" : ""}">${escapeHtml(currentPrice)}</strong>
+          ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Valor final disponível no parceiro"}</span>` : ""}
         </div>
         <a
           class="btn ${actionClass}"
@@ -865,7 +915,7 @@ function clearHomeRotation({ reset = true } = {}) {
   if (!reset) return;
   state.homeRotationIndex = 0;
   state.homeRotationPool = [];
-  state.homeRotationUserPaused = false;
+  state.homeRotationUserPaused = true;
   state.homeRotationInteractionPaused = false;
 }
 
@@ -883,12 +933,12 @@ function updateHomeRotationControl() {
     status.textContent = `Rodízio manual por acessibilidade · ${total} produtos`;
     return;
   }
-  button.textContent = state.homeRotationUserPaused ? "Continuar rodízio" : "Pausar rodízio";
+  button.textContent = state.homeRotationUserPaused ? "Ativar rodízio" : "Pausar rodízio";
   button.setAttribute("aria-pressed", String(state.homeRotationUserPaused));
   status.textContent = state.homeRotationInteractionPaused
     ? "Rodízio pausado durante sua interação"
     : state.homeRotationUserPaused
-      ? `Rodízio pausado · seleção ${page} de ${pages}`
+      ? `Explore no seu ritmo · seleção ${page} de ${pages}`
       : `Novos produtos a cada 8 segundos · seleção ${page} de ${pages}`;
 }
 
@@ -920,7 +970,7 @@ function syncHomeRotation() {
   clearInterval(state.homeRotationTimer);
   state.homeRotationTimer = null;
   const grid = document.querySelector("[data-home-product-grid]");
-  if (!grid || document.hidden || homeRotationReduced()) {
+  if (!grid || document.hidden || homeRotationReduced() || state.homeRotationUserPaused) {
     updateHomeRotationControl();
     return;
   }
@@ -934,7 +984,7 @@ function startHomeRotation() {
   if (!grid || !button) return;
   state.homeRotationPool = homeRotationProducts();
   state.homeRotationIndex = Number(grid.dataset.rotationStart || 0);
-  state.homeRotationUserPaused = false;
+  state.homeRotationUserPaused = true;
   state.homeRotationInteractionPaused = false;
   state.homeRotationViewportWidth = window.innerWidth;
   if ("ResizeObserver" in window) {
@@ -968,8 +1018,9 @@ function startHomeRotation() {
       return;
     }
     state.homeRotationUserPaused = !state.homeRotationUserPaused;
-    updateHomeRotationControl();
+    syncHomeRotation();
   });
+  document.querySelector("[data-home-rotation-next]")?.addEventListener("click", () => rotateHomeProducts({ force: true }));
   syncHomeRotation();
 }
 
@@ -992,35 +1043,25 @@ function renderHome() {
   const heroMarkup = `
     <section class="hero" data-initial-home-hero>
       <div class="shell hero-grid">
-        <div>
-          <h1>Ofertas selecionadas nas melhores lojas</h1>
-          <p>Encontre produtos de diferentes categorias e compre diretamente no site parceiro.</p>
-          <a class="btn btn-offer" href="/buscar/?oferta=1" data-route="/buscar/?oferta=1">Ver ofertas de hoje</a>
-          <div class="hero-trust" aria-label="Informações de confiança">
-            <span>Links oficiais de parceiros</span>
-            <span>Sem custo adicional</span>
-            <span>Compra concluída no parceiro</span>
+        <div class="hero-copy">
+          <span class="hero-eyebrow"><span aria-hidden="true"></span>Shopping Impacto360</span>
+          <h1>Seu próximo achado<br>começa aqui.</h1>
+          <p>Produtos, ideias e novas possibilidades. Explore nossa seleção e compre diretamente na plataforma que você escolher.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/buscar/" data-route="/buscar/">Explorar produtos <span aria-hidden="true">→</span></a>
+            <a class="hero-secondary-link" href="#marketplaces">Ir às plataformas <span aria-hidden="true">↗</span></a>
           </div>
+          <p class="hero-disclosure">Somos uma vitrine de afiliados. Podemos receber comissão por compras pelos nossos links, sem custo adicional para você.</p>
         </div>
-        <div class="hero-products" aria-hidden="true">
-          ${heroProductMarkup}
+        <div class="hero-showcase" aria-hidden="true">
+          <div class="hero-showcase-orbit"></div>
+          <div class="hero-products">${heroProductMarkup}</div>
+          <span class="hero-showcase-caption"><span>Uma seleção. Muitas possibilidades.</span><strong>Explore. Descubra. Escolha.</strong></span>
         </div>
       </div>
     </section>`;
   const homeContent = `
-    <div class="shell promo-shortcuts" aria-label="Atalhos promocionais">
-      ${[
-        ["tag", "Ofertas do Dia", "Oportunidades selecionadas", "/buscar/?oferta=1"],
-        ["search", "Para descobrir", "Produtos de várias categorias", "/buscar/"],
-        ["spark", "Novidades", "Itens adicionados recentemente", "/buscar/?ordem=recentes"],
-        ["grid", "Maior variedade", "Explore o catálogo completo", "/lojas/"],
-      ].map(([iconName, title, copy, href]) => `
-        <a class="promo-shortcut" href="${href}" data-route="${href}">
-          <span class="shortcut-icon">${icon(iconName)}</span>
-          <span><strong>${title}</strong><small>${copy}</small></span>
-          <span class="promo-arrow" aria-hidden="true">›</span>
-        </a>`).join("")}
-    </div>
+    ${marketplaceShortcuts()}
 
     <section class="section section-soft home-products" id="produtos">
       <div class="shell">
@@ -1029,12 +1070,12 @@ function renderHome() {
           <a href="#categorias" data-home-disclosure-target="categorias">Categorias</a>
           <a href="#lojas" data-home-disclosure-target="lojas">Lojas</a>
         </nav>
-        ${sectionHeader("Curadoria Impacto360", "Ofertas em destaque", "Produtos selecionados e atualizados com frequência.", "/buscar/?oferta=1", "Ver todas")}
+        ${sectionHeader("Descobertas para você", "Encontre seu próximo favorito", "Explore a seleção. Preço, frete e disponibilidade são confirmados no parceiro.", "/buscar/", "Ver catálogo →")}
         <div class="home-rotation-toolbar">
-          <span data-home-rotation-status>Novos produtos a cada 8 segundos · ${rotationPool.length} produtos no rodízio</span>
-          <button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="false">Pausar rodízio</button>
+          <span data-home-rotation-status>Explore no seu ritmo · ${rotationPool.length} produtos</span>
+          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Ativar rodízio</button><button class="home-rotation-next" type="button" data-home-rotation-next>Próximos <span aria-hidden="true">→</span></button></div>
         </div>
-        ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Produtos em rodízio"')}
+        ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Seleção de produtos"')}
       </div>
     </section>
 
@@ -1092,14 +1133,7 @@ function renderHome() {
       </div>
     </section>`;
   const root = appRoot();
-  const initialHero = root.querySelector("[data-initial-home-hero]");
-  if (initialHero) {
-    initialHero.querySelector(".hero-products").innerHTML = heroProductMarkup;
-    root.replaceChildren(initialHero);
-    root.insertAdjacentHTML("beforeend", homeContent);
-  } else {
-    root.innerHTML = heroMarkup + homeContent;
-  }
+  root.innerHTML = heroMarkup + homeContent;
   document.documentElement.classList.add("initial-home-route");
   scrollToHash();
 }
@@ -2749,16 +2783,28 @@ function setupGlobalEvents() {
 }
 
 async function loadData() {
-  const [productsResponse, storesResponse] = await Promise.all([
+  const [productsResponse, storesResponse, marketplaces] = await Promise.all([
     fetch(CATALOG_URL, { cache: "no-store" }),
     fetch(STORES_URL, { cache: "no-store" }),
+    fetch(MARKETPLACES_URL, { cache: "no-store" })
+      .then(response => response.ok ? response.json() : null)
+      .then(data => Array.isArray(data?.marketplaces) ? data.marketplaces : [])
+      .catch(() => []),
   ]);
   if (!productsResponse.ok || !storesResponse.ok) throw new Error("Não foi possível carregar o catálogo público.");
   const [products, stores] = await Promise.all([productsResponse.json(), storesResponse.json()]);
   state.products = Array.isArray(products) ? products : [];
   state.stores = Array.isArray(stores) ? stores : [];
+  state.marketplaces = marketplaces;
   state.storeById = new Map(state.stores.map(store => [store.id, store]));
   state.products.forEach(product => {
+    // Unverified historical prices must not enter cards, sorting, suggestions or alerts.
+    if (product.actionType !== "quote" && !priceFreshness(product).current) {
+      product.priceValue = null;
+      product.price = "Consulte o preço no parceiro";
+      product.previousPriceValue = null;
+      product.previousPrice = "";
+    }
     product._search = normalize([
       product.name, product.description, product.category, product.subcategory,
       product.brand, product.model, ...(product.tags || []), product.storeId,

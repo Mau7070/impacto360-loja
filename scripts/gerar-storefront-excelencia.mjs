@@ -11,7 +11,6 @@ const siteUrl = "https://impacto360afiliado.com.br";
 const priceValidityDays = Math.max(1, Number(process.env.IMPACTO360_PRICE_VALIDITY_DAYS || 7));
 const priceDateFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
-  "dataUltimaVerificacao", "ultimaVerificacao", "lastChecked",
 ];
 const allowedAffiliateDomains = new Set([
   "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
@@ -131,11 +130,12 @@ function priceValue(value) {
 function priceFreshness(product) {
   const rawDate = first(product, priceDateFields);
   const date = rawDate ? new Date(rawDate) : null;
-  if (!date || Number.isNaN(date.getTime())) {
+  if (!date || Number.isNaN(date.getTime()) || date.getTime() > Date.now() + 300_000) {
     return { current: false, status: "unverified", updatedAt: "", validUntil: "" };
   }
   const validUntil = new Date(date.getTime() + priceValidityDays * 86_400_000);
-  const current = validUntil.getTime() >= Date.now();
+  const current = validUntil.getTime() >= Date.now()
+    && Boolean(priceValue(first(product, ["price", "preco", "precoPromocional", "precoAtual"])));
   return {
     current,
     status: current ? "current" : "expired",
@@ -317,7 +317,29 @@ const revalidationQueue = compactProducts
     priceValidUntil: product.priceValidUntil,
     priority: "high",
   }));
-const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8");
+const marketplaces = readJson("dados/marketplaces.json").marketplaces;
+const marketplaceHosts = {
+  "mercado-livre": ["mercadolivre.com.br", "meli.la"], shopee: ["shopee.com.br"],
+  amazon: ["amazon.com.br", "amzn.to", "link.amazon"], hotmart: ["hotmart.com"],
+};
+if (marketplaces.length !== 4 || new Set(marketplaces.map(item => item.id)).size !== 4) throw new Error("Os quatro marketplaces devem estar configurados uma única vez.");
+for (const item of marketplaces) {
+  const url = new URL(item.url);
+  if (url.protocol !== "https:" || url.username || url.password
+    || !marketplaceHosts[item.id]?.some(host => url.hostname === host || url.hostname.endsWith(`.${host}`))
+    || !["affiliate", "official"].includes(item.type)) throw new Error(`Atalho inválido: ${item.id}`);
+}
+const marketplaceMarkup = `<section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
+  <div class="shell">
+    <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div><p>Abra a plataforma e encontre o que precisa.</p></div>
+    <div class="marketplace-grid">${marketplaces.map(item => `<a class="marketplace-card marketplace-${item.id}" href="${html(item.url)}" target="_blank" rel="noopener noreferrer${item.type === "affiliate" ? " sponsored" : ""}" aria-label="Abrir ${html(item.name)} em nova aba — ${item.type === "affiliate" ? "link de afiliado" : "acesso sem vínculo de afiliado"}">
+      <span class="marketplace-mark" aria-hidden="true">${({"mercado-livre":"ML",shopee:"S",amazon:"a",hotmart:"h"})[item.id]}</span>
+      <span class="marketplace-copy"><strong>${html(item.name)}</strong><span>${html(item.description)}</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">${item.type === "affiliate" ? "Link de afiliado" : "Acesso sem vínculo de afiliado"}</small></a>`).join("")}</div>
+    <p class="marketplace-note">Nos produtos selecionados, os botões de compra usam nossos links de afiliado. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
+  </div></section>`;
+const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8")
+  .replace("<!-- MARKETPLACE_SHORTCUTS -->", marketplaceMarkup);
 const fallback404 = fs.readFileSync(path.join(sourceRoot, "404.template.html"), "utf8");
 const css = fs.readFileSync(path.join(sourceRoot, "storefront.css"), "utf8");
 const js = fs.readFileSync(path.join(sourceRoot, "storefront.js"), "utf8");
@@ -502,6 +524,7 @@ for (const route of [...commercialRoutes, ...categoryRoutes]) {
 
 for (const relative of [
   "dados/stores.json",
+  "dados/marketplaces.json",
   "dados/relatorio-integridade-publicacao.json",
   "favicon.svg",
   "manifest.webmanifest",

@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://impacto360afiliado.com.br/public/fachada-shopping-premium-referencia.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20260803-short-links-3">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20260914-modernizacao-1">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -71,7 +71,7 @@
 
   <header class="site-header" data-site-header>
     <div class="header-main shell">
-      <a class="brand" href="/" data-route="/">
+      <a class="brand" href="/" data-route="/" aria-label="Impacto360 Afiliado — início">
         <span class="brand-mark" aria-hidden="true">360</span>
         <span class="brand-copy"><strong>IMPACTO 360</strong><small>AFILIADO</small></span>
       </a>
@@ -173,19 +173,20 @@
       <!-- ROUTE_FALLBACK -->
       <section class="hero initial-home-hero" data-initial-home-hero>
         <div class="shell hero-grid">
-          <div>
-            <h1>Ofertas selecionadas nas melhores lojas</h1>
-            <p>Encontre produtos de diferentes categorias e compre diretamente no site parceiro.</p>
-            <a class="btn btn-offer" href="/buscar/?oferta=1" data-route="/buscar/?oferta=1">Ver ofertas de hoje</a>
-            <div class="hero-trust" aria-label="Informações de confiança">
-              <span>Links oficiais de parceiros</span>
-              <span>Sem custo adicional</span>
-              <span>Compra concluída no parceiro</span>
+          <div class="hero-copy">
+            <span class="eyebrow">SEU SHOPPING DE DESCOBERTAS</span>
+            <h1>Seu próximo achado começa aqui.</h1>
+            <p>Explore produtos de diferentes categorias e escolha onde comprar. O pagamento e a entrega ficam com a plataforma escolhida.</p>
+            <div class="hero-actions">
+              <a class="btn btn-offer" href="/buscar/" data-route="/buscar/">Explorar produtos</a>
+              <a class="btn btn-secondary" href="/como-comprar/" data-route="/como-comprar/">Como funciona</a>
             </div>
+            <p class="hero-disclosure">Somos uma vitrine de afiliados. Podemos receber comissão pelas compras realizadas pelos nossos links, sem custo adicional para você.</p>
           </div>
-          <div class="hero-products" aria-hidden="true"></div>
+          <div class="hero-showcase" aria-hidden="true"><div class="hero-products"></div><p class="hero-showcase-caption">Várias categorias. Um lugar para descobrir.</p></div>
         </div>
       </section>
+      <!-- MARKETPLACE_SHORTCUTS -->
       <section class="loading-state initial-route-loading" aria-label="Carregando ofertas">
         <div class="home-skeleton shell" aria-hidden="true">
           <div class="hero-skeleton">
@@ -207,7 +208,7 @@
   <footer class="site-footer">
     <div class="shell footer-grid">
       <section>
-        <a class="brand brand-footer" href="/" data-route="/">
+        <a class="brand brand-footer" href="/" data-route="/" aria-label="Impacto360 Afiliado — início">
           <span class="brand-mark" aria-hidden="true">360</span>
           <span class="brand-copy"><strong>IMPACTO 360</strong><small>AFILIADO</small></span>
         </a>
@@ -260,7 +261,7 @@
         <button class="icon-button" value="cancel" aria-label="Fechar preferências">×</button>
       </div>
       <p>Cookies necessários permanecem ativos para segurança, navegação e preferências locais.</p>
-      <label class="setting-row"><span><strong>Medição</strong><small>Ajuda a entender o uso do site sem criar métricas fictícias.</small></span><input type="checkbox" name="analytics"></label>
+      <label class="setting-row"><span><strong>Medição</strong><small>Permite medir visitas e melhorar a navegação, conforme sua escolha.</small></span><input type="checkbox" name="analytics"></label>
       <label class="setting-row"><span><strong>Publicidade</strong><small>Permite carregar integrações opcionais de anúncios.</small></span><input type="checkbox" name="marketing"></label>
       <div class="dialog-actions"><button class="btn btn-primary" value="save">Salvar preferências</button></div>
     </form>
@@ -298,6 +299,6 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20260803-short-links-3"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20260914-modernizacao-1"></script>
 </body>
 </html>

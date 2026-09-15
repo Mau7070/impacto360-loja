@@ -1,10 +1,11 @@
-const CACHE_NAME = "impacto360-shell-20260803-short-links-3";
+const CACHE_NAME = "impacto360-shell-20260914-modernizacao-1";
 const SHELL_FILES = [
   "/",
   "/index.html",
-  "/assets/storefront-excellence.css?v=20260803-short-links-3",
-  "/assets/storefront-excellence.js?v=20260803-short-links-3",
-  "/dados/stores.json?v=20260803-short-links-3",
+  "/assets/storefront-excellence.css?v=20260914-modernizacao-1",
+  "/assets/storefront-excellence.js?v=20260914-modernizacao-1",
+  "/dados/stores.json?v=20260914-modernizacao-1",
+  "/dados/marketplaces.json?v=20260914-modernizacao-1",
   "/manifest.webmanifest",
   "/favicon.svg"
 ];
@@ -47,6 +48,7 @@ async function staleWhileRevalidate(request) {
 
 self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
+  if (["localhost", "127.0.0.1", "[::1]"].includes(self.location.hostname)) return;
   if (event.request.method !== "GET" || url.origin !== self.location.origin) return;
   if (url.pathname.startsWith("/dados/")) {
     event.respondWith(staleWhileRevalidate(event.request));

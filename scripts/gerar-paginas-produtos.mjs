@@ -32,7 +32,6 @@ const ratingFields = ["avaliacao", "rating", "reviewRating", "nota"];
 const availabilityFields = ["disponibilidade", "estoque", "statusDisponibilidade"];
 const lastCheckFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
-  "ultimaVerificacao", "lastChecked", "dataUltimaVerificacao",
 ];
 const allowedAffiliateDomains = new Set([
   "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
@@ -146,7 +145,7 @@ function deduplicatePublishableProducts(products) {
 function priceFreshness(product) {
   const rawDate = firstFilled(product, lastCheckFields);
   const checkedAt = rawDate ? new Date(rawDate) : null;
-  if (!checkedAt || Number.isNaN(checkedAt.getTime())) {
+  if (!checkedAt || Number.isNaN(checkedAt.getTime()) || checkedAt.getTime() > Date.now() + 300_000) {
     return { current: false, checkedAt: "", validUntil: "" };
   }
   const validUntil = new Date(checkedAt.getTime() + priceValidityDays * 86_400_000);
@@ -589,13 +588,13 @@ function productPage(product, store, products) {
         <h1>${htmlEscape(title)}</h1>
         ${showDescription ? `<p>${htmlEscape(description)}</p>` : ""}
         ${benefitTags.length ? `<div class="specs">${benefitTags.map(item => `<span>${htmlEscape(item)}</span>`).join("")}</div>` : ""}
-        <strong class="price">${htmlEscape(priceLabel)}</strong>
+        <strong class="price" data-price-valid-until="${htmlEscape(priceAudit.validUntil)}">${htmlEscape(priceLabel)}</strong>
         <div class="meta">
           <span class="chip">${htmlEscape("Loja parceira: " + storeName)}</span>
           ${rating ? `<span class="chip">${htmlEscape(`Avaliação ${cleanCommercialText(rating)}`)}</span>` : ""}
-          ${displayAvailability ? `<span class="chip">${htmlEscape(displayAvailability)}</span>` : ""}
+          ${displayAvailability ? `<span class="chip" data-price-dependent>${htmlEscape(displayAvailability)}</span>` : ""}
           ${category ? `<span class="chip">${htmlEscape(category)}</span>` : ""}
-          ${freshnessLabel ? `<span class="chip">${htmlEscape(freshnessLabel)}</span>` : ""}
+          ${freshnessLabel ? `<span class="chip" data-price-dependent>${htmlEscape(freshnessLabel)}</span>` : ""}
         </div>
         <div class="actions">
           <a class="btn" href="${htmlEscape(link)}" target="_blank" rel="noopener noreferrer sponsored">${htmlEscape(ctaLabel)}</a>
@@ -616,6 +615,23 @@ function productPage(product, store, products) {
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
+    // Cached product pages must stop showing an expired price without a rebuild.
+    function refreshPriceValidity() {
+      const price = document.querySelector("[data-price-valid-until]");
+      const expiry = Date.parse(price?.dataset.priceValidUntil || "");
+      if (!price || (Number.isFinite(expiry) && expiry >= Date.now())) return;
+      price.textContent = "Consulte o preço no parceiro";
+      document.querySelectorAll("[data-price-dependent]").forEach(element => element.remove());
+      const schemaElement = document.querySelector('script[type="application/ld+json"]');
+      try {
+        const schema = JSON.parse(schemaElement.textContent);
+        delete schema.offers;
+        schemaElement.textContent = JSON.stringify(schema);
+      } catch (error) {}
+    }
+    refreshPriceValidity();
+    setInterval(refreshPriceValidity, 60_000);
+    document.addEventListener("visibilitychange", refreshPriceValidity);
     const directProductUrl = ${directUrlJson};
     const directProductTitle = ${shareTitleJson};
     try {
@@ -665,7 +681,12 @@ function productPage(product, store, products) {
 
 function cleanGeneratedPages(base) {
   for (const route of ["produto", "p"]) {
-    const dir = path.join(base, route);
+    const dir = path.resolve(base, route);
+    const approvedRoot = path.resolve(root);
+    if (!dir.startsWith(approvedRoot + path.sep)
+      || !outputRoots.map(item => path.resolve(item)).includes(path.resolve(base))) {
+      throw new Error(`Diretório de geração fora do checkout: ${dir}`);
+    }
     fs.rmSync(dir, { recursive: true, force: true });
     fs.mkdirSync(dir, { recursive: true });
   }
