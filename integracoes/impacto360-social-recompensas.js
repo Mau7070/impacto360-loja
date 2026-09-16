@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const VERSION = "20260715-1";
+  const VERSION = "20260814-1";
   const ADMIN_AUTH_KEY = "impacto360:sala-agentes:auth:v2";
   const ROBOT_KEY = "ai360:socialRobot:v1";
   const WALLET_KEY = "ai360:rewardWallet:v1";
@@ -31,7 +31,11 @@
     agendado: "Agendado",
     publicado: "Publicado",
     enviado: "Enviado ao servidor",
-    falha: "Falha"
+    falha: "Falha",
+    bloqueado: "Bloqueado pela auditoria",
+    cancelado: "Cancelado",
+    revisao_manual: "Revisao manual",
+    ignorado: "Ignorado"
   };
 
   let productsCache = [];
@@ -45,6 +49,7 @@
     addStyle();
     exposeApi();
     loadCatalogData().finally(() => {
+      migrateUnsafeQueue();
       installRewardsWidget();
       wrapShopActions();
       installAdminWatcher();
@@ -54,14 +59,18 @@
   }
 
   async function loadCatalogData() {
-    productsCache = getWindowProducts();
-    if (!productsCache.length) productsCache = await fetchJson("dados/products.json");
+    const fullProducts = getWindowProducts().length ? getWindowProducts() : await fetchJson("dados/products.json");
+    const publicProducts = await fetchJson("dados/catalogo-publico.json");
+    const publicById = new Map(publicProducts.map(item => [String(item.id), item]));
+    productsCache = fullProducts.map(product => Object.assign({}, product, {
+      shortPath: publicById.get(String(product.id))?.shortPath || product.shortPath || "",
+      shortUrl: publicById.get(String(product.id))?.shortUrl || product.shortUrl || ""
+    }));
     storesCache = await fetchJson("dados/stores.json");
   }
 
   function getProducts() {
-    const products = getWindowProducts();
-    return products.length ? products : productsCache;
+    return productsCache;
   }
 
   function getStores() {
@@ -93,6 +102,7 @@
       active: true,
       autoPublish: false,
       approvalRequired: true,
+      auditFilter: "todos",
       endpoint: DEFAULT_ENDPOINT,
       dailyLimit: 12,
       quietUntil: 0,
@@ -124,6 +134,22 @@
     renderRewardsWidget();
     renderAdminPanel();
     return robot;
+  }
+
+  function migrateUnsafeQueue() {
+    const robot = loadRobot();
+    let changed = false;
+    robot.queue.forEach(campaign => {
+      if (!["pronto", "agendado", "falha"].includes(campaign.status)) return;
+      const validation = validateCampaignLocally(campaign);
+      if (validation.readyToPublish) return;
+      campaign.status = "bloqueado";
+      campaign.auditStatus = validation.status;
+      campaign.auditFailures = validation.failures;
+      campaign.blockedAt = new Date().toISOString();
+      changed = true;
+    });
+    if (changed) saveRobot(robot);
   }
 
   function defaultWallet() {
@@ -553,6 +579,7 @@
         <em>${escapeHtml(STATUS_LABEL[item.status] || item.status)}</em>
       </li>
     `).join("");
+    const auditRows = renderPublicationAuditRows(robot);
     panel.innerHTML = `
       <header class="ai360-social-head">
         <div>
@@ -607,10 +634,140 @@
         <h3>Fila de divulgacao</h3>
         <ul>${latest || "<li><strong>Nenhuma campanha ainda.</strong><em>Use Gerar campanhas.</em></li>"}</ul>
       </section>
+      <section class="ai360-publication-audit">
+        <header>
+          <div><h3>AUDITORIA DE PUBLICACOES</h3><p>Nenhuma campanha segue para o servidor sem produto, afiliado, link curto, titulo e imagem validados.</p></div>
+          <label>Filtro
+            <select data-ai360-social-field="auditFilter">
+              ${auditFilterOptions(robot.auditFilter)}
+            </select>
+          </label>
+        </header>
+        <div class="ai360-audit-table">${auditRows || "<p>Nenhuma publicacao no filtro selecionado.</p>"}</div>
+      </section>
     `;
   }
 
+  function auditFilterOptions(selected) {
+    const options = [
+      ["todos", "Todos"], ["corretos", "Corretos"], ["links_quebrados", "Links quebrados"],
+      ["produto_inexistente", "Produto inexistente"], ["produto_diferente", "Produto diferente"],
+      ["sem_afiliado", "Sem afiliado"], ["agendados", "Agendados"], ["publicados", "Publicados"],
+      ["cancelados", "Cancelados"], ["revisao_manual", "Revisao manual"]
+    ];
+    return options.map(([value, label]) => `<option value="${value}" ${selected === value ? "selected" : ""}>${label}</option>`).join("");
+  }
+
+  function renderPublicationAuditRows(robot) {
+    return robot.queue
+      .map(campaign => ({ campaign, validation: validateCampaignLocally(campaign) }))
+      .filter(item => auditFilterMatches(robot.auditFilter || "todos", item.campaign, item.validation))
+      .slice(0, 40)
+      .map(({ campaign, validation }) => {
+        const product = validation.product;
+        const currentLink = trim(campaign.link);
+        const correctLink = productPublicLink(product);
+        const status = validation.readyToPublish ? "OK" : (campaign.auditStatus || validation.status || "REVISAO_MANUAL");
+        return `<article class="ai360-audit-row" data-audit-status="${escapeAttr(status)}">
+          <div><small>${escapeHtml(CHANNEL_LABELS[campaign.channel] || campaign.channel || "Fila local")}</small><strong>${escapeHtml(campaign.title || "Sem titulo")}</strong><span>${escapeHtml(STATUS_LABEL[campaign.status] || campaign.status || "sem status")}</span></div>
+          <div><small>Produto / marketplace</small><span>${escapeHtml(product?.name || product?.nome || campaign.productId || "Nao localizado")}</span><b>${escapeHtml(product?.partner || product?.source || "Nao identificado")}</b></div>
+          <div><small>Link atual</small><a href="${escapeAttr(isValidLink(currentLink) ? currentLink : "#")}" target="_blank" rel="noopener">${escapeHtml(currentLink || "Ausente")}</a><small>Link correto</small><span>${escapeHtml(correctLink || "Pendente")}</span></div>
+          <div><small>Diagnostico</small><strong>${escapeHtml(status)}</strong><span>${escapeHtml(validation.failures.join(", ") || "Cadeia validada localmente")}</span></div>
+          <div class="ai360-audit-actions">
+            ${auditButton("corrigir", campaign.id, "CORRIGIR")}${auditButton("localizar", campaign.id, "LOCALIZAR PRODUTO")}${auditButton("cadastrar", campaign.id, "CADASTRAR PRODUTO")}
+            ${auditButton("atualizar-link", campaign.id, "ATUALIZAR LINK")}${auditButton("cancelar", campaign.id, "CANCELAR")}${auditButton("excluir", campaign.id, "EXCLUIR")}
+            ${auditButton("republicar", campaign.id, "REPUBLICAR")}${auditButton("ignorar", campaign.id, "IGNORAR")}${auditButton("abrir-produto", campaign.id, "ABRIR PRODUTO")}${auditButton("abrir-publicacao", campaign.id, "ABRIR PUBLICACAO")}
+          </div>
+        </article>`;
+      }).join("");
+  }
+
+  function auditButton(action, campaignId, label) {
+    return `<button type="button" data-ai360-audit-action="${action}" data-campaign-id="${escapeAttr(campaignId)}">${label}</button>`;
+  }
+
+  function auditFilterMatches(filter, campaign, validation) {
+    if (filter === "todos") return true;
+    if (filter === "corretos") return validation.readyToPublish;
+    if (filter === "links_quebrados") return validation.status === "LINKS_QUEBRADOS";
+    if (filter === "produto_inexistente") return validation.status === "PRODUTO_INEXISTENTE";
+    if (filter === "produto_diferente") return validation.status === "PRODUTO_DIFERENTE";
+    if (filter === "sem_afiliado") return validation.status === "SEM_AFILIADO";
+    if (filter === "agendados") return campaign.status === "agendado";
+    if (filter === "publicados") return campaign.status === "publicado";
+    if (filter === "cancelados") return campaign.status === "cancelado";
+    if (filter === "revisao_manual") return campaign.status === "revisao_manual" || !validation.readyToPublish;
+    return true;
+  }
+
+  function handleAuditAction(action, campaignId) {
+    const robot = loadRobot();
+    const index = robot.queue.findIndex(item => item.id === campaignId);
+    if (index < 0) return;
+    const campaign = robot.queue[index];
+    const product = findProduct(campaign.productId);
+    if (action === "abrir-produto") {
+      const link = productPublicLink(product);
+      if (link) window.open(link, "_blank", "noopener");
+      else showLocalToast("Produto sem link curto validado");
+      return;
+    }
+    if (action === "abrir-publicacao") {
+      if (campaign.publicationUrl) window.open(campaign.publicationUrl, "_blank", "noopener");
+      else showLocalToast("A integracao nao registrou URL publica para esta campanha");
+      return;
+    }
+    if (action === "cadastrar") {
+      location.href = `${location.pathname}?route=/admin/produtos`;
+      return;
+    }
+    if (["corrigir", "atualizar-link"].includes(action)) {
+      if (!product || !isCampaignProduct(product)) {
+        campaign.status = "revisao_manual";
+        campaign.auditStatus = "LOCALIZAR_PRODUTO";
+      } else {
+        const store = findStore(product.storeId);
+        campaign.productId = String(product.id);
+        campaign.title = trim(product.name || product.nome || product.title);
+        campaign.storeId = product.storeId || "";
+        campaign.storeName = trim(store.name || store.commercialName || "Impacto 360 Afiliado");
+        campaign.image = productImage(product);
+        campaign.link = productPublicLink(product);
+        campaign.caption = buildCaption(product, store, campaign.channel);
+        campaign.status = "agendado";
+        campaign.auditStatus = "OK";
+        campaign.auditFailures = [];
+        campaign.updatedAt = new Date().toISOString();
+      }
+    }
+    if (action === "localizar") {
+      campaign.status = "revisao_manual";
+      campaign.auditStatus = "LOCALIZAR_PRODUTO";
+    }
+    if (action === "cancelar") {
+      campaign.status = "cancelado";
+      campaign.cancelledAt = new Date().toISOString();
+    }
+    if (action === "excluir") {
+      if (!window.confirm("Excluir somente esta campanha da fila local?")) return;
+      robot.queue.splice(index, 1);
+    }
+    if (action === "republicar") {
+      const validation = validateCampaignLocally(campaign);
+      campaign.status = validation.readyToPublish ? "pronto" : "bloqueado";
+      campaign.auditStatus = validation.status;
+      campaign.auditFailures = validation.failures;
+    }
+    if (action === "ignorar") campaign.status = "ignorado";
+    saveRobot(robot);
+  }
+
   function handleAdminClick(event) {
+    const auditButton = event.target.closest("[data-ai360-audit-action]");
+    if (auditButton) {
+      handleAuditAction(auditButton.dataset.ai360AuditAction, auditButton.dataset.campaignId);
+      return;
+    }
     const button = event.target.closest("[data-ai360-social-action]");
     if (!button) return;
     const action = button.dataset.ai360SocialAction;
@@ -622,7 +779,7 @@
       const robot = loadRobot();
       robot.active = true;
       robot.autoPublish = true;
-      robot.approvalRequired = false;
+      robot.approvalRequired = true;
       saveRobot(robot);
       showLocalToast("Robo social ativado");
       startAutoRobot();
@@ -655,6 +812,7 @@
     if (field.dataset.ai360SocialField === "endpoint") robot.endpoint = trim(field.value) || DEFAULT_ENDPOINT;
     if (field.dataset.ai360SocialField === "dailyLimit") robot.dailyLimit = Math.max(1, Number(field.value) || 12);
     if (field.dataset.ai360SocialField === "autoPublish") robot.autoPublish = !!field.checked;
+    if (field.dataset.ai360SocialField === "auditFilter") robot.auditFilter = trim(field.value) || "todos";
     saveRobot(robot);
   }
 
@@ -720,13 +878,14 @@
 
   function buildCampaign(product, store, channel, index) {
     const title = trim(product.name || product.nome || "Oferta Impacto 360");
-    const link = productLink(product);
+    const link = productPublicLink(product);
     const price = trim(product.price || product.preco || "");
     const image = productImage(product);
     const storeName = trim(store.name || store.commercialName || "Impacto 360 Afiliado");
     const schedule = new Date(Date.now() + (index + 1) * 45 * 60 * 1000).toISOString();
     return {
       id: `ai360-${Date.now()}-${safeId(product.id || title)}-${channel}`,
+      productId: String(product.id || ""),
       key: `${todayKey()}:${product.id || title}:${channel}`,
       channel,
       title,
@@ -772,9 +931,19 @@
     if (Date.now() < Number(robot.quietUntil || 0) && !manual) return;
     const sentToday = robot.history.filter(item => dayFromIso(item.at) === todayKey()).length;
     if (sentToday >= robot.dailyLimit) return;
-    const campaign = robot.queue.find(item => ["pronto", "agendado", "falha"].includes(item.status));
+    const campaign = robot.queue.find(item => ["pronto", "agendado"].includes(item.status));
     if (!campaign) {
       if (manual) showLocalToast("Nao ha campanha pendente na fila");
+      return;
+    }
+    const validation = validateCampaignLocally(campaign);
+    if (!validation.readyToPublish) {
+      campaign.status = "bloqueado";
+      campaign.auditStatus = validation.status;
+      campaign.auditFailures = validation.failures;
+      campaign.blockedAt = new Date().toISOString();
+      saveRobot(robot);
+      if (manual) showLocalToast("Publicacao bloqueada: revise produto, link, titulo e imagem");
       return;
     }
     try {
@@ -816,9 +985,10 @@
   }
 
   function isCampaignProduct(product) {
-    if (!product || String(product.status || "").toLowerCase() === "rascunho") return false;
+    if (!product || String(product.status || "").toLowerCase() !== "ativo") return false;
     if (product.aprovadoParaPublicacao === false) return false;
-    if (!isValidLink(productLink(product))) return false;
+    if (!isSpecificAffiliateLink(productLink(product))) return false;
+    if (!isValidShortLink(productPublicLink(product))) return false;
     if (!productImage(product)) return false;
     if (product.tipoConteudo === "postagem_loja_musica") return false;
     return true;
@@ -844,6 +1014,10 @@
     return trim(product?.linkCompra || product?.linkAfiliado || product?.affiliateLink || product?.linkComissionado || product?.linkPlataforma || product?.link_original_afiliado || product?.url || product?.linkOriginal);
   }
 
+  function productPublicLink(product) {
+    return trim(product?.shortUrl || (product?.shortPath ? `https://impacto360afiliado.com.br${product.shortPath}` : ""));
+  }
+
   function productImage(product) {
     const image = trim(product?.fotoPrincipal || product?.imagemPrincipal || product?.image || product?.imagem);
     if (/placeholder|sem[-_ ]?(foto|imagem)|COLOCAR_|URL_|LINK_/i.test(image)) return "";
@@ -852,6 +1026,45 @@
 
   function isValidLink(link) {
     return /^https?:\/\//i.test(link) && !/COLOCAR_|URL_|LINK_|placeholder/i.test(link);
+  }
+
+  function isValidShortLink(link) {
+    return /^https:\/\/impacto360afiliado\.com\.br\/p\/[a-f0-9]{10}\/$/.test(trim(link));
+  }
+
+  function isSpecificAffiliateLink(link) {
+    const value = trim(link);
+    if (!/^https:\/\//i.test(value) || /\/(?:search|busca|pesquisa|categoria)(?:\/|\?|$)/i.test(value)) return false;
+    return /^https:\/\/(?:meli\.la\/[A-Za-z0-9_-]+|s\.shopee\.com\.br\/[A-Za-z0-9_-]+|(?:www\.)?amazon\.com\.br\/(?:dp|gp\/product)\/[A-Z0-9]{10}\?[^#]*tag=|[^/]+\.hotmart\.com\/|(?:pt\.)?aliexpress\.com\/item\/\d+\.html)/i.test(value);
+  }
+
+  function validateCampaignLocally(campaign) {
+    const product = findProduct(campaign?.productId);
+    const failures = [];
+    if (!product) failures.push("catalogRegistered");
+    if (product && String(product.status || "").toLowerCase() !== "ativo") failures.push("marketplaceActive");
+    if (product && product.aprovadoParaPublicacao === false) failures.push("catalogApproval");
+    if (product && !isSpecificAffiliateLink(productLink(product))) failures.push("affiliateLinkValid");
+    if (product && productPublicLink(product) !== trim(campaign?.link)) failures.push("shortLinkValid");
+    if (product && normalizeAuditText(campaign?.title) !== normalizeAuditText(product.name || product.nome || product.title)) failures.push("titleMatch");
+    if (product && normalizeMedia(campaign?.image) !== normalizeMedia(productImage(product))) failures.push("imageMatch");
+    if (product && trim(campaign?.price) && normalizeAuditText(campaign.price) !== normalizeAuditText(product.price || product.preco)) failures.push("priceMatch");
+    if (/https?:\/\/(?:[^\s/]+\.)?(?:amazon\.com\.br|mercadolivre\.com\.br|meli\.la|shopee\.com\.br|hotmart\.com|aliexpress\.com)/i.test(trim(campaign?.caption))) failures.push("rawAffiliateInCaption");
+    if (!CHANNELS.includes(campaign?.channel)) failures.push("channelSupported");
+    const status = !product ? "PRODUTO_INEXISTENTE"
+      : failures.includes("affiliateLinkValid") ? "SEM_AFILIADO"
+      : failures.includes("shortLinkValid") ? "LINKS_QUEBRADOS"
+      : failures.includes("titleMatch") || failures.includes("imageMatch") || failures.includes("priceMatch") ? "PRODUTO_DIFERENTE"
+      : failures.length ? "REVISAO_MANUAL" : "OK";
+    return { readyToPublish: failures.length === 0, failures, status, product };
+  }
+
+  function normalizeAuditText(value) {
+    return trim(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  }
+
+  function normalizeMedia(value) {
+    return trim(value).replace(/^https?:\/\/[^/]+\//i, "").replace(/^\.?\//, "").toLowerCase();
   }
 
   function isAdminRoute() {
@@ -992,9 +1205,10 @@
       .ai360-social-note{padding:10px;border:1px solid #f1d58f;border-radius:9px;background:#fff8df;color:#725013;font-size:12px;font-weight:800}
       .ai360-token-holders{margin-top:14px;padding:14px;border:1px solid #d7e8f7;border-radius:12px;background:#f8fbff}.ai360-token-holders header{display:flex;justify-content:space-between;gap:12px;align-items:start}.ai360-token-holders h3{margin:0 0 4px}.ai360-token-holders p{margin:0;color:#56667a;font-size:12px}.ai360-token-holders header>strong{white-space:nowrap;padding:8px 10px;border-radius:999px;background:#ddf7ef;color:#0c6b46;font-size:12px}.ai360-token-holders ul{display:grid;gap:8px;margin:12px 0 0;padding:0;list-style:none}.ai360-token-holders li{display:grid;grid-template-columns:1.2fr 120px 1fr 80px;gap:8px;align-items:center;padding:9px;border:1px solid #e4edf6;border-radius:9px;background:#fff;font-size:12px}.ai360-token-holders li span{color:#56667a}.ai360-token-holders li b{color:#1d5cff}
       .ai360-social-queue h3{margin:16px 0 8px}.ai360-social-queue ul{display:grid;gap:8px;margin:0;padding:0;list-style:none}.ai360-social-queue li{display:grid;grid-template-columns:120px 1fr 150px;gap:8px;align-items:center;padding:9px;border:1px solid #e4edf6;border-radius:9px}.ai360-social-queue span{font-size:11px;font-weight:900;color:#1d5cff}.ai360-social-queue strong{font-size:13px}.ai360-social-queue em{font-style:normal;font-size:11px;font-weight:900;color:#0e766e}
+      .ai360-publication-audit{margin-top:18px;padding-top:16px;border-top:2px solid #d7e8f7}.ai360-publication-audit>header{display:flex;justify-content:space-between;gap:14px;align-items:end}.ai360-publication-audit h3{margin:0 0 4px}.ai360-publication-audit p{margin:0;color:#56667a;font-size:12px}.ai360-publication-audit label{display:grid;gap:4px;font-size:11px;font-weight:900}.ai360-publication-audit select{min-height:38px;border:1px solid #c9d9e8;border-radius:8px;padding:7px}.ai360-audit-table{display:grid;gap:10px;margin-top:12px}.ai360-audit-row{display:grid;grid-template-columns:1.2fr 1.2fr 1.3fr 1fr;gap:10px;padding:11px;border:1px solid #dce8f7;border-radius:10px;background:#f9fcff}.ai360-audit-row>div{display:grid;gap:3px;align-content:start;min-width:0}.ai360-audit-row small{font-size:9px;font-weight:950;color:#5d6f84;text-transform:uppercase}.ai360-audit-row strong{font-size:12px}.ai360-audit-row span,.ai360-audit-row a{overflow-wrap:anywhere;color:#56667a;font-size:11px}.ai360-audit-actions{grid-column:1/-1!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap}.ai360-audit-actions button{min-height:30px;border:1px solid #c9d9e8;border-radius:7px;padding:0 8px;background:#fff;color:#15304f;font-size:9px;font-weight:950}.ai360-audit-actions button:first-child,.ai360-audit-actions button:nth-child(4){background:#1d5cff;color:#fff;border-color:#1d5cff}
       .ai360-social-toast{position:fixed;left:50%;bottom:24px;z-index:10040;transform:translateX(-50%) translateY(20px);opacity:0;padding:12px 14px;border-radius:10px;background:#081f42;color:#fff;font:800 13px Inter,system-ui;box-shadow:0 16px 42px rgba(8,25,47,.24);transition:.18s ease}
       .ai360-social-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-      @media(max-width:760px){.ai360-rewards-widget{right:10px;bottom:10px}.ai360-social-panel{padding:13px}.ai360-social-head,.ai360-token-holders header{display:block}.ai360-social-stats,.ai360-social-controls{grid-template-columns:1fr}.ai360-reward-rules{grid-template-columns:repeat(2,1fr)}.ai360-social-queue li,.ai360-token-holders li{grid-template-columns:1fr}.ai360-social-head h2{font-size:20px}}
+      @media(max-width:760px){.ai360-rewards-widget{right:10px;bottom:10px}.ai360-social-panel{padding:13px}.ai360-social-head,.ai360-token-holders header,.ai360-publication-audit>header{display:block}.ai360-social-stats,.ai360-social-controls,.ai360-audit-row{grid-template-columns:1fr}.ai360-reward-rules{grid-template-columns:repeat(2,1fr)}.ai360-social-queue li,.ai360-token-holders li{grid-template-columns:1fr}.ai360-social-head h2{font-size:20px}}
     `;
     document.head.appendChild(style);
   }
