@@ -801,6 +801,10 @@ a {
 .marketplace-shopee .marketplace-mark { background: #fff0e9; color: #bc3c1c; }
 .marketplace-amazon .marketplace-mark { background: #edf0f4; color: #172434; font-size: 29px; font-family: Georgia, serif; }
 .marketplace-hotmart .marketplace-mark { background: #fff0ec; color: #ba361c; font-size: 25px; }
+.marketplace-autooferta .marketplace-mark { background: #eaf7f0; color: #16734a; font-size: 13px; }
+.marketplace-virtus-corretora .marketplace-mark { background: #e9f2ff; color: #164d8f; font-size: 13px; }
+.marketplace-eduzz .marketplace-mark { background: #fff1e8; color: #b44916; }
+.marketplace-magalu .marketplace-mark { background: #e7f5ff; color: #0876c9; }
 
 .marketplace-copy { min-width: 0; }
 .marketplace-copy strong { display: block; font-size: 15px; line-height: 1.3; }

@@ -319,23 +319,33 @@ const revalidationQueue = compactProducts
   }));
 const marketplaces = readJson("dados/marketplaces.json").marketplaces;
 const marketplaceHosts = {
-  "mercado-livre": ["mercadolivre.com.br", "meli.la"], shopee: ["shopee.com.br"],
-  amazon: ["amazon.com.br", "amzn.to", "link.amazon"], hotmart: ["hotmart.com"],
+  "mercado-livre": ["mercadolivre.com.br", "meli.la"],
+  shopee: ["shopee.com.br"],
+  amazon: ["amazon.com.br", "amzn.to", "link.amazon"],
+  hotmart: ["hotmart.com"],
+  autooferta: ["autooferta.com.br"],
+  "virtus-corretora": ["virtuscorretora.com.br"],
+  eduzz: ["eduzz.com"],
+  magalu: ["magazineluiza.com.br", "magalu.com"],
 };
-if (marketplaces.length !== 4 || new Set(marketplaces.map(item => item.id)).size !== 4) throw new Error("Os quatro marketplaces devem estar configurados uma única vez.");
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu"];
+if (marketplaces.length !== requiredMarketplaceIds.length || new Set(marketplaces.map(item => item.id)).size !== marketplaces.length || !requiredMarketplaceIds.every(id => marketplaces.some(item => item.id === id))) throw new Error("Os parceiros obrigatórios devem estar configurados uma única vez.");
 for (const item of marketplaces) {
   const url = new URL(item.url);
   if (url.protocol !== "https:" || url.username || url.password
     || !marketplaceHosts[item.id]?.some(host => url.hostname === host || url.hostname.endsWith(`.${host}`))
-    || !["affiliate", "official"].includes(item.type)) throw new Error(`Atalho inválido: ${item.id}`);
+    || !["affiliate", "referral", "official"].includes(item.type)) throw new Error(`Atalho inválido: ${item.id}`);
 }
+const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", hotmart: "h", autooferta: "AO", "virtus-corretora": "VC", eduzz: "E", magalu: "M" };
+const marketplaceLinkLabel = type => type === "affiliate" ? "Link de afiliado" : type === "referral" ? "Link de indicação" : "Acesso oficial sem rastreamento confirmado";
+const marketplaceLinkAria = type => type === "affiliate" ? "link de afiliado" : type === "referral" ? "link de indicação" : "acesso oficial sem rastreamento confirmado";
 const marketplaceMarkup = `<section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
   <div class="shell">
     <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div><p>Abra a plataforma e encontre o que precisa.</p></div>
-    <div class="marketplace-grid">${marketplaces.map(item => `<a class="marketplace-card marketplace-${item.id}" href="${html(item.url)}" target="_blank" rel="noopener noreferrer${item.type === "affiliate" ? " sponsored" : ""}" aria-label="Abrir ${html(item.name)} em nova aba — ${item.type === "affiliate" ? "link de afiliado" : "acesso sem vínculo de afiliado"}">
-      <span class="marketplace-mark" aria-hidden="true">${({"mercado-livre":"ML",shopee:"S",amazon:"a",hotmart:"h"})[item.id]}</span>
+    <div class="marketplace-grid">${marketplaces.map(item => `<a class="marketplace-card marketplace-${item.id}" href="${html(item.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(item.type) ? " sponsored" : ""}" aria-label="Abrir ${html(item.name)} em nova aba — ${marketplaceLinkAria(item.type)}">
+      <span class="marketplace-mark" aria-hidden="true">${marketplaceInitials[item.id]}</span>
       <span class="marketplace-copy"><strong>${html(item.name)}</strong><span>${html(item.description)}</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">${item.type === "affiliate" ? "Link de afiliado" : "Acesso sem vínculo de afiliado"}</small></a>`).join("")}</div>
+      <small class="marketplace-link-kind">${marketplaceLinkLabel(item.type)}</small></a>`).join("")}</div>
     <p class="marketplace-note">Nos produtos selecionados, os botões de compra usam nossos links de afiliado. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
   </div></section>`;
 const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8")

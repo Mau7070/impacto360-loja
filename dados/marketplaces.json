@@ -27,6 +27,34 @@
       "url": "https://hotmart.com/pt-br/marketplace",
       "type": "official",
       "description": "Descubra cursos e produtos digitais."
+    },
+    {
+      "id": "autooferta",
+      "name": "AutoOferta",
+      "url": "https://autooferta.com.br/criar-conta",
+      "type": "official",
+      "description": "Crie sua conta e ative o perfil para gerar links exclusivos de afiliado."
+    },
+    {
+      "id": "virtus-corretora",
+      "name": "Virtus Corretora",
+      "url": "https://virtuscorretora.com.br/indicacao?i=Mauricio%20de%20Oliveira&f=27997755666",
+      "type": "referral",
+      "description": "Atendimento humano no WhatsApp com indicação de Mauricio de Oliveira."
+    },
+    {
+      "id": "eduzz",
+      "name": "Eduzz",
+      "url": "https://www.eduzz.com/",
+      "type": "official",
+      "description": "Acesso público à plataforma; ofertas com comissão exigem link específico."
+    },
+    {
+      "id": "magalu",
+      "name": "Magalu",
+      "url": "https://www.magazineluiza.com.br/",
+      "type": "official",
+      "description": "Acesso oficial enquanto o link do Influenciador Magalu não é confirmado."
     }
   ]
 }

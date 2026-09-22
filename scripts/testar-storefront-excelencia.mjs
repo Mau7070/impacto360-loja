@@ -92,7 +92,16 @@ check(
 check("hero moderno com divulgação de afiliados", app.includes("Seu próximo achado") && app.includes("Somos uma vitrine de afiliados") && !app.includes("Ver ofertas de hoje"));
 check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("Seu próximo achado começa aqui.") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
-check("quatro atalhos gerais identificados corretamente", marketplaces.length === 4 && marketplaces.every(item => html.includes(`href="${item.url.replaceAll("&", "&amp;")}"`)) && app.includes("Acesso sem vínculo de afiliado"));
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu"];
+check(
+  "atalhos gerais e de indicação identificados corretamente",
+  marketplaces.length === requiredMarketplaceIds.length
+    && new Set(marketplaces.map(item => item.id)).size === marketplaces.length
+    && requiredMarketplaceIds.every(id => marketplaces.some(item => item.id === id))
+    && marketplaces.every(item => html.includes(`href="${item.url.replaceAll("&", "&amp;")}"`))
+    && app.includes("Acesso oficial sem rastreamento confirmado")
+    && app.includes("Link de indicação"),
+);
 check("rodape protegido contra salto de layout inicial", css.includes("html:not(.storefront-ready) .site-footer") && app.includes('classList.add("storefront-ready")'));
 check("oito categorias iniciais", app.includes("categoryDefinitions") && app.match(/slug: "/g)?.length >= 8);
 check("categorias priorizam a loja correta", app.includes("storeCategoryById") && app.includes('["impacto-ferramentas", "ferramentas"]') && app.includes("categorySlugForProduct(product)"));

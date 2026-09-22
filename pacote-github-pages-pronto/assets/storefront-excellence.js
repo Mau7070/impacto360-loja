@@ -368,6 +368,10 @@ const marketplaceDefinitions = [
   { id: "shopee", name: "Shopee", initials: "S", icon: "bag", url: "https://shopee.com.br/", domains: ["shopee.com.br"] },
   { id: "amazon", name: "Amazon", initials: "a", icon: "bag", url: "https://www.amazon.com.br/", domains: ["amazon.com.br", "amzn.to", "link.amazon"] },
   { id: "hotmart", name: "Hotmart", initials: "h", icon: "spark", url: "https://hotmart.com/pt-br/marketplace", domains: ["hotmart.com"] },
+  { id: "autooferta", name: "AutoOferta", initials: "AO", icon: "car", url: "https://autooferta.com.br/", domains: ["autooferta.com.br"] },
+  { id: "virtus-corretora", name: "Virtus Corretora", initials: "VC", icon: "shield", url: "https://virtuscorretora.com.br/", domains: ["virtuscorretora.com.br"] },
+  { id: "eduzz", name: "Eduzz", initials: "E", icon: "spark", url: "https://www.eduzz.com/", domains: ["eduzz.com"] },
+  { id: "magalu", name: "Magalu", initials: "M", icon: "bag", url: "https://www.magazineluiza.com.br/", domains: ["magazineluiza.com.br", "magalu.com"] },
 ];
 
 function homeMarketplaces() {
@@ -382,10 +386,22 @@ function homeMarketplaces() {
     return {
       ...definition,
       url: valid ? configured.url : definition.url,
-      type: valid && configured.type === "affiliate" ? "affiliate" : "official",
+      type: valid && ["affiliate", "referral"].includes(configured.type) ? configured.type : "official",
       description: valid && text(configured.description) ? text(configured.description) : "Acesso geral à plataforma",
     };
   });
+}
+
+function marketplaceLinkLabel(type) {
+  if (type === "affiliate") return "Link de afiliado";
+  if (type === "referral") return "Link de indicação";
+  return "Acesso oficial sem rastreamento confirmado";
+}
+
+function marketplaceLinkAria(type) {
+  if (type === "affiliate") return "link de afiliado";
+  if (type === "referral") return "link de indicação";
+  return "acesso oficial sem rastreamento confirmado";
 }
 
 function marketplaceShortcuts() {
@@ -398,11 +414,11 @@ function marketplaceShortcuts() {
         </div>
         <div class="marketplace-grid">
           ${homeMarketplaces().map(marketplace => `
-            <a class="marketplace-card marketplace-${marketplace.id}" href="${escapeAttr(marketplace.url)}" target="_blank" rel="noopener noreferrer${marketplace.type === "affiliate" ? " sponsored" : ""}" aria-label="Abrir ${escapeAttr(marketplace.name)} em nova aba — ${marketplace.type === "affiliate" ? "link de afiliado" : "acesso sem vínculo de afiliado"}">
+            <a class="marketplace-card marketplace-${marketplace.id}" href="${escapeAttr(marketplace.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(marketplace.type) ? " sponsored" : ""}" aria-label="Abrir ${escapeAttr(marketplace.name)} em nova aba — ${marketplaceLinkAria(marketplace.type)}">
               <span class="marketplace-mark" aria-hidden="true">${escapeHtml(marketplace.initials)}</span>
               <span class="marketplace-copy"><strong>${escapeHtml(marketplace.name)}</strong><span>${escapeHtml(marketplace.description)}</span></span>
               <span class="marketplace-arrow" aria-hidden="true">↗</span>
-              <small class="marketplace-link-kind">${marketplace.type === "affiliate" ? "Link de afiliado" : "Acesso sem vínculo de afiliado"}</small>
+              <small class="marketplace-link-kind">${marketplaceLinkLabel(marketplace.type)}</small>
             </a>`).join("")}
         </div>
         <p class="marketplace-note">Nos produtos selecionados, os botões de compra usam nossos links de afiliado. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
