@@ -3,6 +3,7 @@ const SITE_URL = "https://impacto360afiliado.com.br";
 const CATALOG_URL = "/dados/catalogo-publico.json?v=20260914-modernizacao-1";
 const STORES_URL = "/dados/stores.json?v=20260914-modernizacao-1";
 const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260914-modernizacao-1";
+const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260923-carros-1";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
 const VIEW_HISTORY_KEY = "impacto360ViewHistory";
@@ -29,6 +30,7 @@ const state = {
   products: [],
   stores: [],
   marketplaces: [],
+  vehicles: [],
   storeById: new Map(),
   visibleLimit: PAGE_SIZE,
   suggestionIndex: -1,
@@ -282,6 +284,7 @@ const departmentShelves = [
 ];
 
 const iconPaths = {
+  car: '<path d="M5 11 7 5h10l2 6M3 11h18v8H3v-8Zm3 8v2m12-2v2M6.5 15h.01m11 0h.01M7 11h10"/>',
   phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10 5h4M11 18.5h2"/>',
   home: '<path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10M9 20v-6h6v6"/>',
   appliance: '<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M5 9h14M8 6h.01M12 6h.01M15.5 6h.01M8 13h8M8 16h5"/>',
@@ -363,6 +366,47 @@ function isAllowedAffiliateUrl(value) {
   }
 }
 
+function verifiedAutoOfertaVehicle(vehicle) {
+  if (!vehicle || vehicle.status !== "published" || vehicle.affiliateVerified !== true) return false;
+  if (!text(vehicle.id) || !text(vehicle.title)) return false;
+  const checkedAt = Date.parse(vehicle.offerVerifiedAt);
+  if (!Number.isFinite(checkedAt) || checkedAt > Date.now() || Date.now() - checkedAt > 24 * 60 * 60 * 1000) return false;
+  try {
+    const url = new URL(vehicle.affiliateUrl);
+    return url.protocol === "https:" && ["autooferta.com.br", "www.autooferta.com.br"].includes(url.hostname.toLowerCase());
+  } catch (error) {
+    return false;
+  }
+}
+
+function vehicleCard(vehicle) {
+  const price = Number(vehicle.priceBRL);
+  const priceLabel = Number.isFinite(price) && price > 0
+    ? new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }).format(price)
+    : "Consulte o valor no parceiro";
+  const mileage = Number(vehicle.mileageKm);
+  const details = [
+    text(vehicle.version),
+    text(vehicle.year),
+    Number.isFinite(mileage) && mileage >= 0 && vehicle.mileageKm !== "" && vehicle.mileageKm != null
+      ? new Intl.NumberFormat("pt-BR").format(mileage) + " km" : "",
+    text(vehicle.location),
+  ].filter(Boolean);
+  return [
+    '<article class="vehicle-card">',
+    '<div class="vehicle-card-art" aria-hidden="true">', icon("car"), '</div>',
+    '<div class="vehicle-card-body">',
+    '<span class="section-kicker">AutoOferta · anúncio verificado</span>',
+    '<h3>', escapeHtml(vehicle.title), '</h3>',
+    '<p class="vehicle-card-details">', details.map(escapeHtml).join(" · "), '</p>',
+    '<p class="vehicle-card-price">', escapeHtml(priceLabel), '</p>',
+    '<p class="vehicle-card-note">Preço, disponibilidade e condições devem ser confirmados na AutoOferta.</p>',
+    '<a class="btn btn-primary" href="', escapeAttr(vehicle.affiliateUrl), '" target="_blank" rel="noopener noreferrer sponsored">',
+    'Ver anúncio na AutoOferta <span aria-hidden="true">↗</span></a>',
+    '<small>Publicidade · A Impacto360 pode receber comissão por este link, sem custo adicional para você.</small>',
+    '</div></article>',
+  ].join("");
+}
 const marketplaceDefinitions = [
   { id: "mercado-livre", name: "Mercado Livre", initials: "ML", icon: "bag", url: "https://www.mercadolivre.com.br/", domains: ["mercadolivre.com.br", "mercadolivre.com", "meli.la"] },
   { id: "shopee", name: "Shopee", initials: "S", icon: "bag", url: "https://shopee.com.br/", domains: ["shopee.com.br"] },
@@ -1079,6 +1123,17 @@ function renderHome() {
   const homeContent = `
     ${marketplaceShortcuts()}
 
+    <section class="section section-white cars-home-preview" aria-labelledby="cars-home-title">
+      <div class="shell cars-home-panel">
+        <span class="cars-home-icon" aria-hidden="true">🚗</span>
+        <div>
+          <span class="section-kicker">Nova área · veículos</span>
+          <h2 id="cars-home-title">Um espaço para encontrar seu próximo carro</h2>
+          <p>Os anúncios entram na vitrine depois da conferência do veículo, das condições e do link de indicação.</p>
+        </div>
+        <a class="btn btn-primary" href="/carros/" data-route="/carros/">Explorar carros <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
     <section class="section section-soft home-products" id="produtos">
       <div class="shell">
         <nav class="mobile-home-access" aria-label="Acesso rápido à vitrine">
@@ -1154,6 +1209,27 @@ function renderHome() {
   scrollToHash();
 }
 
+function renderCars() {
+  const vehicles = state.vehicles.filter(verifiedAutoOfertaVehicle);
+  setMeta({
+    title: "Carros | Impacto360 Afiliado",
+    description: "Explore veículos da AutoOferta com anúncio e link de afiliado verificados pela Impacto360.",
+    canonical: "/carros/",
+    robots: "index,follow,max-image-preview:large",
+  });
+  appRoot().innerHTML = [
+    pageHero("Carros", "Veículos selecionados com transparência. Confira sempre preço, disponibilidade e condições na AutoOferta.", [["Início", "/"], ["Carros", ""]]),
+    '<section class="section"><div class="shell">',
+    '<div class="cars-intro"><div><span class="section-kicker">Vitrine de veículos</span>',
+    '<h2>Compare com calma antes de decidir</h2>',
+    '<p>Confira versão, ano, quilometragem, localização, documentação e condições diretamente no anúncio. A seleção é revisada antes de aparecer aqui.</p>',
+    '</div><div class="cars-intro-mark" aria-hidden="true">', icon("car"), '</div></div>',
+    vehicles.length
+      ? '<div class="vehicle-grid">' + vehicles.map(vehicleCard).join("") + '</div>'
+      : '<div class="cars-empty"><span class="cars-empty-icon" aria-hidden="true">' + icon("car") + '</span><h2>Veículos em análise</h2><p>Ainda não há anúncios com oferta e link de afiliado confirmados. Publicaremos os carros aqui após a verificação.</p></div>',
+    '</div></section>',
+  ].join("");
+}
 function renderAllStores(routeUrl) {
   const aisleSlug = routeUrl.searchParams.get("ala") || "";
   const selectedAisles = aisleSlug
@@ -1923,6 +1999,7 @@ function renderRoute({ focus = false } = {}) {
   if (homeRoute) renderHome();
   else if (path === "/lojas" || path === "/lojas/") renderAllStores(url);
   else if (path === "/buscar" || path === "/buscar/") renderSearch(url);
+  else if (normalizedPath === "/carros/") renderCars();
   else if (normalizedPath === "/ofertas/") {
     const offersUrl = new URL("/buscar/", location.origin);
     offersUrl.searchParams.set("oferta", "1");
@@ -2799,12 +2876,16 @@ function setupGlobalEvents() {
 }
 
 async function loadData() {
-  const [productsResponse, storesResponse, marketplaces] = await Promise.all([
+  const [productsResponse, storesResponse, marketplaces, vehicles] = await Promise.all([
     fetch(CATALOG_URL, { cache: "no-store" }),
     fetch(STORES_URL, { cache: "no-store" }),
     fetch(MARKETPLACES_URL, { cache: "no-store" })
       .then(response => response.ok ? response.json() : null)
       .then(data => Array.isArray(data?.marketplaces) ? data.marketplaces : [])
+      .catch(() => []),
+    fetch(VEHICLES_URL, { cache: "no-store" })
+      .then(response => response.ok ? response.json() : null)
+      .then(data => Array.isArray(data?.vehicles) ? data.vehicles : [])
       .catch(() => []),
   ]);
   if (!productsResponse.ok || !storesResponse.ok) throw new Error("Não foi possível carregar o catálogo público.");
@@ -2812,6 +2893,7 @@ async function loadData() {
   state.products = Array.isArray(products) ? products : [];
   state.stores = Array.isArray(stores) ? stores : [];
   state.marketplaces = marketplaces;
+  state.vehicles = vehicles;
   state.storeById = new Map(state.stores.map(store => [store.id, store]));
   state.products.forEach(product => {
     // Unverified historical prices must not enter cards, sorting, suggestions or alerts.

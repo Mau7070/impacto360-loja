@@ -453,6 +453,11 @@ const commercialRoutes = [
     description: "Ajuste leitura, contraste e movimentos de acordo com sua preferência.",
   },
   {
+    route: "/carros/",
+    title: "Carros | Impacto360 Afiliado",
+    description: "Veículos selecionados com anúncio e link de afiliado verificados.",
+  },
+  {
     route: "/como-comprar/",
     title: "Como comprar | Impacto360 Afiliado",
     description: "Encontre, confira e conclua sua compra no site oficial da loja parceira.",
@@ -535,6 +540,7 @@ for (const route of [...commercialRoutes, ...categoryRoutes]) {
 for (const relative of [
   "dados/stores.json",
   "dados/marketplaces.json",
+  "dados/veiculos-autooferta.json",
   "dados/relatorio-integridade-publicacao.json",
   "favicon.svg",
   "manifest.webmanifest",
