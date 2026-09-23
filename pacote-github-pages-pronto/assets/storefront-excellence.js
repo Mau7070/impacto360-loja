@@ -394,7 +394,7 @@ function vehicleCard(vehicle) {
     text(vehicle.location),
   ].filter(Boolean);
   return [
-    '<article class="vehicle-card">',
+    '<article class="vehicle-card" id="veiculo-' + escapeAttr(vehicle.id) + '">',
     '<div class="vehicle-card-art" aria-hidden="true">', icon("car"), '</div>',
     '<div class="vehicle-card-body">',
     '<span class="section-kicker">AutoOferta · anúncio verificado</span>',
@@ -1230,6 +1230,7 @@ function renderCars() {
       : '<div class="cars-empty"><span class="cars-empty-icon" aria-hidden="true">' + icon("car") + '</span><h2>Veículos em análise</h2><p>Ainda não há anúncios com oferta e link de afiliado confirmados. Publicaremos os carros aqui após a verificação.</p><a class="btn btn-primary" href="' + AUTO_OFERTA_GENERAL_REF + '" target="_blank" rel="noopener noreferrer sponsored">Explorar a AutoOferta ↗</a><small>Publicidade · link geral de indicação. Consulte cada anúncio e suas condições diretamente na AutoOferta.</small></div>',
     '</div></section>',
   ].join("");
+  scrollToHash();
 }
 function renderAllStores(routeUrl) {
   const aisleSlug = routeUrl.searchParams.get("ala") || "";
