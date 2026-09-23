@@ -1,4 +1,56 @@
 {
   "source": "AutoOferta",
-  "vehicles": []
+  "vehicles": [
+    {
+      "id": "01a08b80-dfc0-71ef-9628-f7c40867b163",
+      "title": "FIAT Mobi LIKE 1.0 Fire Flex 5p. 2025",
+      "brand": "FIAT",
+      "model": "Mobi",
+      "version": "LIKE 1.0 Fire Flex 5p.",
+      "year": 2025,
+      "mileageKm": 14000,
+      "location": "Bauru, SP",
+      "seller": "SERGIPANO VEÍCULOS",
+      "priceBRL": 62800,
+      "sourceUrl": "https://autooferta.com.br/comprar/fiat/mobi/like-1-0-fire-flex-5p-2025/like-1-0-fire-flex-5p-2025-prata",
+      "affiliateUrl": "https://autooferta.com.br//comprar/fiat/mobi/like-1-0-fire-flex-5p-2025/like-1-0-fire-flex-5p-2025-prata?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=01a08b80-dfc0-71ef-9628-f7c40867b163",
+      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "affiliateVerified": true,
+      "status": "published"
+    },
+    {
+      "id": "019fbae4-ce7c-7001-b045-6241812752f1ef",
+      "title": "Renault Kardian Authentic 1.0 TB 12V 5p Aut. 2025",
+      "brand": "Renault",
+      "model": "Kardian",
+      "version": "Authentic 1.0 TB 12V 5p Aut.",
+      "year": 2025,
+      "mileageKm": 33000,
+      "location": "Bauru, SP",
+      "seller": "Proeste Renault Bauru",
+      "priceBRL": 99990,
+      "sourceUrl": "https://autooferta.com.br/comprar/renault/kardian/authentic-1-0-tb-12v-5p-aut/1-0-tce-flex-evolution-edc-preto",
+      "affiliateUrl": "https://autooferta.com.br//comprar/renault/kardian/authentic-1-0-tb-12v-5p-aut/1-0-tce-flex-evolution-edc-preto?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-ce7c-7001-b045-6241812752f1ef",
+      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "affiliateVerified": true,
+      "status": "published"
+    },
+    {
+      "id": "019fbae4-9724-7000-b0ba-4655b4a68d58f8",
+      "title": "HYUNDAI HB20S Comfort Plus 1.0 TB Flex 12V Aut 2025",
+      "brand": "HYUNDAI",
+      "model": "HB20S",
+      "version": "Comfort Plus 1.0 TB Flex 12V Aut",
+      "year": 2025,
+      "mileageKm": 47000,
+      "location": "Bauru, SP",
+      "seller": "Proeste Renault Bauru",
+      "priceBRL": 93990,
+      "sourceUrl": "https://autooferta.com.br/comprar/hyundai/hb20s/comfort-plus-1-0-tb-flex-12v-aut/1-0-tgdi-flex-comfort-plus-automatico-prata-2025-ju435",
+      "affiliateUrl": "https://autooferta.com.br//comprar/hyundai/hb20s/comfort-plus-1-0-tb-flex-12v-aut/1-0-tgdi-flex-comfort-plus-automatico-prata-2025-ju435?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-9724-7000-b0ba-4655b4a68d58f8",
+      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "affiliateVerified": true,
+      "status": "published"
+    }
+  ]
 }
