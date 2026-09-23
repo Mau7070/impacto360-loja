@@ -16,7 +16,13 @@
       "affiliateUrl": "https://autooferta.com.br//comprar/fiat/mobi/like-1-0-fire-flex-5p-2025/like-1-0-fire-flex-5p-2025-prata?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=01a08b80-dfc0-71ef-9628-f7c40867b163",
       "offerVerifiedAt": "2026-09-23T12:55:12Z",
       "affiliateVerified": true,
-      "status": "published"
+      "status": "published",
+      "transmission": "Manual",
+      "fuel": "Flex",
+      "bodyType": "Hatch",
+      "color": "Prata",
+      "description": "FIAT Mobi Like 1.0 Fire Flex de cinco portas, anunciado pela Sergipano Veículos em Bauru (SP). O anúncio informa ano exibido 2025/2025, 14.000 km, câmbio manual e cor prata. Confira as fotos do próprio veículo, os equipamentos, o histórico e as condições diretamente com o vendedor antes de negociar.",
+      "advertisedYearLabel": "2025/2025"
     },
     {
       "id": "019fbae4-ce7c-7001-b045-6241812752f1ef",
@@ -33,7 +39,12 @@
       "affiliateUrl": "https://autooferta.com.br//comprar/renault/kardian/authentic-1-0-tb-12v-5p-aut/1-0-tce-flex-evolution-edc-preto?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-ce7c-7001-b045-6241812752f1ef",
       "offerVerifiedAt": "2026-09-23T12:55:12Z",
       "affiliateVerified": true,
-      "status": "published"
+      "status": "published",
+      "transmission": "Automático",
+      "fuel": "Flex",
+      "color": "Preto",
+      "description": "Renault Kardian Authentic 1.0 turbo anunciado pela Proeste Renault Bauru, em Bauru (SP). O anúncio informa ano exibido 2025/2024, 33.000 km, câmbio automático e cor preta. Consulte as fotos reais, a lista de equipamentos, o histórico e as condições atualizadas na AutoOferta.",
+      "advertisedYearLabel": "2025/2024"
     },
     {
       "id": "019fbae4-9724-7000-b0ba-4655b4a68d58f8",
@@ -50,7 +61,22 @@
       "affiliateUrl": "https://autooferta.com.br//comprar/hyundai/hb20s/comfort-plus-1-0-tb-flex-12v-aut/1-0-tgdi-flex-comfort-plus-automatico-prata-2025-ju435?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-9724-7000-b0ba-4655b4a68d58f8",
       "offerVerifiedAt": "2026-09-23T12:55:12Z",
       "affiliateVerified": true,
-      "status": "published"
+      "status": "published",
+      "transmission": "Automático",
+      "fuel": "Flex",
+      "bodyType": "Sedan",
+      "color": "Prata",
+      "description": "HYUNDAI HB20S Comfort Plus 1.0 turbo flex anunciado pela Proeste Renault Bauru, em Bauru (SP). O anúncio informa ano exibido 2025/2024, 47.000 km, câmbio automático, carroceria sedã e cor prata. A página do parceiro relaciona itens de conforto, segurança e tecnologia; confirme os equipamentos da unidade e as condições da oferta antes de fechar negócio.",
+      "listedFeatures": [
+        "Ar-condicionado",
+        "Vidros e travas elétricas",
+        "Retrovisores elétricos",
+        "Airbag e freios ABS",
+        "Alarme",
+        "Multimídia e computador de bordo",
+        "Rodas de liga leve"
+      ],
+      "advertisedYearLabel": "2025/2024"
     }
   ]
 }

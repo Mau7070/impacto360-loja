@@ -3369,3 +3369,15 @@ a {
   .cars-intro-mark { display: none; }
   .vehicle-grid { grid-template-columns: 1fr; }
 }
+.vehicle-card-art { flex-direction: column; gap: 6px; padding: 18px; text-align: center; }
+.vehicle-card-art span { color: var(--color-text-secondary); font-size: .77rem; font-weight: 600; }
+.vehicle-card-description { margin: 0; color: var(--color-text); line-height: 1.55; }
+.vehicle-card-specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 0; overflow: hidden; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-border); }
+.vehicle-card-specs div { min-width: 0; padding: 10px 12px; background: var(--color-surface); }
+.vehicle-card-specs dt { color: var(--color-text-muted); font-size: .75rem; font-weight: 700; }
+.vehicle-card-specs dd { margin: 3px 0 0; color: var(--color-text); font-weight: 700; overflow-wrap: anywhere; }
+.vehicle-card-more { border-top: 1px solid var(--color-border); padding-top: 10px; color: var(--color-text-secondary); }
+.vehicle-card-more summary { color: var(--color-primary); cursor: pointer; font-weight: 800; }
+.vehicle-card-more ul { margin: 10px 0; padding-left: 20px; line-height: 1.5; }
+.vehicle-card-more p, .vehicle-card-checked { margin: 0; color: var(--color-text-muted); font-size: .8rem; }
+.vehicle-card .btn { text-align: center; }

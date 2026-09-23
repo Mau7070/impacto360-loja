@@ -393,17 +393,42 @@ function vehicleCard(vehicle) {
       ? new Intl.NumberFormat("pt-BR").format(mileage) + " km" : "",
     text(vehicle.location),
   ].filter(Boolean);
+  const yearLabel = text(vehicle.advertisedYearLabel) || text(vehicle.year);
+  const specs = [
+    ["Ano/modelo", yearLabel],
+    ["Quilometragem", Number.isFinite(mileage) && mileage >= 0 ? new Intl.NumberFormat("pt-BR").format(mileage) + " km" : ""],
+    ["Câmbio", text(vehicle.transmission)],
+    ["Combustível", text(vehicle.fuel)],
+    ["Carroceria", text(vehicle.bodyType)],
+    ["Cor", text(vehicle.color)],
+    ["Vendedor", text(vehicle.seller)],
+    ["Localização", text(vehicle.location)],
+  ].filter(([, value]) => value);
+  const checkedAt = new Date(vehicle.offerVerifiedAt);
+  const checkedLabel = Number.isFinite(checkedAt.getTime())
+    ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short", timeZone: "America/Sao_Paulo" }).format(checkedAt)
+    : "";
+  const listedFeatures = Array.isArray(vehicle.listedFeatures) ? vehicle.listedFeatures.filter(Boolean) : [];
   return [
     '<article class="vehicle-card" id="veiculo-' + escapeAttr(vehicle.id) + '">',
-    '<div class="vehicle-card-art" aria-hidden="true">', icon("car"), '</div>',
+    '<div class="vehicle-card-art">', icon("car"),
+    '<span>Ilustração · fotos reais no anúncio</span></div>',
     '<div class="vehicle-card-body">',
-    '<span class="section-kicker">AutoOferta · anúncio verificado</span>',
+    '<span class="section-kicker">AutoOferta · dados conferidos</span>',
     '<h3>', escapeHtml(vehicle.title), '</h3>',
     '<p class="vehicle-card-details">', details.map(escapeHtml).join(" · "), '</p>',
     '<p class="vehicle-card-price">', escapeHtml(priceLabel), '</p>',
+    '<p class="vehicle-card-description">', escapeHtml(vehicle.description || ""), '</p>',
+    '<dl class="vehicle-card-specs">',
+    specs.map(([label, value]) => '<div><dt>' + escapeHtml(label) + '</dt><dd>' + escapeHtml(value) + '</dd></div>').join(""),
+    '</dl>',
+    listedFeatures.length ? '<details class="vehicle-card-more"><summary>Itens informados no anúncio</summary><ul>' +
+      listedFeatures.map(item => '<li>' + escapeHtml(item) + '</li>').join("") +
+      '</ul><p>Confirme os equipamentos desta unidade diretamente com o vendedor.</p></details>' : "",
+    checkedLabel ? '<p class="vehicle-card-checked">Dados consultados em ' + escapeHtml(checkedLabel) + '.</p>' : "",
     '<p class="vehicle-card-note">Preço, disponibilidade e condições devem ser confirmados na AutoOferta.</p>',
     '<a class="btn btn-primary" href="', escapeAttr(vehicle.affiliateUrl), '" target="_blank" rel="noopener noreferrer sponsored">',
-    'Ver anúncio na AutoOferta <span aria-hidden="true">↗</span></a>',
+    'Ver fotos reais e anúncio <span aria-hidden="true">↗</span></a>',
     '<small>Publicidade · A Impacto360 pode receber comissão por este link, sem custo adicional para você.</small>',
     '</div></article>',
   ].join("");
