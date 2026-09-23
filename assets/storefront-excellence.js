@@ -395,7 +395,7 @@ function vehicleCard(vehicle) {
   ].filter(Boolean);
   const yearLabel = text(vehicle.advertisedYearLabel) || text(vehicle.year);
   const specs = [
-    ["Ano/modelo", yearLabel],
+    ["Ano informado", yearLabel],
     ["Quilometragem", Number.isFinite(mileage) && mileage >= 0 ? new Intl.NumberFormat("pt-BR").format(mileage) + " km" : ""],
     ["Câmbio", text(vehicle.transmission)],
     ["Combustível", text(vehicle.fuel)],
