@@ -14,7 +14,7 @@
       "priceBRL": 62800,
       "sourceUrl": "https://autooferta.com.br/comprar/fiat/mobi/like-1-0-fire-flex-5p-2025/like-1-0-fire-flex-5p-2025-prata",
       "affiliateUrl": "https://autooferta.com.br//comprar/fiat/mobi/like-1-0-fire-flex-5p-2025/like-1-0-fire-flex-5p-2025-prata?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=01a08b80-dfc0-71ef-9628-f7c40867b163",
-      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "offerVerifiedAt": "2026-09-29T12:37:34Z",
       "affiliateVerified": true,
       "status": "published",
       "transmission": "Manual",
@@ -22,7 +22,14 @@
       "bodyType": "Hatch",
       "color": "Prata",
       "description": "FIAT Mobi Like 1.0 Fire Flex de cinco portas, anunciado pela Sergipano Veículos em Bauru (SP). O anúncio informa ano exibido 2025/2025, 14.000 km, câmbio manual e cor prata. Confira as fotos do próprio veículo, os equipamentos, o histórico e as condições diretamente com o vendedor antes de negociar.",
-      "advertisedYearLabel": "2025/2025"
+      "advertisedYearLabel": "2025/2025",
+      "listedFeatures": [
+        "Ar-condicionado",
+        "Vidros e travas elétricas",
+        "Airbag e freios ABS",
+        "Desembaçador traseiro",
+        "Bluetooth e computador de bordo"
+      ]
     },
     {
       "id": "019fbae4-ce7c-7001-b045-6241812752f1ef",
@@ -37,14 +44,21 @@
       "priceBRL": 99990,
       "sourceUrl": "https://autooferta.com.br/comprar/renault/kardian/authentic-1-0-tb-12v-5p-aut/1-0-tce-flex-evolution-edc-preto",
       "affiliateUrl": "https://autooferta.com.br//comprar/renault/kardian/authentic-1-0-tb-12v-5p-aut/1-0-tce-flex-evolution-edc-preto?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-ce7c-7001-b045-6241812752f1ef",
-      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "offerVerifiedAt": "2026-09-29T12:37:34Z",
       "affiliateVerified": true,
       "status": "published",
       "transmission": "Automático",
       "fuel": "Flex",
       "color": "Preto",
       "description": "Renault Kardian Authentic 1.0 turbo anunciado pela Proeste Renault Bauru, em Bauru (SP). O anúncio informa ano exibido 2025/2024, 33.000 km, câmbio automático e cor preta. Consulte as fotos reais, a lista de equipamentos, o histórico e as condições atualizadas na AutoOferta.",
-      "advertisedYearLabel": "2025/2024"
+      "advertisedYearLabel": "2025/2024",
+      "listedFeatures": [
+        "Ar-condicionado",
+        "Vidros, travas e retrovisores elétricos",
+        "Airbag e freios ABS",
+        "Multimídia e computador de bordo",
+        "Rodas de liga leve"
+      ]
     },
     {
       "id": "019fbae4-9724-7000-b0ba-4655b4a68d58f8",
@@ -59,7 +73,7 @@
       "priceBRL": 93990,
       "sourceUrl": "https://autooferta.com.br/comprar/hyundai/hb20s/comfort-plus-1-0-tb-flex-12v-aut/1-0-tgdi-flex-comfort-plus-automatico-prata-2025-ju435",
       "affiliateUrl": "https://autooferta.com.br//comprar/hyundai/hb20s/comfort-plus-1-0-tb-flex-12v-aut/1-0-tgdi-flex-comfort-plus-automatico-prata-2025-ju435?ref=afGWFRTTARFZ&productKind=VEHICLE_SALE&sourceKey=019fbae4-9724-7000-b0ba-4655b4a68d58f8",
-      "offerVerifiedAt": "2026-09-23T12:55:12Z",
+      "offerVerifiedAt": "2026-09-29T12:37:34Z",
       "affiliateVerified": true,
       "status": "published",
       "transmission": "Automático",

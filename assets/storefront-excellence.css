@@ -3428,7 +3428,9 @@ a {
   background: var(--color-primary-light);
 }
 .cars-intro p { max-width: 650px; }
-.cars-intro-mark svg { width: 70px; height: 70px; fill: none; stroke: var(--color-primary); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.cars-intro-visual { flex: 0 0 190px; width: 190px; margin: 0; }
+.cars-intro-visual img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.cars-intro-visual figcaption { margin-top: 6px; color: var(--color-text-secondary); font-size: .72rem; line-height: 1.35; }
 .cars-empty {
   padding: 58px 24px;
   border: 1px dashed var(--color-border-strong);
@@ -3457,7 +3459,8 @@ a {
 @media (max-width: 700px) {
   .cars-home-panel { grid-template-columns: auto 1fr; padding: 22px; }
   .cars-home-panel .btn { grid-column: 1 / -1; justify-self: start; }
-  .cars-intro-mark { display: none; }
+  .cars-intro { flex-direction: column; align-items: stretch; }
+  .cars-intro-visual { width: min(100%, 280px); flex-basis: auto; }
   .vehicle-grid { grid-template-columns: 1fr; }
 }
 .vehicle-card-art { flex-direction: column; gap: 6px; padding: 18px; text-align: center; }

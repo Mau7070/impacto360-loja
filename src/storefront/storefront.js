@@ -3,7 +3,7 @@ const SITE_URL = "https://impacto360afiliado.com.br";
 const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
 const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
 const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260928-fotos-1";
-const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260923-carros-1";
+const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260929-carros-2";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
 const SEARCH_HISTORY_KEY = "impacto360SearchHistory";
@@ -1281,7 +1281,7 @@ function renderCars() {
     '<div class="cars-intro"><div><span class="section-kicker">Vitrine de veículos</span>',
     '<h2>Compare com calma antes de decidir</h2>',
     '<p>Confira versão, ano, quilometragem, localização, documentação e condições diretamente no anúncio. A seleção é revisada antes de aparecer aqui.</p>',
-    '</div><div class="cars-intro-mark" aria-hidden="true">', icon("car"), '</div></div>',
+    '</div><figure class="cars-intro-visual"><img src="/assets/campanhas/carros-impacto360-20260929.png" alt="Ilustração de um hatch, um SUV e um sedã genéricos; não são os veículos anunciados" loading="lazy" width="1254" height="1254"><figcaption>Ilustração. Fotos reais em cada anúncio da AutoOferta.</figcaption></figure></div>',
     vehicles.length
       ? '<div class="vehicle-grid">' + vehicles.map(vehicleCard).join("") + '</div>'
       : '<div class="cars-empty"><span class="cars-empty-icon" aria-hidden="true">' + icon("car") + '</span><h2>Veículos em análise</h2><p>Ainda não há anúncios com oferta e link de afiliado confirmados. Publicaremos os carros aqui após a verificação.</p><a class="btn btn-primary" href="' + AUTO_OFERTA_GENERAL_REF + '" target="_blank" rel="noopener noreferrer sponsored">Explorar a AutoOferta ↗</a><small>Publicidade · link geral de indicação. Consulte cada anúncio e suas condições diretamente na AutoOferta.</small></div>',

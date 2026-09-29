@@ -456,6 +456,8 @@ const commercialRoutes = [
     route: "/carros/",
     title: "Carros | Impacto360 Afiliado",
     description: "Veículos selecionados com anúncio e link de afiliado verificados.",
+    ogImage: "/assets/campanhas/carros-impacto360-20260929.png",
+    ogImageAlt: "Ilustração de três tipos de carros; fotos reais disponíveis nos anúncios da AutoOferta",
   },
   {
     route: "/como-comprar/",
@@ -532,7 +534,12 @@ const categoryRoutes = [
 }));
 
 for (const route of [...commercialRoutes, ...categoryRoutes]) {
-  const page = routeDocument(template, route.route, route.title, route.description, route.robots, route.canonical);
+  let page = routeDocument(template, route.route, route.title, route.description, route.robots, route.canonical);
+  if (route.ogImage) {
+    page = page
+      .replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${siteUrl + route.ogImage}">`)
+      .replace(/<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${html(route.ogImageAlt)}">`);
+  }
   write(path.join(root, route.route.replace(/^\/|\/$/g, ""), "index.html"), page);
   write(path.join(packageRoot, route.route.replace(/^\/|\/$/g, ""), "index.html"), page);
 }
@@ -541,6 +548,7 @@ for (const relative of [
   "dados/stores.json",
   "dados/marketplaces.json",
   "dados/veiculos-autooferta.json",
+  "assets/campanhas/carros-impacto360-20260929.png",
   "dados/relatorio-integridade-publicacao.json",
   "public/impacto360-categorias-20260928.png",
   "favicon.svg",
