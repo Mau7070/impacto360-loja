@@ -2568,7 +2568,7 @@ function updateOnlineStatus() {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") return;
-  navigator.serviceWorker.register("/sw.js").catch(error => console.warn("Service worker não registrado.", error));
+  navigator.serviceWorker.register("/sw.js?v=20260929-carros-2").catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {
