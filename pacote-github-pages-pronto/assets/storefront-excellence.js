@@ -1,8 +1,8 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260914-modernizacao-1";
-const STORES_URL = "/dados/stores.json?v=20260914-modernizacao-1";
-const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260914-modernizacao-1";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
+const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260928-fotos-1";
 const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260923-carros-1";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
@@ -1110,6 +1110,18 @@ function startHomeRotation() {
   syncHomeRotation();
 }
 
+function bindPhotoRail() {
+  const track = document.querySelector("[data-photo-rail]");
+  if (!track) return;
+  document.querySelectorAll("[data-photo-rail-direction]").forEach(button => {
+    button.addEventListener("click", () => {
+      const firstCard = track.querySelector(".photo-rail-card");
+      const step = firstCard ? firstCard.getBoundingClientRect().width + 16 : track.clientWidth;
+      track.scrollBy({ left: Number(button.dataset.photoRailDirection) * step, behavior: "smooth" });
+    });
+  });
+}
+
 function renderHome() {
   setMeta({
     title: "Impacto360 Afiliado | Ofertas selecionadas em um shopping virtual",
@@ -1120,6 +1132,7 @@ function renderHome() {
   const rotationPool = homeRotationProducts();
   const featured = homeRotationBatch(rotationPool);
   const heroProducts = featured.slice(0, 4);
+  const photoProducts = featured.filter(product => product.image && productPath(product)).slice(0, 8);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const heroProductMarkup = heroProducts.map((product, index) => `
@@ -1148,6 +1161,25 @@ function renderHome() {
     </section>`;
   const homeContent = `
     ${marketplaceShortcuts()}
+
+    ${photoProducts.length ? `<section class="section photo-rail-section" aria-labelledby="photo-rail-title">
+      <div class="shell">
+        <div class="photo-rail-heading">
+          <div><span class="section-kicker">Descubra na Impacto360</span><h2 id="photo-rail-title">Explore pela foto, confira na loja</h2>
+            <p>Abra a ficha do produto aqui antes de visitar o parceiro. Preço e disponibilidade são confirmados no destino.</p></div>
+          <div class="photo-rail-controls" aria-label="Navegar pelas fotos">
+            <button type="button" data-photo-rail-direction="-1" aria-label="Ver fotos anteriores">←</button>
+            <button type="button" data-photo-rail-direction="1" aria-label="Ver próximas fotos">→</button>
+          </div>
+        </div>
+        <div class="photo-rail" data-photo-rail role="region" aria-label="Fotos de produtos da loja" tabindex="0">
+          ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
+            <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
+            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver na Impacto360 →</span></span>
+          </a>`).join("")}
+        </div>
+      </div>
+    </section>` : ""}
 
     <section class="section section-white cars-home-preview" aria-labelledby="cars-home-title">
       <div class="shell cars-home-panel">
@@ -2068,7 +2100,10 @@ function renderRoute({ focus = false } = {}) {
   syncHeaderSearch(url.searchParams.get("q") || "");
   bindDynamicControls();
   setupDeferredImages();
-  if (homeRoute) startHomeRotation();
+  if (homeRoute) {
+    startHomeRotation();
+    bindPhotoRail();
+  }
   if (focus) {
     window.scrollTo({ top: 0, behavior: "auto" });
     document.getElementById("conteudo")?.focus({ preventScroll: true });

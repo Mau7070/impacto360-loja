@@ -77,6 +77,8 @@ const sourceById = new Map(sourceProducts.map(product => [String(product.id), pr
 check("HTML inicial enxuto", Buffer.byteLength(html) < 25_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
+check("carrossel de fotos leva a fichas internas", app.includes('class="photo-rail-card"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && !app.includes('class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-route='));
+check("imagem de compartilhamento coerente e sincronizada", html.includes("/public/impacto360-categorias-20260928.png") && exists("public/impacto360-categorias-20260928.png") && hash("public/impacto360-categorias-20260928.png") === hash("public/impacto360-categorias-20260928.png", packageRoot));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
 check("sem linguagem tecnica antiga", !html.includes("VITRINE EM ROTACAO") && !app.includes("produtos prontos") && !app.includes("Mais Vendidos"));
 check("integracoes administrativas removidas da loja publica", !html.includes("impacto360-admin-robos.js") && !html.includes("loadAdminOnlyInAdminArea"));
