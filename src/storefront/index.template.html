@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="Imagem ilustrativa de categorias de casa, tecnologia e leitura da loja virtual Impacto360">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-6">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-7">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -83,7 +83,7 @@
           id="globalSearchInput"
           type="search"
           name="q"
-          placeholder="O que você está procurando?"
+          placeholder="Buscar produtos"
           aria-label="Buscar produtos, categorias ou lojas"
           role="combobox"
           aria-autocomplete="list"
@@ -186,14 +186,12 @@
             <div class="hero-proof" aria-label="Como funciona a Impacto360">
               <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
               <span><b aria-hidden="true">↗</b> Links identificados</span>
-              <span><b aria-hidden="true">0</b> custo extra</span>
             </div>
             <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
           </div>
           <div class="hero-showcase" aria-label="Destaques da Impacto360">
-            <a class="hero-showcase-placeholder" href="/buscar/" data-route="/buscar/">
-              <span><strong>Descubra os destaques</strong><span>Produtos selecionados para começar sua busca →</span></span>
-            </a>
+            <div class="hero-feature-heading"><span>Seleção para começar</span><strong>Explore alguns produtos</strong></div>
+            <a class="hero-feature-placeholder" href="/buscar/" data-route="/buscar/">Explorar o catálogo <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -310,6 +308,6 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-6"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-7"></script>
 </body>
 </html>

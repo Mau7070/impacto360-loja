@@ -1195,14 +1195,10 @@ function renderHome() {
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const heroProductMarkup = heroProducts.map((product, index) => `
-    <a
-      class="hero-product"
-      href="${escapeAttr(productPath(product))}"
-      data-product-internal="${escapeAttr(product.id)}"
-      aria-label="Ver ${escapeAttr(product.name)}"
-    >
-      <img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" ${index === 0 ? 'fetchpriority="high"' : ""}>
-      <span class="hero-product-action" aria-hidden="true">↗</span>
+    <a class="hero-feature" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}" aria-label="Ver ${escapeAttr(product.name)}">
+      <img src="${escapeAttr(assetUrl(product.image))}" alt="" loading="${index === 0 ? "eager" : "lazy"}" decoding="async">
+      <span class="hero-feature-copy"><strong>${escapeHtml(product.name)}</strong><small>Ver produto na Impacto360</small></span>
+      <span class="hero-feature-arrow" aria-hidden="true">↗</span>
     </a>`).join("");
   const heroMarkup = `
     <section class="hero hero-home" data-initial-home-hero>
@@ -1218,14 +1214,12 @@ function renderHome() {
           <div class="hero-proof" aria-label="Como funciona a Impacto360">
             <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
             <span><b aria-hidden="true">↗</b> Links identificados</span>
-            <span><b aria-hidden="true">0</b> custo extra</span>
           </div>
           <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
         </div>
         <div class="hero-showcase" aria-label="Produtos em destaque">
-          <div class="hero-showcase-orbit" aria-hidden="true"></div>
-          <div class="hero-showcase-label"><span>Destaques agora</span><strong>Clique para ver o produto</strong></div>
-          <div class="hero-products">${heroProductMarkup}</div>
+          <div class="hero-feature-heading"><span>Seleção para começar</span><strong>Explore alguns produtos</strong></div>
+          <div class="hero-feature-list">${heroProductMarkup}</div>
         </div>
       </div>
     </section>`;
@@ -2644,7 +2638,7 @@ function updateOnlineStatus() {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") return;
-  navigator.serviceWorker.register("/sw.js?v=20260929-carros-2").catch(error => console.warn("Service worker não registrado.", error));
+  navigator.serviceWorker.register("/sw.js?v=20261006-home-7").catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {
@@ -2652,7 +2646,7 @@ function closeMenu({ restoreFocus = false } = {}) {
   const button = document.querySelector("[data-menu-toggle]");
   button?.setAttribute("aria-expanded", "false");
   button?.setAttribute("aria-label", "Abrir menu de navegação");
-  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
+  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 980px)").matches);
   if (restoreFocus && state.menuReturnFocus instanceof HTMLElement) state.menuReturnFocus.focus();
   state.menuReturnFocus = null;
 }
@@ -2664,7 +2658,7 @@ function toggleMenu() {
   button?.setAttribute("aria-expanded", String(open));
   button?.setAttribute("aria-label", open ? "Fechar menu de navegação" : "Abrir menu de navegação");
   const nav = document.querySelector("[data-main-nav]");
-  setInteractiveVisibility(nav, !open && window.matchMedia("(max-width: 760px)").matches);
+  setInteractiveVisibility(nav, !open && window.matchMedia("(max-width: 980px)").matches);
   if (open) {
     state.menuReturnFocus = button;
     requestAnimationFrame(() => focusableElements(nav)[0]?.focus());
@@ -2999,6 +2993,9 @@ function setupGlobalEvents() {
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
   window.addEventListener("resize", () => {
+    if (!document.body.classList.contains("menu-open")) {
+      setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 980px)").matches);
+    }
     clearTimeout(state.homeRotationResizeTimer);
     state.homeRotationResizeTimer = setTimeout(() => {
       document.querySelector("[data-home-product-grid]")?.style.removeProperty("min-height");
@@ -3006,7 +3003,7 @@ function setupGlobalEvents() {
   });
   document.addEventListener("visibilitychange", syncHomeRotation);
   window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener?.("change", syncHomeRotation);
-  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 760px)").matches);
+  setInteractiveVisibility(document.querySelector("[data-main-nav]"), window.matchMedia("(max-width: 980px)").matches);
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
       if (document.querySelector("[data-filters].open")) {

@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="Imagem ilustrativa de categorias de casa, tecnologia e leitura da loja virtual Impacto360">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-6">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-7">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -83,7 +83,7 @@
           id="globalSearchInput"
           type="search"
           name="q"
-          placeholder="O que você está procurando?"
+          placeholder="Buscar produtos"
           aria-label="Buscar produtos, categorias ou lojas"
           role="combobox"
           aria-autocomplete="list"
@@ -186,18 +186,16 @@
             <div class="hero-proof" aria-label="Como funciona a Impacto360">
               <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
               <span><b aria-hidden="true">↗</b> Links identificados</span>
-              <span><b aria-hidden="true">0</b> custo extra</span>
             </div>
             <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
           </div>
           <div class="hero-showcase" aria-label="Destaques da Impacto360">
-            <a class="hero-showcase-placeholder" href="/buscar/" data-route="/buscar/">
-              <span><strong>Descubra os destaques</strong><span>Produtos selecionados para começar sua busca →</span></span>
-            </a>
+            <div class="hero-feature-heading"><span>Seleção para começar</span><strong>Explore alguns produtos</strong></div>
+            <a class="hero-feature-placeholder" href="/buscar/" data-route="/buscar/">Explorar o catálogo <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
-      <section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
+            <section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
   <div class="shell">
     <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div><p>Atalhos para parceiros e plataformas.</p></div>
     <div class="marketplace-grid"><a class="marketplace-card marketplace-mercado-livre" href="https://www.mercadolivre.com.br/social/md20251208121946" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Mercado Livre em nova aba — link de afiliado">
@@ -232,8 +230,7 @@
       <span class="marketplace-copy"><strong>Santander</strong><span>Acesso aos serviços oficiais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
       <small class="marketplace-link-kind">Site oficial</small></a></div>
     <p class="marketplace-note">Links identificados com transparência. Preço, estoque, frete, pagamento e garantia são definidos no destino. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda os tipos de link</a>.</p>
-  </div>
-</section>
+  </div></section>
       <section class="loading-state initial-route-loading" aria-label="Carregando ofertas">
         <div class="home-skeleton shell" aria-hidden="true">
           <div class="hero-skeleton">
@@ -346,6 +343,6 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-6"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-7"></script>
 </body>
 </html>

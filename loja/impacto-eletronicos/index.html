@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="Imagem ilustrativa de categorias de casa, tecnologia e leitura da loja virtual Impacto360">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-parceiros-2">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-7">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -83,7 +83,7 @@
           id="globalSearchInput"
           type="search"
           name="q"
-          placeholder="O que você está procurando?"
+          placeholder="Buscar produtos"
           aria-label="Buscar produtos, categorias ou lojas"
           role="combobox"
           aria-autocomplete="list"
@@ -179,56 +179,63 @@
           <p>Gadgets, automação, segurança eletrônica e dispositivos inteligentes.</p>
         </div>
       </section>
-      <section class="hero initial-home-hero" data-initial-home-hero>
+      <section class="hero hero-home initial-home-hero" data-initial-home-hero>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">SEU SHOPPING DE DESCOBERTAS</span>
-            <h1>Seu próximo achado começa aqui.</h1>
-            <p>Explore produtos de diferentes categorias e escolha onde comprar. O pagamento e a entrega ficam com a plataforma escolhida.</p>
+            <span class="hero-eyebrow"><span aria-hidden="true"></span>Shopping Impacto360</span>
+            <h1>Seu próximo <span class="hero-title-accent">achado</span><br>começa aqui.</h1>
+            <p>Descubra produtos de diferentes categorias, compare opções e siga para a loja parceira quando encontrar o que procura.</p>
             <div class="hero-actions">
-              <a class="btn btn-offer" href="/buscar/" data-route="/buscar/">Explorar produtos</a>
-              <a class="btn btn-secondary" href="/como-comprar/" data-route="/como-comprar/">Como funciona</a>
+              <a class="btn btn-primary" href="/buscar/" data-route="/buscar/">Explorar produtos <span aria-hidden="true">→</span></a>
+              <a class="hero-secondary-link" href="#marketplaces">Ver lojas parceiras <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="hero-disclosure">Somos uma vitrine de afiliados. Podemos receber comissão pelas compras realizadas pelos nossos links, sem custo adicional para você.</p>
+            <div class="hero-proof" aria-label="Como funciona a Impacto360">
+              <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
+              <span><b aria-hidden="true">↗</b> Links identificados</span>
+            </div>
+            <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
           </div>
-          <div class="hero-showcase" aria-hidden="true"><div class="hero-products"></div><p class="hero-showcase-caption">Várias categorias. Um lugar para descobrir.</p></div>
+          <div class="hero-showcase" aria-label="Destaques da Impacto360">
+            <div class="hero-feature-heading"><span>Seleção para começar</span><strong>Explore alguns produtos</strong></div>
+            <a class="hero-feature-placeholder" href="/buscar/" data-route="/buscar/">Explorar o catálogo <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
-      <section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
+            <section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
   <div class="shell">
-    <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Plataformas e serviços para você</h2></div><p>Abra a plataforma e encontre o que precisa.</p></div>
+    <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div><p>Atalhos para parceiros e plataformas.</p></div>
     <div class="marketplace-grid"><a class="marketplace-card marketplace-mercado-livre" href="https://www.mercadolivre.com.br/social/md20251208121946" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Mercado Livre em nova aba — link de afiliado">
       <span class="marketplace-mark" aria-hidden="true">ML</span>
-      <span class="marketplace-copy"><strong>Mercado Livre</strong><span>Explore nosso perfil de afiliado.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de afiliado</small></a><a class="marketplace-card marketplace-shopee" href="https://s.shopee.com.br/2LYK42IFM8" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Shopee em nova aba — link de afiliado">
+      <span class="marketplace-copy"><strong>Mercado Livre</strong><span>Produtos e ofertas no perfil afiliado.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Afiliado</small></a><a class="marketplace-card marketplace-shopee" href="https://s.shopee.com.br/2LYK42IFM8" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Shopee em nova aba — link de afiliado">
       <span class="marketplace-mark" aria-hidden="true">S</span>
-      <span class="marketplace-copy"><strong>Shopee</strong><span>Acesse a Shopee pelo nosso link de afiliado.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de afiliado</small></a><a class="marketplace-card marketplace-amazon" href="https://www.amazon.com.br/?tag=910556142-20" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Amazon em nova aba — link de afiliado">
+      <span class="marketplace-copy"><strong>Shopee</strong><span>Ofertas e variedade pela Shopee.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Afiliado</small></a><a class="marketplace-card marketplace-amazon" href="https://www.amazon.com.br/?tag=910556142-20" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Amazon em nova aba — link de afiliado">
       <span class="marketplace-mark" aria-hidden="true">a</span>
-      <span class="marketplace-copy"><strong>Amazon</strong><span>Acesse a Amazon pelo nosso link de afiliado.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de afiliado</small></a><a class="marketplace-card marketplace-hotmart" href="https://hotmart.com/pt-br/marketplace" target="_blank" rel="noopener noreferrer" aria-label="Abrir Hotmart em nova aba — acesso oficial sem rastreamento confirmado">
+      <span class="marketplace-copy"><strong>Amazon</strong><span>Produtos e categorias na Amazon.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Afiliado</small></a><a class="marketplace-card marketplace-hotmart" href="https://hotmart.com/pt-br/marketplace" target="_blank" rel="noopener noreferrer" aria-label="Abrir Hotmart em nova aba — acesso oficial sem rastreamento confirmado">
       <span class="marketplace-mark" aria-hidden="true">h</span>
-      <span class="marketplace-copy"><strong>Hotmart</strong><span>Descubra cursos e produtos digitais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Acesso oficial sem rastreamento confirmado</small></a><a class="marketplace-card marketplace-autooferta" href="https://autooferta.com.br/?ref=afGWFRTTARFZ" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir AutoOferta em nova aba — link de indicação">
+      <span class="marketplace-copy"><strong>Hotmart</strong><span>Cursos e produtos digitais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Site oficial</small></a><a class="marketplace-card marketplace-autooferta" href="https://autooferta.com.br/?ref=afGWFRTTARFZ" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir AutoOferta em nova aba — link de indicação">
       <span class="marketplace-mark" aria-hidden="true">AO</span>
-      <span class="marketplace-copy"><strong>AutoOferta</strong><span>Explore veículos pelo nosso link de indicação. Confira cada oferta no parceiro.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de indicação</small></a><a class="marketplace-card marketplace-virtus-corretora" href="https://virtuscorretora.com.br/indicacao?i=Mauricio%20de%20Oliveira&amp;f=27997755666" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Virtus Corretora em nova aba — link de indicação">
+      <span class="marketplace-copy"><strong>AutoOferta</strong><span>Veículos e oportunidades.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Indicação</small></a><a class="marketplace-card marketplace-virtus-corretora" href="https://virtuscorretora.com.br/indicacao?i=Mauricio%20de%20Oliveira&amp;f=27997755666" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir Virtus Corretora em nova aba — link de indicação">
       <span class="marketplace-mark" aria-hidden="true">VC</span>
-      <span class="marketplace-copy"><strong>Virtus Corretora</strong><span>Atendimento humano no WhatsApp com indicação de Mauricio de Oliveira.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de indicação</small></a><a class="marketplace-card marketplace-eduzz" href="https://www.eduzz.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Eduzz em nova aba — acesso oficial sem rastreamento confirmado">
+      <span class="marketplace-copy"><strong>Virtus Corretora</strong><span>Atendimento e indicação.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Indicação</small></a><a class="marketplace-card marketplace-eduzz" href="https://www.eduzz.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Eduzz em nova aba — acesso oficial sem rastreamento confirmado">
       <span class="marketplace-mark" aria-hidden="true">E</span>
-      <span class="marketplace-copy"><strong>Eduzz</strong><span>Acesso público à plataforma; ofertas com comissão exigem link específico.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Acesso oficial sem rastreamento confirmado</small></a><a class="marketplace-card marketplace-magalu" href="https://www.magazineluiza.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Magalu em nova aba — acesso oficial sem rastreamento confirmado">
+      <span class="marketplace-copy"><strong>Eduzz</strong><span>Cursos e produtos digitais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Site oficial</small></a><a class="marketplace-card marketplace-magalu" href="https://www.magazineluiza.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Magalu em nova aba — acesso oficial sem rastreamento confirmado">
       <span class="marketplace-mark" aria-hidden="true">M</span>
-      <span class="marketplace-copy"><strong>Magalu</strong><span>Acesso oficial enquanto o link do Influenciador Magalu não é confirmado.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Acesso oficial sem rastreamento confirmado</small></a><a class="marketplace-card marketplace-uniasselvi" href="https://portal.uniasselvi.com.br/cursos?u=727725&amp;referrer=ser" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir UNIASSELVI em nova aba — link de afiliado">
+      <span class="marketplace-copy"><strong>Magalu</strong><span>Tecnologia, casa e mais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Site oficial</small></a><a class="marketplace-card marketplace-uniasselvi" href="https://portal.uniasselvi.com.br/cursos?u=727725&amp;referrer=ser" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir UNIASSELVI em nova aba — link de afiliado">
       <span class="marketplace-mark" aria-hidden="true">U</span>
-      <span class="marketplace-copy"><strong>UNIASSELVI</strong><span>Explore cursos pelo link exclusivo de indicação via Saber em Rede. Confira modalidades e condições na instituição.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Link de afiliado</small></a><a class="marketplace-card marketplace-santander" href="https://www.santander.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Santander em nova aba — acesso oficial sem rastreamento confirmado">
+      <span class="marketplace-copy"><strong>UNIASSELVI</strong><span>Cursos e formação.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Afiliado</small></a><a class="marketplace-card marketplace-santander" href="https://www.santander.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Santander em nova aba — acesso oficial sem rastreamento confirmado">
       <span class="marketplace-mark" aria-hidden="true">S</span>
-      <span class="marketplace-copy"><strong>Santander</strong><span>Acesso oficial ao banco. A Impacto360 participa do Santander X Explorer; isso não é parceria bancária.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">Acesso oficial sem rastreamento confirmado</small></a></div>
-    <p class="marketplace-note">Cada cartão indica seu tipo de link. Condições no parceiro. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
+      <span class="marketplace-copy"><strong>Santander</strong><span>Acesso aos serviços oficiais.</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
+      <small class="marketplace-link-kind">Site oficial</small></a></div>
+    <p class="marketplace-note">Links identificados com transparência. Preço, estoque, frete, pagamento e garantia são definidos no destino. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda os tipos de link</a>.</p>
   </div></section>
       <section class="loading-state initial-route-loading" aria-label="Carregando ofertas">
         <div class="home-skeleton shell" aria-hidden="true">
@@ -342,6 +349,6 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20261006-parceiros-2"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-7"></script>
 </body>
 </html>
