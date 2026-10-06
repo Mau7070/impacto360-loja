@@ -162,18 +162,22 @@ check("rotas preservadas pelo 404", fallback404.includes('params.set("route", pa
 check("skip link e rotulos acessiveis", html.includes("Pular para o conteúdo principal") && html.includes('aria-autocomplete="list"') && html.includes('role="combobox"') && html.includes('role="search"'));
 check("foco visivel", css.includes(":focus-visible") && css.includes("--color-focus: #2563EB"));
 check("movimento reduzido respeitado", css.includes("prefers-reduced-motion"));
+check("texto do rail separado fisicamente da imagem", css.includes("grid-template-rows: 138px") && css.includes(".photo-rail-copy") && css.includes("border-bottom: 1px solid var(--color-border)"));
+check("historico local alimenta personalizacao sem repeticao", app.includes("homePreferenceSignals") && app.includes("recentlyViewedProducts") && app.includes("Vistos recentemente"));
+check("eventos comerciais respeitam consentimento de analytics", app.includes("trackStorefrontEvent") && app.includes("outbound_partner_click") && app.includes("consent?.analytics"));
+
 check("central de acessibilidade e modo escuro", html.includes("data-accessibility-dialog") && app.includes("applyAccessibility") && css.includes(':root[data-theme="dark"]'));
 check("elementos hidden permanecem visualmente ocultos", css.includes("[hidden]") && css.includes("display: none !important"));
 check("busca por voz possui alternativa textual", html.includes("data-voice-search") && app.includes("Busca por voz indisponível") && app.includes("data-search-input"));
 check("busca por imagem nao envia arquivo nesta versao", html.includes("data-image-search-dialog") && app.includes("Ela não foi enviada"));
 check("navegacao inferior mobile", html.includes('class="bottom-nav"') && css.includes(".bottom-nav"));
 check("tema e acessibilidade disponiveis no menu movel e perfil", html.includes("mobile-menu-tools") && app.includes("Alternar tema") && app.includes("Abrir acessibilidade"));
-check("home compacta com limites definidos", app.includes("HOME_ROTATION_SIZE = 8") && app.includes(".slice(0, 4)") && app.includes(".slice(0, 8)") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
+check("home compacta com limites definidos", app.includes("HOME_ROTATION_SIZE = 10") && app.includes(".slice(0, 4)") && app.includes(".slice(0, 6)") && app.includes("data-home-exclude") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
 check("cards moveis simplificados em duas colunas permanentes", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))") && !css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
-check("home mobile prioriza produtos e oferece acesso compacto", app.includes('class="section section-soft home-products" id="produtos"') && app.includes('class="mobile-home-access"') && css.includes(".initial-home-route .promo-shortcuts"));
-check("categorias lojas e compra transparente usam paineis compactos", app.includes('class="home-disclosure" id="categorias"') && app.includes('class="home-disclosure" id="lojas"') && app.includes('class="how-grid home-how-grid"') && css.includes(".home-disclosure summary"));
-check("paineis compactos usam duas colunas responsivas", css.includes(".home-category-grid,") && css.includes(".home-store-grid,") && css.includes(".home-how-grid") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))"));
-check("rodizio permanente percorre catalogo completo", app.includes("HOME_ROTATION_INTERVAL = 8000") && app.includes("HOME_ROTATION_SIZE = 8") && app.includes("state.products.length") && app.includes("setInterval(() => rotateHomeProducts()"));
+check("home mobile prioriza produtos sem navegação redundante", app.includes('class="section section-soft home-products" id="produtos"') && !app.includes('class="mobile-home-access"') && app.includes('class="quick-category-section"') && css.includes(".initial-home-route .promo-shortcuts"));
+check("rodape da home concentra caminhos em um unico bloco", app.includes('class="home-next-section"') && app.includes("Catálogo completo") && app.includes("Lojas do Shopping") && app.includes("Como comprar") && !app.includes('home-disclosure-section home-categories'));
+check("fim da home usa tres atalhos responsivos", css.includes(".home-next-grid") && css.includes("grid-template-columns: repeat(3, minmax(0, 1fr))") && css.includes("@media (max-width: 980px)"));
+check("rotacao percorre catalogo sem repetir vitrines superiores", app.includes("HOME_ROTATION_INTERVAL = 8000") && app.includes("HOME_ROTATION_SIZE = 10") && app.includes("homeRotationProducts(excludedIds)") && app.includes("data-home-exclude") && app.includes("setInterval(() => rotateHomeProducts()"));
 check("rodizio pausa para interacao e movimento reduzido", app.includes("homeRotationInteractionPaused") && app.includes("homeRotationReduced()") && app.includes('data-home-rotation-toggle'));
 check(
   "informacoes comerciais antigas removidas da vitrine",

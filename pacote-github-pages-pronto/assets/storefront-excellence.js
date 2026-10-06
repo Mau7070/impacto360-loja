@@ -23,7 +23,7 @@ const ALLOWED_AFFILIATE_DOMAINS = new Set([
   "go.hotmart.com",
 ]);
 const PAGE_SIZE = 24;
-const HOME_ROTATION_SIZE = 8;
+const HOME_ROTATION_SIZE = 10;
 const HOME_ROTATION_INTERVAL = 8000;
 const LAZY_IMAGE_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'/%3E";
 
@@ -481,8 +481,8 @@ function marketplaceShortcuts() {
     <section class="marketplace-section" id="marketplaces" aria-labelledby="marketplace-title">
       <div class="shell">
         <div class="marketplace-heading">
-          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Plataformas e serviços para você</h2></div>
-          <p>Abra a plataforma e encontre o que precisa.</p>
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div>
+          <p>Atalhos para lojas, serviços e parceiros.</p>
         </div>
         <div class="marketplace-grid">
           ${homeMarketplaces().map(marketplace => `
@@ -969,12 +969,61 @@ function sectionHeader(kicker, title, description, link = "", linkLabel = "") {
     </div>`;
 }
 
-function homeRotationProducts() {
-  return diverseProducts([
-    ...state.products.filter(product => product.featured),
-    ...state.products.filter(product => product.offer),
-    ...state.products,
-  ], state.products.length);
+function homePreferenceSignals() {
+  const recentIds = readStorage(VIEW_HISTORY_KEY, []);
+  const recent = Array.isArray(recentIds) ? recentIds.slice(0, 12).map(String) : [];
+  const byId = new Map(state.products.map(product => [String(product.id), product]));
+  const categories = new Map();
+  const stores = new Map();
+  recent.forEach((id, index) => {
+    const product = byId.get(id);
+    if (!product) return;
+    const weight = Math.max(1, 6 - Math.floor(index / 2));
+    const category = categoryForProduct(product)?.slug;
+    if (category) categories.set(category, (categories.get(category) || 0) + weight);
+    if (product.storeId) stores.set(product.storeId, (stores.get(product.storeId) || 0) + weight);
+  });
+  return { categories, stores };
+}
+
+function homeCommercialScore(product, signals) {
+  const freshness = priceFreshness(product);
+  let score = 0;
+  if (product.featured) score += 18;
+  if (product.offer) score += 14;
+  if (freshness.current) score += 12;
+  if (discountPercent(product)) score += 9;
+  if (product.availability) score += 5;
+  if (product.rating) score += Math.min(5, product.rating);
+  if (product.image) score += 3;
+  const category = categoryForProduct(product)?.slug;
+  if (category) score += Math.min(16, (signals.categories.get(category) || 0) * 1.5);
+  if (product.storeId) score += Math.min(8, signals.stores.get(product.storeId) || 0);
+  return score;
+}
+
+function recentlyViewedProducts(excludedIds = [], limit = 6) {
+  const excluded = new Set((excludedIds || []).map(String));
+  const ids = readStorage(VIEW_HISTORY_KEY, []);
+  if (!Array.isArray(ids) || !ids.length) return [];
+  const byId = new Map(state.products.map(product => [String(product.id), product]));
+  return ids
+    .map(String)
+    .filter((id, index, list) => list.indexOf(id) === index && !excluded.has(id))
+    .map(id => byId.get(id))
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function homeRotationProducts(excludedIds = []) {
+  const excluded = new Set((excludedIds || []).map(String));
+  const signals = homePreferenceSignals();
+  const ranked = state.products
+    .filter(product => product?.id && !excluded.has(String(product.id)))
+    .map((product, index) => ({ product, index, score: homeCommercialScore(product, signals) }))
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map(item => item.product);
+  return diverseProducts(ranked, ranked.length);
 }
 
 function homeRotationBatch(pool, start = 0) {
@@ -1070,7 +1119,8 @@ function startHomeRotation() {
   const grid = document.querySelector("[data-home-product-grid]");
   const button = document.querySelector("[data-home-rotation-toggle]");
   if (!grid || !button) return;
-  state.homeRotationPool = homeRotationProducts();
+  const excludedIds = String(grid.dataset.homeExclude || "").split("|").filter(Boolean);
+  state.homeRotationPool = homeRotationProducts(excludedIds);
   state.homeRotationIndex = Number(grid.dataset.rotationStart || 0);
   state.homeRotationUserPaused = true;
   state.homeRotationInteractionPaused = false;
@@ -1131,10 +1181,17 @@ function renderHome() {
     canonical: "/",
     robots: "index,follow,max-image-preview:large",
   });
-  const rotationPool = homeRotationProducts();
+  const discoveryPool = homeRotationProducts();
+  const heroProducts = discoveryPool.slice(0, 4);
+  const heroIds = new Set(heroProducts.map(product => String(product.id)));
+  const photoProducts = discoveryPool
+    .filter(product => !heroIds.has(String(product.id)) && product.image && productPath(product))
+    .slice(0, 6);
+  const reservedHomeIds = [...heroProducts, ...photoProducts].map(product => String(product.id));
+  const rotationPool = homeRotationProducts(reservedHomeIds);
   const featured = homeRotationBatch(rotationPool);
-  const heroProducts = featured.slice(0, 4);
-  const photoProducts = featured.filter(product => product.image && productPath(product)).slice(0, 8);
+  const shownHomeIds = [...reservedHomeIds, ...featured.map(product => String(product.id))];
+  const recentProducts = recentlyViewedProducts(shownHomeIds, 6);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const heroProductMarkup = heroProducts.map((product, index) => `
@@ -1186,7 +1243,7 @@ function renderHome() {
         <div class="photo-rail" data-photo-rail role="region" aria-label="Fotos de produtos da loja" tabindex="0">
           ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
             <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
-            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver detalhes →</span></span>
+            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Detalhes →</span></span>
           </a>`).join("")}
         </div>
       </div>
@@ -1205,71 +1262,42 @@ function renderHome() {
     </section>
     <section class="section section-soft home-products" id="produtos">
       <div class="shell">
-        <nav class="mobile-home-access" aria-label="Acesso rápido à vitrine">
-          <a href="#produtos" aria-current="page">Produtos</a>
-          <a href="#categorias" data-home-disclosure-target="categorias">Categorias</a>
-          <a href="#lojas" data-home-disclosure-target="lojas">Lojas</a>
-        </nav>
+
         ${sectionHeader("Descobertas para você", "Encontre seu próximo favorito", "Explore a seleção. Preço, frete e disponibilidade são confirmados no parceiro.", "/buscar/", "Ver catálogo →")}
         <div class="home-rotation-toolbar">
           <span data-home-rotation-status>Explore no seu ritmo · ${rotationPool.length} produtos</span>
           <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button><button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button></div>
         </div>
-        ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Seleção de produtos"')}
+        ${productGrid(featured, "product-grid", 2, `data-home-product-grid data-home-exclude="${escapeAttr(reservedHomeIds.join("|"))}" data-rotation-start="0" aria-label="Seleção de produtos"`)}
       </div>
     </section>
 
-    <section class="section section-white home-disclosure-section home-categories">
+    ${recentProducts.length ? `<section class="home-recent-section" aria-labelledby="home-recent-title">
       <div class="shell">
-        <details class="home-disclosure" id="categorias" data-home-disclosure>
-          <summary>
-            <span class="home-disclosure-icon">${icon("grid")}</span>
-            <span><strong>Compre por categoria</strong><small>Clique para abrir as categorias</small></span>
-            <span class="home-disclosure-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="home-disclosure-panel">
-            <div class="category-grid home-category-grid">${activeCategories.map(categoryCard).join("")}</div>
-            <a class="text-link home-disclosure-link" href="/buscar/" data-route="/buscar/">Ver todas as categorias</a>
-          </div>
-        </details>
+        <div class="home-recent-heading">
+          <div><span class="section-kicker">Continue de onde parou</span><h2 id="home-recent-title">Vistos recentemente</h2></div>
+          <a class="text-link" href="/historico/" data-route="/historico/">Ver histórico →</a>
+        </div>
+        <div class="home-recent-rail">
+          ${recentProducts.map(product => `<a class="recent-product-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
+            <span class="recent-product-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="lazy" decoding="async"></span>
+            <span class="recent-product-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong></span>
+          </a>`).join("")}
+        </div>
       </div>
-    </section>
+    </section>` : ""}
 
-    <section class="section section-white home-disclosure-section home-stores">
+    <section class="home-next-section" aria-labelledby="home-next-title">
       <div class="shell">
-        <details class="home-disclosure" id="lojas" data-home-disclosure>
-          <summary>
-            <span class="home-disclosure-icon">${icon("home")}</span>
-            <span><strong>Lojas do Shopping</strong><small>Clique para abrir as lojas</small></span>
-            <span class="home-disclosure-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="home-disclosure-panel">
-            <div class="store-grid home-store-grid">${homeStores.map(storeCard).join("")}</div>
-            <a class="text-link home-disclosure-link" href="/lojas/" data-route="/lojas/">Ver todas as ${state.stores.length} lojas</a>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section home-disclosure-section home-how-section" id="como-comprar">
-      <div class="shell">
-        <details class="home-disclosure" data-home-disclosure>
-          <summary>
-            <span class="home-disclosure-icon">${icon("spark")}</span>
-            <span><strong>Compra transparente</strong><small>Clique para entender como funciona</small></span>
-            <span class="home-disclosure-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="home-disclosure-panel">
-            <div class="how-grid home-how-grid">
-              ${[
-                ["1", "Encontre", "Pesquise produtos, categorias ou lojas."],
-                ["2", "Compare", "Consulte as opções selecionadas na vitrine."],
-                ["3", "Compre no parceiro", "Finalize pagamento, entrega e garantia no site oficial."],
-                ["✓", "Sem custo adicional", "A Impacto360 pode receber comissão quando você usa os links indicados."],
-              ].map(([number, title, copy]) => `<article class="how-card"><span class="how-number">${number}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join("")}
-            </div>
-          </div>
-        </details>
+        <div class="home-next-heading">
+          <div><span class="section-kicker">Continue explorando</span><h2 id="home-next-title">Mais caminhos, sem ocupar a tela</h2></div>
+          <p>Catálogo, lojas e informações de compra em um único bloco.</p>
+        </div>
+        <nav class="home-next-grid" aria-label="Mais opções da Impacto360">
+          <a href="/buscar/" data-route="/buscar/"><span class="home-next-icon">${icon("grid")}</span><span><strong>Catálogo completo</strong><small>Veja todos os produtos e categorias</small></span><b aria-hidden="true">→</b></a>
+          <a href="/lojas/" data-route="/lojas/"><span class="home-next-icon">${icon("home")}</span><span><strong>Lojas do Shopping</strong><small>Conheça as ${state.stores.length} lojas e serviços</small></span><b aria-hidden="true">→</b></a>
+          <a href="/como-comprar/" data-route="/como-comprar/"><span class="home-next-icon">${icon("spark")}</span><span><strong>Como comprar</strong><small>Entenda parceiros, links e transparência</small></span><b aria-hidden="true">→</b></a>
+        </nav>
       </div>
     </section>`;
   const root = appRoot();
@@ -2354,6 +2382,22 @@ function currentConsent() {
   return consent?.version === CONSENT_VERSION ? consent : null;
 }
 
+function trackStorefrontEvent(eventName, detail = {}) {
+  const consent = currentConsent();
+  if (!consent?.analytics) return;
+  const payload = {
+    event: eventName,
+    page_path: location.pathname,
+    ...detail,
+  };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+  window.dispatchEvent(new CustomEvent("impacto360:analytics", { detail: payload }));
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, detail);
+  }
+}
+
 function loadScriptOnce(src, id) {
   if (document.getElementById(id)) return;
   const script = document.createElement("script");
@@ -2750,13 +2794,38 @@ function setupGlobalEvents() {
 
   document.addEventListener("click", event => {
     const productInternal = event.target.closest("[data-product-internal]");
-    if (productInternal) recordViewedProduct(productInternal.dataset.productInternal);
+    if (productInternal) {
+      recordViewedProduct(productInternal.dataset.productInternal);
+      const placement = productInternal.closest(".photo-rail") ? "photo_rail"
+        : productInternal.closest(".home-recent-rail") ? "recently_viewed"
+          : productInternal.closest("[data-home-product-grid]") ? "home_grid"
+            : "catalog";
+      trackStorefrontEvent("select_product", {
+        item_id: String(productInternal.dataset.productInternal || ""),
+        placement,
+      });
+    }
+
+    const marketplaceCard = event.target.closest(".marketplace-card");
+    if (marketplaceCard) {
+      trackStorefrontEvent("partner_shortcut_click", {
+        partner_name: text(marketplaceCard.querySelector("strong")?.textContent),
+      });
+    }
 
     const affiliateLink = event.target.closest("[data-affiliate-link]");
     if (affiliateLink && !isAllowedAffiliateUrl(affiliateLink.dataset.affiliateLink || affiliateLink.href)) {
       event.preventDefault();
       showToast("Link bloqueado porque o destino não pertence à lista de parceiros permitidos.");
       return;
+    }
+    if (affiliateLink) {
+      let partnerHost = "";
+      try { partnerHost = new URL(affiliateLink.href).hostname; } catch {}
+      trackStorefrontEvent("outbound_partner_click", {
+        product_name: text(affiliateLink.dataset.productName),
+        partner_host: partnerHost,
+      });
     }
 
     const disclosureTarget = event.target.closest("[data-home-disclosure-target]");
