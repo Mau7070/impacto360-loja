@@ -2,7 +2,7 @@ const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
 const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
 const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
-const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-1";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-2";
 const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260930-carros-1";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
