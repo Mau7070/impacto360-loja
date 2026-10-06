@@ -2,7 +2,7 @@ const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
 const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
 const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
-const MARKETPLACES_URL = "/dados/marketplaces.json?v=20260928-fotos-1";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-1";
 const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260930-carros-1";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
@@ -442,6 +442,8 @@ const marketplaceDefinitions = [
   { id: "virtus-corretora", name: "Virtus Corretora", initials: "VC", icon: "shield", url: "https://virtuscorretora.com.br/", domains: ["virtuscorretora.com.br"] },
   { id: "eduzz", name: "Eduzz", initials: "E", icon: "spark", url: "https://www.eduzz.com/", domains: ["eduzz.com"] },
   { id: "magalu", name: "Magalu", initials: "M", icon: "bag", url: "https://www.magazineluiza.com.br/", domains: ["magazineluiza.com.br", "magalu.com"] },
+  { id: "uniasselvi", name: "UNIASSELVI", initials: "U", icon: "grid", url: "https://portal.uniasselvi.com.br/cursos", domains: ["uniasselvi.com.br"] },
+  { id: "santander", name: "Santander", initials: "S", icon: "bag", url: "https://www.santander.com.br/", domains: ["santander.com.br"] },
 ];
 
 function homeMarketplaces() {
@@ -479,7 +481,7 @@ function marketplaceShortcuts() {
     <section class="marketplace-section" id="marketplaces" aria-labelledby="marketplace-title">
       <div class="shell">
         <div class="marketplace-heading">
-          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div>
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Plataformas e serviços para você</h2></div>
           <p>Abra a plataforma e encontre o que precisa.</p>
         </div>
         <div class="marketplace-grid">
@@ -491,7 +493,7 @@ function marketplaceShortcuts() {
               <small class="marketplace-link-kind">${marketplaceLinkLabel(marketplace.type)}</small>
             </a>`).join("")}
         </div>
-        <p class="marketplace-note">Nos produtos selecionados, os botões de compra usam nossos links de afiliado. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
+        <p class="marketplace-note">Cada cartão indica seu tipo de link. Condições no parceiro. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
       </div>
     </section>`;
 }

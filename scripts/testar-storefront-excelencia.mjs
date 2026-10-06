@@ -94,7 +94,7 @@ check(
 check("hero moderno com divulgação de afiliados", app.includes("Seu próximo achado") && app.includes("Somos uma vitrine de afiliados") && !app.includes("Ver ofertas de hoje"));
 check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("Seu próximo achado começa aqui.") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
-const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu"];
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander"];
 check(
   "atalhos gerais e de indicação identificados corretamente",
   marketplaces.length === requiredMarketplaceIds.length
