@@ -1182,7 +1182,7 @@ function renderHome() {
     robots: "index,follow,max-image-preview:large",
   });
   const discoveryPool = homeRotationProducts();
-  const heroProducts = discoveryPool.slice(0, 4);
+  const heroProducts = discoveryPool.slice(0, 3);
   const heroIds = new Set(heroProducts.map(product => String(product.id)));
   const photoProducts = discoveryPool
     .filter(product => !heroIds.has(String(product.id)) && product.image && productPath(product))
@@ -1195,9 +1195,15 @@ function renderHome() {
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const heroProductMarkup = heroProducts.map((product, index) => `
-    <span class="hero-product">
-      <img src="${escapeAttr(assetUrl(product.image))}" alt="" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" ${index === 0 ? 'fetchpriority="high"' : ""}>
-    </span>`).join("");
+    <a
+      class="hero-product"
+      href="${escapeAttr(productPath(product))}"
+      data-product-internal="${escapeAttr(product.id)}"
+      aria-label="Ver ${escapeAttr(product.name)}"
+    >
+      <img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" ${index === 0 ? 'fetchpriority="high"' : ""}>
+      <span class="hero-product-action" aria-hidden="true">↗</span>
+    </a>`).join("");
   const heroMarkup = `
     <section class="hero hero-home" data-initial-home-hero>
       <div class="shell hero-grid">
@@ -1216,10 +1222,10 @@ function renderHome() {
           </div>
           <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
         </div>
-        <div class="hero-showcase" aria-hidden="true">
-          <div class="hero-showcase-orbit"></div>
+        <div class="hero-showcase" aria-label="Produtos em destaque">
+          <div class="hero-showcase-orbit" aria-hidden="true"></div>
+          <div class="hero-showcase-label"><span>Destaques agora</span><strong>Clique para ver o produto</strong></div>
           <div class="hero-products">${heroProductMarkup}</div>
-          <span class="hero-showcase-caption"><span>Seleção em destaque</span><strong>Explore. Descubra. Escolha.</strong></span>
         </div>
       </div>
     </section>`;
