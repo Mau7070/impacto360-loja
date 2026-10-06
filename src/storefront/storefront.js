@@ -832,9 +832,9 @@ function productCard(product, index = 0, eagerCount = 0) {
         : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
   const internalPath = productPath(product);
   const quote = product.actionType === "quote";
-  const actionLabel = quote ? "Solicitar orçamento" : "Ver no parceiro ↗";
+  const actionLabel = quote ? "Solicitar orçamento" : freshness.current ? "Ver oferta ↗" : "Conferir preço ↗";
   const actionClass = quote ? "btn-service" : "btn-offer";
-  const currentPrice = quote ? money(product.priceValue, product.price) : freshness.current ? money(product.priceValue, product.price) : "Consulte o preço";
+  const currentPrice = quote ? money(product.priceValue, product.price) : freshness.current ? money(product.priceValue, product.price) : "Preço no parceiro";
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
   const updatedAt = freshness.current ? freshness.checkedAt : "";
   const rating = product.rating
@@ -877,7 +877,7 @@ function productCard(product, index = 0, eagerCount = 0) {
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
           <strong class="current-price${!quote && !freshness.current ? " price-to-check" : ""}">${escapeHtml(currentPrice)}</strong>
-          ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Valor final disponível no parceiro"}</span>` : ""}
+          ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Confira valor, estoque e frete na loja parceira"}</span>` : ""}
         </div>
         <a
           class="btn ${actionClass}"
@@ -893,7 +893,7 @@ function productCard(product, index = 0, eagerCount = 0) {
           type="button"
           data-alert="${escapeAttr(product.id)}"
           aria-pressed="${alerts.has(String(product.id))}"
-        >${alerts.has(String(product.id)) ? "Acompanhando" : "Acompanhar preço"}</button>
+        >${alerts.has(String(product.id)) ? "Salvo para acompanhar" : "Salvar para acompanhar"}</button>
       </div>
     </article>`;
 }
@@ -1177,7 +1177,7 @@ function renderHome() {
         <div class="photo-rail" data-photo-rail role="region" aria-label="Fotos de produtos da loja" tabindex="0">
           ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
             <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
-            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver na Impacto360 →</span></span>
+            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver detalhes →</span></span>
           </a>`).join("")}
         </div>
       </div>
