@@ -465,9 +465,9 @@ function homeMarketplaces() {
 }
 
 function marketplaceLinkLabel(type) {
-  if (type === "affiliate") return "Link de afiliado";
-  if (type === "referral") return "Link de indicação";
-  return "Acesso oficial sem rastreamento confirmado";
+  if (type === "affiliate") return "Afiliado";
+  if (type === "referral") return "Indicação";
+  return "Site oficial";
 }
 
 function marketplaceLinkAria(type) {
@@ -829,7 +829,7 @@ function productCard(product, index = 0, eagerCount = 0) {
     ? `${discount}% OFF`
     : verifiedBadge && freshness.current
         ? "Oferta verificada"
-        : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
+        : text(product.badge).replace(/oferta verificada/ig, "").trim();
   const internalPath = productPath(product);
   const quote = product.actionType === "quote";
   const actionLabel = quote ? "Solicitar orçamento" : freshness.current ? "Ver oferta ↗" : "Conferir preço ↗";
@@ -855,7 +855,7 @@ function productCard(product, index = 0, eagerCount = 0) {
             ${eagerCount && index === 0 ? 'fetchpriority="high"' : ""}
           >
         </a>
-        <span class="product-badge ${discount ? "product-discount" : ""}">${escapeHtml(badge)}</span>
+        ${badge ? `<span class="product-badge ${discount ? "product-discount" : ""}">${escapeHtml(badge)}</span>` : ""}
         <button
           class="favorite-btn"
           type="button"
@@ -872,7 +872,7 @@ function productCard(product, index = 0, eagerCount = 0) {
         ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
         ${freshness.current ? `<div class="product-facts">
           ${product.availability ? `<span>${escapeHtml(availabilityLabel(product))}</span>` : ""}
-          ${updatedAt ? `<span>Preço verificado em ${escapeHtml(updatedAt)}</span>` : ""}
+          ${updatedAt ? `<span class="price-verified" title="Preço verificado em ${escapeAttr(updatedAt)}">✓ Preço verificado</span>` : ""}
         </div>` : ""}
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
@@ -1162,6 +1162,8 @@ function renderHome() {
       </div>
     </section>`;
   const homeContent = `
+    ${`<section class="trust-strip-section" aria-label="Como funciona a compra na Impacto360"><div class="shell trust-strip"><span><strong>✓ Compra no parceiro</strong><small>Pagamento e entrega no site escolhido</small></span><span><strong>↗ Links identificados</strong><small>Afiliado, indicação ou site oficial</small></span><span><strong>0 custo extra</strong><small>Você não paga mais por usar nossos links</small></span></div></section>`}
+
     ${marketplaceShortcuts()}
 
     ${photoProducts.length ? `<section class="section photo-rail-section" aria-labelledby="photo-rail-title">
