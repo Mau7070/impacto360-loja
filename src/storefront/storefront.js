@@ -23,7 +23,7 @@ const ALLOWED_AFFILIATE_DOMAINS = new Set([
   "go.hotmart.com",
 ]);
 const PAGE_SIZE = 24;
-const HOME_ROTATION_SIZE = 8;
+const HOME_ROTATION_SIZE = 10;
 const HOME_ROTATION_INTERVAL = 8000;
 const LAZY_IMAGE_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'/%3E";
 
@@ -481,8 +481,8 @@ function marketplaceShortcuts() {
     <section class="marketplace-section" id="marketplaces" aria-labelledby="marketplace-title">
       <div class="shell">
         <div class="marketplace-heading">
-          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Plataformas e serviços para você</h2></div>
-          <p>Abra a plataforma e encontre o que precisa.</p>
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div>
+          <p>Atalhos para lojas, serviços e parceiros.</p>
         </div>
         <div class="marketplace-grid">
           ${homeMarketplaces().map(marketplace => `
@@ -969,7 +969,24 @@ function sectionHeader(kicker, title, description, link = "", linkLabel = "") {
     </div>`;
 }
 
-function homeCommercialScore(product) {
+function homePreferenceSignals() {
+  const recentIds = readStorage(VIEW_HISTORY_KEY, []);
+  const recent = Array.isArray(recentIds) ? recentIds.slice(0, 12).map(String) : [];
+  const byId = new Map(state.products.map(product => [String(product.id), product]));
+  const categories = new Map();
+  const stores = new Map();
+  recent.forEach((id, index) => {
+    const product = byId.get(id);
+    if (!product) return;
+    const weight = Math.max(1, 6 - Math.floor(index / 2));
+    const category = categoryForProduct(product)?.slug;
+    if (category) categories.set(category, (categories.get(category) || 0) + weight);
+    if (product.storeId) stores.set(product.storeId, (stores.get(product.storeId) || 0) + weight);
+  });
+  return { categories, stores };
+}
+
+function homeCommercialScore(product, signals) {
   const freshness = priceFreshness(product);
   let score = 0;
   if (product.featured) score += 18;
@@ -979,14 +996,31 @@ function homeCommercialScore(product) {
   if (product.availability) score += 5;
   if (product.rating) score += Math.min(5, product.rating);
   if (product.image) score += 3;
+  const category = categoryForProduct(product)?.slug;
+  if (category) score += Math.min(16, (signals.categories.get(category) || 0) * 1.5);
+  if (product.storeId) score += Math.min(8, signals.stores.get(product.storeId) || 0);
   return score;
+}
+
+function recentlyViewedProducts(excludedIds = [], limit = 6) {
+  const excluded = new Set((excludedIds || []).map(String));
+  const ids = readStorage(VIEW_HISTORY_KEY, []);
+  if (!Array.isArray(ids) || !ids.length) return [];
+  const byId = new Map(state.products.map(product => [String(product.id), product]));
+  return ids
+    .map(String)
+    .filter((id, index, list) => list.indexOf(id) === index && !excluded.has(id))
+    .map(id => byId.get(id))
+    .filter(Boolean)
+    .slice(0, limit);
 }
 
 function homeRotationProducts(excludedIds = []) {
   const excluded = new Set((excludedIds || []).map(String));
+  const signals = homePreferenceSignals();
   const ranked = state.products
     .filter(product => product?.id && !excluded.has(String(product.id)))
-    .map((product, index) => ({ product, index, score: homeCommercialScore(product) }))
+    .map((product, index) => ({ product, index, score: homeCommercialScore(product, signals) }))
     .sort((a, b) => b.score - a.score || a.index - b.index)
     .map(item => item.product);
   return diverseProducts(ranked, ranked.length);
@@ -1152,10 +1186,12 @@ function renderHome() {
   const heroIds = new Set(heroProducts.map(product => String(product.id)));
   const photoProducts = discoveryPool
     .filter(product => !heroIds.has(String(product.id)) && product.image && productPath(product))
-    .slice(0, 8);
+    .slice(0, 6);
   const reservedHomeIds = [...heroProducts, ...photoProducts].map(product => String(product.id));
   const rotationPool = homeRotationProducts(reservedHomeIds);
   const featured = homeRotationBatch(rotationPool);
+  const shownHomeIds = [...reservedHomeIds, ...featured.map(product => String(product.id))];
+  const recentProducts = recentlyViewedProducts(shownHomeIds, 6);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const heroProductMarkup = heroProducts.map((product, index) => `
@@ -1235,6 +1271,21 @@ function renderHome() {
         ${productGrid(featured, "product-grid", 2, `data-home-product-grid data-home-exclude="${escapeAttr(reservedHomeIds.join("|"))}" data-rotation-start="0" aria-label="Seleção de produtos"`)}
       </div>
     </section>
+
+    ${recentProducts.length ? `<section class="home-recent-section" aria-labelledby="home-recent-title">
+      <div class="shell">
+        <div class="home-recent-heading">
+          <div><span class="section-kicker">Continue de onde parou</span><h2 id="home-recent-title">Vistos recentemente</h2></div>
+          <a class="text-link" href="/historico/" data-route="/historico/">Ver histórico →</a>
+        </div>
+        <div class="home-recent-rail">
+          ${recentProducts.map(product => `<a class="recent-product-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
+            <span class="recent-product-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="lazy" decoding="async"></span>
+            <span class="recent-product-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong></span>
+          </a>`).join("")}
+        </div>
+      </div>
+    </section>` : ""}
 
     <section class="home-next-section" aria-labelledby="home-next-title">
       <div class="shell">
