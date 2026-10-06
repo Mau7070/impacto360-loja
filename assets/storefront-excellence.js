@@ -1166,6 +1166,13 @@ function renderHome() {
 
     ${marketplaceShortcuts()}
 
+    <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
+      <div class="shell quick-category-scroll">
+        ${activeCategories.map(category => `<a href="/categoria/${category.slug}/" data-route="/categoria/${category.slug}/"><span class="quick-category-icon">${icon(category.icon)}</span><strong>${escapeHtml(category.label)}</strong></a>`).join("")}
+        <a class="quick-category-all" href="/buscar/" data-route="/buscar/"><span class="quick-category-icon">${icon("grid")}</span><strong>Todas</strong></a>
+      </div>
+    </nav>
+
     ${photoProducts.length ? `<section class="section photo-rail-section" aria-labelledby="photo-rail-title">
       <div class="shell">
         <div class="photo-rail-heading">
