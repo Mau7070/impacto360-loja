@@ -465,9 +465,9 @@ function homeMarketplaces() {
 }
 
 function marketplaceLinkLabel(type) {
-  if (type === "affiliate") return "Link de afiliado";
-  if (type === "referral") return "Link de indicação";
-  return "Acesso oficial sem rastreamento confirmado";
+  if (type === "affiliate") return "Afiliado";
+  if (type === "referral") return "Indicação";
+  return "Site oficial";
 }
 
 function marketplaceLinkAria(type) {
@@ -829,12 +829,12 @@ function productCard(product, index = 0, eagerCount = 0) {
     ? `${discount}% OFF`
     : verifiedBadge && freshness.current
         ? "Oferta verificada"
-        : text(product.badge).replace(/oferta verificada/ig, "").trim() || "Produto selecionado";
+        : text(product.badge).replace(/oferta verificada/ig, "").trim();
   const internalPath = productPath(product);
   const quote = product.actionType === "quote";
-  const actionLabel = quote ? "Solicitar orçamento" : "Ver no parceiro ↗";
+  const actionLabel = quote ? "Solicitar orçamento" : freshness.current ? "Ver oferta ↗" : "Conferir preço ↗";
   const actionClass = quote ? "btn-service" : "btn-offer";
-  const currentPrice = quote ? money(product.priceValue, product.price) : freshness.current ? money(product.priceValue, product.price) : "Consulte o preço";
+  const currentPrice = quote ? money(product.priceValue, product.price) : freshness.current ? money(product.priceValue, product.price) : "Preço no parceiro";
   const previousPrice = validDiscount(product) ? money(product.previousPriceValue, product.previousPrice) : "";
   const updatedAt = freshness.current ? freshness.checkedAt : "";
   const rating = product.rating
@@ -855,7 +855,7 @@ function productCard(product, index = 0, eagerCount = 0) {
             ${eagerCount && index === 0 ? 'fetchpriority="high"' : ""}
           >
         </a>
-        <span class="product-badge ${discount ? "product-discount" : ""}">${escapeHtml(badge)}</span>
+        ${badge ? `<span class="product-badge ${discount ? "product-discount" : ""}">${escapeHtml(badge)}</span>` : ""}
         <button
           class="favorite-btn"
           type="button"
@@ -872,12 +872,12 @@ function productCard(product, index = 0, eagerCount = 0) {
         ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
         ${freshness.current ? `<div class="product-facts">
           ${product.availability ? `<span>${escapeHtml(availabilityLabel(product))}</span>` : ""}
-          ${updatedAt ? `<span>Preço verificado em ${escapeHtml(updatedAt)}</span>` : ""}
+          ${updatedAt ? `<span class="price-verified" title="Preço verificado em ${escapeAttr(updatedAt)}">✓ Preço verificado</span>` : ""}
         </div>` : ""}
         <div class="price-block">
           ${previousPrice ? `<span class="old-price">${escapeHtml(previousPrice)}</span>` : ""}
           <strong class="current-price${!quote && !freshness.current ? " price-to-check" : ""}">${escapeHtml(currentPrice)}</strong>
-          ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Valor final disponível no parceiro"}</span>` : ""}
+          ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Confira valor, estoque e frete na loja parceira"}</span>` : ""}
         </div>
         <a
           class="btn ${actionClass}"
@@ -893,7 +893,7 @@ function productCard(product, index = 0, eagerCount = 0) {
           type="button"
           data-alert="${escapeAttr(product.id)}"
           aria-pressed="${alerts.has(String(product.id))}"
-        >${alerts.has(String(product.id)) ? "Acompanhando" : "Acompanhar preço"}</button>
+        >${alerts.has(String(product.id)) ? "Salvo para acompanhar" : "Salvar para acompanhar"}</button>
       </div>
     </article>`;
 }
@@ -1018,13 +1018,13 @@ function updateHomeRotationControl() {
   if (reduced) {
     button.textContent = "Mostrar outros produtos";
     button.setAttribute("aria-pressed", "false");
-    status.textContent = `Rodízio manual por acessibilidade · ${total} produtos`;
+    status.textContent = `Atualização manual por acessibilidade · ${total} produtos`;
     return;
   }
-  button.textContent = state.homeRotationUserPaused ? "Ativar rodízio" : "Pausar rodízio";
+  button.textContent = state.homeRotationUserPaused ? "Atualizar automaticamente" : "Pausar atualização";
   button.setAttribute("aria-pressed", String(state.homeRotationUserPaused));
   status.textContent = state.homeRotationInteractionPaused
-    ? "Rodízio pausado durante sua interação"
+    ? "Atualização pausada durante sua interação"
     : state.homeRotationUserPaused
       ? `Explore no seu ritmo · seleção ${page} de ${pages}`
       : `Novos produtos a cada 8 segundos · seleção ${page} de ${pages}`;
@@ -1162,7 +1162,16 @@ function renderHome() {
       </div>
     </section>`;
   const homeContent = `
+    ${`<section class="trust-strip-section" aria-label="Como funciona a compra na Impacto360"><div class="shell trust-strip"><span><strong>✓ Compra no parceiro</strong><small>Pagamento e entrega no site escolhido</small></span><span><strong>↗ Links identificados</strong><small>Afiliado, indicação ou site oficial</small></span><span><strong>0 custo extra</strong><small>Você não paga mais por usar nossos links</small></span></div></section>`}
+
     ${marketplaceShortcuts()}
+
+    <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
+      <div class="shell quick-category-scroll">
+        ${activeCategories.map(category => `<a href="/categoria/${category.slug}/" data-route="/categoria/${category.slug}/"><span class="quick-category-icon">${icon(category.icon)}</span><strong>${escapeHtml(category.label)}</strong></a>`).join("")}
+        <a class="quick-category-all" href="/buscar/" data-route="/buscar/"><span class="quick-category-icon">${icon("grid")}</span><strong>Todas</strong></a>
+      </div>
+    </nav>
 
     ${photoProducts.length ? `<section class="section photo-rail-section" aria-labelledby="photo-rail-title">
       <div class="shell">
@@ -1177,7 +1186,7 @@ function renderHome() {
         <div class="photo-rail" data-photo-rail role="region" aria-label="Fotos de produtos da loja" tabindex="0">
           ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
             <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
-            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver na Impacto360 →</span></span>
+            <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Ver detalhes →</span></span>
           </a>`).join("")}
         </div>
       </div>
@@ -1204,7 +1213,7 @@ function renderHome() {
         ${sectionHeader("Descobertas para você", "Encontre seu próximo favorito", "Explore a seleção. Preço, frete e disponibilidade são confirmados no parceiro.", "/buscar/", "Ver catálogo →")}
         <div class="home-rotation-toolbar">
           <span data-home-rotation-status>Explore no seu ritmo · ${rotationPool.length} produtos</span>
-          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Ativar rodízio</button><button class="home-rotation-next" type="button" data-home-rotation-next>Próximos <span aria-hidden="true">→</span></button></div>
+          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button><button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button></div>
         </div>
         ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Seleção de produtos"')}
       </div>

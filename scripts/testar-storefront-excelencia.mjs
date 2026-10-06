@@ -92,6 +92,7 @@ check(
   && app.includes("consent.marketing"),
 );
 check("hero moderno com divulgação de afiliados", app.includes("Seu próximo achado") && app.includes("Somos uma vitrine de afiliados") && !app.includes("Ver ofertas de hoje"));
+check("faixa de confiança compacta", app.includes("trust-strip-section") && app.includes("Compra no parceiro") && app.includes("0 custo extra"));
 check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("Seu próximo achado começa aqui.") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
 const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander"];
@@ -101,8 +102,8 @@ check(
     && new Set(marketplaces.map(item => item.id)).size === marketplaces.length
     && requiredMarketplaceIds.every(id => marketplaces.some(item => item.id === id))
     && marketplaces.every(item => html.includes(`href="${item.url.replaceAll("&", "&amp;")}"`))
-    && app.includes("Acesso oficial sem rastreamento confirmado")
-    && app.includes("Link de indicação"),
+    && app.includes("Site oficial")
+    && app.includes("Indicação"),
 );
 check("rodape protegido contra salto de layout inicial", css.includes("html:not(.storefront-ready) .site-footer") && app.includes('classList.add("storefront-ready")'));
 check("oito categorias iniciais", app.includes("categoryDefinitions") && app.match(/slug: "/g)?.length >= 8);
