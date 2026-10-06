@@ -4094,3 +4094,159 @@ a {
     font-size: 13px;
   }
 }
+
+
+/* ===== Descoberta rápida e densidade das alas · 2026-10-06 ===== */
+.quick-category-section {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.quick-category-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-block: 2px;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+
+.quick-category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-category-scroll a {
+  flex: 0 0 auto;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  scroll-snap-align: start;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+.quick-category-scroll a:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-border-strong);
+  background: var(--color-primary-light);
+}
+
+.quick-category-scroll strong {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.quick-category-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-surface);
+}
+
+.quick-category-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.shelf {
+  content-visibility: auto;
+  contain-intrinsic-size: 520px;
+}
+
+.product-badge:empty {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .quick-category-section {
+    padding: 8px 0;
+  }
+
+  .quick-category-scroll {
+    width: calc(100% - 14px);
+    margin-left: 14px;
+    padding-right: 14px;
+  }
+
+  .quick-category-scroll a {
+    min-height: 38px;
+    gap: 6px;
+    padding: 5px 9px;
+  }
+
+  .quick-category-scroll strong {
+    font-size: 11px;
+  }
+
+  .quick-category-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .shelf .store-card {
+    position: relative;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .shelf .store-cover {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .shelf .store-cover::after {
+    background: linear-gradient(180deg, rgba(7, 27, 47, .02) 26%, rgba(7, 27, 47, .86) 100%);
+  }
+
+  .shelf .store-body {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .shelf .store-body h3 {
+    min-height: 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .shelf .store-body p,
+  .shelf .specialties {
+    display: none;
+  }
+
+  .shelf .store-body .btn {
+    width: auto;
+    min-height: 32px;
+    margin-top: 7px;
+    padding: 0 9px;
+    border-color: rgba(255, 255, 255, .45);
+    background: rgba(255, 255, 255, .14);
+    color: #fff;
+    font-size: 10px;
+    backdrop-filter: blur(8px);
+  }
+}
