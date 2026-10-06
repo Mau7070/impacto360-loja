@@ -1018,13 +1018,13 @@ function updateHomeRotationControl() {
   if (reduced) {
     button.textContent = "Mostrar outros produtos";
     button.setAttribute("aria-pressed", "false");
-    status.textContent = `Rodízio manual por acessibilidade · ${total} produtos`;
+    status.textContent = `Atualização manual por acessibilidade · ${total} produtos`;
     return;
   }
-  button.textContent = state.homeRotationUserPaused ? "Ativar rodízio" : "Pausar rodízio";
+  button.textContent = state.homeRotationUserPaused ? "Atualizar automaticamente" : "Pausar atualização";
   button.setAttribute("aria-pressed", String(state.homeRotationUserPaused));
   status.textContent = state.homeRotationInteractionPaused
-    ? "Rodízio pausado durante sua interação"
+    ? "Atualização pausada durante sua interação"
     : state.homeRotationUserPaused
       ? `Explore no seu ritmo · seleção ${page} de ${pages}`
       : `Novos produtos a cada 8 segundos · seleção ${page} de ${pages}`;
@@ -1213,7 +1213,7 @@ function renderHome() {
         ${sectionHeader("Descobertas para você", "Encontre seu próximo favorito", "Explore a seleção. Preço, frete e disponibilidade são confirmados no parceiro.", "/buscar/", "Ver catálogo →")}
         <div class="home-rotation-toolbar">
           <span data-home-rotation-status>Explore no seu ritmo · ${rotationPool.length} produtos</span>
-          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Ativar rodízio</button><button class="home-rotation-next" type="button" data-home-rotation-next>Próximos <span aria-hidden="true">→</span></button></div>
+          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button><button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button></div>
         </div>
         ${productGrid(featured, "product-grid", 2, 'data-home-product-grid data-rotation-start="0" aria-label="Seleção de produtos"')}
       </div>
