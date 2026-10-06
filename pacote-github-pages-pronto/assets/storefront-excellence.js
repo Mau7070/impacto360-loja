@@ -1199,28 +1199,31 @@ function renderHome() {
       <img src="${escapeAttr(assetUrl(product.image))}" alt="" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" ${index === 0 ? 'fetchpriority="high"' : ""}>
     </span>`).join("");
   const heroMarkup = `
-    <section class="hero" data-initial-home-hero>
+    <section class="hero hero-home" data-initial-home-hero>
       <div class="shell hero-grid">
         <div class="hero-copy">
           <span class="hero-eyebrow"><span aria-hidden="true"></span>Shopping Impacto360</span>
-          <h1>Seu próximo achado<br>começa aqui.</h1>
-          <p>Produtos, ideias e novas possibilidades. Explore nossa seleção e compre diretamente na plataforma que você escolher.</p>
+          <h1>Seu próximo <span class="hero-title-accent">achado</span><br>começa aqui.</h1>
+          <p>Descubra produtos de diferentes categorias, compare opções e siga para a loja parceira quando encontrar o que procura.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="/buscar/" data-route="/buscar/">Explorar produtos <span aria-hidden="true">→</span></a>
-            <a class="hero-secondary-link" href="#marketplaces">Ir às plataformas <span aria-hidden="true">↗</span></a>
+            <a class="hero-secondary-link" href="#marketplaces">Ver lojas parceiras <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="hero-disclosure">Somos uma vitrine de afiliados. Podemos receber comissão por compras pelos nossos links, sem custo adicional para você.</p>
+          <div class="hero-proof" aria-label="Como funciona a Impacto360">
+            <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
+            <span><b aria-hidden="true">↗</b> Links identificados</span>
+            <span><b aria-hidden="true">0</b> custo extra</span>
+          </div>
+          <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
         </div>
         <div class="hero-showcase" aria-hidden="true">
           <div class="hero-showcase-orbit"></div>
           <div class="hero-products">${heroProductMarkup}</div>
-          <span class="hero-showcase-caption"><span>Uma seleção. Muitas possibilidades.</span><strong>Explore. Descubra. Escolha.</strong></span>
+          <span class="hero-showcase-caption"><span>Seleção em destaque</span><strong>Explore. Descubra. Escolha.</strong></span>
         </div>
       </div>
     </section>`;
   const homeContent = `
-    ${`<section class="trust-strip-section" aria-label="Como funciona a compra na Impacto360"><div class="shell trust-strip"><span><strong>✓ Compra no parceiro</strong><small>Pagamento e entrega no site escolhido</small></span><span><strong>↗ Links identificados</strong><small>Afiliado, indicação ou site oficial</small></span><span><strong>0 custo extra</strong><small>Você não paga mais por usar nossos links</small></span></div></section>`}
-
     ${marketplaceShortcuts()}
 
     <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
@@ -1249,24 +1252,36 @@ function renderHome() {
       </div>
     </section>` : ""}
 
-    <section class="section section-white cars-home-preview" aria-labelledby="cars-home-title">
-      <div class="shell cars-home-panel">
-        <span class="cars-home-icon" aria-hidden="true">🚗</span>
-        <div>
-          <span class="section-kicker">Nova área · veículos</span>
-          <h2 id="cars-home-title">Um espaço para encontrar seu próximo carro</h2>
-          <p>Os anúncios entram na vitrine depois da conferência do veículo, das condições e do link de indicação.</p>
-        </div>
-        <a class="btn btn-primary" href="/carros/" data-route="/carros/">Explorar carros <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
     <section class="section section-soft home-products" id="produtos">
       <div class="shell">
+        <div class="home-discovery-head">
+          <div>
+            <span class="section-kicker">Descobertas para você</span>
+            <h2>Encontre seu próximo favorito</h2>
+            <p>Uma seleção mais enxuta para comparar rápido. Preço, frete e disponibilidade são confirmados no parceiro.</p>
+          </div>
+          <a class="text-link home-catalog-link" href="/buscar/" data-route="/buscar/">Ver catálogo completo →</a>
+        </div>
 
-        ${sectionHeader("Descobertas para você", "Encontre seu próximo favorito", "Explore a seleção. Preço, frete e disponibilidade são confirmados no parceiro.", "/buscar/", "Ver catálogo →")}
-        <div class="home-rotation-toolbar">
-          <span data-home-rotation-status>Explore no seu ritmo · ${rotationPool.length} produtos</span>
-          <div class="home-rotation-actions"><button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button><button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button></div>
+        <div class="home-spotlight-row">
+          <a class="vehicle-spotlight" href="/carros/" data-route="/carros/" aria-label="Explorar veículos">
+            <span class="vehicle-spotlight-icon">${icon("car")}</span>
+            <span class="vehicle-spotlight-copy">
+              <small>Veículos · nova área</small>
+              <strong>Seu próximo carro também pode estar aqui</strong>
+              <em>Anúncios entram após conferência dos dados e do link de indicação.</em>
+            </span>
+            <span class="vehicle-spotlight-cta">Explorar carros <b aria-hidden="true">→</b></span>
+          </a>
+
+          <div class="home-selection-panel">
+            <span class="home-selection-label">Seleção inteligente</span>
+            <strong data-home-rotation-status>Explore no seu ritmo · seleção 1 de ${Math.max(1, Math.ceil(rotationPool.length / HOME_ROTATION_SIZE))}</strong>
+            <div class="home-rotation-actions">
+              <button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button>
+              <button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
         </div>
         ${productGrid(featured, "product-grid", 2, `data-home-product-grid data-home-exclude="${escapeAttr(reservedHomeIds.join("|"))}" data-rotation-start="0" aria-label="Seleção de produtos"`)}
       </div>

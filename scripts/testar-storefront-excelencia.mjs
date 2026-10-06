@@ -78,8 +78,8 @@ const sourceById = new Map(sourceProducts.map(product => [String(product.id), pr
 check("HTML inicial enxuto", Buffer.byteLength(html) < 25_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
-check("cache da home versionado", html.includes("storefront-excellence.css?v=20261006-home-4") && html.includes("storefront-excellence.js?v=20261006-home-4"));
-check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261006-home-4') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
+check("cache da home versionado", html.includes("storefront-excellence.css?v=20261006-home-5") && html.includes("storefront-excellence.js?v=20261006-home-5"));
+check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261006-home-5') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
 check("carrossel de fotos leva a fichas internas", app.includes('class="photo-rail-card"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && !app.includes('class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-route='));
 check("imagem de compartilhamento coerente e sincronizada", html.includes("/public/impacto360-categorias-20260928.png") && exists("public/impacto360-categorias-20260928.png") && hash("public/impacto360-categorias-20260928.png") === hash("public/impacto360-categorias-20260928.png", packageRoot));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
@@ -94,9 +94,9 @@ check(
   && app.includes("applyConsent")
   && app.includes("consent.marketing"),
 );
-check("hero moderno com divulgação de afiliados", app.includes("Seu próximo achado") && app.includes("Somos uma vitrine de afiliados") && !app.includes("Ver ofertas de hoje"));
-check("faixa de confiança compacta", app.includes("trust-strip-section") && app.includes("Compra no parceiro") && app.includes("0 custo extra"));
-check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero initial-home-hero"') && html.includes("Seu próximo achado começa aqui.") && html.includes('id="marketplaces"'));
+check("hero premium com divulgação de afiliados", app.includes("hero-title-accent") && app.includes("Compra no parceiro") && app.includes("A Impacto360 pode receber comissão") && !app.includes("Ver ofertas de hoje"));
+check("provas de confiança integradas ao hero", app.includes("hero-proof") && app.includes("Links identificados") && app.includes("0</b> custo extra") && !app.includes("trust-strip-section"));
+check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero hero-home initial-home-hero"') && html.includes("hero-title-accent") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
 const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander"];
 check(
@@ -178,6 +178,9 @@ check("tema e acessibilidade disponiveis no menu movel e perfil", html.includes(
 check("home compacta com limites definidos", app.includes("HOME_ROTATION_SIZE = 10") && app.includes(".slice(0, 4)") && app.includes(".slice(0, 6)") && app.includes("data-home-exclude") && !app.includes('"Seleções para você"') && !app.includes('"Produtos por departamento"'));
 check("cards moveis simplificados em duas colunas permanentes", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))") && !css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
 check("home mobile prioriza produtos sem navegação redundante", app.includes('class="section section-soft home-products" id="produtos"') && !app.includes('class="mobile-home-access"') && app.includes('class="quick-category-section"') && css.includes(".initial-home-route .promo-shortcuts"));
+check("veiculos integrados a descoberta sem secao gigante", app.includes("home-spotlight-row") && app.includes("vehicle-spotlight") && app.includes("home-selection-panel") && !app.includes('class="section section-white cars-home-preview"'));
+check("hero reduz espaco vazio e integra confianca", css.includes(".hero.hero-home") && css.includes("min-height: 332px") && css.includes(".hero-proof") && css.includes(".hero-title-accent"));
+
 check("rodape da home concentra caminhos em um unico bloco", app.includes('class="home-next-section"') && app.includes("Catálogo completo") && app.includes("Lojas do Shopping") && app.includes("Como comprar") && !app.includes('home-disclosure-section home-categories'));
 check("fim da home usa tres atalhos responsivos", css.includes(".home-next-grid") && css.includes("grid-template-columns: repeat(3, minmax(0, 1fr))") && css.includes("@media (max-width: 980px)"));
 check("rotacao percorre catalogo sem repetir vitrines superiores", app.includes("HOME_ROTATION_INTERVAL = 8000") && app.includes("HOME_ROTATION_SIZE = 10") && app.includes("homeRotationProducts(excludedIds)") && app.includes("data-home-exclude") && app.includes("setInterval(() => rotateHomeProducts()"));

@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="Imagem ilustrativa de categorias de casa, tecnologia e leitura da loja virtual Impacto360">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-4">
+  <link rel="stylesheet" href="/assets/storefront-excellence.css?v=20261006-home-5">
   <script>
     (function prepareInitialExperience() {
       const routedPath = new URLSearchParams(location.search).get("route") || location.pathname;
@@ -173,22 +173,31 @@
   <main id="conteudo" tabindex="-1">
     <div id="appRoot" class="app-root" aria-live="polite" aria-busy="true">
       <!-- ROUTE_FALLBACK -->
-      <section class="hero initial-home-hero" data-initial-home-hero>
+      <section class="hero hero-home initial-home-hero" data-initial-home-hero>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">SEU SHOPPING DE DESCOBERTAS</span>
-            <h1>Seu próximo achado começa aqui.</h1>
-            <p>Explore produtos de diferentes categorias e escolha onde comprar. O pagamento e a entrega ficam com a plataforma escolhida.</p>
+            <span class="hero-eyebrow"><span aria-hidden="true"></span>Shopping Impacto360</span>
+            <h1>Seu próximo <span class="hero-title-accent">achado</span><br>começa aqui.</h1>
+            <p>Descubra produtos de diferentes categorias, compare opções e siga para a loja parceira quando encontrar o que procura.</p>
             <div class="hero-actions">
-              <a class="btn btn-offer" href="/buscar/" data-route="/buscar/">Explorar produtos</a>
-              <a class="btn btn-secondary" href="/como-comprar/" data-route="/como-comprar/">Como funciona</a>
+              <a class="btn btn-primary" href="/buscar/" data-route="/buscar/">Explorar produtos <span aria-hidden="true">→</span></a>
+              <a class="hero-secondary-link" href="#marketplaces">Ver lojas parceiras <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="hero-disclosure">Somos uma vitrine de afiliados. Podemos receber comissão pelas compras realizadas pelos nossos links, sem custo adicional para você.</p>
+            <div class="hero-proof" aria-label="Como funciona a Impacto360">
+              <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
+              <span><b aria-hidden="true">↗</b> Links identificados</span>
+              <span><b aria-hidden="true">0</b> custo extra</span>
+            </div>
+            <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
           </div>
-          <div class="hero-showcase" aria-hidden="true"><div class="hero-products"></div><p class="hero-showcase-caption">Várias categorias. Um lugar para descobrir.</p></div>
+          <div class="hero-showcase" aria-hidden="true">
+            <div class="hero-showcase-orbit"></div>
+            <div class="hero-products"></div>
+            <span class="hero-showcase-caption"><span>Seleção em destaque</span><strong>Explore. Descubra. Escolha.</strong></span>
+          </div>
         </div>
       </section>
-      <!-- MARKETPLACE_SHORTCUTS -->
+            <!-- MARKETPLACE_SHORTCUTS -->
       <section class="loading-state initial-route-loading" aria-label="Carregando ofertas">
         <div class="home-skeleton shell" aria-hidden="true">
           <div class="hero-skeleton">
@@ -301,6 +310,6 @@
   </dialog>
 
   <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
-  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-4"></script>
+  <script type="module" src="/assets/storefront-excellence.js?v=20261006-home-5"></script>
 </body>
 </html>
