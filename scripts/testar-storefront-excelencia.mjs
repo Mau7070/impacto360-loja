@@ -68,6 +68,7 @@ const html = read("index.html");
 const app = read("assets/storefront-excellence.js");
 const css = read("assets/storefront-excellence.css");
 const fallback404 = read("404.html");
+const serviceWorker = read("sw.js");
 const catalog = JSON.parse(read("dados/catalogo-publico.json"));
 const priceRevalidationQueue = JSON.parse(read("dados/fila-revalidacao-precos.json"));
 const sourceProducts = JSON.parse(read("dados/products.json"));
@@ -77,6 +78,8 @@ const sourceById = new Map(sourceProducts.map(product => [String(product.id), pr
 check("HTML inicial enxuto", Buffer.byteLength(html) < 25_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
+check("cache da home versionado", html.includes("storefront-excellence.css?v=20261006-home-4") && html.includes("storefront-excellence.js?v=20261006-home-4"));
+check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261006-home-4') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
 check("carrossel de fotos leva a fichas internas", app.includes('class="photo-rail-card"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && !app.includes('class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-route='));
 check("imagem de compartilhamento coerente e sincronizada", html.includes("/public/impacto360-categorias-20260928.png") && exists("public/impacto360-categorias-20260928.png") && hash("public/impacto360-categorias-20260928.png") === hash("public/impacto360-categorias-20260928.png", packageRoot));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
