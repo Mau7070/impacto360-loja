@@ -184,24 +184,53 @@ function priceAudit(product) {
   };
 }
 
+function localImageDimensions(buffer) {
+  if (!Buffer.isBuffer(buffer) || buffer.length < 24) return { width: 0, height: 0 };
+  const png = buffer.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  if (png) {
+    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+  }
+  if (buffer[0] === 0xFF && buffer[1] === 0xD8) {
+    let offset = 2;
+    while (offset + 9 < buffer.length) {
+      if (buffer[offset] !== 0xFF) { offset += 1; continue; }
+      const marker = buffer[offset + 1];
+      if ([0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF].includes(marker)) {
+        return { width: buffer.readUInt16BE(offset + 7), height: buffer.readUInt16BE(offset + 5) };
+      }
+      if (marker === 0xD8 || marker === 0xD9) { offset += 2; continue; }
+      const length = buffer.readUInt16BE(offset + 2);
+      if (!length || length < 2) break;
+      offset += 2 + length;
+    }
+  }
+  return { width: 0, height: 0 };
+}
+
 function imageAudit(value) {
   const image = text(value);
   if (!image || /placeholder|sem[-_ ]?(foto|imagem)|COLOCAR_|URL_|LINK_/i.test(image)) {
-    return { valid: false, kind: "missing", reason: "imagem_ausente_ou_placeholder", bytes: 0, hash: "" };
+    return { valid: false, kind: "missing", reason: "imagem_ausente_ou_placeholder", bytes: 0, hash: "", width: 0, height: 0, aspect: 0 };
   }
   if (/^https?:\/\//i.test(image) || image.startsWith("data:image/")) {
-    return { valid: true, kind: "remote", reason: "imagem_remota", bytes: 0, hash: "" };
+    return { valid: true, kind: "remote", reason: "imagem_remota", bytes: 0, hash: "", width: 0, height: 0, aspect: 0 };
   }
   const file = path.join(root, image.replace(/^\/+/, ""));
-  if (!fs.existsSync(file)) return { valid: false, kind: "local", reason: "arquivo_local_ausente", bytes: 0, hash: "" };
+  if (!fs.existsSync(file)) return { valid: false, kind: "local", reason: "arquivo_local_ausente", bytes: 0, hash: "", width: 0, height: 0, aspect: 0 };
   const stat = fs.statSync(file);
-  const hash = stat.size ? crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex") : "";
+  const buffer = stat.size ? fs.readFileSync(file) : Buffer.alloc(0);
+  const hash = stat.size ? crypto.createHash("sha256").update(buffer).digest("hex") : "";
+  const { width, height } = localImageDimensions(buffer);
+  const aspect = width && height ? Number((width / height).toFixed(3)) : 0;
   return {
     valid: stat.isFile() && stat.size > 512,
     kind: "local",
     reason: stat.size > 512 ? "arquivo_local_ok" : "arquivo_local_vazio_ou_minimo",
     bytes: stat.size,
     hash,
+    width,
+    height,
+    aspect,
   };
 }
 
@@ -236,6 +265,10 @@ const rows = products.map((product, index) => {
   if (hasMojibake(name) || hasMojibake(category) || hasMojibake(first(product, ["subcategoria", "subcategory"]))) issues.push("texto_com_mojibake");
   if (!structure.valid) blockers.push(`link_${structure.reason}`);
   if (!imageState.valid) blockers.push(imageState.reason);
+  if (imageState.kind === "local" && imageState.width && imageState.height) {
+    if (Math.min(imageState.width, imageState.height) < 320) issues.push("imagem_baixa_resolucao");
+    if (imageState.aspect < 0.45 || imageState.aspect > 2.2) issues.push("imagem_proporcao_extrema");
+  }
   if (expectedEnvironment && ![expectedEnvironment, "eletrodomesticos"].includes(environment)) issues.push("ambiente_incompativel_com_loja");
   if (publicProduct && text(publicProduct.link) !== link) blockers.push("link_publico_nao_preservado");
   if (price.status === "expired" || price.status === "unverified") issues.push(`preco_${price.status}`);
@@ -257,6 +290,9 @@ const rows = products.map((product, index) => {
     imageReason: imageState.reason,
     imageBytes: imageState.bytes,
     imageHash: imageState.hash,
+    imageWidth: imageState.width,
+    imageHeight: imageState.height,
+    imageAspect: imageState.aspect,
     priceRaw: price.raw,
     priceValue: price.value,
     priceStatus: price.status,
