@@ -2382,6 +2382,22 @@ function currentConsent() {
   return consent?.version === CONSENT_VERSION ? consent : null;
 }
 
+function trackStorefrontEvent(eventName, detail = {}) {
+  const consent = currentConsent();
+  if (!consent?.analytics) return;
+  const payload = {
+    event: eventName,
+    page_path: location.pathname,
+    ...detail,
+  };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+  window.dispatchEvent(new CustomEvent("impacto360:analytics", { detail: payload }));
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, detail);
+  }
+}
+
 function loadScriptOnce(src, id) {
   if (document.getElementById(id)) return;
   const script = document.createElement("script");
@@ -2778,13 +2794,38 @@ function setupGlobalEvents() {
 
   document.addEventListener("click", event => {
     const productInternal = event.target.closest("[data-product-internal]");
-    if (productInternal) recordViewedProduct(productInternal.dataset.productInternal);
+    if (productInternal) {
+      recordViewedProduct(productInternal.dataset.productInternal);
+      const placement = productInternal.closest(".photo-rail") ? "photo_rail"
+        : productInternal.closest(".home-recent-rail") ? "recently_viewed"
+          : productInternal.closest("[data-home-product-grid]") ? "home_grid"
+            : "catalog";
+      trackStorefrontEvent("select_product", {
+        item_id: String(productInternal.dataset.productInternal || ""),
+        placement,
+      });
+    }
+
+    const marketplaceCard = event.target.closest(".marketplace-card");
+    if (marketplaceCard) {
+      trackStorefrontEvent("partner_shortcut_click", {
+        partner_name: text(marketplaceCard.querySelector("strong")?.textContent),
+      });
+    }
 
     const affiliateLink = event.target.closest("[data-affiliate-link]");
     if (affiliateLink && !isAllowedAffiliateUrl(affiliateLink.dataset.affiliateLink || affiliateLink.href)) {
       event.preventDefault();
       showToast("Link bloqueado porque o destino não pertence à lista de parceiros permitidos.");
       return;
+    }
+    if (affiliateLink) {
+      let partnerHost = "";
+      try { partnerHost = new URL(affiliateLink.href).hostname; } catch {}
+      trackStorefrontEvent("outbound_partner_click", {
+        product_name: text(affiliateLink.dataset.productName),
+        partner_host: partnerHost,
+      });
     }
 
     const disclosureTarget = event.target.closest("[data-home-disclosure-target]");
