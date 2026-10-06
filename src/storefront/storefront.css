@@ -4633,3 +4633,139 @@ a {
   transition: none !important;
   transform: none !important;
 }
+
+
+/* ===== Compactação defensiva do fim da home · 2026-10-06 ===== */
+.home-next-section {
+  padding: 14px 0 18px;
+}
+
+.home-next-heading {
+  margin-bottom: 8px;
+}
+
+.home-next-heading p {
+  display: none;
+}
+
+.home-next-heading h2 {
+  font-size: clamp(18px, 1.8vw, 23px);
+}
+
+.home-next-grid {
+  gap: 8px;
+}
+
+.home-next-grid > a {
+  min-height: 58px;
+  grid-template-columns: 32px minmax(0, 1fr) 18px;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.home-next-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.home-next-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.home-next-grid strong {
+  font-size: 12.5px;
+}
+
+.home-next-grid small {
+  margin-top: 1px;
+  font-size: 9.5px;
+  line-height: 1.25;
+}
+
+.home-next-grid b {
+  font-size: 16px;
+}
+
+/* Compatibilidade com versões antigas em cache: evita grandes blocos vazios. */
+.initial-home-route .home-disclosure-section {
+  padding-block: 4px !important;
+  background: var(--color-surface-secondary) !important;
+}
+
+.initial-home-route .home-disclosure-section > .shell {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.initial-home-route .home-disclosure {
+  box-shadow: none !important;
+}
+
+.initial-home-route .home-disclosure summary {
+  min-height: 54px !important;
+  grid-template-columns: 34px minmax(0, 1fr) 28px !important;
+  gap: 8px !important;
+  padding: 6px 10px !important;
+}
+
+.initial-home-route .home-disclosure-icon {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 9px !important;
+}
+
+.initial-home-route .home-disclosure-icon svg {
+  width: 18px !important;
+}
+
+.initial-home-route .home-disclosure summary strong {
+  font-size: 14px !important;
+}
+
+.initial-home-route .home-disclosure summary small {
+  margin-top: 1px !important;
+  font-size: 10px !important;
+}
+
+.initial-home-route .home-disclosure-chevron {
+  width: 26px !important;
+  height: 26px !important;
+  font-size: 16px !important;
+}
+
+@media (min-width: 1600px) {
+  .initial-home-route .home-disclosure-section.section-white > .shell,
+  .initial-home-route .home-disclosure-section > .shell {
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-next-section {
+    padding-block: 12px 14px;
+  }
+
+  .home-next-heading {
+    margin-bottom: 7px;
+  }
+
+  .home-next-heading h2 {
+    font-size: 18px;
+  }
+
+  .home-next-grid {
+    gap: 6px;
+  }
+
+  .home-next-grid > a {
+    min-height: 56px;
+    grid-template-columns: 30px minmax(0, 1fr) 16px;
+    padding: 7px 9px;
+  }
+}
