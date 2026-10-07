@@ -5670,3 +5670,13 @@ a {
   background: #19344e;
   color: #dce9f3;
 }
+
+.marketplace-dreamstime .marketplace-mark { background: #def3f1; color: #0b5c60; font-size: 12px; }
+
+@media (min-width: 1180px) {
+  .marketplace-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .marketplace-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

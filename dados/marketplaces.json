@@ -69,6 +69,13 @@
       "url": "https://www.santander.com.br/",
       "type": "official",
       "description": "Acesso aos serviços oficiais."
+    },
+    {
+      "id": "dreamstime",
+      "name": "Dreamstime",
+      "url": "https://pt.dreamstime.com/#res61584889",
+      "type": "affiliate",
+      "description": "Fotos, vídeos e recursos visuais licenciáveis."
     }
   ]
 }

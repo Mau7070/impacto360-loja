@@ -75,11 +75,11 @@ const sourceProducts = JSON.parse(read("dados/products.json"));
 const stores = JSON.parse(read("dados/stores.json"));
 const sourceById = new Map(sourceProducts.map(product => [String(product.id), product]));
 
-check("HTML inicial enxuto", Buffer.byteLength(html) < 25_000, `${Buffer.byteLength(html)} bytes`);
+check("HTML inicial enxuto", Buffer.byteLength(html) < 26_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
-check("cache da home versionado", html.includes("storefront-excellence.css?v=20261006-home-7") && html.includes("storefront-excellence.js?v=20261006-home-7"));
-check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261006-home-7') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
+check("cache da home versionado", html.includes("storefront-excellence.css?v=20261006-home-8") && html.includes("storefront-excellence.js?v=20261006-home-8"));
+check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261006-home-8') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
 check("carrossel de fotos leva a fichas internas", app.includes('class="photo-rail-card"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && !app.includes('class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-route='));
 check("imagem de compartilhamento coerente e sincronizada", html.includes("/public/impacto360-categorias-20260928.png") && exists("public/impacto360-categorias-20260928.png") && hash("public/impacto360-categorias-20260928.png") === hash("public/impacto360-categorias-20260928.png", packageRoot));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
@@ -98,7 +98,8 @@ check("hero premium com divulgação de afiliados", app.includes("hero-title-acc
 check("provas de confiança integradas ao hero", app.includes("hero-proof") && app.includes("Compra no parceiro") && app.includes("Links identificados") && app.includes("hero-disclosure") && !app.includes("0</b> custo extra") && !app.includes("trust-strip-section"));
 check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero hero-home initial-home-hero"') && html.includes("hero-title-accent") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
-const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander"];
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander", "dreamstime"];
+check("Dreamstime usa o link gerado na conta", marketplaces.find(item => item.id === "dreamstime")?.url === "https://pt.dreamstime.com/#res61584889" && marketplaces.find(item => item.id === "dreamstime")?.type === "affiliate");
 check(
   "atalhos gerais e de indicação identificados corretamente",
   marketplaces.length === requiredMarketplaceIds.length

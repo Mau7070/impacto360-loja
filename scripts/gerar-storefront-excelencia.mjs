@@ -329,8 +329,9 @@ const marketplaceHosts = {
   magalu: ["magazineluiza.com.br", "magalu.com"],
   uniasselvi: ["uniasselvi.com.br"],
   santander: ["santander.com.br"],
+  dreamstime: ["dreamstime.com"],
 };
-const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander"];
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander", "dreamstime"];
 if (marketplaces.length !== requiredMarketplaceIds.length || new Set(marketplaces.map(item => item.id)).size !== marketplaces.length || !requiredMarketplaceIds.every(id => marketplaces.some(item => item.id === id))) throw new Error("Os parceiros obrigatórios devem estar configurados uma única vez.");
 for (const item of marketplaces) {
   const url = new URL(item.url);
@@ -338,7 +339,7 @@ for (const item of marketplaces) {
     || !marketplaceHosts[item.id]?.some(host => url.hostname === host || url.hostname.endsWith(`.${host}`))
     || !["affiliate", "referral", "official"].includes(item.type)) throw new Error(`Atalho inválido: ${item.id}`);
 }
-const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", hotmart: "h", autooferta: "AO", "virtus-corretora": "VC", eduzz: "E", magalu: "M", uniasselvi: "U", santander: "S" };
+const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", hotmart: "h", autooferta: "AO", "virtus-corretora": "VC", eduzz: "E", magalu: "M", uniasselvi: "U", santander: "S", dreamstime: "DT" };
 const marketplaceLinkLabel = type => type === "affiliate" ? "Afiliado" : type === "referral" ? "Indicação" : "Site oficial";
 const marketplaceLinkAria = type => type === "affiliate" ? "link de afiliado" : type === "referral" ? "link de indicação" : "acesso oficial sem rastreamento confirmado";
 const marketplaceMarkup = `<section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">

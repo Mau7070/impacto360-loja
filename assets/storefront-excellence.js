@@ -2,7 +2,7 @@ const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
 const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
 const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
-const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-2";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-3";
 const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260930-carros-1";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
@@ -444,6 +444,7 @@ const marketplaceDefinitions = [
   { id: "magalu", name: "Magalu", initials: "M", icon: "bag", url: "https://www.magazineluiza.com.br/", domains: ["magazineluiza.com.br", "magalu.com"] },
   { id: "uniasselvi", name: "UNIASSELVI", initials: "U", icon: "grid", url: "https://portal.uniasselvi.com.br/cursos", domains: ["uniasselvi.com.br"] },
   { id: "santander", name: "Santander", initials: "S", icon: "bag", url: "https://www.santander.com.br/", domains: ["santander.com.br"] },
+  { id: "dreamstime", name: "Dreamstime", initials: "DT", icon: "grid", url: "https://pt.dreamstime.com/", domains: ["dreamstime.com"] },
 ];
 
 function homeMarketplaces() {
@@ -1372,7 +1373,8 @@ function renderAllStores(routeUrl) {
             </section>`;
         }).join("")}
       </div>
-    </section>`;
+    </section>
+    ${aisleSlug ? "" : marketplaceShortcuts()}`;
 }
 
 function collectionOptions(products) {
@@ -2638,7 +2640,7 @@ function updateOnlineStatus() {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") return;
-  navigator.serviceWorker.register("/sw.js?v=20261006-home-7").catch(error => console.warn("Service worker não registrado.", error));
+  navigator.serviceWorker.register("/sw.js?v=20261006-home-8").catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {
