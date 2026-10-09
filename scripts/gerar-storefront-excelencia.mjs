@@ -552,6 +552,7 @@ for (const relative of [
   "dados/marketplaces.json",
   "dados/veiculos-autooferta.json",
   "assets/campanhas/carros-impacto360-20260929.png",
+  "assets/campanhas/brinquedos-natalinos-20261009.webp",
   "dados/relatorio-integridade-publicacao.json",
   "public/impacto360-categorias-20260928.png",
   "favicon.svg",

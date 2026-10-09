@@ -1175,6 +1175,22 @@ function bindPhotoRail() {
   });
 }
 
+function toyListSpotlight() {
+  return `<section class="section toy-list-section" aria-labelledby="toy-list-title">
+    <div class="shell"><div class="toy-list-card">
+      <a class="toy-list-photo" href="https://meli.la/2Xc1iQo" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista Brinquedos natalinos no Mercado Livre — link de afiliado">
+        <img src="/assets/campanhas/brinquedos-natalinos-20261009.webp" alt="Cachorrinho robô laranja, um dos brinquedos da lista Brinquedos natalinos" width="448" height="448" loading="lazy" decoding="async">
+      </a>
+      <div class="toy-list-copy"><span class="section-kicker">Lista de afiliados · Mercado Livre</span>
+        <h2 id="toy-list-title">Brinquedos natalinos</h2>
+        <p>Explore nossa lista de brinquedos no Mercado Livre e encontre ideias de presentes para o Natal.</p>
+        <a class="btn btn-primary" href="https://meli.la/2Xc1iQo" target="_blank" rel="sponsored noopener noreferrer">Ver lista completa ↗</a>
+        <small>A foto mostra um brinquedo da lista. Preço, estoque, frete e indicação de idade devem ser conferidos no Mercado Livre. A Impacto360 pode receber comissão, sem custo adicional para você.</small>
+      </div>
+    </div></div>
+  </section>`;
+}
+
 function renderHome() {
   setMeta({
     title: "Impacto360 Afiliado | Ofertas selecionadas em um shopping virtual",
@@ -1226,6 +1242,7 @@ function renderHome() {
     </section>`;
   const homeContent = `
     ${marketplaceShortcuts()}
+    ${toyListSpotlight()}
 
     <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
       <div class="shell quick-category-scroll">
@@ -1476,6 +1493,7 @@ function renderCategory(category, currentUrl = routeUrl()) {
   });
   appRoot().innerHTML = `
     ${pageHero(category.label, category.description, [["Início", "/"], ["Categorias", "/#categorias"], [category.label, ""]])}
+    ${category.slug === "brinquedos-e-escolar" ? toyListSpotlight() : ""}
     <section class="section">
       <div class="shell results-layout">
         ${searchFilters({
