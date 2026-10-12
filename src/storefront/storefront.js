@@ -870,7 +870,7 @@ function productCard(product, index = 0, eagerCount = 0) {
       <div class="product-body">
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
         <h3><a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}">${escapeHtml(product.name)}</a></h3>
-        ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
+        <div class="i360-engagement" data-engagement-product="${escapeAttr(product.id)}" data-engagement-name="${escapeAttr(product.name)}"></div>
         ${freshness.current ? `<div class="product-facts">
           ${product.availability ? `<span>${escapeHtml(availabilityLabel(product))}</span>` : ""}
           ${updatedAt ? `<span class="price-verified" title="Preço verificado em ${escapeAttr(updatedAt)}">✓ Preço verificado</span>` : ""}
