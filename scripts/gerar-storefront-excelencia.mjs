@@ -384,6 +384,7 @@ write(
 );
 write(path.join(root, "assets", "storefront-excellence.css"), css);
 write(path.join(root, "assets", "storefront-excellence.js"), js);
+for (const extension of ['js','css']) write(path.join(root,'assets',`product-engagement.${extension}`),read(`src/storefront/product-engagement.${extension}`));
 write(path.join(root, "index.html"), template);
 write(path.join(root, "impacto360.html"), template);
 write(path.join(root, "404.html"), fallback404);
@@ -549,6 +550,10 @@ for (const route of [...commercialRoutes, ...categoryRoutes]) {
 
 for (const relative of [
   "dados/stores.json",
+  "dados/engajamento-config.json",
+  "dados/engajamento-publico.json",
+  "assets/product-engagement.js",
+  "assets/product-engagement.css",
   "dados/marketplaces.json",
   "dados/veiculos-autooferta.json",
   "assets/campanhas/carros-impacto360-20260929.png",

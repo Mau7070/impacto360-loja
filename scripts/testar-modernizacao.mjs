@@ -15,7 +15,7 @@ assert.equal(evaluate(`priceFreshness({priceUpdatedAt:new Date(Date.now()+864000
 assert.equal(evaluate(`priceFreshness({}).current`), false);
 assert.equal(evaluate(`validDiscount({priceUpdatedAt:'2020-01-01',priceValue:100,previousPriceValue:200})`), false);
 const card = evaluate(`productCard({id:'probe',name:'Produto de teste',image:'',link:'https://www.amazon.com.br/dp/B07JQ9G1BD?tag=910556142-20',priceValue:9876.54,price:'R$ 9.876,54',priceUpdatedAt:'2020-01-01'})`);
-assert.ok(card.includes('Consulte o preço'));
+assert.ok(card.includes('Preço no parceiro')); 
 assert.ok(!card.includes('9.876,54'));
 const fallback = evaluate(`state.marketplaces=[{id:'amazon',url:'https://amazon.com.br.evil.example/',type:'affiliate'}]; homeMarketplaces().find(x=>x.id==='amazon')`);
 assert.equal(fallback.url, 'https://www.amazon.com.br/');

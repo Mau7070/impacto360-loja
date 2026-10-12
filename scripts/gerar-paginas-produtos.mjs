@@ -482,11 +482,13 @@ function productPage(product, store, products) {
   <meta name="description" content="${htmlEscape(description.slice(0, 155))}">
   <meta name="theme-color" content="#12355B">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://impacto360-engajamento.mauricio3010.chatgpt.site">
   <link rel="canonical" href="${htmlEscape(productUrl(product))}">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta property="og:type" content="product">
   <meta property="og:title" content="${htmlEscape(title)}">
+  <link rel="stylesheet" href="/assets/product-engagement.css?v=20261012-engajamento-1">
+  <script defer src="/assets/product-engagement.js?v=20261012-engajamento-1"></script>
   <meta property="og:description" content="${htmlEscape(description.slice(0, 200))}">
   <meta property="og:image" content="${htmlEscape(image)}">
   <meta property="og:url" content="${htmlEscape(productUrl(product))}">
@@ -588,6 +590,7 @@ function productPage(product, store, products) {
         <h1>${htmlEscape(title)}</h1>
         ${showDescription ? `<p>${htmlEscape(description)}</p>` : ""}
         ${benefitTags.length ? `<div class="specs">${benefitTags.map(item => `<span>${htmlEscape(item)}</span>`).join("")}</div>` : ""}
+        <div class="i360-engagement" data-engagement-product="${htmlEscape(String(product.id))}" data-engagement-name="${htmlEscape(title)}"></div>
         <strong class="price" data-price-valid-until="${htmlEscape(priceAudit.validUntil)}">${htmlEscape(priceLabel)}</strong>
         <div class="meta">
           <span class="chip">${htmlEscape("Loja parceira: " + storeName)}</span>
