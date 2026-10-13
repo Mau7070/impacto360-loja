@@ -870,7 +870,7 @@ function productCard(product, index = 0, eagerCount = 0) {
       <div class="product-body">
         <span class="product-partner">${escapeHtml(partnerName(product))}</span>
         <h3><a href="${escapeAttr(internalPath)}" data-product-internal="${escapeAttr(product.id)}">${escapeHtml(product.name)}</a></h3>
-        ${rating ? `<span class="rating product-rating">${rating}</span>` : ""}
+        <div class="i360-engagement" data-engagement-product="${escapeAttr(product.id)}" data-engagement-name="${escapeAttr(product.name)}"></div>
         ${freshness.current ? `<div class="product-facts">
           ${product.availability ? `<span>${escapeHtml(availabilityLabel(product))}</span>` : ""}
           ${updatedAt ? `<span class="price-verified" title="Preço verificado em ${escapeAttr(updatedAt)}">✓ Preço verificado</span>` : ""}
@@ -1191,6 +1191,22 @@ function toyListSpotlight() {
   </section>`;
 }
 
+function kidsListSpotlight() {
+  return `<section class="section toy-list-section" aria-labelledby="kids-list-title">
+    <div class="shell"><div class="toy-list-card">
+      <a class="toy-list-photo" href="https://meli.la/2AMrmg3" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista Crianças 10 a 12 anos no Mercado Livre — link de afiliado">
+        <img src="/assets/campanhas/criancas-10-a-12-20261013.webp" alt="Circuito elétrico STEM de montar, um dos produtos da lista Crianças 10 a 12 anos" width="224" height="224" loading="lazy" decoding="async">
+      </a>
+      <div class="toy-list-copy"><span class="section-kicker">Lista de afiliados · Mercado Livre</span>
+        <h2 id="kids-list-title">Crianças 10 a 12 anos</h2>
+        <p>Confira nossa seleção de presentes e produtos na lista Crianças 10 a 12 anos do Mercado Livre.</p>
+        <a class="btn btn-primary" href="https://meli.la/2AMrmg3" target="_blank" rel="sponsored noopener noreferrer">Ver lista completa ↗</a>
+        <small>A foto mostra um brinquedo da lista. Preço, estoque, frete e indicação de idade devem ser conferidos no Mercado Livre. A Impacto360 pode receber comissão, sem custo adicional para você.</small>
+      </div>
+    </div></div>
+  </section>`;
+}
+
 function renderHome() {
   setMeta({
     title: "Impacto360 Afiliado | Ofertas selecionadas em um shopping virtual",
@@ -1242,6 +1258,7 @@ function renderHome() {
     </section>`;
   const homeContent = `
     ${marketplaceShortcuts()}
+    ${kidsListSpotlight()}
     ${toyListSpotlight()}
 
     <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
@@ -1493,7 +1510,7 @@ function renderCategory(category, currentUrl = routeUrl()) {
   });
   appRoot().innerHTML = `
     ${pageHero(category.label, category.description, [["Início", "/"], ["Categorias", "/#categorias"], [category.label, ""]])}
-    ${category.slug === "brinquedos-e-escolar" ? toyListSpotlight() : ""}
+    ${category.slug === "brinquedos-e-escolar" ? kidsListSpotlight() + toyListSpotlight() : ""}
     <section class="section">
       <div class="shell results-layout">
         ${searchFilters({
