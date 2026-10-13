@@ -1175,35 +1175,26 @@ function bindPhotoRail() {
   });
 }
 
-function toyListSpotlight() {
-  return `<section class="section toy-list-section" aria-labelledby="toy-list-title">
-    <div class="shell"><div class="toy-list-card">
-      <a class="toy-list-photo" href="https://meli.la/2Xc1iQo" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista Brinquedos natalinos no Mercado Livre — link de afiliado">
-        <img src="/assets/campanhas/brinquedos-natalinos-20261009.webp" alt="Cachorrinho robô laranja, um dos brinquedos da lista Brinquedos natalinos" width="448" height="448" loading="lazy" decoding="async">
-      </a>
-      <div class="toy-list-copy"><span class="section-kicker">Lista de afiliados · Mercado Livre</span>
-        <h2 id="toy-list-title">Brinquedos natalinos</h2>
-        <p>Explore nossa lista de brinquedos no Mercado Livre e encontre ideias de presentes para o Natal.</p>
-        <a class="btn btn-primary" href="https://meli.la/2Xc1iQo" target="_blank" rel="sponsored noopener noreferrer">Ver lista completa ↗</a>
-        <small>A foto mostra um brinquedo da lista. Preço, estoque, frete e indicação de idade devem ser conferidos no Mercado Livre. A Impacto360 pode receber comissão, sem custo adicional para você.</small>
-      </div>
-    </div></div>
-  </section>`;
-}
+const affiliateLists = [
+  { title: "Crianças 10 a 12 anos", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
+  { title: "Brinquedos natalinos", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
+];
 
-function kidsListSpotlight() {
-  return `<section class="section toy-list-section" aria-labelledby="kids-list-title">
-    <div class="shell"><div class="toy-list-card">
-      <a class="toy-list-photo" href="https://meli.la/2AMrmg3" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista Crianças 10 a 12 anos no Mercado Livre — link de afiliado">
-        <img src="/assets/campanhas/criancas-10-a-12-20261013.webp" alt="Circuito elétrico STEM de montar, um dos produtos da lista Crianças 10 a 12 anos" width="224" height="224" loading="lazy" decoding="async">
-      </a>
-      <div class="toy-list-copy"><span class="section-kicker">Lista de afiliados · Mercado Livre</span>
-        <h2 id="kids-list-title">Crianças 10 a 12 anos</h2>
-        <p>Confira nossa seleção de presentes e produtos na lista Crianças 10 a 12 anos do Mercado Livre.</p>
-        <a class="btn btn-primary" href="https://meli.la/2AMrmg3" target="_blank" rel="sponsored noopener noreferrer">Ver lista completa ↗</a>
-        <small>A foto mostra um brinquedo da lista. Preço, estoque, frete e indicação de idade devem ser conferidos no Mercado Livre. A Impacto360 pode receber comissão, sem custo adicional para você.</small>
-      </div>
-    </div></div>
+function affiliateListCards() {
+  return `<section class="section affiliate-lists-section" aria-labelledby="affiliate-lists-title">
+    <div class="shell">
+      <h2 id="affiliate-lists-title">Listas selecionadas</h2>
+      <div class="affiliate-lists-grid">${affiliateLists.map(list => `<article class="affiliate-list-card">
+        <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista ${list.title}">
+          <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
+        </a>
+        <div class="affiliate-list-copy"><span>Mercado Livre · Lista</span>
+          <h3>${list.title}</h3>
+          <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver lista ↗</a>
+        </div>
+      </article>`).join("")}</div>
+      <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas; confira preços e indicação de idade no Mercado Livre.</p>
+    </div>
   </section>`;
 }
 
@@ -1258,8 +1249,7 @@ function renderHome() {
     </section>`;
   const homeContent = `
     ${marketplaceShortcuts()}
-    ${kidsListSpotlight()}
-    ${toyListSpotlight()}
+    ${affiliateListCards()}
 
     <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
       <div class="shell quick-category-scroll">
@@ -1510,7 +1500,7 @@ function renderCategory(category, currentUrl = routeUrl()) {
   });
   appRoot().innerHTML = `
     ${pageHero(category.label, category.description, [["Início", "/"], ["Categorias", "/#categorias"], [category.label, ""]])}
-    ${category.slug === "brinquedos-e-escolar" ? kidsListSpotlight() + toyListSpotlight() : ""}
+    ${category.slug === "brinquedos-e-escolar" ? affiliateListCards() : ""}
     <section class="section">
       <div class="shell results-layout">
         ${searchFilters({
