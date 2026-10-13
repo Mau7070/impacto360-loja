@@ -1210,47 +1210,16 @@ function renderHome() {
     robots: "index,follow,max-image-preview:large",
   });
   const discoveryPool = homeRotationProducts();
-  const heroProducts = discoveryPool.slice(0, 3);
-  const heroIds = new Set(heroProducts.map(product => String(product.id)));
   const photoProducts = discoveryPool
-    .filter(product => !heroIds.has(String(product.id)) && product.image && productPath(product))
+    .filter(product => product.image && productPath(product))
     .slice(0, 6);
-  const reservedHomeIds = [...heroProducts, ...photoProducts].map(product => String(product.id));
+  const reservedHomeIds = photoProducts.map(product => String(product.id));
   const rotationPool = homeRotationProducts(reservedHomeIds);
   const featured = homeRotationBatch(rotationPool);
   const shownHomeIds = [...reservedHomeIds, ...featured.map(product => String(product.id))];
   const recentProducts = recentlyViewedProducts(shownHomeIds, 6);
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
-  const heroProductMarkup = heroProducts.map((product, index) => `
-    <a class="hero-feature" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}" aria-label="Ver ${escapeAttr(product.name)}">
-      <img src="${escapeAttr(assetUrl(product.image))}" alt="" loading="${index === 0 ? "eager" : "lazy"}" decoding="async">
-      <span class="hero-feature-copy"><strong>${escapeHtml(product.name)}</strong><small>Ver produto na Impacto360</small></span>
-      <span class="hero-feature-arrow" aria-hidden="true">↗</span>
-    </a>`).join("");
-  const heroMarkup = `
-    <section class="hero hero-home" data-initial-home-hero>
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <span class="hero-eyebrow"><span aria-hidden="true"></span>Shopping Impacto360</span>
-          <h1>Seu próximo <span class="hero-title-accent">achado</span><br>começa aqui.</h1>
-          <p>Descubra produtos de diferentes categorias, compare opções e siga para a loja parceira quando encontrar o que procura.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/buscar/" data-route="/buscar/">Explorar produtos <span aria-hidden="true">→</span></a>
-            <a class="hero-secondary-link" href="#marketplaces">Ver lojas parceiras <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-proof" aria-label="Como funciona a Impacto360">
-            <span><b aria-hidden="true">✓</b> Compra no parceiro</span>
-            <span><b aria-hidden="true">↗</b> Links identificados</span>
-          </div>
-          <p class="hero-disclosure">A Impacto360 pode receber comissão pelos links indicados, sem custo adicional para você.</p>
-        </div>
-        <div class="hero-showcase" aria-label="Produtos em destaque">
-          <div class="hero-feature-heading"><span>Seleção para começar</span><strong>Explore alguns produtos</strong></div>
-          <div class="hero-feature-list">${heroProductMarkup}</div>
-        </div>
-      </div>
-    </section>`;
   const homeContent = `
     ${marketplaceShortcuts()}
     ${affiliateListCards()}
@@ -1345,7 +1314,7 @@ function renderHome() {
       </div>
     </section>`;
   const root = appRoot();
-  root.innerHTML = heroMarkup + homeContent;
+  root.innerHTML = '<h1 class="sr-only">Shopping Impacto360</h1>' + homeContent;
   document.documentElement.classList.add("initial-home-route");
   scrollToHash();
 }

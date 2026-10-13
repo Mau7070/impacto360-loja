@@ -94,9 +94,6 @@ check(
   && app.includes("applyConsent")
   && app.includes("consent.marketing"),
 );
-check("hero premium com divulgação de afiliados", app.includes("hero-title-accent") && app.includes("Compra no parceiro") && app.includes("A Impacto360 pode receber comissão") && !app.includes("Ver ofertas de hoje"));
-check("provas de confiança integradas ao hero", app.includes("hero-proof") && app.includes("Compra no parceiro") && app.includes("Links identificados") && app.includes("hero-disclosure") && !app.includes("0</b> custo extra") && !app.includes("trust-strip-section"));
-check("hero e atalhos disponiveis antes do JavaScript", html.includes('class="hero hero-home initial-home-hero"') && html.includes("hero-title-accent") && html.includes('id="marketplaces"'));
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
 const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander", "dreamstime"];
 check("Dreamstime usa o link gerado na conta", marketplaces.find(item => item.id === "dreamstime")?.url === "https://pt.dreamstime.com/#res61584889" && marketplaces.find(item => item.id === "dreamstime")?.type === "affiliate");
@@ -180,9 +177,6 @@ check("home compacta com limites definidos", app.includes("HOME_ROTATION_SIZE = 
 check("cards moveis simplificados em duas colunas permanentes", css.includes("@media (max-width: 480px)") && css.includes(".product-facts") && css.includes("grid-template-columns: repeat(2, minmax(0, 1fr))") && !css.includes("grid-template-columns: 126px minmax(0, 1fr)"));
 check("home mobile prioriza produtos sem navegação redundante", app.includes('class="section section-soft home-products" id="produtos"') && !app.includes('class="mobile-home-access"') && app.includes('class="quick-category-section"') && css.includes(".initial-home-route .promo-shortcuts"));
 check("veiculos integrados a descoberta sem secao gigante", app.includes("home-spotlight-row") && app.includes("vehicle-spotlight") && app.includes("home-selection-panel") && !app.includes('class="section section-white cars-home-preview"'));
-check("hero reduz espaco vazio e integra confianca", css.includes(".hero.hero-home") && css.includes("min-height: 332px") && css.includes(".hero-proof") && css.includes(".hero-title-accent"));
-check("destaques do hero sao clicaveis e acessiveis", app.includes('class="hero-feature"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && app.includes('aria-label="Ver ${escapeAttr(product.name)}"') && app.includes("hero-feature-list") && !app.includes('hero-showcase" aria-hidden="true"'));
-check("fallback do hero tambem oferece acao", html.includes("hero-feature-placeholder") && html.includes("Explorar o catálogo"));
 
 
 check("rodape da home concentra caminhos em um unico bloco", app.includes('class="home-next-section"') && app.includes("Catálogo completo") && app.includes("Lojas do Shopping") && app.includes("Como comprar") && !app.includes('home-disclosure-section home-categories'));
@@ -288,6 +282,9 @@ check("pagina curta preserva canonical", sampleShortPage.includes(`<link rel="ca
 check("pagina curta preserva link afiliado", sampleShortPage.includes(`href="${catalog[0]?.link || ""}"`));
 check("cards usam os links curtos", app.includes("product.shortPath ||"));
 
+check("bloco de abertura removido da fonte e do HTML", !app.includes("const heroMarkup") && !app.includes("Explore alguns produtos") && !html.includes("Explore alguns produtos") && !html.includes("Seu próximo <span"));
+check("home mantém título acessível e atalhos", html.includes("Shopping Impacto360</h1>") && html.includes('id="marketplaces"'));
+
 const failed = checks.filter(item => !item.pass);
 for (const item of checks) {
   console.log(`${item.pass ? "OK" : "FALHA"} - ${item.name}${item.detail ? `: ${item.detail}` : ""}`);
@@ -299,3 +296,4 @@ if (failed.length) {
 }
 
 console.log(`\nStorefront aprovada: ${checks.length} verificações passaram.`);
+
