@@ -59,7 +59,28 @@
     holder.innerHTML = `<div class="i360-engagement-actions">
       <button class="i360-rating" type="button" data-engagement-rate="${escape(id)}" aria-label="Avaliar ${escape(name)}${shared?.ratingCount ? `: média ${shared.ratingAverage.toFixed(1)} de 5, ${shared.ratingCount} avaliações da comunidade Impacto360` : ''}"><span aria-hidden="true">★</span> <span>${escape(ratingLabel)}</span></button>
       <button class="i360-like" type="button" data-engagement-like="${escape(id)}" aria-pressed="${Boolean(own.liked)}" aria-label="${own.liked ? 'Remover curtida de' : 'Curtir'} ${escape(name)}${shared?.likes != null ? `: ${shared.likes} curtidas na Impacto360` : ''}" ${pending.has(id) ? 'disabled' : ''}><span aria-hidden="true">👍</span> <span>${escape(likeLabel)}</span></button>
-    </div>${sales ? `<span class="i360-sales" title="${escape(sales.source)} · conferido em ${escape(new Date(sales.verifiedAt).toLocaleDateString('pt-BR'))}">${count(sales.quantity)} ${sales.scope === 'partner_units' ? 'vendidos no parceiro' : 'vendas confirmadas'}</span>` : ''}`;
+    </div><div class="i360-reactions" role="group" aria-label="Reagir a ${escape(name)}">
+      ${Object.entries(reactions).map(([key, [emoji, label]]) => `<button type="button" data-engagement-reaction="${key}" aria-label="${label}" aria-pressed="${own.reaction === key}" title="${label}">${emoji}</button>`).join('')}
+      <button type="button" class="i360-share" data-engagement-share aria-label="Compartilhar ${escape(name)}">↗ Compartilhar</button>
+    </div><small class="i360-local-note">${config.enabled ? 'Reações com emojis salvas neste dispositivo.' : 'Suas interações ficam salvas neste dispositivo.'}</small>${sales ? `<span class="i360-sales" title="${escape(sales.source)} · conferido em ${escape(new Date(sales.verifiedAt).toLocaleDateString('pt-BR'))}">${count(sales.quantity)} ${sales.scope === 'partner_units' ? 'vendidos no parceiro' : 'vendas confirmadas'}</span>` : ''}`;
+  }
+  const reactions = { love: ['😍', 'Amei'], want: ['🔥', 'Quero'], wow: ['🤩', 'Incrível'] };
+  function changeReaction(id, reaction) {
+    if (!Object.hasOwn(reactions, reaction)) return;
+    const previous = vote(id);
+    const next = previous.reaction === reaction ? '' : reaction;
+    if (!save(id, { ...previous, reaction: next })) { notify('Não foi possível salvar neste navegador.'); return; }
+    refresh(id); notify(next ? 'Reação salva neste dispositivo.' : 'Reação removida.');
+  }
+  async function shareItem(holder) {
+    const link = holder.dataset.engagementUrl || holder.closest('article')?.querySelector('a[href]')?.href || location.href;
+    const url = new URL(link, location.origin);
+    if (url.protocol !== 'https:') return;
+    const title = holder.dataset.engagementName || 'Confira na Impacto360';
+    try {
+      if (navigator.share) await navigator.share({ title, url: url.href });
+      else { await navigator.clipboard.writeText(url.href); notify('Link copiado! Compartilhe com quem você quiser.'); }
+    } catch (error) { if (error.name !== 'AbortError') notify('Não foi possível compartilhar agora.'); }
   }
   function refresh(id) {
     document.querySelectorAll('[data-engagement-product]').forEach(holder => { if (holder.dataset.engagementProduct === id) controls(holder); });
@@ -114,7 +135,7 @@
     if (pending.has(id)) return;
     if (!dialog) {
       dialog = document.createElement('dialog'); dialog.className = 'i360-rating-dialog'; dialog.setAttribute('aria-labelledby', 'i360-rating-title');
-      dialog.innerHTML = `<form><div class="i360-dialog-heading"><h2 id="i360-rating-title">Avaliar produto</h2><button type="button" data-engagement-close aria-label="Fechar avaliação">×</button></div><p data-rating-name></p><p class="i360-rating-context" data-rating-context></p><fieldset><legend>Sua nota, de 1 a 5 estrelas</legend><div class="i360-stars">${[1,2,3,4,5].map(n => `<label><input type="radio" name="rating" value="${n}" required><span aria-hidden="true">★</span><span class="i360-sr-only">${n} ${n === 1 ? 'estrela' : 'estrelas'}</span></label>`).join('')}</div></fieldset><p class="i360-rating-context">Avaliação da comunidade Impacto360. A nota não comprova uma compra.</p><p data-rating-status role="status"></p><div class="i360-dialog-footer"><button type="button" data-engagement-delete>Remover minha nota</button><button type="submit">Salvar avaliação</button></div></form>`;
+      dialog.innerHTML = `<form><div class="i360-dialog-heading"><h2 id="i360-rating-title">Sua avaliação</h2><button type="button" data-engagement-close aria-label="Fechar avaliação">×</button></div><p data-rating-name></p><p class="i360-rating-context" data-rating-context></p><fieldset><legend>Sua nota, de 1 a 5 estrelas</legend><div class="i360-stars">${[1,2,3,4,5].map(n => `<label><input type="radio" name="rating" value="${n}" required><span aria-hidden="true">★</span><span class="i360-sr-only">${n} ${n === 1 ? 'estrela' : 'estrelas'}</span></label>`).join('')}</div></fieldset><p class="i360-rating-context">Avaliação da comunidade Impacto360. A nota não comprova uma compra.</p><p data-rating-status role="status"></p><div class="i360-dialog-footer"><button type="button" data-engagement-delete>Remover minha nota</button><button type="submit">Salvar avaliação</button></div></form>`;
       document.body.appendChild(dialog);
       dialog.querySelector('[data-engagement-close]').addEventListener('click', () => dialog.close());
       dialog.addEventListener('close', () => returnFocus?.isConnected && returnFocus.focus());
@@ -168,6 +189,10 @@
     });
     observer.observe(document.body, { childList:true, subtree:true });
     document.addEventListener('click', event => {
+      const reaction = event.target.closest('[data-engagement-reaction]');
+      const share = event.target.closest('[data-engagement-share]');
+      if (reaction) { event.preventDefault(); changeReaction(reaction.closest('[data-engagement-product]').dataset.engagementProduct, reaction.dataset.engagementReaction); }
+      if (share) { event.preventDefault(); shareItem(share.closest('[data-engagement-product]')); }
       const like = event.target.closest('[data-engagement-like]');
       const rate = event.target.closest('[data-engagement-rate]');
       if (like) { event.preventDefault(); changeLike(like.dataset.engagementLike); }

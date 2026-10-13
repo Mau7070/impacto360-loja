@@ -32,3 +32,9 @@
 @media (pointer: coarse) { .i360-engagement button { min-height: 44px; } .i360-engagement { min-height: 44px; } }
 @media (prefers-color-scheme: dark) { html:not([data-theme="light"]) .i360-engagement, html:not([data-theme="light"]) .i360-rating-context { color: var(--color-text-secondary, #c0cfdd); } html:not([data-theme="light"]) .i360-rating-dialog { background: var(--color-surface, #0e2032); color: var(--color-text-primary, #f3f7fb); } html:not([data-theme="light"]) .i360-rating, html:not([data-theme="light"]) .i360-stars label > span[aria-hidden] { --color-accent-contrast: #fdba74; } }
 :root[data-theme="dark"] .i360-rating > span:first-child { color: #fdba74; }
+
+.i360-reactions { display:flex; align-items:center; flex-wrap:wrap; gap:4px; border-top:1px solid var(--color-border,#e2e8f0); padding-top:5px; margin-top:5px; }
+.i360-reactions button { min-width:36px; min-height:40px; text-align:center; font-size:19px; }
+.i360-reactions button[aria-pressed="true"] { background:var(--color-primary-light,#eaf1f7); box-shadow:inset 0 0 0 2px var(--color-secondary,#1e4e79); }
+.i360-reactions .i360-share { font-size:11px; margin-left:auto; }
+.i360-local-note { display:block; font-size:10px; line-height:1.4; margin-top:5px; }

@@ -1193,6 +1193,7 @@ function affiliateListCards() {
         </a>
         <div class="affiliate-list-copy"><span>Mercado Livre · Lista</span>
           <h3>${list.title}</h3>
+          <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${escapeAttr(list.url)}"></div>
           <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver lista ↗</a>
         </div>
       </article>`).join("")}</div>

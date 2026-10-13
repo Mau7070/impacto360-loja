@@ -7,7 +7,7 @@ const holders = [];
 const status = { textContent:'', hidden:true };
 let fetchCalls = 0;
 let response;
-const source = fs.readFileSync('src/storefront/product-engagement.js','utf8').replace(/\}\)\(\);\s*$/, 'globalThis.testApi={validMetric,controls,changeLike,vote,save,setConfig:value=>{config=value;}};})();');
+const source = fs.readFileSync('src/storefront/product-engagement.js','utf8').replace(/\}\)\(\);\s*$/, 'globalThis.testApi={validMetric,controls,changeLike,changeReaction,vote,save,setConfig:value=>{config=value;}};})();');
 function instance() {
   const context=vm.createContext({console,URL,Intl,Date,Number,Object,Map,Set,JSON,AbortSignal,crypto:globalThis.crypto,
     localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
@@ -20,6 +20,12 @@ const api=instance();
 const product={dataset:{engagementProduct:'real-id',engagementName:'<img src=x onerror=alert(1)>'},innerHTML:''};holders.push(product);
 api.controls(product);
 assert.match(product.innerHTML,/Avaliar/);assert.match(product.innerHTML,/Curtir/);
+api.changeReaction('real-id','love');assert.equal(api.vote('real-id').reaction,'love');
+api.changeReaction('real-id','want');assert.equal(api.vote('real-id').reaction,'want');
+api.changeReaction('real-id','want');assert.equal(api.vote('real-id').reaction,'');
+api.changeReaction('real-id','invalid');assert.equal(api.vote('real-id').reaction,'');
+assert.match(product.innerHTML,/data-engagement-share/);
+assert.match(product.innerHTML,/Suas interações ficam salvas neste dispositivo/);
 assert.ok(!product.innerHTML.includes('vendidos'));assert.ok(!product.innerHTML.includes('0 curtidas'));assert.ok(!product.innerHTML.includes('<img src=x'));
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,true);assert.equal(fetchCalls,0);assert.match(status.textContent,/neste dispositivo/);
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,false);

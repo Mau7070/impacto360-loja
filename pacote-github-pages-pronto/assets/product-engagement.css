@@ -1,0 +1,40 @@
+/* Scoped: preserve the shopping layout, imagery, buttons and established palette. */
+.i360-engagement { margin-block: 5px; min-height: 36px; font-size: 12px; color: var(--color-text-secondary, var(--muted, #475569)); }
+.i360-engagement-actions { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
+.i360-engagement button { font: inherit; line-height: 1.3; color: inherit; background: transparent; border: 0; border-radius: 6px; min-height: 36px; padding: 4px 3px; cursor: pointer; text-align: left; }
+.i360-engagement .i360-rating { min-width: 0; display: flex; align-items: center; gap: 4px; }
+.i360-rating > span:first-child { color: var(--color-accent-contrast, #9a3412); }
+.i360-engagement .i360-like { flex-shrink: 0; white-space: nowrap; }
+.i360-engagement button:hover { background: var(--color-primary-light, #eaf1f7); }
+.i360-like[aria-pressed="true"] { color: var(--color-secondary, #1e4e79); font-weight: 700; }
+.i360-engagement button:focus-visible, .i360-rating-dialog button:focus-visible { outline: 2px solid var(--color-focus, #2563eb); outline-offset: 2px; }
+.i360-engagement button:disabled { opacity: .6; cursor: wait; }
+.i360-sales { display: block; font-size: 11px; line-height: 1.4; padding-bottom: 3px; }
+.i360-rating-dialog { width: min(430px, calc(100% - 32px)); max-height: calc(100% - 32px); overflow: auto; padding: 22px; border: 1px solid var(--color-border, #e2e8f0); border-radius: 14px; color: var(--color-text-primary, var(--ink, #1f2937)); background: var(--color-surface, #fff); }
+.i360-rating-dialog::backdrop { background: rgb(0 0 0 / .45); }
+.i360-dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.i360-dialog-heading h2 { margin: 0; font-size: 20px; }
+.i360-dialog-heading button { font-size: 24px; background: transparent; border: 0; color: inherit; min-width: 44px; min-height: 44px; cursor: pointer; }
+.i360-rating-dialog p { overflow-wrap: anywhere; }
+.i360-rating-context { font-size: 13px; color: var(--color-text-secondary, var(--muted, #475569)); }
+.i360-rating-dialog fieldset { padding: 10px 0; border: 0; margin: 0; }
+.i360-rating-dialog legend { font-size: 14px; }
+.i360-stars { display: flex; justify-content: space-between; gap: 5px; margin-top: 10px; }
+.i360-stars label { position: relative; display: grid; width: 44px; min-height: 56px; justify-items: center; cursor: pointer; }
+.i360-stars input { width: 18px; height: 18px; accent-color: var(--color-secondary, #1e4e79); }
+.i360-stars label > span[aria-hidden] { font-size: 27px; color: var(--color-accent-contrast, #9a3412); }
+.i360-stars label:has(input:checked) { background: var(--color-primary-light, #eaf1f7); border-radius: 6px; }
+.i360-dialog-footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.i360-dialog-footer button { min-height: 44px; font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid var(--color-border, #cbd5e1); border-radius: 8px; background: transparent; color: inherit; cursor: pointer; }
+.i360-dialog-footer button[type="submit"] { background: var(--color-primary, #12355b); color: #fff; }
+.i360-engagement-status { position: fixed; z-index: 100; bottom: 88px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); padding: 12px 18px; background: var(--color-primary, #12355b); color: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgb(0 0 0 / .2); font-size: 14px; }
+.i360-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (pointer: coarse) { .i360-engagement button { min-height: 44px; } .i360-engagement { min-height: 44px; } }
+@media (prefers-color-scheme: dark) { html:not([data-theme="light"]) .i360-engagement, html:not([data-theme="light"]) .i360-rating-context { color: var(--color-text-secondary, #c0cfdd); } html:not([data-theme="light"]) .i360-rating-dialog { background: var(--color-surface, #0e2032); color: var(--color-text-primary, #f3f7fb); } html:not([data-theme="light"]) .i360-rating, html:not([data-theme="light"]) .i360-stars label > span[aria-hidden] { --color-accent-contrast: #fdba74; } }
+:root[data-theme="dark"] .i360-rating > span:first-child { color: #fdba74; }
+
+.i360-reactions { display:flex; align-items:center; flex-wrap:wrap; gap:4px; border-top:1px solid var(--color-border,#e2e8f0); padding-top:5px; margin-top:5px; }
+.i360-reactions button { min-width:36px; min-height:40px; text-align:center; font-size:19px; }
+.i360-reactions button[aria-pressed="true"] { background:var(--color-primary-light,#eaf1f7); box-shadow:inset 0 0 0 2px var(--color-secondary,#1e4e79); }
+.i360-reactions .i360-share { font-size:11px; margin-left:auto; }
+.i360-local-note { display:block; font-size:10px; line-height:1.4; margin-top:5px; }
