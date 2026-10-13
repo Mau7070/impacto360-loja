@@ -1,9 +1,9 @@
-const CACHE_NAME = "impacto360-shell-20261009-brinquedos-1";
+const CACHE_NAME = "impacto360-shell-20261012-engajamento-1-listas-20261013";
 const SHELL_FILES = [
   "/",
   "/index.html",
-  "/assets/storefront-excellence.css?v=20261009-brinquedos-1",
-  "/assets/storefront-excellence.js?v=20261009-brinquedos-1",
+  "/assets/storefront-excellence.css?v=20261012-engajamento-1",
+  "/assets/storefront-excellence.js?v=20261012-engajamento-1&listas=20261013",
   "/dados/stores.json?v=20260928-fotos-1",
   "/dados/marketplaces.json?v=20261006-parceiros-3",
   "/manifest.webmanifest",
@@ -50,7 +50,11 @@ self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
   if (["localhost", "127.0.0.1", "[::1]"].includes(self.location.hostname)) return;
   if (event.request.method !== "GET" || url.origin !== self.location.origin) return;
-  if (url.pathname === "/assets/storefront-excellence.css" || url.pathname === "/assets/storefront-excellence.js") {
+  if (url.pathname === "/assets/storefront-excellence.css" || url.pathname === "/assets/storefront-excellence.js" || url.pathname.startsWith("/assets/product-engagement.")) {
+    event.respondWith(networkFirst(event.request));
+    return;
+  }
+  if (url.pathname.startsWith("/dados/engajamento-")) {
     event.respondWith(networkFirst(event.request));
     return;
   }
