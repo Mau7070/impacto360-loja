@@ -1177,6 +1177,9 @@ function bindPhotoRail() {
 
 const affiliateLists = [
   { title: "Crianças 10 a 12 anos", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
+  { title: "Crianças de 7 a 9 anos", url: "https://meli.la/18eDTdE", image: "/assets/campanhas/criancas-7-a-9-20261013.webp", alt: "Pista de carrinhos com lava-rápido, um dos itens da lista" },
+  { title: "Brinquedos 4 a 6 anos", url: "https://meli.la/1E5p1bZ", image: "/assets/campanhas/brinquedos-4-a-6-20261013.webp", alt: "Cavalinho pula-pula rosa, um dos itens da lista" },
+  { title: "Crianças 6 meses a 3 anos", url: "https://meli.la/1pFVmFM", image: "/assets/campanhas/criancas-6-meses-a-3-20261013.webp", alt: "Cubo interativo com blocos de encaixar, um dos itens da lista" },
   { title: "Brinquedos natalinos", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
 ];
 
