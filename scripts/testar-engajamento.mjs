@@ -25,7 +25,7 @@ api.changeReaction('real-id','want');assert.equal(api.vote('real-id').reaction,'
 api.changeReaction('real-id','want');assert.equal(api.vote('real-id').reaction,'');
 api.changeReaction('real-id','invalid');assert.equal(api.vote('real-id').reaction,'');
 assert.match(product.innerHTML,/data-engagement-share/);
-assert.match(product.innerHTML,/Suas interações ficam salvas neste dispositivo/);
+assert.doesNotMatch(product.innerHTML,/i360-local-note|Suas interações ficam salvas neste dispositivo/);
 assert.ok(!product.innerHTML.includes('vendidos'));assert.ok(!product.innerHTML.includes('0 curtidas'));assert.ok(!product.innerHTML.includes('<img src=x'));
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,true);assert.equal(fetchCalls,0);assert.match(status.textContent,/neste dispositivo/);
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,false);

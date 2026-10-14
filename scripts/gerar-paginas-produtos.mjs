@@ -487,8 +487,8 @@ function productPage(product, store, products) {
   <link rel="manifest" href="/manifest.webmanifest">
   <meta property="og:type" content="product">
   <meta property="og:title" content="${htmlEscape(title)}">
-  <link rel="stylesheet" href="/assets/product-engagement.css?v=20261012-engajamento-1">
-  <script defer src="/assets/product-engagement.js?v=20261012-engajamento-1"></script>
+  <link rel="stylesheet" href="/assets/product-engagement.css?v=20261014-cards-1">
+  <script defer src="/assets/product-engagement.js?v=20261014-cards-1"></script>
   <meta property="og:description" content="${htmlEscape(description.slice(0, 200))}">
   <meta property="og:image" content="${htmlEscape(image)}">
   <meta property="og:url" content="${htmlEscape(productUrl(product))}">

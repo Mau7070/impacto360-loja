@@ -1,8 +1,8 @@
-const CACHE_NAME = "impacto360-shell-20261012-engajamento-1-listas-20261013";
+const CACHE_NAME = "impacto360-shell-20261014-cards-1";
 const SHELL_FILES = [
   "/",
   "/index.html",
-  "/assets/storefront-excellence.css?v=20261012-engajamento-1",
+  "/assets/storefront-excellence.css?v=20261014-cards-1",
   "/assets/storefront-excellence.js?v=20261012-engajamento-1&listas=20261013",
   "/dados/stores.json?v=20260928-fotos-1",
   "/dados/marketplaces.json?v=20261006-parceiros-3",

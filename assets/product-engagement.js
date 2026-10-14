@@ -61,8 +61,8 @@
       <button class="i360-like" type="button" data-engagement-like="${escape(id)}" aria-pressed="${Boolean(own.liked)}" aria-label="${own.liked ? 'Remover curtida de' : 'Curtir'} ${escape(name)}${shared?.likes != null ? `: ${shared.likes} curtidas na Impacto360` : ''}" ${pending.has(id) ? 'disabled' : ''}><span aria-hidden="true">👍</span> <span>${escape(likeLabel)}</span></button>
     </div><div class="i360-reactions" role="group" aria-label="Reagir a ${escape(name)}">
       ${Object.entries(reactions).map(([key, [emoji, label]]) => `<button type="button" data-engagement-reaction="${key}" aria-label="${label}" aria-pressed="${own.reaction === key}" title="${label}">${emoji}</button>`).join('')}
-      <button type="button" class="i360-share" data-engagement-share aria-label="Compartilhar ${escape(name)}">↗ Compartilhar</button>
-    </div><small class="i360-local-note">${config.enabled ? 'Reações com emojis salvas neste dispositivo.' : 'Suas interações ficam salvas neste dispositivo.'}</small>${sales ? `<span class="i360-sales" title="${escape(sales.source)} · conferido em ${escape(new Date(sales.verifiedAt).toLocaleDateString('pt-BR'))}">${count(sales.quantity)} ${sales.scope === 'partner_units' ? 'vendidos no parceiro' : 'vendas confirmadas'}</span>` : ''}`;
+      <button type="button" class="i360-share" data-engagement-share aria-label="Compartilhar ${escape(name)}" title="Compartilhar"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 10 8-5m-8 9 8 5"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="4" r="3"/><circle cx="19" cy="20" r="3"/></svg><span class="i360-share-label">Compartilhar</span></button>
+    </div>${sales ? `<span class="i360-sales" title="${escape(sales.source)} · conferido em ${escape(new Date(sales.verifiedAt).toLocaleDateString('pt-BR'))}">${count(sales.quantity)} ${sales.scope === 'partner_units' ? 'vendidos no parceiro' : 'vendas confirmadas'}</span>` : ''}`;
   }
   const reactions = { love: ['😍', 'Amei'], want: ['🔥', 'Quero'], wow: ['🤩', 'Incrível'] };
   function changeReaction(id, reaction) {
