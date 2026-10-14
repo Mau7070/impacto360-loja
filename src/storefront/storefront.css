@@ -5760,3 +5760,37 @@ a {
   .photo-rail-card { flex: 0 0 min(82vw, 300px); grid-template-columns: 64px minmax(0, 1fr); }
   .photo-rail-media { width: 64px; height: 64px; }
 }
+
+/* A concise discovery header and useful, readable shortcuts. */
+.home-discovery-head { align-items: center; gap: 16px; margin-bottom: 12px; }
+.home-discovery-head h2 { font-size: 26px; }
+.home-discovery-head .section-kicker { font-size: 10px; margin-bottom: 4px; }
+.home-discovery-head p { margin-top: 5px; font-size: 12px; }
+.home-catalog-link { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 8px 12px; margin: 0; border: 1px solid var(--color-border); border-radius: 9px; background: var(--color-surface); text-decoration: none; white-space: nowrap; font-size: 12px; }
+.home-catalog-link svg { display: block; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.home-spotlight-row { grid-template-columns: 220px minmax(0, 1fr); gap: 10px; margin-bottom: 12px; }
+.vehicle-spotlight { min-height: 56px; grid-template-columns: 36px minmax(0, 1fr) 16px; gap: 9px; padding: 8px 10px; border-radius: 10px; background: var(--color-surface); }
+.vehicle-spotlight-icon { width: 36px; height: 36px; border-radius: 9px; }
+.vehicle-spotlight-icon svg { width: 22px; height: 22px; }
+.vehicle-spotlight-copy strong { font-size: 13px; }
+.vehicle-spotlight-cta { font-size: 16px; }
+.home-selection-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 56px; padding: 8px 12px; border-radius: 10px; }
+.home-selection-panel > strong { grid-column: auto; font-size: 12px; line-height: 1.4; font-weight: 600; white-space: normal; overflow: visible; }
+.home-selection-panel .home-rotation-actions { grid-column: auto; grid-row: auto; margin: 0; gap: 6px; justify-content: flex-end; }
+.home-selection-panel .home-rotation-toggle, .home-selection-panel .home-rotation-next { min-height: 36px; padding: 6px 10px; border-radius: 8px; font-size: 12px; }
+@media (max-width: 980px) {
+  .home-spotlight-row { grid-template-columns: 180px minmax(0, 1fr); }
+  .home-selection-panel { grid-template-columns: 1fr; gap: 6px; }
+  .home-selection-panel .home-rotation-actions { justify-content: flex-start; }
+}
+@media (max-width: 600px) {
+  .home-discovery-head { align-items: center; gap: 8px; }
+  .home-discovery-head h2 { font-size: 20px; }
+  .home-catalog-link { min-height: 44px; padding: 6px 8px; font-size: 11px; }
+  .home-catalog-link > span { display: none; }
+  .home-spotlight-row { grid-template-columns: 1fr; gap: 8px; }
+  .vehicle-spotlight { min-height: 52px; }
+  .home-selection-panel { padding: 8px 10px; }
+  .home-selection-panel .home-rotation-toggle, .home-selection-panel .home-rotation-next { min-height: 44px; font-size: 11px; }
+}
+@media (pointer: coarse) { .home-selection-panel .home-rotation-toggle, .home-selection-panel .home-rotation-next { min-height: 44px; } }

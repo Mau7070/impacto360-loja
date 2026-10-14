@@ -1078,8 +1078,8 @@ function updateHomeRotationControl() {
   status.textContent = state.homeRotationInteractionPaused
     ? "Atualização pausada durante sua interação"
     : state.homeRotationUserPaused
-      ? `Explore no seu ritmo · seleção ${page} de ${pages}`
-      : `Novos produtos a cada 8 segundos · seleção ${page} de ${pages}`;
+      ? `Seleção ${page} de ${pages} · atualização manual`
+      : `Seleção ${page} de ${pages} · atualização automática`;
 }
 
 function rotateHomeProducts({ force = false } = {}) {
@@ -1259,25 +1259,23 @@ function renderHome() {
           <div>
             <span class="section-kicker">Descobertas para você</span>
             <h2>Encontre seu próximo favorito</h2>
-            <p>Uma seleção mais enxuta para comparar rápido. Preço, frete e disponibilidade são confirmados no parceiro.</p>
+            <p>Descubra produtos e confira as condições na loja parceira.</p>
           </div>
-          <a class="text-link home-catalog-link" href="/buscar/" data-route="/buscar/">Ver catálogo completo →</a>
+          <a class="text-link home-catalog-link" href="/buscar/" data-route="/buscar/"><span aria-hidden="true">${icon("grid")}</span>Catálogo completo →</a>
         </div>
 
         <div class="home-spotlight-row">
           <a class="vehicle-spotlight" href="/carros/" data-route="/carros/" aria-label="Explorar veículos">
             <span class="vehicle-spotlight-icon">${icon("car")}</span>
             <span class="vehicle-spotlight-copy">
-              <small>Veículos · nova área</small>
-              <strong>Seu próximo carro também pode estar aqui</strong>
-              <em>Anúncios entram após conferência dos dados e do link de indicação.</em>
+              <small>Veículos</small>
+              <strong>Explore carros</strong>
             </span>
-            <span class="vehicle-spotlight-cta">Explorar carros <b aria-hidden="true">→</b></span>
+            <span class="vehicle-spotlight-cta" aria-hidden="true">→</span>
           </a>
 
           <div class="home-selection-panel">
-            <span class="home-selection-label">Seleção inteligente</span>
-            <strong data-home-rotation-status>Explore no seu ritmo · seleção 1 de ${Math.max(1, Math.ceil(rotationPool.length / HOME_ROTATION_SIZE))}</strong>
+            <strong data-home-rotation-status>Seleção 1 de ${Math.max(1, Math.ceil(rotationPool.length / HOME_ROTATION_SIZE))} · atualização manual</strong>
             <div class="home-rotation-actions">
               <button class="home-rotation-toggle" type="button" data-home-rotation-toggle aria-pressed="true">Atualizar automaticamente</button>
               <button class="home-rotation-next" type="button" data-home-rotation-next>Trocar seleção <span aria-hidden="true">→</span></button>
