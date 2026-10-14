@@ -5733,3 +5733,30 @@ a {
   .product-card .product-card-actions .btn { padding: 6px 4px; font-size: 11px; }
 }
 @media (pointer: coarse) { .product-card .product-card-actions .btn { min-height: 44px; } }
+
+/* Compact photo discovery: complete thumbnails with details beside them. */
+.photo-rail-section { padding-block: 16px; }
+.photo-rail-heading { margin-bottom: 12px; gap: 12px; }
+.photo-rail-heading h2 { font-size: 24px; margin: 4px 0; }
+.photo-rail-heading p { max-width: none; font-size: 13px; line-height: 1.4; }
+.photo-rail-heading .section-kicker { font-size: 10px; }
+.photo-rail-controls { display: none; }
+.photo-rail { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; overflow: visible; padding: 2px; scroll-snap-type: none; }
+.photo-rail-card { grid-template-columns: 72px minmax(0, 1fr); grid-template-rows: auto; align-items: center; align-content: center; gap: 10px; padding: 8px; border-radius: 12px; box-shadow: none; min-width: 0; }
+.photo-rail-media { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border: 1px solid var(--color-border); border-radius: 8px; }
+.photo-rail-media img { display: block; min-width: 0; min-height: 0; padding: 4px; object-fit: contain; }
+.photo-rail-card:hover .photo-rail-media img { transform: none; }
+.photo-rail-copy { padding: 0; gap: 3px; }
+.photo-rail-copy strong { min-height: 0; font-size: 12px; line-height: 1.35; }
+.photo-rail-copy > span { margin: 0; font-size: 10.5px; }
+.photo-rail-section + .home-products { padding-top: 16px; }
+@media (min-width: 761px) and (max-width: 980px) { .photo-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  .photo-rail-heading h2 { font-size: 20px; }
+  .photo-rail-heading p { font-size: 12px; }
+  .photo-rail-controls { display: flex; gap: 4px; }
+  .photo-rail-controls button { width: 44px; height: 44px; font-size: 18px; }
+  .photo-rail { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 5px; }
+  .photo-rail-card { flex: 0 0 min(82vw, 300px); grid-template-columns: 64px minmax(0, 1fr); }
+  .photo-rail-media { width: 64px; height: 64px; }
+}

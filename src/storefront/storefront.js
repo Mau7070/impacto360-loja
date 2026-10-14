@@ -1171,7 +1171,8 @@ function bindPhotoRail() {
   document.querySelectorAll("[data-photo-rail-direction]").forEach(button => {
     button.addEventListener("click", () => {
       const firstCard = track.querySelector(".photo-rail-card");
-      const step = firstCard ? firstCard.getBoundingClientRect().width + 16 : track.clientWidth;
+      const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
+      const step = firstCard ? firstCard.getBoundingClientRect().width + gap : track.clientWidth;
       track.scrollBy({ left: Number(button.dataset.photoRailDirection) * step, behavior: "smooth" });
     });
   });
@@ -1237,15 +1238,15 @@ function renderHome() {
       <div class="shell">
         <div class="photo-rail-heading">
           <div><span class="section-kicker">Descubra na Impacto360</span><h2 id="photo-rail-title">Explore pela foto, confira na loja</h2>
-            <p>Abra a ficha do produto aqui antes de visitar o parceiro. Preço e disponibilidade são confirmados no destino.</p></div>
+            <p>Veja os detalhes e confira preço e disponibilidade no parceiro.</p></div>
           <div class="photo-rail-controls" aria-label="Navegar pelas fotos">
             <button type="button" data-photo-rail-direction="-1" aria-label="Ver fotos anteriores">←</button>
             <button type="button" data-photo-rail-direction="1" aria-label="Ver próximas fotos">→</button>
           </div>
         </div>
         <div class="photo-rail" data-photo-rail role="region" aria-label="Fotos de produtos da loja" tabindex="0">
-          ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
-            <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
+          ${photoProducts.map((product, index) => `<a class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}" title="${escapeAttr(product.name)}">
+            <span class="photo-rail-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" width="72" height="72" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"></span>
             <span class="photo-rail-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong><span>Detalhes →</span></span>
           </a>`).join("")}
         </div>
