@@ -1294,8 +1294,8 @@ function renderHome() {
           <a class="text-link" href="/historico/" data-route="/historico/">Ver histórico →</a>
         </div>
         <div class="home-recent-rail">
-          ${recentProducts.map(product => `<a class="recent-product-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}">
-            <span class="recent-product-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" loading="lazy" decoding="async"></span>
+          ${recentProducts.map(product => `<a class="recent-product-card" href="${escapeAttr(productPath(product))}" data-product-internal="${escapeAttr(product.id)}" title="${escapeAttr(product.name)}">
+            <span class="recent-product-media"><img src="${escapeAttr(assetUrl(product.image))}" alt="${escapeAttr(product.name)}" width="64" height="64" loading="lazy" decoding="async"></span>
             <span class="recent-product-copy"><small>${escapeHtml(partnerName(product))}</small><strong>${escapeHtml(product.name)}</strong></span>
           </a>`).join("")}
         </div>
