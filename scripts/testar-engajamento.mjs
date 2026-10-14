@@ -7,12 +7,15 @@ const holders = [];
 const status = { textContent:'', hidden:true };
 let fetchCalls = 0;
 let response;
-const source = fs.readFileSync('src/storefront/product-engagement.js','utf8').replace(/\}\)\(\);\s*$/, 'globalThis.testApi={validMetric,controls,changeLike,changeReaction,vote,save,setConfig:value=>{config=value;}};})();');
+const copiedLinks = [];
+const nativeShares = [];
+const navigatorMock = {clipboard:{writeText:async url=>copiedLinks.push(url)}};
+const source = fs.readFileSync('src/storefront/product-engagement.js','utf8').replace(/\}\)\(\);\s*$/, 'globalThis.testApi={validMetric,controls,changeLike,changeReaction,shareItem,vote,save,setConfig:value=>{config=value;}};})();');
 function instance() {
   const context=vm.createContext({console,URL,Intl,Date,Number,Object,Map,Set,JSON,AbortSignal,crypto:globalThis.crypto,
     localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
     document:{readyState:'loading',addEventListener:()=>{},querySelectorAll:()=>holders,getElementById:()=>status},
-    window:{addEventListener:()=>{}},location:new URL('https://impacto360afiliado.com.br/'),
+    window:{addEventListener:()=>{}},location:new URL('https://impacto360afiliado.com.br/'),navigator:navigatorMock,
     setTimeout:()=>1,clearTimeout:()=>{},fetch:async()=>{fetchCalls++;return response;}});
   vm.runInContext(source,context);return context.testApi;
 }
@@ -26,6 +29,24 @@ api.changeReaction('real-id','want');assert.equal(api.vote('real-id').reaction,'
 api.changeReaction('real-id','invalid');assert.equal(api.vote('real-id').reaction,'');
 assert.match(product.innerHTML,/data-engagement-share/);
 assert.doesNotMatch(product.innerHTML,/i360-local-note|Suas interações ficam salvas neste dispositivo/);
+const storefrontSource = fs.readFileSync('src/storefront/storefront.js','utf8');
+const listSource = storefrontSource.slice(storefrontSource.indexOf('const affiliateLists ='),storefrontSource.indexOf('function renderHome()'));
+const listResult = vm.runInNewContext(listSource+'\n({markup:affiliateListCards(),lists:affiliateLists})',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
+const sharedListLinks = [...listResult.markup.matchAll(/data-engagement-url="([^"]+)"/g)].map(match=>match[1]);
+assert.equal(sharedListLinks.length,listResult.lists.length);
+for (const [index,link] of sharedListLinks.entries()) {
+  const url = new URL(link);
+  assert.equal(url.origin,'https://impacto360afiliado.com.br');
+  assert.equal(url.pathname,'/');
+  assert.ok(listResult.markup.includes(`id="${url.hash.slice(1)}"`));
+  assert.ok(listResult.markup.includes(`href="${listResult.lists[index].url}"`));
+  await api.shareItem({dataset:{engagementUrl:link,engagementName:listResult.lists[index].title}});
+}
+assert.deepEqual(copiedLinks,sharedListLinks);
+navigatorMock.share = async payload=>nativeShares.push(payload);
+for (const [index,link] of sharedListLinks.entries()) await api.shareItem({dataset:{engagementUrl:link,engagementName:listResult.lists[index].title}});
+assert.deepEqual(nativeShares.map(payload=>payload.url),sharedListLinks);
+assert.deepEqual(nativeShares.map(payload=>payload.title),Array.from(listResult.lists,list=>list.title));
 assert.ok(!product.innerHTML.includes('vendidos'));assert.ok(!product.innerHTML.includes('0 curtidas'));assert.ok(!product.innerHTML.includes('<img src=x'));
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,true);assert.equal(fetchCalls,0);assert.match(status.textContent,/neste dispositivo/);
 await api.changeLike('real-id');assert.equal(api.vote('real-id').liked,false);

@@ -1189,13 +1189,13 @@ function affiliateListCards() {
   return `<section class="section affiliate-lists-section" aria-labelledby="affiliate-lists-title">
     <div class="shell">
       <h2 id="affiliate-lists-title">Listas selecionadas</h2>
-      <div class="affiliate-lists-grid">${affiliateLists.map(list => `<article class="affiliate-list-card">
+      <div class="affiliate-lists-grid">${affiliateLists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
         <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista ${list.title}">
           <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
         </a>
         <div class="affiliate-list-copy"><span>Mercado Livre · Lista</span>
           <h3>${list.title}</h3>
-          <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${escapeAttr(list.url)}"></div>
+          <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${SITE_URL}/#lista-${escapeAttr(list.url.split('/').pop())}"></div>
           <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver lista ↗</a>
         </div>
       </article>`).join("")}</div>
