@@ -5698,3 +5698,27 @@ a {
 .affiliate-list-copy .btn { width: 100%; min-height: 40px; padding: 9px 12px; font-size: 13px; }
 .affiliate-lists-note { margin: 12px 0 0; font-size: 11px; line-height: 1.5; }
 @media(max-width: 600px) { .affiliate-lists-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; } .affiliate-list-photo img { height: 110px; } .affiliate-list-copy { padding: 6px 8px 8px; } .affiliate-list-copy h3 { font-size: 14px; } }
+
+/* Compact publication cards across home, search, stores and categories. */
+.product-card .product-media { height: 140px; min-height: 0; aspect-ratio: auto; }
+.product-card .product-media img { padding: 10px; }
+.product-card .product-body { min-width: 0; padding: 8px 12px 12px; }
+.product-card .product-partner { margin-bottom: 4px; font-size: 11px; }
+.product-card h3 { min-height: 0; font-size: 14px; line-height: 1.35; -webkit-line-clamp: 2; }
+.product-card .i360-engagement { margin: 4px 0; }
+.product-card .i360-reactions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; padding-top: 2px; margin-top: 2px; }
+.product-card .i360-reactions button { min-width: 0; margin: 0; }
+.product-card .i360-share-label { display: none; }
+.product-card .price-block { margin: auto 0 8px; padding-top: 4px; }
+.product-card .product-card-actions { display: grid; grid-template-columns: minmax(0, 1fr) 40px; gap: 6px; align-items: stretch; }
+.product-card .product-card-actions .btn { width: 100%; min-height: 40px; margin: 0; padding: 6px 8px; font-size: 12px; }
+.product-card .product-card-actions [data-alert] { display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border); background: var(--color-surface-secondary); }
+.product-card .product-card-actions [data-alert][aria-pressed="true"] { color: var(--color-primary); border-color: var(--color-primary); background: var(--color-primary-light); }
+@media (max-width: 760px) {
+  .product-card .product-media { height: 110px; }
+  .product-card .product-body { padding: 6px 8px 8px; }
+  .product-card h3 { font-size: 12.5px; }
+  .product-card .product-card-actions { grid-template-columns: minmax(0, 1fr) 32px; gap: 4px; }
+  .product-card .product-card-actions .btn { padding: 6px 4px; font-size: 11px; }
+}
+@media (pointer: coarse) { .product-card .product-card-actions .btn { min-height: 44px; } }

@@ -880,7 +880,7 @@ function productCard(product, index = 0, eagerCount = 0) {
           <strong class="current-price${!quote && !freshness.current ? " price-to-check" : ""}">${escapeHtml(currentPrice)}</strong>
           ${!quote ? `<span class="price-context">${freshness.current ? "Preço e estoque sujeitos a alteração" : "Confira valor, estoque e frete na loja parceira"}</span>` : ""}
         </div>
-        <a
+        <div class="product-card-actions"><a
           class="btn ${actionClass}"
           href="${escapeAttr(isAllowedAffiliateUrl(product.link) ? product.link : "#")}"
           target="_blank"
@@ -894,7 +894,9 @@ function productCard(product, index = 0, eagerCount = 0) {
           type="button"
           data-alert="${escapeAttr(product.id)}"
           aria-pressed="${alerts.has(String(product.id))}"
-        >${alerts.has(String(product.id)) ? "Salvo para acompanhar" : "Salvar para acompanhar"}</button>
+          aria-label="${alerts.has(String(product.id)) ? 'Deixar de acompanhar' : 'Salvar para acompanhar'}: ${escapeAttr(product.name)}"
+          title="${alerts.has(String(product.id)) ? 'Salvo para acompanhar' : 'Salvar para acompanhar'}"
+        ><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="i360-sr-only">${alerts.has(String(product.id)) ? "Salvo para acompanhar" : "Salvar para acompanhar"}</span></button></div>
       </div>
     </article>`;
 }
@@ -2384,7 +2386,14 @@ function toggleAlert(productId) {
   writeStorage(ALERTS_KEY, [...alerts]);
   document.querySelectorAll(`[data-alert="${CSS.escape(id)}"]`).forEach(button => {
     button.setAttribute("aria-pressed", String(added));
-    button.textContent = added ? "Acompanhando" : "Acompanhar preço";
+    const compactLabel = button.querySelector('.i360-sr-only');
+    if (compactLabel) {
+      compactLabel.textContent = added ? "Salvo para acompanhar" : "Salvar para acompanhar";
+      button.title = compactLabel.textContent;
+      button.setAttribute('aria-label', `${added ? 'Deixar de acompanhar' : 'Salvar para acompanhar'}: ${button.closest('.product-card').querySelector('h3').textContent}`);
+    } else {
+      button.textContent = added ? "Acompanhando" : "Acompanhar preço";
+    }
   });
   showToast(added
     ? "Produto salvo para acompanhamento local. Notificações ainda não estão ativas."
