@@ -1179,6 +1179,10 @@ function bindPhotoRail() {
 }
 
 const affiliateLists = [
+  { title: "Moda feminina", marketplace: "Shopee", kind: "Seleção", category: "moda-e-calcados", url: "https://s.shopee.com.br/80DUARbPgn", image: "/assets/campanhas/shopee-moda-feminina-20261016.webp", alt: "Short de alfaiataria feminino com cinto, um dos produtos da categoria na Shopee" },
+  { title: "Sandálias e chinelos", marketplace: "Shopee", kind: "Seleção", category: "moda-e-calcados", url: "https://s.shopee.com.br/8V9klMZVfu", image: "/assets/campanhas/shopee-sandalias-chinelos-20261016.webp", alt: "Chinelo slide em diferentes cores, um dos produtos da categoria na Shopee" },
+  { title: "Ferramentas", marketplace: "Shopee", kind: "Seleção", category: "ferramentas", url: "https://s.shopee.com.br/8KqKZ3a90t", image: "/assets/campanhas/shopee-ferramentas-20261016.webp", alt: "Jogo de chaves e catraca com maleta, um dos produtos da categoria na Shopee" },
+  { title: "Computadores", marketplace: "Shopee", kind: "Seleção", category: "celulares-e-tecnologia", url: "https://s.shopee.com.br/8pmb9yYF00", image: "/assets/campanhas/shopee-computadores-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos produtos da categoria na Shopee" },
   { title: "Moda feminina", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-20261016.webp", alt: "Vestido midi canelado, um dos itens da lista Moda feminina" },
   { title: "Chinelos e pantufas", category: "moda-e-calcados", url: "https://meli.la/1wLwnn3", image: "/assets/campanhas/chinelos-e-pantufas-20261016.webp", alt: "Par de chinelos Havaianas, um dos itens da lista" },
   { title: "Máquinas e ferramentas", category: "ferramentas", url: "https://meli.la/21wC6Vi", image: "/assets/campanhas/maquinas-e-ferramentas-20261016.webp", alt: "Parafusadeira com maleta e acessórios, um dos itens da lista" },
@@ -1197,16 +1201,16 @@ function affiliateListCards(categorySlug = "") {
     <div class="shell">
       <h2 id="affiliate-lists-title">Listas selecionadas</h2>
       <div class="affiliate-lists-grid${lists.length < 3 ? ' affiliate-lists-grid-short' : ''}">${lists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
-        <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista ${list.title}">
+        <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ${list.title} no ${list.marketplace || 'Mercado Livre'}">
           <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
         </a>
-        <div class="affiliate-list-copy"><span>Mercado Livre · Lista</span>
+        <div class="affiliate-list-copy"><span>${list.marketplace || 'Mercado Livre'} · ${list.kind || 'Lista'}</span>
           <h3>${list.title}</h3>
           <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${SITE_URL}/#lista-${escapeAttr(list.url.split('/').pop())}"></div>
-          <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver lista ↗</a>
+          <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ↗</a>
         </div>
       </article>`).join("")}</div>
-      <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas; confira preço, estoque, frete e características no Mercado Livre.</p>
+      <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas e seleções; confira preço, estoque, frete e características na loja parceira.</p>
     </div>
   </section>`;
 }

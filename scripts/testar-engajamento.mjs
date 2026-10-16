@@ -34,6 +34,16 @@ const listSource = storefrontSource.slice(storefrontSource.indexOf('const affili
 const listResult = vm.runInNewContext(listSource+'\n({markup:affiliateListCards(),lists:affiliateLists})',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
 const sharedListLinks = [...listResult.markup.matchAll(/data-engagement-url="([^"]+)"/g)].map(match=>match[1]);
 assert.equal(new Set(listResult.lists.map(list=>list.url)).size,listResult.lists.length);
+assert.equal(new Set(listResult.lists.map(list=>list.url.split('/').pop())).size,listResult.lists.length);
+for (const list of listResult.lists) {
+  const card = listResult.markup.split(`id="lista-${list.url.split('/').pop()}"`)[1].split('</article>')[0];
+  assert.ok(card.includes(`<span>${list.marketplace || 'Mercado Livre'} · ${list.kind || 'Lista'}</span>`));
+  if (list.marketplace === 'Shopee') {
+    assert.equal(new URL(list.url).hostname,'s.shopee.com.br');
+    assert.ok(card.includes('Ver seleção ↗'));
+    assert.ok(!card.includes('Mercado Livre'));
+  }
+}
 for (const list of listResult.lists) {
   assert.ok(fs.existsSync('.'+list.image),`Capa ausente: ${list.title}`);
   assert.deepEqual(fs.readFileSync('pacote-github-pages-pronto'+list.image),fs.readFileSync('.'+list.image),`Capa não sincronizada: ${list.title}`);
