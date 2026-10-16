@@ -5695,6 +5695,7 @@ a {
 .affiliate-lists-section { padding-block: 20px; }
 .affiliate-lists-section h2 { font-size: 20px; margin: 0 0 14px; }
 .affiliate-lists-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.affiliate-lists-grid-short { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .affiliate-list-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--color-border); border-radius: 14px; background: var(--color-surface); }
 .affiliate-list-card { scroll-margin-top: 150px; }
 .affiliate-list-photo { display: block; padding: 10px 12px 4px; background: #fff; }

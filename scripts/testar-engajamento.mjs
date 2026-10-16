@@ -33,6 +33,16 @@ const storefrontSource = fs.readFileSync('src/storefront/storefront.js','utf8');
 const listSource = storefrontSource.slice(storefrontSource.indexOf('const affiliateLists ='),storefrontSource.indexOf('function renderHome()'));
 const listResult = vm.runInNewContext(listSource+'\n({markup:affiliateListCards(),lists:affiliateLists})',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
 const sharedListLinks = [...listResult.markup.matchAll(/data-engagement-url="([^"]+)"/g)].map(match=>match[1]);
+assert.equal(new Set(listResult.lists.map(list=>list.url)).size,listResult.lists.length);
+for (const list of listResult.lists) {
+  assert.ok(fs.existsSync('.'+list.image),`Capa ausente: ${list.title}`);
+  assert.deepEqual(fs.readFileSync('pacote-github-pages-pronto'+list.image),fs.readFileSync('.'+list.image),`Capa não sincronizada: ${list.title}`);
+}
+for (const category of new Set(listResult.lists.map(list=>list.category))) {
+  const markup = vm.runInNewContext(listSource+`\naffiliateListCards(${JSON.stringify(category)})`,{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
+  for (const list of listResult.lists) assert.equal(markup.includes(`href="${list.url}"`),list.category===category,`Categoria incorreta: ${list.title}`);
+}
+assert.equal(vm.runInNewContext(listSource+'\naffiliateListCards("categoria-sem-listas")',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)}),'');
 assert.equal(sharedListLinks.length,listResult.lists.length);
 for (const [index,link] of sharedListLinks.entries()) {
   const url = new URL(link);

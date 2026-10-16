@@ -1179,18 +1179,24 @@ function bindPhotoRail() {
 }
 
 const affiliateLists = [
-  { title: "Crianças 10 a 12 anos", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
-  { title: "Crianças de 7 a 9 anos", url: "https://meli.la/18eDTdE", image: "/assets/campanhas/criancas-7-a-9-20261013.webp", alt: "Pista de carrinhos com lava-rápido, um dos itens da lista" },
-  { title: "Brinquedos 4 a 6 anos", url: "https://meli.la/1E5p1bZ", image: "/assets/campanhas/brinquedos-4-a-6-20261013.webp", alt: "Cavalinho pula-pula rosa, um dos itens da lista" },
-  { title: "Crianças 6 meses a 3 anos", url: "https://meli.la/1pFVmFM", image: "/assets/campanhas/criancas-6-meses-a-3-20261013.webp", alt: "Cubo interativo com blocos de encaixar, um dos itens da lista" },
-  { title: "Brinquedos natalinos", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
+  { title: "Moda feminina", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-20261016.webp", alt: "Vestido midi canelado, um dos itens da lista Moda feminina" },
+  { title: "Chinelos e pantufas", category: "moda-e-calcados", url: "https://meli.la/1wLwnn3", image: "/assets/campanhas/chinelos-e-pantufas-20261016.webp", alt: "Par de chinelos Havaianas, um dos itens da lista" },
+  { title: "Máquinas e ferramentas", category: "ferramentas", url: "https://meli.la/21wC6Vi", image: "/assets/campanhas/maquinas-e-ferramentas-20261016.webp", alt: "Parafusadeira com maleta e acessórios, um dos itens da lista" },
+  { title: "Computador", category: "celulares-e-tecnologia", url: "https://meli.la/2YwxY1C", image: "/assets/campanhas/computador-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos itens da lista" },
+  { title: "Crianças 10 a 12 anos", category: "brinquedos-e-escolar", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
+  { title: "Crianças de 7 a 9 anos", category: "brinquedos-e-escolar", url: "https://meli.la/18eDTdE", image: "/assets/campanhas/criancas-7-a-9-20261013.webp", alt: "Pista de carrinhos com lava-rápido, um dos itens da lista" },
+  { title: "Brinquedos 4 a 6 anos", category: "brinquedos-e-escolar", url: "https://meli.la/1E5p1bZ", image: "/assets/campanhas/brinquedos-4-a-6-20261013.webp", alt: "Cavalinho pula-pula rosa, um dos itens da lista" },
+  { title: "Crianças 6 meses a 3 anos", category: "brinquedos-e-escolar", url: "https://meli.la/1pFVmFM", image: "/assets/campanhas/criancas-6-meses-a-3-20261013.webp", alt: "Cubo interativo com blocos de encaixar, um dos itens da lista" },
+  { title: "Brinquedos natalinos", category: "brinquedos-e-escolar", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
 ];
 
-function affiliateListCards() {
+function affiliateListCards(categorySlug = "") {
+  const lists = categorySlug ? affiliateLists.filter(list => list.category === categorySlug) : affiliateLists;
+  if (!lists.length) return "";
   return `<section class="section affiliate-lists-section" aria-labelledby="affiliate-lists-title">
     <div class="shell">
       <h2 id="affiliate-lists-title">Listas selecionadas</h2>
-      <div class="affiliate-lists-grid">${affiliateLists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
+      <div class="affiliate-lists-grid${lists.length < 3 ? ' affiliate-lists-grid-short' : ''}">${lists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
         <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver lista ${list.title}">
           <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
         </a>
@@ -1200,7 +1206,7 @@ function affiliateListCards() {
           <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver lista ↗</a>
         </div>
       </article>`).join("")}</div>
-      <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas; confira preços e indicação de idade no Mercado Livre.</p>
+      <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas; confira preço, estoque, frete e características no Mercado Livre.</p>
     </div>
   </section>`;
 }
@@ -1474,7 +1480,7 @@ function renderCategory(category, currentUrl = routeUrl()) {
   });
   appRoot().innerHTML = `
     ${pageHero(category.label, category.description, [["Início", "/"], ["Categorias", "/#categorias"], [category.label, ""]])}
-    ${category.slug === "brinquedos-e-escolar" ? affiliateListCards() : ""}
+    ${affiliateListCards(category.slug)}
     <section class="section">
       <div class="shell results-layout">
         ${searchFilters({
