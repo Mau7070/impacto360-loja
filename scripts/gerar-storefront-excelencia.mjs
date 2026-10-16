@@ -570,6 +570,7 @@ for (const relative of [
   "assets/campanhas/shopee-sandalias-chinelos-20261016.webp",
   "assets/campanhas/shopee-ferramentas-20261016.webp",
   "assets/campanhas/shopee-computadores-20261016.webp",
+  "assets/campanhas/shopee-brinquedos-20261016.webp",
   "dados/relatorio-integridade-publicacao.json",
   "public/impacto360-categorias-20260928.png",
   "favicon.svg",

@@ -1179,37 +1179,56 @@ function bindPhotoRail() {
 }
 
 const affiliateLists = [
-  { title: "Moda feminina", marketplace: "Shopee", kind: "Seleção", category: "moda-e-calcados", url: "https://s.shopee.com.br/80DUARbPgn", image: "/assets/campanhas/shopee-moda-feminina-20261016.webp", alt: "Short de alfaiataria feminino com cinto, um dos produtos da categoria na Shopee" },
-  { title: "Sandálias e chinelos", marketplace: "Shopee", kind: "Seleção", category: "moda-e-calcados", url: "https://s.shopee.com.br/8V9klMZVfu", image: "/assets/campanhas/shopee-sandalias-chinelos-20261016.webp", alt: "Chinelo slide em diferentes cores, um dos produtos da categoria na Shopee" },
-  { title: "Ferramentas", marketplace: "Shopee", kind: "Seleção", category: "ferramentas", url: "https://s.shopee.com.br/8KqKZ3a90t", image: "/assets/campanhas/shopee-ferramentas-20261016.webp", alt: "Jogo de chaves e catraca com maleta, um dos produtos da categoria na Shopee" },
-  { title: "Computadores", marketplace: "Shopee", kind: "Seleção", category: "celulares-e-tecnologia", url: "https://s.shopee.com.br/8pmb9yYF00", image: "/assets/campanhas/shopee-computadores-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos produtos da categoria na Shopee" },
-  { title: "Moda feminina", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-20261016.webp", alt: "Vestido midi canelado, um dos itens da lista Moda feminina" },
-  { title: "Chinelos e pantufas", category: "moda-e-calcados", url: "https://meli.la/1wLwnn3", image: "/assets/campanhas/chinelos-e-pantufas-20261016.webp", alt: "Par de chinelos Havaianas, um dos itens da lista" },
-  { title: "Máquinas e ferramentas", category: "ferramentas", url: "https://meli.la/21wC6Vi", image: "/assets/campanhas/maquinas-e-ferramentas-20261016.webp", alt: "Parafusadeira com maleta e acessórios, um dos itens da lista" },
-  { title: "Computador", category: "celulares-e-tecnologia", url: "https://meli.la/2YwxY1C", image: "/assets/campanhas/computador-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos itens da lista" },
-  { title: "Crianças 10 a 12 anos", category: "brinquedos-e-escolar", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
-  { title: "Crianças de 7 a 9 anos", category: "brinquedos-e-escolar", url: "https://meli.la/18eDTdE", image: "/assets/campanhas/criancas-7-a-9-20261013.webp", alt: "Pista de carrinhos com lava-rápido, um dos itens da lista" },
-  { title: "Brinquedos 4 a 6 anos", category: "brinquedos-e-escolar", url: "https://meli.la/1E5p1bZ", image: "/assets/campanhas/brinquedos-4-a-6-20261013.webp", alt: "Cavalinho pula-pula rosa, um dos itens da lista" },
-  { title: "Crianças 6 meses a 3 anos", category: "brinquedos-e-escolar", url: "https://meli.la/1pFVmFM", image: "/assets/campanhas/criancas-6-meses-a-3-20261013.webp", alt: "Cubo interativo com blocos de encaixar, um dos itens da lista" },
-  { title: "Brinquedos natalinos", category: "brinquedos-e-escolar", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
+  { title: "Brinquedos e jogos", group: "brinquedos", marketplace: "Shopee", kind: "Seleção", category: "brinquedos-e-escolar", url: "https://s.shopee.com.br/2qVO28IFin", image: "/assets/campanhas/shopee-brinquedos-20261016.webp", alt: "Carrinho com controle remoto, um dos brinquedos da categoria na Shopee" },
+  { title: "Moda feminina", marketplace: "Shopee", kind: "Seleção", group: "moda", category: "moda-e-calcados", url: "https://s.shopee.com.br/80DUARbPgn", image: "/assets/campanhas/shopee-moda-feminina-20261016.webp", alt: "Short de alfaiataria feminino com cinto, um dos produtos da categoria na Shopee" },
+  { title: "Sandálias e chinelos", marketplace: "Shopee", kind: "Seleção", group: "calcados", category: "moda-e-calcados", url: "https://s.shopee.com.br/8V9klMZVfu", image: "/assets/campanhas/shopee-sandalias-chinelos-20261016.webp", alt: "Chinelo slide em diferentes cores, um dos produtos da categoria na Shopee" },
+  { title: "Ferramentas", marketplace: "Shopee", kind: "Seleção", group: "ferramentas", category: "ferramentas", url: "https://s.shopee.com.br/8KqKZ3a90t", image: "/assets/campanhas/shopee-ferramentas-20261016.webp", alt: "Jogo de chaves e catraca com maleta, um dos produtos da categoria na Shopee" },
+  { title: "Computadores", marketplace: "Shopee", kind: "Seleção", group: "computadores", category: "celulares-e-tecnologia", url: "https://s.shopee.com.br/8pmb9yYF00", image: "/assets/campanhas/shopee-computadores-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos produtos da categoria na Shopee" },
+  { title: "Moda feminina", group: "moda", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-20261016.webp", alt: "Vestido midi canelado, um dos itens da lista Moda feminina" },
+  { title: "Chinelos e pantufas", group: "calcados", category: "moda-e-calcados", url: "https://meli.la/1wLwnn3", image: "/assets/campanhas/chinelos-e-pantufas-20261016.webp", alt: "Par de chinelos Havaianas, um dos itens da lista" },
+  { title: "Máquinas e ferramentas", group: "ferramentas", category: "ferramentas", url: "https://meli.la/21wC6Vi", image: "/assets/campanhas/maquinas-e-ferramentas-20261016.webp", alt: "Parafusadeira com maleta e acessórios, um dos itens da lista" },
+  { title: "Computador", group: "computadores", category: "celulares-e-tecnologia", url: "https://meli.la/2YwxY1C", image: "/assets/campanhas/computador-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos itens da lista" },
+  { title: "Crianças 10 a 12 anos", group: "brinquedos", category: "brinquedos-e-escolar", url: "https://meli.la/2AMrmg3", image: "/assets/campanhas/criancas-10-a-12-20261013.webp", alt: "Circuito elétrico STEM de montar" },
+  { title: "Crianças de 7 a 9 anos", group: "brinquedos", category: "brinquedos-e-escolar", url: "https://meli.la/18eDTdE", image: "/assets/campanhas/criancas-7-a-9-20261013.webp", alt: "Pista de carrinhos com lava-rápido, um dos itens da lista" },
+  { title: "Brinquedos 4 a 6 anos", group: "brinquedos", category: "brinquedos-e-escolar", url: "https://meli.la/1E5p1bZ", image: "/assets/campanhas/brinquedos-4-a-6-20261013.webp", alt: "Cavalinho pula-pula rosa, um dos itens da lista" },
+  { title: "Crianças 6 meses a 3 anos", group: "brinquedos", category: "brinquedos-e-escolar", url: "https://meli.la/1pFVmFM", image: "/assets/campanhas/criancas-6-meses-a-3-20261013.webp", alt: "Cubo interativo com blocos de encaixar, um dos itens da lista" },
+  { title: "Brinquedos natalinos", group: "brinquedos", category: "brinquedos-e-escolar", url: "https://meli.la/2Xc1iQo", image: "/assets/campanhas/brinquedos-natalinos-20261009.webp", alt: "Cachorrinho robô laranja e branco" },
 ];
 
-function affiliateListCards(categorySlug = "") {
+function affiliateListGroups(categorySlug = "") {
   const lists = categorySlug ? affiliateLists.filter(list => list.category === categorySlug) : affiliateLists;
-  if (!lists.length) return "";
+  return [
+    { key: "brinquedos", label: "Brinquedos" },
+    { key: "moda", label: "Moda feminina" },
+    { key: "calcados", label: "Calçados" },
+    { key: "ferramentas", label: "Ferramentas" },
+    { key: "computadores", label: "Computadores" },
+  ].map(group => ({
+    ...group,
+    lists: lists.filter(list => list.group === group.key).sort((a, b) =>
+      Number((a.marketplace || "Mercado Livre") !== "Mercado Livre") - Number((b.marketplace || "Mercado Livre") !== "Mercado Livre")),
+  })).filter(group => group.lists.length);
+}
+
+function affiliateListCards(categorySlug = "") {
+  const groups = affiliateListGroups(categorySlug);
+  if (!groups.length) return "";
   return `<section class="section affiliate-lists-section" aria-labelledby="affiliate-lists-title">
     <div class="shell">
       <h2 id="affiliate-lists-title">Listas selecionadas</h2>
-      <div class="affiliate-lists-grid${lists.length < 3 ? ' affiliate-lists-grid-short' : ''}">${lists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
-        <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ${list.title} no ${list.marketplace || 'Mercado Livre'}">
-          <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
-        </a>
-        <div class="affiliate-list-copy"><span>${list.marketplace || 'Mercado Livre'} · ${list.kind || 'Lista'}</span>
-          <h3>${list.title}</h3>
-          <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${SITE_URL}/#lista-${escapeAttr(list.url.split('/').pop())}"></div>
-          <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ↗</a>
-        </div>
-      </article>`).join("")}</div>
+      <div class="affiliate-list-groups">${groups.map(group => `<section class="affiliate-list-group${group.lists.length > 2 ? ' affiliate-list-group-wide' : ''}" aria-labelledby="affiliate-group-${group.key}">
+        <h3 id="affiliate-group-${group.key}">${group.label}</h3>
+        <div class="affiliate-lists-grid">${group.lists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
+          <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ${list.title} no ${list.marketplace || 'Mercado Livre'}">
+            <img src="${list.image}" alt="${list.alt}" width="224" height="224" loading="lazy" decoding="async">
+          </a>
+          <div class="affiliate-list-copy"><span>${list.marketplace || 'Mercado Livre'} · ${list.kind || 'Lista'}</span>
+            <h4>${list.title}</h4>
+            <div class="i360-engagement" data-engagement-product="lista-${escapeAttr(list.url.split('/').pop())}" data-engagement-name="${escapeAttr(list.title)}" data-engagement-url="${SITE_URL}/#lista-${escapeAttr(list.url.split('/').pop())}"></div>
+            <a class="btn btn-primary" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer">Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ↗</a>
+          </div>
+        </article>`).join("")}</div>
+      </section>`).join("")}</div>
       <p class="affiliate-lists-note">Links de afiliado. Podemos receber comissão. Fotos de itens das listas e seleções; confira preço, estoque, frete e características na loja parceira.</p>
     </div>
   </section>`;

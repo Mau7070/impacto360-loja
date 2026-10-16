@@ -31,7 +31,18 @@ assert.match(product.innerHTML,/data-engagement-share/);
 assert.doesNotMatch(product.innerHTML,/i360-local-note|Suas interações ficam salvas neste dispositivo/);
 const storefrontSource = fs.readFileSync('src/storefront/storefront.js','utf8');
 const listSource = storefrontSource.slice(storefrontSource.indexOf('const affiliateLists ='),storefrontSource.indexOf('function renderHome()'));
-const listResult = vm.runInNewContext(listSource+'\n({markup:affiliateListCards(),lists:affiliateLists})',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
+const listResult = vm.runInNewContext(listSource+'\n({markup:affiliateListCards(),lists:affiliateListGroups().flatMap(group=>group.lists),groups:affiliateListGroups(),sourceLists:affiliateLists})',{SITE_URL:'https://impacto360afiliado.com.br',escapeAttr:value=>String(value)});
+assert.equal(listResult.lists.length,listResult.sourceLists.length);
+for (const group of listResult.groups) {
+  assert.ok(group.lists.every(list=>list.group===group.key));
+  let otherMarketplaceSeen = false;
+  for (const list of group.lists) {
+    const mercadoLivre = (list.marketplace || 'Mercado Livre') === 'Mercado Livre';
+    assert.ok(!mercadoLivre || !otherMarketplaceSeen,`Mercado Livre fora da prioridade: ${group.label}`);
+    if (!mercadoLivre) otherMarketplaceSeen = true;
+  }
+  assert.ok(listResult.markup.includes(`aria-labelledby="affiliate-group-${group.key}"`));
+}
 const sharedListLinks = [...listResult.markup.matchAll(/data-engagement-url="([^"]+)"/g)].map(match=>match[1]);
 assert.equal(new Set(listResult.lists.map(list=>list.url)).size,listResult.lists.length);
 assert.equal(new Set(listResult.lists.map(list=>list.url.split('/').pop())).size,listResult.lists.length);
