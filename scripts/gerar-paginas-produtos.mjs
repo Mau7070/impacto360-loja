@@ -34,7 +34,7 @@ const lastCheckFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
 ];
 const allowedAffiliateDomains = new Set([
-  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
+  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br",
 ]);
 let productSlugById = new Map();
 

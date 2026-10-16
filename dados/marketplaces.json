@@ -22,13 +22,6 @@
       "description": "Produtos e categorias na Amazon."
     },
     {
-      "id": "hotmart",
-      "name": "Hotmart",
-      "url": "https://hotmart.com/pt-br/marketplace",
-      "type": "official",
-      "description": "Cursos e produtos digitais."
-    },
-    {
       "id": "autooferta",
       "name": "AutoOferta",
       "url": "https://autooferta.com.br/?ref=afGWFRTTARFZ",
@@ -41,20 +34,6 @@
       "url": "https://virtuscorretora.com.br/indicacao?i=Mauricio%20de%20Oliveira&f=27997755666",
       "type": "referral",
       "description": "Atendimento e indicação."
-    },
-    {
-      "id": "eduzz",
-      "name": "Eduzz",
-      "url": "https://www.eduzz.com/",
-      "type": "official",
-      "description": "Cursos e produtos digitais."
-    },
-    {
-      "id": "magalu",
-      "name": "Magalu",
-      "url": "https://www.magazineluiza.com.br/",
-      "type": "official",
-      "description": "Tecnologia, casa e mais."
     },
     {
       "id": "uniasselvi",

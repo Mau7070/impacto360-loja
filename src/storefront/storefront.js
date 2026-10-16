@@ -1,8 +1,8 @@
 const SITE_NAME = "Impacto360 Afiliado";
 const SITE_URL = "https://impacto360afiliado.com.br";
-const CATALOG_URL = "/dados/catalogo-publico.json?v=20260928-fotos-1";
-const STORES_URL = "/dados/stores.json?v=20260928-fotos-1";
-const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261006-parceiros-3";
+const CATALOG_URL = "/dados/catalogo-publico.json?v=20261016-parceiros-1";
+const STORES_URL = "/dados/stores.json?v=20261016-parceiros-1";
+const MARKETPLACES_URL = "/dados/marketplaces.json?v=20261016-parceiros-1";
 const VEHICLES_URL = "/dados/veiculos-autooferta.json?v=20260930-carros-1";
 const AUTO_OFERTA_GENERAL_REF = "https://autooferta.com.br/?ref=afGWFRTTARFZ";
 const FAVORITES_KEY = "impacto360Favorites";
@@ -20,7 +20,6 @@ const ALLOWED_AFFILIATE_DOMAINS = new Set([
   "amzn.to",
   "meli.la",
   "s.shopee.com.br",
-  "go.hotmart.com",
 ]);
 const PAGE_SIZE = 24;
 const HOME_ROTATION_SIZE = 10;
@@ -437,11 +436,8 @@ const marketplaceDefinitions = [
   { id: "mercado-livre", name: "Mercado Livre", initials: "ML", icon: "bag", url: "https://www.mercadolivre.com.br/", domains: ["mercadolivre.com.br", "mercadolivre.com", "meli.la"] },
   { id: "shopee", name: "Shopee", initials: "S", icon: "bag", url: "https://shopee.com.br/", domains: ["shopee.com.br"] },
   { id: "amazon", name: "Amazon", initials: "a", icon: "bag", url: "https://www.amazon.com.br/", domains: ["amazon.com.br", "amzn.to", "link.amazon"] },
-  { id: "hotmart", name: "Hotmart", initials: "h", icon: "spark", url: "https://hotmart.com/pt-br/marketplace", domains: ["hotmart.com"] },
   { id: "autooferta", name: "AutoOferta", initials: "AO", icon: "car", url: "https://autooferta.com.br/", domains: ["autooferta.com.br"] },
   { id: "virtus-corretora", name: "Virtus Corretora", initials: "VC", icon: "shield", url: "https://virtuscorretora.com.br/", domains: ["virtuscorretora.com.br"] },
-  { id: "eduzz", name: "Eduzz", initials: "E", icon: "spark", url: "https://www.eduzz.com/", domains: ["eduzz.com"] },
-  { id: "magalu", name: "Magalu", initials: "M", icon: "bag", url: "https://www.magazineluiza.com.br/", domains: ["magazineluiza.com.br", "magalu.com"] },
   { id: "uniasselvi", name: "UNIASSELVI", initials: "U", icon: "grid", url: "https://portal.uniasselvi.com.br/cursos", domains: ["uniasselvi.com.br"] },
   { id: "santander", name: "Santander", initials: "S", icon: "bag", url: "https://www.santander.com.br/", domains: ["santander.com.br"] },
   { id: "dreamstime", name: "Dreamstime", initials: "DT", icon: "grid", url: "https://pt.dreamstime.com/", domains: ["dreamstime.com"] },
@@ -590,7 +586,6 @@ function partnerName(product) {
   if (raw.includes("amazon")) return "Amazon";
   if (raw.includes("mercado livre") || raw.includes("mercadolivre") || raw.includes("meli la")) return "Mercado Livre";
   if (raw.includes("shopee")) return "Shopee";
-  if (raw.includes("hotmart")) return "Hotmart";
   return text(product.partner) || text(storeFor(product)?.name) || "Loja parceira";
 }
 
@@ -2682,7 +2677,7 @@ function registerServiceWorker() {
     refreshing = true;
     location.reload();
   });
-  navigator.serviceWorker.register("/sw.js?v=20261016-capas-1", { updateViaCache: "none" }).catch(error => console.warn("Service worker não registrado.", error));
+  navigator.serviceWorker.register("/sw.js?v=20261016-parceiros-1", { updateViaCache: "none" }).catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {
@@ -3094,7 +3089,7 @@ async function loadData() {
   ]);
   if (!productsResponse.ok || !storesResponse.ok) throw new Error("Não foi possível carregar o catálogo público.");
   const [products, stores] = await Promise.all([productsResponse.json(), storesResponse.json()]);
-  state.products = Array.isArray(products) ? products : [];
+  state.products = Array.isArray(products) ? products.filter(product => isAllowedAffiliateUrl(product.link)) : [];
   state.stores = Array.isArray(stores) ? stores : [];
   state.marketplaces = marketplaces;
   state.vehicles = vehicles;

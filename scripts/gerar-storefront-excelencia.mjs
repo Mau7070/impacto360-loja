@@ -13,7 +13,7 @@ const priceDateFields = [
   "precoAtualizadoEm", "priceUpdatedAt", "ultimaVerificacaoPreco",
 ];
 const allowedAffiliateDomains = new Set([
-  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br", "go.hotmart.com",
+  "amazon.com.br", "link.amazon", "amzn.to", "meli.la", "s.shopee.com.br",
 ]);
 
 const read = relative => fs.readFileSync(path.join(root, relative), "utf8");
@@ -298,7 +298,10 @@ function updateSitemap(routes) {
 }
 
 const stores = readJson("dados/stores.json");
-const publishableProducts = readJson("dados/products.json").filter(publishable);
+const sourceProducts = readJson("dados/products.json");
+const retiredPartnerPattern = /hotmart|magalu|magazineluiza|eduzz/i;
+const publicSourceProducts = sourceProducts.filter(product => !retiredPartnerPattern.test(JSON.stringify(product)));
+const publishableProducts = publicSourceProducts.filter(publishable);
 const productSlugs = buildProductSlugs(publishableProducts);
 const deduplicatedProducts = deduplicate(
   publishableProducts.map(product => compactProduct(product, productSlugs.get(product.id))),
@@ -322,16 +325,13 @@ const marketplaceHosts = {
   "mercado-livre": ["mercadolivre.com.br", "meli.la"],
   shopee: ["shopee.com.br"],
   amazon: ["amazon.com.br", "amzn.to", "link.amazon"],
-  hotmart: ["hotmart.com"],
   autooferta: ["autooferta.com.br"],
   "virtus-corretora": ["virtuscorretora.com.br"],
-  eduzz: ["eduzz.com"],
-  magalu: ["magazineluiza.com.br", "magalu.com"],
   uniasselvi: ["uniasselvi.com.br"],
   santander: ["santander.com.br"],
   dreamstime: ["dreamstime.com"],
 };
-const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander", "dreamstime"];
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "autooferta", "virtus-corretora", "uniasselvi", "santander", "dreamstime"];
 if (marketplaces.length !== requiredMarketplaceIds.length || new Set(marketplaces.map(item => item.id)).size !== marketplaces.length || !requiredMarketplaceIds.every(id => marketplaces.some(item => item.id === id))) throw new Error("Os parceiros obrigatórios devem estar configurados uma única vez.");
 for (const item of marketplaces) {
   const url = new URL(item.url);
@@ -339,7 +339,7 @@ for (const item of marketplaces) {
     || !marketplaceHosts[item.id]?.some(host => url.hostname === host || url.hostname.endsWith(`.${host}`))
     || !["affiliate", "referral", "official"].includes(item.type)) throw new Error(`Atalho inválido: ${item.id}`);
 }
-const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", hotmart: "h", autooferta: "AO", "virtus-corretora": "VC", eduzz: "E", magalu: "M", uniasselvi: "U", santander: "S", dreamstime: "DT" };
+const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", autooferta: "AO", "virtus-corretora": "VC", uniasselvi: "U", santander: "S", dreamstime: "DT" };
 const marketplaceLinkLabel = type => type === "affiliate" ? "Afiliado" : type === "referral" ? "Indicação" : "Site oficial";
 const marketplaceLinkAria = type => type === "affiliate" ? "link de afiliado" : type === "referral" ? "link de indicação" : "acesso oficial sem rastreamento confirmado";
 const marketplaceMarkup = `<section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
@@ -583,6 +583,13 @@ for (const relative of [
   "integracoes/impacto360-admin-robos.js",
   "integracoes/impacto360-banners-admin.js",
 ]) copyStatic(relative);
+
+// Keep the historical master local; never export retired partners in the public package.
+write(path.join(packageRoot, "dados", "products.json"), `${JSON.stringify(publicSourceProducts, null, 2)}\n`);
+for (const relative of [
+  "dados/relatorio-auditoria-completa-produtos-20260724.json",
+  "dados/relatorio-organizacao-geral-loja-20260724.json",
+]) fs.rmSync(path.join(packageRoot, relative), { force: true });
 
 updateSitemap(
   [...commercialRoutes, ...categoryRoutes]

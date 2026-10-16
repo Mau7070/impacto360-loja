@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-28T19:11:37.305Z",
+  "generatedAt": "2026-10-16T13:40:25.245Z",
   "policy": {
     "priceValidityDays": 7,
     "ordering": "expired and unverified prices first",
     "publishRule": "never expose an expired discount as current"
   },
-  "pending": 2542,
+  "pending": 2536,
   "items": [
     {
       "id": "ferramentas-20260724-amazon-b07jq9g1bd",
@@ -5051,60 +5051,6 @@
       "id": "shopee-20260715-seguranca-bebe-kit-10-travas-de-gavetas-bebe-e-10-protetores-de-tomada-4-chaves-antichoque-bee44b16",
       "name": "Kit 10 Travas de Gavetas Bebê e 10 Protetores de Tomada 4 Chaves Antichoque",
       "storeId": "impacto-kids",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-novo-decreto-pregao-eletronico-509216",
-      "name": "Curso sobre o novo Decreto do Pregao Eletronico",
-      "storeId": "impacto-educa",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-pregao-srp-atualizacao-457150",
-      "name": "Pregao Eletronico e Sistema de Registro de Precos",
-      "storeId": "impacto-educa",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-sistema-registro-precos-456474",
-      "name": "Curso sobre Sistema de Registro de Precos",
-      "storeId": "impacto-educa",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-dominando-as-licitacoes-3980357",
-      "name": "Dominando as Licitacoes",
-      "storeId": "impacto-educa",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-a-palavra-e-o-ser-7448602",
-      "name": "A Palavra e o Ser",
-      "storeId": "impacto-fe",
-      "status": "unverified",
-      "priceUpdatedAt": "",
-      "priceValidUntil": "",
-      "priority": "high"
-    },
-    {
-      "id": "hotmart-20260714-o-grande-arco-das-profecias-7454181",
-      "name": "O Grande Arco das Profecias",
-      "storeId": "impacto-fe",
       "status": "unverified",
       "priceUpdatedAt": "",
       "priceValidUntil": "",

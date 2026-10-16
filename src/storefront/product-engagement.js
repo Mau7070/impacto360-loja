@@ -42,7 +42,7 @@
       && Date.now() - Date.parse(s.verifiedAt) <= 30 * 86400000) {
       try {
         const u = new URL(s.sourceUrl);
-        if (u.protocol === 'https:' && ['mercadolivre.com.br', 'shopee.com.br', 'amazon.com.br', 'hotmart.com'].some(h => u.hostname === h || u.hostname.endsWith('.' + h))) sales = s;
+        if (u.protocol === 'https:' && ['mercadolivre.com.br', 'shopee.com.br', 'amazon.com.br'].some(h => u.hostname === h || u.hostname.endsWith('.' + h))) sales = s;
       } catch {}
     }
     return { likes, ratingCount: average ? ratings : 0, ratingAverage: average, sales };

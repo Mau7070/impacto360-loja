@@ -78,8 +78,8 @@ const sourceById = new Map(sourceProducts.map(product => [String(product.id), pr
 check("HTML inicial enxuto", Buffer.byteLength(html) < 26_000, `${Buffer.byteLength(html)} bytes`);
 check("catalogo nao duplicado no HTML", !html.includes("let products = [") && !html.includes("let stores = ["));
 check("assets modulares carregados", html.includes("/assets/storefront-excellence.css") && html.includes("/assets/storefront-excellence.js"));
-check("cache da home versionado", html.includes("storefront-excellence.css?v=20261016-capas-1") && html.includes("storefront-excellence.js?v=20261016-capas-1"));
-check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261016-capas-1') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
+check("cache da home versionado", html.includes("storefront-excellence.css?v=20261016-parceiros-1") && html.includes("storefront-excellence.js?v=20261016-parceiros-1"));
+check("service worker renova assets centrais", serviceWorker.includes('impacto360-shell-20261016-parceiros-1') && serviceWorker.includes('url.pathname === "/assets/storefront-excellence.css"') && serviceWorker.includes("networkFirst(event.request)"));
 check("carrossel de fotos leva a fichas internas", app.includes('class="photo-rail-card"') && app.includes('data-product-internal="${escapeAttr(product.id)}"') && !app.includes('class="photo-rail-card" href="${escapeAttr(productPath(product))}" data-route='));
 check("imagem de compartilhamento coerente e sincronizada", html.includes("/public/impacto360-categorias-20260928.png") && exists("public/impacto360-categorias-20260928.png") && hash("public/impacto360-categorias-20260928.png") === hash("public/impacto360-categorias-20260928.png", packageRoot));
 check("carrossel automatico antigo removido", !html.includes("impacto360-banners-anuncios.js") && !app.includes("VITRINE EM ROTACAO"));
@@ -95,7 +95,12 @@ check(
   && app.includes("consent.marketing"),
 );
 const marketplaces = JSON.parse(read("dados/marketplaces.json")).marketplaces;
-const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "hotmart", "autooferta", "virtus-corretora", "eduzz", "magalu", "uniasselvi", "santander", "dreamstime"];
+const requiredMarketplaceIds = ["mercado-livre", "shopee", "amazon", "autooferta", "virtus-corretora", "uniasselvi", "santander", "dreamstime"];
+const retiredPartnerPattern = /hotmart|magalu|magazineluiza|eduzz/i;
+check("parceiros retirados não aparecem na loja", !retiredPartnerPattern.test(html) && !retiredPartnerPattern.test(JSON.stringify(marketplaces)) && !retiredPartnerPattern.test(JSON.stringify(stores)) && !retiredPartnerPattern.test(JSON.stringify(catalog)));
+check("exportação pública não contém produtos dos parceiros retirados", !retiredPartnerPattern.test(read("dados/products.json", packageRoot)));
+const retiredProducts = sourceProducts.filter(product => retiredPartnerPattern.test(JSON.stringify(product)));
+check("links curtos dos parceiros retirados despublicados", retiredProducts.every(product => !exists(`p/${productShortCode(product)}/index.html`) && !exists(`p/${productShortCode(product)}/index.html`, packageRoot)));
 check("Dreamstime usa o link gerado na conta", marketplaces.find(item => item.id === "dreamstime")?.url === "https://pt.dreamstime.com/#res61584889" && marketplaces.find(item => item.id === "dreamstime")?.type === "affiliate");
 check(
   "atalhos gerais e de indicação identificados corretamente",
