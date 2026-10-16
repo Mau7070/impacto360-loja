@@ -1184,7 +1184,7 @@ const affiliateLists = [
   { title: "Sandálias e chinelos", marketplace: "Shopee", kind: "Seleção", group: "calcados", category: "moda-e-calcados", url: "https://s.shopee.com.br/8V9klMZVfu", image: "/assets/campanhas/shopee-sandalias-chinelos-20261016.webp", alt: "Chinelo slide em diferentes cores, um dos produtos da categoria na Shopee" },
   { title: "Ferramentas", marketplace: "Shopee", kind: "Seleção", group: "ferramentas", category: "ferramentas", url: "https://s.shopee.com.br/8KqKZ3a90t", image: "/assets/campanhas/shopee-ferramentas-20261016.webp", alt: "Jogo de chaves e catraca com maleta, um dos produtos da categoria na Shopee" },
   { title: "Computadores", marketplace: "Shopee", kind: "Seleção", group: "computadores", category: "celulares-e-tecnologia", url: "https://s.shopee.com.br/8pmb9yYF00", image: "/assets/campanhas/shopee-computadores-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos produtos da categoria na Shopee" },
-  { title: "Moda feminina", group: "moda", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-20261016.webp", alt: "Vestido midi canelado, um dos itens da lista Moda feminina" },
+  { title: "Moda feminina", group: "moda", category: "moda-e-calcados", url: "https://meli.la/11GdCdv", image: "/assets/campanhas/moda-feminina-inteira-20261016.webp", alt: "Foto completa do vestido midi canelado, um dos itens da lista Moda feminina" },
   { title: "Chinelos e pantufas", group: "calcados", category: "moda-e-calcados", url: "https://meli.la/1wLwnn3", image: "/assets/campanhas/chinelos-e-pantufas-20261016.webp", alt: "Par de chinelos Havaianas, um dos itens da lista" },
   { title: "Máquinas e ferramentas", group: "ferramentas", category: "ferramentas", url: "https://meli.la/21wC6Vi", image: "/assets/campanhas/maquinas-e-ferramentas-20261016.webp", alt: "Parafusadeira com maleta e acessórios, um dos itens da lista" },
   { title: "Computador", group: "computadores", category: "celulares-e-tecnologia", url: "https://meli.la/2YwxY1C", image: "/assets/campanhas/computador-20261016.webp", alt: "Computador com monitor, teclado e mouse, um dos itens da lista" },
@@ -2675,7 +2675,14 @@ function updateOnlineStatus() {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") return;
-  navigator.serviceWorker.register("/sw.js?v=20261006-home-8").catch(error => console.warn("Service worker não registrado.", error));
+  const alreadyControlled = Boolean(navigator.serviceWorker.controller);
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!alreadyControlled || refreshing) return;
+    refreshing = true;
+    location.reload();
+  });
+  navigator.serviceWorker.register("/sw.js?v=20261016-capas-1", { updateViaCache: "none" }).catch(error => console.warn("Service worker não registrado.", error));
 }
 
 function closeMenu({ restoreFocus = false } = {}) {

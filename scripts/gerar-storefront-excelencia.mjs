@@ -563,6 +563,7 @@ for (const relative of [
   "assets/campanhas/brinquedos-4-a-6-20261013.webp",
   "assets/campanhas/criancas-6-meses-a-3-20261013.webp",
   "assets/campanhas/moda-feminina-20261016.webp",
+  "assets/campanhas/moda-feminina-inteira-20261016.webp",
   "assets/campanhas/chinelos-e-pantufas-20261016.webp",
   "assets/campanhas/maquinas-e-ferramentas-20261016.webp",
   "assets/campanhas/computador-20261016.webp",
