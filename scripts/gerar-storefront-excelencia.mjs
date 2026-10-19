@@ -342,15 +342,35 @@ for (const item of marketplaces) {
 const marketplaceInitials = { "mercado-livre": "ML", shopee: "S", amazon: "a", autooferta: "AO", "virtus-corretora": "VC", uniasselvi: "U", santander: "S", dreamstime: "DT" };
 const marketplaceLinkLabel = type => type === "affiliate" ? "Afiliado" : type === "referral" ? "Indicação" : "Site oficial";
 const marketplaceLinkAria = type => type === "affiliate" ? "link de afiliado" : type === "referral" ? "link de indicação" : "acesso oficial sem rastreamento confirmado";
-const marketplaceMarkup = `<section class="marketplace-section initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
-  <div class="shell">
-    <div class="marketplace-heading"><div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div><p>Atalhos para parceiros e plataformas.</p></div>
-    <div class="marketplace-grid">${marketplaces.map(item => `<a class="marketplace-card marketplace-${item.id}" href="${html(item.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(item.type) ? " sponsored" : ""}" aria-label="Abrir ${html(item.name)} em nova aba — ${marketplaceLinkAria(item.type)}">
-      <span class="marketplace-mark" aria-hidden="true">${marketplaceInitials[item.id]}</span>
-      <span class="marketplace-copy"><strong>${html(item.name)}</strong><span>${html(item.description)}</span></span><span class="marketplace-arrow" aria-hidden="true">↗</span>
-      <small class="marketplace-link-kind">${marketplaceLinkLabel(item.type)}</small></a>`).join("")}</div>
-    <p class="marketplace-note">Links identificados com transparência. Preço, estoque, frete, pagamento e garantia são definidos no destino. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda os tipos de link</a>.</p>
-  </div></section>`;
+function buildMarketplaceMarkup() {
+  const partners = marketplaces;
+  const shops = new Set(["mercado-livre", "shopee", "amazon"]);
+  const card = marketplace => `            <a class="marketplace-card marketplace-${marketplace.id}" href="${html(marketplace.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(marketplace.type) ? " sponsored" : ""}" aria-label="Abrir ${html(marketplace.name)} em nova aba — ${marketplaceLinkAria(marketplace.type)}">
+              <span class="marketplace-mark" aria-hidden="true">${html(marketplaceInitials[marketplace.id])}</span>
+              <span class="marketplace-copy"><strong>${html(marketplace.name)}</strong><span>${html(marketplace.description)}</span></span>
+              <span class="marketplace-arrow" aria-hidden="true">↗</span>
+              <small class="marketplace-link-kind">${marketplaceLinkLabel(marketplace.type)}</small>
+            </a>`;
+  return `
+    <section class="marketplace-section marketplace-compact initial-home-marketplaces" id="marketplaces" aria-labelledby="marketplace-title">
+      <div class="shell">
+        <div class="marketplace-heading">
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Lojas e parceiros</h2></div>
+          <p>Escolha o destino e confira as condições no parceiro.</p>
+        </div>
+        <h3 class="marketplace-group-title">Lojas</h3>
+        <div class="marketplace-grid marketplace-shops">${partners.filter(item => shops.has(item.id)).map(card).join("")}</div>
+        <button class="marketplace-toggle" type="button" data-partners-toggle aria-expanded="false" aria-controls="marketplace-services">Ver todos os parceiros <span aria-hidden="true">＋</span></button>
+        <div id="marketplace-services" class="marketplace-services">
+          <h3 class="marketplace-group-title">Serviços e outros parceiros</h3>
+          <div class="marketplace-grid">${partners.filter(item => !shops.has(item.id)).map(card).join("")}</div>
+        </div>
+        <p class="marketplace-note">Cada cartão indica seu tipo de link. Condições no parceiro. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
+      </div>
+    </section>`;
+}
+
+const marketplaceMarkup = buildMarketplaceMarkup();
 const template = fs.readFileSync(path.join(sourceRoot, "index.template.html"), "utf8")
   .replace("<!-- MARKETPLACE_SHORTCUTS -->", marketplaceMarkup);
 const fallback404 = fs.readFileSync(path.join(sourceRoot, "404.template.html"), "utf8");

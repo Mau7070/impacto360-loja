@@ -474,21 +474,27 @@ function marketplaceLinkAria(type) {
 }
 
 function marketplaceShortcuts() {
-  return `
-    <section class="marketplace-section" id="marketplaces" aria-labelledby="marketplace-title">
-      <div class="shell">
-        <div class="marketplace-heading">
-          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Escolha onde explorar</h2></div>
-          <p>Atalhos para lojas, serviços e parceiros.</p>
-        </div>
-        <div class="marketplace-grid">
-          ${homeMarketplaces().map(marketplace => `
-            <a class="marketplace-card marketplace-${marketplace.id}" href="${escapeAttr(marketplace.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(marketplace.type) ? " sponsored" : ""}" aria-label="Abrir ${escapeAttr(marketplace.name)} em nova aba — ${marketplaceLinkAria(marketplace.type)}">
+  const partners = homeMarketplaces();
+  const shops = new Set(["mercado-livre", "shopee", "amazon"]);
+  const card = marketplace => `            <a class="marketplace-card marketplace-${marketplace.id}" href="${escapeAttr(marketplace.url)}" target="_blank" rel="noopener noreferrer${["affiliate", "referral"].includes(marketplace.type) ? " sponsored" : ""}" aria-label="Abrir ${escapeAttr(marketplace.name)} em nova aba — ${marketplaceLinkAria(marketplace.type)}">
               <span class="marketplace-mark" aria-hidden="true">${escapeHtml(marketplace.initials)}</span>
               <span class="marketplace-copy"><strong>${escapeHtml(marketplace.name)}</strong><span>${escapeHtml(marketplace.description)}</span></span>
               <span class="marketplace-arrow" aria-hidden="true">↗</span>
               <small class="marketplace-link-kind">${marketplaceLinkLabel(marketplace.type)}</small>
-            </a>`).join("")}
+            </a>`;
+  return `
+    <section class="marketplace-section marketplace-compact" id="marketplaces" aria-labelledby="marketplace-title">
+      <div class="shell">
+        <div class="marketplace-heading">
+          <div><span class="section-kicker">Acesso direto</span><h2 id="marketplace-title">Lojas e parceiros</h2></div>
+          <p>Escolha o destino e confira as condições no parceiro.</p>
+        </div>
+        <h3 class="marketplace-group-title">Lojas</h3>
+        <div class="marketplace-grid marketplace-shops">${partners.filter(item => shops.has(item.id)).map(card).join("")}</div>
+        <button class="marketplace-toggle" type="button" data-partners-toggle aria-expanded="false" aria-controls="marketplace-services">Ver todos os parceiros <span aria-hidden="true">＋</span></button>
+        <div id="marketplace-services" class="marketplace-services">
+          <h3 class="marketplace-group-title">Serviços e outros parceiros</h3>
+          <div class="marketplace-grid">${partners.filter(item => !shops.has(item.id)).map(card).join("")}</div>
         </div>
         <p class="marketplace-note">Cada cartão indica seu tipo de link. Condições no parceiro. <a href="/transparencia-de-afiliados/" data-route="/transparencia-de-afiliados/">Entenda como funciona</a>.</p>
       </div>
@@ -1248,7 +1254,6 @@ function renderHome() {
   const homeStores = homeStoreIds.map(id => state.storeById.get(id)).filter(Boolean).slice(0, 4);
   const activeCategories = categoryDefinitions.filter(category => categoryProducts(category).length > 0).slice(0, 8);
   const homeContent = `
-    ${marketplaceShortcuts()}
     ${affiliateListCards()}
 
     <nav class="quick-category-section" aria-label="Acesso rápido por categoria">
@@ -1324,6 +1329,8 @@ function renderHome() {
         </div>
       </div>
     </section>` : ""}
+
+    ${marketplaceShortcuts()}
 
     <section class="home-next-section" aria-labelledby="home-next-title">
       <div class="shell">
@@ -2847,6 +2854,15 @@ function setupGlobalEvents() {
   });
 
   document.addEventListener("click", event => {
+    const partnersToggle = event.target.closest("[data-partners-toggle]");
+    if (partnersToggle) {
+      const expanded = partnersToggle.getAttribute("aria-expanded") !== "true";
+      partnersToggle.setAttribute("aria-expanded", String(expanded));
+      partnersToggle.closest(".marketplace-section").classList.toggle("partners-expanded", expanded);
+      partnersToggle.innerHTML = expanded ? 'Mostrar menos parceiros <span aria-hidden="true">−</span>' : 'Ver todos os parceiros <span aria-hidden="true">＋</span>';
+      return;
+    }
+
     const productInternal = event.target.closest("[data-product-internal]");
     if (productInternal) {
       recordViewedProduct(productInternal.dataset.productInternal);
