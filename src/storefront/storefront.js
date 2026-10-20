@@ -1217,7 +1217,11 @@ function affiliateListCards(categorySlug = "") {
   return `<section class="section affiliate-lists-section" aria-labelledby="affiliate-lists-title">
     <div class="shell">
       <h2 id="affiliate-lists-title">Listas selecionadas</h2>
-      <div class="affiliate-list-groups">${groups.map(group => `<section class="affiliate-list-group${group.lists.length > 2 ? ' affiliate-list-group-wide' : ''}" aria-labelledby="affiliate-group-${group.key}">
+      ${!categorySlug ? `<div class="list-topic-controls" role="group" aria-label="Filtrar listas por categoria">
+        <button type="button" data-list-topic="all" aria-pressed="true">Todas</button>
+        ${groups.map(group => `<button type="button" data-list-topic="${group.key}" aria-pressed="false">${group.label}</button>`).join("")}
+      </div><p class="list-topic-status" role="status" aria-live="polite" data-list-topic-status>${groups.reduce((total, group) => total + group.lists.length, 0)} listas e seleções</p>` : ""}
+      <div class="affiliate-list-groups">${groups.map(group => `<section class="affiliate-list-group${group.lists.length > 2 ? ' affiliate-list-group-wide' : ''}" aria-labelledby="affiliate-group-${group.key}" data-list-group="${group.key}">
         <h3 id="affiliate-group-${group.key}">${group.label}</h3>
         <div class="affiliate-lists-grid">${group.lists.map(list => `<article class="affiliate-list-card" id="lista-${escapeAttr(list.url.split('/').pop())}">
           <a class="affiliate-list-photo" href="${list.url}" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver ${list.kind === 'Seleção' ? 'seleção' : 'lista'} ${list.title} no ${list.marketplace || 'Mercado Livre'}">
@@ -2854,6 +2858,21 @@ function setupGlobalEvents() {
   });
 
   document.addEventListener("click", event => {
+    const listTopic = event.target.closest("[data-list-topic]");
+    if (listTopic) {
+      const section = listTopic.closest(".affiliate-lists-section");
+      const topic = listTopic.dataset.listTopic;
+      let count = 0;
+      section.querySelectorAll("[data-list-group]").forEach(group => {
+        group.hidden = topic !== "all" && group.dataset.listGroup !== topic;
+        if (!group.hidden) count += group.querySelectorAll(".affiliate-list-card").length;
+      });
+      section.querySelectorAll("[data-list-topic]").forEach(button => button.setAttribute("aria-pressed", String(button === listTopic)));
+      section.classList.toggle("list-topic-filtered", topic !== "all");
+      section.querySelector("[data-list-topic-status]").textContent = `${count} listas e seleções${topic === "all" ? "" : ` em ${listTopic.textContent}`}`;
+      return;
+    }
+
     const partnersToggle = event.target.closest("[data-partners-toggle]");
     if (partnersToggle) {
       const expanded = partnersToggle.getAttribute("aria-expanded") !== "true";

@@ -5828,3 +5828,14 @@ a {
   min-height: 44px; padding: 8px; font-size: 12px; gap: 6px;
 }
 #appRoot :where(.affiliate-lists-section, #produtos) .i360-share-label { display: inline; }
+
+/* Topic controls keep every list reachable without a long scroll. */
+.list-topic-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 8px; }
+.list-topic-controls button { min-height: 44px; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface); color: var(--color-text-primary); font: inherit; font-size: 13px; cursor: pointer; }
+.list-topic-controls button[aria-pressed="true"] { background: var(--color-primary); border-color: var(--color-primary); color: #fff; font-weight: 700; }
+.list-topic-controls button:focus-visible { outline: 3px solid var(--color-focus, #2563eb); outline-offset: 3px; }
+.list-topic-status { margin: 0 0 16px; font-size: 12px; color: var(--color-text-secondary); }
+.affiliate-list-group[hidden] { display: none; }
+.list-topic-filtered .affiliate-list-group { grid-column: 1 / -1; }
+.list-topic-filtered .affiliate-lists-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+@media (max-width: 600px) { .list-topic-filtered .affiliate-lists-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
