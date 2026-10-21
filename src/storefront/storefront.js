@@ -1080,7 +1080,7 @@ function updateHomeRotationControl() {
     ? "Atualização pausada durante sua interação"
     : state.homeRotationUserPaused
       ? `Seleção ${page} de ${pages} · atualização manual`
-      : `Seleção ${page} de ${pages} · atualização automática`;
+      : `Seleção ${page} de ${pages} · troca a cada 8 segundos`;
 }
 
 function rotateHomeProducts({ force = false } = {}) {
@@ -1126,7 +1126,7 @@ function startHomeRotation() {
   const excludedIds = String(grid.dataset.homeExclude || "").split("|").filter(Boolean);
   state.homeRotationPool = homeRotationProducts(excludedIds);
   state.homeRotationIndex = Number(grid.dataset.rotationStart || 0);
-  state.homeRotationUserPaused = true;
+  state.homeRotationUserPaused = false;
   state.homeRotationInteractionPaused = false;
   state.homeRotationViewportWidth = window.innerWidth;
   if ("ResizeObserver" in window) {
