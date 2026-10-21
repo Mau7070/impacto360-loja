@@ -1,11 +1,11 @@
-const CACHE_NAME = "impacto360-shell-20261020-topics-3";
+const CACHE_NAME = "impacto360-shell-20261021-spacing-4";
 const SHELL_FILES = [
   "/",
   "/index.html",
-  "/assets/storefront-excellence.css?v=20261020-topics-3",
-  "/assets/storefront-excellence.js?v=20261020-topics-3",
-  "/dados/stores.json?v=20261020-topics-3",
-  "/dados/marketplaces.json?v=20261020-topics-3",
+  "/assets/storefront-excellence.css?v=20261021-spacing-4",
+  "/assets/storefront-excellence.js?v=20261021-spacing-4",
+  "/dados/stores.json?v=20261021-spacing-4",
+  "/dados/marketplaces.json?v=20261021-spacing-4",
   "/manifest.webmanifest",
   "/favicon.svg"
 ];
