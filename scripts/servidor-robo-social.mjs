@@ -1,15 +1,24 @@
 import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
+import {
+  buildCatalogIndex,
+  findProductByEvidence,
+  revalidateBeforePublication,
+  sanitizeCampaign,
+} from "../lib/publication-safety.mjs";
 
 const root = process.cwd();
 loadEnv(path.join(root, ".env"));
 
 const port = Number(process.env.SOCIAL_ROBOT_PORT || 3000);
+const host = process.env.SOCIAL_ROBOT_HOST || "127.0.0.1";
 const allowedOrigin = process.env.SOCIAL_ALLOWED_ORIGIN || "*";
 const webhookUrl = process.env.SOCIAL_PUBLISH_WEBHOOK_URL || "";
 const webhookSecret = process.env.SOCIAL_PUBLISH_SECRET || "";
-const logFile = path.join(root, "dados", "social-publish-log.jsonl");
+const apiToken = process.env.SOCIAL_API_TOKEN || "";
+const logFile = path.resolve(process.env.SOCIAL_PUBLISH_LOG_FILE || path.join(root, "dados", "social-publish-log.jsonl"));
+const catalogFile = path.join(root, "dados", "products.json");
 
 const server = http.createServer(async (req, res) => {
   setCors(res);
@@ -23,25 +32,49 @@ const server = http.createServer(async (req, res) => {
   return sendJson(res, 404, { ok: false, error: "Rota nao encontrada" });
 });
 
-server.listen(port, () => {
-  console.log(`Robo Social 360 ativo em http://localhost:${port}`);
-  console.log(`Endpoint: http://localhost:${port}/api/social/publish`);
+server.listen(port, host, () => {
+  console.log(`Robo Social 360 ativo em http://${host}:${port}`);
+  console.log(`Endpoint: http://${host}:${port}/api/social/publish`);
   console.log(webhookUrl ? "Webhook social configurado." : "Modo fila segura: configure SOCIAL_PUBLISH_WEBHOOK_URL para publicar fora do navegador.");
 });
 
 async function handlePublish(req, res) {
   try {
     const body = await readJson(req);
+    if (apiToken && !authorized(req, apiToken)) {
+      return sendJson(res, 401, { ok: false, error: "Nao autorizado" });
+    }
     const campaign = sanitizeCampaign(body.campaign || {});
-    if (!campaign.title || !campaign.link || !campaign.channel) {
+    if (!campaign.productId || !campaign.title || !campaign.link || !campaign.channel || !campaign.image) {
       return sendJson(res, 400, { ok: false, error: "Campanha incompleta" });
+    }
+
+    const catalogIndex = buildCatalogIndex(readCatalog());
+    const match = findProductByEvidence(campaign, catalogIndex);
+    const validation = await revalidateBeforePublication(match.product, campaign, {
+      catalogRegistered: match.method === "id",
+      duplicateProductId: catalogIndex.duplicateIds.has(campaign.productId),
+      fetchImpl: fetch,
+    });
+    if (!validation.readyToPublish) {
+      appendLog({
+        receivedAt: new Date().toISOString(),
+        source: clean(body.source, 80) || "impacto360",
+        campaign,
+        delivery: { mode: "bloqueado", validation: publicValidation(validation) },
+      });
+      return sendJson(res, 422, {
+        ok: false,
+        error: "BLOQUEAR PUBLICACAO: produto ou destino nao passou na validacao obrigatoria",
+        validation: publicValidation(validation),
+      });
     }
 
     const record = {
       receivedAt: new Date().toISOString(),
       source: clean(body.source, 80) || "impacto360",
       campaign,
-      delivery: { mode: webhookUrl ? "webhook" : "fila-segura" }
+      delivery: { mode: webhookUrl ? "webhook" : "fila-segura", validation: publicValidation(validation) }
     };
 
     if (webhookUrl) {
@@ -64,7 +97,8 @@ async function handlePublish(req, res) {
       ok: true,
       mode: record.delivery.mode,
       id: `${Date.now()}-${campaign.channel}`,
-      message: webhookUrl ? "Campanha enviada ao webhook social." : "Campanha salva no log local em modo fila segura."
+      message: webhookUrl ? "Campanha enviada ao webhook social." : "Campanha salva no log local em modo fila segura.",
+      validation: publicValidation(validation),
     });
   } catch (error) {
     return sendJson(res, 500, { ok: false, error: "Erro interno no robo social", detail: error.message });
@@ -116,18 +150,30 @@ function buildWebhookHeaders() {
   return headers;
 }
 
-function sanitizeCampaign(campaign) {
+function readCatalog() {
+  return JSON.parse(fs.readFileSync(catalogFile, "utf8").replace(/^\uFEFF/, ""));
+}
+
+function authorized(req, token) {
+  const header = String(req.headers.authorization || "");
+  return header.startsWith("Bearer ") && header.slice(7) === token;
+}
+
+function publicValidation(validation) {
   return {
-    id: clean(campaign.id, 120),
-    channel: clean(campaign.channel, 40),
-    title: clean(campaign.title, 180),
-    storeId: clean(campaign.storeId, 120),
-    storeName: clean(campaign.storeName, 180),
-    price: clean(campaign.price, 80),
-    image: clean(campaign.image, 500),
-    link: clean(campaign.link, 500),
-    caption: clean(campaign.caption, 1600),
-    hashtags: Array.isArray(campaign.hashtags) ? campaign.hashtags.slice(0, 12).map(item => clean(item, 40)).filter(Boolean) : []
+    productExists: validation.productExists,
+    catalogRegistered: validation.catalogRegistered,
+    marketplaceActive: validation.marketplaceActive,
+    affiliateLinkValid: validation.affiliateLinkValid,
+    shortLinkValid: validation.shortLinkValid,
+    shortLinkLive: validation.shortLinkLive,
+    marketplaceLive: validation.marketplaceLive,
+    imageMatch: validation.imageMatch,
+    titleMatch: validation.titleMatch,
+    descriptionMatch: validation.descriptionMatch,
+    priceMatch: validation.priceMatch,
+    readyToPublish: validation.readyToPublish,
+    failures: validation.failures,
   };
 }
 
